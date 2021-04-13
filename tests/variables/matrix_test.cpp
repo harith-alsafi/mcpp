@@ -1,5 +1,5 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
-#include "../includes/mcpp.hpp"
+#include "../../includes/mcpp.hpp"
 
 using var::matrix;
 
@@ -30,25 +30,26 @@ TEST(functionality, insert_row_col){
     ASSERT_EQ(4, m1.row());
     ASSERT_EQ(1, m1.col());
 
-    // row
-    m1.resize(0, 0); 
-    m1.insert_row({0, 1, 2, 3});
-    ASSERT_EQ(1, m1.row());
-    ASSERT_EQ(4, m1.col());
+    // // row
+    // m1.resize(0, 0); 
+    // m1.insert_row({0, 1, 2, 3});
+    // ASSERT_EQ(1, m1.row());
+    // ASSERT_EQ(4, m1.col());
 
-    // size is given
-    matrix<float> m2(4, 3);
+    // // size is given
+    // matrix<float> m2(4, 3);
 
-    // colum 
-    m2.insert_col({0, 1, 2, 3});
-    ASSERT_EQ(4, m2.row());
-    ASSERT_EQ(3+1, m2.col());
+    // // colum 
+    // m2.insert_col({0, 1, 2, 3});
+    // ASSERT_EQ(4, m2.row());
+    // ASSERT_EQ(3+1, m2.col());
+    // std::cout << m2;
 
-    // row
-    m2.resize(2, 4); 
-    m2.insert_row({0, 1, 2, 3});
-    ASSERT_EQ(2+1, m2.row());
-    ASSERT_EQ(4, m2.col());
+    // // row
+    // m2.resize(2, 4); 
+    // m2.insert_row({0, 1, 2, 3});
+    // ASSERT_EQ(2+1, m2.row());
+    // ASSERT_EQ(4, m2.col());
 
 }
 
