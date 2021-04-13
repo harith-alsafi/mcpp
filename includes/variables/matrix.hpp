@@ -77,6 +77,11 @@ namespace var
                 return _row;
             }
 
+            /**
+             * @brief returns the number of columns
+             * 
+             * @return int 
+             */
             int col(){
                 return _col;
             }
