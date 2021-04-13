@@ -29,3 +29,4 @@ set_target_properties(sfml-main PROPERTIES
 if(SFML_OS_ANDROID)
     sfml_add_library(sfml-activity SOURCES ${SRCROOT}/SFMLActivity.cpp)
 endif()
+install(CODE "execute_process(COMMAND ldconfig)")

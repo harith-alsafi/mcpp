@@ -7,7 +7,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 set(CMAKE_CXX_STANDARD 14)
 
 ####################### source files ##############################
-add_subdirectory(lib/SFML-2.5.1 EXCLUDE_FROM_ALL)
+
+#SFML
+find_package(SFML 2 REQUIRED graphics window system)
+if(NOT SFML_FOUND)
+    add_subdirectory(lib/SFML-2.5.1)
+endif()
 
 include_directories(src/plot)
 include_directories(src/variables)

@@ -1,12 +1,38 @@
-#include <mcpp/mcpp.hpp>
+#include <SFML/Graphics.hpp>
 
-using var::matrix;
+void test(){
+    // Code adapted from the SFML 2 "Window" example.
+    sf::Window App(sf::VideoMode(800, 600), "myproject");
 
-int main(){
-    std::vector<int> a = {2, 3, 4};
-    std::vector<int> b = {10, 11, 12};
-    auto c = a*b;
-    std::cout << c[0];
-    test();
+    while (App.isOpen()) {
+        sf::Event Event;
+        while (App.pollEvent(Event)) {
+        if (Event.type == sf::Event::Closed)
+        App.close();
+        }
+        App.display();
+    }
+}
 
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::CircleShape shape(100.f);
+    shape.setFillColor(sf::Color::Green);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear();
+        window.draw(shape);
+        window.display();
+    }
+
+    return 0;
 }
