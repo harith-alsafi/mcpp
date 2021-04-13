@@ -62,9 +62,9 @@ namespace var
 
             void insert_col(const std::vector<S>& a);
             
-            void insert_row_at(int i, const std::vector<S>& a);
+            void insert_row(int i, const std::vector<S>& a);
 
-            void insert_col_at(int j, const std::vector<S>& a);
+            void insert_col(int j, const std::vector<S>& a);
 
             /**
              * @brief mutates data to ints transpose
@@ -135,7 +135,7 @@ namespace var
             bool is_identity();
 
     };
-    
+
     /**
      * @brief print method for the class 
      * var::matrix<int> m; cout << m;

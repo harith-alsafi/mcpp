@@ -2,7 +2,7 @@
 #include <algorithm>
 
 template<typename S>
-std::ostream& operator << (std::ostream& out, var::matrix<S> &other){
+std::ostream& var::operator << (std::ostream& out, var::matrix<S> &other){
     out << "row: " << other.row() << "\t" << "col: " << other.col() << "\n";
     for(int i = 0; i < other.row(); i++){
         for(int j = 0; j < other.col(); j++){
@@ -66,16 +66,17 @@ int var::matrix<S>::size(){
 
 template<typename S>
 void var::matrix<S>::insert_row(const std::vector<S>& a){
-    // if rows are empty
-    if(_row == 0 && _col == 0){
-        _col = a.size();
-    }
     // checking size
-    if(a.size() != _col){
+    if(a.size() != _col && _row != 0 && _col != 0){
         throw std::invalid_argument("Size doesnt match");
     }
-    resize(_row+1, _col);
+    else if(_row == 0 && _col == 0){
+        resize(1, a.size());
+        data[0] = a;
+        return;
+    }
     data.push_back(a);
+    _row = data.size();
 }
 
 template<typename S>
@@ -98,7 +99,7 @@ void var::matrix<S>::insert_col(const std::vector<S>& a){
 }
 
 template<typename S>
-void var::matrix<S>::insert_row_at(int i, const std::vector<S>& a){
+void var::matrix<S>::insert_row(int i, const std::vector<S>& a){
     if(a.size() != _col){
         throw std::invalid_argument("Size doesnt match");
     }
@@ -108,7 +109,7 @@ void var::matrix<S>::insert_row_at(int i, const std::vector<S>& a){
 }
 
 template<typename S>
-void var::matrix<S>::insert_col_at(int j, const std::vector<S>& a){
+void var::matrix<S>::insert_col(int j, const std::vector<S>& a){
     // checking size
     if(a.size() != _row){
         throw std::invalid_argument("Size doesnt match");
