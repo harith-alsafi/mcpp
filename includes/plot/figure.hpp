@@ -10,43 +10,69 @@ extern const std::vector<int> BLUE = {36, 114, 200};
 extern const std::vector<int> GREEN = {53, 200, 36};
 extern const std::vector<int> WHITE = {255, 255, 255};
 
-struct param_plot
-{
-	std::vector<float> xrange = {-5, 5};
-	std::vector<float> yrange = {-5, 5};
-	std::string legend = "";
-	std::vector<int> draw = BLACK;
-};
+/**
+ * @brief checks parameter for the functions
+ * 
+ * @param exp 
+ * @param act 
+ */
+void check_param(int exp, int act);
 
-struct param_fig
-{
-    std::string title = "Window";
-    int size = 400;
-    std::vector<int> background = WHITE;
-};
+/**
+ * @brief initializes figure
+ * 
+ * @param title 
+ * @param size 
+ * @param background 
+ */
+void figure(
+    std::string title = "Window",
+    int size = 400,
+    std::vector<int> background = WHITE
+);
 
-void figure(param_fig f);
-
+/**
+ * @brief plots values 
+ * 
+ * @param x 
+ * @param y 
+ * @param xrange 
+ * @param yrange 
+ * @param draw 
+ * @param legend 
+ */
 void plot(
-    std::vector<float>& x, 
-    std::vector<float>& y,
-    param_plot p
+    std::vector<float> x, 
+    std::vector<float> y,
+	std::vector<float> xrange = {-5, 5},
+	std::vector<float> yrange = {-5, 5},
+	std::vector<int> draw = BLACK,
+	std::string legend = ""
 );
 
 void point(
     float x,
     float y,
-    param_plot p
+	std::vector<float> xrange = {-5, 5},
+	std::vector<float> yrange = {-5, 5},
+	std::vector<int> draw = BLACK,
+	std::string legend = ""
 );
 
 void hline(
     float x,
     float y,
-    param_plot p
+	std::vector<float> xrange = {-5, 5},
+	std::vector<float> yrange = {-5, 5},
+	std::vector<int> draw = BLACK,
+	std::string legend = ""
 );
 
 void vline(
     float x,
     float y,
-    param_plot p
+	std::vector<float> xrange = {-5, 5},
+	std::vector<float> yrange = {-5, 5},
+	std::string legend = "",
+	std::vector<int> draw = BLACK
 );
