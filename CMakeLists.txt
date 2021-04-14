@@ -58,3 +58,8 @@ include_directories(tests/vectors)
 file(GLOB var_src "tests/variables/*.cpp")
 add_executable(test_matrix ${var_src})
 target_link_libraries(test_matrix mcpp gtest pthread) #-lgtest -lpthread 
+
+# vectors 
+file(GLOB vec_src "tests/vectors/*.cpp")
+add_executable(test_vector ${vec_src})
+target_link_libraries(test_vector mcpp gtest pthread) #-lgtest -lpthread 

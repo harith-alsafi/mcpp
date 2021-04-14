@@ -237,9 +237,14 @@ std::vector<S> operator /(std::vector<S> v, S s){
  */
 template<typename S>
 std::ostream& operator << (std::ostream& out, std::vector<S> &other){
-    for(auto const &i: other){
-        out << i;
+    out <<"[";
+    for(int i =0; i < other.size(); i++){
+        out << other[i];
+        if(other[i] != other[other.size()-1]){
+            out << ", ";
+        }
     }
+    out << "]";
     return out;
 }
 
