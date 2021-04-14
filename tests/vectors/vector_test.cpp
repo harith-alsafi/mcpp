@@ -71,7 +71,11 @@ TEST(functions, misc)
    std::cout << c;
    std::string output = testing::internal::GetCapturedStdout();
    EXPECT_TRUE(output == "[1, 4, 9, 16]");
-
+   // power-2
+   c = vec::pow(a, a);
+   for(int i = 0; i < c.size(); i++){
+      ASSERT_EQ(c[i], std::pow(a[i], a[i]));
+   }
 }
 
 TEST(operations, vec_all)

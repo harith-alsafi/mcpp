@@ -1,0 +1,130 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Table of contets}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}var Namespace Reference}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}vec Namespace Reference}{9}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{10}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}acos()}{10}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}acosh()}{10}{subsubsection.5.2.1.2}
+\contentsline {subsubsection}{\numberline {5.2.1.3}acot()}{11}{subsubsection.5.2.1.3}
+\contentsline {subsubsection}{\numberline {5.2.1.4}acoth()}{11}{subsubsection.5.2.1.4}
+\contentsline {subsubsection}{\numberline {5.2.1.5}acsc()}{11}{subsubsection.5.2.1.5}
+\contentsline {subsubsection}{\numberline {5.2.1.6}acsch()}{11}{subsubsection.5.2.1.6}
+\contentsline {subsubsection}{\numberline {5.2.1.7}asec()}{11}{subsubsection.5.2.1.7}
+\contentsline {subsubsection}{\numberline {5.2.1.8}asech()}{11}{subsubsection.5.2.1.8}
+\contentsline {subsubsection}{\numberline {5.2.1.9}asin()}{12}{subsubsection.5.2.1.9}
+\contentsline {subsubsection}{\numberline {5.2.1.10}asinh()}{12}{subsubsection.5.2.1.10}
+\contentsline {subsubsection}{\numberline {5.2.1.11}atan()}{12}{subsubsection.5.2.1.11}
+\contentsline {subsubsection}{\numberline {5.2.1.12}atanh()}{12}{subsubsection.5.2.1.12}
+\contentsline {subsubsection}{\numberline {5.2.1.13}cos()}{12}{subsubsection.5.2.1.13}
+\contentsline {subsubsection}{\numberline {5.2.1.14}cosh()}{12}{subsubsection.5.2.1.14}
+\contentsline {subsubsection}{\numberline {5.2.1.15}cot()}{13}{subsubsection.5.2.1.15}
+\contentsline {subsubsection}{\numberline {5.2.1.16}coth()}{13}{subsubsection.5.2.1.16}
+\contentsline {subsubsection}{\numberline {5.2.1.17}cross()}{13}{subsubsection.5.2.1.17}
+\contentsline {subsubsection}{\numberline {5.2.1.18}csc()}{13}{subsubsection.5.2.1.18}
+\contentsline {subsubsection}{\numberline {5.2.1.19}csch()}{13}{subsubsection.5.2.1.19}
+\contentsline {subsubsection}{\numberline {5.2.1.20}dot()}{13}{subsubsection.5.2.1.20}
+\contentsline {subsubsection}{\numberline {5.2.1.21}exp()}{14}{subsubsection.5.2.1.21}
+\contentsline {subsubsection}{\numberline {5.2.1.22}pow()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{14}{subsubsection.5.2.1.22}
+\contentsline {subsubsection}{\numberline {5.2.1.23}pow()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{14}{subsubsection.5.2.1.23}
+\contentsline {subsubsection}{\numberline {5.2.1.24}sec()}{14}{subsubsection.5.2.1.24}
+\contentsline {subsubsection}{\numberline {5.2.1.25}sech()}{14}{subsubsection.5.2.1.25}
+\contentsline {subsubsection}{\numberline {5.2.1.26}sin()}{14}{subsubsection.5.2.1.26}
+\contentsline {subsubsection}{\numberline {5.2.1.27}sinh()}{15}{subsubsection.5.2.1.27}
+\contentsline {subsubsection}{\numberline {5.2.1.28}tan()}{15}{subsubsection.5.2.1.28}
+\contentsline {subsubsection}{\numberline {5.2.1.29}tanh()}{15}{subsubsection.5.2.1.29}
+\contentsline {chapter}{\numberline {6}Class Documentation}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}var\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::matrix$<$ S $>$ Class Template Reference}{17}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{20}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{20}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}matrix()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{20}{subsubsection.6.1.2.1}
+\contentsline {subsubsection}{\numberline {6.1.2.2}matrix()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{20}{subsubsection.6.1.2.2}
+\contentsline {subsubsection}{\numberline {6.1.2.3}matrix()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{21}{subsubsection.6.1.2.3}
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{21}{subsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.3.1}col()}{21}{subsubsection.6.1.3.1}
+\contentsline {subsubsection}{\numberline {6.1.3.2}col\_op()}{21}{subsubsection.6.1.3.2}
+\contentsline {subsubsection}{\numberline {6.1.3.3}det()}{21}{subsubsection.6.1.3.3}
+\contentsline {subsubsection}{\numberline {6.1.3.4}insert\_col()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{21}{subsubsection.6.1.3.4}
+\contentsline {subsubsection}{\numberline {6.1.3.5}insert\_col()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{22}{subsubsection.6.1.3.5}
+\contentsline {subsubsection}{\numberline {6.1.3.6}insert\_row()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{22}{subsubsection.6.1.3.6}
+\contentsline {subsubsection}{\numberline {6.1.3.7}insert\_row()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{22}{subsubsection.6.1.3.7}
+\contentsline {subsubsection}{\numberline {6.1.3.8}inv()}{23}{subsubsection.6.1.3.8}
+\contentsline {subsubsection}{\numberline {6.1.3.9}is\_identity()}{23}{subsubsection.6.1.3.9}
+\contentsline {subsubsection}{\numberline {6.1.3.10}is\_square()}{23}{subsubsection.6.1.3.10}
+\contentsline {subsubsection}{\numberline {6.1.3.11}operator$\ast $()}{23}{subsubsection.6.1.3.11}
+\contentsline {subsubsection}{\numberline {6.1.3.12}operator+()}{24}{subsubsection.6.1.3.12}
+\contentsline {subsubsection}{\numberline {6.1.3.13}operator-\/()}{24}{subsubsection.6.1.3.13}
+\contentsline {subsubsection}{\numberline {6.1.3.14}operator/()}{24}{subsubsection.6.1.3.14}
+\contentsline {subsubsection}{\numberline {6.1.3.15}operator[]()}{24}{subsubsection.6.1.3.15}
+\contentsline {subsubsection}{\numberline {6.1.3.16}resize()}{24}{subsubsection.6.1.3.16}
+\contentsline {subsubsection}{\numberline {6.1.3.17}row()}{25}{subsubsection.6.1.3.17}
+\contentsline {subsubsection}{\numberline {6.1.3.18}row\_op()}{25}{subsubsection.6.1.3.18}
+\contentsline {subsubsection}{\numberline {6.1.3.19}rref()}{25}{subsubsection.6.1.3.19}
+\contentsline {subsubsection}{\numberline {6.1.3.20}size()}{25}{subsubsection.6.1.3.20}
+\contentsline {subsubsection}{\numberline {6.1.3.21}sort\_col()}{26}{subsubsection.6.1.3.21}
+\contentsline {subsubsection}{\numberline {6.1.3.22}sort\_cols()}{26}{subsubsection.6.1.3.22}
+\contentsline {subsubsection}{\numberline {6.1.3.23}sort\_row()}{26}{subsubsection.6.1.3.23}
+\contentsline {subsubsection}{\numberline {6.1.3.24}sort\_rows()}{26}{subsubsection.6.1.3.24}
+\contentsline {subsubsection}{\numberline {6.1.3.25}sum()}{26}{subsubsection.6.1.3.25}
+\contentsline {subsubsection}{\numberline {6.1.3.26}T()}{27}{subsubsection.6.1.3.26}
+\contentsline {subsubsection}{\numberline {6.1.3.27}turn\_to()}{27}{subsubsection.6.1.3.27}
+\contentsline {subsection}{\numberline {6.1.4}Friends And Related Function Documentation}{27}{subsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.4.1}operator$<$$<$}{27}{subsubsection.6.1.4.1}
+\contentsline {subsection}{\numberline {6.1.5}Member Data Documentation}{28}{subsection.6.1.5}
+\contentsline {subsubsection}{\numberline {6.1.5.1}\_col}{28}{subsubsection.6.1.5.1}
+\contentsline {subsubsection}{\numberline {6.1.5.2}\_row}{28}{subsubsection.6.1.5.2}
+\contentsline {subsubsection}{\numberline {6.1.5.3}data}{28}{subsubsection.6.1.5.3}
+\contentsline {section}{\numberline {6.2}var\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::matrix$<$ S $>$\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Row Class Reference}{29}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Constructor \& Destructor Documentation}{30}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}Row()}{30}{subsubsection.6.2.1.1}
+\contentsline {subsection}{\numberline {6.2.2}Member Function Documentation}{30}{subsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.1}operator[]()}{30}{subsubsection.6.2.2.1}
+\contentsline {subsection}{\numberline {6.2.3}Member Data Documentation}{30}{subsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.3.1}\_a}{30}{subsubsection.6.2.3.1}
+\contentsline {subsubsection}{\numberline {6.2.3.2}\_i}{30}{subsubsection.6.2.3.2}
+\contentsline {chapter}{\numberline {7}File Documentation}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}includes/mcpp.hpp File Reference}{31}{section.7.1}
+\contentsline {section}{\numberline {7.2}includes/misc/constants.hpp File Reference}{31}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Typedef Documentation}{32}{subsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1.1}table}{32}{subsubsection.7.2.1.1}
+\contentsline {section}{\numberline {7.3}includes/plot/figure.hpp File Reference}{33}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Function Documentation}{34}{subsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.1.1}check\_param()}{34}{subsubsection.7.3.1.1}
+\contentsline {subsubsection}{\numberline {7.3.1.2}figure()}{34}{subsubsection.7.3.1.2}
+\contentsline {subsubsection}{\numberline {7.3.1.3}hline()}{34}{subsubsection.7.3.1.3}
+\contentsline {subsubsection}{\numberline {7.3.1.4}plot()}{35}{subsubsection.7.3.1.4}
+\contentsline {subsubsection}{\numberline {7.3.1.5}point()}{35}{subsubsection.7.3.1.5}
+\contentsline {subsubsection}{\numberline {7.3.1.6}vline()}{35}{subsubsection.7.3.1.6}
+\contentsline {subsection}{\numberline {7.3.2}Variable Documentation}{36}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}BLACK}{36}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}BLUE}{36}{subsubsection.7.3.2.2}
+\contentsline {subsubsection}{\numberline {7.3.2.3}GREEN}{36}{subsubsection.7.3.2.3}
+\contentsline {subsubsection}{\numberline {7.3.2.4}RED}{36}{subsubsection.7.3.2.4}
+\contentsline {subsubsection}{\numberline {7.3.2.5}WHITE}{36}{subsubsection.7.3.2.5}
+\contentsline {section}{\numberline {7.4}includes/variables/graph.hpp File Reference}{37}{section.7.4}
+\contentsline {section}{\numberline {7.5}includes/variables/matrix.hpp File Reference}{37}{section.7.5}
+\contentsline {section}{\numberline {7.6}includes/vectors/vec.hpp File Reference}{38}{section.7.6}
+\contentsline {section}{\numberline {7.7}includes/vectors/vector.hpp File Reference}{40}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Function Documentation}{41}{subsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.1.1}operator\%()}{41}{subsubsection.7.7.1.1}
+\contentsline {subsubsection}{\numberline {7.7.1.2}operator$\ast $()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{42}{subsubsection.7.7.1.2}
+\contentsline {subsubsection}{\numberline {7.7.1.3}operator$\ast $()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{42}{subsubsection.7.7.1.3}
+\contentsline {subsubsection}{\numberline {7.7.1.4}operator$\ast $()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{43}{subsubsection.7.7.1.4}
+\contentsline {subsubsection}{\numberline {7.7.1.5}operator+()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{43}{subsubsection.7.7.1.5}
+\contentsline {subsubsection}{\numberline {7.7.1.6}operator+()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{44}{subsubsection.7.7.1.6}
+\contentsline {subsubsection}{\numberline {7.7.1.7}operator+()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{44}{subsubsection.7.7.1.7}
+\contentsline {subsubsection}{\numberline {7.7.1.8}operator-\/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{45}{subsubsection.7.7.1.8}
+\contentsline {subsubsection}{\numberline {7.7.1.9}operator-\/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{45}{subsubsection.7.7.1.9}
+\contentsline {subsubsection}{\numberline {7.7.1.10}operator-\/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{46}{subsubsection.7.7.1.10}
+\contentsline {subsubsection}{\numberline {7.7.1.11}operator/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{46}{subsubsection.7.7.1.11}
+\contentsline {subsubsection}{\numberline {7.7.1.12}operator/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{47}{subsubsection.7.7.1.12}
+\contentsline {subsubsection}{\numberline {7.7.1.13}operator/()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{47}{subsubsection.7.7.1.13}
+\contentsline {subsubsection}{\numberline {7.7.1.14}operator$<$$<$()}{48}{subsubsection.7.7.1.14}
+\contentsline {section}{\numberline {7.8}README.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}md File Reference}{48}{section.7.8}
+\contentsline {chapter}{Index}{49}{section*.31}

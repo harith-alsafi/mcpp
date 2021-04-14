@@ -1,0 +1,198 @@
+\indexentry{var@{var}|hyperpage}{9}
+\indexentry{vec@{vec}|hyperpage}{9}
+\indexentry{vec@{vec}!acos@{acos}|hyperpage}{10}
+\indexentry{acos@{acos}!vec@{vec}|hyperpage}{10}
+\indexentry{vec@{vec}!acosh@{acosh}|hyperpage}{10}
+\indexentry{acosh@{acosh}!vec@{vec}|hyperpage}{10}
+\indexentry{vec@{vec}!acot@{acot}|hyperpage}{10}
+\indexentry{acot@{acot}!vec@{vec}|hyperpage}{10}
+\indexentry{vec@{vec}!acoth@{acoth}|hyperpage}{11}
+\indexentry{acoth@{acoth}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!acsc@{acsc}|hyperpage}{11}
+\indexentry{acsc@{acsc}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!acsch@{acsch}|hyperpage}{11}
+\indexentry{acsch@{acsch}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!asec@{asec}|hyperpage}{11}
+\indexentry{asec@{asec}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!asech@{asech}|hyperpage}{11}
+\indexentry{asech@{asech}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!asin@{asin}|hyperpage}{11}
+\indexentry{asin@{asin}!vec@{vec}|hyperpage}{11}
+\indexentry{vec@{vec}!asinh@{asinh}|hyperpage}{12}
+\indexentry{asinh@{asinh}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!atan@{atan}|hyperpage}{12}
+\indexentry{atan@{atan}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!atanh@{atanh}|hyperpage}{12}
+\indexentry{atanh@{atanh}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!cos@{cos}|hyperpage}{12}
+\indexentry{cos@{cos}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!cosh@{cosh}|hyperpage}{12}
+\indexentry{cosh@{cosh}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!cot@{cot}|hyperpage}{12}
+\indexentry{cot@{cot}!vec@{vec}|hyperpage}{12}
+\indexentry{vec@{vec}!coth@{coth}|hyperpage}{13}
+\indexentry{coth@{coth}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!cross@{cross}|hyperpage}{13}
+\indexentry{cross@{cross}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!csc@{csc}|hyperpage}{13}
+\indexentry{csc@{csc}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!csch@{csch}|hyperpage}{13}
+\indexentry{csch@{csch}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!dot@{dot}|hyperpage}{13}
+\indexentry{dot@{dot}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!exp@{exp}|hyperpage}{13}
+\indexentry{exp@{exp}!vec@{vec}|hyperpage}{13}
+\indexentry{vec@{vec}!pow@{pow}|hyperpage}{14}
+\indexentry{pow@{pow}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!pow@{pow}|hyperpage}{14}
+\indexentry{pow@{pow}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!sec@{sec}|hyperpage}{14}
+\indexentry{sec@{sec}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!sech@{sech}|hyperpage}{14}
+\indexentry{sech@{sech}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!sin@{sin}|hyperpage}{14}
+\indexentry{sin@{sin}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!sinh@{sinh}|hyperpage}{14}
+\indexentry{sinh@{sinh}!vec@{vec}|hyperpage}{14}
+\indexentry{vec@{vec}!tan@{tan}|hyperpage}{15}
+\indexentry{tan@{tan}!vec@{vec}|hyperpage}{15}
+\indexentry{vec@{vec}!tanh@{tanh}|hyperpage}{15}
+\indexentry{tanh@{tanh}!vec@{vec}|hyperpage}{15}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{17}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}|hyperpage}{20}
+\indexentry{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{20}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}|hyperpage}{20}
+\indexentry{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{20}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}|hyperpage}{20}
+\indexentry{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{20}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!col@{col}|hyperpage}{21}
+\indexentry{col@{col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{21}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!col\_op@{col\_op}|hyperpage}{21}
+\indexentry{col\_op@{col\_op}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{21}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!det@{det}|hyperpage}{21}
+\indexentry{det@{det}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{21}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_col@{insert\_col}|hyperpage}{21}
+\indexentry{insert\_col@{insert\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{21}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_col@{insert\_col}|hyperpage}{22}
+\indexentry{insert\_col@{insert\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{22}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_row@{insert\_row}|hyperpage}{22}
+\indexentry{insert\_row@{insert\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{22}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_row@{insert\_row}|hyperpage}{22}
+\indexentry{insert\_row@{insert\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{22}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!inv@{inv}|hyperpage}{23}
+\indexentry{inv@{inv}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{23}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!is\_identity@{is\_identity}|hyperpage}{23}
+\indexentry{is\_identity@{is\_identity}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{23}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!is\_square@{is\_square}|hyperpage}{23}
+\indexentry{is\_square@{is\_square}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{23}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{23}
+\indexentry{operator$\ast$@{operator$\ast$}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{23}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator+@{operator+}|hyperpage}{23}
+\indexentry{operator+@{operator+}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{23}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator-\/@{operator-\/}|hyperpage}{24}
+\indexentry{operator-\/@{operator-\/}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{24}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator/@{operator/}|hyperpage}{24}
+\indexentry{operator/@{operator/}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{24}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{24}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{24}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!resize@{resize}|hyperpage}{24}
+\indexentry{resize@{resize}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{24}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!row@{row}|hyperpage}{24}
+\indexentry{row@{row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{24}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!row\_op@{row\_op}|hyperpage}{25}
+\indexentry{row\_op@{row\_op}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{25}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!rref@{rref}|hyperpage}{25}
+\indexentry{rref@{rref}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{25}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!size@{size}|hyperpage}{25}
+\indexentry{size@{size}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{25}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_col@{sort\_col}|hyperpage}{25}
+\indexentry{sort\_col@{sort\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{25}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_cols@{sort\_cols}|hyperpage}{26}
+\indexentry{sort\_cols@{sort\_cols}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{26}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_row@{sort\_row}|hyperpage}{26}
+\indexentry{sort\_row@{sort\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{26}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_rows@{sort\_rows}|hyperpage}{26}
+\indexentry{sort\_rows@{sort\_rows}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{26}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sum@{sum}|hyperpage}{26}
+\indexentry{sum@{sum}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{26}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!T@{T}|hyperpage}{27}
+\indexentry{T@{T}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{27}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!turn\_to@{turn\_to}|hyperpage}{27}
+\indexentry{turn\_to@{turn\_to}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{27}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{27}
+\indexentry{operator$<$$<$@{operator$<$$<$}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{27}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!\_col@{\_col}|hyperpage}{28}
+\indexentry{\_col@{\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{28}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!\_row@{\_row}|hyperpage}{28}
+\indexentry{\_row@{\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{28}
+\indexentry{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!data@{data}|hyperpage}{28}
+\indexentry{data@{data}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}|hyperpage}{28}
+\indexentry{var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}|hyperpage}{29}
+\indexentry{var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}!Row@{Row}|hyperpage}{30}
+\indexentry{Row@{Row}!var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}|hyperpage}{30}
+\indexentry{var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{30}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}|hyperpage}{30}
+\indexentry{var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}!\_a@{\_a}|hyperpage}{30}
+\indexentry{\_a@{\_a}!var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}|hyperpage}{30}
+\indexentry{var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}!\_i@{\_i}|hyperpage}{30}
+\indexentry{\_i@{\_i}!var::matrix$<$ S $>$::Row@{var::matrix$<$ S $>$::Row}|hyperpage}{30}
+\indexentry{includes/mcpp.hpp@{includes/mcpp.hpp}|hyperpage}{31}
+\indexentry{includes/misc/constants.hpp@{includes/misc/constants.hpp}|hyperpage}{31}
+\indexentry{constants.hpp@{constants.hpp}!table@{table}|hyperpage}{32}
+\indexentry{table@{table}!constants.hpp@{constants.hpp}|hyperpage}{32}
+\indexentry{includes/plot/figure.hpp@{includes/plot/figure.hpp}|hyperpage}{33}
+\indexentry{figure.hpp@{figure.hpp}!check\_param@{check\_param}|hyperpage}{34}
+\indexentry{check\_param@{check\_param}!figure.hpp@{figure.hpp}|hyperpage}{34}
+\indexentry{figure.hpp@{figure.hpp}!figure@{figure}|hyperpage}{34}
+\indexentry{figure@{figure}!figure.hpp@{figure.hpp}|hyperpage}{34}
+\indexentry{figure.hpp@{figure.hpp}!hline@{hline}|hyperpage}{34}
+\indexentry{hline@{hline}!figure.hpp@{figure.hpp}|hyperpage}{34}
+\indexentry{figure.hpp@{figure.hpp}!plot@{plot}|hyperpage}{35}
+\indexentry{plot@{plot}!figure.hpp@{figure.hpp}|hyperpage}{35}
+\indexentry{figure.hpp@{figure.hpp}!point@{point}|hyperpage}{35}
+\indexentry{point@{point}!figure.hpp@{figure.hpp}|hyperpage}{35}
+\indexentry{figure.hpp@{figure.hpp}!vline@{vline}|hyperpage}{35}
+\indexentry{vline@{vline}!figure.hpp@{figure.hpp}|hyperpage}{35}
+\indexentry{figure.hpp@{figure.hpp}!BLACK@{BLACK}|hyperpage}{36}
+\indexentry{BLACK@{BLACK}!figure.hpp@{figure.hpp}|hyperpage}{36}
+\indexentry{figure.hpp@{figure.hpp}!BLUE@{BLUE}|hyperpage}{36}
+\indexentry{BLUE@{BLUE}!figure.hpp@{figure.hpp}|hyperpage}{36}
+\indexentry{figure.hpp@{figure.hpp}!GREEN@{GREEN}|hyperpage}{36}
+\indexentry{GREEN@{GREEN}!figure.hpp@{figure.hpp}|hyperpage}{36}
+\indexentry{figure.hpp@{figure.hpp}!RED@{RED}|hyperpage}{36}
+\indexentry{RED@{RED}!figure.hpp@{figure.hpp}|hyperpage}{36}
+\indexentry{figure.hpp@{figure.hpp}!WHITE@{WHITE}|hyperpage}{36}
+\indexentry{WHITE@{WHITE}!figure.hpp@{figure.hpp}|hyperpage}{36}
+\indexentry{includes/variables/graph.hpp@{includes/variables/graph.hpp}|hyperpage}{37}
+\indexentry{includes/variables/matrix.hpp@{includes/variables/matrix.hpp}|hyperpage}{37}
+\indexentry{includes/vectors/vec.hpp@{includes/vectors/vec.hpp}|hyperpage}{38}
+\indexentry{includes/vectors/vector.hpp@{includes/vectors/vector.hpp}|hyperpage}{40}
+\indexentry{vector.hpp@{vector.hpp}!operator\%@{operator\%}|hyperpage}{41}
+\indexentry{operator\%@{operator\%}!vector.hpp@{vector.hpp}|hyperpage}{41}
+\indexentry{vector.hpp@{vector.hpp}!operator$\ast$@{operator$\ast$}|hyperpage}{42}
+\indexentry{operator$\ast$@{operator$\ast$}!vector.hpp@{vector.hpp}|hyperpage}{42}
+\indexentry{vector.hpp@{vector.hpp}!operator$\ast$@{operator$\ast$}|hyperpage}{42}
+\indexentry{operator$\ast$@{operator$\ast$}!vector.hpp@{vector.hpp}|hyperpage}{42}
+\indexentry{vector.hpp@{vector.hpp}!operator$\ast$@{operator$\ast$}|hyperpage}{43}
+\indexentry{operator$\ast$@{operator$\ast$}!vector.hpp@{vector.hpp}|hyperpage}{43}
+\indexentry{vector.hpp@{vector.hpp}!operator+@{operator+}|hyperpage}{43}
+\indexentry{operator+@{operator+}!vector.hpp@{vector.hpp}|hyperpage}{43}
+\indexentry{vector.hpp@{vector.hpp}!operator+@{operator+}|hyperpage}{44}
+\indexentry{operator+@{operator+}!vector.hpp@{vector.hpp}|hyperpage}{44}
+\indexentry{vector.hpp@{vector.hpp}!operator+@{operator+}|hyperpage}{44}
+\indexentry{operator+@{operator+}!vector.hpp@{vector.hpp}|hyperpage}{44}
+\indexentry{vector.hpp@{vector.hpp}!operator-\/@{operator-\/}|hyperpage}{45}
+\indexentry{operator-\/@{operator-\/}!vector.hpp@{vector.hpp}|hyperpage}{45}
+\indexentry{vector.hpp@{vector.hpp}!operator-\/@{operator-\/}|hyperpage}{45}
+\indexentry{operator-\/@{operator-\/}!vector.hpp@{vector.hpp}|hyperpage}{45}
+\indexentry{vector.hpp@{vector.hpp}!operator-\/@{operator-\/}|hyperpage}{46}
+\indexentry{operator-\/@{operator-\/}!vector.hpp@{vector.hpp}|hyperpage}{46}
+\indexentry{vector.hpp@{vector.hpp}!operator/@{operator/}|hyperpage}{46}
+\indexentry{operator/@{operator/}!vector.hpp@{vector.hpp}|hyperpage}{46}
+\indexentry{vector.hpp@{vector.hpp}!operator/@{operator/}|hyperpage}{47}
+\indexentry{operator/@{operator/}!vector.hpp@{vector.hpp}|hyperpage}{47}
+\indexentry{vector.hpp@{vector.hpp}!operator/@{operator/}|hyperpage}{47}
+\indexentry{operator/@{operator/}!vector.hpp@{vector.hpp}|hyperpage}{47}
+\indexentry{vector.hpp@{vector.hpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{48}
+\indexentry{operator$<$$<$@{operator$<$$<$}!vector.hpp@{vector.hpp}|hyperpage}{48}
+\indexentry{README.md@{README.md}|hyperpage}{48}
