@@ -1,5 +1,6 @@
 #pragma once
 #include "misc/constants.hpp"
 #include "variables/matrix.hpp"
-#include "variables/vector.hpp"
+#include "vectors/vector.hpp"
+#include "vectors/vec.hpp"
 #include "plot/figure.hpp"

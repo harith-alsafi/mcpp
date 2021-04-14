@@ -1,1 +1,0 @@
-// implemented in vector.hpp
