@@ -1,0 +1,555 @@
+\hypertarget{classvar_1_1matrix}{}\doxysection{var\+::matrix$<$ S $>$ Class Template Reference}
+\label{classvar_1_1matrix}\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+
+
+Class for 2d matrix of objects with matrix properties.  
+
+
+
+
+{\ttfamily \#include \char`\"{}matrix.\+hpp\char`\"{}}
+
+
+
+Collaboration diagram for var\+::matrix$<$ S $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classvar_1_1matrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classvar_1_1matrix_1_1Row}{Row}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1matrix_aab814423067f424c57f47d56d5010104}{matrix}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Construct a new matrix object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1matrix_af92f50f7e483148242c9b56795ffb66c}{matrix}} ()
+\begin{DoxyCompactList}\small\item\em Default construct a new matrix object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1matrix_afe20fd4dc72ead309e70f218df6625e4}{matrix}} (std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ S $>$$>$ a)
+\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a2cfd529579ea911d568a5792444ddd39}{resize}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em resizes the matrix \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1matrix_a028c4cf01aac857813e29688c6dab5ed}{row}} ()
+\begin{DoxyCompactList}\small\item\em returns the number of rows \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1matrix_ab87dc7917ac93477191c6a4b0f705bfe}{col}} ()
+\begin{DoxyCompactList}\small\item\em returns the number of columns \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1matrix_a08e5a47baf0f1c61e7c2bb8343ba0288}{size}} ()
+\begin{DoxyCompactList}\small\item\em returns total number of elements \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_ace847119e6177f7f89f36addf102cd9a}{insert\+\_\+row}} (const std\+::vector$<$ S $>$ \&a)
+\begin{DoxyCompactList}\small\item\em insterts row at the end \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a20b5dfc88ecc9d56d851b705d80cec1f}{insert\+\_\+col}} (const std\+::vector$<$ S $>$ \&a)
+\begin{DoxyCompactList}\small\item\em insterts column at the end \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_ac4cab370d72d1d82e8c3dee426cfd860}{insert\+\_\+row}} (int i, const std\+::vector$<$ S $>$ \&a)
+\begin{DoxyCompactList}\small\item\em inserts row at specefic index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a95c12872c5a4ce99138deb1ba23fa217}{insert\+\_\+col}} (int j, const std\+::vector$<$ S $>$ \&a)
+\begin{DoxyCompactList}\small\item\em inserts column at specefic index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a4e8f5dd6ec8a184286d307c8b3470850}{T}} ()
+\begin{DoxyCompactList}\small\item\em mutates data to into transpose \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a3c37b4e903620daaf0b42d16efe7ea6c}{sort\+\_\+rows}} (int d=1)
+\begin{DoxyCompactList}\small\item\em sorts all rows \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a658b3e43735088f935d9b7dc8162435b}{sort\+\_\+cols}} (int d=1)
+\begin{DoxyCompactList}\small\item\em sorts all columns \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a53a7bd16a0ed5279a8755bf11708dfb7}{sort\+\_\+row}} (int i, int d=1)
+\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a342b9af80b4ac9ea20b95347f54a3209}{sort\+\_\+col}} (int j, int d=1)
+\item 
+{\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classvar_1_1matrix_a93fc399209debab99a6f9f4d8443a8cf}{row\+\_\+op}} (int i, LAMBDA f)
+\item 
+{\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classvar_1_1matrix_a1a413b72aa4cea9cdb292125fcaaa903}{col\+\_\+op}} (int j, LAMBDA f)
+\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a489b7317be430bf43f1b68700379b8b3}{turn\+\_\+to}} (S n)
+\begin{DoxyCompactList}\small\item\em converts all elements to n \end{DoxyCompactList}\item 
+S \mbox{\hyperlink{classvar_1_1matrix_aa7c2f3728b8038645041ee3589773fe0}{sum}} ()
+\begin{DoxyCompactList}\small\item\em sum of all elements \end{DoxyCompactList}\item 
+S \mbox{\hyperlink{classvar_1_1matrix_ad2644cf6ff5979b5ebe31407a52886fd}{det}} ()
+\begin{DoxyCompactList}\small\item\em returns the determinant \end{DoxyCompactList}\item 
+S \mbox{\hyperlink{classvar_1_1matrix_ae7bb56502216d4619cc36da09c1206c2}{inv}} ()
+\begin{DoxyCompactList}\small\item\em returns the inverse \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvar_1_1matrix_a7c02156a9ccfc1bb6fbbca99343832a3}{is\+\_\+square}} ()
+\begin{DoxyCompactList}\small\item\em checks if matrix is square \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvar_1_1matrix_a2d289229461ccfda2819f01414a92e88}{is\+\_\+identity}} ()
+\begin{DoxyCompactList}\small\item\em checks if matrix is an identity matrix \end{DoxyCompactList}\item 
+S \mbox{\hyperlink{classvar_1_1matrix_a08bad4a8b659c68ac72d40a18551a599}{rref}} ()
+\begin{DoxyCompactList}\small\item\em rref form of matrix \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1matrix_1_1Row}{Row}} \mbox{\hyperlink{classvar_1_1matrix_a095bf7c645d2d5f56bc037cb22414845}{operator\mbox{[}$\,$\mbox{]}}} (int i)
+\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a6d4152ac71930cd9e6ed976a0896f8a1}{operator+}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
+\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_aafd17859b9edb45d7036da196b768c02}{operator-\/}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
+\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a93cd670b3f0b97b3e0c09e67a705e747}{operator$\ast$}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
+\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a857c8dfada40d0d3f21d5afe91ed787f}{operator/}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{constants_8hpp_aea862ee8af76896044e2f4ea28e47140}{table}}$<$ S $>$ \mbox{\hyperlink{classvar_1_1matrix_af5295d3bdd15a6913d1d444001785e38}{data}}
+\item 
+int \mbox{\hyperlink{classvar_1_1matrix_aedce58a65d1b5b30cedf8a0a7315f200}{\+\_\+row}}
+\item 
+int \mbox{\hyperlink{classvar_1_1matrix_a086d64f6354ad03cc188980b3f7815ee}{\+\_\+col}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
+\begin{DoxyCompactList}\small\item\em print method for the class var\+::matrix$<$int$>$ m; cout $<$$<$ m; \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename S$>$\newline
+class var\+::matrix$<$ S $>$}
+Class for 2d matrix of objects with matrix properties. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em S} & can be of any type \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvar_1_1matrix_aab814423067f424c57f47d56d5010104}\label{classvar_1_1matrix_aab814423067f424c57f47d56d5010104}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}}
+\index{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::\mbox{\hyperlink{classvar_1_1matrix}{matrix}} (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new matrix object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & number of rows \\
+\hline
+{\em c} & number of colums \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_af92f50f7e483148242c9b56795ffb66c}\label{classvar_1_1matrix_af92f50f7e483148242c9b56795ffb66c}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}}
+\index{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::\mbox{\hyperlink{classvar_1_1matrix}{matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default construct a new matrix object. 
+
+\mbox{\Hypertarget{classvar_1_1matrix_afe20fd4dc72ead309e70f218df6625e4}\label{classvar_1_1matrix_afe20fd4dc72ead309e70f218df6625e4}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!matrix@{matrix}}
+\index{matrix@{matrix}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::\mbox{\hyperlink{classvar_1_1matrix}{matrix}} (\begin{DoxyParamCaption}\item[{std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ S $>$$>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classvar_1_1matrix_ab87dc7917ac93477191c6a4b0f705bfe}\label{classvar_1_1matrix_ab87dc7917ac93477191c6a4b0f705bfe}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!col@{col}}
+\index{col@{col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{col()}{col()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the number of columns 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a1a413b72aa4cea9cdb292125fcaaa903}\label{classvar_1_1matrix_a1a413b72aa4cea9cdb292125fcaaa903}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!col\_op@{col\_op}}
+\index{col\_op@{col\_op}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{col\_op()}{col\_op()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+template$<$typename LAMBDA $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::col\+\_\+op (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{LAMBDA}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_ad2644cf6ff5979b5ebe31407a52886fd}\label{classvar_1_1matrix_ad2644cf6ff5979b5ebe31407a52886fd}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!det@{det}}
+\index{det@{det}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{det()}{det()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+S \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::det (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the determinant 
+
+\begin{DoxyReturn}{Returns}
+S 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a20b5dfc88ecc9d56d851b705d80cec1f}\label{classvar_1_1matrix_a20b5dfc88ecc9d56d851b705d80cec1f}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_col@{insert\_col}}
+\index{insert\_col@{insert\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_col()}{insert\_col()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::insert\+\_\+col (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ S $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+insterts column at the end 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a95c12872c5a4ce99138deb1ba23fa217}\label{classvar_1_1matrix_a95c12872c5a4ce99138deb1ba23fa217}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_col@{insert\_col}}
+\index{insert\_col@{insert\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_col()}{insert\_col()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::insert\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{const std\+::vector$<$ S $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+inserts column at specefic index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & \\
+\hline
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_ace847119e6177f7f89f36addf102cd9a}\label{classvar_1_1matrix_ace847119e6177f7f89f36addf102cd9a}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_row@{insert\_row}}
+\index{insert\_row@{insert\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_row()}{insert\_row()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::insert\+\_\+row (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ S $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+insterts row at the end 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_ac4cab370d72d1d82e8c3dee426cfd860}\label{classvar_1_1matrix_ac4cab370d72d1d82e8c3dee426cfd860}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!insert\_row@{insert\_row}}
+\index{insert\_row@{insert\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{insert\_row()}{insert\_row()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::insert\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const std\+::vector$<$ S $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+inserts row at specefic index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_ae7bb56502216d4619cc36da09c1206c2}\label{classvar_1_1matrix_ae7bb56502216d4619cc36da09c1206c2}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!inv@{inv}}
+\index{inv@{inv}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+S \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::inv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the inverse 
+
+\begin{DoxyReturn}{Returns}
+S 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a2d289229461ccfda2819f01414a92e88}\label{classvar_1_1matrix_a2d289229461ccfda2819f01414a92e88}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!is\_identity@{is\_identity}}
+\index{is\_identity@{is\_identity}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{is\_identity()}{is\_identity()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::is\+\_\+identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checks if matrix is an identity matrix 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a7c02156a9ccfc1bb6fbbca99343832a3}\label{classvar_1_1matrix_a7c02156a9ccfc1bb6fbbca99343832a3}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!is\_square@{is\_square}}
+\index{is\_square@{is\_square}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{is\_square()}{is\_square()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::is\+\_\+square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checks if matrix is square 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a93cd670b3f0b97b3e0c09e67a705e747}\label{classvar_1_1matrix_a93cd670b3f0b97b3e0c09e67a705e747}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ S $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a6d4152ac71930cd9e6ed976a0896f8a1}\label{classvar_1_1matrix_a6d4152ac71930cd9e6ed976a0896f8a1}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ S $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_aafd17859b9edb45d7036da196b768c02}\label{classvar_1_1matrix_aafd17859b9edb45d7036da196b768c02}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ S $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a857c8dfada40d0d3f21d5afe91ed787f}\label{classvar_1_1matrix_a857c8dfada40d0d3f21d5afe91ed787f}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ S $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a095bf7c645d2d5f56bc037cb22414845}\label{classvar_1_1matrix_a095bf7c645d2d5f56bc037cb22414845}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{classvar_1_1matrix_1_1Row}{Row}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a2cfd529579ea911d568a5792444ddd39}\label{classvar_1_1matrix_a2cfd529579ea911d568a5792444ddd39}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!resize@{resize}}
+\index{resize@{resize}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::resize (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+resizes the matrix 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & number of rows \\
+\hline
+{\em c} & number of colums \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a028c4cf01aac857813e29688c6dab5ed}\label{classvar_1_1matrix_a028c4cf01aac857813e29688c6dab5ed}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!row@{row}}
+\index{row@{row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the number of rows 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a93fc399209debab99a6f9f4d8443a8cf}\label{classvar_1_1matrix_a93fc399209debab99a6f9f4d8443a8cf}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!row\_op@{row\_op}}
+\index{row\_op@{row\_op}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{row\_op()}{row\_op()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+template$<$typename LAMBDA $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::row\+\_\+op (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{LAMBDA}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a08bad4a8b659c68ac72d40a18551a599}\label{classvar_1_1matrix_a08bad4a8b659c68ac72d40a18551a599}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!rref@{rref}}
+\index{rref@{rref}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{rref()}{rref()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+S \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::rref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rref form of matrix 
+
+\begin{DoxyReturn}{Returns}
+S 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a08e5a47baf0f1c61e7c2bb8343ba0288}\label{classvar_1_1matrix_a08e5a47baf0f1c61e7c2bb8343ba0288}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!size@{size}}
+\index{size@{size}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns total number of elements 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a342b9af80b4ac9ea20b95347f54a3209}\label{classvar_1_1matrix_a342b9af80b4ac9ea20b95347f54a3209}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_col@{sort\_col}}
+\index{sort\_col@{sort\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_col()}{sort\_col()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::sort\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{int}]{d = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a658b3e43735088f935d9b7dc8162435b}\label{classvar_1_1matrix_a658b3e43735088f935d9b7dc8162435b}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_cols@{sort\_cols}}
+\index{sort\_cols@{sort\_cols}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_cols()}{sort\_cols()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::sort\+\_\+cols (\begin{DoxyParamCaption}\item[{int}]{d = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sorts all columns 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & d = 1 is accending order -\/$>$ \mbox{\hyperlink{classvar_1_1matrix_a658b3e43735088f935d9b7dc8162435b}{sort\+\_\+cols()}} d = 0 is decending order -\/$>$ sort\+\_\+cols(0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a53a7bd16a0ed5279a8755bf11708dfb7}\label{classvar_1_1matrix_a53a7bd16a0ed5279a8755bf11708dfb7}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_row@{sort\_row}}
+\index{sort\_row@{sort\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_row()}{sort\_row()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::sort\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{d = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_a3c37b4e903620daaf0b42d16efe7ea6c}\label{classvar_1_1matrix_a3c37b4e903620daaf0b42d16efe7ea6c}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sort\_rows@{sort\_rows}}
+\index{sort\_rows@{sort\_rows}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_rows()}{sort\_rows()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::sort\+\_\+rows (\begin{DoxyParamCaption}\item[{int}]{d = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sorts all rows 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & d = 1 is accending order -\/$>$ \mbox{\hyperlink{classvar_1_1matrix_a3c37b4e903620daaf0b42d16efe7ea6c}{sort\+\_\+rows()}} d = 0 is decending order -\/$>$ sort\+\_\+rows(0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_aa7c2f3728b8038645041ee3589773fe0}\label{classvar_1_1matrix_aa7c2f3728b8038645041ee3589773fe0}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!sum@{sum}}
+\index{sum@{sum}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{sum()}{sum()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+S \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::sum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sum of all elements 
+
+\begin{DoxyReturn}{Returns}
+S 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_a4e8f5dd6ec8a184286d307c8b3470850}\label{classvar_1_1matrix_a4e8f5dd6ec8a184286d307c8b3470850}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!T@{T}}
+\index{T@{T}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{T()}{T()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+mutates data to into transpose 
+
+\mbox{\Hypertarget{classvar_1_1matrix_a489b7317be430bf43f1b68700379b8b3}\label{classvar_1_1matrix_a489b7317be430bf43f1b68700379b8b3}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!turn\_to@{turn\_to}}
+\index{turn\_to@{turn\_to}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{turn\_to()}{turn\_to()}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::turn\+\_\+to (\begin{DoxyParamCaption}\item[{S}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+converts all elements to n 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}\label{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ S $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+print method for the class var\+::matrix$<$int$>$ m; cout $<$$<$ m; 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em S} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classvar_1_1matrix_a086d64f6354ad03cc188980b3f7815ee}\label{classvar_1_1matrix_a086d64f6354ad03cc188980b3f7815ee}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!\_col@{\_col}}
+\index{\_col@{\_col}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{\_col}{\_col}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::\+\_\+col\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_aedce58a65d1b5b30cedf8a0a7315f200}\label{classvar_1_1matrix_aedce58a65d1b5b30cedf8a0a7315f200}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!\_row@{\_row}}
+\index{\_row@{\_row}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{\_row}{\_row}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::\+\_\+row\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classvar_1_1matrix_af5295d3bdd15a6913d1d444001785e38}\label{classvar_1_1matrix_af5295d3bdd15a6913d1d444001785e38}} 
+\index{var::matrix$<$ S $>$@{var::matrix$<$ S $>$}!data@{data}}
+\index{data@{data}!var::matrix$<$ S $>$@{var::matrix$<$ S $>$}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename S $>$ \\
+\mbox{\hyperlink{constants_8hpp_aea862ee8af76896044e2f4ea28e47140}{table}}$<$S$>$ \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ S $>$\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+includes/variables/\mbox{\hyperlink{matrix_8hpp}{matrix.\+hpp}}\end{DoxyCompactItemize}

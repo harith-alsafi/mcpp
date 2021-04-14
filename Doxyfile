@@ -1,0 +1,18 @@
+DOT_CLEANUP            = YES
+# Extracts
+EXTRACT_PRIVATE		   = YES
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+# UML 
+HAVE_DOT               = YES
+UML_LOOK               = YES
+# Paths
+INPUT = includes/ README.md
+FILE_PATTERNS          = *.hpp 
+RECURSIVE              = YES
+PROJECT_NAME 		   = "mcpp"
+OUTPUT_DIRECTORY       = doc/
+# STL classes 
+BUILTIN_STL_SUPPORT    = YES
+HIDE_IN_BODY_DOCS      = YES
+FORCE_LOCAL_INCLUDES   = YES

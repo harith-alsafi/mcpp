@@ -87,8 +87,6 @@ TEST(functionality, matrix_functions){
     }
 
     ASSERT_EQ(m1.sum(), 10*m1.size());
-
-    
 }
 
 int main(int argc, char **argv)

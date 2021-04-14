@@ -85,10 +85,20 @@ namespace var
                 return _col;
             }
 
+            /**
+             * @brief returns total number of elements
+             * 
+             * @return int 
+             */
             int size(){
                 return _col*_row;
             }
 
+            /**
+             * @brief insterts row at the end 
+             * 
+             * @param a 
+             */
             void insert_row(const std::vector<S>& a){
                 // checking size
                 if(a.size() != _col && _row != 0 && _col != 0){
@@ -103,6 +113,11 @@ namespace var
                 _row = data.size();
             }
 
+            /**
+             * @brief insterts column at the end
+             * 
+             * @param a 
+             */
             void insert_col(const std::vector<S>& a){
                 // checking size
                 if(a.size() != _row && _row != 0 && _col != 0){
@@ -120,7 +135,13 @@ namespace var
                 }
                 _col = data[0].size(); // since all colums have same size
             }
-            
+
+            /**
+             * @brief inserts row at specefic index 
+             * 
+             * @param i 
+             * @param a 
+             */
             void insert_row(int i, const std::vector<S>& a){
                 if(a.size() != _col){
                     throw std::invalid_argument("Size doesnt match");
@@ -130,6 +151,12 @@ namespace var
 
             }
 
+            /**
+             * @brief inserts column at specefic index
+             * 
+             * @param j 
+             * @param a 
+             */
             void insert_col(int j, const std::vector<S>& a){
                 // checking size
                 if(a.size() != _row){
@@ -142,7 +169,7 @@ namespace var
             }
 
             /**
-             * @brief mutates data to ints transpose
+             * @brief mutates data to into transpose
              */
             void T(){
                 // temps
@@ -162,7 +189,7 @@ namespace var
             }
 
             /**
-             * @brief sorts the rows
+             * @brief sorts all rows
              * 
              * @param d 
              * d = 1 is accending order -> sort_rows()
@@ -181,7 +208,7 @@ namespace var
             }
 
             /**
-             * @brief sorts the columns 
+             * @brief sorts all columns 
              * 
              * @param d 
              * d = 1 is accending order -> sort_cols()
@@ -211,6 +238,11 @@ namespace var
 
             }
 
+            /**
+             * @brief converts all elements to n
+             * 
+             * @param n 
+             */
             void turn_to(S n){
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j<_col; j++){
@@ -219,6 +251,11 @@ namespace var
                 }
             }
 
+            /**
+             * @brief sum of all elements
+             * 
+             * @return S 
+             */
             S sum(){
                 S SUM;
                 for(int i = 0; i < _row; i++){
@@ -229,6 +266,69 @@ namespace var
                 return SUM;
             }
 
+            /**
+             * @brief returns the determinant 
+             * 
+             * @return S 
+             */
+            S det(){
+
+            }
+
+            /**
+             * @brief returns the inverse 
+             * 
+             * @return S 
+             */
+            S inv(){
+
+            }
+            
+            /**
+             * @brief checks if matrix is square 
+             * 
+             * @return true 
+             * @return false 
+             */
+            bool is_square(){
+                return _row == _col;
+            }
+
+            /**
+             * @brief checks if matrix is an identity matrix
+             * 
+             * @return true 
+             * @return false 
+             */
+            bool is_identity(){
+                if(is_square()){
+                    int count_zeros = 0;
+                    int count_ones = 0;
+                    for(int i = 0; i < _row; i++){
+                        for(int j = 0; j < _col; j++){
+                            if(i == j && data[i][j] == 1){
+                                count_ones++;
+                            }
+                            else if (i != j && data[i][j] == 0){
+                                count_zeros++;
+                            }
+                        }
+                    }
+                    if(count_ones+count_zeros == _row*_col && count_ones == _row){
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            /**
+             * @brief rref form of matrix
+             * 
+             * @return S 
+             */
+            S rref(){
+
+            }
 
             class Row
             {
@@ -274,39 +374,6 @@ namespace var
 
             }
 
-            S det(){
-
-            }
-
-            S inv(){
-
-            }
-            
-            bool is_square(){
-                return _row == _col;
-            }
-
-            bool is_identity(){
-                if(is_square()){
-                    int count_zeros = 0;
-                    int count_ones = 0;
-                    for(int i = 0; i < _row; i++){
-                        for(int j = 0; j < _col; j++){
-                            if(i == j && data[i][j] == 1){
-                                count_ones++;
-                            }
-                            else if (i != j && data[i][j] == 0){
-                                count_zeros++;
-                            }
-                        }
-                    }
-                    if(count_ones+count_zeros == _row*_col && count_ones == _row){
-                        return true;
-                    }
-                }
-                return false;
-            }
-
             /**
              * @brief print method for the class 
              * var::matrix<int> m; cout << m;
@@ -325,6 +392,6 @@ namespace var
                 }
                 return out;
             }
-
     };
+    
 };
