@@ -1,14 +1,15 @@
+#pragma once
 #include <string>
 #include <vector>
 
 /**
  * @brief RGB values for colors
  */
-extern const std::vector<int> RED = {247, 55, 49};
-extern const std::vector<int> BLACK = {0, 0, 0};
-extern const std::vector<int> BLUE = {36, 114, 200};
-extern const std::vector<int> GREEN = {53, 200, 36};
-extern const std::vector<int> WHITE = {255, 255, 255};
+static std::vector<int> RED = {247, 55, 49};
+static std::vector<int> BLACK = {0, 0, 0};
+static std::vector<int> BLUE = {36, 114, 200};
+static std::vector<int> GREEN = {53, 200, 36};
+static std::vector<int> WHITE = {255, 255, 255};
 
 /**
  * @brief checks parameter for the functions

@@ -1,5 +1,12 @@
 ######################## project details ##########################
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.10)
+
+# Enable debug symbols by default
+# must be done before project() statement
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
+endif()
+
 project(mcpp VERSION 1.0.1 DESCRIPTION "math library for cpp")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 
