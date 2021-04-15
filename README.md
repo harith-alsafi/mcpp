@@ -1,5 +1,4 @@
 <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)</a>
-
 <a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://badge.fury.io/gh/boost-ext%2Fsml.svg)</a>
 <a href="https://travis-ci.org/boost-ext/sml" target="_blank">![Build Status](https://img.shields.io/travis/boost-ext/sml/master.svg?label=linux/osx)</a>
 <a href="https://ci.appveyor.com/project/boost-ext/sml" target="_blank">![Build Status](https://img.shields.io/appveyor/ci/boost-ext/sml/master.svg?label=windows)</a>
