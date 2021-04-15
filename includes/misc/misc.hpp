@@ -3,7 +3,7 @@
 namespace misc
 {
     template<typename S>
-    void read(std::string filename, std::vector<S>& v){
+    std::vector<S> read(std::string filename){
 
     }
 
@@ -11,4 +11,6 @@ namespace misc
     void write(std::string filename, std::vector<S> v){
 
     }
+
+    int factorial(int n);
 }
