@@ -64,6 +64,43 @@ TEST(functionality, insert_row_col){
     for(int i = 0; i < m1.col(); i++){
         ASSERT_EQ(m2[m2.row()-1][i], a[i]);
     }
+}
+
+TEST(functionality, insert_row_col_at)
+{
+    std::vector<int> a = {1, 2, 3};
+    // 0 col and 0 row
+    matrix<int> m3;
+    try{
+        m3.insert_row(0, a);
+    }
+    catch(...){
+        
+    }
+
+    // 3 rows, 3 colums
+    matrix<int> m2(3, 3);
+
+    // row
+    m2.insert_row(1, a);
+    ASSERT_EQ(3+1, m2.row());
+    ASSERT_EQ(3, m2.col());
+    for(int j = 0; j < m2.col(); j++){
+        ASSERT_EQ(m2[1][j], a[j]);
+    }
+
+    // colum 
+    m2.resize(3, 3);
+    m2.insert_col(1, a);
+    ASSERT_EQ(3+1, m2.col());
+    ASSERT_EQ(3, m2.row());
+    for(int j = 0; j < m2.row(); j++){
+        ASSERT_EQ(m2[j][1], a[j]);
+    }
+
+    // column and row 
+    m2.resize(3, 4);
+    // m2.insert_row()
 
 }
 

@@ -170,14 +170,15 @@ namespace var
              * @param i 
              * @param a 
              */
-            void insert_row(int i, const std::vector<S>& a){
+            void insert_row(int i, std::vector<S> a){
                 if(a.size() != _col){
                     throw std::invalid_argument("Size doesnt match");
                 }
                 check_row(i);
-                data.insert(i, a);
+                typename table<S>::iterator it = data.begin();
+                std::advance(it, i);
+                data.insert(it, a);
                 _row = data.size();
-
             }
 
             /**
@@ -187,13 +188,15 @@ namespace var
              * @param a 
              */
             void insert_col(int j, const std::vector<S>& a){
-                // checking size
                 if(a.size() != _row){
                     throw std::invalid_argument("Size doesnt match");
                 }
                 check_col(j);
+                typename std::vector<S>::iterator it;
                 for(int i = 0; i < _row; i++){
-                    data[i].insert(j, a[i]);
+                    it = data[i].begin();
+                    std::advance(it, j);
+                    data[i].insert(it, a[i]);
                 }
                 _col = data[0].size(); // since all colums have same size
             }

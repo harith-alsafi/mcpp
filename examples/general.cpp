@@ -8,6 +8,7 @@ using namespace std;
 
 int main()
 {
-	vector<int> a = {1, 2, 3};
-	a.at(3);
+	vector<vector<int>> a = {{1, 2}, {3, 4}};
+	vector<int> b = {10, 10};
+	b.insert(b.begin(), 1);
 }
