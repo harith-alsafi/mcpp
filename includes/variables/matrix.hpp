@@ -242,10 +242,26 @@ namespace var
                 data = TT(); // transpose back
             }
 
+            /**
+             * @brief sorts rows at specefic index 
+             * 
+             * @param i 
+             * @param d 
+             * d = 1 is accending order -> sort_cols()
+             * d = 0 is decending order -> sort_cols(0)
+             */
             void sort_row(int i, int d = 1){
                 check_row(i);
             }
 
+            /**
+             * @brief sorts colum at specefic index
+             * 
+             * @param j 
+             * @param d 
+             * d = 1 is accending order -> sort_cols()
+             * d = 0 is decending order -> sort_cols(0)
+             */
             void sort_col(int j, int d = 1){
                 check_col(j);
                 data = TT(); // transpose
@@ -253,11 +269,25 @@ namespace var
                 data = TT(); // transpose back
             }
 
+            /**
+             * @brief does operations on specefic rows
+             *  operations are specified by lambda function 
+             * @tparam LAMBDA 
+             * @param i 
+             * @param f 
+             */
             template<typename LAMBDA> 
             void row_op(int i, LAMBDA f){
                 check_row(i);
             }
 
+            /**
+             * @brief does operations on specefic colum
+             *  operations are specified by lambda function 
+             * @tparam LAMBDA 
+             * @param j 
+             * @param f 
+             */
             template<typename LAMBDA> 
             void col_op(int j, LAMBDA f){
                 check_col(j);
@@ -365,8 +395,8 @@ namespace var
                 public:
                     Row(matrix& a, int i): _a(a), _i(i){}
                     S &operator[](int j){
-                        check_row(_i);
-                        check_col(j);
+                        _a.check_row(_i);
+                        _a.check_col(j);
                         return _a.data[_i][j];
                     }
             };
