@@ -120,6 +120,11 @@ TEST(functionality, insert_row_col_at)
 
 }
 
+TEST(functionality, row_col_op)
+{
+    
+}
+
 TEST(functionality, matrix_functions){
     matrix<double> m1(2, 2);
     ASSERT_TRUE(m1.is_square());
@@ -142,6 +147,27 @@ TEST(functionality, matrix_functions){
     ASSERT_EQ(m1.sum(), 10*m1.size());
 
     // transpose 
+    matrix<int> m3 = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    auto m4 = m3.T();
+    ASSERT_EQ(m3.row(), m4.col());
+    ASSERT_EQ(m3.col(), m4.row());
+    
+    table<int> T ={
+        {1, 4},
+        {2, 5},
+        {3, 6}
+    };
+
+    for(int i = 0; i < m4.row(); i++){
+        for(int j = 0; j < m4.col(); j++){
+            ASSERT_EQ(m4[i][j], T[i][j]);
+        }
+    }
+
 }
 
 TEST(operators, arithematic)

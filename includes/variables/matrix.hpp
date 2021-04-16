@@ -12,12 +12,8 @@ namespace var
      * @tparam S can be of any type
      */
     template <typename S> class matrix
-    {
-        private:
-            table<S> data;
-            int _row;
-            int _col;
-
+    {   
+        protected:
             /**
              * @brief checks index for columns
              * 
@@ -40,6 +36,11 @@ namespace var
                 }
             }
 
+            /**
+             * @brief returns transpose for data
+             * 
+             * @return table<S> 
+             */
             table<S> TT(){
                 // temps
                 std::vector<S> temp_col;
@@ -55,7 +56,10 @@ namespace var
                 // applying to data variable
                 return temp;
             }
-
+        private:
+            table<S> data;
+            int _row;
+            int _col;
         public:
             /**
              * @brief Construct a new matrix object
@@ -398,15 +402,30 @@ namespace var
                 return false;
             }
 
-
-
-            class Row
+            /**
+             * @brief col class for another operator[]
+             * 
+             */
+            class Col
             {
                 private:
                     matrix& _a;
                     int _i;
                 public:
-                    Row(matrix& a, int i): _a(a), _i(i){}
+                    /**
+                     * @brief Construct a new Col object
+                     * 
+                     * @param a 
+                     * @param i 
+                     */
+                    Col(matrix& a, int i): _a(a), _i(i){}
+
+                    /**
+                     * @brief [] operator for col
+                     * 
+                     * @param j 
+                     * @return S& 
+                     */
                     S &operator[](int j){
                         _a.check_row(_i);
                         _a.check_col(j);
@@ -414,8 +433,15 @@ namespace var
                     }
             };
 
-            Row operator[](int i){
-                return Row(*this, i);
+            /**
+             * @brief [] operator for rows 
+             * calls another [] operator for column
+             * 
+             * @param i 
+             * @return Row 
+             */
+            Col operator[](int i){
+                return Col(*this, i);
             }
             
             /**
