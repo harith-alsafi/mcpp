@@ -7,7 +7,7 @@
 namespace var
 {
     /**
-     * @brief Class for 2d matrix of objects with matrix properties 
+     * @brief Class for 2d matrix of objects
      * 
      * @tparam S can be of any type
      */
@@ -18,12 +18,22 @@ namespace var
             int _row;
             int _col;
 
+            /**
+             * @brief checks index for columns
+             * 
+             * @param j 
+             */
             void check_col(int j){
                 if(j < 0 || j >= _col){
                     throw std::out_of_range("Col index is out of range");
                 }
             }
 
+            /**
+             * @brief checks index for rows
+             * 
+             * @param i 
+             */
             void check_row(int i){
                 if(i < 0 || i >= _row){
                     throw std::out_of_range("Row index is out of range");
@@ -408,6 +418,12 @@ namespace var
                 return Row(*this, i);
             }
             
+            /**
+             * @brief matrix addition
+             * 
+             * @param other 
+             * @return matrix 
+             */
             matrix operator +(matrix const &other){
                 if(other._col != _col || other._row != _row){
                     throw std::invalid_argument("Size mismatch");
@@ -416,16 +432,30 @@ namespace var
                 temp.data = data;
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
-                        temp.data[i][j] += other.data[i][j];
+                        temp.data[i][j] = data[i][j]+other.data[i][j];
                     }
                 }
                 return temp;
             }
 
+            /**
+             * @brief matrix subtraction
+             * 
+             * @param other 
+             * @return matrix 
+             */
             matrix operator -(matrix const &other){
                 if(other._col != _col || other._row != _row){
                     throw std::invalid_argument("Size mismatch");
                 }
+                matrix temp(_row, _col);
+                temp.data = data;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]-other.data[i][j];
+                    }
+                }
+                return temp;
             }
 
             matrix operator *(matrix const &other){
