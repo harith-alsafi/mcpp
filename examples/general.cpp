@@ -2,10 +2,12 @@
 #include <string>
 #include <vector>
 #include <complex>
-#include <mcpp/mcpp.hpp>
+// #include <mcpp/mcpp.hpp>
+
+using namespace std;
 
 int main()
 {
-    check_param(2, 3);
-
+	vector<int> a = {1, 2, 3};
+	a.at(3);
 }

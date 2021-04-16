@@ -18,6 +18,34 @@ namespace var
             int _row;
             int _col;
 
+            void check_col(int j){
+                if(j < 0 || j >= _col){
+                    throw std::out_of_range("Col index is out of range");
+                }
+            }
+
+            void check_row(int i){
+                if(i < 0 || i >= _row){
+                    throw std::out_of_range("Row index is out of range");
+                }
+            }
+
+            table<S> TT(){
+                // temps
+                std::vector<S> temp_col;
+                table<S> temp;
+                // reversing rows with colums
+                for(int i = 0; i < _col; i++){
+                    temp_col.clear();
+                    for(int j = 0; j < _row; j++){
+                        temp_col.push_back(data[j][i]);
+                    }
+                    temp.push_back(temp_col);
+                }
+                // applying to data variable
+                return temp;
+            }
+
         public:
             /**
              * @brief Construct a new matrix object
@@ -57,7 +85,7 @@ namespace var
             void resize(int r, int c){
                 // checking 
                 if(r < 0 || c < 0){
-                    throw std::invalid_argument("Invalid inputs");
+                    throw std::invalid_argument("Invalid values");
                 }
                 _row = r;
                 _col = c;
@@ -146,6 +174,7 @@ namespace var
                 if(a.size() != _col){
                     throw std::invalid_argument("Size doesnt match");
                 }
+                check_row(i);
                 data.insert(i, a);
                 _row = data.size();
 
@@ -162,6 +191,7 @@ namespace var
                 if(a.size() != _row){
                     throw std::invalid_argument("Size doesnt match");
                 }
+                check_col(j);
                 for(int i = 0; i < _row; i++){
                     data[i].insert(j, a[i]);
                 }
@@ -170,22 +200,14 @@ namespace var
 
             /**
              * @brief mutates data to into transpose
+             * 
+             * @return matrix 
              */
-            void T(){
-                // temps
-                std::vector<S> temp_col;
-                table<S> temp;
-                // reversing rows with colums
-                for(int i = 0; i < _col; i++){
-                    temp_col.clear();
-                    for(int j = 0; j < _row; j++){
-                        temp_col.push_back(data[j][i]);
-                    }
-                    temp.push_back(temp_col);
-                }
-                // applying to data variable
-                resize(_col, _row);
-                data = temp;
+            matrix T(){
+                matrix temp;
+                temp.resize(_col, _row);
+                temp.data = TT();
+                return temp;
             }
 
             /**
@@ -199,7 +221,7 @@ namespace var
                 auto dec = [](int a, int b)-> bool {return a > b;}; // lambda function
                 for(int i = 0; i < _row; i++){
                     if(d == 1){ // accending 
-                    std::sort(data[i].begin(), data[i].end());
+                        std::sort(data[i].begin(), data[i].end());
                     }
                     else{ // decending 
                         std::sort(data[i].begin(), data[i].end(), dec);
@@ -215,27 +237,30 @@ namespace var
              * d = 0 is decending order -> sort_cols(0)
              */
             void sort_cols(int d = 1){
-                T(); // transpose
+                data = TT(); // transpose
                 sort_rows(d); // sort transposed
-                T(); // transpose bacl
+                data = TT(); // transpose back
             }
 
             void sort_row(int i, int d = 1){
-
+                check_row(i);
             }
 
             void sort_col(int j, int d = 1){
-
+                check_col(j);
+                data = TT(); // transpose
+                sort_rows(j, d); // sort transposed
+                data = TT(); // transpose back
             }
 
             template<typename LAMBDA> 
             void row_op(int i, LAMBDA f){
-
+                check_row(i);
             }
 
             template<typename LAMBDA> 
             void col_op(int j, LAMBDA f){
-
+                check_col(j);
             }
 
             /**
@@ -276,14 +301,23 @@ namespace var
             }
 
             /**
-             * @brief returns the inverse 
+             * @brief returns inverse of a matrix
              * 
-             * @return S 
+             * @return matrix 
              */
-            S inv(){
+            matrix inv(){
 
             }
             
+            /**
+             * @brief returns RREF of matrix
+             * 
+             * @return matrix 
+             */
+            matrix rref(){
+
+            }
+
             /**
              * @brief checks if matrix is square 
              * 
@@ -321,14 +355,7 @@ namespace var
                 return false;
             }
 
-            /**
-             * @brief rref form of matrix
-             * 
-             * @return S 
-             */
-            S rref(){
 
-            }
 
             class Row
             {
@@ -338,12 +365,14 @@ namespace var
                 public:
                     Row(matrix& a, int i): _a(a), _i(i){}
                     S &operator[](int j){
+                        check_row(_i);
+                        check_col(j);
                         return _a.data[_i][j];
                     }
             };
 
             Row operator[](int i){
-                return var::matrix<S>::Row(*this, i);
+                return Row(*this, i);
             }
             
             matrix operator +(matrix const &other){
