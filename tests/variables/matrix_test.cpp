@@ -100,7 +100,23 @@ TEST(functionality, insert_row_col_at)
 
     // column and row 
     m2.resize(3, 4);
-    // m2.insert_row()
+    std::vector<int> b = {1, 2, 3, 4};
+    std::vector<int> c = {1, 2, 3, 4};
+    m2.insert_row(1, b);
+    m3.insert_col(1, c);
+    ASSERT_EQ(3+1, m2.row());
+    ASSERT_EQ(4+1, m2.col());
+    table<int> tab = {
+        {0, 1, 0, 0, 0},
+        {1, 2, 2, 3, 4},
+        {0, 3, 0, 0, 0},
+        {0, 4, 0, 0, 0}
+    };
+    for(int i = 0; i < m2.row(); i++){
+        for(int j = 0; j < m2.col(); j++){
+            ASSERT_EQ(m2[i][j], tab[i][j]);
+        }
+    }
 
 }
 
