@@ -4,10 +4,10 @@ configuration:
   - Release
   - Debug
 install:
-  - sh: sudo apt-get install libx11-dev
-  - sh: sudo apt-get install xorg-dev
-  - sh: sudo apt-get install freeglut3-dev
-  - sh: sudo apt-get install libudev-dev
+  - sh: sudo apt-get -y install libx11-dev
+  - sh: sudo apt-get -y install xorg-dev
+  - sh: sudo apt-get -y install freeglut3-dev
+  - sh: sudo apt-get -y install libudev-dev
 
 
 before_build:
