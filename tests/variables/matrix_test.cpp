@@ -155,7 +155,7 @@ TEST(functionality, row_col_op)
         {9, 5, 19},
         {10, 6, 20}
     };
-    ASSERT_TRUE(sorted_c == m_sorted_c);
+    ASSERT_FALSE(sorted_c != m_sorted_c);
 
 }
 
@@ -204,12 +204,17 @@ TEST(functionality, matrix_functions){
 
 }
 
-TEST(operators, arithematic)
+TEST(operators, arithematic) 
 {
     
 }
 
-int main(int argc, char **argv)
+TEST(operators, conditional) 
+{
+    
+}
+
+int main(int argc, char **argv) 
 {
    testing::InitGoogleTest(&argc, argv);
    return RUN_ALL_TESTS();

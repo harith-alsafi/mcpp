@@ -527,8 +527,41 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator<(matrix const &other){
+            bool operator<(matrix &other){
+                if(other._col != _col || other._row != _row){
+                    return false;
+                }
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        if(other.data[i][j] >= data[i][j]){
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
 
+            bool operator>(matrix &other){
+                return !(*this < other);
+            }
+
+            bool operator<=(matrix &other){
+                return (*this < other && *this == other);
+            }
+
+            bool operator>=(matrix &other){
+                return !(*this <= other);
+            }        
+
+            /**
+             * @brief not equal method
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
+            bool operator!=(matrix &other){
+                return !(other == *this);
             }
 
             /**

@@ -266,3 +266,6 @@ std::vector<S> operator %(std::vector<S> v, S s){
     }
     return temp;
 }
+
+// *********************** comparison ********************************
+//TODOconditional operators
