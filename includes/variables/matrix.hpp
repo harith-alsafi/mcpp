@@ -234,16 +234,18 @@ namespace var
              * d = 1 is accending order -> sort_rows()
              * d = 0 is decending order -> sort_rows(0)
              */
-            void sort_rows(int d = 1){
+            matrix sort_rows(int d = 1){
+                matrix temp = *this;
                 auto dec = [](int a, int b)-> bool {return a > b;}; // lambda function
                 for(int i = 0; i < _row; i++){
                     if(d == 1){ // accending 
-                        std::sort(data[i].begin(), data[i].end());
+                        std::sort(temp.data[i].begin(), temp.data[i].end());
                     }
                     else{ // decending 
-                        std::sort(data[i].begin(), data[i].end(), dec);
+                        std::sort(temp.data[i].begin(), temp.data[i].end(), dec);
                     }
                 }
+                return temp;
             }
 
             /**

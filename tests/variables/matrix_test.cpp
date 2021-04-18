@@ -130,13 +130,16 @@ TEST(functionality, row_col_op)
 
     // sort rows
     // accending
-    m.sort_rows();
+    auto m_sorted = m.sort_rows();
     matrix<int> sorted = {
         {3, 9, 10},
         {6, 7, 20},
         {5, 10, 19}
     };
-    ASSERT_TRUE(m == sorted);
+    ASSERT_TRUE(m_sorted == sorted);
+
+    // desending 
+
 }
 
 TEST(functionality, matrix_functions){
