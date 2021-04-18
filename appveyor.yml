@@ -1,1 +1,10 @@
-image: Ubuntu
+image: 
+  - Ubuntu
+configuration:
+  - Release
+  - Debug
+before_build:
+  - mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
+
+build_script:
+  - make
