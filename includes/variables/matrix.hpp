@@ -493,6 +493,27 @@ namespace var
             }
 
             /**
+             * @brief equals method for all elements
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
+            bool operator==(matrix const &other){
+                if(other._col != _col || other._row != _row){
+                    return false;
+                }
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        if(other.data[i][j] != data[i][j]){
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+
+            /**
              * @brief print method for the class 
              * var::matrix<int> m; cout << m;
              * @tparam S 

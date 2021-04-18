@@ -122,7 +122,21 @@ TEST(functionality, insert_row_col_at)
 
 TEST(functionality, row_col_op)
 {
-    matrix<int> m;
+    matrix<int> m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+
+    // sort rows
+    // accending
+    m.sort_rows();
+    matrix<int> sorted = {
+        {3, 9, 10},
+        {6, 7, 20},
+        {5, 10, 19}
+    };
+    ASSERT_TRUE(m == sorted);
 }
 
 TEST(functionality, matrix_functions){
