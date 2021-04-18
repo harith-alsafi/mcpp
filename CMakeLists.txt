@@ -46,7 +46,7 @@ set_target_properties(
 target_link_libraries(mcpp sfml-graphics sfml-window sfml-system)
 
 install(TARGETS mcpp
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION lib
 )
 
 INSTALL(DIRECTORY
