@@ -3,6 +3,8 @@ image:
 configuration:
   - Release
   - Debug
+install:
+  - sh: ./lib/sfml_deps.sh
 before_build:
   - mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
 
