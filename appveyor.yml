@@ -5,7 +5,7 @@ configuration:
   - Debug
 install:
   - chmod 755 ./lib/sfml_deps.sh 
-  - sh: ./lib/sfml_deps.sh 
+  - sh: sudo apt-get install libx11-dev
 before_build:
   - mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
 
