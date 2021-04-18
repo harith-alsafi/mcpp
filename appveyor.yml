@@ -4,6 +4,7 @@ configuration:
   - Release
   - Debug
 install:
+  - sh: sudo apt-get update
   - sh: sudo apt-get -y install libx11-dev
   - sh: sudo apt-get -y install xorg-dev
   - sh: sudo apt-get -y install freeglut3-dev
