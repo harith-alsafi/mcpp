@@ -1,5 +1,6 @@
 image: 
   - Ubuntu
+  - macos
 configuration:
   - Release
   - Debug

@@ -255,10 +255,13 @@ namespace var
              * d = 1 is accending order -> sort_cols()
              * d = 0 is decending order -> sort_cols(0)
              */
-            void sort_cols(int d = 1){
-                data = TT(); // transpose
-                sort_rows(d); // sort transposed
-                data = TT(); // transpose back
+            matrix sort_cols(int d = 1){
+                matrix temp = *this;
+                matrix temp2;
+                temp.data = temp.TT();
+                temp2 = temp.sort_rows(d);
+                temp = temp2.T();
+                return temp;
             }
 
             /**

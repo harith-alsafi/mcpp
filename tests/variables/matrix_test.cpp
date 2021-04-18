@@ -139,7 +139,15 @@ TEST(functionality, row_col_op)
     ASSERT_TRUE(m_sorted == sorted);
 
     // desending 
+    auto m_sorted_2 = m.sort_rows(0);
+    matrix<int> sorted_2 = {
+        {10, 9, 3},
+        {20, 7, 6},
+        {19, 10, 5}
+    };
+    ASSERT_TRUE(m_sorted_2 == sorted_2);
 
+    
 }
 
 TEST(functionality, matrix_functions){
