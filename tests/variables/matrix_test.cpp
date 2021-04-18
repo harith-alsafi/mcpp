@@ -122,7 +122,7 @@ TEST(functionality, insert_row_col_at)
 
 TEST(functionality, row_col_op)
 {
-    
+    matrix<int> m;
 }
 
 TEST(functionality, matrix_functions){
