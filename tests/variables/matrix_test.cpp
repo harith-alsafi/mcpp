@@ -147,7 +147,16 @@ TEST(functionality, row_col_op)
     };
     ASSERT_TRUE(m_sorted_2 == sorted_2);
 
-    
+    // sort cols
+    // accending 
+    auto m_sorted_c = m.sort_cols();
+    matrix<int> sorted_c = {
+        {7, 3, 10},
+        {9, 5, 19},
+        {10, 6, 20}
+    };
+    ASSERT_TRUE(sorted_c == m_sorted_c);
+
 }
 
 TEST(functionality, matrix_functions){

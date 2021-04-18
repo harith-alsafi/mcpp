@@ -258,9 +258,11 @@ namespace var
             matrix sort_cols(int d = 1){
                 matrix temp = *this;
                 matrix temp2;
-                temp.data = temp.TT();
+
+                temp = temp.T();
                 temp2 = temp.sort_rows(d);
                 temp = temp2.T();
+
                 return temp;
             }
 
@@ -516,6 +518,17 @@ namespace var
                     }
                 }
                 return true;
+            }
+
+            /**
+             * @brief less than operator
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
+            bool operator<(matrix const &other){
+
             }
 
             /**
