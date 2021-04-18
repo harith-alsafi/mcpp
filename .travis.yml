@@ -1,0 +1,12 @@
+os:
+  - linux
+  - osx
+install:
+  - ./.travis/install.sh
+
+
+before_script:
+  - mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
+
+script:
+  - make

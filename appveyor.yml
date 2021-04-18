@@ -2,7 +2,6 @@ image:
   - Ubuntu
   - macos
 configuration:
-  - Release
   - Debug
 install:
   - sh: sudo apt-get update
