@@ -22,7 +22,7 @@ find_package(SFML 2 COMPONENTS graphics window system)
 if(SFML_FOUND)
     message("SFML was found")
 else()
-    add_subdirectory(lib/SFML-2.4.2)
+    add_subdirectory(lib/SFML-2.5.1)
 endif()
 
 include_directories(src/plot)
