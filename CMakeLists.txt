@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 #SFML
 # set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/SFML")
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.4.2/cmake/Modules")
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/cmake/Modules")
 find_package(SFML 2 COMPONENTS graphics window system)
 if(SFML_FOUND)
     message("SFML was found")
