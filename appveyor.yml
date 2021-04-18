@@ -4,8 +4,12 @@ configuration:
   - Release
   - Debug
 install:
-  - chmod 755 ./lib/sfml_deps.sh 
   - sh: sudo apt-get install libx11-dev
+  - sh: sudo apt-get install xorg-dev
+  - sh: sudo apt-get install freeglut3-dev
+  - sh: sudo apt-get install libudev-dev
+
+
 before_build:
   - mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
 
