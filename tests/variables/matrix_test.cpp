@@ -227,12 +227,34 @@ TEST(operators, arithematic)
         {6, 7, 8}
     };
 
-    auto m3 = m1+m2;
-    auto m4 = m1*2;
-    auto m5 = 2*m1;
-    ASSERT_TRUE(m1 == m2);
-    ASSERT_TRUE(m5 == m4);
+    // addition 
+    matrix<int> m3 = {
+        {2, 4, 6},
+        {6, 8, 10},
+        {12, 14, 16}
+    };
+    auto m4 = m1+m2;
     ASSERT_TRUE(m3 == m4);
+
+    matrix<int> m5 = {
+        {1+2, 2+2, 3+2},
+        {3+2, 4+2, 5+2},
+        {6+2, 7+2, 8+2}
+    };
+
+    auto m6 = 2+m1;
+    auto m7 = m1+2;
+
+    ASSERT_TRUE(m6 == m7);
+    ASSERT_TRUE(m6 == m5);
+
+    // subtraction 
+    matrix<int> m8 = {
+        {-1, -2, -3},
+        {-3, -4, -5},
+        {-6, -7, -8}
+    };
+    ASSERT_TRUE(m8 == -m1);
 
 }
 

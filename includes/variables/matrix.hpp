@@ -421,6 +421,8 @@ namespace var
                 return false;
             }
 
+// ***************************** [] operator ************************** //
+
             /**
              * @brief col class for another operator[]
              * 
@@ -462,7 +464,9 @@ namespace var
             Col operator[](int i){
                 return Col(*this, i);
             }
-            
+
+// ***************************** + operator ************************** //
+
             /**
              * @brief matrix addition
              * 
@@ -482,6 +486,35 @@ namespace var
             }
 
             /**
+             * @brief matrix+var
+             * 
+             * @param n 
+             * @return matrix 
+             */
+            matrix operator +(S n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]+n;
+                    }
+                }
+                return temp;
+            }
+
+            /**
+             * @brief var+matrix
+             * 
+             * @param n 
+             * @param other 
+             * @return matrix 
+             */
+            friend matrix operator +(S n, matrix &other){
+                return other+n;
+            }
+
+// ***************************** - operator ************************** //
+
+            /**
              * @brief matrix subtraction
              * 
              * @param other 
@@ -497,6 +530,50 @@ namespace var
                 }
                 return temp;
             }
+
+            /**
+             * @brief -matrix
+             * 
+             * @return matrix 
+             */
+            matrix operator -(){
+                matrix temp = *this;    
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = -data[i][j];
+                    }
+                }
+                return temp;
+            }
+
+            /**
+             * @brief matrix-var
+             * 
+             * @param n 
+             * @return matrix 
+             */
+            matrix operator -(S n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]-n;
+                    }
+                }
+                return temp;
+            }
+
+            /**
+             * @brief var-matrix
+             * 
+             * @param n 
+             * @param other 
+             * @return matrix 
+             */
+            friend matrix operator -(S n, matrix &other){
+                return n+-other;
+            }
+
+// ***************************** * operator ************************** //
 
             matrix operator *(matrix const &other){
 
@@ -516,9 +593,13 @@ namespace var
                 return other*n;
             }
 
+// ***************************** / operator ************************** //
+
             matrix operator /(matrix const &other){
 
             }
+
+// *********************** conditional operators ******************** //
 
             /**
              * @brief equals method for all elements
@@ -560,11 +641,25 @@ namespace var
                 }
                 return true;
             }
-
+            
+            /**
+             * @brief more than
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
             bool operator>(matrix &other){
                 return !(*this < other);
             }
 
+            /**
+             * @brief less than or equal
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
             bool operator<=(matrix &other){
                 check_size(other._row, other._col); 
                 for(int i = 0; i < _row; i++){
@@ -577,6 +672,13 @@ namespace var
                 return true;
             }
 
+            /**
+             * @brief more than or equal 
+             * 
+             * @param other 
+             * @return true 
+             * @return false 
+             */
             bool operator>=(matrix &other){
                 return !(*this <= other);
             }        
@@ -592,6 +694,8 @@ namespace var
                 return !(other == *this);
             }
 
+// ************************* stream operator ************************ //
+
             /**
              * @brief print method for the class 
              * var::matrix<int> m; cout << m;
@@ -601,7 +705,6 @@ namespace var
              * @return std::ostream& 
              */
             friend std::ostream& operator << (std::ostream& out, matrix const &other){
-                out << "row: " << other._row << "\t" << "col: " << other._col << "\n";
                 for(int i = 0; i < other._row; i++){
                     for(int j = 0; j < other._col; j++){
                         out << other.data[i][j] << " ";
@@ -610,6 +713,8 @@ namespace var
                 }
                 return out;
             }
+    
+    
     };
     
 };
