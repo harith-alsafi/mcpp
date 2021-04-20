@@ -141,7 +141,7 @@ namespace var
              * 
              * @param a 
              */
-            void insert_row(const std::vector<S>& a){
+            void push_row(const std::vector<S>& a){
                 // checking size
                 if(a.size() != _col && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -160,7 +160,7 @@ namespace var
              * 
              * @param a 
              */
-            void insert_col(const std::vector<S>& a){
+            void push_col(const std::vector<S>& a){
                 // checking size
                 if(a.size() != _row && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -533,7 +533,7 @@ namespace var
                 }
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
-                        if(other.data[i][j] >= data[i][j]){
+                        if(data[i][j] >= other.data[i][j]){
                             return false;
                         }
                     }

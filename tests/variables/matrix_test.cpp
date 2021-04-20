@@ -29,7 +29,7 @@ TEST(functionality, insert_row_col){
 
     // colum 
     std::vector<int> a = {0, 1, 2, 3};
-    m1.insert_col(a);
+    m1.push_col(a);
     ASSERT_EQ(a.size(), m1.row());
     ASSERT_EQ(1, m1.col());
     for(int i = 0; i < m1.row(); i++){
@@ -38,7 +38,7 @@ TEST(functionality, insert_row_col){
 
     // row
     m1.resize(0, 0); 
-    m1.insert_row(a);
+    m1.push_row(a);
     ASSERT_EQ(1, m1.row());
     ASSERT_EQ(a.size(), m1.col());
     for(int i = 0; i < m1.col(); i++){
@@ -49,7 +49,7 @@ TEST(functionality, insert_row_col){
     matrix<float> m2(4, 3);
 
     // colum 
-    m2.insert_col({0, 1, 2, 3});
+    m2.push_col({0, 1, 2, 3});
     ASSERT_EQ(4, m2.row());
     ASSERT_EQ(3+1, m2.col());
     for(int i = 0; i < m1.row(); i++){
@@ -58,7 +58,7 @@ TEST(functionality, insert_row_col){
 
     // row
     m2.resize(2, 4); 
-    m2.insert_row({0, 1, 2, 3});
+    m2.push_row({0, 1, 2, 3});
     ASSERT_EQ(2+1, m2.row());
     ASSERT_EQ(4, m2.col());
     for(int i = 0; i < m1.col(); i++){
@@ -155,7 +155,17 @@ TEST(functionality, row_col_op)
         {9, 5, 19},
         {10, 6, 20}
     };
-    ASSERT_FALSE(sorted_c != m_sorted_c);
+    ASSERT_TRUE(m_sorted_c == sorted_c);
+
+
+    // decending 
+    auto m_sorted_c_2 = m.sort_cols(0);
+    matrix<int> sorted_c_2 = {
+        {10, 6, 20}, 
+        {9, 5,  19}, 
+        {7, 3, 10}
+    };
+    ASSERT_TRUE(sorted_c_2 == m_sorted_c_2);
 
 }
 
@@ -211,6 +221,41 @@ TEST(operators, arithematic)
 
 TEST(operators, conditional) 
 {
+    matrix<int> m1 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    matrix<int> m2 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    matrix<int> m3 = {
+        {0, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    matrix<int> m4 = {
+        {0, 1, 2},
+        {2, 3, 4},
+        {5, 6, 7}
+    };
+
+    // equal 
+    ASSERT_TRUE(m1 == m2);
+
+    // not equal
+    ASSERT_TRUE(m1 != m3);
+
+    // less than 
+    ASSERT_FALSE(m3 < m1);
+    ASSERT_TRUE(m4 < m1);
+
+    // more than 
+    ASSERT_FALSE(m4 > m1);
+    ASSERT_TRUE(m1 > m4);
+
     
 }
 
