@@ -255,8 +255,15 @@ TEST(operators, arithematic)
         {-6, -7, -8}
     };
     ASSERT_TRUE(m8 == -m1);
-
+    ASSERT_TRUE((m4-m1) == m1);
+    ASSERT_TRUE(m1 == (m6-2));
+    ASSERT_TRUE(m8 == (2-m6));
 }
+
+TEST(operators, mult_div)
+{
+    
+} 
 
 TEST(operators, conditional) 
 {

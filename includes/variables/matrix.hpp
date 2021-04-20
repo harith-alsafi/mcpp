@@ -515,6 +515,21 @@ namespace var
 // ***************************** - operator ************************** //
 
             /**
+             * @brief -matrix
+             * 
+             * @return matrix 
+             */
+            matrix operator -(){
+                matrix temp = *this;    
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = -data[i][j];
+                    }
+                }
+                return temp;
+            }
+
+            /**
              * @brief matrix subtraction
              * 
              * @param other 
@@ -531,20 +546,7 @@ namespace var
                 return temp;
             }
 
-            /**
-             * @brief -matrix
-             * 
-             * @return matrix 
-             */
-            matrix operator -(){
-                matrix temp = *this;    
-                for(int i = 0; i < _row; i++){
-                    for(int j = 0; j < _col; j++){
-                        temp.data[i][j] = -data[i][j];
-                    }
-                }
-                return temp;
-            }
+
 
             /**
              * @brief matrix-var
@@ -570,7 +572,8 @@ namespace var
              * @return matrix 
              */
             friend matrix operator -(S n, matrix &other){
-                return n+-other;
+                matrix temp = -other;
+                return n+temp;
             }
 
 // ***************************** * operator ************************** //
@@ -707,7 +710,7 @@ namespace var
             friend std::ostream& operator << (std::ostream& out, matrix const &other){
                 for(int i = 0; i < other._row; i++){
                     for(int j = 0; j < other._col; j++){
-                        out << other.data[i][j] << " ";
+                        out << other.data[i][j] << ",";
                     }
                     out << "\n";
                 }
