@@ -23,7 +23,7 @@ TEST(initails, declaration){
     ASSERT_EQ(0, m3.col());
 }
 
-TEST(functionality, insert_row_col){
+TEST(functionality, push_row_col){
     // no size given 
     matrix<int> m1;
 
@@ -66,7 +66,7 @@ TEST(functionality, insert_row_col){
     }
 }
 
-TEST(functionality, insert_row_col_at)
+TEST(functionality, insert_row_col)
 {
     std::vector<int> a = {1, 2, 3};
     // 0 col and 0 row
@@ -216,7 +216,24 @@ TEST(functionality, matrix_functions){
 
 TEST(operators, arithematic) 
 {
-    
+    matrix<int> m1 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    matrix<int> m2 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+
+    auto m3 = m1+m2;
+    auto m4 = m1*2;
+    auto m5 = 2*m1;
+    ASSERT_TRUE(m1 == m2);
+    ASSERT_TRUE(m5 == m4);
+    ASSERT_TRUE(m3 == m4);
+
 }
 
 TEST(operators, conditional) 
@@ -256,6 +273,11 @@ TEST(operators, conditional)
     ASSERT_FALSE(m4 > m1);
     ASSERT_TRUE(m1 > m4);
 
+    // less than or equal 
+    ASSERT_TRUE(m3 <= m1);
+
+    // more than or equal 
+    ASSERT_TRUE(m1 >= m3);
     
 }
 

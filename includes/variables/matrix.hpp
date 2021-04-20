@@ -56,6 +56,18 @@ namespace var
                 // applying to data variable
                 return temp;
             }
+
+            /**
+             * @brief checks size for operators 
+             * 
+             * @param r 
+             * @param c 
+             */
+            void check_size(int r, int c){
+                if(c != _col || r != _row){
+                    throw std::invalid_argument("Size mismatch");
+                }
+            }
         private:
             table<S> data;
             int _row;
@@ -458,9 +470,7 @@ namespace var
              * @return matrix 
              */
             matrix operator +(matrix const &other){
-                if(other._col != _col || other._row != _row){
-                    throw std::invalid_argument("Size mismatch");
-                }
+                check_size(other._row, other._col); 
                 matrix temp(_row, _col);
                 temp.data = data;
                 for(int i = 0; i < _row; i++){
@@ -478,11 +488,8 @@ namespace var
              * @return matrix 
              */
             matrix operator -(matrix const &other){
-                if(other._col != _col || other._row != _row){
-                    throw std::invalid_argument("Size mismatch");
-                }
-                matrix temp(_row, _col);
-                temp.data = data;
+                check_size(other._row, other._col); 
+                matrix temp = *this;    
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]-other.data[i][j];
@@ -493,6 +500,20 @@ namespace var
 
             matrix operator *(matrix const &other){
 
+            }
+
+            matrix operator *(S n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]*n;
+                    }
+                }
+                return temp;
+            }
+
+            friend matrix operator *(S n, matrix &other){
+                return other*n;
             }
 
             matrix operator /(matrix const &other){
@@ -507,9 +528,8 @@ namespace var
              * @return false 
              */
             bool operator==(matrix const &other){
-                if(other._col != _col || other._row != _row){
-                    return false;
-                }
+                check_size(other._row, other._col); 
+
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         if(other.data[i][j] != data[i][j]){
@@ -546,7 +566,15 @@ namespace var
             }
 
             bool operator<=(matrix &other){
-                return (*this < other && *this == other);
+                check_size(other._row, other._col); 
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        if(data[i][j] > other.data[i][j]){
+                            return false;
+                        }
+                    }
+                }
+                return true;
             }
 
             bool operator>=(matrix &other){
