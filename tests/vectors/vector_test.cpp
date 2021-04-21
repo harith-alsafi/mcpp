@@ -66,30 +66,30 @@ TEST(functions, misc)
 {
    std::vector<int> a = {1, 2, 3, 4};
    // power 
-   auto c = vec::pow(a, 2);
-   testing::internal::CaptureStdout();
-   std::cout << c;
-   std::string output = testing::internal::GetCapturedStdout();
-   EXPECT_TRUE(output == "[1, 4, 9, 16]");
-   // power-2
-   c = vec::pow(a, a);
-   for(int i = 0; i < c.size(); i++){
-      ASSERT_EQ(c[i], std::pow(a[i], a[i]));
-   }
+   // auto c = vec::pow(a, 2);
+   // testing::internal::CaptureStdout();
+   // std::cout << c;
+   // std::string output = testing::internal::GetCapturedStdout();
+   // EXPECT_TRUE(output == "[1, 4, 9, 16]");
+   // // power-2
+   // c = vec::pow(a, a);
+   // for(int i = 0; i < c.size(); i++){
+   //    ASSERT_EQ(c[i], std::pow(a[i], a[i]));
+   // }
 }
 
 TEST(operations, vec_all)
 {
-   std::vector<int> a = {1, 2, 3, 4};
-   auto b = 2*vec::pow(a, 2)+3;
-   ASSERT_EQ(a.size(), b.size());
-   for(int i = 0; i < a.size(); i++){
-      ASSERT_EQ(b[i], 2*std::pow(a[i], 2)+3);
-   }
-   testing::internal::CaptureStdout();
-   std::cout << a;
-   std::string output = testing::internal::GetCapturedStdout();
-   EXPECT_TRUE(output == "[1, 2, 3, 4]");
+   // std::vector<int> a = {1, 2, 3, 4};
+   // auto b = 2*vec::pow(a, 2)+3;
+   // ASSERT_EQ(a.size(), b.size());
+   // for(int i = 0; i < a.size(); i++){
+   //    ASSERT_EQ(b[i], 2*std::pow(a[i], 2)+3);
+   // }
+   // testing::internal::CaptureStdout();
+   // std::cout << a;
+   // std::string output = testing::internal::GetCapturedStdout();
+   // EXPECT_TRUE(output == "[1, 2, 3, 4]");
 }
 
 
