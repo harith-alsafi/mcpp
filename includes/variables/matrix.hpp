@@ -579,9 +579,24 @@ namespace var
 // ***************************** * operator ************************** //
 
             matrix operator *(matrix const &other){
-
+                // condition 
+                if(!(_row == other._col && _col == other._row)){
+                    throw std::invalid_argument("Size mismatch");
+                }
+                matrix temp(_row, other._col);
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < other._col; j++){
+                        
+                    }
+                }
             }
 
+            /**
+             * @brief matrix*var
+             * 
+             * @param n 
+             * @return matrix 
+             */
             matrix operator *(S n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
@@ -592,6 +607,13 @@ namespace var
                 return temp;
             }
 
+            /**
+             * @brief var*matrix
+             * 
+             * @param n 
+             * @param other 
+             * @return matrix 
+             */
             friend matrix operator *(S n, matrix &other){
                 return other*n;
             }
@@ -601,6 +623,33 @@ namespace var
             matrix operator /(matrix const &other){
 
             }
+
+            matrix operator /(S n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]/n;
+                    }
+                }
+                return temp;
+            }
+
+            friend matrix operator /(S n, matrix &other){
+                matrix temp = other;
+                for(int i = 0; i < other._row; i++){
+                    for(int j = 0; j < other._col; j++){
+                        temp.data[i][j] = n/temp.data[i][j];
+                    }
+                }
+                return temp;
+            }
+
+// ***************************** ^ operator ************************** //
+
+// ***************************** % operator ************************** //
+
+// ***************************** ~ operator ************************** //
+
 
 // *********************** conditional operators ******************** //
 

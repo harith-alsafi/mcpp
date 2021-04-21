@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include <string>
 namespace misc
@@ -14,3 +15,6 @@ namespace misc
 
     int factorial(int n);
 }
+
+// TODO add csv read, csv write for matrix 
+// TODO polyfit

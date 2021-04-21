@@ -2,6 +2,7 @@
 #include "../misc/constants.hpp"
 #include <vector>
 #include <iostream>
+#include <cmath>
 // ********************** multiply ****************************
 /**
  * @brief vector*vector
@@ -261,6 +262,16 @@ std::vector<S> operator %(std::vector<S> v, S s){
     std::vector<S> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]%s);
+    }
+    return temp;
+}
+
+// ********************** ^ operator *********************************
+template<typename S>
+std::vector<S> operator^(std::vector<S> a, S b){
+    std::vector<S> temp;
+    for(int i = 0; i < a.size(); i++){
+        temp.push_back(std::pow(a[i], b));
     }
     return temp;
 }

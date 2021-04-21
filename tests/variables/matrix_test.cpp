@@ -262,7 +262,19 @@ TEST(operators, arithematic)
 
 TEST(operators, mult_div)
 {
-    
+    matrix<int> m1 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    matrix<int> m2 = {
+        {1, 2, 3},
+        {3, 4, 5},
+        {6, 7, 8}
+    };
+    ASSERT_TRUE(2*m2 == m2*2);
+    ASSERT_TRUE(2*m2 == m1+m2);
+
 } 
 
 TEST(operators, conditional) 

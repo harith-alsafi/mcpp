@@ -16,15 +16,7 @@ namespace vec
         } 
     }
 
-    template<typename S>
-    std::vector<S> pow(std::vector<S> a, S b){
-        std::vector<S> temp;
-        S temp2 = 1;
-        for(int i = 0; i < a.size(); i++){
-            temp.push_back(std::pow(a[i], b));
-        }
-        return temp;
-    }
+
 
     template<typename S>
     std::vector<S> pow(std::vector<S> a, std::vector<S> b){
