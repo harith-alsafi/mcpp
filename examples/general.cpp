@@ -1,16 +1,18 @@
-#include <string>
-#include <vector>
-#include <complex>
+#include<vector>
 #include <iostream>
+#include <cstdio>
+using namespace std;
 
-// #include <mcpp/mcpp.hpp>
-
-using std::cout;
-
+int8_t a = 200;
+uint8_t b = 100;
 int main()
 {
-	cout << "hi";
-	// vector<vector<int>> a = {{1, 2}, {3, 4}};
-	// vector<int> b = {10, 10};
-	// b.insert(b.begin(), 1);
+    if(a > b){
+        cout << "h";
+    }
+    else{
+        cout < < 
+    }
+
+
 }

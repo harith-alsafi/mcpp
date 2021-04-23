@@ -272,9 +272,13 @@ TEST(operators, mult_div)
         {3, 4, 5},
         {6, 7, 8}
     };
+    // multiply 
     ASSERT_TRUE(2*m2 == m2*2);
     ASSERT_TRUE(2*m2 == m1+m2);
 
+
+    // divide 
+    ASSERT_TRUE(m2/2 != 2/m2);
 } 
 
 TEST(operators, conditional) 

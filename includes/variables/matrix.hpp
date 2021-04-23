@@ -625,7 +625,9 @@ namespace var
             }
 
             matrix operator /(S n){
-                matrix temp = *this;
+                matrix temp(_row, _col);
+                temp.data = data;
+                
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]/n;
@@ -660,7 +662,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator==(matrix const &other){
+            bool operator==(matrix other){
                 check_size(other._row, other._col); 
 
                 for(int i = 0; i < _row; i++){
@@ -680,7 +682,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator<(matrix &other){
+            bool operator<(matrix other){
                 if(other._col != _col || other._row != _row){
                     return false;
                 }
@@ -701,7 +703,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator>(matrix &other){
+            bool operator>(matrix other){
                 return !(*this < other);
             }
 
@@ -712,7 +714,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator<=(matrix &other){
+            bool operator<=(matrix other){
                 check_size(other._row, other._col); 
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -731,7 +733,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator>=(matrix &other){
+            bool operator>=(matrix other){
                 return !(*this <= other);
             }        
 
@@ -742,8 +744,8 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator!=(matrix &other){
-                return !(other == *this);
+            bool operator!=(matrix other){
+                return !(*this == other);
             }
 
 // ************************* stream operator ************************ //
