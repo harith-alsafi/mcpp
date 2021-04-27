@@ -1,7 +1,7 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include "../../includes/mcpp.hpp"
 
-using namespace var;
+using var::matrix;
 template<typename T> 
 using table = std::vector<std::vector<T>>;
 // tes_case_name    test_name
@@ -170,6 +170,33 @@ TEST(functionality, row_col_op)
 
 }
 
+TEST(functionality, row_col_op_2)
+{
+    matrix<int> m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };  
+
+    auto fun = [](int A){
+        return A*2+3;
+    };
+    m.row_op(1, fun);
+    ASSERT_EQ(m[1][0], 7*2+3);
+    ASSERT_EQ(m[1][1], 6*2+3);
+    ASSERT_EQ(m[1][2], 20*2+3);
+
+    m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+    m.col_op(1, fun);
+    ASSERT_EQ(m[0][1], 3*2+3);
+    ASSERT_EQ(m[1][1], 6*2+3);
+    ASSERT_EQ(m[2][1], 5*2+3);
+}
+
 TEST(functionality, remove_row_col)
 {
     matrix<int> m1 = {
@@ -191,6 +218,37 @@ TEST(functionality, remove_row_col)
     ASSERT_EQ(m2[0][1], 2);
     ASSERT_EQ(m2[1][0], 4);
     ASSERT_EQ(m2[1][1], 5);
+}
+
+TEST(functionality, remove_row_col_at)
+{
+    matrix<int> m1 = {
+        {1, 9},
+        {2, 10},
+        {3, 4}
+    };
+    m1.erase_row(1);
+    ASSERT_EQ(m1.row(), 2);
+    ASSERT_EQ(m1[0][0], 1);
+    ASSERT_EQ(m1[0][1], 9);
+    ASSERT_EQ(m1[1][0], 3);
+    ASSERT_EQ(m1[1][1], 4);
+
+
+    matrix<int> m2 = {
+        {1, 9, 11},
+        {2, 10, 12},
+        {3, 4, 16}
+    };
+    m2.erase_col(1);
+    ASSERT_EQ(m2.col(), 2);
+    ASSERT_EQ(m2[0][0], 1);
+    ASSERT_EQ(m2[1][0], 2);
+    ASSERT_EQ(m2[2][0], 3);
+    ASSERT_EQ(m2[0][1], 11);
+    ASSERT_EQ(m2[1][1], 12);
+    ASSERT_EQ(m2[2][1], 16);
+
 }
 
 TEST(functionality, matrix_functions){

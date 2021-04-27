@@ -326,6 +326,30 @@ namespace var
                 }
                 _col = data[0].size();
             }
+            
+            /**
+             * @brief erase row at index
+             * 
+             * @param i 
+             */
+            void erase_row(int i){
+                check_row(i);
+                data.erase(data.begin()+i);
+                _row = data.size();
+            }
+
+            /**
+             * @brief erase column at index
+             * 
+             * @param j 
+             */
+            void erase_col(int j){
+                check_col(j);
+                for(int i = 0; i < _row; i++){
+                    data[i].erase(data[i].begin()+j);
+                }
+                _col = data[0].size();
+            }
 
             /**
              * @brief sorts all rows
@@ -403,6 +427,9 @@ namespace var
             template<typename LAMBDA> 
             void row_op(int i, LAMBDA f){
                 check_row(i);
+                for(int j = 0; j < _col; j++){
+                    data[i][j] = f(data[i][j]);
+                }
             }
 
             /**
@@ -415,6 +442,9 @@ namespace var
             template<typename LAMBDA> 
             void col_op(int j, LAMBDA f){
                 check_col(j);
+                for(int i = 0; i < _row; i++){
+                    data[i][j] = f(data[i][j]);
+                }
             }
 
             /**
