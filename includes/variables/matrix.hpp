@@ -1,6 +1,5 @@
 #pragma once
-#include <iostream>
-#include <vector>
+#include "../vectors/vector.hpp"
 #include <algorithm>
 #include <cmath>
 
@@ -208,11 +207,23 @@ namespace var
                 return _col*_row;
             }
 
+            /**
+             * @brief returns the row at an index
+             * 
+             * @param i 
+             * @return std::vector<S> 
+             */
             std::vector<S> get_row(int i){
                 check_row(i);
                 return data[i];
             }
 
+            /**
+             * @brief returns the colum at an index
+             * 
+             * @param j 
+             * @return std::vector<S> 
+             */
             std::vector<S> get_col(int j){
                 check_col(j);
                 std::vector<S> temp;
@@ -358,18 +369,10 @@ namespace var
              * d = 1 is accending order -> sort_rows()
              * d = 0 is decending order -> sort_rows(0)
              */
-            matrix sort_rows(int d = 1){
-                matrix temp = *this;
-                auto dec = [](int a, int b)-> bool {return a > b;}; // lambda function
+            void sort_rows(int d = 1){
                 for(int i = 0; i < _row; i++){
-                    if(d == 1){ // accending 
-                        std::sort(temp.data[i].begin(), temp.data[i].end());
-                    }
-                    else{ // decending 
-                        std::sort(temp.data[i].begin(), temp.data[i].end(), dec);
-                    }
+                    sort_row(i, d);
                 }
-                return temp;
             }
 
             /**
@@ -379,15 +382,10 @@ namespace var
              * d = 1 is accending order -> sort_cols()
              * d = 0 is decending order -> sort_cols(0)
              */
-            matrix sort_cols(int d = 1){
-                matrix temp = *this;
-                matrix temp2;
-
-                temp = temp.T();
-                temp2 = temp.sort_rows(d);
-                temp = temp2.T();
-
-                return temp;
+            void sort_cols(int d = 1){
+                for(int j = 0; j < _col; j++){
+                    sort_col(j, d);
+                }
             }
 
             /**
@@ -400,6 +398,13 @@ namespace var
              */
             void sort_row(int i, int d = 1){
                 check_row(i);
+                auto dec = [](int a, int b)-> bool {return a > b;}; 
+                if(d == 1){ // accending 
+                    std::sort(data[i].begin(), data[i].end());
+                }
+                else{ // decending 
+                    std::sort(data[i].begin(), data[i].end(), dec);
+                }
             }
 
             /**
@@ -413,7 +418,7 @@ namespace var
             void sort_col(int j, int d = 1){
                 check_col(j);
                 data = TT(); // transpose
-                sort_rows(j, d); // sort transposed
+                sort_row(j, d); // sort transposed
                 data = TT(); // transpose back
             }
 
@@ -951,15 +956,34 @@ namespace var
                         if(j < other._col-1){
                             out << ",";
                         }
-                        if(j == other._col-1){
-                            out << "\n";
-                        }
+                    }
+                    if(i != other._row-1){
+                        out << "\n";
                     }
                 }
                 return out;
             }
-    
-    
+
+            /**
+             * @brief input operator 
+             * 
+             * @param input 
+             * @param other 
+             * @return std::istream& 
+             */
+            friend std::istream &operator >> (std::istream  &input, matrix &other){
+                std::vector<S> temp;
+                other.resize(0, 0);
+                while(input.good())
+                {
+                    input >> temp;
+                    if(input.eof()){
+                        break;
+                    }    
+                    other.push_row(temp);
+                    temp.clear();       
+                }
+            }
     };
     
 };

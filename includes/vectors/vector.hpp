@@ -2,6 +2,7 @@
 #include "../misc/constants.hpp"
 #include <vector>
 #include <iostream>
+#include <sstream>
 // ********************** multiply ****************************
 /**
  * @brief vector*vector
@@ -244,6 +245,33 @@ std::ostream& operator << (std::ostream& out, std::vector<S> &other){
         }
     }
     return out;
+}
+
+/**
+ * @brief input operator 
+ * 
+ * @tparam S 
+ * @param input 
+ * @param other 
+ * @return std::istream& 
+ */
+template<typename S>
+std::istream &operator >> (std::istream  &input, std::vector<S> &other){
+    std::string line;
+    getline(input, line);
+    
+    std::stringstream LINE;
+    LINE << line;
+
+    std::string temp;
+    S var;
+    while(LINE.good())
+    {
+        getline(LINE, temp, ',');
+        if(std::stringstream(temp) >> var){
+            other.push_back(var);
+        }
+    }
 }
 
 // ********************** others operators ****************************

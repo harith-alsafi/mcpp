@@ -4,6 +4,8 @@
 
 namespace plt
 {
+
+
 	/**
 	 * @brief RGB values for colors
 	 */
@@ -13,13 +15,14 @@ namespace plt
 	static std::vector<int> GREEN = {53, 200, 36};
 	static std::vector<int> WHITE = {255, 255, 255};
 
-	/**
-	 * @brief checks parameter for the functions
-	 * 
-	 * @param exp 
-	 * @param act 
-	 */
-	void check_param(int exp, int act);
+	struct details
+	{
+		std::vector<double> xrange = {-5, 5};
+		std::vector<double> yrange = {-5, 5};
+		std::vector<int> color = BLACK;
+		std::string legend = "";
+		int thickness = 1;
+	};
 
 	/**
 	 * @brief initializes figure
@@ -44,39 +47,31 @@ namespace plt
 	 * @param draw 
 	 * @param legend 
 	 */
+	template<typename S>
 	void plot(
-		std::vector<float> x, 
-		std::vector<float> y,
-		std::vector<float> xrange = {-5, 5},
-		std::vector<float> yrange = {-5, 5},
-		std::vector<int> draw = BLACK,
-		std::string legend = ""
+		std::vector<S> x, 
+		std::vector<S> y,
+		details d
 	);
 
+	template<typename S>
 	void point(
-		float x,
-		float y,
-		std::vector<float> xrange = {-5, 5},
-		std::vector<float> yrange = {-5, 5},
-		std::vector<int> draw = BLACK,
-		std::string legend = ""
+		std::vector<S> x, 
+		std::vector<S> y,
+		details d
 	);
 
+	template<typename S>
 	void hline(
-		float x,
-		float y,
-		std::vector<float> xrange = {-5, 5},
-		std::vector<float> yrange = {-5, 5},
-		std::vector<int> draw = BLACK,
-		std::string legend = ""
+		std::vector<S> x, 
+		std::vector<S> y,
+		details d
 	);
 
+	template<typename S>
 	void vline(
-		float x,
-		float y,
-		std::vector<float> xrange = {-5, 5},
-		std::vector<float> yrange = {-5, 5},
-		std::string legend = "",
-		std::vector<int> draw = BLACK
+		std::vector<S> x, 
+		std::vector<S> y,
+		details d
 	);
 }

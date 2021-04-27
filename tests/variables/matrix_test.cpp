@@ -1,6 +1,6 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include "../../includes/mcpp.hpp"
-
+#include <fstream>
 using var::matrix;
 template<typename T> 
 using table = std::vector<std::vector<T>>;
@@ -131,42 +131,78 @@ TEST(functionality, row_col_op)
 
     // sort rows
     // accending
-    auto m_sorted = m.sort_rows();
+    m.sort_rows();
     matrix<int> sorted = {
         {3, 9, 10},
         {6, 7, 20},
         {5, 10, 19}
     };
-    ASSERT_TRUE(m_sorted == sorted);
+    ASSERT_TRUE(m == sorted);
 
     // desending 
-    auto m_sorted_2 = m.sort_rows(0);
+    m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+    m.sort_rows(0);
     matrix<int> sorted_2 = {
         {10, 9, 3},
         {20, 7, 6},
         {19, 10, 5}
     };
-    ASSERT_TRUE(m_sorted_2 == sorted_2);
+    ASSERT_TRUE(m == sorted_2);
 
     // sort cols
     // accending 
-    auto m_sorted_c = m.sort_cols();
+    m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+    m.sort_cols();
     matrix<int> sorted_c = {
         {7, 3, 10},
         {9, 5, 19},
         {10, 6, 20}
     };
-    ASSERT_TRUE(m_sorted_c == sorted_c);
+    ASSERT_TRUE(m == sorted_c);
 
 
     // decending 
-    auto m_sorted_c_2 = m.sort_cols(0);
+    m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+    m.sort_cols(0);
     matrix<int> sorted_c_2 = {
         {10, 6, 20}, 
         {9, 5,  19}, 
         {7, 3, 10}
     };
-    ASSERT_TRUE(sorted_c_2 == m_sorted_c_2);
+    ASSERT_TRUE(m == sorted_c_2 );
+
+}
+
+TEST(functionality, get_row_col)
+{
+    matrix<int> m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };  
+    auto row = m.get_row(1);
+    ASSERT_EQ(row.size(), m.col());
+    ASSERT_EQ(row[0], m[1][0]);
+    ASSERT_EQ(row[1], m[1][1]);
+    ASSERT_EQ(row[2], m[1][2]);
+
+    auto col = m.get_col(1);
+    ASSERT_EQ(col.size(), m.row());
+    ASSERT_EQ(col[0], m[0][1]);
+    ASSERT_EQ(col[1], m[1][1]);
+    ASSERT_EQ(col[2], m[2][1]);
 
 }
 
@@ -332,7 +368,6 @@ TEST(functionality, matrix_functions){
 
     // trace 
     ASSERT_FLOAT_EQ(m6.tr(), 1.0+5.0+12.0);
-    std::cout << m6;
 
 }
 
@@ -381,6 +416,19 @@ TEST(operators, arithematic)
     ASSERT_TRUE(m1 == (m6-2));
     ASSERT_TRUE(m8 == (2-m6));
 }
+
+TEST(operators, cin_cout)
+{
+   std::ifstream infile("mat.txt");
+   matrix<int> a;
+   infile >> a;
+   testing::internal::CaptureStdout();
+   std::cout << a;
+   std::string output = testing::internal::GetCapturedStdout();
+   EXPECT_TRUE(output == "1,2,3,4,5\n6,7,8,9,10");
+
+}
+
 
 TEST(operators, mult_div)
 {

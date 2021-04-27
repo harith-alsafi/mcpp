@@ -1,5 +1,6 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include "../../includes/mcpp.hpp"
+#include <fstream>
 
 TEST(operations, vec_and_vec)
 {
@@ -77,7 +78,7 @@ TEST(functions, misc)
    }
 }
 
-TEST(operations, vec_all)
+TEST(operations, vec_out)
 {
    std::vector<int> a = {1, 2, 3, 4};
    auto b = 2*vec::pow(a, 2)+3;
@@ -91,6 +92,18 @@ TEST(operations, vec_all)
    EXPECT_TRUE(output == "1,2,3,4");
 }
 
+TEST(operations, vec_in_out)
+{
+   std::ifstream infile("vect.txt");
+   std::vector<int> a;
+   infile >> a;
+   testing::internal::CaptureStdout();
+   std::cout << a;
+   std::string output = testing::internal::GetCapturedStdout();
+   EXPECT_TRUE(output == "1,2,3,5,6,7");
+   ASSERT_EQ(a.size(), 6);
+   ASSERT_EQ(a[1], 2);
+}
 
 
 int main(int argc, char **argv)
