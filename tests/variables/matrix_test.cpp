@@ -1,8 +1,9 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include "../../includes/mcpp.hpp"
 
-using var::matrix;
-
+using namespace var;
+template<typename T> 
+using table = std::vector<std::vector<T>>;
 // tes_case_name    test_name
 TEST(initails, declaration){
     // declaration -1
@@ -169,6 +170,29 @@ TEST(functionality, row_col_op)
 
 }
 
+TEST(functionality, remove_row_col)
+{
+    matrix<int> m1 = {
+        {1, 0},
+        {0, 1}
+    };
+    m1.pop_row();
+    ASSERT_EQ(m1.row(), 1);
+    ASSERT_EQ(m1[0][0], 1);
+    ASSERT_EQ(m1[0][1], 0);
+
+    matrix<int> m2 = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    m2.pop_col();
+    ASSERT_EQ(m2.col(), 2);
+    ASSERT_EQ(m2[0][0], 1);
+    ASSERT_EQ(m2[0][1], 2);
+    ASSERT_EQ(m2[1][0], 4);
+    ASSERT_EQ(m2[1][1], 5);
+}
+
 TEST(functionality, matrix_functions){
     matrix<double> m1(2, 2);
     ASSERT_TRUE(m1.is_square());
@@ -248,6 +272,10 @@ TEST(functionality, matrix_functions){
     };
     ASSERT_TRUE(m9 == m6.inv());
 
+    // trace 
+    ASSERT_FLOAT_EQ(m6.tr(), 1.0+5.0+12.0);
+    std::cout << m6;
+
 }
 
 TEST(operators, arithematic) 
@@ -308,7 +336,7 @@ TEST(operators, mult_div)
         {3, 4, 5},
         {6, 7, 8}
     };
-<<<<<<< HEAD
+
     matrix<int> m3 = {
         {1, 2, 3},
         {4, 5, 6}
@@ -326,15 +354,12 @@ TEST(operators, mult_div)
     ASSERT_TRUE(2*m2 == m2*2);
     ASSERT_TRUE(2*m2 == m1+m2);
     ASSERT_TRUE(m3*m4 == m5);
-    
-=======
+
     // multiply 
     ASSERT_TRUE(2*m2 == m2*2);
     ASSERT_TRUE(2*m2 == m1+m2);
 
-
->>>>>>> d002b6b9a211bdee581980b417c82bf213281910
-    // divide 
+  // divide 
     ASSERT_TRUE(m2/2 != 2/m2);
 } 
 

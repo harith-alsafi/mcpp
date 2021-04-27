@@ -1,5 +1,4 @@
 #pragma once
-#include "../misc/constants.hpp"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -15,6 +14,9 @@ namespace var
     template <typename S> class matrix
     {   
         protected:
+            // 2d vector
+            template<typename T> 
+            using table = std::vector<std::vector<T>>;
             /**
              * @brief checks index for columns
              * 
@@ -116,6 +118,10 @@ namespace var
                 return sum;
             }
 
+            /**
+             * @brief throws exception if matrix is not a square
+             * 
+             */
             void square(){
                 if(!is_square()){
                     throw std::invalid_argument("Matrix is not a square");
@@ -192,7 +198,7 @@ namespace var
             int col(){
                 return _col;
             }
-
+            
             /**
              * @brief returns total number of elements
              * 
@@ -200,6 +206,20 @@ namespace var
              */
             int size(){
                 return _col*_row;
+            }
+
+            std::vector<S> get_row(int i){
+                check_row(i);
+                return data[i];
+            }
+
+            std::vector<S> get_col(int j){
+                check_col(j);
+                std::vector<S> temp;
+                for(int i = 0; i < _row; i++){
+                    temp.push_back(data[i][j]);
+                }
+                return temp;
             }
 
             /**
@@ -279,6 +299,32 @@ namespace var
                     data[i].insert(it, a[i]);
                 }
                 _col = data[0].size(); // since all colums have same size
+            }
+
+            /**
+             * @brief removes last row
+             * 
+             */
+            void pop_row(){
+                if(_row == 0){
+                    throw std::invalid_argument("No rows to remove");
+                }
+                data.pop_back();
+                _row = data.size();
+            }
+
+            /**
+             * @brief removes last colum
+             * 
+             */
+            void pop_col(){
+                if(_col == 0){
+                    throw std::invalid_argument("No colums to remove");
+                }
+                for(int i = 0; i < _row; i++){
+                    data[i].pop_back();
+                }
+                _col = data[0].size();
             }
 
             /**

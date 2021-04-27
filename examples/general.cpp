@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 #include <iostream>
 #include <string>
+#include <complex>
 
 using std::cout;
 using std::string;
@@ -20,34 +20,14 @@ void menu(int &a)
 	}
 }
 
+struct point{
+	int x;
+	int y;
+};
+
 int main()
 {
 
-	int main_choice;
-	while(1)
-	{
-		menu(main_choice);
-		if(main_choice == 1){
-			cout << "You choose option-1 \n";
-		}
-	}
-=======
-#include<vector>
-#include <iostream>
-#include <cstdio>
-using namespace std;
-
-int8_t a = 200;
-uint8_t b = 100;
-int main()
-{
-    if(a > b){
-        cout << "h";
-    }
-    else{
-        cout < < 
-    }
-
->>>>>>> d002b6b9a211bdee581980b417c82bf213281910
+	std::complex<point> p;
 
 }

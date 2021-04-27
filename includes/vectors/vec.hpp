@@ -2,6 +2,34 @@
 #include <cmath>
 namespace vec
 {
+    /**
+     * @brief linspace (inclusive)
+     * 
+     * @tparam S 
+     * @param start 
+     * @param end 
+     * @param count 
+     * @return std::vector<S> 
+     */
+    template<typename S> 
+    std::vector<S> linspace(S start, S end, int count){
+
+    }
+
+    /**
+     * @brief difference
+     * 
+     * @tparam S 
+     * @param start 
+     * @param end 
+     * @param diff 
+     * @return std::vector<S> 
+     */
+    template<typename S>
+    std::vector<S> arange(S start, S end, S diff){
+
+    }
+
     template<typename S>
     std::vector<S> dot(std::vector<S> a, std::vector<S> b){
         if(a.size() != b.size()){
