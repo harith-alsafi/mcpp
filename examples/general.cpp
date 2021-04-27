@@ -1,16 +1,34 @@
-#include <string>
-#include <vector>
-#include <complex>
 #include <iostream>
-
-// #include <mcpp/mcpp.hpp>
+#include <string>
 
 using std::cout;
+using std::string;
+using std::cin;
+
+void menu(int &a)
+{
+	cout << "[1]-Option A \n";
+	cout << "[2]-Option B \n";
+	cout << "[3]-Option A \n";
+	cout << "------------------ \n";
+	cout << "Enter you choice: ";
+	if(!(cin >> a)){
+		cin.clear();
+		cin.ignore();
+		cout << "Please input a correct choice \n";
+	}
+}
 
 int main()
 {
-	cout << "hi";
-	// vector<vector<int>> a = {{1, 2}, {3, 4}};
-	// vector<int> b = {10, 10};
-	// b.insert(b.begin(), 1);
+
+	int main_choice;
+	while(1)
+	{
+		menu(main_choice);
+		if(main_choice == 1){
+			cout << "You choose option-1 \n";
+		}
+	}
+
 }

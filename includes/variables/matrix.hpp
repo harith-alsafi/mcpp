@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 
 namespace var
 {
@@ -68,6 +69,59 @@ namespace var
                     throw std::invalid_argument("Size mismatch");
                 }
             }
+            
+            /**
+             * @brief minor of a matrix
+             * 
+             * @param i 
+             * @param j 
+             * @param other 
+             * @return matrix 
+             */
+            matrix M(int i, int j, matrix &other) {
+                matrix b(other.row()-1, other.col()-1);
+                int r = 0;
+                int c = 0;
+                for(int ii = 0; ii < other.row(); ii++){
+                    for(int jj = 0; jj < other.col(); jj++){
+                        if(ii != i && jj != j){
+                            b[r][c] = other[ii][jj];
+                            c++;
+                        }
+                    }
+                    c = 0;
+                    if(ii != i){
+                        r++;
+                    }
+                }
+                return b;
+            }
+
+            /**
+             * @brief recursive determinant 
+             * 
+             * @param a 
+             * @return S 
+             */
+            S DET(matrix a){
+                // 2x2 determinant
+                if(a.col() == 2){
+                    return (a[0][0]*a[1][1])-(a[1][0]*a[0][1]);
+                }
+                // n by n
+                S sum = S();
+                for(int j = 0; j < a.col(); j++){              
+                    sum += a[0][j]*std::pow((-1), 0+j)*DET(M(0, j, a));                  
+                }
+                return sum;
+            }
+
+            void square(){
+                if(!is_square()){
+                    throw std::invalid_argument("Matrix is not a square");
+                }
+            }
+
         private:
             table<S> data;
             int _row;
@@ -228,18 +282,6 @@ namespace var
             }
 
             /**
-             * @brief mutates data to into transpose
-             * 
-             * @return matrix 
-             */
-            matrix T(){
-                matrix temp;
-                temp.resize(_col, _row);
-                temp.data = TT();
-                return temp;
-            }
-
-            /**
              * @brief sorts all rows
              * 
              * @param d 
@@ -348,7 +390,7 @@ namespace var
              * @return S 
              */
             S sum(){
-                S SUM;
+                S SUM = S();
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         SUM += data[i][j];
@@ -358,12 +400,53 @@ namespace var
             }
 
             /**
+             * @brief returns transpose 
+             * 
+             * @return matrix 
+             */
+            matrix T(){
+                matrix temp;
+                temp.resize(_col, _row);
+                temp.data = TT();
+                return temp;
+            }
+
+            /**
              * @brief returns the determinant 
              * 
              * @return S 
              */
             S det(){
+                square();
+                return DET(*this);
+            }
 
+            /**
+             * @brief returns cofactor matrix
+             * 
+             * @return matrix 
+             */
+            matrix cofactor(){
+                square();
+                matrix temp(_row, _col);
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        auto m = M(i, j, *this);
+                        temp[i][j] = pow((-1), (i+j))*m.det();
+                    }
+                }
+                return temp;
+            }
+
+            /**
+             * @brief adjugate of a matrix
+             * 
+             * @return matrix 
+             */
+            matrix adj(){
+                square();
+                matrix temp = cofactor();
+                return temp.T();
             }
 
             /**
@@ -372,9 +455,10 @@ namespace var
              * @return matrix 
              */
             matrix inv(){
-
+                square();
+                return adj()/det();
             }
-            
+
             /**
              * @brief returns RREF of matrix
              * 
@@ -546,8 +630,6 @@ namespace var
                 return temp;
             }
 
-
-
             /**
              * @brief matrix-var
              * 
@@ -578,17 +660,31 @@ namespace var
 
 // ***************************** * operator ************************** //
 
+            /**
+             * @brief matrix multiplication 
+             * 
+             * @param other 
+             * @return matrix 
+             */
             matrix operator *(matrix const &other){
                 // condition 
                 if(!(_row == other._col && _col == other._row)){
                     throw std::invalid_argument("Size mismatch");
                 }
+                auto SUM = [this, other](int i, int j)-> S {
+                    S summ = S();
+                    for(int k = 0; k < _col; k++){
+                        summ += data[i][k]*other.data[k][j];
+                    }
+                    return summ;
+                };
                 matrix temp(_row, other._col);
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < other._col; j++){
-                        
+                        temp.data[i][j] = SUM(i, j);
                     }
                 }
+                return temp;
             }
 
             /**
@@ -620,12 +716,14 @@ namespace var
 
 // ***************************** / operator ************************** //
 
-            matrix operator /(matrix const &other){
-
+            matrix operator /(matrix &other){
+                return *this*other.inv();
             }
 
             matrix operator /(S n){
-                matrix temp = *this;
+                matrix temp(_row, _col);
+                temp.data = data;
+                
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]/n;
@@ -660,7 +758,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator==(matrix const &other){
+            bool operator==(matrix other){
                 check_size(other._row, other._col); 
 
                 for(int i = 0; i < _row; i++){
@@ -680,7 +778,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator<(matrix &other){
+            bool operator<(matrix other){
                 if(other._col != _col || other._row != _row){
                     return false;
                 }
@@ -701,7 +799,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator>(matrix &other){
+            bool operator>(matrix other){
                 return !(*this < other);
             }
 
@@ -712,7 +810,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator<=(matrix &other){
+            bool operator<=(matrix other){
                 check_size(other._row, other._col); 
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -731,7 +829,7 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator>=(matrix &other){
+            bool operator>=(matrix other){
                 return !(*this <= other);
             }        
 
@@ -742,8 +840,8 @@ namespace var
              * @return true 
              * @return false 
              */
-            bool operator!=(matrix &other){
-                return !(other == *this);
+            bool operator!=(matrix other){
+                return !(*this == other);
             }
 
 // ************************* stream operator ************************ //
@@ -759,9 +857,14 @@ namespace var
             friend std::ostream& operator << (std::ostream& out, matrix const &other){
                 for(int i = 0; i < other._row; i++){
                     for(int j = 0; j < other._col; j++){
-                        out << other.data[i][j] << ",";
+                        out << other.data[i][j];
+                        if(j < other._col-1){
+                            out << ",";
+                        }
+                        if(j == other._col-1){
+                            out << "\n";
+                        }
                     }
-                    out << "\n";
                 }
                 return out;
             }

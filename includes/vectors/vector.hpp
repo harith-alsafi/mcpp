@@ -2,7 +2,6 @@
 #include "../misc/constants.hpp"
 #include <vector>
 #include <iostream>
-#include <cmath>
 // ********************** multiply ****************************
 /**
  * @brief vector*vector
@@ -266,26 +265,5 @@ std::vector<S> operator %(std::vector<S> v, S s){
     return temp;
 }
 
-// ********************** ^ operator *********************************
-template<typename S>
-std::vector<S> operator^(std::vector<S> a, S b){
-    std::vector<S> temp;
-    for(int i = 0; i < a.size(); i++){
-        temp.push_back(std::pow(a[i], b));
-    }
-    return temp;
-}
-template<typename S>
-std::vector<S> operator^(std::vector<S> a, std::vector<S> b){
-    if(a.size() != b.size()){
-        throw std::invalid_argument("Invalid size");
-    }
-    std::vector<S> temp;
-    S temp2 = 1;
-    for(int i = 0; i < a.size(); i++){
-        temp.push_back(std::pow(a[i], b[i]));
-    }
-    return temp;
-}
 // *********************** comparison ********************************
 //TODOconditional operators

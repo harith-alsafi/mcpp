@@ -126,7 +126,7 @@ TEST(functionality, row_col_op)
         {9, 3, 10},
         {7, 6, 20},
         {10, 5, 19}
-    };
+    };  
 
     // sort rows
     // accending
@@ -211,6 +211,35 @@ TEST(functionality, matrix_functions){
             ASSERT_EQ(m4[i][j], T[i][j]);
         }
     }
+    // det 
+    matrix<int> m5 = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {8, 10, 11, 12},
+        {13, 14, 15, 20}
+    };
+    ASSERT_EQ(m5.det(), 16);
+
+    // cofactor 
+    matrix<double> m6 = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 12}
+    };
+    matrix<double> m7 = {
+        {12, -6, -3},
+        {0, -9, 6},
+        {-3, 6, -3}
+    };
+    ASSERT_TRUE(m7 == m6.cofactor());
+
+    // inverse 
+    matrix<double> m8 = {
+        {-4.0/3.0, 0, 1.0/3.0},
+        {2.0/3, 1.0, -2.0/3.0},
+        {1.0/3.0, -2.0/3.0, 1.0/3.0}
+    };
+    ASSERT_TRUE(m8 == m6.inv());
 
 }
 
@@ -272,9 +301,26 @@ TEST(operators, mult_div)
         {3, 4, 5},
         {6, 7, 8}
     };
+    matrix<int> m3 = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+    matrix<int> m4 = {
+        {7, 8},
+        {9, 10},
+        {11, 12}
+    };
+    matrix<int> m5 = {
+        {58, 64},
+        {139, 154}
+    };
+    // multiply 
     ASSERT_TRUE(2*m2 == m2*2);
     ASSERT_TRUE(2*m2 == m1+m2);
-
+    ASSERT_TRUE(m3*m4 == m5);
+    
+    // divide 
+    ASSERT_TRUE(m2/2 != 2/m2);
 } 
 
 TEST(operators, conditional) 
