@@ -233,13 +233,20 @@ TEST(functionality, matrix_functions){
     };
     ASSERT_TRUE(m7 == m6.cofactor());
 
-    // inverse 
+    // adjugate 
     matrix<double> m8 = {
+        {12, 0, -3},
+        {-6, -9, 6},
+        {-3, 6, -3}
+    };
+    ASSERT_TRUE(m6.adj() == m8);
+    // inverse 
+    matrix<double> m9 = {
         {-4.0/3.0, 0, 1.0/3.0},
         {2.0/3, 1.0, -2.0/3.0},
         {1.0/3.0, -2.0/3.0, 1.0/3.0}
     };
-    ASSERT_TRUE(m8 == m6.inv());
+    ASSERT_TRUE(m9 == m6.inv());
 
 }
 

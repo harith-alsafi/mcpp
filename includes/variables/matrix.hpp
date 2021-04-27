@@ -400,6 +400,20 @@ namespace var
             }
 
             /**
+             * @brief trace of a matrix
+             * 
+             * @return S 
+             */
+            S tr(){
+                square();
+                S sum = S();
+                for(int i = 0; i < _row; i++){
+                    sum+= data[i][i];
+                }
+                return sum;
+            }
+
+            /**
              * @brief returns transpose 
              * 
              * @return matrix 
