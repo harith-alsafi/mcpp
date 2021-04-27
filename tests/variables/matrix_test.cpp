@@ -308,6 +308,7 @@ TEST(operators, mult_div)
         {3, 4, 5},
         {6, 7, 8}
     };
+<<<<<<< HEAD
     matrix<int> m3 = {
         {1, 2, 3},
         {4, 5, 6}
@@ -326,6 +327,13 @@ TEST(operators, mult_div)
     ASSERT_TRUE(2*m2 == m1+m2);
     ASSERT_TRUE(m3*m4 == m5);
     
+=======
+    // multiply 
+    ASSERT_TRUE(2*m2 == m2*2);
+    ASSERT_TRUE(2*m2 == m1+m2);
+
+
+>>>>>>> d002b6b9a211bdee581980b417c82bf213281910
     // divide 
     ASSERT_TRUE(m2/2 != 2/m2);
 } 
