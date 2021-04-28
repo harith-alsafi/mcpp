@@ -54,18 +54,9 @@ install:
     sudo apt-get -y install freeglut3-dev;
     sudo apt-get -y install libudev-dev; 
     sudo apt-get purge cmake;
-    version=3.20;
-    Build=0;
-    mkdir temp;
-    cd temp;
-    wget https://cmake.org/files/v$version/cmake-$version.$Build.tar.gz;
-    tar -xzvf cmake-$version.$Build.tar.gz;
-    cd cmake-$version.$Build/;
-    ./bootstrap;
-    make -j$(nproc);
-    sudo make install; 
-    cd ..;
-    cd ..;fi
+    CMAKE_URL="https://cmake.org/files/v3.19/cmake-3.19.0-Linux-x86_64.tar.gz";
+    mkdir cmake && travis_retry wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake;
+    export PATH=${DEPS_DIR}/cmake/bin:${PATH};fi
 
 
 before_script:
