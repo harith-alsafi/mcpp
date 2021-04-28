@@ -54,23 +54,16 @@ install:
     sudo apt-get -y install freeglut3-dev;
     sudo apt-get -y install libudev-dev; fi
 
+
 before_script:
-  - mkdir -p build; cd build;
-  - if [ $TRAVIS_OS_NAME = 'linux' -o $TRAVIS_OS_NAME = 'osx' ]; then cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..;fi
-  - |-
-      case $TRAVIS_OS_NAME in
-        windows)
-          cmake -G "Unix Makefiles" ..
-          ;;
-      esac
+- mkdir -p build; cd build;
+- if [ $TRAVIS_OS_NAME = 'linux' -o $TRAVIS_OS_NAME = 'osx' ]; then cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..;fi
+- |-
+    case $TRAVIS_OS_NAME in
+      windows)
+        cmake -G "Unix Makefiles" ..
+        ;;
+    esac
     
 script:
   - make
-  - if [ $TRAVIS_OS_NAME = 'linux' -o $TRAVIS_OS_NAME = 'osx' ]; then sudo make install;fi
-  - |-
-      case $TRAVIS_OS_NAME in
-        windows)
-          make install
-          ;;
-      esac
-  
