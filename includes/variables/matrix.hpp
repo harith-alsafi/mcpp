@@ -837,12 +837,16 @@ namespace var
                 return temp;
             }
 
-// ***************************** ^ operator ************************** //
-
 // ***************************** % operator ************************** //
-
-// ***************************** ~ operator ************************** //
-
+            matrix operator %(S n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]%n;
+                    }
+                }
+                return temp;
+            }
 
 // *********************** conditional operators ******************** //
 
@@ -985,5 +989,6 @@ namespace var
                 }
             }
     };
-    
+    // TODO add matrix power
+    // TODO add normal multiplication
 };
