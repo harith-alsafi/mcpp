@@ -9,5 +9,16 @@
 # Features
 Its a cross platform Math Library for C++
 # Compiling 
+* Dependinceis 
+* No plotting functionality 
+    * Linux / OSX
+    ```
+    mkdir build
+    cd build
+    cmake .. -DNO-PLOT=True
+    make
+    sudo make install
+    ```
+    * Windows 
 # Refrencing 
 # Usage 

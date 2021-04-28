@@ -991,4 +991,5 @@ namespace var
     };
     // TODO add matrix power
     // TODO add normal multiplication
+    // TODO add row and col swap
 };

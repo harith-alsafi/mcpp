@@ -1,8 +1,7 @@
 ######################## project details ##########################
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)
 
 # Enable debug symbols by default
-# must be done before project() statement
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
 endif()
@@ -13,47 +12,59 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 # cpp standard (c++14)
 set(CMAKE_CXX_STANDARD 14)
 
-####################### source files ##############################
+message("NO-PLOT=${NO-PLOT}")
 
-#SFML
-# set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/SFML")
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/cmake/Modules")
-find_package(SFML 2 COMPONENTS graphics window system)
-if(SFML_FOUND)
-    message("SFML was found")
-else()
-    add_subdirectory(lib/SFML-2.5.1)
-endif()
-
+######################## files ####################################
 include_directories(src/plot)
 include_directories(src/variables)
 include_directories(src/stats)
 include_directories(src/calculus)
 include_directories(src/misc)
 include_directories(src/vectors)
-
 include_directories(includes)
 
 file(GLOB_RECURSE SRC "src/*.cpp")
 file(GLOB_RECURSE HPP "includes/*.hpp")
 
-add_library(mcpp SHARED ${SRC} includes/mcpp.hpp)
-set_target_properties(
-    mcpp PROPERTIES 
-    VERSION ${PROJECT_VERSION})
-
-
-target_link_libraries(mcpp sfml-graphics sfml-window sfml-system)
-
-install(TARGETS mcpp
-    LIBRARY DESTINATION lib
-)
-
-INSTALL(DIRECTORY
+######################### no plot build ###########################
+if(NO-PLOT)
+    message("No ploting functionality")
+    INSTALL(DIRECTORY
     "includes/" DESTINATION include/${PROJECT_NAME}
-)
+    PATTERN "includes/plot/" EXCLUDE
+    PATTERN "includes/plot.hpp" EXCLUDE)
+else()
 
-install(CODE "execute_process(COMMAND ldconfig)")
+    ####################### plot build ##############################
+
+    #SFML
+    # set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/SFML")
+    set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/cmake/Modules")
+    find_package(SFML 2 COMPONENTS graphics window system)
+    if(SFML_FOUND)
+        message("SFML was found")
+    else()
+        add_subdirectory(lib/SFML-2.5.1)
+    endif()
+
+    # Library
+    add_library(mcpp SHARED ${SRC} includes/mcpp.hpp)
+    set_target_properties(
+        mcpp PROPERTIES 
+        VERSION ${PROJECT_VERSION})
+
+    target_link_libraries(mcpp sfml-graphics sfml-window sfml-system)
+
+    install(TARGETS mcpp
+        LIBRARY DESTINATION lib
+    )
+
+    INSTALL(DIRECTORY
+        "includes/" DESTINATION include/${PROJECT_NAME}
+    )
+
+    install(CODE "execute_process(COMMAND ldconfig)")
+endif()
 
 ####################### testing ##############################
 add_subdirectory(lib/googletest EXCLUDE_FROM_ALL)
@@ -68,9 +79,16 @@ include_directories(tests/vectors)
 # variables
 file(GLOB var_src "tests/variables/*.cpp")
 add_executable(test_matrix ${var_src})
-target_link_libraries(test_matrix mcpp gtest pthread) #-lgtest -lpthread 
 
 # vectors 
 file(GLOB vec_src "tests/vectors/*.cpp")
 add_executable(test_vector ${vec_src})
-target_link_libraries(test_vector mcpp gtest pthread) #-lgtest -lpthread 
+
+#-lgtest -lpthread 
+if(NO-PLOT)
+    target_link_libraries(test_matrix gtest pthread) 
+    target_link_libraries(test_vector gtest pthread) 
+else()
+    target_link_libraries(test_matrix mcpp gtest pthread)  
+    target_link_libraries(test_vector mcpp gtest pthread) 
+endif()
