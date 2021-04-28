@@ -63,6 +63,7 @@ install:
     ./bootstrap;
     make -j$(nproc);
     sudo make install; 
+    cd ..;
     cd ..;fi
 
 
