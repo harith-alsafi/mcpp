@@ -1,5 +1,5 @@
 ######################## project details ##########################
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.13)
 
 # Enable debug symbols by default
 if(NOT CMAKE_BUILD_TYPE)
