@@ -1,0 +1,18 @@
+image: 
+  - Ubuntu1804
+  - macos
+  - Visual Studio 2019
+configuration:
+  - Debug
+install:
+  - sh: sudo apt-get update
+  - sh: sudo apt-get -y install libsfml-dev
+
+before_build:
+  - mkdir -p build
+  - cd build
+  - sh: cmake -DCMAKE_BUILD_TYPE=%CONFIGURATION% ..
+  - cmd: cmake -G "Unix Makefiles" ..
+
+build_script:
+  - make
