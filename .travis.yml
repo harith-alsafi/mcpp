@@ -57,13 +57,10 @@ install:
     CMAKE_URL="https://cmake.org/files/v3.19/cmake-3.19.0-Linux-x86_64.tar.gz";
     mkdir cmake && wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake;fi
 
-
 before_script:
-  - mkdir build; cd build;
-  - if [ $TRAVIS_OS_NAME = 'linux' ]; then 
-    ../cmake/bin/cmake .. ;fi
-  - if [ $TRAVIS_OS_NAME = 'osx']; then 
-    cmake .. ;fi
+- mkdir build; cd build;
+- if [ $TRAVIS_OS_NAME = 'linux']; then ../cmake/bin/cmake .. ; fi
+- if [ $TRAVIS_OS_NAME = 'linux']; then ../cmake/bin/cmake .. ; fi
 - |-
     case $TRAVIS_OS_NAME in
       windows)
