@@ -6,15 +6,19 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
 endif()
 
+# project detail
 project(mcpp VERSION 1.0.1 DESCRIPTION "math library for cpp")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 
 # cpp standard (c++14)
 set(CMAKE_CXX_STANDARD 14)
 
+# flags
 message("NO-PLOT=${NO-PLOT}")
+message("NO-TEST=${NO-TEST}")
 
 ######################## files ####################################
+# Directories
 include_directories(src/plot)
 include_directories(src/variables)
 include_directories(src/stats)
@@ -23,22 +27,22 @@ include_directories(src/misc)
 include_directories(src/vectors)
 include_directories(includes)
 
+# Files
 file(GLOB_RECURSE SRC "src/*.cpp")
 file(GLOB_RECURSE HPP "includes/*.hpp")
 
-######################### no plot build ###########################
+######################### build ###########################
+# No plot
 if(NO-PLOT)
     message("No ploting functionality")
     INSTALL(DIRECTORY
     "includes/" DESTINATION include/${PROJECT_NAME}
     PATTERN "includes/plot/" EXCLUDE
     PATTERN "includes/plot.hpp" EXCLUDE)
+# There is plot
 else()
-
-    ####################### plot build ##############################
-
     #SFML
-    # set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/SFML")
+    # to find sfml 
     set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/cmake/Modules")
     find_package(SFML 2 COMPONENTS graphics window system)
     if(SFML_FOUND)
@@ -67,28 +71,32 @@ else()
 endif()
 
 ####################### testing ##############################
-add_subdirectory(lib/googletest EXCLUDE_FROM_ALL)
-
-include_directories(tests/plot)
-include_directories(tests/variables)
-include_directories(tests/stats)
-include_directories(tests/calculus)
-include_directories(tests/misc)
-include_directories(tests/vectors)
-
-# variables
-file(GLOB var_src "tests/variables/*.cpp")
-add_executable(test_matrix ${var_src})
-
-# vectors 
-file(GLOB vec_src "tests/vectors/*.cpp")
-add_executable(test_vector ${vec_src})
-
-#-lgtest -lpthread 
-if(NO-PLOT)
-    target_link_libraries(test_matrix gtest pthread) 
-    target_link_libraries(test_vector gtest pthread) 
+if(NO-TEST)
+    message("No unit-testing")
 else()
-    target_link_libraries(test_matrix mcpp gtest pthread)  
-    target_link_libraries(test_vector mcpp gtest pthread) 
+    add_subdirectory(lib/googletest EXCLUDE_FROM_ALL)
+
+    include_directories(tests/plot)
+    include_directories(tests/variables)
+    include_directories(tests/stats)
+    include_directories(tests/calculus)
+    include_directories(tests/misc)
+    include_directories(tests/vectors)
+
+    # variables
+    file(GLOB var_src "tests/variables/*.cpp")
+    add_executable(test_matrix ${var_src})
+
+    # vectors 
+    file(GLOB vec_src "tests/vectors/*.cpp")
+    add_executable(test_vector ${vec_src})
+
+    #-lgtest -lpthread 
+    if(NO-PLOT)
+        target_link_libraries(test_matrix gtest pthread) 
+        target_link_libraries(test_vector gtest pthread) 
+    else()
+        target_link_libraries(test_matrix mcpp gtest pthread)  
+        target_link_libraries(test_vector mcpp gtest pthread) 
+    endif()
 endif()

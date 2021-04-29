@@ -990,7 +990,9 @@ namespace var
                 return input;
             }
     };
-    // TODO add matrix power
     // TODO add normal multiplication
     // TODO add row and col swap
+    // TODO rref 
+    // TODO test division 
+    // TODO test exceptions
 };

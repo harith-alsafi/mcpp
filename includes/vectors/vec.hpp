@@ -1,6 +1,6 @@
 #include <vector>
 #include <cmath>
-namespace vec
+namespace msc
 {
     /**
      * @brief linspace (inclusive)
@@ -13,6 +13,28 @@ namespace vec
      */
     template<typename S> 
     std::vector<S> linspace(S start, S end, int count){
+
+    }
+
+    template<typename S> 
+    std::vector<S> round(std::vector<S> &a, int dp = 2){
+
+    }
+
+    template<typename S> 
+    S min(std::vector<S> &a){
+       S mmin = *std::min_element(a.begin(), a.end());
+       return mmin; 
+    }
+
+    template<typename S> 
+    S max(std::vector<S> &a){
+       S mmax = *std::max_element(a.begin(), a.end());
+       return mmax;   
+    }
+
+    template<typename S> 
+    std::vector<S> abs(std::vector<S> &a){
 
     }
 
@@ -53,6 +75,7 @@ namespace vec
         }
         return temp;
     }
+
     template<typename S>
     std::vector<S> pow(std::vector<S> a, std::vector<S> b){
         if(a.size() != b.size()){
@@ -174,3 +197,5 @@ namespace vec
 
     }
 }
+// TODO add matrix power
+// TODO add matrix functions

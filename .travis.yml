@@ -12,6 +12,7 @@ before_install:
         choco install mingw
         choco install cmake
         choco install make
+        choco install gsudo
         ;;
     esac
 install:

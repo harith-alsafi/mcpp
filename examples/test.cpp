@@ -1,9 +1,12 @@
-#include <mcpp/mcpp.hpp>
-var::matrix<int> a;
+#include <vector>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
 
 int main()
 {
-    a.resize(2, 2);
-    a.insert_col({1, 2});
-    
+	vector<int> a = {1, 2, 23, 3};
+	int b = *min_element(a.begin(), a.end());
+	cout << b;
 }
