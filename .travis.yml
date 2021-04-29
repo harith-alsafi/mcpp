@@ -55,13 +55,12 @@ install:
     sudo apt-get -y install libudev-dev; 
     sudo apt-get purge cmake;
     CMAKE_URL="https://cmake.org/files/v3.19/cmake-3.19.0-Linux-x86_64.tar.gz";
-    mkdir cmake && travis_retry wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake;
-    export PATH=${DEPS_DIR}/cmake/bin:${PATH};fi
-
+    mkdir cmake && wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake;fi
 
 before_script:
 - mkdir build; cd build;
-- if [ $TRAVIS_OS_NAME = 'linux' -o $TRAVIS_OS_NAME = 'osx' ]; then cmake ..;fi
+- if [ $TRAVIS_OS_NAME = 'linux']; then ../cmake/bin/cmake ..;fi
+- if [ $TRAVIS_OS_NAME = 'osx']; then cmake ..;fi
 - |-
     case $TRAVIS_OS_NAME in
       windows)
