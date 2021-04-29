@@ -59,8 +59,8 @@ install:
 
 before_script:
 - mkdir build; cd build;
-- if [ $TRAVIS_OS_NAME = 'linux']; then ../cmake/bin/cmake .. ; fi
-- if [ $TRAVIS_OS_NAME = 'linux']; then ../cmake/bin/cmake .. ; fi
+- if [ $TRAVIS_OS_NAME = 'linux' ]; then ../cmake/bin/cmake .. ; fi
+- if [ $TRAVIS_OS_NAME = 'osx' ]; then cmake .. ; fi
 - |-
     case $TRAVIS_OS_NAME in
       windows)
