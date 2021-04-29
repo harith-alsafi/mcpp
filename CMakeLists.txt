@@ -48,7 +48,7 @@ else()
     endif()
 
     # Library
-    add_library(mcpp SHARED ${SRC} includes/mcpp.hpp)
+    add_library(mcpp SHARED ${SRC} ${HPP})
     set_target_properties(
         mcpp PROPERTIES 
         VERSION ${PROJECT_VERSION})
@@ -76,13 +76,13 @@ include_directories(tests/calculus)
 include_directories(tests/misc)
 include_directories(tests/vectors)
 
-# variables
-file(GLOB var_src "tests/variables/*.cpp")
-add_executable(test_matrix ${var_src})
-
 # vectors 
 file(GLOB vec_src "tests/vectors/*.cpp")
 add_executable(test_vector ${vec_src})
+
+# variables
+file(GLOB var_src "tests/variables/*.cpp")
+add_executable(test_matrix ${var_src})
 
 #-lgtest -lpthread 
 if(NO-PLOT)
