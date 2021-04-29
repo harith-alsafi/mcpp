@@ -272,6 +272,7 @@ std::istream &operator >> (std::istream  &input, std::vector<S> &other){
             other.push_back(var);
         }
     }
+    return input;
 }
 
 // ********************** others operators ****************************

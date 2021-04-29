@@ -987,6 +987,7 @@ namespace var
                     other.push_row(temp);
                     temp.clear();       
                 }
+                return input;
             }
     };
     // TODO add matrix power
