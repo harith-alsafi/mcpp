@@ -76,13 +76,13 @@ include_directories(tests/calculus)
 include_directories(tests/misc)
 include_directories(tests/vectors)
 
-# vectors 
-file(GLOB vec_src "tests/vectors/*.cpp")
-add_executable(test_vector ${vec_src})
-
 # variables
 file(GLOB var_src "tests/variables/*.cpp")
 add_executable(test_matrix ${var_src})
+
+# vectors 
+file(GLOB vec_src "tests/vectors/*.cpp")
+add_executable(test_vector ${vec_src})
 
 #-lgtest -lpthread 
 if(NO-PLOT)
