@@ -971,7 +971,7 @@ namespace var
             /**
              * @brief input operator 
              * 
-             * @param input 
+             * @param input x
              * @param other 
              * @return std::istream& 
              */
