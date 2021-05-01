@@ -1,11 +1,17 @@
 <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)</a>
-<a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://img.shields.io/badge/version-1.0.1-blue)</a>
+<a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://img.shields.io/badge/version-1.0-blue)</a>
 <a href="https://travis-ci.org/github/harith-alsafi/mcpp/builds" target="_blank">![Build Status](https://img.shields.io/badge/linux%2Fosx-passing-brightgreen)</a>
 <a href="https://travis-ci.org/github/harith-alsafi/mcpp/builds" target="_blank">![Build Status](https://img.shields.io/badge/windows-passing-brightgreen)</a>
 <a href="https://github.com/harith-alsafi/mcpp/issues" target="_blank">![Github Issues](https://img.shields.io/badge/issues-0%20open-yellow)</a>
 
 # Table of content 
-
+- [Features](#features)
+- [Compiling](#compiling)
+  * [Linux Compilation](#linux-compilation)
+  * [Macos Compilation](#macos-compilation)
+  * [Windows Compilation](#windows-compilation)
+  * [Compilation flags](#compilation-flags)
+- [Usage](#usage)
 # Features
 * mcpp (Math for C Plus Plus) is **cross platform**,  **templated math library** that can be used without compiling (except for the plotting functions). 
 * By only including ``mcpp.hpp`` file you get all the functions with their implementations into your code apart from the plotting functionality
@@ -18,8 +24,6 @@
     * Statistics 
     * Calculus 
     * Vectors 
-
-
 # Compiling 
 * The compiling process is mainly for the plotting functionality if you don't want that then you can just include the header files and you are good to go
 * If you want to install the header files into a standard directory then follow the compiling process below (without SFML) and add this [cmake flag](#compilation-flags)
@@ -121,7 +125,39 @@ sudo make install
     cmake .. -DNO-TEST=False
     ``` 
 
-# Usage
-* Please see the full [documentation](doc/doc.md) for more detailed usage
+# Usage 
+* No plot usage
+    * Non standard path install
+        ```cpp
+        #include "includes/mcpp.hpp"
+        ```  
+    * standard install 
+        ```cpp
+        #include <mcpp/mcpp.hpp>
+        ```  
+    * No compilation flags needed 
+* Plot usage 
+    * Non standard path install
+        * Header 
+        ```cpp
+        #include "includes/plot.hpp"
+        ```  
+        * Compilation 
+        ```
+        g++ TEST.cpp -L"build/libmcpp.so"
+        ```
+    * standard install 
+        * Header
+        ```cpp
+        #include <mcpp/plot.hpp>
+        ```  
+        * Compilation 
+        ```bash
+        g++ main.cpp -lmcpp
+        ```
 
+
+
+* Please see the full [documentation](doc/doc.md) for detailed usage on the classes and functions 
+* You can see the class refrence as a [pdf](doc/latex/refman.pdf) or an [html](doc/html/index.html)
  

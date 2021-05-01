@@ -7,7 +7,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # project detail
-project(mcpp VERSION 1.0.1 DESCRIPTION "math library for cpp")
+project(mcpp VERSION 1.0 DESCRIPTION "math library for cpp")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 
 # cpp standard (c++14)
