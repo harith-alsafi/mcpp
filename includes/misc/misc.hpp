@@ -14,6 +14,8 @@ namespace msc
     int combination(int n, int k){
         return factorial(n)/(factorial(k)*factorial(n-k));
     }
+
+    
 }
 // TODO polyfit
 // TODO binomial 
