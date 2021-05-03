@@ -91,12 +91,18 @@ else()
     file(GLOB vec_src "tests/vectors/*.cpp")
     add_executable(test_vector ${vec_src})
 
+    # calculus 
+    file(GLOB cal_src "tests/calculus/*.cpp")
+    add_executable(test_calculus ${cal_src})
+
     #-lgtest -lpthread 
     if(NO-PLOT)
         target_link_libraries(test_matrix gtest pthread) 
         target_link_libraries(test_vector gtest pthread) 
+        target_link_libraries(test_calculus gtest pthread) 
     else()
         target_link_libraries(test_matrix mcpp gtest pthread)  
         target_link_libraries(test_vector mcpp gtest pthread) 
-    endif()
+        target_link_libraries(test_calculus mcpp gtest pthread) 
+        endif()
 endif()

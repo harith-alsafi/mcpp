@@ -995,4 +995,5 @@ namespace var
     // TODO rref 
     // TODO test division 
     // TODO test exceptions
+    // TODO add mat_op 
 };
