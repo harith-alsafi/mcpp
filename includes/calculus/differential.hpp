@@ -1,7 +1,8 @@
+#pragma once
 #include <vector>
-#include "../misc/misc.hpp"
+#include "../mcpp.hpp"
 #include <cmath>
-namespace cal
+namespace calc
 {
     /**
      * @brief nth derivative at a point 
@@ -15,15 +16,20 @@ namespace cal
      * @return S 
      */
     template<typename LAMBDA, typename S>
-    S diff(LAMBDA f, S x, int n = 1, S h=S(0.0001)){
+    S diff(LAMBDA f, S x, int n = 1, S h=S(0.00001)){
+        // BUG higher orders have high error 
         S ans = S(0.0);
+        if(n > 2 && x!= S(0)){
+            h = x*sqrt(__DBL_EPSILON__)*1*pow(10, n);
+        }
         for(int k = 0; k <= n; k++){
             ans += 
             pow((-1), k)
             *msc::combination(n, k)
             *f(x+(n-S(2)*k)*h);
+
         }
-        return S(ans/(std::pow((S(2)*h), n)));
+        return S(ans/(pow((S(2)*h), n)));
     }
     
     /**
@@ -36,13 +42,23 @@ namespace cal
      * @param max 
      * @return std::vector<S> 
      */
-    template<typename S, typename LAMBDA>
-    std::vector<S> diff(LAMBDA f, S min, S max, int n = 1){
-        std::vector<S> temp;
-        for(S i = min; i < max; i++){
-            temp.push_back(diff(f, i, n));
+    template<typename S>
+    std::vector<S> diff(std::vector<S> &x, std::vector<S> &y, int n = 1){
+        auto dx = num::difference(x);
+        auto dy = num::difference(y);
+        auto yp = dy/dx;
+        auto xp = num::averages(x); 
+        if(n == 1){
+            return yp; 
         }
-        return temp;
+        else{
+            diff(xp, yp, n-1);
+        }
+    }
+
+    template<typename S, typename LAMBDA>
+    std::vector<S> diff(LAMBDA f, std::vector<S> &x, int n = 1){
+        return diff(x, num::vec_op(f, x));
     }
 
     /**

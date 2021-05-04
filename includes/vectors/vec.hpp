@@ -1,7 +1,55 @@
+#pragma once
 #include <vector>
 #include <cmath>
-namespace msc
+
+/**
+ * @brief overriding default round 
+ * 
+ * @tparam S 
+ * @param a 
+ * @param dp 
+ * @return S 
+ */
+template<typename S>
+S round(S &a, int dp = 0){
+    return S((int)(a*pow(10, dp)+.5)/pow(10, dp));
+}
+
+namespace num
 {
+    template<typename S, typename LAMBDA>
+    std::vector<S> vec_op(LAMBDA f, std::vector<S> &x){
+        std::vector<S> y;
+        for(int i = 0; i < x.size(); i++){
+            y.push_back(f(x[i]));
+        }
+        return y;
+    }
+    /**
+     * @brief difference of elements in vector
+     * 
+     * @tparam S 
+     * @param a 
+     * @return std::vector<S> 
+     */
+    template<typename S> 
+    std::vector<S> difference(std::vector<S> &a){
+        std::vector<S> temp;
+        for(int i = 0; i < a.size()-1; i++){
+            temp.push_back(a[i+1]-a[i]);
+        }
+        return temp;
+    }
+
+    template<typename S> 
+    std::vector<S> averages(std::vector<S> &a){
+        std::vector<S> temp;
+        for(int i = 0; i < a.size()-1; i++){
+            temp.push_back((a[i+1]+a[i])*S(0.5));
+        }
+        return temp;
+    }
+
     /**
      * @brief linspace (inclusive)
      * 
@@ -17,8 +65,14 @@ namespace msc
     }
 
     template<typename S> 
-    std::vector<S> round(std::vector<S> &a, int dp = 2){
-
+    std::vector<S> round(std::vector<S> &a, int dp = 0){
+        std::vector<S> b;
+        for(int i = 0; i< a.size(); i++){
+            if(dp == 0){
+                b.push_back(round(a[i], dp));
+            }
+        }
+        return b;
     }
 
     template<typename S> 
@@ -66,7 +120,14 @@ namespace msc
         } 
     }
 
-
+    /**
+     * @brief vector^b
+     * 
+     * @tparam S 
+     * @param a 
+     * @param b 
+     * @return std::vector<S> 
+     */
     template<typename S>
     std::vector<S> pow(std::vector<S> a, S b){
         std::vector<S> temp;
@@ -76,6 +137,14 @@ namespace msc
         return temp;
     }
 
+    /**
+     * @brief vector^vector
+     * 
+     * @tparam S 
+     * @param a 
+     * @param b 
+     * @return std::vector<S> 
+     */
     template<typename S>
     std::vector<S> pow(std::vector<S> a, std::vector<S> b){
         if(a.size() != b.size()){

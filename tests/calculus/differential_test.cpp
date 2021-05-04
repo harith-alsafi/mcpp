@@ -2,9 +2,9 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include <cmath>
 
-using namespace cal;
+using namespace calc;
 
-TEST(calc, diff)
+TEST(diff, point)
 {
     // function
     auto f = [](double a){
@@ -19,6 +19,27 @@ TEST(calc, diff)
 
     // 3rd order 
     ASSERT_EQ(round(diff(f, 2.0, 3)), -23.0);
+
+    // 4th order 
+    ASSERT_EQ(round(diff(f, 2.0, 4)), -32.0);
+
+    // 5th order 
+    ASSERT_EQ(round(diff(f, 2.0, 5)), -2.0);
+
+    // 6th order 
+    ASSERT_EQ(round(diff(f, 2.0, 6)), 46);
+}
+
+TEST(diff, fun)
+{
+    // function
+    auto f = [](double a){
+        return pow(a, 2)+sin(a)*exp(a)+pow(cos(a), 2);
+    };
+
+    std::vector<double> x = {-2, -1, 0, 1, 2};
+    std::vector<double> dy1 = {-5, -1.2, 1, 5, 8};
+    
 
 }
 

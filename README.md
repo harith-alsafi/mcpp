@@ -163,6 +163,6 @@ sudo make install
 
 
 
-* Please see the full [documentation](doc/doc.md) for detailed usage on the classes and functions 
+* Please see the full [documentation](https://harith-alsafi.github.io/mcpp-doc/) for detailed usage on the classes and functions 
 * You can see the class refrence as a [pdf](doc/latex/refman.pdf) or an [html](doc/html/index.html)
  
