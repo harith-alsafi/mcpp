@@ -297,3 +297,16 @@ std::vector<S> operator %(std::vector<S> v, S s){
 
 // *********************** comparison ********************************
 //TODOconditional operators
+
+template<typename S>
+bool operator ==(std::vector<S> a, std::vector<S> b){
+    if(a.size() != b.size()){
+        throw std::invalid_argument("Invalid size");
+    }
+    for(int i = 0; i < a.size(); i++){
+        if(a[i] != b[i]){
+            return false;
+        }
+    }
+    return true;
+}

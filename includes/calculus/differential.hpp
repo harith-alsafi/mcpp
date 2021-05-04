@@ -51,14 +51,13 @@ namespace calc
         if(n == 1){
             return yp; 
         }
-        else{
-            diff(xp, yp, n-1);
-        }
+        return diff(xp, yp, n-1);
     }
 
     template<typename S, typename LAMBDA>
     std::vector<S> diff(LAMBDA f, std::vector<S> &x, int n = 1){
-        return diff(x, num::vec_op(f, x));
+        auto y = num::vec_op(f, x);
+        return diff(x, y, n);
     }
 
     /**

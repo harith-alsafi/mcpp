@@ -1,4 +1,4 @@
-#include "../../includes/calculus/differential.hpp"
+#include "../../includes/mcpp.hpp"
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include <cmath>
 
@@ -38,8 +38,9 @@ TEST(diff, fun)
     };
 
     std::vector<double> x = {-2, -1, 0, 1, 2};
-    std::vector<double> dy1 = {-5, -1.2, 1, 5, 8};
-    
+    std::vector<double> dy1 = {-3, 0, 3, 7};
+    auto ans = diff(f, x, 1);
+    ASSERT_TRUE(num::round(ans) == dy1);
 
 }
 

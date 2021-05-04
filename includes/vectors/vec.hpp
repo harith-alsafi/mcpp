@@ -2,21 +2,26 @@
 #include <vector>
 #include <cmath>
 
-/**
- * @brief overriding default round 
- * 
- * @tparam S 
- * @param a 
- * @param dp 
- * @return S 
- */
-template<typename S>
-S round(S &a, int dp = 0){
-    return S((int)(a*pow(10, dp)+.5)/pow(10, dp));
-}
+
 
 namespace num
 {
+    /**
+     * @brief overriding default round 
+     * 
+     * @tparam S 
+     * @param a 
+     * @param dp 
+     * @return S 
+     */
+    template<typename S>
+    S round(S &a, int dp = 0){
+        if(a < S(0)){
+            return S((int)(a*pow(10, dp)-.5)/pow(10, dp));
+        }
+        return S((int)(a*pow(10, dp)+.5)/pow(10, dp));
+    }
+
     template<typename S, typename LAMBDA>
     std::vector<S> vec_op(LAMBDA f, std::vector<S> &x){
         std::vector<S> y;
@@ -25,6 +30,7 @@ namespace num
         }
         return y;
     }
+    
     /**
      * @brief difference of elements in vector
      * 
@@ -68,9 +74,9 @@ namespace num
     std::vector<S> round(std::vector<S> &a, int dp = 0){
         std::vector<S> b;
         for(int i = 0; i< a.size(); i++){
-            if(dp == 0){
-                b.push_back(round(a[i], dp));
-            }
+
+            b.push_back(round(a[i], dp));
+
         }
         return b;
     }
