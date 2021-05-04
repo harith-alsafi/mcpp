@@ -15,15 +15,15 @@ namespace cal
      * @return S 
      */
     template<typename LAMBDA, typename S>
-    S diff(LAMBDA f, S x, int n = 1, S h=S(0.001)){
+    S diff(LAMBDA f, S x, int n = 1, S h=S(0.0001)){
         S ans = S(0.0);
         for(int k = 0; k <= n; k++){
             ans += 
-            std::pow((-1), (k+n))
+            pow((-1), k)
             *msc::combination(n, k)
-            *f(x+k*h);
+            *f(x+(n-S(2)*k)*h);
         }
-        return S(ans/(std::pow(h, n)));
+        return S(ans/(std::pow((S(2)*h), n)));
     }
     
     /**

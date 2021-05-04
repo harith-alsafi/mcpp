@@ -8,17 +8,17 @@ TEST(calc, diff)
 {
     // function
     auto f = [](double a){
-        return std::pow(a, 3);
+        return pow(a, 2)+sin(a)*exp(a)+pow(cos(a), 2);
     };
 
     // first order
-    ASSERT_EQ(std::round(diff(f, 2.0)), 12.0);
+    ASSERT_EQ(round(diff(f, 2.0)), 8.0);
 
     // 2nd order 
-    ASSERT_EQ(std::round(diff(f, 2.0, 2)), 12.0);
+    ASSERT_EQ(round(diff(f, 2.0, 2)), -3.0);
 
     // 3rd order 
-    ASSERT_EQ(std::round(diff(f, 2.0, 3)), 6.0);
+    ASSERT_EQ(round(diff(f, 2.0, 3)), -23.0);
 
 }
 
