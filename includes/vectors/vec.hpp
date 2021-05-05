@@ -73,10 +73,21 @@ namespace num
     }
 
 
+    template<typename S>
+    std::vector<S> arange(S start, S end, S diff){
+        std::vector<S> temp;
+        for(S i = start; i < end; i+=diff){
+            temp.push_back(i);
+        }
+        return temp;
+    }
+
     template<typename S> 
     std::vector<S> linspace(S start, S end, int count){
 
     }
+
+
 
     /**
      * @brief rounding the vector
@@ -114,19 +125,7 @@ namespace num
 
     }
 
-    /**
-     * @brief difference
-     * 
-     * @tparam S 
-     * @param start 
-     * @param end 
-     * @param diff 
-     * @return std::vector<S> 
-     */
-    template<typename S>
-    std::vector<S> arange(S start, S end, S diff){
 
-    }
 
     template<typename S>
     std::vector<S> dot(std::vector<S> a, std::vector<S> b){
