@@ -2,7 +2,6 @@
   <img width="200" height="250" src="mcpp.png">
 </p>
 
-
 <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)</a>
 <a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://img.shields.io/badge/version-1.0-blue)</a>
 <a href="https://travis-ci.org/github/harith-alsafi/mcpp/builds" target="_blank">![Build Status](https://img.shields.io/badge/linux%2Fosx-passing-brightgreen)</a>
