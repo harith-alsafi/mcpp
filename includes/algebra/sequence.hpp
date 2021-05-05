@@ -1,5 +1,5 @@
 #include <vector>
-namespace seq
+namespace alg
 {
     template<typename LAMBDA, typename S>
     std::vector<S> sequence(LAMBDA f, int start, int stop){

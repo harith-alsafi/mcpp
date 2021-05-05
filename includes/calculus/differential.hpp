@@ -33,13 +33,12 @@ namespace calc
     }
     
     /**
-     * @brief diff to produce a vector 
+     * @brief derivative of 2 vectors
      * 
      * @tparam S 
-     * @tparam LAMBDA 
-     * @param f 
-     * @param min 
-     * @param max 
+     * @param x 
+     * @param y 
+     * @param n 
      * @return std::vector<S> 
      */
     template<typename S>
@@ -54,24 +53,25 @@ namespace calc
         return diff(xp, yp, n-1);
     }
 
+    /**
+     * @brief derivative of function to a vector
+     * 
+     * @tparam S 
+     * @tparam LAMBDA 
+     * @param f 
+     * @param x 
+     * @param n 
+     * @return std::vector<S> 
+     */
     template<typename S, typename LAMBDA>
     std::vector<S> diff(LAMBDA f, std::vector<S> &x, int n = 1){
         auto y = num::vec_op(f, x);
         return diff(x, y, n);
     }
 
-    /**
-     * @brief taylor series of a function 
-     * 
-     * @tparam S 
-     * @tparam LAMBDA 
-     * @param f 
-     * @param min 
-     * @param max 
-     * @return std::vector<S> 
-     */
+
     template<typename S, typename LAMBDA>
-    std::vector<S> taylor(LAMBDA f, S min, S max){
+    std::vector<S> taylor(LAMBDA f, std::vector<S> &x, S x0=(0)){
         
     }
 

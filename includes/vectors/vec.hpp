@@ -22,6 +22,15 @@ namespace num
         return S((int)(a*pow(10, dp)+.5)/pow(10, dp));
     }
 
+    /**
+     * @brief operation on vectors
+     * 
+     * @tparam S 
+     * @tparam LAMBDA 
+     * @param f 
+     * @param x 
+     * @return std::vector<S> 
+     */
     template<typename S, typename LAMBDA>
     std::vector<S> vec_op(LAMBDA f, std::vector<S> &x){
         std::vector<S> y;
@@ -47,6 +56,13 @@ namespace num
         return temp;
     }
 
+    /**
+     * @brief average of elements in vector
+     * 
+     * @tparam S 
+     * @param a 
+     * @return std::vector<S> 
+     */
     template<typename S> 
     std::vector<S> averages(std::vector<S> &a){
         std::vector<S> temp;
@@ -56,20 +72,20 @@ namespace num
         return temp;
     }
 
-    /**
-     * @brief linspace (inclusive)
-     * 
-     * @tparam S 
-     * @param start 
-     * @param end 
-     * @param count 
-     * @return std::vector<S> 
-     */
+
     template<typename S> 
     std::vector<S> linspace(S start, S end, int count){
 
     }
 
+    /**
+     * @brief rounding the vector
+     * 
+     * @tparam S 
+     * @param a 
+     * @param dp 
+     * @return std::vector<S> 
+     */
     template<typename S> 
     std::vector<S> round(std::vector<S> &a, int dp = 0){
         std::vector<S> b;

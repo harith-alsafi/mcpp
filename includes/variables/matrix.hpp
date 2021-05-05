@@ -16,6 +16,7 @@ namespace var
             // 2d vector
             template<typename T> 
             using table = std::vector<std::vector<T>>;
+
             /**
              * @brief checks index for columns
              * 
@@ -148,6 +149,11 @@ namespace var
              */
             matrix(): _row(0), _col(0){}
 
+            /**
+             * @brief Construct a new matrix object
+             * 
+             * @param a 
+             */
             matrix (std::initializer_list<std::initializer_list<S>> a){ 
                 _row = a.size();
                 _col = a.begin()->size();
@@ -554,11 +560,7 @@ namespace var
                 return adj()/det();
             }
 
-            /**
-             * @brief returns RREF of matrix
-             * 
-             * @return matrix 
-             */
+
             matrix rref(){
 
             }

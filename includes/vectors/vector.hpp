@@ -276,14 +276,7 @@ std::istream &operator >> (std::istream  &input, std::vector<S> &other){
 
 // ********************** others operators ****************************
 
-/**
- * @brief vector%var
- * 
- * @tparam S 
- * @param v 
- * @param s 
- * @return std::vector<S> 
- */
+
 template<typename S>
 std::vector<S> operator %(std::vector<S> v, S s){
     std::vector<S> temp;
@@ -298,6 +291,15 @@ std::vector<S> operator %(std::vector<S> v, S s){
 // *********************** comparison ********************************
 //TODOconditional operators
 
+/**
+ * @brief equal operator
+ * 
+ * @tparam S 
+ * @param a 
+ * @param b 
+ * @return true 
+ * @return false 
+ */
 template<typename S>
 bool operator ==(std::vector<S> a, std::vector<S> b){
     if(a.size() != b.size()){
