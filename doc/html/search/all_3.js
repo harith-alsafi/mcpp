@@ -1,14 +1,21 @@
 var searchData=
 [
-  ['check_5fparam_18',['check_param',['../figure_8hpp.html#a2f1e54a416ea4398d993a738929886fd',1,'figure.hpp']]],
-  ['col_19',['col',['../classvar_1_1matrix.html#ab87dc7917ac93477191c6a4b0f705bfe',1,'var::matrix']]],
-  ['col_5fop_20',['col_op',['../classvar_1_1matrix.html#a1a413b72aa4cea9cdb292125fcaaa903',1,'var::matrix']]],
-  ['constants_2ehpp_21',['constants.hpp',['../constants_8hpp.html',1,'']]],
-  ['cos_22',['cos',['../namespacevec.html#a6c4612b11a3e28521643058b1d258540',1,'vec']]],
-  ['cosh_23',['cosh',['../namespacevec.html#ace7cbd4c49ee6659e2031d19584f8eba',1,'vec']]],
-  ['cot_24',['cot',['../namespacevec.html#a867fbe61cd6eaf971365ef9ec2ff061e',1,'vec']]],
-  ['coth_25',['coth',['../namespacevec.html#afb6c405f2e5272e296ed9de5d836a174',1,'vec']]],
-  ['cross_26',['cross',['../namespacevec.html#a88ce086de33d4b3ef7a0a75eb7b7ca45',1,'vec']]],
-  ['csc_27',['csc',['../namespacevec.html#ac8d81c6fa153833bfe45396f97c07219',1,'vec']]],
-  ['csch_28',['csch',['../namespacevec.html#ae1f61e4710b1ab91c88fdf0867a7f09f',1,'vec']]]
+  ['calc_24',['calc',['../namespacecalc.html',1,'']]],
+  ['check_5fcol_25',['check_col',['../classvar_1_1matrix.html#a81c4b4795406aa26c149f678603815a9',1,'var::matrix']]],
+  ['check_5frow_26',['check_row',['../classvar_1_1matrix.html#abe65d7997f230b2ac6564850717be182',1,'var::matrix']]],
+  ['check_5fsize_27',['check_size',['../classvar_1_1matrix.html#a98defd0b837085eae86da59649934392',1,'var::matrix']]],
+  ['cofactor_28',['cofactor',['../classvar_1_1matrix.html#ac97536b4f94f1dd614fb6267c07dd2b7',1,'var::matrix']]],
+  ['col_29',['col',['../classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745',1,'var::matrix']]],
+  ['col_30',['Col',['../classvar_1_1matrix_1_1Col.html#a438356b39568f5e8b427c97eeaf97c20',1,'var::matrix::Col::Col()'],['../classvar_1_1matrix_1_1Col.html',1,'var::matrix&lt; D &gt;::Col']]],
+  ['col_5fop_31',['col_op',['../classvar_1_1matrix.html#ab841b2356b699bcea97baccf5971d834',1,'var::matrix']]],
+  ['color_32',['color',['../structplt_1_1details.html#ab1d8a5cc5ca0a2570cf735c83cecec5c',1,'plt::details']]],
+  ['combination_33',['combination',['../namespacemsc.html#a2af0b5dba48bd5f9d05b9f067c071176',1,'msc']]],
+  ['constants_2ehpp_34',['constants.hpp',['../constants_8hpp.html',1,'']]],
+  ['cos_35',['cos',['../namespacenum.html#a6c5997363da941b88d40a120ddfb7741',1,'num']]],
+  ['cosh_36',['cosh',['../namespacenum.html#a249917ff739094abc52200f0f6234d4d',1,'num']]],
+  ['cot_37',['cot',['../namespacenum.html#ae8f31915ee4e6223b5d1fb9e289d1913',1,'num']]],
+  ['coth_38',['coth',['../namespacenum.html#ab13f868a2ade45efd1999cbe78e488a5',1,'num']]],
+  ['cross_39',['cross',['../namespacenum.html#aacae58f5a14d91046e306090b6aeabcf',1,'num']]],
+  ['csc_40',['csc',['../namespacenum.html#a4921bef257bd45d8d032704b7ac767ca',1,'num']]],
+  ['csch_41',['csch',['../namespacenum.html#a3745dd0245fd31b68e9045ba7dbce748',1,'num']]]
 ];

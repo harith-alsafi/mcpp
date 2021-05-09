@@ -8,19 +8,54 @@ namespace var
     /**
      * @brief Class for 2d matrix of objects
      * 
-     * @tparam S can be of any type
+     * @tparam D: can be of any type
      */
-    template <typename S> class matrix
+    template <typename D> class matrix
     {   
         protected:
-            // 2d vector
+            /**
+             * @brief Col class for another operator[]
+             * 
+             */
+            class Col
+            {
+                private:
+                    matrix& _a;
+                    int _i;
+                public:
+                    /**
+                     * @brief Construct a new Col object
+                     * 
+                     * @param a 
+                     * @param i 
+                     */
+                    Col(matrix& a, int i): _a(a), _i(i){}
+
+                    /**
+                     * @brief [] operator for col
+                     * 
+                     * @param j 
+                     * @return D& 
+                     */
+                    D &operator[](int j){
+                        _a.check_row(_i);
+                        _a.check_col(j);
+                        return _a.data[_i][j];
+                    }
+            };
+            
+            /**
+             * @brief 2D vector definition 
+             * 
+             * @tparam T 
+             */
             template<typename T> 
             using table = std::vector<std::vector<T>>;
 
             /**
              * @brief checks index for columns
              * 
-             * @param j 
+             * @param j colum index 
              */
             void check_col(int j){
                 if(j < 0 || j >= _col){
@@ -31,7 +66,7 @@ namespace var
             /**
              * @brief checks index for rows
              * 
-             * @param i 
+             * @param i row index
              */
             void check_row(int i){
                 if(i < 0 || i >= _row){
@@ -40,14 +75,14 @@ namespace var
             }
 
             /**
-             * @brief returns transpose for data
+             * @brief Returns transpose for data
              * 
-             * @return table<S> 
+             * @return table<D> 
              */
-            table<S> TT(){
+            table<D> TT(){
                 // temps
-                std::vector<S> temp_col;
-                table<S> temp;
+                std::vector<D> temp_col;
+                table<D> temp;
                 // reversing rows with colums
                 for(int i = 0; i < _col; i++){
                     temp_col.clear();
@@ -61,10 +96,10 @@ namespace var
             }
 
             /**
-             * @brief checks size for operators 
+             * @brief Checks other matrix size for operators 
              * 
-             * @param r 
-             * @param c 
+             * @param r row  
+             * @param c colum
              */
             void check_size(int r, int c){
                 if(c != _col || r != _row){
@@ -75,9 +110,9 @@ namespace var
             /**
              * @brief minor of a matrix
              * 
-             * @param i 
-             * @param j 
-             * @param other 
+             * @param i row
+             * @param j colum
+             * @param other matrix
              * @return matrix 
              */
             matrix M(int i, int j, matrix &other) {
@@ -100,18 +135,18 @@ namespace var
             }
 
             /**
-             * @brief recursive determinant 
+             * @brief Recursive determinant 
              * 
-             * @param a 
-             * @return S 
+             * @param a matrix
+             * @return D  
              */
-            S DET(matrix a){
+            D DET(matrix a){
                 // 2x2 determinant
                 if(a.col() == 2){
                     return (a[0][0]*a[1][1])-(a[1][0]*a[0][1]);
                 }
                 // n by n
-                S sum = S();
+                D sum = D();
                 for(int j = 0; j < a.col(); j++){              
                     sum += a[0][j]*std::pow((-1), 0+j)*DET(M(0, j, a));                  
                 }
@@ -129,13 +164,16 @@ namespace var
             }
 
         private:
-            table<S> data;
+            table<D> data;
             int _row;
             int _col;
         public:
             /**
              * @brief Construct a new matrix object
-             * 
+             * Usage:
+             * ```cpp
+             * var::matrix<int> m(2, 3); // 2 rows, 3 colums
+             * ```
              * @param r number of rows
              * @param c number of colums
              */
@@ -145,19 +183,29 @@ namespace var
 
             /**
              * @brief Default construct a new matrix object
-             * 
+             * Usage:
+             * ```cpp
+             * var::matrix<int> m;
+             * ```
              */
             matrix(): _row(0), _col(0){}
 
             /**
              * @brief Construct a new matrix object
-             * 
-             * @param a 
+             * Usage:
+             * ```cpp
+             *  var::matrix<int> m = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+             * ```
+             * @param a initializer list 
              */
-            matrix (std::initializer_list<std::initializer_list<S>> a){ 
+            matrix (std::initializer_list<std::initializer_list<D>> a){ 
                 _row = a.size();
                 _col = a.begin()->size();
-                std::vector<S> vect_row;
+                std::vector<D> vect_row;
                 for(auto &i: a){
                     vect_row.clear();
                     for(auto &j: i){
@@ -168,8 +216,16 @@ namespace var
             }
 
             /**
-             * @brief resizes the matrix
+             * @brief Resizes the matrix
+             * Usage:
+             * ```cpp
+             * m.resize(5, 6);
+             * ``` 
              * 
+             * !!! warning "Warning"  
+             * <pre>
+             *     This resets all elements in the matrix
+             * </pre>
              * @param r number of rows 
              * @param c number of colums
              */
@@ -182,12 +238,12 @@ namespace var
                 _col = c;
                 data.clear();
                 for(int i = 0; i < _row; i++){
-                    data.push_back(std::vector<S>(_col));
+                    data.push_back(std::vector<D>(_col));
                 }
             }
 
             /**
-             * @brief returns the number of rows
+             * @brief Returns the number of rows
              * 
              * @return int 
              */
@@ -196,7 +252,7 @@ namespace var
             }
 
             /**
-             * @brief returns the number of columns
+             * @brief Returns the number of columns
              * 
              * @return int 
              */
@@ -205,7 +261,7 @@ namespace var
             }
             
             /**
-             * @brief returns total number of elements
+             * @brief Returns total number of elements
              * 
              * @return int 
              */
@@ -214,12 +270,12 @@ namespace var
             }
 
             /**
-             * @brief returns the row at an index
+             * @brief Returns the row at an index
              * 
-             * @param i 
-             * @return std::vector<S> 
+             * @param i row index  
+             * @return std::vector<D> 
              */
-            std::vector<S> get_row(int i){
+            std::vector<D> get_row(int i){
                 check_row(i);
                 return data[i];
             }
@@ -227,12 +283,12 @@ namespace var
             /**
              * @brief returns the colum at an index
              * 
-             * @param j 
-             * @return std::vector<S> 
+             * @param j colum index 
+             * @return ``std::vector<D>``
              */
-            std::vector<S> get_col(int j){
+            std::vector<D> get_col(int j){
                 check_col(j);
-                std::vector<S> temp;
+                std::vector<D> temp;
                 for(int i = 0; i < _row; i++){
                     temp.push_back(data[i][j]);
                 }
@@ -240,11 +296,15 @@ namespace var
             }
 
             /**
-             * @brief insterts row at the end 
+             * @brief insterts row at the end
              * 
+             * !!! warning "Exception"    
+             * <pre>
+             *     This will throw an ``std::invalid_argument`` if there is a size mismatch. 
+             * </pre>  
              * @param a 
              */
-            void push_row(const std::vector<S>& a){
+            void push_row(const std::vector<D>& a){
                 // checking size
                 if(a.size() != _col && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -263,7 +323,7 @@ namespace var
              * 
              * @param a 
              */
-            void push_col(const std::vector<S>& a){
+            void push_col(const std::vector<D>& a){
                 // checking size
                 if(a.size() != _row && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -287,12 +347,12 @@ namespace var
              * @param i 
              * @param a 
              */
-            void insert_row(int i, std::vector<S> a){
+            void insert_row(int i, std::vector<D> a){
                 if(a.size() != _col){
                     throw std::invalid_argument("Size doesnt match");
                 }
                 check_row(i);
-                typename table<S>::iterator it = data.begin();
+                typename table<D>::iterator it = data.begin();
                 std::advance(it, i);
                 data.insert(it, a);
                 _row = data.size();
@@ -304,12 +364,12 @@ namespace var
              * @param j 
              * @param a 
              */
-            void insert_col(int j, const std::vector<S>& a){
+            void insert_col(int j, const std::vector<D>& a){
                 if(a.size() != _row){
                     throw std::invalid_argument("Size doesnt match");
                 }
                 check_col(j);
-                typename std::vector<S>::iterator it;
+                typename std::vector<D>::iterator it;
                 for(int i = 0; i < _row; i++){
                     it = data[i].begin();
                     std::advance(it, j);
@@ -463,7 +523,7 @@ namespace var
              * 
              * @param n 
              */
-            void turn_to(S n){
+            void turn_to(D n){
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j<_col; j++){
                         data[i][j] = n;
@@ -474,10 +534,10 @@ namespace var
             /**
              * @brief sum of all elements
              * 
-             * @return S 
+             * @return D 
              */
-            S sum(){
-                S SUM = S();
+            D sum(){
+                D SUM = D();
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         SUM += data[i][j];
@@ -489,11 +549,11 @@ namespace var
             /**
              * @brief trace of a matrix
              * 
-             * @return S 
+             * @return D 
              */
-            S tr(){
+            D tr(){
                 square();
-                S sum = S();
+                D sum = D();
                 for(int i = 0; i < _row; i++){
                     sum+= data[i][i];
                 }
@@ -515,9 +575,9 @@ namespace var
             /**
              * @brief returns the determinant 
              * 
-             * @return S 
+             * @return D 
              */
-            S det(){
+            D det(){
                 square();
                 return DET(*this);
             }
@@ -604,36 +664,7 @@ namespace var
 
 // ***************************** [] operator ************************** //
 
-            /**
-             * @brief col class for another operator[]
-             * 
-             */
-            class Col
-            {
-                private:
-                    matrix& _a;
-                    int _i;
-                public:
-                    /**
-                     * @brief Construct a new Col object
-                     * 
-                     * @param a 
-                     * @param i 
-                     */
-                    Col(matrix& a, int i): _a(a), _i(i){}
 
-                    /**
-                     * @brief [] operator for col
-                     * 
-                     * @param j 
-                     * @return S& 
-                     */
-                    S &operator[](int j){
-                        _a.check_row(_i);
-                        _a.check_col(j);
-                        return _a.data[_i][j];
-                    }
-            };
 
             /**
              * @brief [] operator for rows 
@@ -672,7 +703,7 @@ namespace var
              * @param n 
              * @return matrix 
              */
-            matrix operator +(S n){
+            matrix operator +(D n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -689,7 +720,7 @@ namespace var
              * @param other 
              * @return matrix 
              */
-            friend matrix operator +(S n, matrix &other){
+            friend matrix operator +(D n, matrix &other){
                 return other+n;
             }
 
@@ -733,7 +764,7 @@ namespace var
              * @param n 
              * @return matrix 
              */
-            matrix operator -(S n){
+            matrix operator -(D n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -750,7 +781,7 @@ namespace var
              * @param other 
              * @return matrix 
              */
-            friend matrix operator -(S n, matrix &other){
+            friend matrix operator -(D n, matrix &other){
                 matrix temp = -other;
                 return n+temp;
             }
@@ -768,8 +799,8 @@ namespace var
                 if(!(_row == other._col && _col == other._row)){
                     throw std::invalid_argument("Size mismatch");
                 }
-                auto SUM = [this, other](int i, int j)-> S {
-                    S summ = S();
+                auto SUM = [this, other](int i, int j)-> D {
+                    D summ = D();
                     for(int k = 0; k < _col; k++){
                         summ += data[i][k]*other.data[k][j];
                     }
@@ -790,7 +821,7 @@ namespace var
              * @param n 
              * @return matrix 
              */
-            matrix operator *(S n){
+            matrix operator *(D n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -807,7 +838,7 @@ namespace var
              * @param other 
              * @return matrix 
              */
-            friend matrix operator *(S n, matrix &other){
+            friend matrix operator *(D n, matrix &other){
                 return other*n;
             }
 
@@ -817,7 +848,7 @@ namespace var
                 return *this*other.inv();
             }
 
-            matrix operator /(S n){
+            matrix operator /(D n){
                 matrix temp(_row, _col);
                 temp.data = data;
                 
@@ -829,7 +860,7 @@ namespace var
                 return temp;
             }
 
-            friend matrix operator /(S n, matrix &other){
+            friend matrix operator /(D n, matrix &other){
                 matrix temp = other;
                 for(int i = 0; i < other._row; i++){
                     for(int j = 0; j < other._col; j++){
@@ -840,7 +871,7 @@ namespace var
             }
 
 // ***************************** % operator ************************** //
-            matrix operator %(S n){
+            matrix operator %(D n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -950,7 +981,7 @@ namespace var
             /**
              * @brief print method for the class 
              * var::matrix<int> m; cout << m;
-             * @tparam S 
+             * @tparam D 
              * @param out 
              * @param other 
              * @return std::ostream& 
@@ -978,7 +1009,7 @@ namespace var
              * @return std::istream& 
              */
             friend std::istream &operator >> (std::istream  &input, matrix &other){
-                std::vector<S> temp;
+                std::vector<D> temp;
                 other.resize(0, 0);
                 while(input.good())
                 {
@@ -998,4 +1029,5 @@ namespace var
     // TODO test division 
     // TODO test exceptions
     // TODO add mat_op 
+    // TODO add replace row and colum 
 };

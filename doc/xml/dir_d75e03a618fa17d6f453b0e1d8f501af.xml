@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_d75e03a618fa17d6f453b0e1d8f501af" kind="dir">
+    <compoundname>includes/misc</compoundname>
+    <innerfile refid="constants_8hpp">constants.hpp</innerfile>
+    <innerfile refid="misc_8hpp">misc.hpp</innerfile>
+    <innerfile refid="signals_8hpp">signals.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/misc/"/>
+  </compounddef>
+</doxygen>

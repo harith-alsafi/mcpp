@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['white_170',['WHITE',['../figure_8hpp.html#ab05c069643fad7bd37f5a8743e963bf1',1,'figure.hpp']]]
+  ['legend_275',['legend',['../structplt_1_1details.html#a3d5ebf4996858c57118f0b1bac6707e0',1,'plt::details']]]
 ];

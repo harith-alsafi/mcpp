@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hline_124',['hline',['../figure_8hpp.html#a7eaee03c99427591d62e2678776fe577',1,'figure.hpp']]]
+  ['get_5fcol_206',['get_col',['../classvar_1_1matrix.html#a6de49f43eb3bc3f3ed6c0b658a97605c',1,'var::matrix']]],
+  ['get_5frow_207',['get_row',['../classvar_1_1matrix.html#aa27021aa738d82a6b9dde82de321f5a1',1,'var::matrix']]]
 ];

@@ -71,18 +71,18 @@ $(function() {
 <div class="title">vector.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="constants_8hpp_source.html">../misc/constants.hpp</a>&quot;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vector.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="vector_8hpp__incl.png" border="0" usemap="#aincludes_2vectors_2vector_8hpp" alt=""/></div>
 <map name="aincludes_2vectors_2vector_8hpp" id="aincludes_2vectors_2vector_8hpp">
-<area shape="rect" title=" " alt="" coords="100,5,283,32"/>
-<area shape="rect" href="constants_8hpp.html" title=" " alt="" coords="5,80,153,107"/>
-<area shape="rect" title=" " alt="" coords="106,155,165,181"/>
-<area shape="rect" title=" " alt="" coords="229,80,301,107"/>
+<area shape="rect" title=" " alt="" coords="33,5,215,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,64,107"/>
+<area shape="rect" title=" " alt="" coords="88,80,160,107"/>
+<area shape="rect" title=" " alt="" coords="184,80,253,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -90,8 +90,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="vector_8hpp__dep__incl.png" border="0" usemap="#aincludes_2vectors_2vector_8hppdep" alt=""/></div>
 <map name="aincludes_2vectors_2vector_8hppdep" id="aincludes_2vectors_2vector_8hppdep">
-<area shape="rect" title=" " alt="" coords="5,5,188,32"/>
-<area shape="rect" href="mcpp_8hpp.html" title=" " alt="" coords="31,80,162,107"/>
+<area shape="rect" title=" " alt="" coords="19,5,202,32"/>
+<area shape="rect" href="mcpp_8hpp.html" title=" " alt="" coords="45,169,176,196"/>
+<area shape="rect" href="matrix_8hpp.html" title=" " alt="" coords="98,80,225,121"/>
+<area shape="rect" href="differential_8hpp.html" title=" " alt="" coords="5,244,216,271"/>
 </map>
 </div>
 </div>
@@ -99,82 +101,89 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3d7c652d01b9f3d73980ff28eee775d7"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a3d7c652d01b9f3d73980ff28eee775d7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">operator*</a> (std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</td></tr>
-<tr class="memdesc:a3d7c652d01b9f3d73980ff28eee775d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector*vector  <a href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">More...</a><br /></td></tr>
-<tr class="separator:a3d7c652d01b9f3d73980ff28eee775d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2657352d06b50509e151f4f12455c45c"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a2657352d06b50509e151f4f12455c45c"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a2657352d06b50509e151f4f12455c45c">operator*</a> (S s, std::vector&lt; S &gt; v)</td></tr>
-<tr class="memdesc:a2657352d06b50509e151f4f12455c45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">var*vector  <a href="vector_8hpp.html#a2657352d06b50509e151f4f12455c45c">More...</a><br /></td></tr>
-<tr class="separator:a2657352d06b50509e151f4f12455c45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43f42dc20a9c5e66fd25f3c7d0393d46"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a43f42dc20a9c5e66fd25f3c7d0393d46"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a43f42dc20a9c5e66fd25f3c7d0393d46">operator*</a> (std::vector&lt; S &gt; v, S s)</td></tr>
-<tr class="memdesc:a43f42dc20a9c5e66fd25f3c7d0393d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector*var  <a href="vector_8hpp.html#a43f42dc20a9c5e66fd25f3c7d0393d46">More...</a><br /></td></tr>
-<tr class="separator:a43f42dc20a9c5e66fd25f3c7d0393d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33fd3813ede18d668789f42aff28463f"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a33fd3813ede18d668789f42aff28463f"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">operator+</a> (std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</td></tr>
-<tr class="memdesc:a33fd3813ede18d668789f42aff28463f"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector+vector  <a href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">More...</a><br /></td></tr>
-<tr class="separator:a33fd3813ede18d668789f42aff28463f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579fb98b140622722de336d015430830"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a579fb98b140622722de336d015430830"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a579fb98b140622722de336d015430830">operator+</a> (S s, std::vector&lt; S &gt; v)</td></tr>
-<tr class="memdesc:a579fb98b140622722de336d015430830"><td class="mdescLeft">&#160;</td><td class="mdescRight">var+vector  <a href="vector_8hpp.html#a579fb98b140622722de336d015430830">More...</a><br /></td></tr>
-<tr class="separator:a579fb98b140622722de336d015430830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a8ef758306671afd672ca853454521"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a65a8ef758306671afd672ca853454521"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a65a8ef758306671afd672ca853454521">operator+</a> (std::vector&lt; S &gt; v, S s)</td></tr>
-<tr class="memdesc:a65a8ef758306671afd672ca853454521"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector+var  <a href="vector_8hpp.html#a65a8ef758306671afd672ca853454521">More...</a><br /></td></tr>
-<tr class="separator:a65a8ef758306671afd672ca853454521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f2af2897fbef2ecf89f6c0557d643d2"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a1f2af2897fbef2ecf89f6c0557d643d2"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">operator-</a> (std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</td></tr>
-<tr class="memdesc:a1f2af2897fbef2ecf89f6c0557d643d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector-vector  <a href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">More...</a><br /></td></tr>
-<tr class="separator:a1f2af2897fbef2ecf89f6c0557d643d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a181a6961825ac28ecae5ed9626579ff9"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a181a6961825ac28ecae5ed9626579ff9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a181a6961825ac28ecae5ed9626579ff9">operator-</a> (S s, std::vector&lt; S &gt; v)</td></tr>
-<tr class="memdesc:a181a6961825ac28ecae5ed9626579ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">var-vector  <a href="vector_8hpp.html#a181a6961825ac28ecae5ed9626579ff9">More...</a><br /></td></tr>
-<tr class="separator:a181a6961825ac28ecae5ed9626579ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f91f3d4c70c2556f32a04e33a7e37a1"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a5f91f3d4c70c2556f32a04e33a7e37a1"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a5f91f3d4c70c2556f32a04e33a7e37a1">operator-</a> (std::vector&lt; S &gt; v, S s)</td></tr>
-<tr class="memdesc:a5f91f3d4c70c2556f32a04e33a7e37a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector-var  <a href="vector_8hpp.html#a5f91f3d4c70c2556f32a04e33a7e37a1">More...</a><br /></td></tr>
-<tr class="separator:a5f91f3d4c70c2556f32a04e33a7e37a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a953d6d9bb18775d366378ce77b82c3cd"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a953d6d9bb18775d366378ce77b82c3cd"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">operator/</a> (std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</td></tr>
-<tr class="memdesc:a953d6d9bb18775d366378ce77b82c3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector/vector  <a href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">More...</a><br /></td></tr>
-<tr class="separator:a953d6d9bb18775d366378ce77b82c3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fba912ffc4a952c5c37ebfa9217f826"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a3fba912ffc4a952c5c37ebfa9217f826"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a3fba912ffc4a952c5c37ebfa9217f826">operator/</a> (S s, std::vector&lt; S &gt; v)</td></tr>
-<tr class="memdesc:a3fba912ffc4a952c5c37ebfa9217f826"><td class="mdescLeft">&#160;</td><td class="mdescRight">var/vector  <a href="vector_8hpp.html#a3fba912ffc4a952c5c37ebfa9217f826">More...</a><br /></td></tr>
-<tr class="separator:a3fba912ffc4a952c5c37ebfa9217f826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3452335cb23fb65dcea08188b45b1d8"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:af3452335cb23fb65dcea08188b45b1d8"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#af3452335cb23fb65dcea08188b45b1d8">operator/</a> (std::vector&lt; S &gt; v, S s)</td></tr>
-<tr class="memdesc:af3452335cb23fb65dcea08188b45b1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector/var  <a href="vector_8hpp.html#af3452335cb23fb65dcea08188b45b1d8">More...</a><br /></td></tr>
-<tr class="separator:af3452335cb23fb65dcea08188b45b1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a03381c0102c0aec2621c4ddc6ac507"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:a0a03381c0102c0aec2621c4ddc6ac507"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507">operator&lt;&lt;</a> (std::ostream &amp;out, std::vector&lt; S &gt; &amp;other)</td></tr>
-<tr class="memdesc:a0a03381c0102c0aec2621c4ddc6ac507"><td class="mdescLeft">&#160;</td><td class="mdescRight">cout &lt;&lt; vector  <a href="vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507">More...</a><br /></td></tr>
-<tr class="separator:a0a03381c0102c0aec2621c4ddc6ac507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad729bc1f5d9a7c92357f6748b87c0111"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
-<tr class="memitem:ad729bc1f5d9a7c92357f6748b87c0111"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; S &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111">operator%</a> (std::vector&lt; S &gt; v, S s)</td></tr>
-<tr class="memdesc:ad729bc1f5d9a7c92357f6748b87c0111"><td class="mdescLeft">&#160;</td><td class="mdescRight">vectorvar  <a href="vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111">More...</a><br /></td></tr>
-<tr class="separator:ad729bc1f5d9a7c92357f6748b87c0111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc2becd1843b6274668bf58efd00288"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:acdc2becd1843b6274668bf58efd00288"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">operator*</a> (std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</td></tr>
+<tr class="memdesc:acdc2becd1843b6274668bf58efd00288"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector*vector  <a href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">More...</a><br /></td></tr>
+<tr class="separator:acdc2becd1843b6274668bf58efd00288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d0c6a970542e9cdb92d7f6ea9149bc3"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a8d0c6a970542e9cdb92d7f6ea9149bc3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a8d0c6a970542e9cdb92d7f6ea9149bc3">operator*</a> (D s, std::vector&lt; D &gt; v)</td></tr>
+<tr class="memdesc:a8d0c6a970542e9cdb92d7f6ea9149bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">var*vector  <a href="vector_8hpp.html#a8d0c6a970542e9cdb92d7f6ea9149bc3">More...</a><br /></td></tr>
+<tr class="separator:a8d0c6a970542e9cdb92d7f6ea9149bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1145e88d3f4157c30195cb8cf32ce6"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:aad1145e88d3f4157c30195cb8cf32ce6"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#aad1145e88d3f4157c30195cb8cf32ce6">operator*</a> (std::vector&lt; D &gt; v, D s)</td></tr>
+<tr class="memdesc:aad1145e88d3f4157c30195cb8cf32ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector*var  <a href="vector_8hpp.html#aad1145e88d3f4157c30195cb8cf32ce6">More...</a><br /></td></tr>
+<tr class="separator:aad1145e88d3f4157c30195cb8cf32ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af79d0c930820784c6d2afb33fa43ccfa"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:af79d0c930820784c6d2afb33fa43ccfa"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">operator+</a> (std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</td></tr>
+<tr class="memdesc:af79d0c930820784c6d2afb33fa43ccfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector+vector  <a href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">More...</a><br /></td></tr>
+<tr class="separator:af79d0c930820784c6d2afb33fa43ccfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e0f8bb87f96ea7d3311e3e14a81fd7"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a99e0f8bb87f96ea7d3311e3e14a81fd7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a99e0f8bb87f96ea7d3311e3e14a81fd7">operator+</a> (D s, std::vector&lt; D &gt; v)</td></tr>
+<tr class="memdesc:a99e0f8bb87f96ea7d3311e3e14a81fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">var+vector  <a href="vector_8hpp.html#a99e0f8bb87f96ea7d3311e3e14a81fd7">More...</a><br /></td></tr>
+<tr class="separator:a99e0f8bb87f96ea7d3311e3e14a81fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1800f39f30fac1bd70bb7e3c48778c7e"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a1800f39f30fac1bd70bb7e3c48778c7e"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a1800f39f30fac1bd70bb7e3c48778c7e">operator+</a> (std::vector&lt; D &gt; v, D s)</td></tr>
+<tr class="memdesc:a1800f39f30fac1bd70bb7e3c48778c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector+var  <a href="vector_8hpp.html#a1800f39f30fac1bd70bb7e3c48778c7e">More...</a><br /></td></tr>
+<tr class="separator:a1800f39f30fac1bd70bb7e3c48778c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec55fe18ce33f079c23c0f40c0995bd9"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:aec55fe18ce33f079c23c0f40c0995bd9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">operator-</a> (std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</td></tr>
+<tr class="memdesc:aec55fe18ce33f079c23c0f40c0995bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector-vector  <a href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">More...</a><br /></td></tr>
+<tr class="separator:aec55fe18ce33f079c23c0f40c0995bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a78232fcc9c9ac32f09ac130fd2819"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a85a78232fcc9c9ac32f09ac130fd2819"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a85a78232fcc9c9ac32f09ac130fd2819">operator-</a> (D s, std::vector&lt; D &gt; v)</td></tr>
+<tr class="memdesc:a85a78232fcc9c9ac32f09ac130fd2819"><td class="mdescLeft">&#160;</td><td class="mdescRight">var-vector  <a href="vector_8hpp.html#a85a78232fcc9c9ac32f09ac130fd2819">More...</a><br /></td></tr>
+<tr class="separator:a85a78232fcc9c9ac32f09ac130fd2819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4478da2cece9afe7302776c443aa7dba"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a4478da2cece9afe7302776c443aa7dba"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a4478da2cece9afe7302776c443aa7dba">operator-</a> (std::vector&lt; D &gt; v, D s)</td></tr>
+<tr class="memdesc:a4478da2cece9afe7302776c443aa7dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector-var  <a href="vector_8hpp.html#a4478da2cece9afe7302776c443aa7dba">More...</a><br /></td></tr>
+<tr class="separator:a4478da2cece9afe7302776c443aa7dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c1ffb561b98e010bb4d7eeb87cc680"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a66c1ffb561b98e010bb4d7eeb87cc680"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">operator/</a> (std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</td></tr>
+<tr class="memdesc:a66c1ffb561b98e010bb4d7eeb87cc680"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector/vector  <a href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">More...</a><br /></td></tr>
+<tr class="separator:a66c1ffb561b98e010bb4d7eeb87cc680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f1158ea64aa338c2e9375097a70acd"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:af4f1158ea64aa338c2e9375097a70acd"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#af4f1158ea64aa338c2e9375097a70acd">operator/</a> (D s, std::vector&lt; D &gt; v)</td></tr>
+<tr class="memdesc:af4f1158ea64aa338c2e9375097a70acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">var/vector  <a href="vector_8hpp.html#af4f1158ea64aa338c2e9375097a70acd">More...</a><br /></td></tr>
+<tr class="separator:af4f1158ea64aa338c2e9375097a70acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83dbef942d60085ba43c0b5c41434cd"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:ae83dbef942d60085ba43c0b5c41434cd"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#ae83dbef942d60085ba43c0b5c41434cd">operator/</a> (std::vector&lt; D &gt; v, D s)</td></tr>
+<tr class="memdesc:ae83dbef942d60085ba43c0b5c41434cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector/var  <a href="vector_8hpp.html#ae83dbef942d60085ba43c0b5c41434cd">More...</a><br /></td></tr>
+<tr class="separator:ae83dbef942d60085ba43c0b5c41434cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9de9b22ed341c1a6f738d05fca64df9"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:ac9de9b22ed341c1a6f738d05fca64df9"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#ac9de9b22ed341c1a6f738d05fca64df9">operator&lt;&lt;</a> (std::ostream &amp;out, std::vector&lt; D &gt; &amp;other)</td></tr>
+<tr class="memdesc:ac9de9b22ed341c1a6f738d05fca64df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">cout &lt;&lt; vector  <a href="vector_8hpp.html#ac9de9b22ed341c1a6f738d05fca64df9">More...</a><br /></td></tr>
+<tr class="separator:ac9de9b22ed341c1a6f738d05fca64df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac18655429515db3b7ee77a9572397d1"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:aac18655429515db3b7ee77a9572397d1"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#aac18655429515db3b7ee77a9572397d1">operator&gt;&gt;</a> (std::istream &amp;input, std::vector&lt; D &gt; &amp;other)</td></tr>
+<tr class="memdesc:aac18655429515db3b7ee77a9572397d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">input operator  <a href="vector_8hpp.html#aac18655429515db3b7ee77a9572397d1">More...</a><br /></td></tr>
+<tr class="separator:aac18655429515db3b7ee77a9572397d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46af90d1287f8a71f3a606ceebb4364a"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a46af90d1287f8a71f3a606ceebb4364a"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#a46af90d1287f8a71f3a606ceebb4364a">operator%</a> (std::vector&lt; D &gt; v, D s)</td></tr>
+<tr class="separator:a46af90d1287f8a71f3a606ceebb4364a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb08117e477166564a87be11b67ee8c"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:abcb08117e477166564a87be11b67ee8c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="vector_8hpp.html#abcb08117e477166564a87be11b67ee8c">operator==</a> (std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</td></tr>
+<tr class="memdesc:abcb08117e477166564a87be11b67ee8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">equal operator  <a href="vector_8hpp.html#abcb08117e477166564a87be11b67ee8c">More...</a><br /></td></tr>
+<tr class="separator:abcb08117e477166564a87be11b67ee8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad729bc1f5d9a7c92357f6748b87c0111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad729bc1f5d9a7c92357f6748b87c0111">&#9670;&nbsp;</a></span>operator%()</h2>
+<a id="a46af90d1287f8a71f3a606ceebb4364a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46af90d1287f8a71f3a606ceebb4364a">&#9670;&nbsp;</a></span>operator%()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator% </td>
+          <td class="memname">std::vector&lt;D&gt; operator% </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -185,42 +194,26 @@ template&lt;typename S &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>vectorvar </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">v</td><td></td></tr>
-    <tr><td class="paramname">s</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
-
 </div>
 </div>
-<a id="a2657352d06b50509e151f4f12455c45c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2657352d06b50509e151f4f12455c45c">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/3]</span></h2>
+<a id="a8d0c6a970542e9cdb92d7f6ea9149bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d0c6a970542e9cdb92d7f6ea9149bc3">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator* </td>
+          <td class="memname">std::vector&lt;D&gt; operator* </td>
           <td>(</td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
@@ -234,7 +227,7 @@ template&lt;typename S &gt; </div>
 <p>var*vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -245,28 +238,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a3d7c652d01b9f3d73980ff28eee775d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d7c652d01b9f3d73980ff28eee775d7">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/3]</span></h2>
+<a id="acdc2becd1843b6274668bf58efd00288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdc2becd1843b6274668bf58efd00288">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator* </td>
+          <td class="memname">std::vector&lt;D&gt; operator* </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -280,7 +273,7 @@ template&lt;typename S &gt; </div>
 <p>vector*vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -291,28 +284,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a43f42dc20a9c5e66fd25f3c7d0393d46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43f42dc20a9c5e66fd25f3c7d0393d46">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/3]</span></h2>
+<a id="aad1145e88d3f4157c30195cb8cf32ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1145e88d3f4157c30195cb8cf32ce6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator* </td>
+          <td class="memname">std::vector&lt;D&gt; operator* </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -326,7 +319,7 @@ template&lt;typename S &gt; </div>
 <p>vector*var </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -337,28 +330,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a579fb98b140622722de336d015430830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a579fb98b140622722de336d015430830">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
+<a id="a99e0f8bb87f96ea7d3311e3e14a81fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e0f8bb87f96ea7d3311e3e14a81fd7">&#9670;&nbsp;</a></span>operator+() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator+ </td>
+          <td class="memname">std::vector&lt;D&gt; operator+ </td>
           <td>(</td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
@@ -372,7 +365,7 @@ template&lt;typename S &gt; </div>
 <p>var+vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -383,28 +376,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a33fd3813ede18d668789f42aff28463f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33fd3813ede18d668789f42aff28463f">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
+<a id="af79d0c930820784c6d2afb33fa43ccfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af79d0c930820784c6d2afb33fa43ccfa">&#9670;&nbsp;</a></span>operator+() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator+ </td>
+          <td class="memname">std::vector&lt;D&gt; operator+ </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -418,7 +411,7 @@ template&lt;typename S &gt; </div>
 <p>vector+vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -429,28 +422,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a65a8ef758306671afd672ca853454521"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65a8ef758306671afd672ca853454521">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
+<a id="a1800f39f30fac1bd70bb7e3c48778c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1800f39f30fac1bd70bb7e3c48778c7e">&#9670;&nbsp;</a></span>operator+() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator+ </td>
+          <td class="memname">std::vector&lt;D&gt; operator+ </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -464,7 +457,7 @@ template&lt;typename S &gt; </div>
 <p>vector+var </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -475,28 +468,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a181a6961825ac28ecae5ed9626579ff9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a181a6961825ac28ecae5ed9626579ff9">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/3]</span></h2>
+<a id="a85a78232fcc9c9ac32f09ac130fd2819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a78232fcc9c9ac32f09ac130fd2819">&#9670;&nbsp;</a></span>operator-() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator- </td>
+          <td class="memname">std::vector&lt;D&gt; operator- </td>
           <td>(</td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
@@ -510,7 +503,7 @@ template&lt;typename S &gt; </div>
 <p>var-vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -521,28 +514,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a1f2af2897fbef2ecf89f6c0557d643d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f2af2897fbef2ecf89f6c0557d643d2">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/3]</span></h2>
+<a id="aec55fe18ce33f079c23c0f40c0995bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec55fe18ce33f079c23c0f40c0995bd9">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator- </td>
+          <td class="memname">std::vector&lt;D&gt; operator- </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -556,7 +549,7 @@ template&lt;typename S &gt; </div>
 <p>vector-vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -567,28 +560,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a5f91f3d4c70c2556f32a04e33a7e37a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f91f3d4c70c2556f32a04e33a7e37a1">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/3]</span></h2>
+<a id="a4478da2cece9afe7302776c443aa7dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4478da2cece9afe7302776c443aa7dba">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator- </td>
+          <td class="memname">std::vector&lt;D&gt; operator- </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -602,7 +595,7 @@ template&lt;typename S &gt; </div>
 <p>vector-var </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -613,28 +606,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a3fba912ffc4a952c5c37ebfa9217f826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fba912ffc4a952c5c37ebfa9217f826">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/3]</span></h2>
+<a id="af4f1158ea64aa338c2e9375097a70acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f1158ea64aa338c2e9375097a70acd">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator/ </td>
+          <td class="memname">std::vector&lt;D&gt; operator/ </td>
           <td>(</td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
@@ -648,7 +641,7 @@ template&lt;typename S &gt; </div>
 <p>var/vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -659,28 +652,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a953d6d9bb18775d366378ce77b82c3cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a953d6d9bb18775d366378ce77b82c3cd">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/3]</span></h2>
+<a id="a66c1ffb561b98e010bb4d7eeb87cc680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c1ffb561b98e010bb4d7eeb87cc680">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator/ </td>
+          <td class="memname">std::vector&lt;D&gt; operator/ </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>first</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>second</em>&#160;</td>
         </tr>
         <tr>
@@ -694,7 +687,7 @@ template&lt;typename S &gt; </div>
 <p>vector/vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -705,28 +698,28 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="af3452335cb23fb65dcea08188b45b1d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3452335cb23fb65dcea08188b45b1d8">&#9670;&nbsp;</a></span>operator/() <span class="overload">[3/3]</span></h2>
+<a id="ae83dbef942d60085ba43c0b5c41434cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83dbef942d60085ba43c0b5c41434cd">&#9670;&nbsp;</a></span>operator/() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;S&gt; operator/ </td>
+          <td class="memname">std::vector&lt;D&gt; operator/ </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; S &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">S&#160;</td>
+          <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>s</em>&#160;</td>
         </tr>
         <tr>
@@ -740,7 +733,7 @@ template&lt;typename S &gt; </div>
 <p>vector/var </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -751,17 +744,17 @@ template&lt;typename S &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;S&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
-<a id="a0a03381c0102c0aec2621c4ddc6ac507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a03381c0102c0aec2621c4ddc6ac507">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<a id="ac9de9b22ed341c1a6f738d05fca64df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9de9b22ed341c1a6f738d05fca64df9">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename S &gt; </div>
+template&lt;typename D &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
@@ -772,7 +765,7 @@ template&lt;typename S &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; S &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; D &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em>&#160;</td>
         </tr>
         <tr>
@@ -786,7 +779,7 @@ template&lt;typename S &gt; </div>
 <p>cout &lt;&lt; vector </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">S</td><td></td></tr>
+    <tr><td class="paramname">D</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -798,6 +791,100 @@ template&lt;typename S &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+
+</div>
+</div>
+<a id="abcb08117e477166564a87be11b67ee8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb08117e477166564a87be11b67ee8c">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>equal operator </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td></td></tr>
+    <tr><td class="paramname">b</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="aac18655429515db3b7ee77a9572397d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac18655429515db3b7ee77a9572397d1">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>input operator </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td></td></tr>
+    <tr><td class="paramname">other</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::istream&amp; </dd></dl>
 
 </div>
 </div>

@@ -72,20 +72,21 @@ $(function() {
 <div class="title">matrix.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="constants_8hpp_source.html">../misc/constants.hpp</a>&quot;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="vector_8hpp_source.html">../vectors/vector.hpp</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for matrix.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="matrix_8hpp__incl.png" border="0" usemap="#aincludes_2variables_2matrix_8hpp" alt=""/></div>
 <map name="aincludes_2variables_2matrix_8hpp" id="aincludes_2variables_2matrix_8hpp">
-<area shape="rect" title=" " alt="" coords="164,5,291,47"/>
-<area shape="rect" href="constants_8hpp.html" title=" " alt="" coords="5,95,153,121"/>
-<area shape="rect" title=" " alt="" coords="106,169,165,196"/>
-<area shape="rect" title=" " alt="" coords="229,95,301,121"/>
-<area shape="rect" title=" " alt="" coords="325,95,399,121"/>
+<area shape="rect" title=" " alt="" coords="194,5,321,47"/>
+<area shape="rect" href="vector_8hpp.html" title=" " alt="" coords="53,95,195,121"/>
+<area shape="rect" title=" " alt="" coords="220,95,295,121"/>
+<area shape="rect" title=" " alt="" coords="319,95,377,121"/>
+<area shape="rect" title=" " alt="" coords="5,169,64,196"/>
+<area shape="rect" title=" " alt="" coords="88,169,160,196"/>
+<area shape="rect" title=" " alt="" coords="184,169,253,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -93,8 +94,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="matrix_8hpp__dep__incl.png" border="0" usemap="#aincludes_2variables_2matrix_8hppdep" alt=""/></div>
 <map name="aincludes_2variables_2matrix_8hppdep" id="aincludes_2variables_2matrix_8hppdep">
-<area shape="rect" title=" " alt="" coords="7,5,134,47"/>
-<area shape="rect" href="mcpp_8hpp.html" title=" " alt="" coords="5,95,136,121"/>
+<area shape="rect" title=" " alt="" coords="47,5,174,47"/>
+<area shape="rect" href="mcpp_8hpp.html" title=" " alt="" coords="45,95,176,121"/>
+<area shape="rect" href="differential_8hpp.html" title=" " alt="" coords="5,169,216,196"/>
 </map>
 </div>
 </div>
@@ -102,10 +104,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html">var::matrix&lt; S &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for 2d matrix of objects with matrix properties.  <a href="classvar_1_1matrix.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html">var::matrix&lt; D &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for 2d matrix of objects.  <a href="classvar_1_1matrix.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix_1_1Row.html">var::matrix&lt; S &gt;::Row</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix_1_1Col.html">var::matrix&lt; D &gt;::Col</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Col class for another operator[].  <a href="classvar_1_1matrix_1_1Col.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>

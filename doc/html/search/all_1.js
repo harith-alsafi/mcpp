@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['acos_4',['acos',['../namespacevec.html#a1ca57d252015a35ac70b8886ddd0d773',1,'vec']]],
-  ['acosh_5',['acosh',['../namespacevec.html#aa6279722ecd9178e1304616c0a11a5a7',1,'vec']]],
-  ['acot_6',['acot',['../namespacevec.html#ad23d4d9612e8f18d2ad001595cca845b',1,'vec']]],
-  ['acoth_7',['acoth',['../namespacevec.html#a38320dda780c06af11f4113694c460f8',1,'vec']]],
-  ['acsc_8',['acsc',['../namespacevec.html#a721070ac14eceeb2852d94b70bd78a86',1,'vec']]],
-  ['acsch_9',['acsch',['../namespacevec.html#a31899b21a65f9611709816af396b21ff',1,'vec']]],
-  ['asec_10',['asec',['../namespacevec.html#aa28116e32cd18da5d2bcb3c2408fcd7c',1,'vec']]],
-  ['asech_11',['asech',['../namespacevec.html#ad6dc0aebbfc76c8cf44a9e1b911f4ab9',1,'vec']]],
-  ['asin_12',['asin',['../namespacevec.html#aff3e8bfb1a1f1aff45ce5f2e3611573b',1,'vec']]],
-  ['asinh_13',['asinh',['../namespacevec.html#ac9ba4d53adb07923408900315cc8442d',1,'vec']]],
-  ['atan_14',['atan',['../namespacevec.html#af21df674138372609bb78dff7494d2a2',1,'vec']]],
-  ['atanh_15',['atanh',['../namespacevec.html#ae7a70a2d1036954ed0d248698308f0e8',1,'vec']]]
+  ['abs_4',['abs',['../namespacenum.html#a7bd48ec1618b10c1b866221a14dbd8b3',1,'num']]],
+  ['acos_5',['acos',['../namespacenum.html#ae4e2ef08ec3589d21d7644e32e8a83b2',1,'num']]],
+  ['acosh_6',['acosh',['../namespacenum.html#a5a502e5ccf6b3ff884ed4888f0b4088f',1,'num']]],
+  ['acot_7',['acot',['../namespacenum.html#ad814caa1a44ce03a5ab17a034abfc549',1,'num']]],
+  ['acoth_8',['acoth',['../namespacenum.html#a09e4d860bcd090c061def49600955091',1,'num']]],
+  ['acsc_9',['acsc',['../namespacenum.html#a7c33fa731f4982e84101c83a2a2d7c53',1,'num']]],
+  ['acsch_10',['acsch',['../namespacenum.html#a60528f75e958d58a60f3e24b8bb6a2e4',1,'num']]],
+  ['adj_11',['adj',['../classvar_1_1matrix.html#ad78a167d7400fac474fd03cf3363defb',1,'var::matrix']]],
+  ['alg_12',['alg',['../namespacealg.html',1,'']]],
+  ['algebra_2ehpp_13',['algebra.hpp',['../algebra_8hpp.html',1,'']]],
+  ['arange_14',['arange',['../namespacenum.html#a501f44095bdd298826bc4fa20a72abfe',1,'num']]],
+  ['asec_15',['asec',['../namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373',1,'num']]],
+  ['asech_16',['asech',['../namespacenum.html#a934866c6a8251445626f42ec27423ae2',1,'num']]],
+  ['asin_17',['asin',['../namespacenum.html#ab52b48e649186751a17529c5f87133ab',1,'num']]],
+  ['asinh_18',['asinh',['../namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff',1,'num']]],
+  ['atan_19',['atan',['../namespacenum.html#a476916731b6a6d60d69e4d6875035cc1',1,'num']]],
+  ['atanh_20',['atanh',['../namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6',1,'num']]],
+  ['averages_21',['averages',['../namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a',1,'num']]]
 ];

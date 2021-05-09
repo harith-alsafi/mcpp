@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['black_165',['BLACK',['../figure_8hpp.html#ab3ce99db2a96670d6a1cac95647bc6a9',1,'figure.hpp']]],
-  ['blue_166',['BLUE',['../figure_8hpp.html#a9cea3494263cab5fc1500a7edb906881',1,'figure.hpp']]]
+  ['black_270',['BLACK',['../namespaceplt.html#a5c7d47e670c29852a99ba448eb92728c',1,'plt']]],
+  ['blue_271',['BLUE',['../namespaceplt.html#aac5be8319ecf8fa7e639c762327da5e5',1,'plt']]]
 ];

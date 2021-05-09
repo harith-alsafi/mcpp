@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_4cd83b732da33e26972dd88221fcb4f7" kind="dir">
+    <compoundname>includes/calculus</compoundname>
+    <innerfile refid="differential_8hpp">differential.hpp</innerfile>
+    <innerfile refid="integral_8hpp">integral.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/calculus/"/>
+  </compounddef>
+</doxygen>

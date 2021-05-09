@@ -16,150 +16,39 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=197pt]{figure_8hpp__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplt_1_1details}{plt\+::details}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceplt}{plt}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{figure_8hpp_a2f1e54a416ea4398d993a738929886fd}{check\+\_\+param}} (int exp, int act)
-\begin{DoxyCompactList}\small\item\em checks parameter for the functions \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{figure_8hpp_aa000f36a06ae2158bc4edd41c55adcb1}{figure}} (std\+::string title=\char`\"{}Window\char`\"{}, int size=400, std\+::vector$<$ int $>$ background=\mbox{\hyperlink{figure_8hpp_ab05c069643fad7bd37f5a8743e963bf1}{WHITE}})
+void \mbox{\hyperlink{namespaceplt_a294c68129755000491a6b4d6d9160f86}{plt\+::figure}} (std\+::string title=\char`\"{}Window\char`\"{}, int size=400, std\+::vector$<$ int $>$ background=WHITE)
 \begin{DoxyCompactList}\small\item\em initializes figure \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{figure_8hpp_a566251a7d7ecbfac3f8bf4086e4800d7}{plot}} (std\+::vector$<$ float $>$ x, std\+::vector$<$ float $>$ y, std\+::vector$<$ float $>$ xrange=\{-\/5, 5\}, std\+::vector$<$ float $>$ yrange=\{-\/5, 5\}, std\+::vector$<$ int $>$ draw=\mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}, std\+::string legend=\char`\"{}\char`\"{})
+{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{namespaceplt_ae2b77fe07b2b2682fcd9741f2291b0fc}{plt\+::plot}} (std\+::vector$<$ S $>$ x, std\+::vector$<$ S $>$ y, details d)
 \begin{DoxyCompactList}\small\item\em plots values \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{figure_8hpp_a05bbfebfc8fa9d0c870a1ee452fedd27}{point}} (float x, float y, std\+::vector$<$ float $>$ xrange=\{-\/5, 5\}, std\+::vector$<$ float $>$ yrange=\{-\/5, 5\}, std\+::vector$<$ int $>$ draw=\mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}, std\+::string legend=\char`\"{}\char`\"{})
+{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{namespaceplt_ad9fe1a952c304b4aae420d27d4e0b3ff}{plt\+::point}} (std\+::vector$<$ S $>$ x, std\+::vector$<$ S $>$ y, details d)
 \item 
-void \mbox{\hyperlink{figure_8hpp_a7eaee03c99427591d62e2678776fe577}{hline}} (float x, float y, std\+::vector$<$ float $>$ xrange=\{-\/5, 5\}, std\+::vector$<$ float $>$ yrange=\{-\/5, 5\}, std\+::vector$<$ int $>$ draw=\mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}, std\+::string legend=\char`\"{}\char`\"{})
+{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{namespaceplt_a0b1960ae912b93f3b9a1bc4a68b70151}{plt\+::hline}} (std\+::vector$<$ S $>$ x, std\+::vector$<$ S $>$ y, details d)
 \item 
-void \mbox{\hyperlink{figure_8hpp_a59ba8bd56067f6494785715faf8e788b}{vline}} (float x, float y, std\+::vector$<$ float $>$ xrange=\{-\/5, 5\}, std\+::vector$<$ float $>$ yrange=\{-\/5, 5\}, std\+::string legend=\char`\"{}\char`\"{}, std\+::vector$<$ int $>$ draw=\mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}})
+{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{namespaceplt_a7cfc8899deffdc69733c4d9c8550b214}{plt\+::vline}} (std\+::vector$<$ S $>$ x, std\+::vector$<$ S $>$ y, details d)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const std\+::vector$<$ int $>$ \mbox{\hyperlink{figure_8hpp_af2faaa16b9ad3c64b205bd383339cb1a}{RED}} = \{247, 55, 49\}
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceplt_acb44b984f30702f94f617ab2fe1e2a9e}{plt\+::\+RED}} = \{247, 55, 49\}
 \begin{DoxyCompactList}\small\item\em RGB values for colors. \end{DoxyCompactList}\item 
-const std\+::vector$<$ int $>$ \mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}} = \{0, 0, 0\}
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceplt_a5c7d47e670c29852a99ba448eb92728c}{plt\+::\+BLACK}} = \{0, 0, 0\}
 \item 
-const std\+::vector$<$ int $>$ \mbox{\hyperlink{figure_8hpp_a9cea3494263cab5fc1500a7edb906881}{BLUE}} = \{36, 114, 200\}
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceplt_aac5be8319ecf8fa7e639c762327da5e5}{plt\+::\+BLUE}} = \{36, 114, 200\}
 \item 
-const std\+::vector$<$ int $>$ \mbox{\hyperlink{figure_8hpp_a565128c9c8338a2da5ef5e29a1349278}{GREEN}} = \{53, 200, 36\}
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceplt_a3a8b6b3c918b0704b440b8d5195d25f2}{plt\+::\+GREEN}} = \{53, 200, 36\}
 \item 
-const std\+::vector$<$ int $>$ \mbox{\hyperlink{figure_8hpp_ab05c069643fad7bd37f5a8743e963bf1}{WHITE}} = \{255, 255, 255\}
+static std\+::vector$<$ int $>$ \mbox{\hyperlink{namespaceplt_a795bc0629e286558346306b88a5bfb91}{plt\+::\+WHITE}} = \{255, 255, 255\}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{figure_8hpp_a2f1e54a416ea4398d993a738929886fd}\label{figure_8hpp_a2f1e54a416ea4398d993a738929886fd}} 
-\index{figure.hpp@{figure.hpp}!check\_param@{check\_param}}
-\index{check\_param@{check\_param}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{check\_param()}{check\_param()}}
-{\footnotesize\ttfamily void check\+\_\+param (\begin{DoxyParamCaption}\item[{int}]{exp,  }\item[{int}]{act }\end{DoxyParamCaption})}
-
-
-
-checks parameter for the functions 
-
-
-\begin{DoxyParams}{Parameters}
-{\em exp} & \\
-\hline
-{\em act} & \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{figure_8hpp_aa000f36a06ae2158bc4edd41c55adcb1}\label{figure_8hpp_aa000f36a06ae2158bc4edd41c55adcb1}} 
-\index{figure.hpp@{figure.hpp}!figure@{figure}}
-\index{figure@{figure}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{figure()}{figure()}}
-{\footnotesize\ttfamily void figure (\begin{DoxyParamCaption}\item[{std\+::string}]{title = {\ttfamily \char`\"{}Window\char`\"{}},  }\item[{int}]{size = {\ttfamily 400},  }\item[{std\+::vector$<$ int $>$}]{background = {\ttfamily \mbox{\hyperlink{figure_8hpp_ab05c069643fad7bd37f5a8743e963bf1}{WHITE}}} }\end{DoxyParamCaption})}
-
-
-
-initializes figure 
-
-
-\begin{DoxyParams}{Parameters}
-{\em title} & \\
-\hline
-{\em size} & \\
-\hline
-{\em background} & \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{figure_8hpp_a7eaee03c99427591d62e2678776fe577}\label{figure_8hpp_a7eaee03c99427591d62e2678776fe577}} 
-\index{figure.hpp@{figure.hpp}!hline@{hline}}
-\index{hline@{hline}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{hline()}{hline()}}
-{\footnotesize\ttfamily void hline (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ float $>$}]{xrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ float $>$}]{yrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ int $>$}]{draw = {\ttfamily \mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}},  }\item[{std\+::string}]{legend = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{figure_8hpp_a566251a7d7ecbfac3f8bf4086e4800d7}\label{figure_8hpp_a566251a7d7ecbfac3f8bf4086e4800d7}} 
-\index{figure.hpp@{figure.hpp}!plot@{plot}}
-\index{plot@{plot}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{plot()}{plot()}}
-{\footnotesize\ttfamily void plot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{x,  }\item[{std\+::vector$<$ float $>$}]{y,  }\item[{std\+::vector$<$ float $>$}]{xrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ float $>$}]{yrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ int $>$}]{draw = {\ttfamily \mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}},  }\item[{std\+::string}]{legend = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
-
-
-
-plots values 
-
-
-\begin{DoxyParams}{Parameters}
-{\em x} & \\
-\hline
-{\em y} & \\
-\hline
-{\em xrange} & \\
-\hline
-{\em yrange} & \\
-\hline
-{\em draw} & \\
-\hline
-{\em legend} & \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{figure_8hpp_a05bbfebfc8fa9d0c870a1ee452fedd27}\label{figure_8hpp_a05bbfebfc8fa9d0c870a1ee452fedd27}} 
-\index{figure.hpp@{figure.hpp}!point@{point}}
-\index{point@{point}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{point()}{point()}}
-{\footnotesize\ttfamily void point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ float $>$}]{xrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ float $>$}]{yrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ int $>$}]{draw = {\ttfamily \mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}},  }\item[{std\+::string}]{legend = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{figure_8hpp_a59ba8bd56067f6494785715faf8e788b}\label{figure_8hpp_a59ba8bd56067f6494785715faf8e788b}} 
-\index{figure.hpp@{figure.hpp}!vline@{vline}}
-\index{vline@{vline}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{vline()}{vline()}}
-{\footnotesize\ttfamily void vline (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{std\+::vector$<$ float $>$}]{xrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::vector$<$ float $>$}]{yrange = {\ttfamily \{-\/5,~5\}},  }\item[{std\+::string}]{legend = {\ttfamily \char`\"{}\char`\"{}},  }\item[{std\+::vector$<$ int $>$}]{draw = {\ttfamily \mbox{\hyperlink{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}{BLACK}}} }\end{DoxyParamCaption})}
-
-
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}\label{figure_8hpp_ab3ce99db2a96670d6a1cac95647bc6a9}} 
-\index{figure.hpp@{figure.hpp}!BLACK@{BLACK}}
-\index{BLACK@{BLACK}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{BLACK}{BLACK}}
-{\footnotesize\ttfamily const std\+::vector$<$int$>$ BLACK = \{0, 0, 0\}\hspace{0.3cm}{\ttfamily [extern]}}
-
-\mbox{\Hypertarget{figure_8hpp_a9cea3494263cab5fc1500a7edb906881}\label{figure_8hpp_a9cea3494263cab5fc1500a7edb906881}} 
-\index{figure.hpp@{figure.hpp}!BLUE@{BLUE}}
-\index{BLUE@{BLUE}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
-{\footnotesize\ttfamily const std\+::vector$<$int$>$ BLUE = \{36, 114, 200\}\hspace{0.3cm}{\ttfamily [extern]}}
-
-\mbox{\Hypertarget{figure_8hpp_a565128c9c8338a2da5ef5e29a1349278}\label{figure_8hpp_a565128c9c8338a2da5ef5e29a1349278}} 
-\index{figure.hpp@{figure.hpp}!GREEN@{GREEN}}
-\index{GREEN@{GREEN}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
-{\footnotesize\ttfamily const std\+::vector$<$int$>$ GREEN = \{53, 200, 36\}\hspace{0.3cm}{\ttfamily [extern]}}
-
-\mbox{\Hypertarget{figure_8hpp_af2faaa16b9ad3c64b205bd383339cb1a}\label{figure_8hpp_af2faaa16b9ad3c64b205bd383339cb1a}} 
-\index{figure.hpp@{figure.hpp}!RED@{RED}}
-\index{RED@{RED}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{RED}{RED}}
-{\footnotesize\ttfamily const std\+::vector$<$int$>$ RED = \{247, 55, 49\}\hspace{0.3cm}{\ttfamily [extern]}}
-
-
-
-RGB values for colors. 
-
-\mbox{\Hypertarget{figure_8hpp_ab05c069643fad7bd37f5a8743e963bf1}\label{figure_8hpp_ab05c069643fad7bd37f5a8743e963bf1}} 
-\index{figure.hpp@{figure.hpp}!WHITE@{WHITE}}
-\index{WHITE@{WHITE}!figure.hpp@{figure.hpp}}
-\doxysubsubsection{\texorpdfstring{WHITE}{WHITE}}
-{\footnotesize\ttfamily const std\+::vector$<$int$>$ WHITE = \{255, 255, 255\}\hspace{0.3cm}{\ttfamily [extern]}}
-

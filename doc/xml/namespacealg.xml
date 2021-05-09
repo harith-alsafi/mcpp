@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacealg" kind="namespace" language="C++">
+    <compoundname>alg</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacealg_1a15e912afc036d7ca7bd79acf7e3125b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; S &gt;</type>
+        <definition>std::vector&lt;S&gt; alg::sequence</definition>
+        <argsstring>(LAMBDA f, int start, int stop)</argsstring>
+        <name>sequence</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/sequence.hpp" line="5" column="17" bodyfile="includes/algebra/sequence.hpp" bodystart="5" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1a03536e086cbb83c2fac71b22707cfebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto alg::sum</definition>
+        <argsstring>(LAMBDA f, int start, int stop)</argsstring>
+        <name>sum</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/sequence.hpp" line="13" column="10" bodyfile="includes/algebra/sequence.hpp" bodystart="13" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/algebra/sequence.hpp" line="2" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacecalc" kind="namespace" language="C++">
+    <compoundname>calc</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D calc::diff</definition>
+        <argsstring>(LAMBDA f, D x, unsigned int n=1, D dx=D(0.00001))</argsstring>
+        <name>diff</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>dx</declname>
+          <defval>D(0.00001)</defval>
+        </param>
+        <briefdescription>
+<para>Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx at higher orders to avoid them Be aware that the function already approximates <computeroutput>dx</computeroutput> at higher orders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any floating point type (double, float ..) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="22" column="7" bodyfile="includes/calculus/differential.hpp" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1a62f25765745ef5e93bab651eeec6a27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::diff</definition>
+        <argsstring>(std::vector&lt; D &gt; &amp;x, std::vector&lt; D &gt; &amp;y, int n=1)</argsstring>
+        <name>diff</name>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Derivative of 2 std::vectors. It returns a vector of size: <computeroutput>x.size()-n</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any floating point type (double, float ..) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Domain vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Range vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="48" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1ac76968f519762530915c08a852f0d65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::diff</definition>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, int n=1)</argsstring>
+        <name>diff</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Derivative of function with given vector. It returns a vector of size: <computeroutput>x.size()-n</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Domain vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="70" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1ad4da47f019995d52a59ce2802eead032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::taylor</definition>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=(0))</argsstring>
+        <name>taylor</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+          <defval>(0)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="77" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::eular_method</definition>
+        <argsstring>(LAMBDA f, D x0, unsigned int n)</argsstring>
+        <name>eular_method</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="82" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/calculus/differential.hpp" line="5" column="1"/>
+  </compounddef>
+</doxygen>

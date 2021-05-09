@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="differential_8hpp" kind="file" language="C++">
+    <compoundname>differential.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="mcpp_8hpp" local="yes">../mcpp.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>includes/calculus/differential.hpp</label>
+        <link refid="differential_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../mcpp.hpp</label>
+        <link refid="mcpp_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>misc/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+      </node>
+      <node id="5">
+        <label>misc/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+      </node>
+      <node id="6">
+        <label>variables/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vectors/vec.hpp</label>
+        <link refid="vec_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../vectors/vector.hpp</label>
+        <link refid="vector_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>includes/calculus/differential.hpp</label>
+        <link refid="differential_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>includes/mcpp.hpp</label>
+        <link refid="mcpp_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacecalc">calc</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D calc::diff</definition>
+        <argsstring>(LAMBDA f, D x, unsigned int n=1, D dx=D(0.00001))</argsstring>
+        <name>diff</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>dx</declname>
+          <defval>D(0.00001)</defval>
+        </param>
+        <briefdescription>
+<para>Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx at higher orders to avoid them Be aware that the function already approximates <computeroutput>dx</computeroutput> at higher orders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any floating point type (double, float ..) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Step size <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="22" column="7" bodyfile="includes/calculus/differential.hpp" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1a62f25765745ef5e93bab651eeec6a27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::diff</definition>
+        <argsstring>(std::vector&lt; D &gt; &amp;x, std::vector&lt; D &gt; &amp;y, int n=1)</argsstring>
+        <name>diff</name>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Derivative of 2 std::vectors. It returns a vector of size: <computeroutput>x.size()-n</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>any floating point type (double, float ..) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Domain vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Range vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="48" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1ac76968f519762530915c08a852f0d65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::diff</definition>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, int n=1)</argsstring>
+        <name>diff</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Derivative of function with given vector. It returns a vector of size: <computeroutput>x.size()-n</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Domain vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative order </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="70" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1ad4da47f019995d52a59ce2802eead032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::taylor</definition>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=(0))</argsstring>
+        <name>taylor</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+          <defval>(0)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="77" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; calc::eular_method</definition>
+        <argsstring>(LAMBDA f, D x0, unsigned int n)</argsstring>
+        <name>eular_method</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/calculus/differential.hpp" line="82" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacecalc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecalc" kindref="compound">calc</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="22" refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>(LAMBDA<sp/>f,<sp/>D<sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>1,<sp/>D<sp/>dx=D(0.00001)){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BUG<sp/>higher<sp/>orders<sp/>have<sp/>high<sp/>error<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>ans<sp/>=<sp/>D(0.0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n<sp/>&gt;<sp/>2<sp/>&amp;&amp;<sp/>x!=<sp/>D(0)<sp/>&amp;&amp;<sp/>dx<sp/>!=<sp/>D(0.00001)){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dx<sp/>=<sp/>x*sqrt(__DBL_EPSILON__)*1*<ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(10,<sp/>n);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;=<sp/>n;<sp/>k++){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ans<sp/>+=<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>((-1),<sp/>k)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="namespacemsc_1a2af0b5dba48bd5f9d05b9f067c071176" kindref="member">msc::combination</ref>(n,<sp/>k)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*f(x+(n-D(2)*k)*dx);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>D(ans/(<ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>((D(2)*dx),<sp/>n)));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="48" refid="namespacecalc_1a62f25765745ef5e93bab651eeec6a27f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>(std::vector&lt;D&gt;<sp/>&amp;x,<sp/>std::vector&lt;D&gt;<sp/>&amp;y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>1){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/><ref refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kindref="member">num::difference</ref>(x);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/><ref refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kindref="member">num::difference</ref>(y);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>yp<sp/>=<sp/>dy/dx;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xp<sp/>=<sp/><ref refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" kindref="member">num::averages</ref>(x);<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(n<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>yp;<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>(xp,<sp/>yp,<sp/>n-1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA&gt;</highlight></codeline>
+<codeline lineno="70" refid="namespacecalc_1ac76968f519762530915c08a852f0d65b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/>1){</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" kindref="member">num::vec_op</ref>(f,<sp/>x);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>(x,<sp/>y,<sp/>n);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA&gt;</highlight></codeline>
+<codeline lineno="77" refid="namespacecalc_1ad4da47f019995d52a59ce2802eead032" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1ad4da47f019995d52a59ce2802eead032" kindref="member">taylor</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x,<sp/>D<sp/>x0=(0)){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA&gt;</highlight></codeline>
+<codeline lineno="82" refid="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" kindref="member">eular_method</ref>(LAMBDA<sp/>f,<sp/>D<sp/>x0,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n){</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>differentiation<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>Eular<sp/>method<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>power<sp/>series<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>limits<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>more<sp/>testing<sp/>on<sp/>&apos;diff&apos;<sp/>cases<sp/></highlight></codeline>
+    </programlisting>
+    <location file="includes/calculus/differential.hpp"/>
+  </compounddef>
+</doxygen>

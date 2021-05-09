@@ -1,0 +1,37 @@
+\hypertarget{differential_8hpp}{}\doxysection{includes/calculus/differential.hpp File Reference}
+\label{differential_8hpp}\index{includes/calculus/differential.hpp@{includes/calculus/differential.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../mcpp.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for differential.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{differential_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{differential_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacecalc}{calc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename LAMBDA , typename D $>$ }\\D \mbox{\hyperlink{namespacecalc_aef0e9f050ce61e1bf65a446fd15f5356}{calc\+::diff}} (LAMBDA f, D x, unsigned int n=1, D dx=D(0.\+00001))
+\begin{DoxyCompactList}\small\item\em Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx at higher orders to avoid them Be aware that the function already approximates {\ttfamily dx} at higher orders. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a62f25765745ef5e93bab651eeec6a27f}{calc\+::diff}} (std\+::vector$<$ D $>$ \&x, std\+::vector$<$ D $>$ \&y, int n=1)
+\begin{DoxyCompactList}\small\item\em Derivative of 2 std\+::vectors. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ac76968f519762530915c08a852f0d65b}{calc\+::diff}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, int n=1)
+\begin{DoxyCompactList}\small\item\em Derivative of function with given vector. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ad4da47f019995d52a59ce2802eead032}{calc\+::taylor}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, D x0=(0))
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a689d6bfc729bb5513235adb9e1fb55aa}{calc\+::eular\+\_\+method}} (LAMBDA f, D x0, unsigned int n)
+\end{DoxyCompactItemize}

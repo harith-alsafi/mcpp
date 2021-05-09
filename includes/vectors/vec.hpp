@@ -9,31 +9,31 @@ namespace num
     /**
      * @brief overriding default round 
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
      * @param dp 
-     * @return S 
+     * @return D 
      */
-    template<typename S>
-    S round(S &a, int dp = 0){
-        if(a < S(0)){
-            return S((int)(a*pow(10, dp)-.5)/pow(10, dp));
+    template<typename D>
+    D round(D &a, int dp = 0){
+        if(a < D(0)){
+            return D((int)(a*pow(10, dp)-.5)/pow(10, dp));
         }
-        return S((int)(a*pow(10, dp)+.5)/pow(10, dp));
+        return D((int)(a*pow(10, dp)+.5)/pow(10, dp));
     }
 
     /**
      * @brief operation on vectors
      * 
-     * @tparam S 
+     * @tparam D 
      * @tparam LAMBDA 
      * @param f 
      * @param x 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S, typename LAMBDA>
-    std::vector<S> vec_op(LAMBDA f, std::vector<S> &x){
-        std::vector<S> y;
+    template<typename D, typename LAMBDA>
+    std::vector<D> vec_op(LAMBDA f, std::vector<D> &x){
+        std::vector<D> y;
         for(int i = 0; i < x.size(); i++){
             y.push_back(f(x[i]));
         }
@@ -43,13 +43,13 @@ namespace num
     /**
      * @brief difference of elements in vector
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S> 
-    std::vector<S> difference(std::vector<S> &a){
-        std::vector<S> temp;
+    template<typename D> 
+    std::vector<D> difference(std::vector<D> &a){
+        std::vector<D> temp;
         for(int i = 0; i < a.size()-1; i++){
             temp.push_back(a[i+1]-a[i]);
         }
@@ -59,31 +59,31 @@ namespace num
     /**
      * @brief average of elements in vector
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S> 
-    std::vector<S> averages(std::vector<S> &a){
-        std::vector<S> temp;
+    template<typename D> 
+    std::vector<D> averages(std::vector<D> &a){
+        std::vector<D> temp;
         for(int i = 0; i < a.size()-1; i++){
-            temp.push_back((a[i+1]+a[i])*S(0.5));
+            temp.push_back((a[i+1]+a[i])*D(0.5));
         }
         return temp;
     }
 
 
-    template<typename S>
-    std::vector<S> arange(S start, S end, S diff){
-        std::vector<S> temp;
-        for(S i = start; i < end; i+=diff){
+    template<typename D>
+    std::vector<D> arange(D start, D end, D diff){
+        std::vector<D> temp;
+        for(D i = start; i < end; i+=diff){
             temp.push_back(i);
         }
         return temp;
     }
 
-    template<typename S> 
-    std::vector<S> linspace(S start, S end, int count){
+    template<typename D> 
+    std::vector<D> linspace(D start, D end, int count){
 
     }
 
@@ -92,14 +92,14 @@ namespace num
     /**
      * @brief rounding the vector
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
      * @param dp 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S> 
-    std::vector<S> round(std::vector<S> &a, int dp = 0){
-        std::vector<S> b;
+    template<typename D> 
+    std::vector<D> round(std::vector<D> &a, int dp = 0){
+        std::vector<D> b;
         for(int i = 0; i< a.size(); i++){
 
             b.push_back(round(a[i], dp));
@@ -108,34 +108,34 @@ namespace num
         return b;
     }
 
-    template<typename S> 
-    S min(std::vector<S> &a){
-       S mmin = *std::min_element(a.begin(), a.end());
+    template<typename D> 
+    D min(std::vector<D> &a){
+       D mmin = *std::min_element(a.begin(), a.end());
        return mmin; 
     }
 
-    template<typename S> 
-    S max(std::vector<S> &a){
-       S mmax = *std::max_element(a.begin(), a.end());
+    template<typename D> 
+    D max(std::vector<D> &a){
+       D mmax = *std::max_element(a.begin(), a.end());
        return mmax;   
     }
 
-    template<typename S> 
-    std::vector<S> abs(std::vector<S> &a){
+    template<typename D> 
+    std::vector<D> abs(std::vector<D> &a){
 
     }
 
 
 
-    template<typename S>
-    std::vector<S> dot(std::vector<S> a, std::vector<S> b){
+    template<typename D>
+    std::vector<D> dot(std::vector<D> a, std::vector<D> b){
         if(a.size() != b.size()){
             throw std::invalid_argument("Invalid size");
         }
     }
 
-    template<typename S>
-    std::vector<S> cross(std::vector<S> a, std::vector<S> b){
+    template<typename D>
+    std::vector<D> cross(std::vector<D> a, std::vector<D> b){
         if(a.size() != b.size()){
             throw std::invalid_argument("Invalid size");
         } 
@@ -144,14 +144,14 @@ namespace num
     /**
      * @brief vector^b
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
      * @param b 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S>
-    std::vector<S> pow(std::vector<S> a, S b){
-        std::vector<S> temp;
+    template<typename D>
+    std::vector<D> pow(std::vector<D> a, D b){
+        std::vector<D> temp;
         for(int i = 0; i < a.size(); i++){
             temp.push_back(std::pow(a[i], b));
         }
@@ -161,18 +161,18 @@ namespace num
     /**
      * @brief vector^vector
      * 
-     * @tparam S 
+     * @tparam D 
      * @param a 
      * @param b 
-     * @return std::vector<S> 
+     * @return std::vector<D> 
      */
-    template<typename S>
-    std::vector<S> pow(std::vector<S> a, std::vector<S> b){
+    template<typename D>
+    std::vector<D> pow(std::vector<D> a, std::vector<D> b){
         if(a.size() != b.size()){
             throw std::invalid_argument("Invalid size");
         }
-        std::vector<S> temp;
-        S temp2 = 1;
+        std::vector<D> temp;
+        D temp2 = 1;
         for(int i = 0; i < a.size(); i++){
             temp.push_back(std::pow(a[i], b[i]));
         }
@@ -180,110 +180,110 @@ namespace num
     }
 
 // ********************************************************* //
-    template<typename S>
-    std::vector<S> sin(std::vector<S> a){
+    template<typename D>
+    std::vector<D> sin(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> cos(std::vector<S> a){
+    template<typename D>
+    std::vector<D> cos(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> tan(std::vector<S> a){
+    template<typename D>
+    std::vector<D> tan(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> sec(std::vector<S> a){
+    template<typename D>
+    std::vector<D> sec(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> csc(std::vector<S> a){
+    template<typename D>
+    std::vector<D> csc(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> cot(std::vector<S> a){
-
-    }
-
-    template<typename S>
-    std::vector<S> asin(std::vector<S> a){
+    template<typename D>
+    std::vector<D> cot(std::vector<D> a){
 
     }
 
-    template<typename S>
-    std::vector<S> acos(std::vector<S> a){
+    template<typename D>
+    std::vector<D> asin(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> atan(std::vector<S> a){
+
+    template<typename D>
+    std::vector<D> acos(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> asec(std::vector<S> a){
+    template<typename D>
+    std::vector<D> atan(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> acsc(std::vector<S> a){
+    template<typename D>
+    std::vector<D> asec(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> acot(std::vector<S> a){
+    template<typename D>
+    std::vector<D> acsc(std::vector<D> a){
+
+    }
+    template<typename D>
+    std::vector<D> acot(std::vector<D> a){
 
     }
 // ********************************************************* //
-    template<typename S>
-    std::vector<S> sinh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> sinh(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> cosh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> cosh(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> tanh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> tanh(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> sech(std::vector<S> a){
+    template<typename D>
+    std::vector<D> sech(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> csch(std::vector<S> a){
+    template<typename D>
+    std::vector<D> csch(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> coth(std::vector<S> a){
+    template<typename D>
+    std::vector<D> coth(std::vector<D> a){
 
     }
 
-    template<typename S>
-    std::vector<S> asinh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> asinh(std::vector<D> a){
 
     }
     
-    template<typename S>
-    std::vector<S> acosh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> acosh(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> atanh(std::vector<S> a){
+    template<typename D>
+    std::vector<D> atanh(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> asech(std::vector<S> a){
+    template<typename D>
+    std::vector<D> asech(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> acsch(std::vector<S> a){
+    template<typename D>
+    std::vector<D> acsch(std::vector<D> a){
 
     }
-    template<typename S>
-    std::vector<S> acoth(std::vector<S> a){
+    template<typename D>
+    std::vector<D> acoth(std::vector<D> a){
 
     }
 // ********************************************************* //
-    template<typename S>
-    std::vector<S> exp(std::vector<S> a){
+    template<typename D>
+    std::vector<D> exp(std::vector<D> a){
 
     }
 }

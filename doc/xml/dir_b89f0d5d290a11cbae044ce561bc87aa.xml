@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_b89f0d5d290a11cbae044ce561bc87aa" kind="dir">
+    <compoundname>includes/plot</compoundname>
+    <innerfile refid="figure_8hpp">figure.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/plot/"/>
+  </compounddef>
+</doxygen>

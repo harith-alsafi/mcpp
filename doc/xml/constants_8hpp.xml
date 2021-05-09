@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="constants_8hpp" kind="file" language="C++">
+    <compoundname>constants.hpp</compoundname>
+    <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>includes/calculus/differential.hpp</label>
+        <link refid="differential_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>includes/mcpp.hpp</label>
+        <link refid="mcpp_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>includes/misc/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+    </programlisting>
+    <location file="includes/misc/constants.hpp"/>
+  </compounddef>
+</doxygen>

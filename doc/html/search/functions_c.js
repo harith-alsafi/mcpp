@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['t_156',['T',['../classvar_1_1matrix.html#a4e8f5dd6ec8a184286d307c8b3470850',1,'var::matrix']]],
-  ['tan_157',['tan',['../namespacevec.html#ae4dfc0ccf271610ff8b7af6ef0b5298d',1,'vec']]],
-  ['tanh_158',['tanh',['../namespacevec.html#ac055a3b069c35a662bf7415de48076be',1,'vec']]],
-  ['turn_5fto_159',['turn_to',['../classvar_1_1matrix.html#a489b7317be430bf43f1b68700379b8b3',1,'var::matrix']]]
+  ['resize_240',['resize',['../classvar_1_1matrix.html#a9bc064083b67aaab190bd66e7248a5ba',1,'var::matrix']]],
+  ['round_241',['round',['../namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14',1,'num::round(D &amp;a, int dp=0)'],['../namespacenum.html#a4ea9be0979e6fe200ae5bf0247c39777',1,'num::round(std::vector&lt; D &gt; &amp;a, int dp=0)']]],
+  ['row_242',['row',['../classvar_1_1matrix.html#a591c6983a2637275bb1d10d2d2e1e4a5',1,'var::matrix']]],
+  ['row_5fop_243',['row_op',['../classvar_1_1matrix.html#ac87b738aed9ec1933d057b7b3d8eb07c',1,'var::matrix']]],
+  ['rref_244',['rref',['../classvar_1_1matrix.html#a5e7cc7e40124be3bd4a1accfacd68b05',1,'var::matrix']]]
 ];

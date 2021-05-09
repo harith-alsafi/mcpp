@@ -70,34 +70,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="vector_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../misc/constants.hpp&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// ********************** multiply ****************************</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">   15</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">operator *</a>(std::vector&lt;S&gt; first, std::vector&lt;S&gt; second){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"></span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">   15</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">operator *</a>(std::vector&lt;D&gt; first, std::vector&lt;D&gt; second){</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(first.size() != second.size()){</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; first.size(); i++){</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        temp.push_back(first[i]*second[i]);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a2657352d06b50509e151f4f12455c45c">   35</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">operator *</a>(S s, std::vector&lt;S&gt; v){</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a8d0c6a970542e9cdb92d7f6ea9149bc3">   35</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">operator *</a>(D s, std::vector&lt;D&gt; v){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        temp.push_back(s*v[i]);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a43f42dc20a9c5e66fd25f3c7d0393d46">   52</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">operator *</a>(std::vector&lt;S&gt; v, S s){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="vector_8hpp.html#aad1145e88d3f4157c30195cb8cf32ce6">   52</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">operator *</a>(std::vector&lt;D&gt; v, D s){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        temp.push_back(v[i]*s);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
@@ -106,30 +106,30 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// ********************** add ****************************</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">   71</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">operator +</a>(std::vector&lt;S&gt; first, std::vector&lt;S&gt; second){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">   71</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">operator +</a>(std::vector&lt;D&gt; first, std::vector&lt;D&gt; second){</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span>(first.size() != second.size()){</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; first.size(); i++){</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        temp.push_back(first[i]+second[i]);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a579fb98b140622722de336d015430830">   91</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">operator +</a>(S s, std::vector&lt;S&gt; v){</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a99e0f8bb87f96ea7d3311e3e14a81fd7">   91</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">operator +</a>(D s, std::vector&lt;D&gt; v){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        temp.push_back(s+v[i]);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a65a8ef758306671afd672ca853454521">  108</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">operator +</a>(std::vector&lt;S&gt; v, S s){</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a1800f39f30fac1bd70bb7e3c48778c7e">  108</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">operator +</a>(std::vector&lt;D&gt; v, D s){</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        temp.push_back(v[i]+s);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
@@ -138,30 +138,30 @@ $(function() {
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// ********************** subtract ****************************</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">  127</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">operator -</a>(std::vector&lt;S&gt; first, std::vector&lt;S&gt; second){</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">  127</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">operator -</a>(std::vector&lt;D&gt; first, std::vector&lt;D&gt; second){</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span>(first.size() != second.size()){</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; first.size(); i++){</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        temp.push_back(first[i]-second[i]);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a181a6961825ac28ecae5ed9626579ff9">  147</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">operator -</a>(S s, std::vector&lt;S&gt; v){</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a85a78232fcc9c9ac32f09ac130fd2819">  147</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">operator -</a>(D s, std::vector&lt;D&gt; v){</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        temp.push_back(s-v[i]);</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a5f91f3d4c70c2556f32a04e33a7e37a1">  164</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">operator -</a>(std::vector&lt;S&gt; v, S s){</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a4478da2cece9afe7302776c443aa7dba">  164</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">operator -</a>(std::vector&lt;D&gt; v, D s){</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        temp.push_back(v[i]-s);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
@@ -170,30 +170,30 @@ $(function() {
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">// ********************** divide ****************************</span></div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">  183</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">operator /</a>(std::vector&lt;S&gt; first, std::vector&lt;S&gt; second){</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">  183</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">operator /</a>(std::vector&lt;D&gt; first, std::vector&lt;D&gt; second){</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span>(first.size() != second.size()){</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; first.size(); i++){</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        temp.push_back(first[i]/second[i]);</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a3fba912ffc4a952c5c37ebfa9217f826">  203</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">operator /</a>(S s, std::vector&lt;S&gt; v){</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="vector_8hpp.html#af4f1158ea64aa338c2e9375097a70acd">  203</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">operator /</a>(D s, std::vector&lt;D&gt; v){</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        temp.push_back(s/v[i]);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> temp;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="vector_8hpp.html#af3452335cb23fb65dcea08188b45b1d8">  220</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">operator /</a>(std::vector&lt;S&gt; v, S s){</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    std::vector&lt;S&gt; temp;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="vector_8hpp.html#ae83dbef942d60085ba43c0b5c41434cd">  220</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">operator /</a>(std::vector&lt;D&gt; v, D s){</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    std::vector&lt;D&gt; temp;</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        temp.push_back(v[i]/s);</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
@@ -202,35 +202,75 @@ $(function() {
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">// ********************** streams ****************************</span></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507">  239</a></span>&#160;std::ostream&amp; <a class="code" href="vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507">operator &lt;&lt; </a>(std::ostream&amp; out, std::vector&lt;S&gt; &amp;other){</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    out &lt;&lt;<span class="stringliteral">&quot;[&quot;</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0; i &lt; other.size(); i++){</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        out &lt;&lt; other[i];</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">if</span>(other[i] != other[other.size()-1]){</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            out &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    out &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">// ********************** others operators ****************************</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111">  262</a></span>&#160;std::vector&lt;S&gt; <a class="code" href="vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111">operator %</a>(std::vector&lt;S&gt; v, S s){</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    std::vector&lt;S&gt; temp;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        temp.push_back(v[i]%s);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="ttc" id="avector_8hpp_html_a0a03381c0102c0aec2621c4ddc6ac507"><div class="ttname"><a href="vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, std::vector&lt; S &gt; &amp;other)</div><div class="ttdoc">cout &lt;&lt; vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:239</div></div>
-<div class="ttc" id="avector_8hpp_html_a1f2af2897fbef2ecf89f6c0557d643d2"><div class="ttname"><a href="vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2">operator-</a></div><div class="ttdeci">std::vector&lt; S &gt; operator-(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</div><div class="ttdoc">vector-vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:127</div></div>
-<div class="ttc" id="avector_8hpp_html_a33fd3813ede18d668789f42aff28463f"><div class="ttname"><a href="vector_8hpp.html#a33fd3813ede18d668789f42aff28463f">operator+</a></div><div class="ttdeci">std::vector&lt; S &gt; operator+(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</div><div class="ttdoc">vector+vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:71</div></div>
-<div class="ttc" id="avector_8hpp_html_a3d7c652d01b9f3d73980ff28eee775d7"><div class="ttname"><a href="vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7">operator*</a></div><div class="ttdeci">std::vector&lt; S &gt; operator*(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</div><div class="ttdoc">vector*vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:15</div></div>
-<div class="ttc" id="avector_8hpp_html_a953d6d9bb18775d366378ce77b82c3cd"><div class="ttname"><a href="vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd">operator/</a></div><div class="ttdeci">std::vector&lt; S &gt; operator/(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second)</div><div class="ttdoc">vector/vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:183</div></div>
-<div class="ttc" id="avector_8hpp_html_ad729bc1f5d9a7c92357f6748b87c0111"><div class="ttname"><a href="vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111">operator%</a></div><div class="ttdeci">std::vector&lt; S &gt; operator%(std::vector&lt; S &gt; v, S s)</div><div class="ttdoc">vectorvar</div><div class="ttdef"><b>Definition:</b> vector.hpp:262</div></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="vector_8hpp.html#ac9de9b22ed341c1a6f738d05fca64df9">  239</a></span>&#160;std::ostream&amp; <a class="code" href="vector_8hpp.html#ac9de9b22ed341c1a6f738d05fca64df9">operator &lt;&lt; </a>(std::ostream&amp; out, std::vector&lt;D&gt; &amp;other){</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0; i &lt; other.size(); i++){</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        out &lt;&lt; other[i];</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">if</span>(other[i] != other[other.size()-1]){</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            out &lt;&lt; <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="vector_8hpp.html#aac18655429515db3b7ee77a9572397d1">  258</a></span>&#160;std::istream &amp;<a class="code" href="vector_8hpp.html#aac18655429515db3b7ee77a9572397d1">operator &gt;&gt; </a>(std::istream  &amp;input, std::vector&lt;D&gt; &amp;other){</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::string line;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    getline(input, line);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    std::stringstream LINE;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    LINE &lt;&lt; line;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    std::string temp;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    D <a class="code" href="namespacevar.html">var</a>;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">while</span>(LINE.good())</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        getline(LINE, temp, <span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span>(std::stringstream(temp) &gt;&gt; <a class="code" href="namespacevar.html">var</a>){</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            other.push_back(<a class="code" href="namespacevar.html">var</a>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">return</span> input;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">// ********************** others operators ****************************</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="vector_8hpp.html#a46af90d1287f8a71f3a606ceebb4364a">  281</a></span>&#160;std::vector&lt;D&gt; <a class="code" href="vector_8hpp.html#a46af90d1287f8a71f3a606ceebb4364a">operator %</a>(std::vector&lt;D&gt; v, D s){</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; v.size(); i++){</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        temp.push_back(v[i]%s);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">// *********************** comparison ********************************</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="comment">//TODOconditional operators</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="vector_8hpp.html#abcb08117e477166564a87be11b67ee8c">  304</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="vector_8hpp.html#abcb08117e477166564a87be11b67ee8c">operator ==</a>(std::vector&lt;D&gt; a, std::vector&lt;D&gt; b){</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">if</span>(a.size() != b.size()){</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">if</span>(a[i] != b[i]){</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
+<div class="ttc" id="anamespacevar_html"><div class="ttname"><a href="namespacevar.html">var</a></div><div class="ttdef"><b>Definition:</b> matrix.hpp:7</div></div>
+<div class="ttc" id="avector_8hpp_html_a46af90d1287f8a71f3a606ceebb4364a"><div class="ttname"><a href="vector_8hpp.html#a46af90d1287f8a71f3a606ceebb4364a">operator%</a></div><div class="ttdeci">std::vector&lt; D &gt; operator%(std::vector&lt; D &gt; v, D s)</div><div class="ttdef"><b>Definition:</b> vector.hpp:281</div></div>
+<div class="ttc" id="avector_8hpp_html_a66c1ffb561b98e010bb4d7eeb87cc680"><div class="ttname"><a href="vector_8hpp.html#a66c1ffb561b98e010bb4d7eeb87cc680">operator/</a></div><div class="ttdeci">std::vector&lt; D &gt; operator/(std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</div><div class="ttdoc">vector/vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:183</div></div>
+<div class="ttc" id="avector_8hpp_html_aac18655429515db3b7ee77a9572397d1"><div class="ttname"><a href="vector_8hpp.html#aac18655429515db3b7ee77a9572397d1">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;input, std::vector&lt; D &gt; &amp;other)</div><div class="ttdoc">input operator</div><div class="ttdef"><b>Definition:</b> vector.hpp:258</div></div>
+<div class="ttc" id="avector_8hpp_html_abcb08117e477166564a87be11b67ee8c"><div class="ttname"><a href="vector_8hpp.html#abcb08117e477166564a87be11b67ee8c">operator==</a></div><div class="ttdeci">bool operator==(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</div><div class="ttdoc">equal operator</div><div class="ttdef"><b>Definition:</b> vector.hpp:304</div></div>
+<div class="ttc" id="avector_8hpp_html_ac9de9b22ed341c1a6f738d05fca64df9"><div class="ttname"><a href="vector_8hpp.html#ac9de9b22ed341c1a6f738d05fca64df9">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, std::vector&lt; D &gt; &amp;other)</div><div class="ttdoc">cout &lt;&lt; vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:239</div></div>
+<div class="ttc" id="avector_8hpp_html_acdc2becd1843b6274668bf58efd00288"><div class="ttname"><a href="vector_8hpp.html#acdc2becd1843b6274668bf58efd00288">operator*</a></div><div class="ttdeci">std::vector&lt; D &gt; operator*(std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</div><div class="ttdoc">vector*vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:15</div></div>
+<div class="ttc" id="avector_8hpp_html_aec55fe18ce33f079c23c0f40c0995bd9"><div class="ttname"><a href="vector_8hpp.html#aec55fe18ce33f079c23c0f40c0995bd9">operator-</a></div><div class="ttdeci">std::vector&lt; D &gt; operator-(std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</div><div class="ttdoc">vector-vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:127</div></div>
+<div class="ttc" id="avector_8hpp_html_af79d0c930820784c6d2afb33fa43ccfa"><div class="ttname"><a href="vector_8hpp.html#af79d0c930820784c6d2afb33fa43ccfa">operator+</a></div><div class="ttdeci">std::vector&lt; D &gt; operator+(std::vector&lt; D &gt; first, std::vector&lt; D &gt; second)</div><div class="ttdoc">vector+vector</div><div class="ttdef"><b>Definition:</b> vector.hpp:71</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

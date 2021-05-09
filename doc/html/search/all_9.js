@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['insert_5fcol_38',['insert_col',['../classvar_1_1matrix.html#a20b5dfc88ecc9d56d851b705d80cec1f',1,'var::matrix::insert_col(const std::vector&lt; S &gt; &amp;a)'],['../classvar_1_1matrix.html#a95c12872c5a4ce99138deb1ba23fa217',1,'var::matrix::insert_col(int j, const std::vector&lt; S &gt; &amp;a)']]],
-  ['insert_5frow_39',['insert_row',['../classvar_1_1matrix.html#ace847119e6177f7f89f36addf102cd9a',1,'var::matrix::insert_row(const std::vector&lt; S &gt; &amp;a)'],['../classvar_1_1matrix.html#ac4cab370d72d1d82e8c3dee426cfd860',1,'var::matrix::insert_row(int i, const std::vector&lt; S &gt; &amp;a)']]],
-  ['inv_40',['inv',['../classvar_1_1matrix.html#ae7bb56502216d4619cc36da09c1206c2',1,'var::matrix']]],
-  ['is_5fidentity_41',['is_identity',['../classvar_1_1matrix.html#a2d289229461ccfda2819f01414a92e88',1,'var::matrix']]],
-  ['is_5fsquare_42',['is_square',['../classvar_1_1matrix.html#a7c02156a9ccfc1bb6fbbca99343832a3',1,'var::matrix']]]
+  ['insert_5fcol_61',['insert_col',['../classvar_1_1matrix.html#abe7454d75f120bebef0ee5c2c1b262a7',1,'var::matrix']]],
+  ['insert_5frow_62',['insert_row',['../classvar_1_1matrix.html#a3a4469d94dd4fd0235aaf555d3c4cc13',1,'var::matrix']]],
+  ['integral_2ehpp_63',['integral.hpp',['../integral_8hpp.html',1,'']]],
+  ['inv_64',['inv',['../classvar_1_1matrix.html#a8a66138dce5fdb1b27a89349a8fd8539',1,'var::matrix']]],
+  ['is_5fidentity_65',['is_identity',['../classvar_1_1matrix.html#a34a63853e0456af7ba9bbd7e10b4cfc6',1,'var::matrix']]],
+  ['is_5fsquare_66',['is_square',['../classvar_1_1matrix.html#a69ffd8772f87c70f5a8e525b0e4dd71f',1,'var::matrix']]]
 ];

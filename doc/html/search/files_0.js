@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['constants_2ehpp_90',['constants.hpp',['../constants_8hpp.html',1,'']]]
+  ['algebra_2ehpp_149',['algebra.hpp',['../algebra_8hpp.html',1,'']]]
 ];

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structplt_1_1details" kind="struct" language="C++" prot="public">
+    <compoundname>plt::details</compoundname>
+    <includes refid="figure_8hpp" local="yes">figure.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; plt::details::xrange</definition>
+        <argsstring></argsstring>
+        <name>xrange</name>
+        <initializer>= {-5, 5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="20" column="13" bodyfile="includes/plot/figure.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; plt::details::yrange</definition>
+        <argsstring></argsstring>
+        <name>yrange</name>
+        <initializer>= {-5, 5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="21" column="13" bodyfile="includes/plot/figure.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::details::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <initializer>= <ref refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kindref="member">BLACK</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="22" column="13" bodyfile="includes/plot/figure.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string plt::details::legend</definition>
+        <argsstring></argsstring>
+        <name>legend</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="23" column="13" bodyfile="includes/plot/figure.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int plt::details::thickness</definition>
+        <argsstring></argsstring>
+        <name>thickness</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="24" column="5" bodyfile="includes/plot/figure.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>plt::details</label>
+        <link refid="structplt_1_1details"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+legend</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="includes/plot/figure.hpp" line="18" column="1" bodyfile="includes/plot/figure.hpp" bodystart="19" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" prot="public" virt="non-virtual"><scope>plt::details</scope><name>color</name></member>
+      <member refid="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" prot="public" virt="non-virtual"><scope>plt::details</scope><name>legend</name></member>
+      <member refid="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" prot="public" virt="non-virtual"><scope>plt::details</scope><name>thickness</name></member>
+      <member refid="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" prot="public" virt="non-virtual"><scope>plt::details</scope><name>xrange</name></member>
+      <member refid="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" prot="public" virt="non-virtual"><scope>plt::details</scope><name>yrange</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

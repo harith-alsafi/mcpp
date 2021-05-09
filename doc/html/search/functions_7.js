@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['matrix_130',['matrix',['../classvar_1_1matrix.html#aab814423067f424c57f47d56d5010104',1,'var::matrix::matrix(int r, int c)'],['../classvar_1_1matrix.html#af92f50f7e483148242c9b56795ffb66c',1,'var::matrix::matrix()'],['../classvar_1_1matrix.html#afe20fd4dc72ead309e70f218df6625e4',1,'var::matrix::matrix(std::initializer_list&lt; std::initializer_list&lt; S &gt;&gt; a)']]]
+  ['insert_5fcol_209',['insert_col',['../classvar_1_1matrix.html#abe7454d75f120bebef0ee5c2c1b262a7',1,'var::matrix']]],
+  ['insert_5frow_210',['insert_row',['../classvar_1_1matrix.html#a3a4469d94dd4fd0235aaf555d3c4cc13',1,'var::matrix']]],
+  ['inv_211',['inv',['../classvar_1_1matrix.html#a8a66138dce5fdb1b27a89349a8fd8539',1,'var::matrix']]],
+  ['is_5fidentity_212',['is_identity',['../classvar_1_1matrix.html#a34a63853e0456af7ba9bbd7e10b4cfc6',1,'var::matrix']]],
+  ['is_5fsquare_213',['is_square',['../classvar_1_1matrix.html#a69ffd8772f87c70f5a8e525b0e4dd71f',1,'var::matrix']]]
 ];

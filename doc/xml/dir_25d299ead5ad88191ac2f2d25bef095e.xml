@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_25d299ead5ad88191ac2f2d25bef095e" kind="dir">
+    <compoundname>includes/algebra</compoundname>
+    <innerfile refid="algebra_8hpp">algebra.hpp</innerfile>
+    <innerfile refid="sequence_8hpp">sequence.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/algebra/"/>
+  </compounddef>
+</doxygen>

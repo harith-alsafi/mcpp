@@ -6,17 +6,17 @@
 /**
  * @brief vector*vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param first 
  * @param second 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator *(std::vector<S> first, std::vector<S> second){
+template<typename D>
+std::vector<D> operator *(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
         throw std::invalid_argument("Invalid size");
     }
-    std::vector<S> temp;
+    std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
         temp.push_back(first[i]*second[i]);
     }
@@ -26,14 +26,14 @@ std::vector<S> operator *(std::vector<S> first, std::vector<S> second){
 /**
  * @brief var*vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param s 
  * @param v 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator *(S s, std::vector<S> v){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator *(D s, std::vector<D> v){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(s*v[i]);
     }
@@ -43,14 +43,14 @@ std::vector<S> operator *(S s, std::vector<S> v){
 /**
  * @brief vector*var
  * 
- * @tparam S 
+ * @tparam D 
  * @param v 
  * @param s 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator *(std::vector<S> v, S s){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator *(std::vector<D> v, D s){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]*s);
     }
@@ -62,17 +62,17 @@ std::vector<S> operator *(std::vector<S> v, S s){
 /**
  * @brief vector+vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param first 
  * @param second 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator +(std::vector<S> first, std::vector<S> second){
+template<typename D>
+std::vector<D> operator +(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
         throw std::invalid_argument("Invalid size");
     }
-    std::vector<S> temp;
+    std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
         temp.push_back(first[i]+second[i]);
     }
@@ -82,14 +82,14 @@ std::vector<S> operator +(std::vector<S> first, std::vector<S> second){
 /**
  * @brief var+vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param s 
  * @param v 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator +(S s, std::vector<S> v){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator +(D s, std::vector<D> v){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(s+v[i]);
     }
@@ -99,14 +99,14 @@ std::vector<S> operator +(S s, std::vector<S> v){
 /**
  * @brief vector+var
  * 
- * @tparam S 
+ * @tparam D 
  * @param v 
  * @param s 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator +(std::vector<S> v, S s){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator +(std::vector<D> v, D s){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]+s);
     }
@@ -118,17 +118,17 @@ std::vector<S> operator +(std::vector<S> v, S s){
 /**
  * @brief vector-vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param first 
  * @param second 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator -(std::vector<S> first, std::vector<S> second){
+template<typename D>
+std::vector<D> operator -(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
         throw std::invalid_argument("Invalid size");
     }
-    std::vector<S> temp;
+    std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
         temp.push_back(first[i]-second[i]);
     }
@@ -138,14 +138,14 @@ std::vector<S> operator -(std::vector<S> first, std::vector<S> second){
 /**
  * @brief var-vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param s 
  * @param v 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator -(S s, std::vector<S> v){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator -(D s, std::vector<D> v){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(s-v[i]);
     }
@@ -155,14 +155,14 @@ std::vector<S> operator -(S s, std::vector<S> v){
 /**
  * @brief vector-var
  * 
- * @tparam S 
+ * @tparam D 
  * @param v 
  * @param s 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator -(std::vector<S> v, S s){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator -(std::vector<D> v, D s){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]-s);
     }
@@ -174,17 +174,17 @@ std::vector<S> operator -(std::vector<S> v, S s){
 /**
  * @brief vector/vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param first 
  * @param second 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator /(std::vector<S> first, std::vector<S> second){
+template<typename D>
+std::vector<D> operator /(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
         throw std::invalid_argument("Invalid size");
     }
-    std::vector<S> temp;
+    std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
         temp.push_back(first[i]/second[i]);
     }
@@ -194,14 +194,14 @@ std::vector<S> operator /(std::vector<S> first, std::vector<S> second){
 /**
  * @brief var/vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param s 
  * @param v 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator /(S s, std::vector<S> v){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator /(D s, std::vector<D> v){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(s/v[i]);
     }
@@ -211,14 +211,14 @@ std::vector<S> operator /(S s, std::vector<S> v){
 /**
  * @brief vector/var
  * 
- * @tparam S 
+ * @tparam D 
  * @param v 
  * @param s 
- * @return std::vector<S> 
+ * @return std::vector<D> 
  */
-template<typename S>
-std::vector<S> operator /(std::vector<S> v, S s){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator /(std::vector<D> v, D s){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]/s);
     }
@@ -230,13 +230,13 @@ std::vector<S> operator /(std::vector<S> v, S s){
 /**
  * @brief cout << vector
  * 
- * @tparam S 
+ * @tparam D 
  * @param out 
  * @param other 
  * @return std::ostream& 
  */
-template<typename S>
-std::ostream& operator << (std::ostream& out, std::vector<S> &other){
+template<typename D>
+std::ostream& operator << (std::ostream& out, std::vector<D> &other){
     for(int i =0; i < other.size(); i++){
         out << other[i];
         if(other[i] != other[other.size()-1]){
@@ -249,13 +249,13 @@ std::ostream& operator << (std::ostream& out, std::vector<S> &other){
 /**
  * @brief input operator 
  * 
- * @tparam S 
+ * @tparam D 
  * @param input 
  * @param other 
  * @return std::istream& 
  */
-template<typename S>
-std::istream &operator >> (std::istream  &input, std::vector<S> &other){
+template<typename D>
+std::istream &operator >> (std::istream  &input, std::vector<D> &other){
     std::string line;
     getline(input, line);
     
@@ -263,7 +263,7 @@ std::istream &operator >> (std::istream  &input, std::vector<S> &other){
     LINE << line;
 
     std::string temp;
-    S var;
+    D var;
     while(LINE.good())
     {
         getline(LINE, temp, ',');
@@ -277,9 +277,9 @@ std::istream &operator >> (std::istream  &input, std::vector<S> &other){
 // ********************** others operators ****************************
 
 
-template<typename S>
-std::vector<S> operator %(std::vector<S> v, S s){
-    std::vector<S> temp;
+template<typename D>
+std::vector<D> operator %(std::vector<D> v, D s){
+    std::vector<D> temp;
     for(int i = 0; i < v.size(); i++){
         temp.push_back(v[i]%s);
     }
@@ -294,14 +294,14 @@ std::vector<S> operator %(std::vector<S> v, S s){
 /**
  * @brief equal operator
  * 
- * @tparam S 
+ * @tparam D 
  * @param a 
  * @param b 
  * @return true 
  * @return false 
  */
-template<typename S>
-bool operator ==(std::vector<S> a, std::vector<S> b){
+template<typename D>
+bool operator ==(std::vector<D> a, std::vector<D> b){
     if(a.size() != b.size()){
         throw std::invalid_argument("Invalid size");
     }

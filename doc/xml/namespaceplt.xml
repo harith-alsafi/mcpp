@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespaceplt" kind="namespace" language="C++">
+    <compoundname>plt</compoundname>
+    <innerclass refid="structplt_1_1details" prot="public">plt::details</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::RED</definition>
+        <argsstring></argsstring>
+        <name>RED</name>
+        <initializer>= {247, 55, 49}</initializer>
+        <briefdescription>
+<para>RGB values for colors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="12" column="20" bodyfile="includes/plot/figure.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::BLACK</definition>
+        <argsstring></argsstring>
+        <name>BLACK</name>
+        <initializer>= {0, 0, 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="13" column="20" bodyfile="includes/plot/figure.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::BLUE</definition>
+        <argsstring></argsstring>
+        <name>BLUE</name>
+        <initializer>= {36, 114, 200}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="14" column="20" bodyfile="includes/plot/figure.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::GREEN</definition>
+        <argsstring></argsstring>
+        <name>GREEN</name>
+        <initializer>= {53, 200, 36}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="15" column="20" bodyfile="includes/plot/figure.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceplt_1a795bc0629e286558346306b88a5bfb91" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; plt::WHITE</definition>
+        <argsstring></argsstring>
+        <name>WHITE</name>
+        <initializer>= {255, 255, 255}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="16" column="20" bodyfile="includes/plot/figure.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceplt_1a294c68129755000491a6b4d6d9160f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void plt::figure</definition>
+        <argsstring>(std::string title=&quot;Window&quot;, int size=400, std::vector&lt; int &gt; background=WHITE)</argsstring>
+        <name>figure</name>
+        <param>
+          <type>std::string</type>
+          <declname>title</declname>
+          <defval>&quot;Window&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>400</defval>
+        </param>
+        <param>
+          <type>std::vector&lt; int &gt;</type>
+          <declname>background</declname>
+          <defval><ref refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kindref="member">WHITE</ref></defval>
+        </param>
+        <briefdescription>
+<para>initializes figure </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>background</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="34" column="6" declfile="includes/plot/figure.hpp" declline="34" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void plt::plot</definition>
+        <argsstring>(std::vector&lt; S &gt; x, std::vector&lt; S &gt; y, details d)</argsstring>
+        <name>plot</name>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="structplt_1_1details" kindref="compound">details</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>plots values </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xrange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yrange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>draw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>legend</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="51" column="6" declfile="includes/plot/figure.hpp" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void plt::point</definition>
+        <argsstring>(std::vector&lt; S &gt; x, std::vector&lt; S &gt; y, details d)</argsstring>
+        <name>point</name>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="structplt_1_1details" kindref="compound">details</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="58" column="6" declfile="includes/plot/figure.hpp" declline="58" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void plt::hline</definition>
+        <argsstring>(std::vector&lt; S &gt; x, std::vector&lt; S &gt; y, details d)</argsstring>
+        <name>hline</name>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="structplt_1_1details" kindref="compound">details</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="65" column="6" declfile="includes/plot/figure.hpp" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void plt::vline</definition>
+        <argsstring>(std::vector&lt; S &gt; x, std::vector&lt; S &gt; y, details d)</argsstring>
+        <name>vline</name>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; S &gt;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="structplt_1_1details" kindref="compound">details</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/plot/figure.hpp" line="72" column="6" declfile="includes/plot/figure.hpp" declline="72" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/plot/figure.hpp" line="5" column="1"/>
+  </compounddef>
+</doxygen>

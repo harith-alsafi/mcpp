@@ -1,0 +1,123 @@
+\hypertarget{namespacecalc}{}\doxysection{calc Namespace Reference}
+\label{namespacecalc}\index{calc@{calc}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename LAMBDA , typename D $>$ }\\D \mbox{\hyperlink{namespacecalc_aef0e9f050ce61e1bf65a446fd15f5356}{diff}} (LAMBDA f, D x, unsigned int n=1, D dx=D(0.\+00001))
+\begin{DoxyCompactList}\small\item\em Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx at higher orders to avoid them Be aware that the function already approximates {\ttfamily dx} at higher orders. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a62f25765745ef5e93bab651eeec6a27f}{diff}} (std\+::vector$<$ D $>$ \&x, std\+::vector$<$ D $>$ \&y, int n=1)
+\begin{DoxyCompactList}\small\item\em Derivative of 2 std\+::vectors. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ac76968f519762530915c08a852f0d65b}{diff}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, int n=1)
+\begin{DoxyCompactList}\small\item\em Derivative of function with given vector. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ad4da47f019995d52a59ce2802eead032}{taylor}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, D x0=(0))
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a689d6bfc729bb5513235adb9e1fb55aa}{eular\+\_\+method}} (LAMBDA f, D x0, unsigned int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecalc_aef0e9f050ce61e1bf65a446fd15f5356}\label{namespacecalc_aef0e9f050ce61e1bf65a446fd15f5356}} 
+\index{calc@{calc}!diff@{diff}}
+\index{diff@{diff}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename LAMBDA , typename D $>$ \\
+D calc\+::diff (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x,  }\item[{unsigned int}]{n = {\ttfamily 1},  }\item[{D}]{dx = {\ttfamily D(0.00001)} }\end{DoxyParamCaption})}
+
+
+
+Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx at higher orders to avoid them Be aware that the function already approximates {\ttfamily dx} at higher orders. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em LAMBDA} & std\+::function \\
+\hline
+{\em D} & any floating point type (double, float ..) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Function \\
+\hline
+{\em x} & Point \\
+\hline
+{\em n} & Derivative order \\
+\hline
+{\em dx} & Step size ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecalc_ac76968f519762530915c08a852f0d65b}\label{namespacecalc_ac76968f519762530915c08a852f0d65b}} 
+\index{calc@{calc}!diff@{diff}}
+\index{diff@{diff}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ calc\+::diff (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{std\+::vector$<$ D $>$ \&}]{x,  }\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Derivative of function with given vector. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+{\em LAMBDA} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Function \\
+\hline
+{\em x} & Domain vector \\
+\hline
+{\em n} & Derivative order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecalc_a62f25765745ef5e93bab651eeec6a27f}\label{namespacecalc_a62f25765745ef5e93bab651eeec6a27f}} 
+\index{calc@{calc}!diff@{diff}}
+\index{diff@{diff}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{diff()}{diff()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ calc\+::diff (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{x,  }\item[{std\+::vector$<$ D $>$ \&}]{y,  }\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Derivative of 2 std\+::vectors. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & any floating point type (double, float ..) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Domain vector \\
+\hline
+{\em y} & Range vector \\
+\hline
+{\em n} & Derivative order \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacecalc_a689d6bfc729bb5513235adb9e1fb55aa}\label{namespacecalc_a689d6bfc729bb5513235adb9e1fb55aa}} 
+\index{calc@{calc}!eular\_method@{eular\_method}}
+\index{eular\_method@{eular\_method}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{eular\_method()}{eular\_method()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ calc\+::eular\+\_\+method (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x0,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacecalc_ad4da47f019995d52a59ce2802eead032}\label{namespacecalc_ad4da47f019995d52a59ce2802eead032}} 
+\index{calc@{calc}!taylor@{taylor}}
+\index{taylor@{taylor}!calc@{calc}}
+\doxysubsubsection{\texorpdfstring{taylor()}{taylor()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ calc\+::taylor (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{std\+::vector$<$ D $>$ \&}]{x,  }\item[{D}]{x0 = {\ttfamily (0)} }\end{DoxyParamCaption})}
+

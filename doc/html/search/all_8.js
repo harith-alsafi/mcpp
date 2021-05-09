@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hline_37',['hline',['../figure_8hpp.html#a7eaee03c99427591d62e2678776fe577',1,'figure.hpp']]]
+  ['hline_60',['hline',['../namespaceplt.html#a0b1960ae912b93f3b9a1bc4a68b70151',1,'plt']]]
 ];

@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['operator_25_46',['operator%',['../vector_8hpp.html#ad729bc1f5d9a7c92357f6748b87c0111',1,'vector.hpp']]],
-  ['operator_2a_47',['operator*',['../classvar_1_1matrix.html#a93cd670b3f0b97b3e0c09e67a705e747',1,'var::matrix::operator*()'],['../vector_8hpp.html#a43f42dc20a9c5e66fd25f3c7d0393d46',1,'operator*(std::vector&lt; S &gt; v, S s):&#160;vector.hpp'],['../vector_8hpp.html#a2657352d06b50509e151f4f12455c45c',1,'operator*(S s, std::vector&lt; S &gt; v):&#160;vector.hpp'],['../vector_8hpp.html#a3d7c652d01b9f3d73980ff28eee775d7',1,'operator*(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second):&#160;vector.hpp']]],
-  ['operator_2b_48',['operator+',['../classvar_1_1matrix.html#a6d4152ac71930cd9e6ed976a0896f8a1',1,'var::matrix::operator+()'],['../vector_8hpp.html#a65a8ef758306671afd672ca853454521',1,'operator+(std::vector&lt; S &gt; v, S s):&#160;vector.hpp'],['../vector_8hpp.html#a579fb98b140622722de336d015430830',1,'operator+(S s, std::vector&lt; S &gt; v):&#160;vector.hpp'],['../vector_8hpp.html#a33fd3813ede18d668789f42aff28463f',1,'operator+(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second):&#160;vector.hpp']]],
-  ['operator_2d_49',['operator-',['../classvar_1_1matrix.html#aafd17859b9edb45d7036da196b768c02',1,'var::matrix::operator-()'],['../vector_8hpp.html#a1f2af2897fbef2ecf89f6c0557d643d2',1,'operator-(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second):&#160;vector.hpp'],['../vector_8hpp.html#a181a6961825ac28ecae5ed9626579ff9',1,'operator-(S s, std::vector&lt; S &gt; v):&#160;vector.hpp'],['../vector_8hpp.html#a5f91f3d4c70c2556f32a04e33a7e37a1',1,'operator-(std::vector&lt; S &gt; v, S s):&#160;vector.hpp']]],
-  ['operator_2f_50',['operator/',['../classvar_1_1matrix.html#a857c8dfada40d0d3f21d5afe91ed787f',1,'var::matrix::operator/()'],['../vector_8hpp.html#a953d6d9bb18775d366378ce77b82c3cd',1,'operator/(std::vector&lt; S &gt; first, std::vector&lt; S &gt; second):&#160;vector.hpp'],['../vector_8hpp.html#a3fba912ffc4a952c5c37ebfa9217f826',1,'operator/(S s, std::vector&lt; S &gt; v):&#160;vector.hpp'],['../vector_8hpp.html#af3452335cb23fb65dcea08188b45b1d8',1,'operator/(std::vector&lt; S &gt; v, S s):&#160;vector.hpp']]],
-  ['operator_3c_3c_51',['operator&lt;&lt;',['../classvar_1_1matrix.html#a78e6d80e0013a91eff88db4ab4b92aaa',1,'var::matrix::operator&lt;&lt;()'],['../vector_8hpp.html#a0a03381c0102c0aec2621c4ddc6ac507',1,'operator&lt;&lt;():&#160;vector.hpp']]],
-  ['operator_5b_5d_52',['operator[]',['../classvar_1_1matrix.html#a095bf7c645d2d5f56bc037cb22414845',1,'var::matrix::operator[]()'],['../classvar_1_1matrix_1_1Row.html#ad1282c5f3c518bbca22b0516af3e4d01',1,'var::matrix::Row::operator[]()']]]
+  ['m_69',['M',['../classvar_1_1matrix.html#aeb8bdaf174065f964bdd63e3c55ec5e2',1,'var::matrix']]],
+  ['matrix_70',['matrix',['../classvar_1_1matrix.html#aaf88fb07ffd608510c2c834a925f3926',1,'var::matrix::matrix(int r, int c)'],['../classvar_1_1matrix.html#a1060b67ddd058f180bd4b1f304562f64',1,'var::matrix::matrix()'],['../classvar_1_1matrix.html#a4b93fcfa4d64d096fd185ff1004256eb',1,'var::matrix::matrix(std::initializer_list&lt; std::initializer_list&lt; D &gt;&gt; a)'],['../classvar_1_1matrix.html',1,'var::matrix&lt; D &gt;']]],
+  ['matrix_2ehpp_71',['matrix.hpp',['../matrix_8hpp.html',1,'']]],
+  ['max_72',['max',['../namespacenum.html#a8f987030b7d268f10c83e46a46f871e5',1,'num']]],
+  ['mcpp_2ehpp_73',['mcpp.hpp',['../mcpp_8hpp.html',1,'']]],
+  ['min_74',['min',['../namespacenum.html#a69628dc5ff1ff58eed7efce55ca62f60',1,'num']]],
+  ['misc_2ehpp_75',['misc.hpp',['../misc_8hpp.html',1,'']]],
+  ['msc_76',['msc',['../namespacemsc.html',1,'']]]
 ];

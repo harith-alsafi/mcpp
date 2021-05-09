@@ -69,181 +69,282 @@ $(function() {
 <div class="title">vec.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="vec_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacevec.html">    3</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacevec.html">vec</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="namespacevec.html#a6011e3000fa80559c3788218b1169c43">    6</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a6011e3000fa80559c3788218b1169c43">dot</a>(std::vector&lt;S&gt; a, std::vector&lt;S&gt; b){</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">if</span>(a.size() != b.size()){</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespacevec.html#a88ce086de33d4b3ef7a0a75eb7b7ca45">   13</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a88ce086de33d4b3ef7a0a75eb7b7ca45">cross</a>(std::vector&lt;S&gt; a, std::vector&lt;S&gt; b){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">if</span>(a.size() != b.size()){</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        } </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacevec.html#ae4414b612326f8d903e2cd1e5ac4e4b2">   20</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ae4414b612326f8d903e2cd1e5ac4e4b2">pow</a>(std::vector&lt;S&gt; a, S b){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;S&gt; temp;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        S temp2 = 1;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            temp.push_back(<a class="code" href="namespacevec.html#ae3cc5825ed6d31205b0b63f83ba39a14">std::pow</a>(a[i], b));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacevec.html#ae3cc5825ed6d31205b0b63f83ba39a14">   30</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ae4414b612326f8d903e2cd1e5ac4e4b2">pow</a>(std::vector&lt;S&gt; a, std::vector&lt;S&gt; b){</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::vector&lt;S&gt; temp;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        S temp2 = 1;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            temp.push_back(<a class="code" href="namespacevec.html#ae3cc5825ed6d31205b0b63f83ba39a14">std::pow</a>(a[i], b[i]));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> temp;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// ********************************************************* //</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacevec.html#adee371ba044345453f30a91c5a4c1d69">   40</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#adee371ba044345453f30a91c5a4c1d69">sin</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespacevec.html#a6c4612b11a3e28521643058b1d258540">   44</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a6c4612b11a3e28521643058b1d258540">cos</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacevec.html#ae4dfc0ccf271610ff8b7af6ef0b5298d">   48</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ae4dfc0ccf271610ff8b7af6ef0b5298d">tan</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacevec.html#a13c158ee69b7873e829a1a3c14c22d90">   52</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a13c158ee69b7873e829a1a3c14c22d90">sec</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespacevec.html#ac8d81c6fa153833bfe45396f97c07219">   56</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ac8d81c6fa153833bfe45396f97c07219">csc</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="namespacevec.html#a867fbe61cd6eaf971365ef9ec2ff061e">   60</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a867fbe61cd6eaf971365ef9ec2ff061e">cot</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacevec.html#aff3e8bfb1a1f1aff45ce5f2e3611573b">   65</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#aff3e8bfb1a1f1aff45ce5f2e3611573b">asin</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="namespacevec.html#a1ca57d252015a35ac70b8886ddd0d773">   70</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a1ca57d252015a35ac70b8886ddd0d773">acos</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacevec.html#af21df674138372609bb78dff7494d2a2">   74</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#af21df674138372609bb78dff7494d2a2">atan</a>(std::vector&lt;S&gt; a){</div>
+<a href="vec_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespacenum.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacenum.html">num</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14">   18</a></span>&#160;    D <a class="code" href="namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14">round</a>(D &amp;a, <span class="keywordtype">int</span> dp = 0){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>(a &lt; D(0)){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">return</span> D((<span class="keywordtype">int</span>)(a*<a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(10, dp)-.5)/<a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(10, dp));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> D((<span class="keywordtype">int</span>)(a*<a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(10, dp)+.5)/<a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(10, dp));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D, <span class="keyword">typename</span> LAMBDA&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacenum.html#a4e9fe88d96692c33fe86018dae231540">   35</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a4e9fe88d96692c33fe86018dae231540">vec_op</a>(LAMBDA f, std::vector&lt;D&gt; &amp;x){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::vector&lt;D&gt; y;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; x.size(); i++){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            y.push_back(f(x[i]));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> y;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacenum.html#a228799bfc044b445a089f64f8565f285">   51</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a228799bfc044b445a089f64f8565f285">difference</a>(std::vector&lt;D&gt; &amp;a){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size()-1; i++){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            temp.push_back(a[i+1]-a[i]);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a">   67</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a">averages</a>(std::vector&lt;D&gt; &amp;a){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size()-1; i++){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            temp.push_back((a[i+1]+a[i])*D(0.5));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacevec.html#aa28116e32cd18da5d2bcb3c2408fcd7c">   78</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#aa28116e32cd18da5d2bcb3c2408fcd7c">asec</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespacevec.html#a721070ac14eceeb2852d94b70bd78a86">   82</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a721070ac14eceeb2852d94b70bd78a86">acsc</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacevec.html#ad23d4d9612e8f18d2ad001595cca845b">   86</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ad23d4d9612e8f18d2ad001595cca845b">acot</a>(std::vector&lt;S&gt; a){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="namespacenum.html#a501f44095bdd298826bc4fa20a72abfe">   77</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a501f44095bdd298826bc4fa20a72abfe">arange</a>(D start, D end, D <a class="code" href="namespacecalc.html#aef0e9f050ce61e1bf65a446fd15f5356">diff</a>){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">for</span>(D i = start; i &lt; end; i+=<a class="code" href="namespacecalc.html#aef0e9f050ce61e1bf65a446fd15f5356">diff</a>){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            temp.push_back(i);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacenum.html#acf7c26ead7bac86ba3b8d0bc1da19dac">   86</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#acf7c26ead7bac86ba3b8d0bc1da19dac">linspace</a>(D start, D end, <span class="keywordtype">int</span> count){</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// ********************************************************* //</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespacevec.html#a2d89612a9c63dac96683f84384633908">   91</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a2d89612a9c63dac96683f84384633908">sinh</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="namespacevec.html#ace7cbd4c49ee6659e2031d19584f8eba">   95</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ace7cbd4c49ee6659e2031d19584f8eba">cosh</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="namespacevec.html#ac055a3b069c35a662bf7415de48076be">   99</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ac055a3b069c35a662bf7415de48076be">tanh</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="namespacevec.html#aa3d2feaf32377c20065457c38e79adc4">  103</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#aa3d2feaf32377c20065457c38e79adc4">sech</a>(std::vector&lt;S&gt; a){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespacenum.html#a4ea9be0979e6fe200ae5bf0247c39777">  101</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14">round</a>(std::vector&lt;D&gt; &amp;a, <span class="keywordtype">int</span> dp = 0){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::vector&lt;D&gt; b;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; a.size(); i++){</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespacevec.html#ae1f61e4710b1ab91c88fdf0867a7f09f">  107</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ae1f61e4710b1ab91c88fdf0867a7f09f">csch</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            b.push_back(<a class="code" href="namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14">round</a>(a[i], dp));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> b;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="namespacevec.html#afb6c405f2e5272e296ed9de5d836a174">  111</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#afb6c405f2e5272e296ed9de5d836a174">coth</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="namespacevec.html#ac9ba4d53adb07923408900315cc8442d">  116</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ac9ba4d53adb07923408900315cc8442d">asinh</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespacevec.html#aa6279722ecd9178e1304616c0a11a5a7">  121</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#aa6279722ecd9178e1304616c0a11a5a7">acosh</a>(std::vector&lt;S&gt; a){</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="namespacenum.html#a69628dc5ff1ff58eed7efce55ca62f60">  112</a></span>&#160;    D <a class="code" href="namespacenum.html#a69628dc5ff1ff58eed7efce55ca62f60">min</a>(std::vector&lt;D&gt; &amp;a){</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;       D mmin = *std::min_element(a.begin(), a.end());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;       <span class="keywordflow">return</span> mmin; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="namespacenum.html#a8f987030b7d268f10c83e46a46f871e5">  118</a></span>&#160;    D <a class="code" href="namespacenum.html#a8f987030b7d268f10c83e46a46f871e5">max</a>(std::vector&lt;D&gt; &amp;a){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       D mmax = *std::max_element(a.begin(), a.end());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;       <span class="keywordflow">return</span> mmax;   </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="namespacevec.html#ae7a70a2d1036954ed0d248698308f0e8">  125</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ae7a70a2d1036954ed0d248698308f0e8">atanh</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="namespacevec.html#ad6dc0aebbfc76c8cf44a9e1b911f4ab9">  129</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#ad6dc0aebbfc76c8cf44a9e1b911f4ab9">asech</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="namespacevec.html#a31899b21a65f9611709816af396b21ff">  133</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a31899b21a65f9611709816af396b21ff">acsch</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="namespacenum.html#a7bd48ec1618b10c1b866221a14dbd8b3">  124</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a7bd48ec1618b10c1b866221a14dbd8b3">abs</a>(std::vector&lt;D&gt; &amp;a){</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespacenum.html#a50cbc2cd44b4ab04be4c6844e9dcf3fc">  131</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a50cbc2cd44b4ab04be4c6844e9dcf3fc">dot</a>(std::vector&lt;D&gt; a, std::vector&lt;D&gt; b){</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>(a.size() != b.size()){</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="namespacevec.html#a38320dda780c06af11f4113694c460f8">  137</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a38320dda780c06af11f4113694c460f8">acoth</a>(std::vector&lt;S&gt; a){</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">// ********************************************************* //</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> S&gt;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="namespacevec.html#a3806c405c43cd4f2d76c31962d01aca3">  142</a></span>&#160;    std::vector&lt;S&gt; <a class="code" href="namespacevec.html#a3806c405c43cd4f2d76c31962d01aca3">exp</a>(std::vector&lt;S&gt; a){</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="namespacenum.html#aacae58f5a14d91046e306090b6aeabcf">  138</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#aacae58f5a14d91046e306090b6aeabcf">cross</a>(std::vector&lt;D&gt; a, std::vector&lt;D&gt; b){</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span>(a.size() != b.size()){</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        } </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
-<div class="ttc" id="anamespacevec_html"><div class="ttname"><a href="namespacevec.html">vec</a></div><div class="ttdef"><b>Definition:</b> vec.hpp:4</div></div>
-<div class="ttc" id="anamespacevec_html_a13c158ee69b7873e829a1a3c14c22d90"><div class="ttname"><a href="namespacevec.html#a13c158ee69b7873e829a1a3c14c22d90">vec::sec</a></div><div class="ttdeci">std::vector&lt; S &gt; sec(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:52</div></div>
-<div class="ttc" id="anamespacevec_html_a1ca57d252015a35ac70b8886ddd0d773"><div class="ttname"><a href="namespacevec.html#a1ca57d252015a35ac70b8886ddd0d773">vec::acos</a></div><div class="ttdeci">std::vector&lt; S &gt; acos(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:70</div></div>
-<div class="ttc" id="anamespacevec_html_a2d89612a9c63dac96683f84384633908"><div class="ttname"><a href="namespacevec.html#a2d89612a9c63dac96683f84384633908">vec::sinh</a></div><div class="ttdeci">std::vector&lt; S &gt; sinh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:91</div></div>
-<div class="ttc" id="anamespacevec_html_a31899b21a65f9611709816af396b21ff"><div class="ttname"><a href="namespacevec.html#a31899b21a65f9611709816af396b21ff">vec::acsch</a></div><div class="ttdeci">std::vector&lt; S &gt; acsch(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:133</div></div>
-<div class="ttc" id="anamespacevec_html_a3806c405c43cd4f2d76c31962d01aca3"><div class="ttname"><a href="namespacevec.html#a3806c405c43cd4f2d76c31962d01aca3">vec::exp</a></div><div class="ttdeci">std::vector&lt; S &gt; exp(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:142</div></div>
-<div class="ttc" id="anamespacevec_html_a38320dda780c06af11f4113694c460f8"><div class="ttname"><a href="namespacevec.html#a38320dda780c06af11f4113694c460f8">vec::acoth</a></div><div class="ttdeci">std::vector&lt; S &gt; acoth(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:137</div></div>
-<div class="ttc" id="anamespacevec_html_a6011e3000fa80559c3788218b1169c43"><div class="ttname"><a href="namespacevec.html#a6011e3000fa80559c3788218b1169c43">vec::dot</a></div><div class="ttdeci">std::vector&lt; S &gt; dot(std::vector&lt; S &gt; a, std::vector&lt; S &gt; b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:6</div></div>
-<div class="ttc" id="anamespacevec_html_a6c4612b11a3e28521643058b1d258540"><div class="ttname"><a href="namespacevec.html#a6c4612b11a3e28521643058b1d258540">vec::cos</a></div><div class="ttdeci">std::vector&lt; S &gt; cos(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:44</div></div>
-<div class="ttc" id="anamespacevec_html_a721070ac14eceeb2852d94b70bd78a86"><div class="ttname"><a href="namespacevec.html#a721070ac14eceeb2852d94b70bd78a86">vec::acsc</a></div><div class="ttdeci">std::vector&lt; S &gt; acsc(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:82</div></div>
-<div class="ttc" id="anamespacevec_html_a867fbe61cd6eaf971365ef9ec2ff061e"><div class="ttname"><a href="namespacevec.html#a867fbe61cd6eaf971365ef9ec2ff061e">vec::cot</a></div><div class="ttdeci">std::vector&lt; S &gt; cot(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:60</div></div>
-<div class="ttc" id="anamespacevec_html_a88ce086de33d4b3ef7a0a75eb7b7ca45"><div class="ttname"><a href="namespacevec.html#a88ce086de33d4b3ef7a0a75eb7b7ca45">vec::cross</a></div><div class="ttdeci">std::vector&lt; S &gt; cross(std::vector&lt; S &gt; a, std::vector&lt; S &gt; b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:13</div></div>
-<div class="ttc" id="anamespacevec_html_aa28116e32cd18da5d2bcb3c2408fcd7c"><div class="ttname"><a href="namespacevec.html#aa28116e32cd18da5d2bcb3c2408fcd7c">vec::asec</a></div><div class="ttdeci">std::vector&lt; S &gt; asec(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:78</div></div>
-<div class="ttc" id="anamespacevec_html_aa3d2feaf32377c20065457c38e79adc4"><div class="ttname"><a href="namespacevec.html#aa3d2feaf32377c20065457c38e79adc4">vec::sech</a></div><div class="ttdeci">std::vector&lt; S &gt; sech(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:103</div></div>
-<div class="ttc" id="anamespacevec_html_aa6279722ecd9178e1304616c0a11a5a7"><div class="ttname"><a href="namespacevec.html#aa6279722ecd9178e1304616c0a11a5a7">vec::acosh</a></div><div class="ttdeci">std::vector&lt; S &gt; acosh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:121</div></div>
-<div class="ttc" id="anamespacevec_html_ac055a3b069c35a662bf7415de48076be"><div class="ttname"><a href="namespacevec.html#ac055a3b069c35a662bf7415de48076be">vec::tanh</a></div><div class="ttdeci">std::vector&lt; S &gt; tanh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:99</div></div>
-<div class="ttc" id="anamespacevec_html_ac8d81c6fa153833bfe45396f97c07219"><div class="ttname"><a href="namespacevec.html#ac8d81c6fa153833bfe45396f97c07219">vec::csc</a></div><div class="ttdeci">std::vector&lt; S &gt; csc(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:56</div></div>
-<div class="ttc" id="anamespacevec_html_ac9ba4d53adb07923408900315cc8442d"><div class="ttname"><a href="namespacevec.html#ac9ba4d53adb07923408900315cc8442d">vec::asinh</a></div><div class="ttdeci">std::vector&lt; S &gt; asinh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:116</div></div>
-<div class="ttc" id="anamespacevec_html_ace7cbd4c49ee6659e2031d19584f8eba"><div class="ttname"><a href="namespacevec.html#ace7cbd4c49ee6659e2031d19584f8eba">vec::cosh</a></div><div class="ttdeci">std::vector&lt; S &gt; cosh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:95</div></div>
-<div class="ttc" id="anamespacevec_html_ad23d4d9612e8f18d2ad001595cca845b"><div class="ttname"><a href="namespacevec.html#ad23d4d9612e8f18d2ad001595cca845b">vec::acot</a></div><div class="ttdeci">std::vector&lt; S &gt; acot(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:86</div></div>
-<div class="ttc" id="anamespacevec_html_ad6dc0aebbfc76c8cf44a9e1b911f4ab9"><div class="ttname"><a href="namespacevec.html#ad6dc0aebbfc76c8cf44a9e1b911f4ab9">vec::asech</a></div><div class="ttdeci">std::vector&lt; S &gt; asech(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:129</div></div>
-<div class="ttc" id="anamespacevec_html_adee371ba044345453f30a91c5a4c1d69"><div class="ttname"><a href="namespacevec.html#adee371ba044345453f30a91c5a4c1d69">vec::sin</a></div><div class="ttdeci">std::vector&lt; S &gt; sin(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:40</div></div>
-<div class="ttc" id="anamespacevec_html_ae1f61e4710b1ab91c88fdf0867a7f09f"><div class="ttname"><a href="namespacevec.html#ae1f61e4710b1ab91c88fdf0867a7f09f">vec::csch</a></div><div class="ttdeci">std::vector&lt; S &gt; csch(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:107</div></div>
-<div class="ttc" id="anamespacevec_html_ae3cc5825ed6d31205b0b63f83ba39a14"><div class="ttname"><a href="namespacevec.html#ae3cc5825ed6d31205b0b63f83ba39a14">vec::pow</a></div><div class="ttdeci">std::vector&lt; S &gt; pow(std::vector&lt; S &gt; a, std::vector&lt; S &gt; b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:30</div></div>
-<div class="ttc" id="anamespacevec_html_ae4414b612326f8d903e2cd1e5ac4e4b2"><div class="ttname"><a href="namespacevec.html#ae4414b612326f8d903e2cd1e5ac4e4b2">vec::pow</a></div><div class="ttdeci">std::vector&lt; S &gt; pow(std::vector&lt; S &gt; a, S b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:20</div></div>
-<div class="ttc" id="anamespacevec_html_ae4dfc0ccf271610ff8b7af6ef0b5298d"><div class="ttname"><a href="namespacevec.html#ae4dfc0ccf271610ff8b7af6ef0b5298d">vec::tan</a></div><div class="ttdeci">std::vector&lt; S &gt; tan(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:48</div></div>
-<div class="ttc" id="anamespacevec_html_ae7a70a2d1036954ed0d248698308f0e8"><div class="ttname"><a href="namespacevec.html#ae7a70a2d1036954ed0d248698308f0e8">vec::atanh</a></div><div class="ttdeci">std::vector&lt; S &gt; atanh(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:125</div></div>
-<div class="ttc" id="anamespacevec_html_af21df674138372609bb78dff7494d2a2"><div class="ttname"><a href="namespacevec.html#af21df674138372609bb78dff7494d2a2">vec::atan</a></div><div class="ttdeci">std::vector&lt; S &gt; atan(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:74</div></div>
-<div class="ttc" id="anamespacevec_html_afb6c405f2e5272e296ed9de5d836a174"><div class="ttname"><a href="namespacevec.html#afb6c405f2e5272e296ed9de5d836a174">vec::coth</a></div><div class="ttdeci">std::vector&lt; S &gt; coth(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:111</div></div>
-<div class="ttc" id="anamespacevec_html_aff3e8bfb1a1f1aff45ce5f2e3611573b"><div class="ttname"><a href="namespacevec.html#aff3e8bfb1a1f1aff45ce5f2e3611573b">vec::asin</a></div><div class="ttdeci">std::vector&lt; S &gt; asin(std::vector&lt; S &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:65</div></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">  153</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(std::vector&lt;D&gt; a, D b){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            temp.push_back(<a class="code" href="namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5">std::pow</a>(a[i], b));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5">  170</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">pow</a>(std::vector&lt;D&gt; a, std::vector&lt;D&gt; b){</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span>(a.size() != b.size()){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Invalid size&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        std::vector&lt;D&gt; temp;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        D temp2 = 1;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; a.size(); i++){</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            temp.push_back(<a class="code" href="namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5">std::pow</a>(a[i], b[i]));</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> temp;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="comment">// ********************************************************* //</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="namespacenum.html#aa800b330d5a24e8b0c465f29ff49fd75">  184</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#aa800b330d5a24e8b0c465f29ff49fd75">sin</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="namespacenum.html#a6c5997363da941b88d40a120ddfb7741">  188</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a6c5997363da941b88d40a120ddfb7741">cos</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="namespacenum.html#a7f6f11d36d6e7bd6ebd6f8a3866ce8c1">  192</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a7f6f11d36d6e7bd6ebd6f8a3866ce8c1">tan</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="namespacenum.html#a47b7803c68e12e4f8b9477ad5927e98d">  196</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a47b7803c68e12e4f8b9477ad5927e98d">sec</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="namespacenum.html#a4921bef257bd45d8d032704b7ac767ca">  200</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a4921bef257bd45d8d032704b7ac767ca">csc</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="namespacenum.html#ae8f31915ee4e6223b5d1fb9e289d1913">  204</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ae8f31915ee4e6223b5d1fb9e289d1913">cot</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="namespacenum.html#ab52b48e649186751a17529c5f87133ab">  209</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ab52b48e649186751a17529c5f87133ab">asin</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="namespacenum.html#ae4e2ef08ec3589d21d7644e32e8a83b2">  214</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ae4e2ef08ec3589d21d7644e32e8a83b2">acos</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="namespacenum.html#a476916731b6a6d60d69e4d6875035cc1">  218</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a476916731b6a6d60d69e4d6875035cc1">atan</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373">  222</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373">asec</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="namespacenum.html#a7c33fa731f4982e84101c83a2a2d7c53">  226</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a7c33fa731f4982e84101c83a2a2d7c53">acsc</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="namespacenum.html#ad814caa1a44ce03a5ab17a034abfc549">  230</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ad814caa1a44ce03a5ab17a034abfc549">acot</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">// ********************************************************* //</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="namespacenum.html#aa71dfb3948513567800d00442ed6fee9">  235</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#aa71dfb3948513567800d00442ed6fee9">sinh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="namespacenum.html#a249917ff739094abc52200f0f6234d4d">  239</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a249917ff739094abc52200f0f6234d4d">cosh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="namespacenum.html#ac5e4874573f5fa8fca572b34d0e0048f">  243</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ac5e4874573f5fa8fca572b34d0e0048f">tanh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="namespacenum.html#a037be51fc57bc7fdd503b6eb73032a44">  247</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a037be51fc57bc7fdd503b6eb73032a44">sech</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="namespacenum.html#a3745dd0245fd31b68e9045ba7dbce748">  251</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a3745dd0245fd31b68e9045ba7dbce748">csch</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="namespacenum.html#ab13f868a2ade45efd1999cbe78e488a5">  255</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#ab13f868a2ade45efd1999cbe78e488a5">coth</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff">  260</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff">asinh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="namespacenum.html#a5a502e5ccf6b3ff884ed4888f0b4088f">  265</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a5a502e5ccf6b3ff884ed4888f0b4088f">acosh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6">  269</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6">atanh</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="namespacenum.html#a934866c6a8251445626f42ec27423ae2">  273</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a934866c6a8251445626f42ec27423ae2">asech</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="namespacenum.html#a60528f75e958d58a60f3e24b8bb6a2e4">  277</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a60528f75e958d58a60f3e24b8bb6a2e4">acsch</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="namespacenum.html#a09e4d860bcd090c061def49600955091">  281</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a09e4d860bcd090c061def49600955091">acoth</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="comment">// ********************************************************* //</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> D&gt;</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="namespacenum.html#a16c02a3e88d1b63d71ffb15bcb7468ac">  286</a></span>&#160;    std::vector&lt;D&gt; <a class="code" href="namespacenum.html#a16c02a3e88d1b63d71ffb15bcb7468ac">exp</a>(std::vector&lt;D&gt; a){</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment">// TODO add matrix power</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment">// TODO add matrix functions</span></div>
+<div class="ttc" id="anamespacecalc_html_aef0e9f050ce61e1bf65a446fd15f5356"><div class="ttname"><a href="namespacecalc.html#aef0e9f050ce61e1bf65a446fd15f5356">calc::diff</a></div><div class="ttdeci">D diff(LAMBDA f, D x, unsigned int n=1, D dx=D(0.00001))</div><div class="ttdoc">Nth order derivative at a point Higher orders are more prone to inaccuracies. You can assign your dx ...</div><div class="ttdef"><b>Definition:</b> differential.hpp:22</div></div>
+<div class="ttc" id="anamespacenum_html"><div class="ttname"><a href="namespacenum.html">num</a></div><div class="ttdef"><b>Definition:</b> vec.hpp:8</div></div>
+<div class="ttc" id="anamespacenum_html_a037be51fc57bc7fdd503b6eb73032a44"><div class="ttname"><a href="namespacenum.html#a037be51fc57bc7fdd503b6eb73032a44">num::sech</a></div><div class="ttdeci">std::vector&lt; D &gt; sech(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:247</div></div>
+<div class="ttc" id="anamespacenum_html_a09e4d860bcd090c061def49600955091"><div class="ttname"><a href="namespacenum.html#a09e4d860bcd090c061def49600955091">num::acoth</a></div><div class="ttdeci">std::vector&lt; D &gt; acoth(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:281</div></div>
+<div class="ttc" id="anamespacenum_html_a16c02a3e88d1b63d71ffb15bcb7468ac"><div class="ttname"><a href="namespacenum.html#a16c02a3e88d1b63d71ffb15bcb7468ac">num::exp</a></div><div class="ttdeci">std::vector&lt; D &gt; exp(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:286</div></div>
+<div class="ttc" id="anamespacenum_html_a228799bfc044b445a089f64f8565f285"><div class="ttname"><a href="namespacenum.html#a228799bfc044b445a089f64f8565f285">num::difference</a></div><div class="ttdeci">std::vector&lt; D &gt; difference(std::vector&lt; D &gt; &amp;a)</div><div class="ttdoc">difference of elements in vector</div><div class="ttdef"><b>Definition:</b> vec.hpp:51</div></div>
+<div class="ttc" id="anamespacenum_html_a249917ff739094abc52200f0f6234d4d"><div class="ttname"><a href="namespacenum.html#a249917ff739094abc52200f0f6234d4d">num::cosh</a></div><div class="ttdeci">std::vector&lt; D &gt; cosh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:239</div></div>
+<div class="ttc" id="anamespacenum_html_a24d376c085ac4f76594a6227ffe26bf5"><div class="ttname"><a href="namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5">num::pow</a></div><div class="ttdeci">std::vector&lt; D &gt; pow(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</div><div class="ttdoc">vector^vector</div><div class="ttdef"><b>Definition:</b> vec.hpp:170</div></div>
+<div class="ttc" id="anamespacenum_html_a2f735b184c6e68d2c3c92085a1266f14"><div class="ttname"><a href="namespacenum.html#a2f735b184c6e68d2c3c92085a1266f14">num::round</a></div><div class="ttdeci">D round(D &amp;a, int dp=0)</div><div class="ttdoc">overriding default round</div><div class="ttdef"><b>Definition:</b> vec.hpp:18</div></div>
+<div class="ttc" id="anamespacenum_html_a3745dd0245fd31b68e9045ba7dbce748"><div class="ttname"><a href="namespacenum.html#a3745dd0245fd31b68e9045ba7dbce748">num::csch</a></div><div class="ttdeci">std::vector&lt; D &gt; csch(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:251</div></div>
+<div class="ttc" id="anamespacenum_html_a476916731b6a6d60d69e4d6875035cc1"><div class="ttname"><a href="namespacenum.html#a476916731b6a6d60d69e4d6875035cc1">num::atan</a></div><div class="ttdeci">std::vector&lt; D &gt; atan(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:218</div></div>
+<div class="ttc" id="anamespacenum_html_a47b7803c68e12e4f8b9477ad5927e98d"><div class="ttname"><a href="namespacenum.html#a47b7803c68e12e4f8b9477ad5927e98d">num::sec</a></div><div class="ttdeci">std::vector&lt; D &gt; sec(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:196</div></div>
+<div class="ttc" id="anamespacenum_html_a4921bef257bd45d8d032704b7ac767ca"><div class="ttname"><a href="namespacenum.html#a4921bef257bd45d8d032704b7ac767ca">num::csc</a></div><div class="ttdeci">std::vector&lt; D &gt; csc(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:200</div></div>
+<div class="ttc" id="anamespacenum_html_a4e9fe88d96692c33fe86018dae231540"><div class="ttname"><a href="namespacenum.html#a4e9fe88d96692c33fe86018dae231540">num::vec_op</a></div><div class="ttdeci">std::vector&lt; D &gt; vec_op(LAMBDA f, std::vector&lt; D &gt; &amp;x)</div><div class="ttdoc">operation on vectors</div><div class="ttdef"><b>Definition:</b> vec.hpp:35</div></div>
+<div class="ttc" id="anamespacenum_html_a501f44095bdd298826bc4fa20a72abfe"><div class="ttname"><a href="namespacenum.html#a501f44095bdd298826bc4fa20a72abfe">num::arange</a></div><div class="ttdeci">std::vector&lt; D &gt; arange(D start, D end, D diff)</div><div class="ttdef"><b>Definition:</b> vec.hpp:77</div></div>
+<div class="ttc" id="anamespacenum_html_a50cbc2cd44b4ab04be4c6844e9dcf3fc"><div class="ttname"><a href="namespacenum.html#a50cbc2cd44b4ab04be4c6844e9dcf3fc">num::dot</a></div><div class="ttdeci">std::vector&lt; D &gt; dot(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:131</div></div>
+<div class="ttc" id="anamespacenum_html_a5a502e5ccf6b3ff884ed4888f0b4088f"><div class="ttname"><a href="namespacenum.html#a5a502e5ccf6b3ff884ed4888f0b4088f">num::acosh</a></div><div class="ttdeci">std::vector&lt; D &gt; acosh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:265</div></div>
+<div class="ttc" id="anamespacenum_html_a60528f75e958d58a60f3e24b8bb6a2e4"><div class="ttname"><a href="namespacenum.html#a60528f75e958d58a60f3e24b8bb6a2e4">num::acsch</a></div><div class="ttdeci">std::vector&lt; D &gt; acsch(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:277</div></div>
+<div class="ttc" id="anamespacenum_html_a69628dc5ff1ff58eed7efce55ca62f60"><div class="ttname"><a href="namespacenum.html#a69628dc5ff1ff58eed7efce55ca62f60">num::min</a></div><div class="ttdeci">D min(std::vector&lt; D &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:112</div></div>
+<div class="ttc" id="anamespacenum_html_a6c5997363da941b88d40a120ddfb7741"><div class="ttname"><a href="namespacenum.html#a6c5997363da941b88d40a120ddfb7741">num::cos</a></div><div class="ttdeci">std::vector&lt; D &gt; cos(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:188</div></div>
+<div class="ttc" id="anamespacenum_html_a7bd48ec1618b10c1b866221a14dbd8b3"><div class="ttname"><a href="namespacenum.html#a7bd48ec1618b10c1b866221a14dbd8b3">num::abs</a></div><div class="ttdeci">std::vector&lt; D &gt; abs(std::vector&lt; D &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:124</div></div>
+<div class="ttc" id="anamespacenum_html_a7c33fa731f4982e84101c83a2a2d7c53"><div class="ttname"><a href="namespacenum.html#a7c33fa731f4982e84101c83a2a2d7c53">num::acsc</a></div><div class="ttdeci">std::vector&lt; D &gt; acsc(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:226</div></div>
+<div class="ttc" id="anamespacenum_html_a7f6f11d36d6e7bd6ebd6f8a3866ce8c1"><div class="ttname"><a href="namespacenum.html#a7f6f11d36d6e7bd6ebd6f8a3866ce8c1">num::tan</a></div><div class="ttdeci">std::vector&lt; D &gt; tan(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:192</div></div>
+<div class="ttc" id="anamespacenum_html_a826f95f69a261f17e4ef47d7c6deb9a6"><div class="ttname"><a href="namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6">num::atanh</a></div><div class="ttdeci">std::vector&lt; D &gt; atanh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:269</div></div>
+<div class="ttc" id="anamespacenum_html_a8d99fa7b64c3775ac3d588c2aec11cff"><div class="ttname"><a href="namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff">num::asinh</a></div><div class="ttdeci">std::vector&lt; D &gt; asinh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:260</div></div>
+<div class="ttc" id="anamespacenum_html_a8f987030b7d268f10c83e46a46f871e5"><div class="ttname"><a href="namespacenum.html#a8f987030b7d268f10c83e46a46f871e5">num::max</a></div><div class="ttdeci">D max(std::vector&lt; D &gt; &amp;a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:118</div></div>
+<div class="ttc" id="anamespacenum_html_a934866c6a8251445626f42ec27423ae2"><div class="ttname"><a href="namespacenum.html#a934866c6a8251445626f42ec27423ae2">num::asech</a></div><div class="ttdeci">std::vector&lt; D &gt; asech(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:273</div></div>
+<div class="ttc" id="anamespacenum_html_aa71dfb3948513567800d00442ed6fee9"><div class="ttname"><a href="namespacenum.html#aa71dfb3948513567800d00442ed6fee9">num::sinh</a></div><div class="ttdeci">std::vector&lt; D &gt; sinh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:235</div></div>
+<div class="ttc" id="anamespacenum_html_aa800b330d5a24e8b0c465f29ff49fd75"><div class="ttname"><a href="namespacenum.html#aa800b330d5a24e8b0c465f29ff49fd75">num::sin</a></div><div class="ttdeci">std::vector&lt; D &gt; sin(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:184</div></div>
+<div class="ttc" id="anamespacenum_html_aacae58f5a14d91046e306090b6aeabcf"><div class="ttname"><a href="namespacenum.html#aacae58f5a14d91046e306090b6aeabcf">num::cross</a></div><div class="ttdeci">std::vector&lt; D &gt; cross(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</div><div class="ttdef"><b>Definition:</b> vec.hpp:138</div></div>
+<div class="ttc" id="anamespacenum_html_ab13f868a2ade45efd1999cbe78e488a5"><div class="ttname"><a href="namespacenum.html#ab13f868a2ade45efd1999cbe78e488a5">num::coth</a></div><div class="ttdeci">std::vector&lt; D &gt; coth(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:255</div></div>
+<div class="ttc" id="anamespacenum_html_ab52b48e649186751a17529c5f87133ab"><div class="ttname"><a href="namespacenum.html#ab52b48e649186751a17529c5f87133ab">num::asin</a></div><div class="ttdeci">std::vector&lt; D &gt; asin(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:209</div></div>
+<div class="ttc" id="anamespacenum_html_ac5e4874573f5fa8fca572b34d0e0048f"><div class="ttname"><a href="namespacenum.html#ac5e4874573f5fa8fca572b34d0e0048f">num::tanh</a></div><div class="ttdeci">std::vector&lt; D &gt; tanh(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:243</div></div>
+<div class="ttc" id="anamespacenum_html_acf7c26ead7bac86ba3b8d0bc1da19dac"><div class="ttname"><a href="namespacenum.html#acf7c26ead7bac86ba3b8d0bc1da19dac">num::linspace</a></div><div class="ttdeci">std::vector&lt; D &gt; linspace(D start, D end, int count)</div><div class="ttdef"><b>Definition:</b> vec.hpp:86</div></div>
+<div class="ttc" id="anamespacenum_html_ad814caa1a44ce03a5ab17a034abfc549"><div class="ttname"><a href="namespacenum.html#ad814caa1a44ce03a5ab17a034abfc549">num::acot</a></div><div class="ttdeci">std::vector&lt; D &gt; acot(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:230</div></div>
+<div class="ttc" id="anamespacenum_html_ade513603c3266b11d021a2f7aa36f614"><div class="ttname"><a href="namespacenum.html#ade513603c3266b11d021a2f7aa36f614">num::pow</a></div><div class="ttdeci">std::vector&lt; D &gt; pow(std::vector&lt; D &gt; a, D b)</div><div class="ttdoc">vector^b</div><div class="ttdef"><b>Definition:</b> vec.hpp:153</div></div>
+<div class="ttc" id="anamespacenum_html_ae4e2ef08ec3589d21d7644e32e8a83b2"><div class="ttname"><a href="namespacenum.html#ae4e2ef08ec3589d21d7644e32e8a83b2">num::acos</a></div><div class="ttdeci">std::vector&lt; D &gt; acos(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:214</div></div>
+<div class="ttc" id="anamespacenum_html_ae8f31915ee4e6223b5d1fb9e289d1913"><div class="ttname"><a href="namespacenum.html#ae8f31915ee4e6223b5d1fb9e289d1913">num::cot</a></div><div class="ttdeci">std::vector&lt; D &gt; cot(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:204</div></div>
+<div class="ttc" id="anamespacenum_html_af3bb393d172a5f74fe8c9af3f78b3f2a"><div class="ttname"><a href="namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a">num::averages</a></div><div class="ttdeci">std::vector&lt; D &gt; averages(std::vector&lt; D &gt; &amp;a)</div><div class="ttdoc">average of elements in vector</div><div class="ttdef"><b>Definition:</b> vec.hpp:67</div></div>
+<div class="ttc" id="anamespacenum_html_afafd5bacdc944aec623d59d5eaa9e373"><div class="ttname"><a href="namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373">num::asec</a></div><div class="ttdeci">std::vector&lt; D &gt; asec(std::vector&lt; D &gt; a)</div><div class="ttdef"><b>Definition:</b> vec.hpp:222</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
