@@ -22,7 +22,7 @@ namespace calc
     D diff(LAMBDA f, D x, unsigned int n = 1, D dx=D(0.00001)){
         // BUG higher orders have high error 
         D ans = D(0.0);
-        if(n > 2 && x!= D(0) && dx != D(0.00001)){
+        if(n > 2 && x!= D(0) && dx == D(0.00001)){
             dx = x*sqrt(__DBL_EPSILON__)*1*pow(10, n);
         }
         for(int k = 0; k <= n; k++){

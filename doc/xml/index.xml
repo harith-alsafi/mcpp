@@ -151,6 +151,10 @@
     <member refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kind="function"><name>hline</name></member>
     <member refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kind="function"><name>vline</name></member>
   </compound>
+  <compound refid="namespacesig" kind="namespace"><name>sig</name>
+  </compound>
+  <compound refid="namespacestat" kind="namespace"><name>stat</name>
+  </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
   <compound refid="namespacevar" kind="namespace"><name>var</name>
@@ -193,6 +197,8 @@
     <member refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" kind="function"><name>point</name></member>
     <member refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kind="function"><name>hline</name></member>
     <member refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kind="function"><name>vline</name></member>
+  </compound>
+  <compound refid="statistics_8hpp" kind="file"><name>statistics.hpp</name>
   </compound>
   <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
   </compound>
@@ -268,6 +274,8 @@
   <compound refid="dir_d75e03a618fa17d6f453b0e1d8f501af" kind="dir"><name>includes/misc</name>
   </compound>
   <compound refid="dir_b89f0d5d290a11cbae044ce561bc87aa" kind="dir"><name>includes/plot</name>
+  </compound>
+  <compound refid="dir_42993ecc421d8c07334c9a0444b19a53" kind="dir"><name>includes/stats</name>
   </compound>
   <compound refid="dir_1ac8c584a2311ca062bb43cbcaebb9f4" kind="dir"><name>includes/variables</name>
   </compound>

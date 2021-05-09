@@ -21,18 +21,6 @@
         <label>vector</label>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2">
-        <label>includes/plot.hpp</label>
-        <link refid="plot_8hpp"/>
-      </node>
-      <node id="1">
-        <label>includes/plot/figure.hpp</label>
-        <link refid="figure_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innerclass refid="structplt_1_1details" prot="public">plt::details</innerclass>
     <innernamespace refid="namespaceplt">plt</innernamespace>
       <sectiondef kind="var">
@@ -349,50 +337,50 @@
 <codeline lineno="6"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" kindref="member">RED</ref><sp/>=<sp/>{247,<sp/>55,<sp/>49};</highlight></codeline>
-<codeline lineno="13" refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kindref="member">BLACK</ref><sp/>=<sp/>{0,<sp/>0,<sp/>0};</highlight></codeline>
-<codeline lineno="14" refid="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" kindref="member">BLUE</ref><sp/>=<sp/>{36,<sp/>114,<sp/>200};</highlight></codeline>
-<codeline lineno="15" refid="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" kindref="member">GREEN</ref><sp/>=<sp/>{53,<sp/>200,<sp/>36};</highlight></codeline>
-<codeline lineno="16" refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kindref="member">WHITE</ref><sp/>=<sp/>{255,<sp/>255,<sp/>255};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" kindref="member">RED</ref><sp/>=<sp/>{247,<sp/>55,<sp/>49};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kindref="member">BLACK</ref><sp/>=<sp/>{0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" kindref="member">BLUE</ref><sp/>=<sp/>{36,<sp/>114,<sp/>200};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" kindref="member">GREEN</ref><sp/>=<sp/>{53,<sp/>200,<sp/>36};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;<sp/><ref refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kindref="member">WHITE</ref><sp/>=<sp/>{255,<sp/>255,<sp/>255};</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18" refid="structplt_1_1details" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structplt_1_1details" kindref="compound">details</ref></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="20" refid="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" kindref="member">xrange</ref><sp/>=<sp/>{-5,<sp/>5};</highlight></codeline>
-<codeline lineno="21" refid="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" kindref="member">yrange</ref><sp/>=<sp/>{-5,<sp/>5};</highlight></codeline>
-<codeline lineno="22" refid="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" kindref="member">color</ref><sp/>=<sp/><ref refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kindref="member">BLACK</ref>;</highlight></codeline>
-<codeline lineno="23" refid="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" kindref="member">legend</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24" refid="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" kindref="member">thickness</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" kindref="member">xrange</ref><sp/>=<sp/>{-5,<sp/>5};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" kindref="member">yrange</ref><sp/>=<sp/>{-5,<sp/>5};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><ref refid="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" kindref="member">color</ref><sp/>=<sp/><ref refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kindref="member">BLACK</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" kindref="member">legend</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" kindref="member">thickness</ref><sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="namespaceplt_1a294c68129755000491a6b4d6d9160f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a294c68129755000491a6b4d6d9160f86" kindref="member">figure</ref>(</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a294c68129755000491a6b4d6d9160f86" kindref="member">figure</ref>(</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>title<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Window&quot;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>400,</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>background<sp/>=<sp/><ref refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kindref="member">WHITE</ref></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
-<codeline lineno="51" refid="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" kindref="member">plot</ref>(</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" kindref="member">plot</ref>(</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>x,<sp/></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>y,</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplt_1_1details" kindref="compound">details</ref><sp/>d</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
-<codeline lineno="58" refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" kindref="member">point</ref>(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" kindref="member">point</ref>(</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>x,<sp/></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>y,</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplt_1_1details" kindref="compound">details</ref><sp/>d</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
-<codeline lineno="65" refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kindref="member">hline</ref>(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kindref="member">hline</ref>(</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>x,<sp/></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>y,</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplt_1_1details" kindref="compound">details</ref><sp/>d</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>S&gt;</highlight></codeline>
-<codeline lineno="72" refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kindref="member">vline</ref>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kindref="member">vline</ref>(</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>x,<sp/></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;S&gt;<sp/>y,</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structplt_1_1details" kindref="compound">details</ref><sp/>d</highlight></codeline>

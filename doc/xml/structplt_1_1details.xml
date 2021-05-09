@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="structplt_1_1details" kind="struct" language="C++" prot="public">
     <compoundname>plt::details</compoundname>
-    <includes refid="figure_8hpp" local="yes">figure.hpp</includes>
+    <includes local="yes">figure.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" prot="public" static="no" mutable="no">
         <type>std::vector&lt; double &gt;</type>

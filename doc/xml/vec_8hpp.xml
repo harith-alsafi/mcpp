@@ -21,26 +21,6 @@
         <label>vector</label>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="3">
-        <label>includes/calculus/differential.hpp</label>
-        <link refid="differential_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-      <node id="2">
-        <label>includes/mcpp.hpp</label>
-        <link refid="mcpp_8hpp"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>includes/vectors/vec.hpp</label>
-        <link refid="vec_8hpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <innernamespace refid="namespacenum">num</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -1167,7 +1147,7 @@
 <codeline lineno="7" refid="namespacenum" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacenum" kindref="compound">num</ref></highlight></codeline>
 <codeline lineno="8"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="18" refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kindref="member">round</ref>(D<sp/>&amp;a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dp<sp/>=<sp/>0){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kindref="member">round</ref>(D<sp/>&amp;a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dp<sp/>=<sp/>0){</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a<sp/>&lt;<sp/>D(0)){</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>D((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(a*<ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(10,<sp/>dp)-.5)/<ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(10,<sp/>dp));</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -1175,7 +1155,7 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA&gt;</highlight></codeline>
-<codeline lineno="35" refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" kindref="member">vec_op</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" kindref="member">vec_op</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x){</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>y;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>x.size();<sp/>i++){</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y.push_back(f(x[i]));</highlight></codeline>
@@ -1184,7 +1164,7 @@
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="51" refid="namespacenum_1a228799bfc044b445a089f64f8565f285" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kindref="member">difference</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kindref="member">difference</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>temp;</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a.size()-1;<sp/>i++){</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(a[i+1]-a[i]);</highlight></codeline>
@@ -1193,7 +1173,7 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="67" refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" kindref="member">averages</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" kindref="member">averages</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>temp;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a.size()-1;<sp/>i++){</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back((a[i+1]+a[i])*D(0.5));</highlight></codeline>
@@ -1203,23 +1183,23 @@
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="77" refid="namespacenum_1a501f44095bdd298826bc4fa20a72abfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a501f44095bdd298826bc4fa20a72abfe" kindref="member">arange</ref>(D<sp/>start,<sp/>D<sp/>end,<sp/>D<sp/><ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>){</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a501f44095bdd298826bc4fa20a72abfe" kindref="member">arange</ref>(D<sp/>start,<sp/>D<sp/>end,<sp/>D<sp/>diff){</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>temp;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(D<sp/>i<sp/>=<sp/>start;<sp/>i<sp/>&lt;<sp/>end;<sp/>i+=<ref refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kindref="member">diff</ref>){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(D<sp/>i<sp/>=<sp/>start;<sp/>i<sp/>&lt;<sp/>end;<sp/>i+=diff){</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(i);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="86" refid="namespacenum_1acf7c26ead7bac86ba3b8d0bc1da19dac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1acf7c26ead7bac86ba3b8d0bc1da19dac" kindref="member">linspace</ref>(D<sp/>start,<sp/>D<sp/>end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1acf7c26ead7bac86ba3b8d0bc1da19dac" kindref="member">linspace</ref>(D<sp/>start,<sp/>D<sp/>end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count){</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="101" refid="namespacenum_1a4ea9be0979e6fe200ae5bf0247c39777" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kindref="member">round</ref>(std::vector&lt;D&gt;<sp/>&amp;a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dp<sp/>=<sp/>0){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kindref="member">round</ref>(std::vector&lt;D&gt;<sp/>&amp;a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dp<sp/>=<sp/>0){</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>b;</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i&lt;<sp/>a.size();<sp/>i++){</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight></codeline>
@@ -1230,165 +1210,165 @@
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="112" refid="namespacenum_1a69628dc5ff1ff58eed7efce55ca62f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a69628dc5ff1ff58eed7efce55ca62f60" kindref="member">min</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a69628dc5ff1ff58eed7efce55ca62f60" kindref="member">min</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>mmin<sp/>=<sp/>*std::min_element(a.begin(),<sp/>a.end());</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mmin;<sp/></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="118" refid="namespacenum_1a8f987030b7d268f10c83e46a46f871e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a8f987030b7d268f10c83e46a46f871e5" kindref="member">max</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacenum_1a8f987030b7d268f10c83e46a46f871e5" kindref="member">max</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>mmax<sp/>=<sp/>*std::max_element(a.begin(),<sp/>a.end());</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mmax;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;<sp/></highlight></codeline>
-<codeline lineno="124" refid="namespacenum_1a7bd48ec1618b10c1b866221a14dbd8b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7bd48ec1618b10c1b866221a14dbd8b3" kindref="member">abs</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7bd48ec1618b10c1b866221a14dbd8b3" kindref="member">abs</ref>(std::vector&lt;D&gt;<sp/>&amp;a){</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="131" refid="namespacenum_1a50cbc2cd44b4ab04be4c6844e9dcf3fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a50cbc2cd44b4ab04be4c6844e9dcf3fc" kindref="member">dot</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a50cbc2cd44b4ab04be4c6844e9dcf3fc" kindref="member">dot</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a.size()<sp/>!=<sp/>b.size()){</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="138" refid="namespacenum_1aacae58f5a14d91046e306090b6aeabcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aacae58f5a14d91046e306090b6aeabcf" kindref="member">cross</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aacae58f5a14d91046e306090b6aeabcf" kindref="member">cross</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a.size()<sp/>!=<sp/>b.size()){</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="153" refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>D<sp/>b){</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>D<sp/>b){</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>temp;</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a.size();<sp/>i++){</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(<ref refid="namespacenum_1a24d376c085ac4f76594a6227ffe26bf5" kindref="member">std::pow</ref>(a[i],<sp/>b));</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(std::pow(a[i],<sp/>b));</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="170" refid="namespacenum_1a24d376c085ac4f76594a6227ffe26bf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kindref="member">pow</ref>(std::vector&lt;D&gt;<sp/>a,<sp/>std::vector&lt;D&gt;<sp/>b){</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(a.size()<sp/>!=<sp/>b.size()){</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>size&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>temp;</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>temp2<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>a.size();<sp/>i++){</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(<ref refid="namespacenum_1a24d376c085ac4f76594a6227ffe26bf5" kindref="member">std::pow</ref>(a[i],<sp/>b[i]));</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.push_back(std::pow(a[i],<sp/>b[i]));</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"></highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************<sp/>//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="184" refid="namespacenum_1aa800b330d5a24e8b0c465f29ff49fd75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aa800b330d5a24e8b0c465f29ff49fd75" kindref="member">sin</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aa800b330d5a24e8b0c465f29ff49fd75" kindref="member">sin</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"></highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="188" refid="namespacenum_1a6c5997363da941b88d40a120ddfb7741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a6c5997363da941b88d40a120ddfb7741" kindref="member">cos</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a6c5997363da941b88d40a120ddfb7741" kindref="member">cos</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight></codeline>
 <codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="192" refid="namespacenum_1a7f6f11d36d6e7bd6ebd6f8a3866ce8c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7f6f11d36d6e7bd6ebd6f8a3866ce8c1" kindref="member">tan</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7f6f11d36d6e7bd6ebd6f8a3866ce8c1" kindref="member">tan</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"></highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="196" refid="namespacenum_1a47b7803c68e12e4f8b9477ad5927e98d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a47b7803c68e12e4f8b9477ad5927e98d" kindref="member">sec</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a47b7803c68e12e4f8b9477ad5927e98d" kindref="member">sec</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="197"><highlight class="normal"></highlight></codeline>
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="200" refid="namespacenum_1a4921bef257bd45d8d032704b7ac767ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a4921bef257bd45d8d032704b7ac767ca" kindref="member">csc</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a4921bef257bd45d8d032704b7ac767ca" kindref="member">csc</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="204" refid="namespacenum_1ae8f31915ee4e6223b5d1fb9e289d1913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ae8f31915ee4e6223b5d1fb9e289d1913" kindref="member">cot</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ae8f31915ee4e6223b5d1fb9e289d1913" kindref="member">cot</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="205"><highlight class="normal"></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight></codeline>
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="209" refid="namespacenum_1ab52b48e649186751a17529c5f87133ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ab52b48e649186751a17529c5f87133ab" kindref="member">asin</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ab52b48e649186751a17529c5f87133ab" kindref="member">asin</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="214" refid="namespacenum_1ae4e2ef08ec3589d21d7644e32e8a83b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ae4e2ef08ec3589d21d7644e32e8a83b2" kindref="member">acos</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ae4e2ef08ec3589d21d7644e32e8a83b2" kindref="member">acos</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="215"><highlight class="normal"></highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="218" refid="namespacenum_1a476916731b6a6d60d69e4d6875035cc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a476916731b6a6d60d69e4d6875035cc1" kindref="member">atan</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a476916731b6a6d60d69e4d6875035cc1" kindref="member">atan</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="219"><highlight class="normal"></highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="222" refid="namespacenum_1afafd5bacdc944aec623d59d5eaa9e373" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1afafd5bacdc944aec623d59d5eaa9e373" kindref="member">asec</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1afafd5bacdc944aec623d59d5eaa9e373" kindref="member">asec</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="226" refid="namespacenum_1a7c33fa731f4982e84101c83a2a2d7c53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7c33fa731f4982e84101c83a2a2d7c53" kindref="member">acsc</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a7c33fa731f4982e84101c83a2a2d7c53" kindref="member">acsc</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="227"><highlight class="normal"></highlight></codeline>
 <codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="230" refid="namespacenum_1ad814caa1a44ce03a5ab17a034abfc549" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ad814caa1a44ce03a5ab17a034abfc549" kindref="member">acot</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ad814caa1a44ce03a5ab17a034abfc549" kindref="member">acot</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"></highlight></codeline>
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************<sp/>//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="235" refid="namespacenum_1aa71dfb3948513567800d00442ed6fee9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aa71dfb3948513567800d00442ed6fee9" kindref="member">sinh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1aa71dfb3948513567800d00442ed6fee9" kindref="member">sinh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"></highlight></codeline>
 <codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="239" refid="namespacenum_1a249917ff739094abc52200f0f6234d4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a249917ff739094abc52200f0f6234d4d" kindref="member">cosh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a249917ff739094abc52200f0f6234d4d" kindref="member">cosh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"></highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="243" refid="namespacenum_1ac5e4874573f5fa8fca572b34d0e0048f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ac5e4874573f5fa8fca572b34d0e0048f" kindref="member">tanh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ac5e4874573f5fa8fca572b34d0e0048f" kindref="member">tanh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="244"><highlight class="normal"></highlight></codeline>
 <codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="247" refid="namespacenum_1a037be51fc57bc7fdd503b6eb73032a44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a037be51fc57bc7fdd503b6eb73032a44" kindref="member">sech</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a037be51fc57bc7fdd503b6eb73032a44" kindref="member">sech</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="248"><highlight class="normal"></highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="251" refid="namespacenum_1a3745dd0245fd31b68e9045ba7dbce748" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a3745dd0245fd31b68e9045ba7dbce748" kindref="member">csch</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a3745dd0245fd31b68e9045ba7dbce748" kindref="member">csch</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="252"><highlight class="normal"></highlight></codeline>
 <codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="255" refid="namespacenum_1ab13f868a2ade45efd1999cbe78e488a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ab13f868a2ade45efd1999cbe78e488a5" kindref="member">coth</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1ab13f868a2ade45efd1999cbe78e488a5" kindref="member">coth</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="256"><highlight class="normal"></highlight></codeline>
 <codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"></highlight></codeline>
 <codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="260" refid="namespacenum_1a8d99fa7b64c3775ac3d588c2aec11cff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a8d99fa7b64c3775ac3d588c2aec11cff" kindref="member">asinh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a8d99fa7b64c3775ac3d588c2aec11cff" kindref="member">asinh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="261"><highlight class="normal"></highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="265" refid="namespacenum_1a5a502e5ccf6b3ff884ed4888f0b4088f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a5a502e5ccf6b3ff884ed4888f0b4088f" kindref="member">acosh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a5a502e5ccf6b3ff884ed4888f0b4088f" kindref="member">acosh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"></highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="269" refid="namespacenum_1a826f95f69a261f17e4ef47d7c6deb9a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a826f95f69a261f17e4ef47d7c6deb9a6" kindref="member">atanh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a826f95f69a261f17e4ef47d7c6deb9a6" kindref="member">atanh</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"></highlight></codeline>
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="273" refid="namespacenum_1a934866c6a8251445626f42ec27423ae2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a934866c6a8251445626f42ec27423ae2" kindref="member">asech</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a934866c6a8251445626f42ec27423ae2" kindref="member">asech</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"></highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="277" refid="namespacenum_1a60528f75e958d58a60f3e24b8bb6a2e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a60528f75e958d58a60f3e24b8bb6a2e4" kindref="member">acsch</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a60528f75e958d58a60f3e24b8bb6a2e4" kindref="member">acsch</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"></highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="281" refid="namespacenum_1a09e4d860bcd090c061def49600955091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a09e4d860bcd090c061def49600955091" kindref="member">acoth</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a09e4d860bcd090c061def49600955091" kindref="member">acoth</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="282"><highlight class="normal"></highlight></codeline>
 <codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*********************************************************<sp/>//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="286" refid="namespacenum_1a16c02a3e88d1b63d71ffb15bcb7468ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a16c02a3e88d1b63d71ffb15bcb7468ac" kindref="member">exp</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacenum_1a16c02a3e88d1b63d71ffb15bcb7468ac" kindref="member">exp</ref>(std::vector&lt;D&gt;<sp/>a){</highlight></codeline>
 <codeline lineno="287"><highlight class="normal"></highlight></codeline>
 <codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="289"><highlight class="normal">}</highlight></codeline>

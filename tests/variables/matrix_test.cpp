@@ -83,7 +83,7 @@ TEST(functionality, insert_row_col)
     matrix<int> m2(3, 3);
 
     // row
-    m2.insert_row(1, a);
+    m2.insert_row(1, {1, 2, 3});
     ASSERT_EQ(3+1, m2.row());
     ASSERT_EQ(3, m2.col());
     for(int j = 0; j < m2.col(); j++){

@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classvar_1_1matrix_1_1Col" kind="class" language="C++" prot="protected">
     <compoundname>var::matrix::Col</compoundname>
-    <includes refid="matrix_8hpp" local="yes">matrix.hpp</includes>
+    <includes local="yes">matrix.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classvar_1_1matrix_1_1Col_1aa446271aafd31184bde7342b95a308aa" prot="private" static="no" mutable="no">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref> &amp;</type>

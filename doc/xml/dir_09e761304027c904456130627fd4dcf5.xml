@@ -6,6 +6,7 @@
     <innerdir refid="dir_4cd83b732da33e26972dd88221fcb4f7">includes/calculus</innerdir>
     <innerdir refid="dir_d75e03a618fa17d6f453b0e1d8f501af">includes/misc</innerdir>
     <innerdir refid="dir_b89f0d5d290a11cbae044ce561bc87aa">includes/plot</innerdir>
+    <innerdir refid="dir_42993ecc421d8c07334c9a0444b19a53">includes/stats</innerdir>
     <innerdir refid="dir_1ac8c584a2311ca062bb43cbcaebb9f4">includes/variables</innerdir>
     <innerdir refid="dir_976250933b996c856fb3fe86613b4a46">includes/vectors</innerdir>
     <innerfile refid="mcpp_8hpp">mcpp.hpp</innerfile>

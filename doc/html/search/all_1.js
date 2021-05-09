@@ -9,13 +9,12 @@ var searchData=
   ['acsch_10',['acsch',['../namespacenum.html#a60528f75e958d58a60f3e24b8bb6a2e4',1,'num']]],
   ['adj_11',['adj',['../classvar_1_1matrix.html#ad78a167d7400fac474fd03cf3363defb',1,'var::matrix']]],
   ['alg_12',['alg',['../namespacealg.html',1,'']]],
-  ['algebra_2ehpp_13',['algebra.hpp',['../algebra_8hpp.html',1,'']]],
-  ['arange_14',['arange',['../namespacenum.html#a501f44095bdd298826bc4fa20a72abfe',1,'num']]],
-  ['asec_15',['asec',['../namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373',1,'num']]],
-  ['asech_16',['asech',['../namespacenum.html#a934866c6a8251445626f42ec27423ae2',1,'num']]],
-  ['asin_17',['asin',['../namespacenum.html#ab52b48e649186751a17529c5f87133ab',1,'num']]],
-  ['asinh_18',['asinh',['../namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff',1,'num']]],
-  ['atan_19',['atan',['../namespacenum.html#a476916731b6a6d60d69e4d6875035cc1',1,'num']]],
-  ['atanh_20',['atanh',['../namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6',1,'num']]],
-  ['averages_21',['averages',['../namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a',1,'num']]]
+  ['arange_13',['arange',['../namespacenum.html#a501f44095bdd298826bc4fa20a72abfe',1,'num']]],
+  ['asec_14',['asec',['../namespacenum.html#afafd5bacdc944aec623d59d5eaa9e373',1,'num']]],
+  ['asech_15',['asech',['../namespacenum.html#a934866c6a8251445626f42ec27423ae2',1,'num']]],
+  ['asin_16',['asin',['../namespacenum.html#ab52b48e649186751a17529c5f87133ab',1,'num']]],
+  ['asinh_17',['asinh',['../namespacenum.html#a8d99fa7b64c3775ac3d588c2aec11cff',1,'num']]],
+  ['atan_18',['atan',['../namespacenum.html#a476916731b6a6d60d69e4d6875035cc1',1,'num']]],
+  ['atanh_19',['atanh',['../namespacenum.html#a826f95f69a261f17e4ef47d7c6deb9a6',1,'num']]],
+  ['averages_20',['averages',['../namespacenum.html#af3bb393d172a5f74fe8c9af3f78b3f2a',1,'num']]]
 ];

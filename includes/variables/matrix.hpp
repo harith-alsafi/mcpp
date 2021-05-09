@@ -77,7 +77,7 @@ namespace var
             /**
              * @brief Returns transpose for data
              * 
-             * @return table<D> 
+             * @return ``table<D>`` 
              */
             table<D> TT(){
                 // temps
@@ -112,8 +112,8 @@ namespace var
              * 
              * @param i row
              * @param j colum
-             * @param other matrix
-             * @return matrix 
+             * @param other ``matrix`` type
+             * @return ``matrix`` 
              */
             matrix M(int i, int j, matrix &other) {
                 matrix b(other.row()-1, other.col()-1);
@@ -137,8 +137,8 @@ namespace var
             /**
              * @brief Recursive determinant 
              * 
-             * @param a matrix
-             * @return D  
+             * @param a ``matrix`` type
+             * @return ``D``  
              */
             D DET(matrix a){
                 // 2x2 determinant
@@ -170,7 +170,8 @@ namespace var
         public:
             /**
              * @brief Construct a new matrix object
-             * Usage:
+             * 
+             * **Usage**:
              * ```cpp
              * var::matrix<int> m(2, 3); // 2 rows, 3 colums
              * ```
@@ -183,7 +184,8 @@ namespace var
 
             /**
              * @brief Default construct a new matrix object
-             * Usage:
+             * 
+             * **Usage**:
              * ```cpp
              * var::matrix<int> m;
              * ```
@@ -192,7 +194,8 @@ namespace var
 
             /**
              * @brief Construct a new matrix object
-             * Usage:
+             * 
+             * **Usage**:
              * ```cpp
              *  var::matrix<int> m = {
                     {1, 2, 3},
@@ -217,7 +220,8 @@ namespace var
 
             /**
              * @brief Resizes the matrix
-             * Usage:
+             * 
+             * ### Usage:
              * ```cpp
              * m.resize(5, 6);
              * ``` 
@@ -245,7 +249,7 @@ namespace var
             /**
              * @brief Returns the number of rows
              * 
-             * @return int 
+             * @return ``int`` 
              */
             int row(){
                 return _row;
@@ -254,7 +258,7 @@ namespace var
             /**
              * @brief Returns the number of columns
              * 
-             * @return int 
+             * @return ``int`` 
              */
             int col(){
                 return _col;
@@ -263,7 +267,7 @@ namespace var
             /**
              * @brief Returns total number of elements
              * 
-             * @return int 
+             * @return ``int`` 
              */
             int size(){
                 return _col*_row;
@@ -273,7 +277,7 @@ namespace var
              * @brief Returns the row at an index
              * 
              * @param i row index  
-             * @return std::vector<D> 
+             * @return ``std::vector<D>`` 
              */
             std::vector<D> get_row(int i){
                 check_row(i);
@@ -281,7 +285,13 @@ namespace var
             }
 
             /**
-             * @brief returns the colum at an index
+             * @brief Returns the colum at an index
+             * 
+             * Usage:  
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * auto col = m.get_col(1);
+             * ```
              * 
              * @param j colum index 
              * @return ``std::vector<D>``
@@ -296,13 +306,15 @@ namespace var
             }
 
             /**
-             * @brief insterts row at the end
+             * @brief Inserts row at the end or the matrix
              * 
-             * !!! warning "Exception"    
-             * <pre>
-             *     This will throw an ``std::invalid_argument`` if there is a size mismatch. 
-             * </pre>  
-             * @param a 
+             * **Usage**:  
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * m.push_row(1, {1, 2, 3});
+             * ```
+             * 
+             * @param a row vector
              */
             void push_row(const std::vector<D>& a){
                 // checking size
@@ -319,9 +331,9 @@ namespace var
             }
 
             /**
-             * @brief insterts column at the end
+             * @brief Inserts column at the end of the matrix
              * 
-             * @param a 
+             * @param a colum vector
              */
             void push_col(const std::vector<D>& a){
                 // checking size
@@ -342,10 +354,16 @@ namespace var
             }
 
             /**
-             * @brief inserts row at specefic index 
+             * @brief Inserts row at specefic index 
              * 
-             * @param i 
-             * @param a 
+             * **Usage**:  
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * m.insert_row(1, {1, 2, 3});
+             * ```
+             * 
+             * @param i row index
+             * @param a row vector
              */
             void insert_row(int i, std::vector<D> a){
                 if(a.size() != _col){
@@ -359,10 +377,16 @@ namespace var
             }
 
             /**
-             * @brief inserts column at specefic index
+             * @brief Inserts column at specefic index
              * 
-             * @param j 
-             * @param a 
+             * **Usage**:  
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * m.insert_col(1, {1, 2, 3});
+             * ```
+             * 
+             * @param j column index 
+             * @param a colum vector
              */
             void insert_col(int j, const std::vector<D>& a){
                 if(a.size() != _row){
@@ -379,7 +403,7 @@ namespace var
             }
 
             /**
-             * @brief removes last row
+             * @brief Removes last row
              * 
              */
             void pop_row(){
@@ -405,9 +429,9 @@ namespace var
             }
             
             /**
-             * @brief erase row at index
+             * @brief Erase row at index
              * 
-             * @param i 
+             * @param i row index
              */
             void erase_row(int i){
                 check_row(i);
@@ -416,9 +440,16 @@ namespace var
             }
 
             /**
-             * @brief erase column at index
+             * @brief Erases column at index
              * 
-             * @param j 
+             * **Usage**:
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * m.erase_col(1);
+             * ```
+             * 
+             * @param j colum index
+             * 
              */
             void erase_col(int j){
                 check_col(j);
@@ -429,11 +460,11 @@ namespace var
             }
 
             /**
-             * @brief sorts all rows
+             * @brief Sorts all rows
              * 
-             * @param d 
-             * d = 1 is accending order -> sort_rows()
-             * d = 0 is decending order -> sort_rows(0)
+             * @param d details are shown below
+             * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
+             * @param ``d = 0`` is decending order $\rightarrow$ ``sort_rows(0);``
              */
             void sort_rows(int d = 1){
                 for(int i = 0; i < _row; i++){
@@ -442,11 +473,11 @@ namespace var
             }
 
             /**
-             * @brief sorts all columns 
+             * @brief Sorts all columns 
              * 
-             * @param d 
-             * d = 1 is accending order -> sort_cols()
-             * d = 0 is decending order -> sort_cols(0)
+             * @param d details are shown below
+             * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
+             * @param ``d = 0`` is decending order $\rightarrow$ ``sort_rows(0);``
              */
             void sort_cols(int d = 1){
                 for(int j = 0; j < _col; j++){
@@ -455,12 +486,12 @@ namespace var
             }
 
             /**
-             * @brief sorts rows at specefic index 
+             * @brief Sorts rows at specefic index 
              * 
-             * @param i 
-             * @param d 
-             * d = 1 is accending order -> sort_cols()
-             * d = 0 is decending order -> sort_cols(0)
+             * @param i row index
+             * @param d details are shown below
+             * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
+             * @param ``d = 0`` is decending order $\rightarrow$ ``sort_rows(0);``
              */
             void sort_row(int i, int d = 1){
                 check_row(i);
@@ -474,12 +505,12 @@ namespace var
             }
 
             /**
-             * @brief sorts colum at specefic index
+             * @brief Sorts colum at specefic index
              * 
-             * @param j 
-             * @param d 
-             * d = 1 is accending order -> sort_cols()
-             * d = 0 is decending order -> sort_cols(0)
+             * @param j colum index  
+             * @param d details are shown below
+             * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
+             * @param ``d = 0`` is decending order $\rightarrow$ ``sort_rows(0);``
              */
             void sort_col(int j, int d = 1){
                 check_col(j);
@@ -489,11 +520,11 @@ namespace var
             }
 
             /**
-             * @brief does operations on specefic rows
-             *  operations are specified by lambda function 
-             * @tparam LAMBDA 
-             * @param i 
-             * @param f 
+             * @brief Does operations on specefic rows
+             * 
+             * @tparam LAMBDA: ``std::function`` 
+             * @param i colum index
+             * @param f function to change colum elements
              */
             template<typename LAMBDA> 
             void row_op(int i, LAMBDA f){
@@ -504,11 +535,19 @@ namespace var
             }
 
             /**
-             * @brief does operations on specefic colum
-             *  operations are specified by lambda function 
-             * @tparam LAMBDA 
-             * @param j 
-             * @param f 
+             * @brief Does operations on a specefic colum
+             * 
+             * @tparam LAMBDA: ``std::function`` 
+             * @param j colum index 
+             * @param f function to change colum elements
+             *  
+             * !!! warning "Exception"    
+             * <pre>
+             *     All row and colum operations (inserting, removing .. etc) throw an <code>std::invalid_argument</code> if&#58;  
+             *         1. There is a size mismatch  
+             *         2. Invalid index 
+             * </pre>
+             * 
              */
             template<typename LAMBDA> 
             void col_op(int j, LAMBDA f){
@@ -519,9 +558,15 @@ namespace var
             }
 
             /**
-             * @brief converts all elements to n
+             * @brief Converts all elements to n
              * 
-             * @param n 
+             * @param n the specifeid variable
+             * 
+             * !!! note "Note"    
+             * <pre>
+             *     All the functions listed abover **mutate** the original matrix  
+             * </pre>
+             *  
              */
             void turn_to(D n){
                 for(int i = 0; i < _row; i++){
@@ -532,7 +577,7 @@ namespace var
             }
 
             /**
-             * @brief sum of all elements
+             * @brief Sum of all elements
              * 
              * @return D 
              */
