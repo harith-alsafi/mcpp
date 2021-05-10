@@ -30,6 +30,10 @@
     <member refid="classvar_1_1matrix_1a591c6983a2637275bb1d10d2d2e1e4a5" kind="function"><name>row</name></member>
     <member refid="classvar_1_1matrix_1a18f1458c2532b0aabbb3370d9556e745" kind="function"><name>col</name></member>
     <member refid="classvar_1_1matrix_1a1c630d2e37b665b3fabcb3d76a4f8b89" kind="function"><name>size</name></member>
+    <member refid="classvar_1_1matrix_1a989e36acf06c040379a78946442eed25" kind="function"><name>begin</name></member>
+    <member refid="classvar_1_1matrix_1a905ab851aebd8b3781e6605bec99e0a8" kind="function"><name>end</name></member>
+    <member refid="classvar_1_1matrix_1a44444530f6334c9cd3f9c61c7aa91af8" kind="function"><name>begin</name></member>
+    <member refid="classvar_1_1matrix_1a493b344c09c695efcd3fec6065059948" kind="function"><name>end</name></member>
     <member refid="classvar_1_1matrix_1aa27021aa738d82a6b9dde82de321f5a1" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1matrix_1a6de49f43eb3bc3f3ed6c0b658a97605c" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1matrix_1a9bc064083b67aaab190bd66e7248a5ba" kind="function"><name>resize</name></member>
@@ -58,6 +62,7 @@
     <member refid="classvar_1_1matrix_1a8a66138dce5fdb1b27a89349a8fd8539" kind="function"><name>inv</name></member>
     <member refid="classvar_1_1matrix_1a5e7cc7e40124be3bd4a1accfacd68b05" kind="function"><name>rref</name></member>
     <member refid="classvar_1_1matrix_1a69ffd8772f87c70f5a8e525b0e4dd71f" kind="function"><name>is_square</name></member>
+    <member refid="classvar_1_1matrix_1a9db378f2cc8cc600c2137dcea6fadfc9" kind="function"><name>is_empty</name></member>
     <member refid="classvar_1_1matrix_1a34a63853e0456af7ba9bbd7e10b4cfc6" kind="function"><name>is_identity</name></member>
     <member refid="classvar_1_1matrix_1a2d10297e28d8c6c6264d6f174003d193" kind="function"><name>operator[]</name></member>
     <member refid="classvar_1_1matrix_1aaee49a5cde5696ed5d41b2ed5b15d69a" kind="function"><name>operator+</name></member>
@@ -65,15 +70,8 @@
     <member refid="classvar_1_1matrix_1a277209428c74da8a84cc6e59b540cead" kind="function"><name>operator-</name></member>
     <member refid="classvar_1_1matrix_1a20cab5ed13b35173c242b6fe0909eda6" kind="function"><name>operator-</name></member>
     <member refid="classvar_1_1matrix_1a0052ad415d92a84561c48b2f94c5159b" kind="function"><name>operator-</name></member>
-    <member refid="classvar_1_1matrix_1a3d767a0fcfa836340881b6fd9f4ee4e5" kind="function"><name>operator*</name></member>
-    <member refid="classvar_1_1matrix_1a6ba280ed6e9ad194e8f2eb25a8aff4bc" kind="function"><name>operator*</name></member>
-    <member refid="classvar_1_1matrix_1a9683bc54b999348c59ae33b261334796" kind="function"><name>operator/</name></member>
-    <member refid="classvar_1_1matrix_1a1b9e65f8c962ec95aeac343d5d6ba89b" kind="function"><name>operator/</name></member>
-    <member refid="classvar_1_1matrix_1a7629935f8527febca8ff4a34dff026ff" kind="function"><name>operator%</name></member>
     <member refid="classvar_1_1matrix_1acd798c4a5acd27adbadc15b750d13aa9" kind="friend"><name>operator+</name></member>
     <member refid="classvar_1_1matrix_1aec0f669b84ef6cbf1197fda5328d2d3e" kind="friend"><name>operator-</name></member>
-    <member refid="classvar_1_1matrix_1afa75e72ad7b2e69f24b69e6dcfdbbcc6" kind="friend"><name>operator*</name></member>
-    <member refid="classvar_1_1matrix_1a21bdbe6bff69133cc693c53cac84bfec" kind="friend"><name>operator/</name></member>
   </compound>
   <compound refid="namespacealg" kind="namespace"><name>alg</name>
     <member refid="namespacealg_1a15e912afc036d7ca7bd79acf7e3125b2" kind="function"><name>sequence</name></member>

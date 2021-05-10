@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['plot_191',['plot',['../namespaceplt.html#ae2b77fe07b2b2682fcd9741f2291b0fc',1,'plt']]],
-  ['point_192',['point',['../namespaceplt.html#ad9fe1a952c304b4aae420d27d4e0b3ff',1,'plt']]],
-  ['pop_5fcol_193',['pop_col',['../classvar_1_1matrix.html#a9043393e205545106f58c316da68df80',1,'var::matrix']]],
-  ['pop_5frow_194',['pop_row',['../classvar_1_1matrix.html#adc31cf9d718ccf376c2309c4f6a5f6dd',1,'var::matrix']]],
-  ['pow_195',['pow',['../namespacenum.html#ade513603c3266b11d021a2f7aa36f614',1,'num::pow(std::vector&lt; D &gt; a, D b)'],['../namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5',1,'num::pow(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)']]],
-  ['push_5fcol_196',['push_col',['../classvar_1_1matrix.html#a9dd2a2ef22d04744482819c77b80f031',1,'var::matrix']]],
-  ['push_5frow_197',['push_row',['../classvar_1_1matrix.html#aa141055a5f25f5d62dd26ae0e915f6af',1,'var::matrix']]]
+  ['operator_2b_188',['operator+',['../classvar_1_1matrix.html#aaee49a5cde5696ed5d41b2ed5b15d69a',1,'var::matrix::operator+(matrix const &amp;other)'],['../classvar_1_1matrix.html#af312c6541557412aa40999381c832613',1,'var::matrix::operator+(D n)']]],
+  ['operator_2d_189',['operator-',['../classvar_1_1matrix.html#a277209428c74da8a84cc6e59b540cead',1,'var::matrix::operator-()'],['../classvar_1_1matrix.html#a20cab5ed13b35173c242b6fe0909eda6',1,'var::matrix::operator-(matrix const &amp;other)'],['../classvar_1_1matrix.html#a0052ad415d92a84561c48b2f94c5159b',1,'var::matrix::operator-(D n)']]],
+  ['operator_5b_5d_190',['operator[]',['../classvar_1_1matrix_1_1Col.html#a8024a0dd194bb085689a7f271b9348e8',1,'var::matrix::Col::operator[]()'],['../classvar_1_1matrix.html#a2d10297e28d8c6c6264d6f174003d193',1,'var::matrix::operator[]()']]]
 ];

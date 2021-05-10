@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['vec_5fop_222',['vec_op',['../namespacenum.html#a4e9fe88d96692c33fe86018dae231540',1,'num']]],
-  ['vline_223',['vline',['../namespaceplt.html#a7cfc8899deffdc69733c4d9c8550b214',1,'plt']]]
+  ['t_215',['T',['../classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578',1,'var::matrix']]],
+  ['tan_216',['tan',['../namespacenum.html#a7f6f11d36d6e7bd6ebd6f8a3866ce8c1',1,'num']]],
+  ['tanh_217',['tanh',['../namespacenum.html#ac5e4874573f5fa8fca572b34d0e0048f',1,'num']]],
+  ['taylor_218',['taylor',['../namespacecalc.html#ad4da47f019995d52a59ce2802eead032',1,'calc']]],
+  ['tr_219',['tr',['../classvar_1_1matrix.html#a3a7b528f131d95929df267501b461183',1,'var::matrix']]],
+  ['tt_220',['TT',['../classvar_1_1matrix.html#a00796c4afbd0a44f4a482c8c4f9155a3',1,'var::matrix']]],
+  ['turn_5fto_221',['turn_to',['../classvar_1_1matrix.html#a9eac7bafdfd06437d0b86931335fb194',1,'var::matrix']]]
 ];

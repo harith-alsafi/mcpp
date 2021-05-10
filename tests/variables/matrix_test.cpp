@@ -465,7 +465,7 @@ TEST(operators, mult_div)
     ASSERT_TRUE(2*m2 == m2*2);
     ASSERT_TRUE(2*m2 == m1+m2);
 
-  // divide 
+    // divide 
     ASSERT_TRUE(m2/2 != 2/m2);
 
     // modulus 
@@ -479,6 +479,12 @@ TEST(operators, mult_div)
         }
     }
     ASSERT_EQ(count, 3);
+
+    // mathmul
+    auto m7 = m1.mathmul(m2);
+    ASSERT_EQ(m7[0][0], 1*1);
+    ASSERT_EQ(m7[1][1], 4*4);
+
 
 } 
 

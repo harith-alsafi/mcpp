@@ -490,6 +490,20 @@ namespace var
                 _col = data[0].size();
             }
 
+            void row_swap(int i1, int i2){
+                check_row(i1);
+                check_row(i2);
+                auto temp = data[i1];
+                data[i1] = data[i2];
+                data[i2] = temp;
+            }
+
+            void col_swap(int j1, int j2){
+                check_col(j1);
+                check_col(j2);
+
+            }
+
             /**
              * @brief Sorts all rows
              * 
@@ -775,6 +789,16 @@ namespace var
             }
 
             /**
+             * @brief Returns if the matrix is empty or not
+             * 
+             * @return true 
+             * @return false 
+             */
+            bool is_empty(){
+                return data.empty();
+            }
+
+            /**
              * @brief Checks if matrix is an identity matrix
              * 
              * @return true 
@@ -1022,16 +1046,57 @@ namespace var
                 return other*n;
             }
 
+            /**
+             * @brief Normal multiplicatoin 
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto mul_m = m1.mathmul(m2);
+             * ``` 
+             * 
+             * @param other ``matrix``
+             * @return ``matrix`` 
+             */
+            matrix mathmul(matrix const &other){
+                // condition 
+                if(!(_row == other._col && _col == other._row)){
+                    throw std::invalid_argument("Size mismatch");
+                }
+                matrix temp(_row, _col);
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]*other.data[i][j];
+                    }
+                }
+                return temp;
+            }
+
 // ***************************** / operator ************************** //
 
+            /**
+             * @brief Matrix division using inverse 
+             * 
+             * @param other ``matrix`` 
+             * @return ``matrix`` 
+             */
             matrix operator /(matrix &other){
                 return *this*other.inv();
             }
 
+            /**
+             * @brief ``matrix/var`` 
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto m_over_2 = m/2; // 2/m can work
+             * ```
+             * 
+             * @param n our variable
+             * @return ``matrix``
+             */
             matrix operator /(D n){
                 matrix temp(_row, _col);
                 temp.data = data;
-                
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]/n;
@@ -1040,6 +1105,13 @@ namespace var
                 return temp;
             }
 
+            /**
+             * @brief ``var/matrix``
+             * 
+             * @param n our variable
+             * @param other ``matrix``
+             * @return ``matrix`` 
+             */
             friend matrix operator /(D n, matrix &other){
                 matrix temp = other;
                 for(int i = 0; i < other._row; i++){
@@ -1243,7 +1315,6 @@ namespace var
                 return input;
             }
     };
-    // TODO add normal multiplication
     // TODO add row and col swap
     // TODO rref 
     // TODO test division 

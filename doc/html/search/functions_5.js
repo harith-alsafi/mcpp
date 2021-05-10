@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get_5fcol_172',['get_col',['../classvar_1_1matrix.html#a6de49f43eb3bc3f3ed6c0b658a97605c',1,'var::matrix']]],
-  ['get_5frow_173',['get_row',['../classvar_1_1matrix.html#aa27021aa738d82a6b9dde82de321f5a1',1,'var::matrix']]]
+  ['factorial_172',['factorial',['../namespacemsc.html#a9fe57c0fa8c03c6b39f11b09ce3cc47f',1,'msc']]],
+  ['figure_173',['figure',['../namespaceplt.html#a294c68129755000491a6b4d6d9160f86',1,'plt']]]
 ];
