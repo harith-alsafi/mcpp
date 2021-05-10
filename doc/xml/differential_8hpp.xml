@@ -4,7 +4,6 @@
     <compoundname>differential.hpp</compoundname>
     <includes local="no">vector</includes>
     <includes refid="mcpp_8hpp" local="yes">../mcpp.hpp</includes>
-    <includes local="no">cmath</includes>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
     <incdepgraph>
       <node id="1">
@@ -12,11 +11,6 @@
         <link refid="differential_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>cmath</label>
       </node>
       <node id="2">
         <label>vector</label>

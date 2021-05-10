@@ -107,32 +107,6 @@ namespace var
                 }
             }
             
-            /**
-             * @brief minor of a matrix
-             * 
-             * @param i row
-             * @param j colum
-             * @param other ``matrix`` type
-             * @return ``matrix`` 
-             */
-            matrix M(int i, int j, matrix &other) {
-                matrix b(other.row()-1, other.col()-1);
-                int r = 0;
-                int c = 0;
-                for(int ii = 0; ii < other.row(); ii++){
-                    for(int jj = 0; jj < other.col(); jj++){
-                        if(ii != i && jj != j){
-                            b[r][c] = other[ii][jj];
-                            c++;
-                        }
-                    }
-                    c = 0;
-                    if(ii != i){
-                        r++;
-                    }
-                }
-                return b;
-            }
 
             /**
              * @brief Recursive determinant 
@@ -203,6 +177,9 @@ namespace var
                     {7, 8, 9}
                 };
              * ```
+             * 
+             * ## Getters
+             * 
              * @param a initializer list 
              */
             matrix (std::initializer_list<std::initializer_list<D>> a){ 
@@ -218,36 +195,15 @@ namespace var
                 }
             }
 
-            /**
-             * @brief Resizes the matrix
-             * 
-             * ### Usage:
-             * ```cpp
-             * m.resize(5, 6);
-             * ``` 
-             * 
-             * !!! warning "Warning"  
-             * <pre>
-             *     This resets all elements in the matrix
-             * </pre>
-             * @param r number of rows 
-             * @param c number of colums
-             */
-            void resize(int r, int c){
-                // checking 
-                if(r < 0 || c < 0){
-                    throw std::invalid_argument("Invalid values");
-                }
-                _row = r;
-                _col = c;
-                data.clear();
-                for(int i = 0; i < _row; i++){
-                    data.push_back(std::vector<D>(_col));
-                }
-            }
 
             /**
              * @brief Returns the number of rows
+             * 
+             * **Usage**:
+             * ```cpp
+             * var::matrix<int> m(2, 3); 
+             * int r = m.row();
+             * ```
              * 
              * @return ``int`` 
              */
@@ -274,7 +230,58 @@ namespace var
             }
 
             /**
+             * @brief Mainly invoked for the ranged for loop
+             * 
+             * **Usage**:
+             * ```cpp
+             * for(auto i: m){
+             *    for(j: i){
+             *      // do smth 
+             *    }
+             * }
+             * ```
+             * 
+             * @return ``std::vector<D>``
+             */
+            auto begin(){
+                return data.begin();
+            }
+
+            /**
+             * @brief Returns end of data
+             * 
+             * @return ``std::vector<D>``
+             */
+            auto end(){
+                return data.end();
+            }
+
+            /**
+             * @brief Returns const begin
+             * 
+             * @return ``std::vector<D>``
+             */
+            auto begin() const{
+                return data.begin();
+            }
+
+            /**
+             * @brief Returns const end
+             * 
+             * @return ``std::vector<D>``
+             */
+            auto end() const{
+                return data.end();
+            }
+
+            /**
              * @brief Returns the row at an index
+             * 
+             * **Usage**:  
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * auto col = m.get_col(1);
+             * ```
              * 
              * @param i row index  
              * @return ``std::vector<D>`` 
@@ -287,14 +294,11 @@ namespace var
             /**
              * @brief Returns the colum at an index
              * 
-             * Usage:  
-             * ```cpp
-             * var::matrix<int> m(3, 3);
-             * auto col = m.get_col(1);
-             * ```
-             * 
              * @param j colum index 
              * @return ``std::vector<D>``
+             * 
+             * ## Mutable methods   
+             * 
              */
             std::vector<D> get_col(int j){
                 check_col(j);
@@ -305,13 +309,43 @@ namespace var
                 return temp;
             }
 
+
+
+            /**
+             * @brief Resizes the matrix
+             * 
+             * **Usage**:
+             * ```cpp
+             * m.resize(3, 3);
+             * ``` 
+             * 
+             * !!! warning "Warning"  
+             * <pre>
+             *     This resets all elements in the matrix
+             * </pre>
+             * 
+             * @param r number of rows 
+             * @param c number of colums
+             */
+            void resize(int r, int c){
+                // checking 
+                if(r < 0 || c < 0){
+                    throw std::invalid_argument("Invalid values");
+                }
+                _row = r;
+                _col = c;
+                data.clear();
+                for(int i = 0; i < _row; i++){
+                    data.push_back(std::vector<D>(_col));
+                }
+            }
+
             /**
              * @brief Inserts row at the end or the matrix
              * 
              * **Usage**:  
              * ```cpp
-             * var::matrix<int> m(3, 3);
-             * m.push_row(1, {1, 2, 3});
+             * m.push_row({1, 2, 3});
              * ```
              * 
              * @param a row vector
@@ -358,7 +392,6 @@ namespace var
              * 
              * **Usage**:  
              * ```cpp
-             * var::matrix<int> m(3, 3);
              * m.insert_row(1, {1, 2, 3});
              * ```
              * 
@@ -379,12 +412,6 @@ namespace var
             /**
              * @brief Inserts column at specefic index
              * 
-             * **Usage**:  
-             * ```cpp
-             * var::matrix<int> m(3, 3);
-             * m.insert_col(1, {1, 2, 3});
-             * ```
-             * 
              * @param j column index 
              * @param a colum vector
              */
@@ -404,6 +431,11 @@ namespace var
 
             /**
              * @brief Removes last row
+             * 
+             * **Usage**:
+             * ```cpp
+             * m.pop_row(1);
+             * ``` 
              * 
              */
             void pop_row(){
@@ -431,6 +463,11 @@ namespace var
             /**
              * @brief Erase row at index
              * 
+             * **Usage**:
+             * ```cpp
+             * m.erase_row(1);
+             * ``` 
+             * 
              * @param i row index
              */
             void erase_row(int i){
@@ -441,12 +478,6 @@ namespace var
 
             /**
              * @brief Erases column at index
-             * 
-             * **Usage**:
-             * ```cpp
-             * var::matrix<int> m(3, 3);
-             * m.erase_col(1);
-             * ```
              * 
              * @param j colum index
              * 
@@ -461,6 +492,11 @@ namespace var
 
             /**
              * @brief Sorts all rows
+             * 
+             * **Usage**:
+             * ```cpp
+             * m.sort_rows();
+             * ``` 
              * 
              * @param d details are shown below
              * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
@@ -487,6 +523,11 @@ namespace var
 
             /**
              * @brief Sorts rows at specefic index 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m.sort_row(0, 0);
+             * ``` 
              * 
              * @param i row index
              * @param d details are shown below
@@ -522,6 +563,12 @@ namespace var
             /**
              * @brief Does operations on specefic rows
              * 
+             * **Usage**:
+             * ```cpp
+             * auto f = [](int A){return A*2+3;};
+             * m.row_op(1, f);
+             * ```
+             * 
              * @tparam LAMBDA: ``std::function`` 
              * @param i colum index
              * @param f function to change colum elements
@@ -547,7 +594,7 @@ namespace var
              *         1. There is a size mismatch  
              *         2. Invalid index 
              * </pre>
-             * 
+             *              
              */
             template<typename LAMBDA> 
             void col_op(int j, LAMBDA f){
@@ -560,13 +607,15 @@ namespace var
             /**
              * @brief Converts all elements to n
              * 
-             * @param n the specifeid variable
+             * **Usage**:
+             * ```cpp
+             * m.turn_to(1); 
+             * ```
              * 
-             * !!! note "Note"    
-             * <pre>
-             *     All the functions listed abover **mutate** the original matrix  
-             * </pre>
+             * @param n the specifeid variable
              *  
+             * ## Immutable methods  
+             * 
              */
             void turn_to(D n){
                 for(int i = 0; i < _row; i++){
@@ -579,7 +628,12 @@ namespace var
             /**
              * @brief Sum of all elements
              * 
-             * @return D 
+             * **Usage**:
+             * ```cpp
+             * auto sum = m.sum();
+             * ``` 
+             * 
+             * @return ``D``
              */
             D sum(){
                 D SUM = D();
@@ -592,9 +646,9 @@ namespace var
             }
 
             /**
-             * @brief trace of a matrix
+             * @brief Trace of a matrix
              * 
-             * @return D 
+             * @return ``D``
              */
             D tr(){
                 square();
@@ -606,9 +660,25 @@ namespace var
             }
 
             /**
-             * @brief returns transpose 
+             * @brief Returns the determinant 
              * 
-             * @return matrix 
+             * @return ``D`` 
+             */
+            D det(){
+                square();
+                return DET(*this);
+            }
+
+            /**
+             * @brief Transpose of a matrix 
+             * 
+             * **Usage**:
+             * ```cpp
+             * var::matrix<int> m(3, 3);
+             * auto T = m.T();
+             * ``` 
+             * 
+             * @return ``matrix`` 
              */
             matrix T(){
                 matrix temp;
@@ -617,18 +687,9 @@ namespace var
                 return temp;
             }
 
-            /**
-             * @brief returns the determinant 
-             * 
-             * @return D 
-             */
-            D det(){
-                square();
-                return DET(*this);
-            }
 
             /**
-             * @brief returns cofactor matrix
+             * @brief Returns cofactor matrix
              * 
              * @return matrix 
              */
@@ -644,10 +705,38 @@ namespace var
                 return temp;
             }
 
+
             /**
-             * @brief adjugate of a matrix
+             * @brief Minor of a matrix
              * 
-             * @return matrix 
+             * @param i row index
+             * @param j colum index
+             * @param other ``matrix`` type
+             * @return ``matrix`` 
+             */
+            matrix M(int i, int j, matrix &other) {
+                matrix b(other.row()-1, other.col()-1);
+                int r = 0;
+                int c = 0;
+                for(int ii = 0; ii < other.row(); ii++){
+                    for(int jj = 0; jj < other.col(); jj++){
+                        if(ii != i && jj != j){
+                            b[r][c] = other[ii][jj];
+                            c++;
+                        }
+                    }
+                    c = 0;
+                    if(ii != i){
+                        r++;
+                    }
+                }
+                return b;
+            }
+
+            /**
+             * @brief Adjugate of a matrix
+             * 
+             * @return ``matrix`` 
              */
             matrix adj(){
                 square();
@@ -656,9 +745,9 @@ namespace var
             }
 
             /**
-             * @brief returns inverse of a matrix
+             * @brief Returns inverse of a matrix
              * 
-             * @return matrix 
+             * @return ``matrix`` 
              */
             matrix inv(){
                 square();
@@ -671,7 +760,12 @@ namespace var
             }
 
             /**
-             * @brief checks if matrix is square 
+             * @brief Checks if matrix is square 
+             * 
+             * **Usage**:
+             * ```cpp
+             * bool square = m.is_square();
+             * ```
              * 
              * @return true 
              * @return false 
@@ -681,10 +775,13 @@ namespace var
             }
 
             /**
-             * @brief checks if matrix is an identity matrix
+             * @brief Checks if matrix is an identity matrix
              * 
              * @return true 
              * @return false 
+             * 
+             * ## Operator methods 
+             * 
              */
             bool is_identity(){
                 if(is_square()){
@@ -709,14 +806,17 @@ namespace var
 
 // ***************************** [] operator ************************** //
 
-
-
             /**
-             * @brief [] operator for rows 
-             * calls another [] operator for column
+             * @brief [][] operator for ``matrix``
              * 
-             * @param i 
-             * @return Row 
+             * **Usage**:
+             * ```cpp
+             * // m[row][col]
+             * m[0][0] = 5;
+             * ```
+             * 
+             * @param i row index
+             * @return ``Col`` which then returns &D 
              */
             Col operator[](int i){
                 return Col(*this, i);
@@ -725,10 +825,16 @@ namespace var
 // ***************************** + operator ************************** //
 
             /**
-             * @brief matrix addition
+             * @brief Matrix addition
+             * 
+             * **Usage**:
+             * ```cpp
+             * // m1 and m2 are matrix class
+             * auto summed = m1+m2; 
+             * ```
              * 
              * @param other 
-             * @return matrix 
+             * @return ``matrix`` 
              */
             matrix operator +(matrix const &other){
                 check_size(other._row, other._col); 
@@ -743,10 +849,15 @@ namespace var
             }
 
             /**
-             * @brief matrix+var
+             * @brief ``matrix+var`` as ``var`` as added to all elements
              * 
-             * @param n 
-             * @return matrix 
+             * **Usage**:
+             * ```cpp
+             * auto m_add_2 = m+2; // or 2+m 
+             * ```
+             * 
+             * @param n variable to add 
+             * @return ``matrix`` 
              */
             matrix operator +(D n){
                 matrix temp = *this;
@@ -759,11 +870,11 @@ namespace var
             }
 
             /**
-             * @brief var+matrix
+             * @brief ``var+matrix``
              * 
-             * @param n 
-             * @param other 
-             * @return matrix 
+             * @param n variable to add
+             * @param other ``matrix``
+             * @return ``matrix`` 
              */
             friend matrix operator +(D n, matrix &other){
                 return other+n;
@@ -772,9 +883,14 @@ namespace var
 // ***************************** - operator ************************** //
 
             /**
-             * @brief -matrix
+             * @brief Negative of a matrix
              * 
-             * @return matrix 
+             * **Usage**:
+             * ```cpp
+             * auto negated = -m; 
+             * ```
+             * 
+             * @return ``matrix`` 
              */
             matrix operator -(){
                 matrix temp = *this;    
@@ -787,9 +903,14 @@ namespace var
             }
 
             /**
-             * @brief matrix subtraction
+             * @brief Matrix subtraction
              * 
-             * @param other 
+             * **Usage**:
+             * ```cpp
+             * auto subtracted = m1-m2; 
+             * ```
+             * 
+             * @param other ``matrix``
              * @return matrix 
              */
             matrix operator -(matrix const &other){
@@ -804,10 +925,15 @@ namespace var
             }
 
             /**
-             * @brief matrix-var
+             * @brief ``matrix-var``
              * 
-             * @param n 
-             * @return matrix 
+             * **Usage**:
+             * ```cpp
+             * auto m_take_2 = m-2; // or 2-m 
+             * ``` 
+             * 
+             * @param n variable to add
+             * @return ``matrix`` 
              */
             matrix operator -(D n){
                 matrix temp = *this;
@@ -820,11 +946,11 @@ namespace var
             }
 
             /**
-             * @brief var-matrix
+             * @brief ``var-matrix``
              * 
-             * @param n 
-             * @param other 
-             * @return matrix 
+             * @param n variable to add
+             * @param other ``matrix``
+             * @return ``matrix`` 
              */
             friend matrix operator -(D n, matrix &other){
                 matrix temp = -other;
@@ -834,10 +960,14 @@ namespace var
 // ***************************** * operator ************************** //
 
             /**
-             * @brief matrix multiplication 
+             * @brief Matrix multiplication 
              * 
-             * @param other 
-             * @return matrix 
+             * **Usage**:
+             * ```cpp
+             * auto matrix_mul = m*m;
+             * 
+             * @param other ``matrix``
+             * @return ``matrix`` 
              */
             matrix operator *(matrix const &other){
                 // condition 
@@ -861,10 +991,15 @@ namespace var
             }
 
             /**
-             * @brief matrix*var
+             * @brief ``matrix*var``
              * 
-             * @param n 
-             * @return matrix 
+             * **Usage**:
+             * ```cpp
+             * auto m_by_2 = m*2; // or 2*m
+             * ```
+             * 
+             * @param n variable multiplying with 
+             * @return ``matrix`` 
              */
             matrix operator *(D n){
                 matrix temp = *this;
@@ -877,11 +1012,11 @@ namespace var
             }
 
             /**
-             * @brief var*matrix
+             * @brief ``var*matrix``
              * 
-             * @param n 
-             * @param other 
-             * @return matrix 
+             * @param n variable multiplying with 
+             * @param other ``matrix`` 
+             * @return ``matrix`` 
              */
             friend matrix operator *(D n, matrix &other){
                 return other*n;
@@ -916,6 +1051,18 @@ namespace var
             }
 
 // ***************************** % operator ************************** //
+            
+            /**
+             * @brief Moudlus operator 
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto m_divisably_2 = m%2;
+             * ```
+             * 
+             * @param n modulus variable
+             * @return ``matrix`` 
+             */
             matrix operator %(D n){
                 matrix temp = *this;
                 for(int i = 0; i < _row; i++){
@@ -929,7 +1076,12 @@ namespace var
 // *********************** conditional operators ******************** //
 
             /**
-             * @brief equals method for all elements
+             * @brief Equals to operator 
+             * 
+             * **Usage**:
+             * ```cpp
+             * bool eq = (m1 == m2);
+             * ````
              * 
              * @param other 
              * @return true 
@@ -949,9 +1101,9 @@ namespace var
             }
 
             /**
-             * @brief less than operator
+             * @brief Less than operator
              * 
-             * @param other 
+             * @param other ``matrix``
              * @return true 
              * @return false 
              */
@@ -970,9 +1122,9 @@ namespace var
             }
             
             /**
-             * @brief more than
+             * @brief More than
              * 
-             * @param other 
+             * @param other ``matrix``
              * @return true 
              * @return false 
              */
@@ -981,9 +1133,9 @@ namespace var
             }
 
             /**
-             * @brief less than or equal
+             * @brief Less than or equal
              * 
-             * @param other 
+             * @param other ``matrix``
              * @return true 
              * @return false 
              */
@@ -1000,9 +1152,9 @@ namespace var
             }
 
             /**
-             * @brief more than or equal 
+             * @brief More than or equal 
              * 
-             * @param other 
+             * @param other ``matrix``
              * @return true 
              * @return false 
              */
@@ -1011,9 +1163,9 @@ namespace var
             }        
 
             /**
-             * @brief not equal method
+             * @brief Not equal method
              * 
-             * @param other 
+             * @param other ``matrix``
              * @return true 
              * @return false 
              */
@@ -1024,8 +1176,15 @@ namespace var
 // ************************* stream operator ************************ //
 
             /**
-             * @brief print method for the class 
-             * var::matrix<int> m; cout << m;
+             * 
+             * @brief Output method for matrices
+             *
+             * **Usage**:
+             * 
+             * ```cpp
+             * std::cout << m;
+             * ```
+             * 
              * @tparam D 
              * @param out 
              * @param other 
@@ -1047,11 +1206,27 @@ namespace var
             }
 
             /**
-             * @brief input operator 
+             * @brief Input method for matrices 
+             * 
+             * **Usage**:
+             * ```cpp
+             * std::cin >> m;
+             * ```
              * 
              * @param input x
              * @param other 
              * @return std::istream& 
+             * 
+             * !!! note "Note"  
+             * <pre>
+             *     The input and output method rely on the following configuration (3 rows amd 4 colums in this case)
+             *        ```
+             *        1,2,3,4
+             *        5,6,7,8
+             *        9,2,1,5
+             *        ```
+             * </pre>
+             * 
              */
             friend std::istream &operator >> (std::istream  &input, matrix &other){
                 std::vector<D> temp;

@@ -467,6 +467,19 @@ TEST(operators, mult_div)
 
   // divide 
     ASSERT_TRUE(m2/2 != 2/m2);
+
+    // modulus 
+    auto m6 = m5%2;
+    int count = 0;
+    for(const auto &i: m6){
+        for(const auto &j: i){
+            if(j == 0){
+                count++;
+            }
+        }
+    }
+    ASSERT_EQ(count, 3);
+
 } 
 
 TEST(operators, conditional) 

@@ -11,7 +11,8 @@ Class for 2d matrix of objects.
 
 
 
-Collaboration diagram for var\+::matrix$<$ D $>$\+:\nopagebreak
+Collaboration diagram for var\+::matrix$<$ D $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,8 +33,6 @@ class \mbox{\hyperlink{classvar_1_1matrix_1_1Col}{Col}}
 \begin{DoxyCompactList}\small\item\em Default construct a new matrix object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix_a4b93fcfa4d64d096fd185ff1004256eb}{matrix}} (std\+::initializer\+\_\+list$<$ std\+::initializer\+\_\+list$<$ D $>$$>$ a)
 \begin{DoxyCompactList}\small\item\em Construct a new matrix object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classvar_1_1matrix_a9bc064083b67aaab190bd66e7248a5ba}{resize}} (int r, int c)
-\begin{DoxyCompactList}\small\item\em Resizes the matrix. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classvar_1_1matrix_a591c6983a2637275bb1d10d2d2e1e4a5}{row}} ()
 \begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classvar_1_1matrix_a18f1458c2532b0aabbb3370d9556e745}{col}} ()
@@ -44,6 +43,8 @@ std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1matrix_aa27021aa738d82a6b9dd
 \begin{DoxyCompactList}\small\item\em Returns the row at an index. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1matrix_a6de49f43eb3bc3f3ed6c0b658a97605c}{get\+\_\+col}} (int j)
 \begin{DoxyCompactList}\small\item\em Returns the colum at an index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a9bc064083b67aaab190bd66e7248a5ba}{resize}} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Resizes the matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_aa141055a5f25f5d62dd26ae0e915f6af}{push\+\_\+row}} (const std\+::vector$<$ D $>$ \&a)
 \begin{DoxyCompactList}\small\item\em Inserts row at the end or the matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}{push\+\_\+col}} (const std\+::vector$<$ D $>$ \&a)
@@ -75,37 +76,39 @@ void \mbox{\hyperlink{classvar_1_1matrix_aaaa052e8ec27a392848bd750b34f35bf}{sort
 void \mbox{\hyperlink{classvar_1_1matrix_a9eac7bafdfd06437d0b86931335fb194}{turn\+\_\+to}} (D n)
 \begin{DoxyCompactList}\small\item\em Converts all elements to n. \end{DoxyCompactList}\item 
 D \mbox{\hyperlink{classvar_1_1matrix_af58bf7e07cebde78a2e0ad99acd5deeb}{sum}} ()
-\begin{DoxyCompactList}\small\item\em sum of all elements \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sum of all elements. \end{DoxyCompactList}\item 
 D \mbox{\hyperlink{classvar_1_1matrix_a3a7b528f131d95929df267501b461183}{tr}} ()
-\begin{DoxyCompactList}\small\item\em trace of a matrix \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}{T}} ()
-\begin{DoxyCompactList}\small\item\em returns transpose \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Trace of a matrix. \end{DoxyCompactList}\item 
 D \mbox{\hyperlink{classvar_1_1matrix_af4104a0aa496424fc75256263e412d9f}{det}} ()
-\begin{DoxyCompactList}\small\item\em returns the determinant \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the determinant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}{T}} ()
+\begin{DoxyCompactList}\small\item\em Transpose of a matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_ac97536b4f94f1dd614fb6267c07dd2b7}{cofactor}} ()
-\begin{DoxyCompactList}\small\item\em returns cofactor matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns cofactor matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_aeb8bdaf174065f964bdd63e3c55ec5e2}{M}} (int i, int j, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
+\begin{DoxyCompactList}\small\item\em Minor of a matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_ad78a167d7400fac474fd03cf3363defb}{adj}} ()
-\begin{DoxyCompactList}\small\item\em adjugate of a matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adjugate of a matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a8a66138dce5fdb1b27a89349a8fd8539}{inv}} ()
-\begin{DoxyCompactList}\small\item\em returns inverse of a matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns inverse of a matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a5e7cc7e40124be3bd4a1accfacd68b05}{rref}} ()
 \item 
 bool \mbox{\hyperlink{classvar_1_1matrix_a69ffd8772f87c70f5a8e525b0e4dd71f}{is\+\_\+square}} ()
-\begin{DoxyCompactList}\small\item\em checks if matrix is square \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Checks if matrix is square. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classvar_1_1matrix_a34a63853e0456af7ba9bbd7e10b4cfc6}{is\+\_\+identity}} ()
-\begin{DoxyCompactList}\small\item\em checks if matrix is an identity matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Checks if matrix is an identity matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix_1_1Col}{Col}} \mbox{\hyperlink{classvar_1_1matrix_a2d10297e28d8c6c6264d6f174003d193}{operator\mbox{[}$\,$\mbox{]}}} (int i)
-\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]} operator for rows calls another \mbox{[}\mbox{]} operator for column \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]}\mbox{[}\mbox{]} operator for {\ttfamily matrix} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_aaee49a5cde5696ed5d41b2ed5b15d69a}{operator+}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
-\begin{DoxyCompactList}\small\item\em matrix addition \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Matrix addition. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_af312c6541557412aa40999381c832613}{operator+}} (D n)
-\begin{DoxyCompactList}\small\item\em matrix+var \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em {\ttfamily matrix+var} as {\ttfamily var} as added to all elements \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a277209428c74da8a84cc6e59b540cead}{operator-\/}} ()
-\begin{DoxyCompactList}\small\item\em -\/matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Negative of a matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a20cab5ed13b35173c242b6fe0909eda6}{operator-\/}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
-\begin{DoxyCompactList}\small\item\em matrix subtraction \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Matrix subtraction. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a0052ad415d92a84561c48b2f94c5159b}{operator-\/}} (D n)
-\begin{DoxyCompactList}\small\item\em matrix-\/var \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em {\ttfamily matrix-\/var} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a3d767a0fcfa836340881b6fd9f4ee4e5}{operator$\ast$}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
 \begin{DoxyCompactList}\small\item\em matrix multiplication \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a6ba280ed6e9ad194e8f2eb25a8aff4bc}{operator$\ast$}} (D n)
@@ -115,19 +118,7 @@ bool \mbox{\hyperlink{classvar_1_1matrix_a34a63853e0456af7ba9bbd7e10b4cfc6}{is\+
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a1b9e65f8c962ec95aeac343d5d6ba89b}{operator/}} (D n)
 \item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a7629935f8527febca8ff4a34dff026ff}{operator\%}} (D n)
-\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_a5f9279a96dbcea4c2f124a664fb54d26}{operator==}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em equals method for all elements \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_aa4f3ec80a3e1f97ff9eb9c7fccfff043}{operator$<$}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em less than operator \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_a1e8a7d11cb6bb76ffd28639b9b73a8d8}{operator$>$}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em more than \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_ad030c6e976b07c8177ab7cda48548ba1}{operator$<$=}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em less than or equal \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_a208af77ec9a1ac74ed6e0f55af7a4e94}{operator$>$=}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em more than or equal \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classvar_1_1matrix_aacd1f3a184f36944918cb26b8ac6cccb}{operator!=}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} other)
-\begin{DoxyCompactList}\small\item\em not equal method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -144,8 +135,6 @@ void \mbox{\hyperlink{classvar_1_1matrix_abe65d7997f230b2ac6564850717be182}{chec
 \begin{DoxyCompactList}\small\item\em Returns transpose for data. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a98defd0b837085eae86da59649934392}{check\+\_\+size}} (int r, int c)
 \begin{DoxyCompactList}\small\item\em Checks other matrix size for operators. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_aeb8bdaf174065f964bdd63e3c55ec5e2}{M}} (int i, int j, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
-\begin{DoxyCompactList}\small\item\em minor of a matrix \end{DoxyCompactList}\item 
 D \mbox{\hyperlink{classvar_1_1matrix_aac8393e86296c741a8e1023b329620b1}{DET}} (\mbox{\hyperlink{classvar_1_1matrix}{matrix}} a)
 \begin{DoxyCompactList}\small\item\em Recursive determinant. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a54224ff2eefe0c6cd3fbeaff7a309f84}{square}} ()
@@ -163,17 +152,13 @@ int \mbox{\hyperlink{classvar_1_1matrix_ab19eccf26d9fefbca395626e7790318b}{\+\_\
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_acd798c4a5acd27adbadc15b750d13aa9}{operator+}} (D n, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
-\begin{DoxyCompactList}\small\item\em var+matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em {\ttfamily var+matrix} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_aec0f669b84ef6cbf1197fda5328d2d3e}{operator-\/}} (D n, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
-\begin{DoxyCompactList}\small\item\em var-\/matrix \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em {\ttfamily var-\/matrix} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_afa75e72ad7b2e69f24b69e6dcfdbbcc6}{operator$\ast$}} (D n, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
 \begin{DoxyCompactList}\small\item\em var$\ast$matrix \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix_a21bdbe6bff69133cc693c53cac84bfec}{operator/}} (D n, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
-\item 
-std\+::ostream \& \mbox{\hyperlink{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} const \&other)
-\begin{DoxyCompactList}\small\item\em print method for the class var\+::matrix$<$int$>$ m; cout $<$$<$ m; \end{DoxyCompactList}\item 
-std\+::istream \& \mbox{\hyperlink{classvar_1_1matrix_ae68eff2c0e5df021eec102858661dd2a}{operator$>$$>$}} (std\+::istream \&input, \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \&other)
-\begin{DoxyCompactList}\small\item\em input operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -268,7 +253,8 @@ Construct a new matrix object.
 \DoxyCodeLine{\};}
 
 \end{DoxyCode}
- 
+\hypertarget{classvar_1_1matrix_autotoc_md0}{}\doxysubsubsection{Getters}\label{classvar_1_1matrix_autotoc_md0}
+
 \begin{DoxyParams}{Parameters}
 {\em a} & initializer list \\
 \hline
@@ -285,10 +271,10 @@ Construct a new matrix object.
 
 
 
-adjugate of a matrix 
+Adjugate of a matrix. 
 
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a81c4b4795406aa26c149f678603815a9}\label{classvar_1_1matrix_a81c4b4795406aa26c149f678603815a9}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!check\_col@{check\_col}}
@@ -350,7 +336,7 @@ Checks other matrix size for operators.
 
 
 
-returns cofactor matrix 
+Returns cofactor matrix. 
 
 \begin{DoxyReturn}{Returns}
 matrix 
@@ -409,10 +395,10 @@ D \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::det (\begin{D
 
 
 
-returns the determinant 
+Returns the determinant. 
 
 \begin{DoxyReturn}{Returns}
-D 
+{\ttfamily D} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_aac8393e86296c741a8e1023b329620b1}\label{classvar_1_1matrix_aac8393e86296c741a8e1023b329620b1}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!DET@{DET}}
@@ -445,14 +431,6 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::erase\+\_\
 
 Erases column at index. 
 
-{\bfseries{Usage}}\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(3, 3);}
-\DoxyCodeLine{m.erase\_col(1);}
-
-\end{DoxyCode}
-
-
 
 \begin{DoxyParams}{Parameters}
 {\em j} & colum index \\
@@ -468,6 +446,13 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::erase\+\_\
 
 
 Erase row at index. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.erase\_row(1);}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
@@ -485,23 +470,15 @@ std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $
 
 Returns the colum at an index. 
 
-Usage\+: ~\newline
- 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(3, 3);}
-\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{classvar_1_1matrix_a18f1458c2532b0aabbb3370d9556e745}{col}} = m.get\_col(1);}
-
-\end{DoxyCode}
-
-
 
 \begin{DoxyParams}{Parameters}
 {\em j} & colum index \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-{\ttfamily std\+::vector$<$D$>$} 
+{\ttfamily std\+::vector$<$D$>$}
 \end{DoxyReturn}
+\hypertarget{classvar_1_1matrix_autotoc_md1}{}\doxysubsubsection{Mutable methods}\label{classvar_1_1matrix_autotoc_md1}
 \mbox{\Hypertarget{classvar_1_1matrix_aa27021aa738d82a6b9dde82de321f5a1}\label{classvar_1_1matrix_aa27021aa738d82a6b9dde82de321f5a1}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!get\_row@{get\_row}}
 \index{get\_row@{get\_row}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
@@ -512,6 +489,15 @@ std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $
 
 
 Returns the row at an index. 
+
+{\bfseries{Usage}}\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(3, 3);}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{classvar_1_1matrix_a18f1458c2532b0aabbb3370d9556e745}{col}} = m.get\_col(1);}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
@@ -533,15 +519,6 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::insert\+\_
 
 Inserts column at specefic index. 
 
-{\bfseries{Usage}}\+: ~\newline
- 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(3, 3);}
-\DoxyCodeLine{m.insert\_col(1, \{1, 2, 3\});}
-
-\end{DoxyCode}
-
-
 
 \begin{DoxyParams}{Parameters}
 {\em j} & column index \\
@@ -560,6 +537,14 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::insert\+\_
 
 Inserts row at specefic index. 
 
+{\bfseries{Usage}}\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.insert\_row(1, \{1, 2, 3\});}
+
+\end{DoxyCode}
+
+
 
 \begin{DoxyParams}{Parameters}
 {\em i} & row index \\
@@ -576,10 +561,10 @@ Inserts row at specefic index.
 
 
 
-returns inverse of a matrix 
+Returns inverse of a matrix. 
 
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a34a63853e0456af7ba9bbd7e10b4cfc6}\label{classvar_1_1matrix_a34a63853e0456af7ba9bbd7e10b4cfc6}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!is\_identity@{is\_identity}}
@@ -590,13 +575,14 @@ bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::is\+\_\+id
 
 
 
-checks if matrix is an identity matrix 
+Checks if matrix is an identity matrix. 
 
 \begin{DoxyReturn}{Returns}
 true 
 
-false 
+false
 \end{DoxyReturn}
+\hypertarget{classvar_1_1matrix_autotoc_md3}{}\doxysubsubsection{Operator methods}\label{classvar_1_1matrix_autotoc_md3}
 \mbox{\Hypertarget{classvar_1_1matrix_a69ffd8772f87c70f5a8e525b0e4dd71f}\label{classvar_1_1matrix_a69ffd8772f87c70f5a8e525b0e4dd71f}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!is\_square@{is\_square}}
 \index{is\_square@{is\_square}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
@@ -606,7 +592,14 @@ bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::is\+\_\+sq
 
 
 
-checks if matrix is square 
+Checks if matrix is square. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} \mbox{\hyperlink{classvar_1_1matrix_a54224ff2eefe0c6cd3fbeaff7a309f84}{square}} = m.is\_square();}
+
+\end{DoxyCode}
+
 
 \begin{DoxyReturn}{Returns}
 true 
@@ -618,44 +611,23 @@ false
 \index{M@{M}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{M()}{M()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
-\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::M (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+\mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::M (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-minor of a matrix 
+Minor of a matrix. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em i} & row \\
+{\em i} & row index \\
 \hline
-{\em j} & colum \\
+{\em j} & colum index \\
 \hline
 {\em other} & {\ttfamily matrix} type \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 {\ttfamily matrix} 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_aacd1f3a184f36944918cb26b8ac6cccb}\label{classvar_1_1matrix_aacd1f3a184f36944918cb26b8ac6cccb}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator"!=@{operator"!=}}
-\index{operator"!=@{operator"!=}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-not equal method 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a7629935f8527febca8ff4a34dff026ff}\label{classvar_1_1matrix_a7629935f8527febca8ff4a34dff026ff}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator\%@{operator\%}}
@@ -711,15 +683,22 @@ matrix
 
 
 
-matrix+var 
+{\ttfamily matrix+var} as {\ttfamily var} as added to all elements 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} m\_add\_2 = m+2; \textcolor{comment}{// or 2+m }}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & \\
+{\em n} & variable to add \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_aaee49a5cde5696ed5d41b2ed5b15d69a}\label{classvar_1_1matrix_aaee49a5cde5696ed5d41b2ed5b15d69a}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator+@{operator+}}
@@ -730,7 +709,15 @@ matrix
 
 
 
-matrix addition 
+Matrix addition. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// m1 and m2 are matrix class}}
+\DoxyCodeLine{\textcolor{keyword}{auto} summed = m1+m2; }
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
@@ -738,7 +725,7 @@ matrix addition
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a277209428c74da8a84cc6e59b540cead}\label{classvar_1_1matrix_a277209428c74da8a84cc6e59b540cead}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator-\/@{operator-\/}}
@@ -749,10 +736,17 @@ matrix
 
 
 
--\/matrix 
+Negative of a matrix. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} negated = -\/m; }
+
+\end{DoxyCode}
+
 
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a0052ad415d92a84561c48b2f94c5159b}\label{classvar_1_1matrix_a0052ad415d92a84561c48b2f94c5159b}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator-\/@{operator-\/}}
@@ -763,15 +757,22 @@ matrix
 
 
 
-matrix-\/var 
+{\ttfamily matrix-\/var} 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} m\_take\_2 = m-\/2; \textcolor{comment}{// or 2-\/m }}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & \\
+{\em n} & variable to add \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a20cab5ed13b35173c242b6fe0909eda6}\label{classvar_1_1matrix_a20cab5ed13b35173c242b6fe0909eda6}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator-\/@{operator-\/}}
@@ -782,11 +783,18 @@ matrix
 
 
 
-matrix subtraction 
+Matrix subtraction. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} subtracted = m1-\/m2; }
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
-{\em other} & \\
+{\em other} & {\ttfamily matrix} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -806,111 +814,6 @@ matrix
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classvar_1_1matrix_aa4f3ec80a3e1f97ff9eb9c7fccfff043}\label{classvar_1_1matrix_aa4f3ec80a3e1f97ff9eb9c7fccfff043}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$<$@{operator$<$}}
-\index{operator$<$@{operator$<$}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-less than operator 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_ad030c6e976b07c8177ab7cda48548ba1}\label{classvar_1_1matrix_ad030c6e976b07c8177ab7cda48548ba1}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$<$=@{operator$<$=}}
-\index{operator$<$=@{operator$<$=}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator$<$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-less than or equal 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_a5f9279a96dbcea4c2f124a664fb54d26}\label{classvar_1_1matrix_a5f9279a96dbcea4c2f124a664fb54d26}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator==@{operator==}}
-\index{operator==@{operator==}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-equals method for all elements 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_a1e8a7d11cb6bb76ffd28639b9b73a8d8}\label{classvar_1_1matrix_a1e8a7d11cb6bb76ffd28639b9b73a8d8}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$>$@{operator$>$}}
-\index{operator$>$@{operator$>$}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-more than 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_a208af77ec9a1ac74ed6e0f55af7a4e94}\label{classvar_1_1matrix_a208af77ec9a1ac74ed6e0f55af7a4e94}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$>$=@{operator$>$=}}
-\index{operator$>$=@{operator$>$=}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-bool \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::operator$>$= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-more than or equal 
-
-
-\begin{DoxyParams}{Parameters}
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-true 
-
-false 
-\end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a2d10297e28d8c6c6264d6f174003d193}\label{classvar_1_1matrix_a2d10297e28d8c6c6264d6f174003d193}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
@@ -920,15 +823,23 @@ false
 
 
 
-\mbox{[}\mbox{]} operator for rows calls another \mbox{[}\mbox{]} operator for column 
+\mbox{[}\mbox{]}\mbox{[}\mbox{]} operator for {\ttfamily matrix} 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// m[row][col]}}
+\DoxyCodeLine{m[0][0] = 5;}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyParams}{Parameters}
-{\em i} & \\
+{\em i} & row index \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Row 
+{\ttfamily Col} which then returns \&D 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a9043393e205545106f58c316da68df80}\label{classvar_1_1matrix_a9043393e205545106f58c316da68df80}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!pop\_col@{pop\_col}}
@@ -952,7 +863,12 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::pop\+\_\+r
 
 Removes last row. 
 
-\mbox{\Hypertarget{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}\label{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}} 
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.pop\_row(1);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}\label{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!push\_col@{push\_col}}
 \index{push\_col@{push\_col}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{push\_col()}{push\_col()}}
@@ -979,6 +895,14 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::push\+\_\+
 
 Inserts row at the end or the matrix. 
 
+{\bfseries{Usage}}\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.push\_row(\{1, 2, 3\});}
+
+\end{DoxyCode}
+
+
 
 \begin{DoxyParams}{Parameters}
 {\em a} & row vector \\
@@ -995,10 +919,9 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::resize (\b
 
 Resizes the matrix. 
 
-\hypertarget{classvar_1_1matrix_autotoc_md0}{}\doxyparagraph{Usage\+:}\label{classvar_1_1matrix_autotoc_md0}
-
+{\bfseries{Usage}}\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{m.resize(5, 6);}
+\DoxyCodeLine{m.resize(3, 3);}
 
 \end{DoxyCode}
 
@@ -1008,7 +931,9 @@ Resizes the matrix.
 \begin{DoxyPre}
     This resets all elements in the matrix
 \end{DoxyPre}
- 
+
+
+
 \begin{DoxyParams}{Parameters}
 {\em r} & number of rows \\
 \hline
@@ -1026,6 +951,14 @@ int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::row (\begin
 
 Returns the number of rows. 
 
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(2, 3); }
+\DoxyCodeLine{\textcolor{keywordtype}{int} r = m.row();}
+
+\end{DoxyCode}
+
+
 \begin{DoxyReturn}{Returns}
 {\ttfamily int} 
 \end{DoxyReturn}
@@ -1040,6 +973,14 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::row\+\_\+o
 
 
 Does operations on specefic rows. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} f = [](\textcolor{keywordtype}{int} A)\{\textcolor{keywordflow}{return} A*2+3;\};}
+\DoxyCodeLine{m.row\_op(1, f);}
+
+\end{DoxyCode}
+
 
 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -1090,12 +1031,16 @@ Sorts colum at specefic index.
 {\em j} & colum index ~\newline
  \\
 \hline
-{\em d} & details are shown below\\
+{\em d} & details are shown below \\
+\hline
+{\em $<$tt$>$d} & = 1 is accending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows();} ~\newline
+ ~\newline
+ \\
+\hline
+{\em $<$tt$>$d} & = 0 is decending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows(0);} \\
 \hline
 \end{DoxyParams}
-{\ttfamily d = 1} is accending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows() ~\newline
- ~\newline
- {\ttfamily d = 0} is decending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows(0) \mbox{\Hypertarget{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}\label{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}} 
+\mbox{\Hypertarget{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}\label{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!sort\_cols@{sort\_cols}}
 \index{sort\_cols@{sort\_cols}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{sort\_cols()}{sort\_cols()}}
@@ -1108,12 +1053,16 @@ Sorts all columns.
 
 
 \begin{DoxyParams}{Parameters}
-{\em d} & details are shown below\\
+{\em d} & details are shown below \\
+\hline
+{\em $<$tt$>$d} & = 1 is accending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows();} ~\newline
+ ~\newline
+ \\
+\hline
+{\em $<$tt$>$d} & = 0 is decending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows(0);} \\
 \hline
 \end{DoxyParams}
-{\ttfamily d = 1} is accending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows() ~\newline
- ~\newline
- {\ttfamily d = 0} is decending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows(0) \mbox{\Hypertarget{classvar_1_1matrix_acc872e3d984edf32f474e221c749e632}\label{classvar_1_1matrix_acc872e3d984edf32f474e221c749e632}} 
+\mbox{\Hypertarget{classvar_1_1matrix_acc872e3d984edf32f474e221c749e632}\label{classvar_1_1matrix_acc872e3d984edf32f474e221c749e632}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!sort\_row@{sort\_row}}
 \index{sort\_row@{sort\_row}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{sort\_row()}{sort\_row()}}
@@ -1124,16 +1073,27 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::sort\+\_\+
 
 Sorts rows at specefic index. 
 
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.sort\_row(0, 0);}
+
+\end{DoxyCode}
+
+
 
 \begin{DoxyParams}{Parameters}
 {\em i} & row index \\
 \hline
-{\em d} & details are shown below\\
+{\em d} & details are shown below \\
+\hline
+{\em $<$tt$>$d} & = 1 is accending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows();} ~\newline
+ ~\newline
+ \\
+\hline
+{\em $<$tt$>$d} & = 0 is decending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows(0);} \\
 \hline
 \end{DoxyParams}
-{\ttfamily d = 1} is accending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows() ~\newline
- ~\newline
- {\ttfamily d = 0} is decending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows(0) \mbox{\Hypertarget{classvar_1_1matrix_a84d1beb5e7704a6e7799351bf0623657}\label{classvar_1_1matrix_a84d1beb5e7704a6e7799351bf0623657}} 
+\mbox{\Hypertarget{classvar_1_1matrix_a84d1beb5e7704a6e7799351bf0623657}\label{classvar_1_1matrix_a84d1beb5e7704a6e7799351bf0623657}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!sort\_rows@{sort\_rows}}
 \index{sort\_rows@{sort\_rows}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{sort\_rows()}{sort\_rows()}}
@@ -1144,15 +1104,22 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::sort\+\_\+
 
 Sorts all rows. 
 
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.sort\_rows();}
+
+\end{DoxyCode}
+
+
 
 \begin{DoxyParams}{Parameters}
 {\em d} & details are shown below \\
 \hline
-{\em $<$tt$>$d} & = 1 is accending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows() ~\newline
+{\em $<$tt$>$d} & = 1 is accending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows();} ~\newline
  ~\newline
  \\
 \hline
-{\em $<$tt$>$d} & = 0 is decending order \$\textbackslash{}rightarrow\$ sort\+\_\+rows(0) \\
+{\em $<$tt$>$d} & = 0 is decending order \$\textbackslash{}rightarrow\$ {\ttfamily sort\+\_\+rows(0);} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_a54224ff2eefe0c6cd3fbeaff7a309f84}\label{classvar_1_1matrix_a54224ff2eefe0c6cd3fbeaff7a309f84}} 
@@ -1175,10 +1142,17 @@ D \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::sum (\begin{D
 
 
 
-sum of all elements 
+Sum of all elements. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{classvar_1_1matrix_af58bf7e07cebde78a2e0ad99acd5deeb}{sum}} = m.sum();}
+
+\end{DoxyCode}
+
 
 \begin{DoxyReturn}{Returns}
-D 
+{\ttfamily D} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}\label{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!T@{T}}
@@ -1189,10 +1163,18 @@ D
 
 
 
-returns transpose 
+Transpose of a matrix. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classvar_1_1matrix}{var::matrix<int>}} m(3, 3);}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}{T}} = m.\mbox{\hyperlink{classvar_1_1matrix_a3b2c5d8983bb1dcdc250768a0f0ce578}{T}}();}
+
+\end{DoxyCode}
+
 
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a3a7b528f131d95929df267501b461183}\label{classvar_1_1matrix_a3a7b528f131d95929df267501b461183}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!tr@{tr}}
@@ -1203,10 +1185,10 @@ D \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::tr (\begin{Do
 
 
 
-trace of a matrix 
+Trace of a matrix. 
 
 \begin{DoxyReturn}{Returns}
-D 
+{\ttfamily D} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a00796c4afbd0a44f4a482c8c4f9155a3}\label{classvar_1_1matrix_a00796c4afbd0a44f4a482c8c4f9155a3}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!TT@{TT}}
@@ -1233,17 +1215,20 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::turn\+\_\+
 
 Converts all elements to n. 
 
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.turn\_to(1); }
+
+\end{DoxyCode}
+
+
 
 \begin{DoxyParams}{Parameters}
 {\em n} & the specifeid variable\\
 \hline
 \end{DoxyParams}
-!!! note \char`\"{}\+Note\char`\"{} ~\newline
- 
-\begin{DoxyPre}
-    All the functions listed abover **mutate** the original matrix  
-\end{DoxyPre}
- 
+\hypertarget{classvar_1_1matrix_autotoc_md2}{}\doxysubsubsection{Immutable methods}\label{classvar_1_1matrix_autotoc_md2}
+
 
 \doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classvar_1_1matrix_afa75e72ad7b2e69f24b69e6dcfdbbcc6}\label{classvar_1_1matrix_afa75e72ad7b2e69f24b69e6dcfdbbcc6}} 
@@ -1276,17 +1261,17 @@ matrix
 
 
 
-var+matrix 
+{\ttfamily var+matrix} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & \\
+{\em n} & variable to add \\
 \hline
-{\em other} & \\
+{\em other} & {\ttfamily matrix} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_aec0f669b84ef6cbf1197fda5328d2d3e}\label{classvar_1_1matrix_aec0f669b84ef6cbf1197fda5328d2d3e}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator-\/@{operator-\/}}
@@ -1297,17 +1282,17 @@ matrix
 
 
 
-var-\/matrix 
+{\ttfamily var-\/matrix} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em n} & \\
+{\em n} & variable to add \\
 \hline
-{\em other} & \\
+{\em other} & {\ttfamily matrix} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-matrix 
+{\ttfamily matrix} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1matrix_a21bdbe6bff69133cc693c53cac84bfec}\label{classvar_1_1matrix_a21bdbe6bff69133cc693c53cac84bfec}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator/@{operator/}}
@@ -1316,53 +1301,6 @@ matrix
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 \mbox{\hyperlink{classvar_1_1matrix}{matrix}} operator/ (\begin{DoxyParamCaption}\item[{D}]{n,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-\mbox{\Hypertarget{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}\label{classvar_1_1matrix_a78e6d80e0013a91eff88db4ab4b92aaa}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-print method for the class var\+::matrix$<$int$>$ m; cout $<$$<$ m; 
-
-
-\begin{DoxyTemplParams}{Template Parameters}
-{\em D} & \\
-\hline
-\end{DoxyTemplParams}
-
-\begin{DoxyParams}{Parameters}
-{\em out} & \\
-\hline
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::ostream\& 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_ae68eff2c0e5df021eec102858661dd2a}\label{classvar_1_1matrix_ae68eff2c0e5df021eec102858661dd2a}} 
-\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$>$$>$@{operator$>$$>$}}
-\index{operator$>$$>$@{operator$>$$>$}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
-\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{input,  }\item[{\mbox{\hyperlink{classvar_1_1matrix}{matrix}}$<$ D $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-input operator 
-
-
-\begin{DoxyParams}{Parameters}
-{\em input} & x \\
-\hline
-{\em other} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::istream\& 
-\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
