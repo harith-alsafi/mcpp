@@ -391,7 +391,7 @@ TEST(operators, arithematic)
         {12, 14, 16}
     };
     auto m4 = m1+m2;
-    ASSERT_TRUE(m3 == m4);
+    ASSERT_TRUE(m3 == (m1+m2));
 
     matrix<int> m5 = {
         {1+2, 2+2, 3+2},
@@ -484,9 +484,53 @@ TEST(operators, mult_div)
     auto m7 = m1.mathmul(m2);
     ASSERT_EQ(m7[0][0], 1*1);
     ASSERT_EQ(m7[1][1], 4*4);
-
-
 } 
+
+TEST(functionality, row_col_swap)
+{
+    matrix<int> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    std::vector<int> row0 = m.get_row(0);
+    std::vector<int> row1 = m.get_row(1);
+
+    m.row_swap(0, 1);
+
+    ASSERT_TRUE(m.get_row(0) == row1);
+    ASSERT_TRUE(m.get_row(1) == row0);
+
+    std::vector<int> col0 = m.get_col(0);
+    std::vector<int> col1 = m.get_col(1);
+
+    m.col_swap(0, 1);
+
+    ASSERT_TRUE(col0 == m.get_col(1));
+    ASSERT_TRUE(col1 == m.get_col(0));
+
+}
+
+TEST(functionality, row_col_replace)
+{
+    matrix<int> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    std::vector<int> row0 = {5, 5, 5};
+    
+    m.replace_row(0, row0);
+    ASSERT_TRUE(row0 == m.get_row(0));
+
+    std::vector<int> col0 = {-1, -2, -5};
+    m.replace_col(0, col0);
+    ASSERT_TRUE(col0 == m.get_col(0));
+    
+
+}
 
 TEST(operators, conditional) 
 {

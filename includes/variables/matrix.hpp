@@ -55,7 +55,7 @@ namespace var
             /**
              * @brief checks index for columns
              * 
-             * @param j colum index 
+             * @param j column index 
              */
             void check_col(int j){
                 if(j < 0 || j >= _col){
@@ -99,14 +99,13 @@ namespace var
              * @brief Checks other matrix size for operators 
              * 
              * @param r row  
-             * @param c colum
+             * @param c column
              */
             void check_size(int r, int c){
                 if(c != _col || r != _row){
                     throw std::invalid_argument("Size mismatch");
                 }
             }
-            
 
             /**
              * @brief Recursive determinant 
@@ -194,7 +193,6 @@ namespace var
                     data.push_back(vect_row);
                 }
             }
-
 
             /**
              * @brief Returns the number of rows
@@ -292,9 +290,9 @@ namespace var
             }
 
             /**
-             * @brief Returns the colum at an index
+             * @brief Returns the column at an index
              * 
-             * @param j colum index 
+             * @param j column index 
              * @return ``std::vector<D>``
              * 
              * ## Mutable methods   
@@ -308,8 +306,6 @@ namespace var
                 }
                 return temp;
             }
-
-
 
             /**
              * @brief Resizes the matrix
@@ -350,7 +346,7 @@ namespace var
              * 
              * @param a row vector
              */
-            void push_row(const std::vector<D>& a){
+            void push_row(std::vector<D> a){
                 // checking size
                 if(a.size() != _col && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -367,9 +363,9 @@ namespace var
             /**
              * @brief Inserts column at the end of the matrix
              * 
-             * @param a colum vector
+             * @param a column vector
              */
-            void push_col(const std::vector<D>& a){
+            void push_col(std::vector<D> a){
                 // checking size
                 if(a.size() != _row && _row != 0 && _col != 0){
                     throw std::invalid_argument("Size doesnt match");
@@ -413,9 +409,9 @@ namespace var
              * @brief Inserts column at specefic index
              * 
              * @param j column index 
-             * @param a colum vector
+             * @param a column vector
              */
-            void insert_col(int j, const std::vector<D>& a){
+            void insert_col(int j, std::vector<D> a){
                 if(a.size() != _row){
                     throw std::invalid_argument("Size doesnt match");
                 }
@@ -447,7 +443,7 @@ namespace var
             }
 
             /**
-             * @brief removes last colum
+             * @brief removes last column
              * 
              */
             void pop_col(){
@@ -479,7 +475,7 @@ namespace var
             /**
              * @brief Erases column at index
              * 
-             * @param j colum index
+             * @param j column index
              * 
              */
             void erase_col(int j){
@@ -490,6 +486,17 @@ namespace var
                 _col = data[0].size();
             }
 
+            /**
+             * @brief Swaps row of matrix 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m.row_swap(0, 1); // swaps row 0 with row 1
+             * ```
+             * 
+             * @param i1 first row 
+             * @param i2 second row 
+             */
             void row_swap(int i1, int i2){
                 check_row(i1);
                 check_row(i2);
@@ -498,10 +505,51 @@ namespace var
                 data[i2] = temp;
             }
 
+            /**
+             * @brief Replaces certain row 
+             * 
+             * @param i row index
+             * @param a ``std::vector`` 
+             */
+            void replace_row(int i, std::vector<D> a){
+                if(a.size() != _row){
+                    throw std::invalid_argument("Size doesnt match");
+                }
+                check_row(i);
+                data[i] = a;
+            }
+
+            /**
+             * @brief Replaces certain colum
+             * 
+             * @param j column index
+             * @param a ``std::vector``
+             */
+            void replace_col(int j, std::vector<D> a){
+                if(a.size() != _col){
+                    throw std::invalid_argument("Size doesnt match");
+                }
+                check_col(j);
+                for(int i = 0; i < _row; i++){
+                    data[i][j] = a[i];
+                }
+            }
+
+            /**
+             * @brief Colum swap 
+             * 
+             * @param j1 first column 
+             * @param j2 second column 
+             */
             void col_swap(int j1, int j2){
                 check_col(j1);
                 check_col(j2);
-
+                D temp = D();
+                for(int i = 0; i < _row; i++){
+                    temp = data[i][j1];
+                    data[i][j1] = data[i][j2];
+                    data[i][j2] = temp;
+                }
             }
 
             /**
@@ -560,9 +608,9 @@ namespace var
             }
 
             /**
-             * @brief Sorts colum at specefic index
+             * @brief Sorts column at specefic index
              * 
-             * @param j colum index  
+             * @param j column index  
              * @param d details are shown below
              * @param ``d = 1`` is accending order $\rightarrow$ ``sort_rows();`` <br>  
              * @param ``d = 0`` is decending order $\rightarrow$ ``sort_rows(0);``
@@ -584,8 +632,8 @@ namespace var
              * ```
              * 
              * @tparam LAMBDA: ``std::function`` 
-             * @param i colum index
-             * @param f function to change colum elements
+             * @param i column index
+             * @param f function to change column elements
              */
             template<typename LAMBDA> 
             void row_op(int i, LAMBDA f){
@@ -596,15 +644,15 @@ namespace var
             }
 
             /**
-             * @brief Does operations on a specefic colum
+             * @brief Does operations on a specefic column
              * 
              * @tparam LAMBDA: ``std::function`` 
-             * @param j colum index 
-             * @param f function to change colum elements
+             * @param j column index 
+             * @param f function to change column elements
              *  
              * !!! warning "Exception"    
              * <pre>
-             *     All row and colum operations (inserting, removing .. etc) throw an <code>std::invalid_argument</code> if&#58;  
+             *     All row and column operations (inserting, removing .. etc) throw an <code>std::invalid_argument</code> if&#58;  
              *         1. There is a size mismatch  
              *         2. Invalid index 
              * </pre>
@@ -615,6 +663,15 @@ namespace var
                 check_col(j);
                 for(int i = 0; i < _row; i++){
                     data[i][j] = f(data[i][j]);
+                }
+            }
+            
+            template<typename LAMBDA>
+            void mat_op(LAMBDA f){
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        data[i][j] = f(data[i][j]);
+                    }
                 }
             }
 
@@ -701,7 +758,6 @@ namespace var
                 return temp;
             }
 
-
             /**
              * @brief Returns cofactor matrix
              * 
@@ -719,12 +775,11 @@ namespace var
                 return temp;
             }
 
-
             /**
              * @brief Minor of a matrix
              * 
              * @param i row index
-             * @param j colum index
+             * @param j column index
              * @param other ``matrix`` type
              * @return ``matrix`` 
              */
@@ -1059,9 +1114,7 @@ namespace var
              */
             matrix mathmul(matrix const &other){
                 // condition 
-                if(!(_row == other._col && _col == other._row)){
-                    throw std::invalid_argument("Size mismatch");
-                }
+                check_size(other._row, other._col); 
                 matrix temp(_row, _col);
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
@@ -1079,7 +1132,7 @@ namespace var
              * @param other ``matrix`` 
              * @return ``matrix`` 
              */
-            matrix operator /(matrix &other){
+            matrix operator /(matrix const &other){
                 return *this*other.inv();
             }
 
@@ -1120,6 +1173,11 @@ namespace var
                     }
                 }
                 return temp;
+            }
+
+            matrix mathdiv(matrix const &other){
+                check_size(other._row, other._col); 
+
             }
 
 // ***************************** % operator ************************** //
@@ -1315,10 +1373,7 @@ namespace var
                 return input;
             }
     };
-    // TODO add row and col swap
     // TODO rref 
     // TODO test division 
     // TODO test exceptions
-    // TODO add mat_op 
-    // TODO add replace row and colum 
 };
