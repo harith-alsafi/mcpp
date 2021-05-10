@@ -17,17 +17,19 @@
   * [Compilation flags](#compilation-flags)
 - [Usage](#usage)
 # Features
-* mcpp (Math for C Plus Plus) is **cross platform**,  **templated math library** that can be used without compiling (except for the plotting functions). 
+* mcpp (Math for C Plus Plus) is **cross platform**,  **templated math library** that can be used without compiling (except for the plotting functionality). 
+* It is targetted towards **engineers** and **mathematicians**.
+* Used with a very simple and intuitive syntax inspired from Python libraries such as [sympy](https://www.sympy.org/en/index.html), [numpy](https://numpy.org/), [scipy](https://www.scipy.org/) and [matplotlib](https://matplotlib.org/).
 * By only including ``mcpp.hpp`` file you get all the functions with their implementations into your code apart from the plotting functionality
 * To use the plotting functionality you need to [compile](#compiling) the library as the plotting functionality uses [SFML](https://www.sfml-dev.org/index.php) and compiled as a shared library
 * Unit testing is done using [Google test](https://github.com/google/googletest)
-* The library is targeted towards engineers and mathematicians
 * Main targeted math sectors  :
-    * Linear algebra 
-    * Normal Algebra 
+    * Algebra 
     * Statistics 
     * Calculus 
     * Vectors 
+    * Signal systems 
+
 # Compiling 
 * The compiling process is mainly for the plotting functionality if you don't want that then you can just include the header files and you are good to go
 * If you want to install the header files into a standard directory then follow the compiling process below (without SFML) and add this [cmake flag](#compilation-flags)
