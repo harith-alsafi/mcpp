@@ -427,6 +427,69 @@ TEST(functionality, rref)
 
     auto rref = m.rref();
     ASSERT_TRUE(rref == RREF);
+
+    matrix<int> m2 = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {10, 11, 12}
+    };
+
+    matrix<int> RREF2 = {
+        {1, 0, -1},
+        {0, 1, 2},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
+
+    auto rref2 = m2.rref();
+    ASSERT_TRUE(rref2 == RREF2);
+}
+
+TEST(functionality, ref)
+{
+    matrix<double> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {10, 11, 12}
+    };
+
+    matrix<double> ref = {
+        {1, 2, 3},
+        {0, -3, -6},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
+    ASSERT_TRUE(ref == m.ref());
+} 
+
+TEST(functionality, lu)
+{
+    matrix<double> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {10, 11, 12}
+    };
+
+    matrix<double> u = {
+        {1, 2, 3},
+        {0, -3, -6},
+        {0, 0, 0},
+        {0, 0, 0}
+    };
+
+    matrix<double> l = {
+        {1, 0, 0, 0},
+        {4, 1, 0, 0},
+        {7, 2, 1, 0},
+        {10, 3, 0, 1}
+    };
+
+    auto LU = m.lu_decomposition();
+    std::cout << LU.L;
+
 }
 
 TEST(operators, arithematic) 
@@ -542,6 +605,13 @@ TEST(operators, mult_div)
     auto m7 = m1.mathmul(m2);
     ASSERT_EQ(m7[0][0], 1*1);
     ASSERT_EQ(m7[1][1], 4*4);
+
+    // mathdiv 
+    auto m8 = m1.mathdiv(m2);
+    ASSERT_EQ(m8[0][0], 1);
+    ASSERT_EQ(m8[1][1], 1);
+
+
 } 
 
 TEST(functionality, row_col_swap)

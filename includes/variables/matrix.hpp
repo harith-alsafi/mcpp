@@ -141,6 +141,13 @@ namespace var
             int _row;
             int _col;
         public:
+            struct LU
+            {
+                matrix P;
+                matrix L;
+                matrix U;
+            };
+
             /**
              * @brief Construct a new matrix object
              * 
@@ -752,8 +759,6 @@ namespace var
                 return DET(*this);
             }
 
-
-
             /**
              * @brief Transpose of a matrix 
              * 
@@ -892,6 +897,67 @@ namespace var
                 };
                 RREF(temp);
                 return temp;
+            }
+
+            /**
+             * @brief Row echolon form 
+             * 
+             * @return ``matrix`` 
+             */
+            matrix ref(){
+                matrix temp = *this;
+                int nr = _row;
+                int nc = _col;
+                for(int r = 0; r < nr; r++){
+                    bool allZeros = true;
+                    for(int c = 0; c < nc; c++){
+                        if(temp.data[r][c] != D(0)){
+                            allZeros = false;
+                            break;
+                        }
+                    }
+                    if(allZeros){
+                        nr--;
+                        temp.row_swap(r, nr);
+                    }
+                }
+
+                int p = 0;
+                while(p < nr && p < nc)
+                {
+                    nextPivot:
+                        int r = 1;
+                        while(temp.data[p][p] == D(0))
+                        {
+                            if((p+r) <= nr){
+                                p++;
+                                goto nextPivot;
+                            }
+                            temp.row_swap(p, (p+r));
+                            r++;
+                        }
+                        for(r = 1; r < (nr-p); r++){
+                            if(temp.data[p+r][p] != D(0)){
+                                int x = -temp.data[p+r][p]/temp.data[p][p];
+                                for(int c = p; c < nc; c++){
+                                    temp.data[p+r][c] = temp.data[p][c]*x+temp.data[p+r][c]; 
+                                }
+
+                            }
+                        }
+                        p++;
+                }
+                return temp;
+            }
+
+
+            LU lu_decomposition(){
+                LU lu;
+                lu.U = ref();
+                lu.L.resize(_row, _row);
+                // lu.P.resize(_row, _row);
+                return lu;
+                
             }
 
             /**
@@ -1157,17 +1223,6 @@ namespace var
             }
 
             /**
-             * @brief ``var*matrix``
-             * 
-             * @param n variable multiplying with 
-             * @param other ``matrix`` 
-             * @return ``matrix`` 
-             */
-            friend matrix operator *(D n, matrix &other){
-                return other*n;
-            }
-
-            /**
              * @brief Normal multiplicatoin 
              * 
              * **Usage**:
@@ -1190,6 +1245,17 @@ namespace var
                 return temp;
             }
 
+            /**
+             * @brief ``var*matrix``
+             * 
+             * @param n variable multiplying with 
+             * @param other ``matrix`` 
+             * @return ``matrix`` 
+             */
+            friend matrix operator *(D n, matrix &other){
+                return other*n;
+            }
+
 // ***************************** / operator ************************** //
 
             /**
@@ -1198,8 +1264,9 @@ namespace var
              * @param other ``matrix`` 
              * @return ``matrix`` 
              */
-            matrix operator /(matrix const &other){
-                return *this*other.inv();
+            matrix operator /(matrix &other){
+                matrix temp = *this*other.inv(); 
+                return temp;
             }
 
             /**
@@ -1216,10 +1283,31 @@ namespace var
             matrix operator /(D n){
                 matrix temp(_row, _col);
                 temp.data = data;
-                assert(n > D(0));
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]/n;
+                    }
+                }
+                return temp;
+            }
+
+            /**
+             * @brief Normal math division 
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto divided = m1.mathdiv(m2);
+             * ```
+             * 
+             * @param other ``matrix``
+             * @return ``matrix`` 
+             */
+            matrix mathdiv(matrix const &other){
+                check_size(other._row, other._col); 
+                matrix temp(_row, _col);
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]/other.data[i][j];
                     }
                 }
                 return temp;
@@ -1241,11 +1329,6 @@ namespace var
                     }
                 }
                 return temp;
-            }
-
-            matrix mathdiv(matrix const &other){
-                check_size(other._row, other._col); 
-
             }
 
 // ***************************** () operator ************************** //
