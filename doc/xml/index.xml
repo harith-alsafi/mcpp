@@ -37,20 +37,25 @@
     <member refid="classvar_1_1matrix_1aa27021aa738d82a6b9dde82de321f5a1" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1matrix_1a6de49f43eb3bc3f3ed6c0b658a97605c" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1matrix_1a9bc064083b67aaab190bd66e7248a5ba" kind="function"><name>resize</name></member>
-    <member refid="classvar_1_1matrix_1aa141055a5f25f5d62dd26ae0e915f6af" kind="function"><name>push_row</name></member>
-    <member refid="classvar_1_1matrix_1a9dd2a2ef22d04744482819c77b80f031" kind="function"><name>push_col</name></member>
+    <member refid="classvar_1_1matrix_1a3c1bf3836d3d6b650675e9c4ba642651" kind="function"><name>push_row</name></member>
+    <member refid="classvar_1_1matrix_1aca98d7a8c56c5afd964ba30b6cff7bfb" kind="function"><name>push_col</name></member>
     <member refid="classvar_1_1matrix_1a3a4469d94dd4fd0235aaf555d3c4cc13" kind="function"><name>insert_row</name></member>
-    <member refid="classvar_1_1matrix_1abe7454d75f120bebef0ee5c2c1b262a7" kind="function"><name>insert_col</name></member>
+    <member refid="classvar_1_1matrix_1a3804122082a2fb003338f62021c405e4" kind="function"><name>insert_col</name></member>
     <member refid="classvar_1_1matrix_1adc31cf9d718ccf376c2309c4f6a5f6dd" kind="function"><name>pop_row</name></member>
     <member refid="classvar_1_1matrix_1a9043393e205545106f58c316da68df80" kind="function"><name>pop_col</name></member>
     <member refid="classvar_1_1matrix_1a1ee2cc11235c4798bb70ed96a0fbf29a" kind="function"><name>erase_row</name></member>
     <member refid="classvar_1_1matrix_1a148b9d63ce138a9478aa8adb9e217986" kind="function"><name>erase_col</name></member>
+    <member refid="classvar_1_1matrix_1a0f45fc90c8164ef40a6c820eeef096b1" kind="function"><name>row_swap</name></member>
+    <member refid="classvar_1_1matrix_1a82d3724b6ff3dd95144c9e25429c9dbe" kind="function"><name>replace_row</name></member>
+    <member refid="classvar_1_1matrix_1a7c8ab8d695bb6b214bcfb44a544e0c0d" kind="function"><name>replace_col</name></member>
+    <member refid="classvar_1_1matrix_1a76ad44aa71ba8eaa73d9d4fd1431d3af" kind="function"><name>col_swap</name></member>
     <member refid="classvar_1_1matrix_1a84d1beb5e7704a6e7799351bf0623657" kind="function"><name>sort_rows</name></member>
     <member refid="classvar_1_1matrix_1a06fa30fdba1e861449593cfd6e1398dc" kind="function"><name>sort_cols</name></member>
     <member refid="classvar_1_1matrix_1acc872e3d984edf32f474e221c749e632" kind="function"><name>sort_row</name></member>
     <member refid="classvar_1_1matrix_1aaaa052e8ec27a392848bd750b34f35bf" kind="function"><name>sort_col</name></member>
     <member refid="classvar_1_1matrix_1ac87b738aed9ec1933d057b7b3d8eb07c" kind="function"><name>row_op</name></member>
     <member refid="classvar_1_1matrix_1ab841b2356b699bcea97baccf5971d834" kind="function"><name>col_op</name></member>
+    <member refid="classvar_1_1matrix_1abf48edbbdf86b09b660ecfd2981f9711" kind="function"><name>mat_op</name></member>
     <member refid="classvar_1_1matrix_1a9eac7bafdfd06437d0b86931335fb194" kind="function"><name>turn_to</name></member>
     <member refid="classvar_1_1matrix_1af58bf7e07cebde78a2e0ad99acd5deeb" kind="function"><name>sum</name></member>
     <member refid="classvar_1_1matrix_1a3a7b528f131d95929df267501b461183" kind="function"><name>tr</name></member>

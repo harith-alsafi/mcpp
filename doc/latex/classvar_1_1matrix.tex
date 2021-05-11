@@ -50,25 +50,33 @@ auto \mbox{\hyperlink{classvar_1_1matrix_a493b344c09c695efcd3fec6065059948}{end}
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1matrix_aa27021aa738d82a6b9dde82de321f5a1}{get\+\_\+row}} (int i)
 \begin{DoxyCompactList}\small\item\em Returns the row at an index. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1matrix_a6de49f43eb3bc3f3ed6c0b658a97605c}{get\+\_\+col}} (int j)
-\begin{DoxyCompactList}\small\item\em Returns the colum at an index. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the column at an index. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a9bc064083b67aaab190bd66e7248a5ba}{resize}} (int r, int c)
 \begin{DoxyCompactList}\small\item\em Resizes the matrix. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classvar_1_1matrix_aa141055a5f25f5d62dd26ae0e915f6af}{push\+\_\+row}} (const std\+::vector$<$ D $>$ \&a)
+void \mbox{\hyperlink{classvar_1_1matrix_a3c1bf3836d3d6b650675e9c4ba642651}{push\+\_\+row}} (std\+::vector$<$ D $>$ a)
 \begin{DoxyCompactList}\small\item\em Inserts row at the end or the matrix. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}{push\+\_\+col}} (const std\+::vector$<$ D $>$ \&a)
+void \mbox{\hyperlink{classvar_1_1matrix_aca98d7a8c56c5afd964ba30b6cff7bfb}{push\+\_\+col}} (std\+::vector$<$ D $>$ a)
 \begin{DoxyCompactList}\small\item\em Inserts column at the end of the matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a3a4469d94dd4fd0235aaf555d3c4cc13}{insert\+\_\+row}} (int i, std\+::vector$<$ D $>$ a)
 \begin{DoxyCompactList}\small\item\em Inserts row at specefic index. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classvar_1_1matrix_abe7454d75f120bebef0ee5c2c1b262a7}{insert\+\_\+col}} (int j, const std\+::vector$<$ D $>$ \&a)
+void \mbox{\hyperlink{classvar_1_1matrix_a3804122082a2fb003338f62021c405e4}{insert\+\_\+col}} (int j, std\+::vector$<$ D $>$ a)
 \begin{DoxyCompactList}\small\item\em Inserts column at specefic index. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_adc31cf9d718ccf376c2309c4f6a5f6dd}{pop\+\_\+row}} ()
 \begin{DoxyCompactList}\small\item\em Removes last row. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a9043393e205545106f58c316da68df80}{pop\+\_\+col}} ()
-\begin{DoxyCompactList}\small\item\em removes last colum \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em removes last column \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a1ee2cc11235c4798bb70ed96a0fbf29a}{erase\+\_\+row}} (int i)
 \begin{DoxyCompactList}\small\item\em Erase row at index. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a148b9d63ce138a9478aa8adb9e217986}{erase\+\_\+col}} (int j)
 \begin{DoxyCompactList}\small\item\em Erases column at index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a0f45fc90c8164ef40a6c820eeef096b1}{row\+\_\+swap}} (int i1, int i2)
+\begin{DoxyCompactList}\small\item\em Swaps row of matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a82d3724b6ff3dd95144c9e25429c9dbe}{replace\+\_\+row}} (int i, std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Replaces certain row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a7c8ab8d695bb6b214bcfb44a544e0c0d}{replace\+\_\+col}} (int j, std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Replaces certain colum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1matrix_a76ad44aa71ba8eaa73d9d4fd1431d3af}{col\+\_\+swap}} (int j1, int j2)
+\begin{DoxyCompactList}\small\item\em Colum swap. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a84d1beb5e7704a6e7799351bf0623657}{sort\+\_\+rows}} (int d=1)
 \begin{DoxyCompactList}\small\item\em Sorts all rows. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}{sort\+\_\+cols}} (int d=1)
@@ -76,11 +84,13 @@ void \mbox{\hyperlink{classvar_1_1matrix_a06fa30fdba1e861449593cfd6e1398dc}{sort
 void \mbox{\hyperlink{classvar_1_1matrix_acc872e3d984edf32f474e221c749e632}{sort\+\_\+row}} (int i, int d=1)
 \begin{DoxyCompactList}\small\item\em Sorts rows at specefic index. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_aaaa052e8ec27a392848bd750b34f35bf}{sort\+\_\+col}} (int j, int d=1)
-\begin{DoxyCompactList}\small\item\em Sorts colum at specefic index. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sorts column at specefic index. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classvar_1_1matrix_ac87b738aed9ec1933d057b7b3d8eb07c}{row\+\_\+op}} (int i, LAMBDA f)
 \begin{DoxyCompactList}\small\item\em Does operations on specefic rows. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classvar_1_1matrix_ab841b2356b699bcea97baccf5971d834}{col\+\_\+op}} (int j, LAMBDA f)
-\begin{DoxyCompactList}\small\item\em Does operations on a specefic colum. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Does operations on a specefic column. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classvar_1_1matrix_abf48edbbdf86b09b660ecfd2981f9711}{mat\+\_\+op}} (LAMBDA f)
+\begin{DoxyCompactList}\small\item\em Function operation on all of the matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classvar_1_1matrix_a9eac7bafdfd06437d0b86931335fb194}{turn\+\_\+to}} (D n)
 \begin{DoxyCompactList}\small\item\em Converts all elements to n. \end{DoxyCompactList}\item 
 D \mbox{\hyperlink{classvar_1_1matrix_af58bf7e07cebde78a2e0ad99acd5deeb}{sum}} ()
@@ -324,7 +334,7 @@ checks index for columns
 
 
 \begin{DoxyParams}{Parameters}
-{\em j} & colum index \\
+{\em j} & column index \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_abe65d7997f230b2ac6564850717be182}\label{classvar_1_1matrix_abe65d7997f230b2ac6564850717be182}} 
@@ -359,7 +369,7 @@ Checks other matrix size for operators.
 {\em r} & row ~\newline
  \\
 \hline
-{\em c} & colum \\
+{\em c} & column \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_ac97536b4f94f1dd614fb6267c07dd2b7}\label{classvar_1_1matrix_ac97536b4f94f1dd614fb6267c07dd2b7}} 
@@ -400,7 +410,7 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::col\+\_\+o
 
 
 
-Does operations on a specefic colum. 
+Does operations on a specefic column. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -409,19 +419,37 @@ Does operations on a specefic colum.
 \end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em j} & colum index \\
+{\em j} & column index \\
 \hline
-{\em f} & function to change colum elements\\
+{\em f} & function to change column elements\\
 \hline
 \end{DoxyParams}
 !!! warning \char`\"{}\+Exception\char`\"{} ~\newline
  
 \begin{DoxyPre}
-    All row and colum operations (inserting, removing .. etc) throw an {\ttfamily std::invalid\_argument} if\&\#58;  
+    All row and column operations (inserting, removing .. etc) throw an {\ttfamily std::invalid\_argument} if\&\#58;  
         1. There is a size mismatch  
         2. Invalid index 
 \end{DoxyPre}
- \mbox{\Hypertarget{classvar_1_1matrix_af4104a0aa496424fc75256263e412d9f}\label{classvar_1_1matrix_af4104a0aa496424fc75256263e412d9f}} 
+ \mbox{\Hypertarget{classvar_1_1matrix_a76ad44aa71ba8eaa73d9d4fd1431d3af}\label{classvar_1_1matrix_a76ad44aa71ba8eaa73d9d4fd1431d3af}} 
+\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!col\_swap@{col\_swap}}
+\index{col\_swap@{col\_swap}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{col\_swap()}{col\_swap()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::col\+\_\+swap (\begin{DoxyParamCaption}\item[{int}]{j1,  }\item[{int}]{j2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Colum swap. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j1} & first column \\
+\hline
+{\em j2} & second column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_af4104a0aa496424fc75256263e412d9f}\label{classvar_1_1matrix_af4104a0aa496424fc75256263e412d9f}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!det@{det}}
 \index{det@{det}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{det()}{det()}}
@@ -496,7 +524,7 @@ Erases column at index.
 
 
 \begin{DoxyParams}{Parameters}
-{\em j} & colum index \\
+{\em j} & column index \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_a1ee2cc11235c4798bb70ed96a0fbf29a}\label{classvar_1_1matrix_a1ee2cc11235c4798bb70ed96a0fbf29a}} 
@@ -531,11 +559,11 @@ std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $
 
 
 
-Returns the colum at an index. 
+Returns the column at an index. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em j} & colum index \\
+{\em j} & column index \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -571,12 +599,12 @@ Returns the row at an index.
 \begin{DoxyReturn}{Returns}
 {\ttfamily std\+::vector$<$D$>$} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classvar_1_1matrix_abe7454d75f120bebef0ee5c2c1b262a7}\label{classvar_1_1matrix_abe7454d75f120bebef0ee5c2c1b262a7}} 
+\mbox{\Hypertarget{classvar_1_1matrix_a3804122082a2fb003338f62021c405e4}\label{classvar_1_1matrix_a3804122082a2fb003338f62021c405e4}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!insert\_col@{insert\_col}}
 \index{insert\_col@{insert\_col}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{insert\_col()}{insert\_col()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
-void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::insert\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{const std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::insert\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -586,7 +614,7 @@ Inserts column at specefic index.
 \begin{DoxyParams}{Parameters}
 {\em j} & column index \\
 \hline
-{\em a} & colum vector \\
+{\em a} & column vector \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_a3a4469d94dd4fd0235aaf555d3c4cc13}\label{classvar_1_1matrix_a3a4469d94dd4fd0235aaf555d3c4cc13}} 
@@ -700,7 +728,7 @@ Minor of a matrix.
 \begin{DoxyParams}{Parameters}
 {\em i} & row index \\
 \hline
-{\em j} & colum index \\
+{\em j} & column index \\
 \hline
 {\em other} & {\ttfamily matrix} type \\
 \hline
@@ -708,6 +736,36 @@ Minor of a matrix.
 \begin{DoxyReturn}{Returns}
 {\ttfamily matrix} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1matrix_abf48edbbdf86b09b660ecfd2981f9711}\label{classvar_1_1matrix_abf48edbbdf86b09b660ecfd2981f9711}} 
+\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!mat\_op@{mat\_op}}
+\index{mat\_op@{mat\_op}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{mat\_op()}{mat\_op()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+template$<$typename LAMBDA $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::mat\+\_\+op (\begin{DoxyParamCaption}\item[{LAMBDA}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function operation on all of the matrix. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} f = [](\textcolor{keywordtype}{int} A)\{\textcolor{keywordflow}{return} A*2+3;\};}
+\DoxyCodeLine{m.mat\_op(f);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em LAMBDA} & {\ttfamily std\+::function} \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Function \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_af312c6541557412aa40999381c832613}\label{classvar_1_1matrix_af312c6541557412aa40999381c832613}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator+@{operator+}}
 \index{operator+@{operator+}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
@@ -870,7 +928,7 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::pop\+\_\+c
 
 
 
-removes last colum 
+removes last column 
 
 \mbox{\Hypertarget{classvar_1_1matrix_adc31cf9d718ccf376c2309c4f6a5f6dd}\label{classvar_1_1matrix_adc31cf9d718ccf376c2309c4f6a5f6dd}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!pop\_row@{pop\_row}}
@@ -888,12 +946,12 @@ Removes last row.
 \DoxyCodeLine{m.pop\_row(1);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}\label{classvar_1_1matrix_a9dd2a2ef22d04744482819c77b80f031}} 
+ \mbox{\Hypertarget{classvar_1_1matrix_aca98d7a8c56c5afd964ba30b6cff7bfb}\label{classvar_1_1matrix_aca98d7a8c56c5afd964ba30b6cff7bfb}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!push\_col@{push\_col}}
 \index{push\_col@{push\_col}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{push\_col()}{push\_col()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
-void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::push\+\_\+col (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::push\+\_\+col (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -901,15 +959,15 @@ Inserts column at the end of the matrix.
 
 
 \begin{DoxyParams}{Parameters}
-{\em a} & colum vector \\
+{\em a} & column vector \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classvar_1_1matrix_aa141055a5f25f5d62dd26ae0e915f6af}\label{classvar_1_1matrix_aa141055a5f25f5d62dd26ae0e915f6af}} 
+\mbox{\Hypertarget{classvar_1_1matrix_a3c1bf3836d3d6b650675e9c4ba642651}\label{classvar_1_1matrix_a3c1bf3836d3d6b650675e9c4ba642651}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!push\_row@{push\_row}}
 \index{push\_row@{push\_row}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
 \doxysubsubsection{\texorpdfstring{push\_row()}{push\_row()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
-void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::push\+\_\+row (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::push\+\_\+row (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -926,6 +984,42 @@ Inserts row at the end or the matrix.
 
 \begin{DoxyParams}{Parameters}
 {\em a} & row vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a7c8ab8d695bb6b214bcfb44a544e0c0d}\label{classvar_1_1matrix_a7c8ab8d695bb6b214bcfb44a544e0c0d}} 
+\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!replace\_col@{replace\_col}}
+\index{replace\_col@{replace\_col}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{replace\_col()}{replace\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::replace\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces certain colum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & column index \\
+\hline
+{\em a} & {\ttfamily std\+::vector} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a82d3724b6ff3dd95144c9e25429c9dbe}\label{classvar_1_1matrix_a82d3724b6ff3dd95144c9e25429c9dbe}} 
+\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!replace\_row@{replace\_row}}
+\index{replace\_row@{replace\_row}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{replace\_row()}{replace\_row()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::replace\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces certain row. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & row index \\
+\hline
+{\em a} & {\ttfamily std\+::vector} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_a9bc064083b67aaab190bd66e7248a5ba}\label{classvar_1_1matrix_a9bc064083b67aaab190bd66e7248a5ba}} 
@@ -1009,9 +1103,34 @@ Does operations on specefic rows.
 \end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em i} & colum index \\
+{\em i} & column index \\
 \hline
-{\em f} & function to change colum elements \\
+{\em f} & function to change column elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1matrix_a0f45fc90c8164ef40a6c820eeef096b1}\label{classvar_1_1matrix_a0f45fc90c8164ef40a6c820eeef096b1}} 
+\index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!row\_swap@{row\_swap}}
+\index{row\_swap@{row\_swap}!var::matrix$<$ D $>$@{var::matrix$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{row\_swap()}{row\_swap()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::row\+\_\+swap (\begin{DoxyParamCaption}\item[{int}]{i1,  }\item[{int}]{i2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swaps row of matrix. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m.row\_swap(0, 1); \textcolor{comment}{// swaps row 0 with row 1}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em i1} & first row \\
+\hline
+{\em i2} & second row \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1matrix_a5e7cc7e40124be3bd4a1accfacd68b05}\label{classvar_1_1matrix_a5e7cc7e40124be3bd4a1accfacd68b05}} 
@@ -1044,11 +1163,11 @@ void \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::sort\+\_\+
 
 
 
-Sorts colum at specefic index. 
+Sorts column at specefic index. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em j} & colum index ~\newline
+{\em j} & column index ~\newline
  \\
 \hline
 {\em d} & details are shown below \\

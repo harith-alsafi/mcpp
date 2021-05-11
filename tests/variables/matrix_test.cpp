@@ -231,6 +231,18 @@ TEST(functionality, row_col_op_2)
     ASSERT_EQ(m[0][1], 3*2+3);
     ASSERT_EQ(m[1][1], 6*2+3);
     ASSERT_EQ(m[2][1], 5*2+3);
+
+    m = {
+        {9, 3, 10},
+        {7, 6, 20},
+        {10, 5, 19}
+    };
+    auto f = [](int A){
+        return (0*A+1);
+    };
+    m.mat_op(f);
+    ASSERT_EQ(m.sum(), m.size());
+
 }
 
 TEST(functionality, remove_row_col)
@@ -369,6 +381,52 @@ TEST(functionality, matrix_functions){
     // trace 
     ASSERT_FLOAT_EQ(m6.tr(), 1.0+5.0+12.0);
 
+}
+
+TEST(operators, slicing)
+{
+    matrix<int> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    auto sliced = m(1, 3);
+    matrix<int> Sliced = {
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    ASSERT_TRUE(sliced == Sliced);
+
+    auto sliced2 = m(1, 0, 2);
+    std::vector<int> Sliced2 = {4, 5};
+    ASSERT_TRUE(sliced2 == Sliced2);
+
+    auto sliced3 = m(0, 2, 0, 2);
+    matrix<int> Sliced3 = {
+        {1, 2},
+        {4, 5}
+    };
+    ASSERT_TRUE(Sliced3 == sliced3);
+}
+
+TEST(functionality, rref) 
+{
+    matrix<int> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    matrix<int> RREF = {
+        {1, 0, -1},
+        {0, 1, 2},
+        {0, 0, 0}
+    };
+
+    auto rref = m.rref();
+    ASSERT_TRUE(rref == RREF);
 }
 
 TEST(operators, arithematic) 

@@ -666,6 +666,18 @@ namespace var
                 }
             }
             
+            /**
+             * @brief Function operation on all of the matrix
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto f = [](int A){return A*2+3;};
+             * m.mat_op(f);
+             * ```
+             * 
+             * @tparam LAMBDA: ``std::function`` 
+             * @param f Function
+             */
             template<typename LAMBDA>
             void mat_op(LAMBDA f){
                 for(int i = 0; i < _row; i++){
@@ -739,6 +751,8 @@ namespace var
                 square();
                 return DET(*this);
             }
+
+
 
             /**
              * @brief Transpose of a matrix 
@@ -823,9 +837,61 @@ namespace var
                 return adj()/det();
             }
 
-
+            /**
+             * @brief Reduced row echolon form 
+             * 
+             * @return ``matrix`` 
+             */
             matrix rref(){
+                matrix temp = *this;
+                auto RREF = [](matrix &A)->void{
 
+                    int lead = 0;
+
+                    for(int r = 0; r < A.row(); r++){
+                        if(lead >= A.col()){
+                            return;
+                        }
+
+                        int i = r;
+
+                        while(A[i][lead] == 0)
+                        {
+                            i++;
+                            if(i >= A.row()){
+                                i = r;
+                                lead++;
+                                if(lead >= A.col()){
+                                    return;
+                                }
+                            }
+                        }
+
+                        A.row_swap(i, r);
+
+                        auto divide_row = [&](matrix &B, int i, D v)->void{
+                            assert(A[r][lead] != 0);
+                            for(int j = 0; j < B.col(); j++){
+                                B[i][j] /= v;
+                            }
+                        };
+                        auto add_rows = [](matrix &B, int i, int k, D v)->void{
+                            for(int j = 0; j < B.col(); j++){
+                                B[i][j] += v*B[k][j];
+                            }
+                        };
+
+                        divide_row(A, r, A[r][lead]);
+
+                        for(i = 0; i < A.row(); i++){
+                            if(i != r){
+                                add_rows(A, i, r, -A[i][lead]);
+                            }
+                        }
+                    }
+                };
+                RREF(temp);
+                return temp;
             }
 
             /**
@@ -1150,6 +1216,7 @@ namespace var
             matrix operator /(D n){
                 matrix temp(_row, _col);
                 temp.data = data;
+                assert(n > D(0));
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
                         temp.data[i][j] = data[i][j]/n;
@@ -1169,6 +1236,7 @@ namespace var
                 matrix temp = other;
                 for(int i = 0; i < other._row; i++){
                     for(int j = 0; j < other._col; j++){
+                        assert(temp.data[i][j] > D(0));
                         temp.data[i][j] = n/temp.data[i][j];
                     }
                 }
@@ -1180,24 +1248,90 @@ namespace var
 
             }
 
-// ***************************** % operator ************************** //
-            
+// ***************************** () operator ************************** //
+
             /**
-             * @brief Moudlus operator 
+             * @brief Returns a sliced matrix
              * 
              * **Usage**:
              * ```cpp
-             * auto m_divisably_2 = m%2;
+             * // m(inclusive, exclusive)
+             * auto sliced = m(1, 3); // row-1 to row-2
              * ```
              * 
-             * @param n modulus variable
+             * @param i1 index row 1 (inclusive)
+             * @param i2 index row 2 (exclusive)
              * @return ``matrix`` 
              */
-            matrix operator %(D n){
-                matrix temp = *this;
-                for(int i = 0; i < _row; i++){
-                    for(int j = 0; j < _col; j++){
-                        temp.data[i][j] = data[i][j]%n;
+            matrix operator()(int i1, int i2){
+                check_row(i1);
+                check_row(i2-1);
+                matrix temp;
+                for(int i = i1; i < i2; i++){
+                    temp.push_row(get_row(i));
+                }
+                return temp;
+            }
+
+            /**
+             * @brief Column per row slicing 
+             * 
+             * * Condition ``j2 >= j1`` must be true. 
+             * 
+             * @param i row index
+             * @param j1 column index 1 (inclusive)
+             * @param j2 column index 2 (exclusive)
+             * @return ``std::vector<D>`` 
+             */
+            std::vector<D> operator()(int i, int j1, int j2){
+                check_row(i);
+                check_col(j1);
+                check_col(j2-1);
+                std::vector<D> temp;
+                for(int j = j1; j < j2; j++){
+                    temp.push_back(data[i][j]);
+                }
+                return temp;
+            }
+
+            /**
+             * @brief Row and column slice 
+             * 
+             * @param i1 row index 1 (inclusive)
+             * @param i2 row index 2 (exclusive)
+             * @param j1 column index 1 (inclusive)
+             * @param j2 column index 2 (exclusive)
+             * @return matrix 
+             * 
+             * !!! warning "Exception"    
+             * <pre>
+             *     All ``()`` operators will throw an <code>std::invalid_argument</code> if&#58;  
+             *         1. Index must be correct
+             *         2. ``i2>=i1`` and ``j2>=j1``  
+             * </pre>
+             * 
+             */
+            matrix operator()(int i1, int i2, int j1, int j2){
+                check_row(i1);
+                check_row(i2-1);
+                check_col(j1);
+                check_col(j2-1);
+                matrix temp;
+                if(i2 == i1){
+                    temp.resize(1, j2-j1);
+                }
+                else if(j2 == j1){
+                    temp.resize(i2-i1, 1);
+                }
+                else if(i2 == i1 && j2 == j1){
+                    temp.resize(1, 1);
+                }
+                else{
+                   temp.resize(i2-i1, j2-j1);
+                }
+                for(int i = i1; i < i2; i++){
+                    for(int j = j1; j < j2; j++){
+                        temp.data[i][j] = data[i][j];
                     }
                 }
                 return temp;
@@ -1303,6 +1437,29 @@ namespace var
                 return !(*this == other);
             }
 
+// ***************************** % operator ************************** //
+            
+            /**
+             * @brief Moudlus operator 
+             * 
+             * **Usage**:
+             * ```cpp
+             * auto m_divisably_2 = m%2;
+             * ```
+             * 
+             * @param n modulus variable
+             * @return ``matrix`` 
+             */
+            matrix operator %(D n){
+                matrix temp = *this;
+                for(int i = 0; i < _row; i++){
+                    for(int j = 0; j < _col; j++){
+                        temp.data[i][j] = data[i][j]%n;
+                    }
+                }
+                return temp;
+            }
+
 // ************************* stream operator ************************ //
 
             /**
@@ -1373,7 +1530,6 @@ namespace var
                 return input;
             }
     };
-    // TODO rref 
     // TODO test division 
     // TODO test exceptions
 };
