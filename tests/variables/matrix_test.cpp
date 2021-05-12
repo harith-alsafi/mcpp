@@ -510,27 +510,36 @@ TEST(functionality, ref)
 TEST(functionality, lu)
 {
     matrix<double> m = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9},
-        {10, 11, 12}
-    };
-
-    matrix<double> u = {
-        {1, 2, 3},
-        {0, -3, -6},
-        {0, 0, 0},
-        {0, 0, 0}
+        {1, 2, -3, 1},
+        {2, 4, 0, 7},
+        {-1, 3, 2, 0}
     };
 
     matrix<double> l = {
-        {1, 0, 0, 0},
-        {4, 1, 0, 0},
-        {7, 2, 1, 0},
-        {10, 3, 0, 1}
+        {1, 0, 0},
+        {-0.5, 1, 0},
+        {0.5, 0, 1}
+    };
+
+    matrix<double> u = {
+        {2, 4, 0, 7},
+        {0, 5, 2, 3.5},
+        {0, 0, -3, -2.5}
+    };
+
+    matrix<double> p = {
+        {0, 0, 1},
+        {1, 0, 0},
+        {0, 1, 0}
     };
 
     auto LU = m.lu_decomposition();
+
+
+    ASSERT_TRUE(LU.U == u);
+    ASSERT_TRUE(LU.L == l);
+    ASSERT_TRUE(LU.P == p);
+    ASSERT_TRUE(m == ((LU.P*LU.L)*LU.U));
 
 }
 

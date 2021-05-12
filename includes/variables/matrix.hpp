@@ -1,6 +1,8 @@
 #pragma once
 #include "../mcpp.hpp"
 #include <algorithm>
+#include <numeric>
+#include <limits>
 #include <cmath>
 
 namespace var
@@ -172,6 +174,7 @@ namespace var
             {
                 matrix L;
                 matrix U;
+                matrix P;
             };
 
             /**
@@ -1002,21 +1005,86 @@ namespace var
 
                 lu.U.resize(n, n);
                 lu.L.resize(n, n);
+                lu.P.resize(n, n);
 
                 matrix temp = *this;
 
+                auto f = [&](LU &a, matrix b)->void{
+                    std::vector<int> perm(n);
+                    std::iota(perm.begin(), perm.end(), 0);
+                    
+                    for(int j = 0; j < n; j++){
+                        int max_index = j;
+                        D max_value = D(0);
+                        for(int i = j; i < n; i++){
+                            D value = D(abs(b.data[perm[i]][j]));
+                            if(value > max_value){
+                                max_index = i;
+                                max_value = value;
+                            }
+                        }
+                        if(max_value <= std::numeric_limits<D>::epsilon()){
+                            throw std::runtime_error("Matrix is singular");
+                        }
+                        if(j != max_index){
+                            std::swap(perm[j], perm[max_index]);
+                        }
+                        int jj = perm[j];
+                        for(int i = j+1; i < n; i++){
+                            int ii = perm[i];
+                            b.data[ii][j] /= b.data[jj][j];
+                            for(int k = j+1; k < n; k++){
+                                b.data[ii][k] -= b.data[ii][j]*b.data[jj][k];
+                            }
+                        }
+                    }
+                    for(int j = 0; j < n; j++){
+                        a.L.data[j][j] = 1;
+                        for(int i = j+1; i < n; i++){
+                            a.L.data[i][j] = b.data[perm[i]][j];
+                        }
+                        for(int i = 0; i <= j; i++){
+                            a.U.data[i][j] = b.data[perm[i]][j];
+                        }
+                    }
+                    for(int i = 0; i < n; i++){
+                        a.P.data[i][perm[i]] = 1;
+                    }
+                    a.P = a.P.inv();
+                };
                 if(!is_square()){
                     matrix eyed = num::mat::eye<D>(n); 
                     if(n == _row){
                         temp.join_col(eyed(0, _row, 0, fabs(_row-_col)));
+                        f(lu, temp);
+                        for(int i = 0; i < fabs(_row-_col); i++){
+                            lu.U.pop_col();
+                            
+                            lu.L.pop_col();
+                            lu.L.pop_row();
+
+                            lu.P.pop_row();
+                            lu.P.pop_col();
+                        }
                     }
                     else{
                         temp.join_row(eyed(0, fabs(_row-_col), 0, _col));
+                        f(lu, temp);
+                        for(int i = 0; i < fabs(_row-_col); i++){
+                            lu.U.pop_row();
+
+                            lu.L.pop_col();
+                            lu.L.pop_row();
+
+                            lu.P.pop_row();
+                            lu.P.pop_col();
+                        }
                     }
                 }
-
+                else{
+                    f(lu, temp);
+                }
                 return lu;
-                
             }
 
             /**
@@ -1241,7 +1309,7 @@ namespace var
              */
             matrix operator *(matrix const &other){
                 // condition 
-                if(!(_row == other._col && _col == other._row)){
+                if(_row != other._col && _col != other._row){
                     throw std::invalid_argument("Size mismatch");
                 }
                 auto SUM = [this, other](int i, int j)-> D {
