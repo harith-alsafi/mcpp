@@ -46,10 +46,10 @@ namespace calc
      */
     template<typename D>
     std::vector<D> diff(std::vector<D> &x, std::vector<D> &y, int n = 1){
-        auto dx = num::difference(x);
-        auto dy = num::difference(y);
+        auto dx = num::vec::difference(x);
+        auto dy = num::vec::difference(y);
         auto yp = dy/dx;
-        auto xp = num::averages(x); 
+        auto xp = num::vec::averages(x); 
         if(n == 1){
             return yp; 
         }
@@ -68,7 +68,7 @@ namespace calc
      */
     template<typename D, typename LAMBDA>
     std::vector<D> diff(LAMBDA f, std::vector<D> &x, int n = 1){
-        auto y = num::vec_op(f, x);
+        auto y = num::vec::vec_op(f, x);
         return diff(x, y, n);
     }
 

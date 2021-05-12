@@ -2,7 +2,9 @@
 #include "../../includes/mcpp.hpp"
 #include <fstream>
 
+using namespace num::vec;
 using namespace num;
+
 TEST(operations, vec_and_vec)
 {
    std::vector<float> a = {1, 2, 3, 4};

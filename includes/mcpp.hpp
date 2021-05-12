@@ -1,7 +1,15 @@
 #pragma once
+
 #include "misc/constants.hpp"
 #include "misc/misc.hpp"
-#include "variables/matrix.hpp"
+#include "numerical/mat.hpp"
+
 #include "vectors/vector.hpp"
-#include "vectors/vec.hpp"
+#include "variables/matrix.hpp"
+
+#include "numerical/vec.hpp"
+#include "numerical/numvec.hpp"
+
+
+
 #include "calculus/differential.hpp"

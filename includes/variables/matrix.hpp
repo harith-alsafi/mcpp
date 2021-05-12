@@ -1,5 +1,5 @@
 #pragma once
-#include "../vectors/vector.hpp"
+#include "../mcpp.hpp"
 #include <algorithm>
 #include <cmath>
 
@@ -108,6 +108,33 @@ namespace var
             }
 
             /**
+             * @brief Protected minor (used in ``DET``)
+             * 
+             * @param i row index
+             * @param j column index
+             * @param other ``matrix``
+             * @return ``matrix`` 
+             */
+            matrix MM(int i, int j, matrix &other) {
+                matrix b(other.row()-1, other.col()-1);
+                int r = 0;
+                int c = 0;
+                for(int ii = 0; ii < other.row(); ii++){
+                    for(int jj = 0; jj < other.col(); jj++){
+                        if(ii != i && jj != j){
+                            b[r][c] = other[ii][jj];
+                            c++;
+                        }
+                    }
+                    c = 0;
+                    if(ii != i){
+                        r++;
+                    }
+                }
+                return b;
+            }
+
+            /**
              * @brief Recursive determinant 
              * 
              * @param a ``matrix`` type
@@ -121,7 +148,7 @@ namespace var
                 // n by n
                 D sum = D();
                 for(int j = 0; j < a.col(); j++){              
-                    sum += a[0][j]*std::pow((-1), 0+j)*DET(M(0, j, a));                  
+                    sum += a[0][j]*std::pow((-1), 0+j)*DET(MM(0, j, a));                  
                 }
                 return sum;
             }
@@ -143,7 +170,6 @@ namespace var
         public:
             struct LU
             {
-                matrix P;
                 matrix L;
                 matrix U;
             };
@@ -695,6 +721,42 @@ namespace var
             }
 
             /**
+             * @brief Combines the rows of another matrix
+             * 
+             * **Usage**:
+             * ```cpp
+             * // m2 must have same number of columns as m1
+             * m1.join_row(m2);
+             * ```
+             * 
+             * @param other ``matrix``
+             */
+            void join_row(matrix other){
+                if(other.col() != _col){
+                    throw std::invalid_argument("Size mismatch");
+                }
+                for(int i = 0; i < other.row(); i++){
+                    push_row(other.get_row(i));
+                }
+            }
+
+            /**
+             * @brief Combines the columns of another matrix
+             * 
+             * * ``other`` must have same number of rows
+             * 
+             * @param other ``matrix``
+             */
+            void join_col(matrix other){
+                if(other.row() != _row){
+                    throw std::invalid_argument("Size mismatch");
+                }
+                for(int j = 0; j < other.col(); j++){
+                    push_col(other.get_col(j));
+                }
+            }
+
+            /**
              * @brief Converts all elements to n
              * 
              * **Usage**:
@@ -787,7 +849,7 @@ namespace var
                 matrix temp(_row, _col);
                 for(int i = 0; i < _row; i++){
                     for(int j = 0; j < _col; j++){
-                        auto m = M(i, j, *this);
+                        auto m = MM(i, j, *this);
                         temp[i][j] = pow((-1), (i+j))*m.det();
                     }
                 }
@@ -799,26 +861,10 @@ namespace var
              * 
              * @param i row index
              * @param j column index
-             * @param other ``matrix`` type
              * @return ``matrix`` 
              */
-            matrix M(int i, int j, matrix &other) {
-                matrix b(other.row()-1, other.col()-1);
-                int r = 0;
-                int c = 0;
-                for(int ii = 0; ii < other.row(); ii++){
-                    for(int jj = 0; jj < other.col(); jj++){
-                        if(ii != i && jj != j){
-                            b[r][c] = other[ii][jj];
-                            c++;
-                        }
-                    }
-                    c = 0;
-                    if(ii != i){
-                        r++;
-                    }
-                }
-                return b;
+            matrix M(int i, int j) {
+                return MM(i, j, *this);
             }
 
             /**
@@ -950,12 +996,25 @@ namespace var
                 return temp;
             }
 
-
             LU lu_decomposition(){
                 LU lu;
-                lu.U = ref();
-                lu.L.resize(_row, _row);
-                // lu.P.resize(_row, _row);
+                int n = fmax(_col, _row);
+
+                lu.U.resize(n, n);
+                lu.L.resize(n, n);
+
+                matrix temp = *this;
+
+                if(!is_square()){
+                    matrix eyed = num::mat::eye<D>(n); 
+                    if(n == _row){
+                        temp.join_col(eyed(0, _row, 0, fabs(_row-_col)));
+                    }
+                    else{
+                        temp.join_row(eyed(0, fabs(_row-_col), 0, _col));
+                    }
+                }
+
                 return lu;
                 
             }
@@ -1615,4 +1674,5 @@ namespace var
     };
     // TODO test division 
     // TODO test exceptions
+    // TODO fix [][] operator and add get_element 
 };

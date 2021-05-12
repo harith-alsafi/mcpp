@@ -299,6 +299,49 @@ TEST(functionality, remove_row_col_at)
 
 }
 
+TEST(functionality, join_row_col)
+{
+    matrix<int> m = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {2, 3, 4}
+    };
+
+    auto eyed = num::mat::eye<int>(m.col());
+
+    m.join_row(eyed);
+
+    matrix<int> Eyed = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9},
+        {2, 3, 4},
+        {1, 0, 0},
+        {0, 1, 0},
+        {0, 0, 1}
+    };
+
+    ASSERT_TRUE(m == Eyed);
+    
+    matrix<int> m2 = {
+        {1, 2, 3, 0, 0},
+        {4, 5, 6, 0, 0},
+        {7, 8, 9, 0, 0},
+        {2, 3, 4, 0, 0},
+        {1, 0, 0, 0, 0},
+        {0, 1, 0, 0, 0},
+        {0, 0, 1, 0, 0}
+    };
+
+    matrix<int> eyed2(m2.row(), 2);
+
+    m.join_col(eyed2);
+
+    ASSERT_TRUE(m == m2);
+
+}
+
 TEST(functionality, matrix_functions){
     matrix<double> m1(2, 2);
     ASSERT_TRUE(m1.is_square());
@@ -488,7 +531,6 @@ TEST(functionality, lu)
     };
 
     auto LU = m.lu_decomposition();
-    std::cout << LU.L;
 
 }
 
