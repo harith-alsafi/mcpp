@@ -10,6 +10,13 @@ namespace num
 {
     namespace mat
     {
+        /**
+         * @brief Produeces identity matrix of length ``n``
+         * 
+         * @tparam D 
+         * @param n 
+         * @return ``var::matrix<D>`` 
+         */
         template<typename D>
         var::matrix<D> eye(int n){
             var::matrix<D> temp(n, n);

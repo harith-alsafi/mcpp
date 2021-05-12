@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['white_121',['WHITE',['../namespaceplt.html#a795bc0629e286558346306b88a5bfb91',1,'plt']]]
+  ['var_124',['var',['../namespacevar.html',1,'']]],
+  ['vec_5fop_125',['vec_op',['../namespacenum_1_1vec.html#a44d5efd8e68e699822a2919ce1da40c5',1,'num::vec']]]
 ];

@@ -40,8 +40,6 @@ namespace var
                      * @return D& 
                      */
                     D &operator[](int j){
-                        _a.check_row(_i);
-                        _a.check_col(j);
                         return _a.data[_i][j];
                     }
             };
@@ -170,10 +168,29 @@ namespace var
             int _row;
             int _col;
         public:
+
+            /**
+             * @brief Struct for PLU decomposition
+             * 
+             */
             struct LU
             {
+                /**
+                 * @brief Lower triangular
+                 * 
+                 */
                 matrix L;
+
+                /**
+                 * @brief Upper triangular
+                 * 
+                 */
                 matrix U;
+
+                /**
+                 * @brief Permutation matrix
+                 * 
+                 */
                 matrix P;
             };
 
@@ -306,6 +323,21 @@ namespace var
              */
             auto end() const{
                 return data.end();
+            }
+
+            /**
+             * @brief Get the element object
+             * 
+             * * Unlike the ``[]`` operator this does index checking
+             * 
+             * @param i row index
+             * @param j column index
+             * @return ``D`` 
+             */
+            D get_element(int i, int j){
+                check_row(i);
+                check_col(j);
+                return data[i][j];
             }
 
             /**
@@ -999,7 +1031,21 @@ namespace var
                 return temp;
             }
 
-            LU lu_decomposition(){
+            /**
+             * @brief PLU decomposition 
+             * 
+             * **Usage**:
+             * ```cpp
+             * // the output is LU struct 
+             * auto LU = m.plu();
+             * auto L = LU.L;
+             * auto U = LU.U;
+             * auto P = LU.p;
+             * ```
+             * 
+             * @return ``LU`` 
+             */
+            LU plu(){
                 LU lu;
                 int n = fmax(_col, _row);
 
@@ -1152,6 +1198,8 @@ namespace var
              * // m[row][col]
              * m[0][0] = 5;
              * ```
+             * 
+             * * Does not check the correct row and colum index;
              * 
              * @param i row index
              * @return ``Col`` which then returns &D 

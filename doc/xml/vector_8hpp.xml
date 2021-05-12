@@ -6,10 +6,9 @@
     <includes local="no">iostream</includes>
     <includes local="no">sstream</includes>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
-    <includedby refid="matrix_8hpp" local="yes">includes/variables/matrix.hpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>includes/vectors/vector.hpp</label>
+        <label>includes/math/vector.hpp</label>
         <link refid="vector_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -83,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="15" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="15" bodyend="24"/>
+        <location file="includes/math/vector.hpp" line="15" column="13" bodyfile="includes/math/vector.hpp" bodystart="15" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a8d0c6a970542e9cdb92d7f6ea9149bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -139,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="35" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="35" bodyend="41"/>
+        <location file="includes/math/vector.hpp" line="35" column="13" bodyfile="includes/math/vector.hpp" bodystart="35" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1aad1145e88d3f4157c30195cb8cf32ce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -195,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="52" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="52" bodyend="58"/>
+        <location file="includes/math/vector.hpp" line="52" column="13" bodyfile="includes/math/vector.hpp" bodystart="52" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1af79d0c930820784c6d2afb33fa43ccfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -251,7 +250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="71" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="71" bodyend="80"/>
+        <location file="includes/math/vector.hpp" line="71" column="13" bodyfile="includes/math/vector.hpp" bodystart="71" bodyend="80"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a99e0f8bb87f96ea7d3311e3e14a81fd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -307,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="91" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="91" bodyend="97"/>
+        <location file="includes/math/vector.hpp" line="91" column="13" bodyfile="includes/math/vector.hpp" bodystart="91" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a1800f39f30fac1bd70bb7e3c48778c7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -363,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="108" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="108" bodyend="114"/>
+        <location file="includes/math/vector.hpp" line="108" column="13" bodyfile="includes/math/vector.hpp" bodystart="108" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1aec55fe18ce33f079c23c0f40c0995bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -419,7 +418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="127" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="127" bodyend="136"/>
+        <location file="includes/math/vector.hpp" line="127" column="13" bodyfile="includes/math/vector.hpp" bodystart="127" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a85a78232fcc9c9ac32f09ac130fd2819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -475,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="147" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="147" bodyend="153"/>
+        <location file="includes/math/vector.hpp" line="147" column="13" bodyfile="includes/math/vector.hpp" bodystart="147" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a4478da2cece9afe7302776c443aa7dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -531,7 +530,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="164" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="164" bodyend="170"/>
+        <location file="includes/math/vector.hpp" line="164" column="13" bodyfile="includes/math/vector.hpp" bodystart="164" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a66c1ffb561b98e010bb4d7eeb87cc680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -587,7 +586,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="183" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="183" bodyend="192"/>
+        <location file="includes/math/vector.hpp" line="183" column="13" bodyfile="includes/math/vector.hpp" bodystart="183" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1af4f1158ea64aa338c2e9375097a70acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -643,7 +642,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="203" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="203" bodyend="209"/>
+        <location file="includes/math/vector.hpp" line="203" column="13" bodyfile="includes/math/vector.hpp" bodystart="203" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1ae83dbef942d60085ba43c0b5c41434cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -699,7 +698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="220" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="220" bodyend="226"/>
+        <location file="includes/math/vector.hpp" line="220" column="13" bodyfile="includes/math/vector.hpp" bodystart="220" bodyend="226"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1ac9de9b22ed341c1a6f738d05fca64df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -755,7 +754,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="239" column="1" bodyfile="includes/vectors/vector.hpp" bodystart="239" bodyend="247"/>
+        <location file="includes/math/vector.hpp" line="239" column="1" bodyfile="includes/math/vector.hpp" bodystart="239" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1aac18655429515db3b7ee77a9572397d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -811,7 +810,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="258" column="14" bodyfile="includes/vectors/vector.hpp" bodystart="258" bodyend="275"/>
+        <location file="includes/math/vector.hpp" line="258" column="14" bodyfile="includes/math/vector.hpp" bodystart="258" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1a46af90d1287f8a71f3a606ceebb4364a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -837,7 +836,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="281" column="13" bodyfile="includes/vectors/vector.hpp" bodystart="281" bodyend="287"/>
+        <location file="includes/math/vector.hpp" line="281" column="13" bodyfile="includes/math/vector.hpp" bodystart="281" bodyend="287"/>
       </memberdef>
       <memberdef kind="function" id="vector_8hpp_1abcb08117e477166564a87be11b67ee8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -895,7 +894,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/vectors/vector.hpp" line="304" column="6" bodyfile="includes/vectors/vector.hpp" bodystart="304" bodyend="314"/>
+        <location file="includes/math/vector.hpp" line="304" column="6" bodyfile="includes/math/vector.hpp" bodystart="304" bodyend="314"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1097,6 +1096,6 @@
 <codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="314"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="includes/vectors/vector.hpp"/>
+    <location file="includes/math/vector.hpp"/>
   </compounddef>
 </doxygen>

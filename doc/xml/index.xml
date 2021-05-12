@@ -6,12 +6,10 @@
     <member refid="classvar_1_1matrix_1_1Col_1a438356b39568f5e8b427c97eeaf97c20" kind="function"><name>Col</name></member>
     <member refid="classvar_1_1matrix_1_1Col_1a8024a0dd194bb085689a7f271b9348e8" kind="function"><name>operator[]</name></member>
   </compound>
-  <compound refid="structplt_1_1details" kind="struct"><name>plt::details</name>
-    <member refid="structplt_1_1details_1a036f3e1cad948dac80391f9e0dbb9af4" kind="variable"><name>xrange</name></member>
-    <member refid="structplt_1_1details_1a1cb63396c6a14b4def5f7db781736bbb" kind="variable"><name>yrange</name></member>
-    <member refid="structplt_1_1details_1ab1d8a5cc5ca0a2570cf735c83cecec5c" kind="variable"><name>color</name></member>
-    <member refid="structplt_1_1details_1a3d5ebf4996858c57118f0b1bac6707e0" kind="variable"><name>legend</name></member>
-    <member refid="structplt_1_1details_1abca8ecf83f19e5f8117ec1112e437ce9" kind="variable"><name>thickness</name></member>
+  <compound refid="structvar_1_1matrix_1_1LU" kind="struct"><name>var::matrix::LU</name>
+    <member refid="structvar_1_1matrix_1_1LU_1acba2383bcfea720a6704dc18577a36f7" kind="variable"><name>L</name></member>
+    <member refid="structvar_1_1matrix_1_1LU_1abe5cc0dbcc051815d56b284e2fdc5de6" kind="variable"><name>U</name></member>
+    <member refid="structvar_1_1matrix_1_1LU_1ae7daacc7db6dfc54ed2afba970bec1ed" kind="variable"><name>P</name></member>
   </compound>
   <compound refid="classvar_1_1matrix" kind="class"><name>var::matrix</name>
     <member refid="classvar_1_1matrix_1a6b72a30baf5ce8386e0ea2284a1776cf" kind="typedef"><name>table</name></member>
@@ -22,6 +20,7 @@
     <member refid="classvar_1_1matrix_1abe65d7997f230b2ac6564850717be182" kind="function"><name>check_row</name></member>
     <member refid="classvar_1_1matrix_1a00796c4afbd0a44f4a482c8c4f9155a3" kind="function"><name>TT</name></member>
     <member refid="classvar_1_1matrix_1a98defd0b837085eae86da59649934392" kind="function"><name>check_size</name></member>
+    <member refid="classvar_1_1matrix_1a23843a10260f18c0a8ee950a4c8ba0be" kind="function"><name>MM</name></member>
     <member refid="classvar_1_1matrix_1aac8393e86296c741a8e1023b329620b1" kind="function"><name>DET</name></member>
     <member refid="classvar_1_1matrix_1a54224ff2eefe0c6cd3fbeaff7a309f84" kind="function"><name>square</name></member>
     <member refid="classvar_1_1matrix_1aaf88fb07ffd608510c2c834a925f3926" kind="function"><name>matrix</name></member>
@@ -34,6 +33,7 @@
     <member refid="classvar_1_1matrix_1a905ab851aebd8b3781e6605bec99e0a8" kind="function"><name>end</name></member>
     <member refid="classvar_1_1matrix_1a44444530f6334c9cd3f9c61c7aa91af8" kind="function"><name>begin</name></member>
     <member refid="classvar_1_1matrix_1a493b344c09c695efcd3fec6065059948" kind="function"><name>end</name></member>
+    <member refid="classvar_1_1matrix_1ae1b45b32d3db9d173a5a689b8616866f" kind="function"><name>get_element</name></member>
     <member refid="classvar_1_1matrix_1aa27021aa738d82a6b9dde82de321f5a1" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1matrix_1a6de49f43eb3bc3f3ed6c0b658a97605c" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1matrix_1a9bc064083b67aaab190bd66e7248a5ba" kind="function"><name>resize</name></member>
@@ -56,16 +56,20 @@
     <member refid="classvar_1_1matrix_1ac87b738aed9ec1933d057b7b3d8eb07c" kind="function"><name>row_op</name></member>
     <member refid="classvar_1_1matrix_1ab841b2356b699bcea97baccf5971d834" kind="function"><name>col_op</name></member>
     <member refid="classvar_1_1matrix_1abf48edbbdf86b09b660ecfd2981f9711" kind="function"><name>mat_op</name></member>
+    <member refid="classvar_1_1matrix_1a360593837b06f88da2dc1a189804bc36" kind="function"><name>join_row</name></member>
+    <member refid="classvar_1_1matrix_1ae6431ed7fca8e942a9887ae8fa68897b" kind="function"><name>join_col</name></member>
     <member refid="classvar_1_1matrix_1a9eac7bafdfd06437d0b86931335fb194" kind="function"><name>turn_to</name></member>
     <member refid="classvar_1_1matrix_1af58bf7e07cebde78a2e0ad99acd5deeb" kind="function"><name>sum</name></member>
     <member refid="classvar_1_1matrix_1a3a7b528f131d95929df267501b461183" kind="function"><name>tr</name></member>
     <member refid="classvar_1_1matrix_1af4104a0aa496424fc75256263e412d9f" kind="function"><name>det</name></member>
     <member refid="classvar_1_1matrix_1a3b2c5d8983bb1dcdc250768a0f0ce578" kind="function"><name>T</name></member>
     <member refid="classvar_1_1matrix_1ac97536b4f94f1dd614fb6267c07dd2b7" kind="function"><name>cofactor</name></member>
-    <member refid="classvar_1_1matrix_1aeb8bdaf174065f964bdd63e3c55ec5e2" kind="function"><name>M</name></member>
+    <member refid="classvar_1_1matrix_1ae63bcd0b556175ab578d7095b6cf647c" kind="function"><name>M</name></member>
     <member refid="classvar_1_1matrix_1ad78a167d7400fac474fd03cf3363defb" kind="function"><name>adj</name></member>
     <member refid="classvar_1_1matrix_1a8a66138dce5fdb1b27a89349a8fd8539" kind="function"><name>inv</name></member>
     <member refid="classvar_1_1matrix_1a5e7cc7e40124be3bd4a1accfacd68b05" kind="function"><name>rref</name></member>
+    <member refid="classvar_1_1matrix_1a29ff1c5a059b90bd4871d249d1c48c8b" kind="function"><name>ref</name></member>
+    <member refid="classvar_1_1matrix_1ac6d4763f62d11273f092f21ad3c0760f" kind="function"><name>plu</name></member>
     <member refid="classvar_1_1matrix_1a69ffd8772f87c70f5a8e525b0e4dd71f" kind="function"><name>is_square</name></member>
     <member refid="classvar_1_1matrix_1a9db378f2cc8cc600c2137dcea6fadfc9" kind="function"><name>is_empty</name></member>
     <member refid="classvar_1_1matrix_1a34a63853e0456af7ba9bbd7e10b4cfc6" kind="function"><name>is_identity</name></member>
@@ -78,9 +82,22 @@
     <member refid="classvar_1_1matrix_1acd798c4a5acd27adbadc15b750d13aa9" kind="friend"><name>operator+</name></member>
     <member refid="classvar_1_1matrix_1aec0f669b84ef6cbf1197fda5328d2d3e" kind="friend"><name>operator-</name></member>
   </compound>
+  <compound refid="classvar_1_1table" kind="class"><name>var::table</name>
+  </compound>
+  <compound refid="classvar_1_1tree" kind="class"><name>var::tree</name>
+  </compound>
   <compound refid="namespacealg" kind="namespace"><name>alg</name>
-    <member refid="namespacealg_1a15e912afc036d7ca7bd79acf7e3125b2" kind="function"><name>sequence</name></member>
-    <member refid="namespacealg_1a03536e086cbb83c2fac71b22707cfebc" kind="function"><name>sum</name></member>
+  </compound>
+  <compound refid="namespacealg_1_1msc" kind="namespace"><name>alg::msc</name>
+    <member refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kind="function"><name>factorial</name></member>
+    <member refid="namespacealg_1_1msc_1aae4e81e78933986bbe9ed04fe916c7ad" kind="function"><name>combination</name></member>
+  </compound>
+  <compound refid="namespacealg_1_1seq" kind="namespace"><name>alg::seq</name>
+    <member refid="namespacealg_1_1seq_1ad6b3110a1b0f635050cce3d7468208ae" kind="function"><name>sequence</name></member>
+    <member refid="namespacealg_1_1seq_1ab12ed04843565e2513c1ff18c86f6d81" kind="function"><name>sum</name></member>
+  </compound>
+  <compound refid="namespacealg_1_1slv" kind="namespace"><name>alg::slv</name>
+    <member refid="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" kind="function"><name>root</name></member>
   </compound>
   <compound refid="namespacecalc" kind="namespace"><name>calc</name>
     <member refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kind="function"><name>diff</name></member>
@@ -89,64 +106,56 @@
     <member refid="namespacecalc_1ad4da47f019995d52a59ce2802eead032" kind="function"><name>taylor</name></member>
     <member refid="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" kind="function"><name>eular_method</name></member>
   </compound>
-  <compound refid="namespacemsc" kind="namespace"><name>msc</name>
-    <member refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kind="function"><name>factorial</name></member>
-    <member refid="namespacemsc_1a2af0b5dba48bd5f9d05b9f067c071176" kind="function"><name>combination</name></member>
+  <compound refid="namespacecom" kind="namespace"><name>com</name>
+  </compound>
+  <compound refid="namespacemth" kind="namespace"><name>mth</name>
+    <member refid="namespacemth_1ad67cddab017eab02370b0b2d7bb109d9" kind="function"><name>round</name></member>
+    <member refid="namespacemth_1a3070a00ad6cbb848500c0b9f162e105a" kind="function"><name>round</name></member>
+    <member refid="namespacemth_1a34b8e0b2635326959101e8cef212b4b1" kind="function"><name>min</name></member>
+    <member refid="namespacemth_1a1185a5f14b24803757d4d9bfc118183d" kind="function"><name>max</name></member>
+    <member refid="namespacemth_1aedf1dd3445e15e075e55b404184a80ec" kind="function"><name>abs</name></member>
+    <member refid="namespacemth_1a5d5c72bc9a2bb1e89d180a96290d4df8" kind="function"><name>pow</name></member>
+    <member refid="namespacemth_1a263f00ab3586e48812df8b1eb839e1fe" kind="function"><name>pow</name></member>
+    <member refid="namespacemth_1aa4b7a284c625a761c9089ae874d7d3a2" kind="function"><name>sin</name></member>
+    <member refid="namespacemth_1a09d29500bb5a549d5771c23374ae2325" kind="function"><name>cos</name></member>
+    <member refid="namespacemth_1a813c72781af94b0419f08f86431a6008" kind="function"><name>tan</name></member>
+    <member refid="namespacemth_1ae8d04ba4428f76b1f226943048b3b0ad" kind="function"><name>sec</name></member>
+    <member refid="namespacemth_1a53d839f1be5f31f665addce6dc494a95" kind="function"><name>csc</name></member>
+    <member refid="namespacemth_1aa47c8625c38baf38d7c40a646390d9ba" kind="function"><name>cot</name></member>
+    <member refid="namespacemth_1a70b7276ef8d67e29bbcabded1df3055a" kind="function"><name>asin</name></member>
+    <member refid="namespacemth_1ac736564b160af8d04f4b936c60a0f0fa" kind="function"><name>acos</name></member>
+    <member refid="namespacemth_1aaca92bdc13f5f96dcf865cf35da79d0c" kind="function"><name>atan</name></member>
+    <member refid="namespacemth_1ad4c26ccede93cb4c0719203c627d1ab8" kind="function"><name>asec</name></member>
+    <member refid="namespacemth_1ad4fe466c02ca4bcc3ae42c02706cd1b1" kind="function"><name>acsc</name></member>
+    <member refid="namespacemth_1aab718ecb4db4f3e484a2b27b8a6bbe6f" kind="function"><name>acot</name></member>
+    <member refid="namespacemth_1a52e0a1d3a051be204bb2bbc62454bab0" kind="function"><name>sinh</name></member>
+    <member refid="namespacemth_1a9b74e2484c4b73ee68db86765f6a4f21" kind="function"><name>cosh</name></member>
+    <member refid="namespacemth_1a9aa5409c5f1a46249f17c57a87ed718e" kind="function"><name>tanh</name></member>
+    <member refid="namespacemth_1a22adb31ad4ddfbf157cd5b465cb6ba08" kind="function"><name>sech</name></member>
+    <member refid="namespacemth_1af0a811325c733aa6750893f062802f07" kind="function"><name>csch</name></member>
+    <member refid="namespacemth_1a11261d7a6f0ddc01888709b9ef9957f5" kind="function"><name>coth</name></member>
+    <member refid="namespacemth_1a9cc816fa6926d5c1a6a51113d80e3555" kind="function"><name>asinh</name></member>
+    <member refid="namespacemth_1a8a27adc59c40f4c3f153a70cb74bd713" kind="function"><name>acosh</name></member>
+    <member refid="namespacemth_1aca09a5442ff9f3ed28aca3fb7675ae83" kind="function"><name>atanh</name></member>
+    <member refid="namespacemth_1add365ba663874ecfe9a1ac8890cd4748" kind="function"><name>asech</name></member>
+    <member refid="namespacemth_1a61de7392238aa79bec097d2b6ed3f872" kind="function"><name>acsch</name></member>
+    <member refid="namespacemth_1a4d660e56ec186abc1de2e7be09e53f33" kind="function"><name>acoth</name></member>
+    <member refid="namespacemth_1acf2153461c06ac4d7fa2003d3c07f3c5" kind="function"><name>exp</name></member>
   </compound>
   <compound refid="namespacenum" kind="namespace"><name>num</name>
-    <member refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kind="function"><name>round</name></member>
-    <member refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" kind="function"><name>vec_op</name></member>
-    <member refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kind="function"><name>difference</name></member>
-    <member refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" kind="function"><name>averages</name></member>
-    <member refid="namespacenum_1a501f44095bdd298826bc4fa20a72abfe" kind="function"><name>arange</name></member>
-    <member refid="namespacenum_1acf7c26ead7bac86ba3b8d0bc1da19dac" kind="function"><name>linspace</name></member>
-    <member refid="namespacenum_1a4ea9be0979e6fe200ae5bf0247c39777" kind="function"><name>round</name></member>
-    <member refid="namespacenum_1a69628dc5ff1ff58eed7efce55ca62f60" kind="function"><name>min</name></member>
-    <member refid="namespacenum_1a8f987030b7d268f10c83e46a46f871e5" kind="function"><name>max</name></member>
-    <member refid="namespacenum_1a7bd48ec1618b10c1b866221a14dbd8b3" kind="function"><name>abs</name></member>
-    <member refid="namespacenum_1a50cbc2cd44b4ab04be4c6844e9dcf3fc" kind="function"><name>dot</name></member>
-    <member refid="namespacenum_1aacae58f5a14d91046e306090b6aeabcf" kind="function"><name>cross</name></member>
-    <member refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kind="function"><name>pow</name></member>
-    <member refid="namespacenum_1a24d376c085ac4f76594a6227ffe26bf5" kind="function"><name>pow</name></member>
-    <member refid="namespacenum_1aa800b330d5a24e8b0c465f29ff49fd75" kind="function"><name>sin</name></member>
-    <member refid="namespacenum_1a6c5997363da941b88d40a120ddfb7741" kind="function"><name>cos</name></member>
-    <member refid="namespacenum_1a7f6f11d36d6e7bd6ebd6f8a3866ce8c1" kind="function"><name>tan</name></member>
-    <member refid="namespacenum_1a47b7803c68e12e4f8b9477ad5927e98d" kind="function"><name>sec</name></member>
-    <member refid="namespacenum_1a4921bef257bd45d8d032704b7ac767ca" kind="function"><name>csc</name></member>
-    <member refid="namespacenum_1ae8f31915ee4e6223b5d1fb9e289d1913" kind="function"><name>cot</name></member>
-    <member refid="namespacenum_1ab52b48e649186751a17529c5f87133ab" kind="function"><name>asin</name></member>
-    <member refid="namespacenum_1ae4e2ef08ec3589d21d7644e32e8a83b2" kind="function"><name>acos</name></member>
-    <member refid="namespacenum_1a476916731b6a6d60d69e4d6875035cc1" kind="function"><name>atan</name></member>
-    <member refid="namespacenum_1afafd5bacdc944aec623d59d5eaa9e373" kind="function"><name>asec</name></member>
-    <member refid="namespacenum_1a7c33fa731f4982e84101c83a2a2d7c53" kind="function"><name>acsc</name></member>
-    <member refid="namespacenum_1ad814caa1a44ce03a5ab17a034abfc549" kind="function"><name>acot</name></member>
-    <member refid="namespacenum_1aa71dfb3948513567800d00442ed6fee9" kind="function"><name>sinh</name></member>
-    <member refid="namespacenum_1a249917ff739094abc52200f0f6234d4d" kind="function"><name>cosh</name></member>
-    <member refid="namespacenum_1ac5e4874573f5fa8fca572b34d0e0048f" kind="function"><name>tanh</name></member>
-    <member refid="namespacenum_1a037be51fc57bc7fdd503b6eb73032a44" kind="function"><name>sech</name></member>
-    <member refid="namespacenum_1a3745dd0245fd31b68e9045ba7dbce748" kind="function"><name>csch</name></member>
-    <member refid="namespacenum_1ab13f868a2ade45efd1999cbe78e488a5" kind="function"><name>coth</name></member>
-    <member refid="namespacenum_1a8d99fa7b64c3775ac3d588c2aec11cff" kind="function"><name>asinh</name></member>
-    <member refid="namespacenum_1a5a502e5ccf6b3ff884ed4888f0b4088f" kind="function"><name>acosh</name></member>
-    <member refid="namespacenum_1a826f95f69a261f17e4ef47d7c6deb9a6" kind="function"><name>atanh</name></member>
-    <member refid="namespacenum_1a934866c6a8251445626f42ec27423ae2" kind="function"><name>asech</name></member>
-    <member refid="namespacenum_1a60528f75e958d58a60f3e24b8bb6a2e4" kind="function"><name>acsch</name></member>
-    <member refid="namespacenum_1a09e4d860bcd090c061def49600955091" kind="function"><name>acoth</name></member>
-    <member refid="namespacenum_1a16c02a3e88d1b63d71ffb15bcb7468ac" kind="function"><name>exp</name></member>
   </compound>
-  <compound refid="namespaceplt" kind="namespace"><name>plt</name>
-    <member refid="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" kind="variable"><name>RED</name></member>
-    <member refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kind="variable"><name>BLACK</name></member>
-    <member refid="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" kind="variable"><name>BLUE</name></member>
-    <member refid="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" kind="variable"><name>GREEN</name></member>
-    <member refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kind="variable"><name>WHITE</name></member>
-    <member refid="namespaceplt_1a294c68129755000491a6b4d6d9160f86" kind="function"><name>figure</name></member>
-    <member refid="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" kind="function"><name>plot</name></member>
-    <member refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" kind="function"><name>point</name></member>
-    <member refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kind="function"><name>hline</name></member>
-    <member refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kind="function"><name>vline</name></member>
+  <compound refid="namespacenum_1_1mat" kind="namespace"><name>num::mat</name>
+    <member refid="namespacenum_1_1mat_1a507ab20c197f9471400e82f7caa62ae1" kind="function"><name>eye</name></member>
+    <member refid="namespacenum_1_1mat_1ac367fcfb6f6412b6e3b4642d28a11eb4" kind="function"><name>perms</name></member>
   </compound>
-  <compound refid="namespacesig" kind="namespace"><name>sig</name>
+  <compound refid="namespacenum_1_1vec" kind="namespace"><name>num::vec</name>
+    <member refid="namespacenum_1_1vec_1a44d5efd8e68e699822a2919ce1da40c5" kind="function"><name>vec_op</name></member>
+    <member refid="namespacenum_1_1vec_1ac338ca1d3474f6a817119a64330a5840" kind="function"><name>difference</name></member>
+    <member refid="namespacenum_1_1vec_1a6161d87c5a7fcb0d501502354ae86c06" kind="function"><name>averages</name></member>
+    <member refid="namespacenum_1_1vec_1a1129cb6234e6115573eb823122072c8b" kind="function"><name>arange</name></member>
+    <member refid="namespacenum_1_1vec_1a26eac6f47101a0f84aac7d74b16748a6" kind="function"><name>linspace</name></member>
+    <member refid="namespacenum_1_1vec_1a59e437b35a8ae297ebbfe7d8e0de36e4" kind="function"><name>dot</name></member>
+    <member refid="namespacenum_1_1vec_1ae904f9d73fa5a4f212c0bca79ccabb65" kind="function"><name>cross</name></member>
   </compound>
   <compound refid="namespacestat" kind="namespace"><name>stat</name>
   </compound>
@@ -154,11 +163,16 @@
   </compound>
   <compound refid="namespacevar" kind="namespace"><name>var</name>
   </compound>
-  <compound refid="algebra_8hpp" kind="file"><name>algebra.hpp</name>
+  <compound refid="misc_8hpp" kind="file"><name>misc.hpp</name>
+    <member refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kind="function"><name>factorial</name></member>
+    <member refid="namespacealg_1_1msc_1aae4e81e78933986bbe9ed04fe916c7ad" kind="function"><name>combination</name></member>
   </compound>
   <compound refid="sequence_8hpp" kind="file"><name>sequence.hpp</name>
-    <member refid="namespacealg_1a15e912afc036d7ca7bd79acf7e3125b2" kind="function"><name>sequence</name></member>
-    <member refid="namespacealg_1a03536e086cbb83c2fac71b22707cfebc" kind="function"><name>sum</name></member>
+    <member refid="namespacealg_1_1seq_1ad6b3110a1b0f635050cce3d7468208ae" kind="function"><name>sequence</name></member>
+    <member refid="namespacealg_1_1seq_1ab12ed04843565e2513c1ff18c86f6d81" kind="function"><name>sum</name></member>
+  </compound>
+  <compound refid="solvers_8hpp" kind="file"><name>solvers.hpp</name>
+    <member refid="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" kind="function"><name>root</name></member>
   </compound>
   <compound refid="differential_8hpp" kind="file"><name>differential.hpp</name>
     <member refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kind="function"><name>diff</name></member>
@@ -169,78 +183,43 @@
   </compound>
   <compound refid="integral_8hpp" kind="file"><name>integral.hpp</name>
   </compound>
-  <compound refid="mcpp_8hpp" kind="file"><name>mcpp.hpp</name>
+  <compound refid="signals_8hpp" kind="file"><name>signals.hpp</name>
   </compound>
   <compound refid="constants_8hpp" kind="file"><name>constants.hpp</name>
   </compound>
-  <compound refid="misc_8hpp" kind="file"><name>misc.hpp</name>
-    <member refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kind="function"><name>factorial</name></member>
-    <member refid="namespacemsc_1a2af0b5dba48bd5f9d05b9f067c071176" kind="function"><name>combination</name></member>
-  </compound>
-  <compound refid="signals_8hpp" kind="file"><name>signals.hpp</name>
-  </compound>
-  <compound refid="plot_8hpp" kind="file"><name>plot.hpp</name>
-  </compound>
-  <compound refid="figure_8hpp" kind="file"><name>figure.hpp</name>
-    <member refid="namespaceplt_1acb44b984f30702f94f617ab2fe1e2a9e" kind="variable"><name>RED</name></member>
-    <member refid="namespaceplt_1a5c7d47e670c29852a99ba448eb92728c" kind="variable"><name>BLACK</name></member>
-    <member refid="namespaceplt_1aac5be8319ecf8fa7e639c762327da5e5" kind="variable"><name>BLUE</name></member>
-    <member refid="namespaceplt_1a3a8b6b3c918b0704b440b8d5195d25f2" kind="variable"><name>GREEN</name></member>
-    <member refid="namespaceplt_1a795bc0629e286558346306b88a5bfb91" kind="variable"><name>WHITE</name></member>
-    <member refid="namespaceplt_1a294c68129755000491a6b4d6d9160f86" kind="function"><name>figure</name></member>
-    <member refid="namespaceplt_1ae2b77fe07b2b2682fcd9741f2291b0fc" kind="function"><name>plot</name></member>
-    <member refid="namespaceplt_1ad9fe1a952c304b4aae420d27d4e0b3ff" kind="function"><name>point</name></member>
-    <member refid="namespaceplt_1a0b1960ae912b93f3b9a1bc4a68b70151" kind="function"><name>hline</name></member>
-    <member refid="namespaceplt_1a7cfc8899deffdc69733c4d9c8550b214" kind="function"><name>vline</name></member>
-  </compound>
-  <compound refid="statistics_8hpp" kind="file"><name>statistics.hpp</name>
-  </compound>
-  <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
-  </compound>
-  <compound refid="table_8hpp" kind="file"><name>table.hpp</name>
-  </compound>
-  <compound refid="tree_8hpp" kind="file"><name>tree.hpp</name>
-  </compound>
-  <compound refid="vec_8hpp" kind="file"><name>vec.hpp</name>
-    <member refid="namespacenum_1a2f735b184c6e68d2c3c92085a1266f14" kind="function"><name>round</name></member>
-    <member refid="namespacenum_1a4e9fe88d96692c33fe86018dae231540" kind="function"><name>vec_op</name></member>
-    <member refid="namespacenum_1a228799bfc044b445a089f64f8565f285" kind="function"><name>difference</name></member>
-    <member refid="namespacenum_1af3bb393d172a5f74fe8c9af3f78b3f2a" kind="function"><name>averages</name></member>
-    <member refid="namespacenum_1a501f44095bdd298826bc4fa20a72abfe" kind="function"><name>arange</name></member>
-    <member refid="namespacenum_1acf7c26ead7bac86ba3b8d0bc1da19dac" kind="function"><name>linspace</name></member>
-    <member refid="namespacenum_1a4ea9be0979e6fe200ae5bf0247c39777" kind="function"><name>round</name></member>
-    <member refid="namespacenum_1a69628dc5ff1ff58eed7efce55ca62f60" kind="function"><name>min</name></member>
-    <member refid="namespacenum_1a8f987030b7d268f10c83e46a46f871e5" kind="function"><name>max</name></member>
-    <member refid="namespacenum_1a7bd48ec1618b10c1b866221a14dbd8b3" kind="function"><name>abs</name></member>
-    <member refid="namespacenum_1a50cbc2cd44b4ab04be4c6844e9dcf3fc" kind="function"><name>dot</name></member>
-    <member refid="namespacenum_1aacae58f5a14d91046e306090b6aeabcf" kind="function"><name>cross</name></member>
-    <member refid="namespacenum_1ade513603c3266b11d021a2f7aa36f614" kind="function"><name>pow</name></member>
-    <member refid="namespacenum_1a24d376c085ac4f76594a6227ffe26bf5" kind="function"><name>pow</name></member>
-    <member refid="namespacenum_1aa800b330d5a24e8b0c465f29ff49fd75" kind="function"><name>sin</name></member>
-    <member refid="namespacenum_1a6c5997363da941b88d40a120ddfb7741" kind="function"><name>cos</name></member>
-    <member refid="namespacenum_1a7f6f11d36d6e7bd6ebd6f8a3866ce8c1" kind="function"><name>tan</name></member>
-    <member refid="namespacenum_1a47b7803c68e12e4f8b9477ad5927e98d" kind="function"><name>sec</name></member>
-    <member refid="namespacenum_1a4921bef257bd45d8d032704b7ac767ca" kind="function"><name>csc</name></member>
-    <member refid="namespacenum_1ae8f31915ee4e6223b5d1fb9e289d1913" kind="function"><name>cot</name></member>
-    <member refid="namespacenum_1ab52b48e649186751a17529c5f87133ab" kind="function"><name>asin</name></member>
-    <member refid="namespacenum_1ae4e2ef08ec3589d21d7644e32e8a83b2" kind="function"><name>acos</name></member>
-    <member refid="namespacenum_1a476916731b6a6d60d69e4d6875035cc1" kind="function"><name>atan</name></member>
-    <member refid="namespacenum_1afafd5bacdc944aec623d59d5eaa9e373" kind="function"><name>asec</name></member>
-    <member refid="namespacenum_1a7c33fa731f4982e84101c83a2a2d7c53" kind="function"><name>acsc</name></member>
-    <member refid="namespacenum_1ad814caa1a44ce03a5ab17a034abfc549" kind="function"><name>acot</name></member>
-    <member refid="namespacenum_1aa71dfb3948513567800d00442ed6fee9" kind="function"><name>sinh</name></member>
-    <member refid="namespacenum_1a249917ff739094abc52200f0f6234d4d" kind="function"><name>cosh</name></member>
-    <member refid="namespacenum_1ac5e4874573f5fa8fca572b34d0e0048f" kind="function"><name>tanh</name></member>
-    <member refid="namespacenum_1a037be51fc57bc7fdd503b6eb73032a44" kind="function"><name>sech</name></member>
-    <member refid="namespacenum_1a3745dd0245fd31b68e9045ba7dbce748" kind="function"><name>csch</name></member>
-    <member refid="namespacenum_1ab13f868a2ade45efd1999cbe78e488a5" kind="function"><name>coth</name></member>
-    <member refid="namespacenum_1a8d99fa7b64c3775ac3d588c2aec11cff" kind="function"><name>asinh</name></member>
-    <member refid="namespacenum_1a5a502e5ccf6b3ff884ed4888f0b4088f" kind="function"><name>acosh</name></member>
-    <member refid="namespacenum_1a826f95f69a261f17e4ef47d7c6deb9a6" kind="function"><name>atanh</name></member>
-    <member refid="namespacenum_1a934866c6a8251445626f42ec27423ae2" kind="function"><name>asech</name></member>
-    <member refid="namespacenum_1a60528f75e958d58a60f3e24b8bb6a2e4" kind="function"><name>acsch</name></member>
-    <member refid="namespacenum_1a09e4d860bcd090c061def49600955091" kind="function"><name>acoth</name></member>
-    <member refid="namespacenum_1a16c02a3e88d1b63d71ffb15bcb7468ac" kind="function"><name>exp</name></member>
+  <compound refid="mthvec_8hpp" kind="file"><name>mthvec.hpp</name>
+    <member refid="namespacemth_1ad67cddab017eab02370b0b2d7bb109d9" kind="function"><name>round</name></member>
+    <member refid="namespacemth_1a3070a00ad6cbb848500c0b9f162e105a" kind="function"><name>round</name></member>
+    <member refid="namespacemth_1a34b8e0b2635326959101e8cef212b4b1" kind="function"><name>min</name></member>
+    <member refid="namespacemth_1a1185a5f14b24803757d4d9bfc118183d" kind="function"><name>max</name></member>
+    <member refid="namespacemth_1aedf1dd3445e15e075e55b404184a80ec" kind="function"><name>abs</name></member>
+    <member refid="namespacemth_1a5d5c72bc9a2bb1e89d180a96290d4df8" kind="function"><name>pow</name></member>
+    <member refid="namespacemth_1a263f00ab3586e48812df8b1eb839e1fe" kind="function"><name>pow</name></member>
+    <member refid="namespacemth_1aa4b7a284c625a761c9089ae874d7d3a2" kind="function"><name>sin</name></member>
+    <member refid="namespacemth_1a09d29500bb5a549d5771c23374ae2325" kind="function"><name>cos</name></member>
+    <member refid="namespacemth_1a813c72781af94b0419f08f86431a6008" kind="function"><name>tan</name></member>
+    <member refid="namespacemth_1ae8d04ba4428f76b1f226943048b3b0ad" kind="function"><name>sec</name></member>
+    <member refid="namespacemth_1a53d839f1be5f31f665addce6dc494a95" kind="function"><name>csc</name></member>
+    <member refid="namespacemth_1aa47c8625c38baf38d7c40a646390d9ba" kind="function"><name>cot</name></member>
+    <member refid="namespacemth_1a70b7276ef8d67e29bbcabded1df3055a" kind="function"><name>asin</name></member>
+    <member refid="namespacemth_1ac736564b160af8d04f4b936c60a0f0fa" kind="function"><name>acos</name></member>
+    <member refid="namespacemth_1aaca92bdc13f5f96dcf865cf35da79d0c" kind="function"><name>atan</name></member>
+    <member refid="namespacemth_1ad4c26ccede93cb4c0719203c627d1ab8" kind="function"><name>asec</name></member>
+    <member refid="namespacemth_1ad4fe466c02ca4bcc3ae42c02706cd1b1" kind="function"><name>acsc</name></member>
+    <member refid="namespacemth_1aab718ecb4db4f3e484a2b27b8a6bbe6f" kind="function"><name>acot</name></member>
+    <member refid="namespacemth_1a52e0a1d3a051be204bb2bbc62454bab0" kind="function"><name>sinh</name></member>
+    <member refid="namespacemth_1a9b74e2484c4b73ee68db86765f6a4f21" kind="function"><name>cosh</name></member>
+    <member refid="namespacemth_1a9aa5409c5f1a46249f17c57a87ed718e" kind="function"><name>tanh</name></member>
+    <member refid="namespacemth_1a22adb31ad4ddfbf157cd5b465cb6ba08" kind="function"><name>sech</name></member>
+    <member refid="namespacemth_1af0a811325c733aa6750893f062802f07" kind="function"><name>csch</name></member>
+    <member refid="namespacemth_1a11261d7a6f0ddc01888709b9ef9957f5" kind="function"><name>coth</name></member>
+    <member refid="namespacemth_1a9cc816fa6926d5c1a6a51113d80e3555" kind="function"><name>asinh</name></member>
+    <member refid="namespacemth_1a8a27adc59c40f4c3f153a70cb74bd713" kind="function"><name>acosh</name></member>
+    <member refid="namespacemth_1aca09a5442ff9f3ed28aca3fb7675ae83" kind="function"><name>atanh</name></member>
+    <member refid="namespacemth_1add365ba663874ecfe9a1ac8890cd4748" kind="function"><name>asech</name></member>
+    <member refid="namespacemth_1a61de7392238aa79bec097d2b6ed3f872" kind="function"><name>acsch</name></member>
+    <member refid="namespacemth_1a4d660e56ec186abc1de2e7be09e53f33" kind="function"><name>acoth</name></member>
+    <member refid="namespacemth_1acf2153461c06ac4d7fa2003d3c07f3c5" kind="function"><name>exp</name></member>
   </compound>
   <compound refid="vector_8hpp" kind="file"><name>vector.hpp</name>
     <member refid="vector_8hpp_1acdc2becd1843b6274668bf58efd00288" kind="function"><name>operator*</name></member>
@@ -260,20 +239,45 @@
     <member refid="vector_8hpp_1a46af90d1287f8a71f3a606ceebb4364a" kind="function"><name>operator%</name></member>
     <member refid="vector_8hpp_1abcb08117e477166564a87be11b67ee8c" kind="function"><name>operator==</name></member>
   </compound>
+  <compound refid="mcpp_8hpp" kind="file"><name>mcpp.hpp</name>
+  </compound>
+  <compound refid="mat_8hpp" kind="file"><name>mat.hpp</name>
+    <member refid="namespacenum_1_1mat_1a507ab20c197f9471400e82f7caa62ae1" kind="function"><name>eye</name></member>
+    <member refid="namespacenum_1_1mat_1ac367fcfb6f6412b6e3b4642d28a11eb4" kind="function"><name>perms</name></member>
+  </compound>
+  <compound refid="vec_8hpp" kind="file"><name>vec.hpp</name>
+    <member refid="namespacenum_1_1vec_1a44d5efd8e68e699822a2919ce1da40c5" kind="function"><name>vec_op</name></member>
+    <member refid="namespacenum_1_1vec_1ac338ca1d3474f6a817119a64330a5840" kind="function"><name>difference</name></member>
+    <member refid="namespacenum_1_1vec_1a6161d87c5a7fcb0d501502354ae86c06" kind="function"><name>averages</name></member>
+    <member refid="namespacenum_1_1vec_1a1129cb6234e6115573eb823122072c8b" kind="function"><name>arange</name></member>
+    <member refid="namespacenum_1_1vec_1a26eac6f47101a0f84aac7d74b16748a6" kind="function"><name>linspace</name></member>
+    <member refid="namespacenum_1_1vec_1a59e437b35a8ae297ebbfe7d8e0de36e4" kind="function"><name>dot</name></member>
+    <member refid="namespacenum_1_1vec_1ae904f9d73fa5a4f212c0bca79ccabb65" kind="function"><name>cross</name></member>
+  </compound>
+  <compound refid="plot_8hpp" kind="file"><name>plot.hpp</name>
+  </compound>
+  <compound refid="statistics_8hpp" kind="file"><name>statistics.hpp</name>
+  </compound>
+  <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
+  </compound>
+  <compound refid="table_8hpp" kind="file"><name>table.hpp</name>
+  </compound>
+  <compound refid="tree_8hpp" kind="file"><name>tree.hpp</name>
+  </compound>
   <compound refid="dir_25d299ead5ad88191ac2f2d25bef095e" kind="dir"><name>includes/algebra</name>
   </compound>
   <compound refid="dir_4cd83b732da33e26972dd88221fcb4f7" kind="dir"><name>includes/calculus</name>
   </compound>
+  <compound refid="dir_2b97f0eb067416c511ded74a0cf87f9d" kind="dir"><name>includes/communication</name>
+  </compound>
   <compound refid="dir_09e761304027c904456130627fd4dcf5" kind="dir"><name>includes</name>
   </compound>
-  <compound refid="dir_d75e03a618fa17d6f453b0e1d8f501af" kind="dir"><name>includes/misc</name>
+  <compound refid="dir_2b1a82f562d9d140ac52542949113255" kind="dir"><name>includes/math</name>
   </compound>
-  <compound refid="dir_b89f0d5d290a11cbae044ce561bc87aa" kind="dir"><name>includes/plot</name>
+  <compound refid="dir_26658cbd91f1aecb4cf76855d0c330bb" kind="dir"><name>includes/numerical</name>
   </compound>
   <compound refid="dir_42993ecc421d8c07334c9a0444b19a53" kind="dir"><name>includes/stats</name>
   </compound>
   <compound refid="dir_1ac8c584a2311ca062bb43cbcaebb9f4" kind="dir"><name>includes/variables</name>
-  </compound>
-  <compound refid="dir_976250933b996c856fb3fe86613b4a46" kind="dir"><name>includes/vectors</name>
   </compound>
 </doxygenindex>

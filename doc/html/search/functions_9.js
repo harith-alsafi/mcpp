@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linspace_189',['linspace',['../namespacenum.html#acf7c26ead7bac86ba3b8d0bc1da19dac',1,'num']]]
+  ['linspace_199',['linspace',['../namespacenum_1_1vec.html#a26eac6f47101a0f84aac7d74b16748a6',1,'num::vec']]]
 ];

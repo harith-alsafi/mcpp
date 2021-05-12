@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['factorial_54',['factorial',['../namespacemsc.html#a9fe57c0fa8c03c6b39f11b09ce3cc47f',1,'msc']]],
-  ['figure_55',['figure',['../namespaceplt.html#a294c68129755000491a6b4d6d9160f86',1,'plt']]]
+  ['factorial_55',['factorial',['../namespacealg_1_1msc.html#ae67380432511490095ee4573a6cc852c',1,'alg::msc']]]
 ];

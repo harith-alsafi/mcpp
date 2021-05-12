@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['color_240',['color',['../structplt_1_1details.html#ab1d8a5cc5ca0a2570cf735c83cecec5c',1,'plt::details']]]
+  ['l_251',['L',['../structvar_1_1matrix_1_1LU.html#acba2383bcfea720a6704dc18577a36f7',1,'var::matrix::LU']]]
 ];

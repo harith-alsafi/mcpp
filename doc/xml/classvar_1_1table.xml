@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classvar_1_1table" kind="class" language="C++" prot="public">
+    <compoundname>var::table</compoundname>
+    <includes local="yes">table.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename D</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>var::table&lt; D &gt;</label>
+        <link refid="classvar_1_1table"/>
+      </node>
+    </collaborationgraph>
+    <location file="includes/variables/table.hpp" line="5" column="5" bodyfile="includes/variables/table.hpp" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

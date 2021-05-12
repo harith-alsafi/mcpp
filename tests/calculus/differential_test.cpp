@@ -42,22 +42,22 @@ TEST(diff, fun)
     // first derivative
     std::vector<double> dy1 = {-3, 0, 3, 7};
     auto ansdy1 = diff(f, x, 1);
-    ASSERT_TRUE(num::round(ansdy1) == dy1);
+    ASSERT_TRUE(mth::round(ansdy1) == dy1);
 
     // 2nd derivative
     std::vector<double> dy2 = {3, 3, 5};
     auto ansdy2 = diff(f, x, 2);
-    ASSERT_TRUE(num::round(ansdy2) == dy2);
+    ASSERT_TRUE(mth::round(ansdy2) == dy2);
 
     // 3rd derivative
     std::vector<double> dy3 = {-1, 2};
     auto ansdy3 = diff(f, x, 3);
-    ASSERT_TRUE(num::round(ansdy3) == dy3);
+    ASSERT_TRUE(mth::round(ansdy3) == dy3);
 
     // 3rd derivative
     std::vector<double> dy4 = {3};
     auto ansdy4 = diff(f, x, 4);
-    ASSERT_TRUE(num::round(ansdy4) == dy4);
+    ASSERT_TRUE(mth::round(ansdy4) == dy4);
 
 }
 

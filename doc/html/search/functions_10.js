@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vec_5fop_232',['vec_op',['../namespacenum.html#a4e9fe88d96692c33fe86018dae231540',1,'num']]],
-  ['vline_233',['vline',['../namespaceplt.html#a7cfc8899deffdc69733c4d9c8550b214',1,'plt']]]
+  ['vec_5fop_245',['vec_op',['../namespacenum_1_1vec.html#a44d5efd8e68e699822a2919ce1da40c5',1,'num::vec']]]
 ];

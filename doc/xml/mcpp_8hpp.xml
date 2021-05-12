@@ -2,25 +2,35 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="mcpp_8hpp" kind="file" language="C++">
     <compoundname>mcpp.hpp</compoundname>
-    <includes refid="constants_8hpp" local="yes">misc/constants.hpp</includes>
-    <includes refid="misc_8hpp" local="yes">misc/misc.hpp</includes>
+    <includes refid="constants_8hpp" local="yes">math/constants.hpp</includes>
+    <includes refid="misc_8hpp" local="yes">algebra/misc.hpp</includes>
+    <includes refid="mat_8hpp" local="yes">numerical/mat.hpp</includes>
+    <includes refid="vector_8hpp" local="yes">math/vector.hpp</includes>
     <includes refid="matrix_8hpp" local="yes">variables/matrix.hpp</includes>
-    <includes refid="vector_8hpp" local="yes">vectors/vector.hpp</includes>
-    <includes refid="vec_8hpp" local="yes">vectors/vec.hpp</includes>
+    <includes refid="table_8hpp" local="yes">variables/table.hpp</includes>
+    <includes refid="tree_8hpp" local="yes">variables/tree.hpp</includes>
+    <includes refid="vec_8hpp" local="yes">numerical/vec.hpp</includes>
+    <includes refid="mthvec_8hpp" local="yes">math/mthvec.hpp</includes>
     <includes refid="differential_8hpp" local="yes">calculus/differential.hpp</includes>
     <includedby refid="differential_8hpp" local="yes">includes/calculus/differential.hpp</includedby>
+    <includedby refid="mat_8hpp" local="yes">includes/numerical/mat.hpp</includedby>
+    <includedby refid="matrix_8hpp" local="yes">includes/variables/matrix.hpp</includedby>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;misc/constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;misc/misc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;variables/matrix.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vectors/vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vectors/vec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;calculus/differential.hpp&quot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;math/constants.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;algebra/misc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;numerical/mat.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;math/vector.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;variables/matrix.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;variables/table.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;variables/tree.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;numerical/vec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;math/mthvec.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;calculus/differential.hpp&quot;</highlight></codeline>
     </programlisting>
     <location file="includes/mcpp.hpp"/>
   </compounddef>

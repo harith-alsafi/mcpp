@@ -1,0 +1,126 @@
+\hypertarget{namespacenum_1_1vec}{}\doxysection{num\+::vec Namespace Reference}
+\label{namespacenum_1_1vec}\index{num::vec@{num::vec}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_a44d5efd8e68e699822a2919ce1da40c5}{vec\+\_\+op}} (LAMBDA f, std\+::vector$<$ D $>$ \&x)
+\begin{DoxyCompactList}\small\item\em operation on vectors \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_ac338ca1d3474f6a817119a64330a5840}{difference}} (std\+::vector$<$ D $>$ \&a)
+\begin{DoxyCompactList}\small\item\em difference of elements in vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_a6161d87c5a7fcb0d501502354ae86c06}{averages}} (std\+::vector$<$ D $>$ \&a)
+\begin{DoxyCompactList}\small\item\em average of elements in vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_a1129cb6234e6115573eb823122072c8b}{arange}} (D start, D end, D diff)
+\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_a26eac6f47101a0f84aac7d74b16748a6}{linspace}} (D start, D end, int count)
+\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_a59e437b35a8ae297ebbfe7d8e0de36e4}{dot}} (std\+::vector$<$ D $>$ a, std\+::vector$<$ D $>$ b)
+\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacenum_1_1vec_ae904f9d73fa5a4f212c0bca79ccabb65}{cross}} (std\+::vector$<$ D $>$ a, std\+::vector$<$ D $>$ b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenum_1_1vec_a1129cb6234e6115573eb823122072c8b}\label{namespacenum_1_1vec_a1129cb6234e6115573eb823122072c8b}} 
+\index{num::vec@{num::vec}!arange@{arange}}
+\index{arange@{arange}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{arange()}{arange()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::arange (\begin{DoxyParamCaption}\item[{D}]{start,  }\item[{D}]{end,  }\item[{D}]{diff }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenum_1_1vec_a6161d87c5a7fcb0d501502354ae86c06}\label{namespacenum_1_1vec_a6161d87c5a7fcb0d501502354ae86c06}} 
+\index{num::vec@{num::vec}!averages@{averages}}
+\index{averages@{averages}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{averages()}{averages()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::averages (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
+
+
+
+average of elements in vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenum_1_1vec_ae904f9d73fa5a4f212c0bca79ccabb65}\label{namespacenum_1_1vec_ae904f9d73fa5a4f212c0bca79ccabb65}} 
+\index{num::vec@{num::vec}!cross@{cross}}
+\index{cross@{cross}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::cross (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a,  }\item[{std\+::vector$<$ D $>$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenum_1_1vec_ac338ca1d3474f6a817119a64330a5840}\label{namespacenum_1_1vec_ac338ca1d3474f6a817119a64330a5840}} 
+\index{num::vec@{num::vec}!difference@{difference}}
+\index{difference@{difference}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{difference()}{difference()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::difference (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
+
+
+
+difference of elements in vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacenum_1_1vec_a59e437b35a8ae297ebbfe7d8e0de36e4}\label{namespacenum_1_1vec_a59e437b35a8ae297ebbfe7d8e0de36e4}} 
+\index{num::vec@{num::vec}!dot@{dot}}
+\index{dot@{dot}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::dot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a,  }\item[{std\+::vector$<$ D $>$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenum_1_1vec_a26eac6f47101a0f84aac7d74b16748a6}\label{namespacenum_1_1vec_a26eac6f47101a0f84aac7d74b16748a6}} 
+\index{num::vec@{num::vec}!linspace@{linspace}}
+\index{linspace@{linspace}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::linspace (\begin{DoxyParamCaption}\item[{D}]{start,  }\item[{D}]{end,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacenum_1_1vec_a44d5efd8e68e699822a2919ce1da40c5}\label{namespacenum_1_1vec_a44d5efd8e68e699822a2919ce1da40c5}} 
+\index{num::vec@{num::vec}!vec\_op@{vec\_op}}
+\index{vec\_op@{vec\_op}!num::vec@{num::vec}}
+\doxysubsubsection{\texorpdfstring{vec\_op()}{vec\_op()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ num\+::vec\+::vec\+\_\+op (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{std\+::vector$<$ D $>$ \&}]{x }\end{DoxyParamCaption})}
+
+
+
+operation on vectors 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+{\em LAMBDA} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \\
+\hline
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}

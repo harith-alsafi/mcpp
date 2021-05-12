@@ -533,7 +533,7 @@ TEST(functionality, lu)
         {0, 1, 0}
     };
 
-    auto LU = m.lu_decomposition();
+    auto LU = m.plu();
 
 
     ASSERT_TRUE(LU.U == u);

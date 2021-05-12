@@ -3,11 +3,12 @@
   <compounddef id="misc_8hpp" kind="file" language="C++">
     <compoundname>misc.hpp</compoundname>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
-    <innernamespace refid="namespacemsc">msc</innernamespace>
+    <innernamespace refid="namespacealg">alg</innernamespace>
+    <innernamespace refid="namespacealg_1_1msc">alg::msc</innernamespace>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int msc::factorial</definition>
+        <definition>int alg::msc::factorial</definition>
         <argsstring>(int n)</argsstring>
         <name>factorial</name>
         <param>
@@ -15,7 +16,7 @@
           <declname>n</declname>
         </param>
         <briefdescription>
-<para>factorial </para>
+<para>Factorial. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -33,11 +34,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/misc/misc.hpp" line="11" column="9" bodyfile="includes/misc/misc.hpp" bodystart="11" bodyend="17"/>
+        <location file="includes/algebra/misc.hpp" line="13" column="13" bodyfile="includes/algebra/misc.hpp" bodystart="13" bodyend="19"/>
       </memberdef>
-      <memberdef kind="function" id="namespacemsc_1a2af0b5dba48bd5f9d05b9f067c071176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacealg_1_1msc_1aae4e81e78933986bbe9ed04fe916c7ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int msc::combination</definition>
+        <definition>int alg::msc::combination</definition>
         <argsstring>(int n, int k)</argsstring>
         <name>combination</name>
         <param>
@@ -49,7 +50,7 @@
           <declname>k</declname>
         </param>
         <briefdescription>
-<para>combination </para>
+<para>Combination (Cr) </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -75,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/misc/misc.hpp" line="26" column="9" bodyfile="includes/misc/misc.hpp" bodystart="26" bodyend="28"/>
+        <location file="includes/algebra/misc.hpp" line="28" column="13" bodyfile="includes/algebra/misc.hpp" bodystart="28" bodyend="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,27 +85,32 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2" refid="namespacemsc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemsc" kindref="compound">msc</ref></highlight></codeline>
+<codeline lineno="2" refid="namespacealg" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacealg" kindref="compound">alg</ref></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kindref="member">factorial</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n){</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>n;<sp/>i<sp/>&gt;<sp/>0;<sp/>i--){</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>sum*i;</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacemsc_1a2af0b5dba48bd5f9d05b9f067c071176" kindref="member">combination</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k){</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kindref="member">factorial</ref>(n)/(<ref refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kindref="member">factorial</ref>(k)*<ref refid="namespacemsc_1a9fe57c0fa8c03c6b39f11b09ce3cc47f" kindref="member">factorial</ref>(n-k));</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>polyfit</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>binomial<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>combination<sp/>(n,<sp/>k)</highlight></codeline>
+<codeline lineno="4" refid="namespacealg_1_1msc" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">msc</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kindref="member">factorial</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>n;<sp/>i<sp/>&gt;<sp/>0;<sp/>i--){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>sum*i;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacealg_1_1msc_1aae4e81e78933986bbe9ed04fe916c7ad" kindref="member">combination</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kindref="member">factorial</ref>(n)/(<ref refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kindref="member">factorial</ref>(k)*<ref refid="namespacealg_1_1msc_1ae67380432511490095ee4573a6cc852c" kindref="member">factorial</ref>(n-k));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>polyfit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>binomial<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>roots<sp/></highlight></codeline>
     </programlisting>
-    <location file="includes/misc/misc.hpp"/>
+    <location file="includes/algebra/misc.hpp"/>
   </compounddef>
 </doxygen>

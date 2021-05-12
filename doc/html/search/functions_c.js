@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['plot_198',['plot',['../namespaceplt.html#ae2b77fe07b2b2682fcd9741f2291b0fc',1,'plt']]],
-  ['point_199',['point',['../namespaceplt.html#ad9fe1a952c304b4aae420d27d4e0b3ff',1,'plt']]],
-  ['pop_5fcol_200',['pop_col',['../classvar_1_1matrix.html#a9043393e205545106f58c316da68df80',1,'var::matrix']]],
-  ['pop_5frow_201',['pop_row',['../classvar_1_1matrix.html#adc31cf9d718ccf376c2309c4f6a5f6dd',1,'var::matrix']]],
-  ['pow_202',['pow',['../namespacenum.html#ade513603c3266b11d021a2f7aa36f614',1,'num::pow(std::vector&lt; D &gt; a, D b)'],['../namespacenum.html#a24d376c085ac4f76594a6227ffe26bf5',1,'num::pow(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)']]],
-  ['push_5fcol_203',['push_col',['../classvar_1_1matrix.html#aca98d7a8c56c5afd964ba30b6cff7bfb',1,'var::matrix']]],
-  ['push_5frow_204',['push_row',['../classvar_1_1matrix.html#a3c1bf3836d3d6b650675e9c4ba642651',1,'var::matrix']]]
+  ['perms_209',['perms',['../namespacenum_1_1mat.html#ac367fcfb6f6412b6e3b4642d28a11eb4',1,'num::mat']]],
+  ['plu_210',['plu',['../classvar_1_1matrix.html#ac6d4763f62d11273f092f21ad3c0760f',1,'var::matrix']]],
+  ['pop_5fcol_211',['pop_col',['../classvar_1_1matrix.html#a9043393e205545106f58c316da68df80',1,'var::matrix']]],
+  ['pop_5frow_212',['pop_row',['../classvar_1_1matrix.html#adc31cf9d718ccf376c2309c4f6a5f6dd',1,'var::matrix']]],
+  ['pow_213',['pow',['../namespacemth.html#a5d5c72bc9a2bb1e89d180a96290d4df8',1,'mth::pow(std::vector&lt; D &gt; a, D b)'],['../namespacemth.html#a263f00ab3586e48812df8b1eb839e1fe',1,'mth::pow(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)']]],
+  ['push_5fcol_214',['push_col',['../classvar_1_1matrix.html#aca98d7a8c56c5afd964ba30b6cff7bfb',1,'var::matrix']]],
+  ['push_5frow_215',['push_row',['../classvar_1_1matrix.html#a3c1bf3836d3d6b650675e9c4ba642651',1,'var::matrix']]]
 ];

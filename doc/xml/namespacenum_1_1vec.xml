@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacenum_1_1vec" kind="namespace" language="C++">
+    <compoundname>num::vec</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacenum_1_1vec_1a44d5efd8e68e699822a2919ce1da40c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::vec_op</definition>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x)</argsstring>
+        <name>vec_op</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>operation on vectors </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="19" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1ac338ca1d3474f6a817119a64330a5840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::difference</definition>
+        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
+        <name>difference</name>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>difference of elements in vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="35" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1a6161d87c5a7fcb0d501502354ae86c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::averages</definition>
+        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
+        <name>averages</name>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>average of elements in vector </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="51" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1a1129cb6234e6115573eb823122072c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::arange</definition>
+        <argsstring>(D start, D end, D diff)</argsstring>
+        <name>arange</name>
+        <param>
+          <type>D</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>diff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="61" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="61" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1a26eac6f47101a0f84aac7d74b16748a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::linspace</definition>
+        <argsstring>(D start, D end, int count)</argsstring>
+        <name>linspace</name>
+        <param>
+          <type>D</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="70" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1a59e437b35a8ae297ebbfe7d8e0de36e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::dot</definition>
+        <argsstring>(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</argsstring>
+        <name>dot</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="75" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacenum_1_1vec_1ae904f9d73fa5a4f212c0bca79ccabb65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; num::vec::cross</definition>
+        <argsstring>(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)</argsstring>
+        <name>cross</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vec.hpp" line="82" column="21" bodyfile="includes/numerical/vec.hpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/numerical/vec.hpp" line="7" column="5"/>
+  </compounddef>
+</doxygen>

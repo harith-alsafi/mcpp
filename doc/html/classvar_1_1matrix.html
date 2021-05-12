@@ -87,7 +87,7 @@ Collaboration diagram for var::matrix&lt; D &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvar_1_1matrix__coll__graph.png" border="0" usemap="#avar_1_1matrix_3_01D_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="avar_1_1matrix_3_01D_01_4_coll__map" id="avar_1_1matrix_3_01D_01_4_coll__map">
-<area shape="rect" title="Class for 2d matrix of objects." alt="" coords="5,5,124,933"/>
+<area shape="rect" title="Class for 2d matrix of objects." alt="" coords="5,5,124,1021"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -95,6 +95,9 @@ Collaboration diagram for var::matrix&lt; D &gt;:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix_1_1Col.html">Col</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Col class for another operator[].  <a href="classvar_1_1matrix_1_1Col.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvar_1_1matrix_1_1LU.html">LU</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct for PLU decomposition.  <a href="structvar_1_1matrix_1_1LU.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -129,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a493b344c09c695efcd3fec6065059948"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a493b344c09c695efcd3fec6065059948">end</a> () const</td></tr>
 <tr class="memdesc:a493b344c09c695efcd3fec6065059948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns const end.  <a href="classvar_1_1matrix.html#a493b344c09c695efcd3fec6065059948">More...</a><br /></td></tr>
 <tr class="separator:a493b344c09c695efcd3fec6065059948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b45b32d3db9d173a5a689b8616866f"><td class="memItemLeft" align="right" valign="top">D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ae1b45b32d3db9d173a5a689b8616866f">get_element</a> (int i, int j)</td></tr>
+<tr class="memdesc:ae1b45b32d3db9d173a5a689b8616866f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the element object.  <a href="classvar_1_1matrix.html#ae1b45b32d3db9d173a5a689b8616866f">More...</a><br /></td></tr>
+<tr class="separator:ae1b45b32d3db9d173a5a689b8616866f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa27021aa738d82a6b9dde82de321f5a1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#aa27021aa738d82a6b9dde82de321f5a1">get_row</a> (int i)</td></tr>
 <tr class="memdesc:aa27021aa738d82a6b9dde82de321f5a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the row at an index.  <a href="classvar_1_1matrix.html#aa27021aa738d82a6b9dde82de321f5a1">More...</a><br /></td></tr>
 <tr class="separator:aa27021aa738d82a6b9dde82de321f5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,6 +204,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf48edbbdf86b09b660ecfd2981f9711"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#abf48edbbdf86b09b660ecfd2981f9711">mat_op</a> (LAMBDA f)</td></tr>
 <tr class="memdesc:abf48edbbdf86b09b660ecfd2981f9711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function operation on all of the matrix.  <a href="classvar_1_1matrix.html#abf48edbbdf86b09b660ecfd2981f9711">More...</a><br /></td></tr>
 <tr class="separator:abf48edbbdf86b09b660ecfd2981f9711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360593837b06f88da2dc1a189804bc36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a360593837b06f88da2dc1a189804bc36">join_row</a> (<a class="el" href="classvar_1_1matrix.html">matrix</a> other)</td></tr>
+<tr class="memdesc:a360593837b06f88da2dc1a189804bc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines the rows of another matrix.  <a href="classvar_1_1matrix.html#a360593837b06f88da2dc1a189804bc36">More...</a><br /></td></tr>
+<tr class="separator:a360593837b06f88da2dc1a189804bc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6431ed7fca8e942a9887ae8fa68897b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ae6431ed7fca8e942a9887ae8fa68897b">join_col</a> (<a class="el" href="classvar_1_1matrix.html">matrix</a> other)</td></tr>
+<tr class="memdesc:ae6431ed7fca8e942a9887ae8fa68897b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines the columns of another matrix.  <a href="classvar_1_1matrix.html#ae6431ed7fca8e942a9887ae8fa68897b">More...</a><br /></td></tr>
+<tr class="separator:ae6431ed7fca8e942a9887ae8fa68897b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eac7bafdfd06437d0b86931335fb194"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a9eac7bafdfd06437d0b86931335fb194">turn_to</a> (D n)</td></tr>
 <tr class="memdesc:a9eac7bafdfd06437d0b86931335fb194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts all elements to n.  <a href="classvar_1_1matrix.html#a9eac7bafdfd06437d0b86931335fb194">More...</a><br /></td></tr>
 <tr class="separator:a9eac7bafdfd06437d0b86931335fb194"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,9 +228,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac97536b4f94f1dd614fb6267c07dd2b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ac97536b4f94f1dd614fb6267c07dd2b7">cofactor</a> ()</td></tr>
 <tr class="memdesc:ac97536b4f94f1dd614fb6267c07dd2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns cofactor matrix.  <a href="classvar_1_1matrix.html#ac97536b4f94f1dd614fb6267c07dd2b7">More...</a><br /></td></tr>
 <tr class="separator:ac97536b4f94f1dd614fb6267c07dd2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8bdaf174065f964bdd63e3c55ec5e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#aeb8bdaf174065f964bdd63e3c55ec5e2">M</a> (int i, int j, <a class="el" href="classvar_1_1matrix.html">matrix</a> &amp;other)</td></tr>
-<tr class="memdesc:aeb8bdaf174065f964bdd63e3c55ec5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor of a matrix.  <a href="classvar_1_1matrix.html#aeb8bdaf174065f964bdd63e3c55ec5e2">More...</a><br /></td></tr>
-<tr class="separator:aeb8bdaf174065f964bdd63e3c55ec5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae63bcd0b556175ab578d7095b6cf647c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ae63bcd0b556175ab578d7095b6cf647c">M</a> (int i, int j)</td></tr>
+<tr class="memdesc:ae63bcd0b556175ab578d7095b6cf647c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor of a matrix.  <a href="classvar_1_1matrix.html#ae63bcd0b556175ab578d7095b6cf647c">More...</a><br /></td></tr>
+<tr class="separator:ae63bcd0b556175ab578d7095b6cf647c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad78a167d7400fac474fd03cf3363defb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ad78a167d7400fac474fd03cf3363defb">adj</a> ()</td></tr>
 <tr class="memdesc:ad78a167d7400fac474fd03cf3363defb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjugate of a matrix.  <a href="classvar_1_1matrix.html#ad78a167d7400fac474fd03cf3363defb">More...</a><br /></td></tr>
 <tr class="separator:ad78a167d7400fac474fd03cf3363defb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,7 +238,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8a66138dce5fdb1b27a89349a8fd8539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns inverse of a matrix.  <a href="classvar_1_1matrix.html#a8a66138dce5fdb1b27a89349a8fd8539">More...</a><br /></td></tr>
 <tr class="separator:a8a66138dce5fdb1b27a89349a8fd8539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7cc7e40124be3bd4a1accfacd68b05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a5e7cc7e40124be3bd4a1accfacd68b05">rref</a> ()</td></tr>
+<tr class="memdesc:a5e7cc7e40124be3bd4a1accfacd68b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduced row echolon form.  <a href="classvar_1_1matrix.html#a5e7cc7e40124be3bd4a1accfacd68b05">More...</a><br /></td></tr>
 <tr class="separator:a5e7cc7e40124be3bd4a1accfacd68b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ff1c5a059b90bd4871d249d1c48c8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a29ff1c5a059b90bd4871d249d1c48c8b">ref</a> ()</td></tr>
+<tr class="memdesc:a29ff1c5a059b90bd4871d249d1c48c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row echolon form.  <a href="classvar_1_1matrix.html#a29ff1c5a059b90bd4871d249d1c48c8b">More...</a><br /></td></tr>
+<tr class="separator:a29ff1c5a059b90bd4871d249d1c48c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d4763f62d11273f092f21ad3c0760f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvar_1_1matrix_1_1LU.html">LU</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#ac6d4763f62d11273f092f21ad3c0760f">plu</a> ()</td></tr>
+<tr class="memdesc:ac6d4763f62d11273f092f21ad3c0760f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PLU decomposition.  <a href="classvar_1_1matrix.html#ac6d4763f62d11273f092f21ad3c0760f">More...</a><br /></td></tr>
+<tr class="separator:ac6d4763f62d11273f092f21ad3c0760f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ffd8772f87c70f5a8e525b0e4dd71f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a69ffd8772f87c70f5a8e525b0e4dd71f">is_square</a> ()</td></tr>
 <tr class="memdesc:a69ffd8772f87c70f5a8e525b0e4dd71f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if matrix is square.  <a href="classvar_1_1matrix.html#a69ffd8772f87c70f5a8e525b0e4dd71f">More...</a><br /></td></tr>
 <tr class="separator:a69ffd8772f87c70f5a8e525b0e4dd71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,6 +295,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a98defd0b837085eae86da59649934392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a98defd0b837085eae86da59649934392">check_size</a> (int r, int c)</td></tr>
 <tr class="memdesc:a98defd0b837085eae86da59649934392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks other matrix size for operators.  <a href="classvar_1_1matrix.html#a98defd0b837085eae86da59649934392">More...</a><br /></td></tr>
 <tr class="separator:a98defd0b837085eae86da59649934392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23843a10260f18c0a8ee950a4c8ba0be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1matrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a23843a10260f18c0a8ee950a4c8ba0be">MM</a> (int i, int j, <a class="el" href="classvar_1_1matrix.html">matrix</a> &amp;other)</td></tr>
+<tr class="memdesc:a23843a10260f18c0a8ee950a4c8ba0be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protected minor (used in <code>DET</code>)  <a href="classvar_1_1matrix.html#a23843a10260f18c0a8ee950a4c8ba0be">More...</a><br /></td></tr>
+<tr class="separator:a23843a10260f18c0a8ee950a4c8ba0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac8393e86296c741a8e1023b329620b1"><td class="memItemLeft" align="right" valign="top">D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#aac8393e86296c741a8e1023b329620b1">DET</a> (<a class="el" href="classvar_1_1matrix.html">matrix</a> a)</td></tr>
 <tr class="memdesc:aac8393e86296c741a8e1023b329620b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive determinant.  <a href="classvar_1_1matrix.html#aac8393e86296c741a8e1023b329620b1">More...</a><br /></td></tr>
 <tr class="separator:aac8393e86296c741a8e1023b329620b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -384,7 +406,7 @@ template&lt;typename D &gt; </div>
 
 <p>Construct a new matrix object. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(2, 3); <span class="comment">// 2 rows, 3 colums</span></div>
-<div class="ttc" id="aclassvar_1_1matrix_html"><div class="ttname"><a href="classvar_1_1matrix.html">var::matrix</a></div><div class="ttdoc">Class for 2d matrix of objects.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:14</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html"><div class="ttname"><a href="classvar_1_1matrix.html">var::matrix</a></div><div class="ttdoc">Class for 2d matrix of objects.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:16</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>number of rows </td></tr>
@@ -1091,6 +1113,57 @@ Mutable methods</h2>
 
 </div>
 </div>
+<a id="ae1b45b32d3db9d173a5a689b8616866f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b45b32d3db9d173a5a689b8616866f">&#9670;&nbsp;</a></span>get_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::get_element </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the element object. </p>
+<ul>
+<li>Unlike the <code>[]</code> operator this does index checking</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
+
+</div>
+</div>
 <a id="aa27021aa738d82a6b9dde82de321f5a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa27021aa738d82a6b9dde82de321f5a1">&#9670;&nbsp;</a></span>get_row()</h2>
 
@@ -1121,7 +1194,7 @@ template&lt;typename D &gt; </div>
 <p class=""><b>Usage</b>: <br  />
  </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(3, 3);</div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">col</a> = m.get_col(1);</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a18f1458c2532b0aabbb3370d9556e745"><div class="ttname"><a href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">var::matrix::col</a></div><div class="ttdeci">int col()</div><div class="ttdoc">Returns the number of columns.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:217</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a18f1458c2532b0aabbb3370d9556e745"><div class="ttname"><a href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">var::matrix::col</a></div><div class="ttdeci">int col()</div><div class="ttdoc">Returns the number of columns.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:270</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>row index <br  />
@@ -1352,15 +1425,92 @@ template&lt;typename D &gt; </div>
 
 <p>Checks if matrix is square. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keywordtype">bool</span> <a class="code" href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">square</a> = m.is_square();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a54224ff2eefe0c6cd3fbeaff7a309f84"><div class="ttname"><a href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">var::matrix::square</a></div><div class="ttdeci">void square()</div><div class="ttdoc">throws exception if matrix is not a square</div><div class="ttdef"><b>Definition:</b> matrix.hpp:133</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a54224ff2eefe0c6cd3fbeaff7a309f84"><div class="ttname"><a href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">var::matrix::square</a></div><div class="ttdeci">void square()</div><div class="ttdoc">throws exception if matrix is not a square</div><div class="ttdef"><b>Definition:</b> matrix.hpp:160</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
 
 </div>
 </div>
-<a id="aeb8bdaf174065f964bdd63e3c55ec5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8bdaf174065f964bdd63e3c55ec5e2">&#9670;&nbsp;</a></span>M()</h2>
+<a id="ae6431ed7fca8e942a9887ae8fa68897b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6431ed7fca8e942a9887ae8fa68897b">&#9670;&nbsp;</a></span>join_col()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::join_col </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvar_1_1matrix.html">matrix</a>&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Combines the columns of another matrix. </p>
+<ul>
+<li><code>other</code> must have same number of rows</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><code>matrix</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a360593837b06f88da2dc1a189804bc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360593837b06f88da2dc1a189804bc36">&#9670;&nbsp;</a></span>join_row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::join_row </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvar_1_1matrix.html">matrix</a>&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Combines the rows of another matrix. </p>
+<p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// m2 must have same number of columns as m1</span></div>
+<div class="line">m1.join_row(m2);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><code>matrix</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae63bcd0b556175ab578d7095b6cf647c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63bcd0b556175ab578d7095b6cf647c">&#9670;&nbsp;</a></span>M()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1380,13 +1530,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvar_1_1matrix.html">matrix</a>&lt; D &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
+          <td class="paramname"><em>j</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1406,7 +1550,6 @@ template&lt;typename D &gt; </div>
   <table class="params">
     <tr><td class="paramname">i</td><td>row index </td></tr>
     <tr><td class="paramname">j</td><td>column index </td></tr>
-    <tr><td class="paramname">other</td><td><code>matrix</code> type </td></tr>
   </table>
   </dd>
 </dl>
@@ -1457,6 +1600,61 @@ template&lt;typename LAMBDA &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a23843a10260f18c0a8ee950a4c8ba0be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23843a10260f18c0a8ee950a4c8ba0be">&#9670;&nbsp;</a></span>MM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvar_1_1matrix.html">matrix</a> <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::MM </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvar_1_1matrix.html">matrix</a>&lt; D &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Protected minor (used in <code>DET</code>) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>row index </td></tr>
+    <tr><td class="paramname">j</td><td>column index </td></tr>
+    <tr><td class="paramname">other</td><td><code>matrix</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
 
 </div>
 </div>
@@ -1673,13 +1871,51 @@ template&lt;typename D &gt; </div>
 <p>[][] operator for <code>matrix</code> </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// m[row][col]</span></div>
 <div class="line">m[0][0] = 5;</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><ul>
+<li>Does not check the correct row and colum index;</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>row index </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>Col</code> which then returns &amp;D </dd></dl>
+
+</div>
+</div>
+<a id="ac6d4763f62d11273f092f21ad3c0760f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d4763f62d11273f092f21ad3c0760f">&#9670;&nbsp;</a></span>plu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvar_1_1matrix_1_1LU.html">LU</a> <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::plu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>PLU decomposition. </p>
+<p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// the output is LU struct </span></div>
+<div class="line"><span class="keyword">auto</span> LU = m.plu();</div>
+<div class="line"><span class="keyword">auto</span> L = LU.L;</div>
+<div class="line"><span class="keyword">auto</span> U = LU.U;</div>
+<div class="line"><span class="keyword">auto</span> P = LU.p;</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>LU</code> </dd></dl>
 
 </div>
 </div>
@@ -1813,6 +2049,36 @@ template&lt;typename D &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a29ff1c5a059b90bd4871d249d1c48c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ff1c5a059b90bd4871d249d1c48c8b">&#9670;&nbsp;</a></span>ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvar_1_1matrix.html">matrix</a> <a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;::ref </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Row echolon form. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
 
 </div>
 </div>
@@ -2123,6 +2389,9 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Reduced row echolon form. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
+
 </div>
 </div>
 <a id="a1c630d2e37b665b3fabcb3d76a4f8b89"></a>
@@ -2396,7 +2665,7 @@ template&lt;typename D &gt; </div>
 
 <p>Sum of all elements. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">sum</a> = m.sum();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:721</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:825</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
 
 </div>
@@ -2429,7 +2698,7 @@ template&lt;typename D &gt; </div>
 <p>Transpose of a matrix. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(3, 3);</div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a> = m.<a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a>();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:766</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:870</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
 
 </div>
@@ -2703,7 +2972,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>includes/numerical/mat.hpp</li>
 <li>includes/variables/matrix.hpp</li>
 </ul>
 </div><!-- contents -->

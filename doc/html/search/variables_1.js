@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['black_238',['BLACK',['../namespaceplt.html#a5c7d47e670c29852a99ba448eb92728c',1,'plt']]],
-  ['blue_239',['BLUE',['../namespaceplt.html#aac5be8319ecf8fa7e639c762327da5e5',1,'plt']]]
+  ['data_250',['data',['../classvar_1_1matrix.html#aeaf9bfe82e5fadff5e7c245dc2ed7691',1,'var::matrix']]]
 ];

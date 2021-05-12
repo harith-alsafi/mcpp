@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 
-namespace num
+namespace mth
 {
     /**
      * @brief overriding default round 

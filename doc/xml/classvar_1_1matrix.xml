@@ -4,6 +4,7 @@
     <compoundname>var::matrix</compoundname>
     <includes local="yes">matrix.hpp</includes>
     <innerclass refid="classvar_1_1matrix_1_1Col" prot="protected">var::matrix::Col</innerclass>
+    <innerclass refid="structvar_1_1matrix_1_1LU" prot="public">var::matrix::LU</innerclass>
     <templateparamlist>
       <param>
         <type>typename D</type>
@@ -52,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="140" column="19" bodyfile="includes/variables/matrix.hpp" bodystart="140" bodyend="-1"/>
+        <location file="includes/variables/matrix.hpp" line="167" column="19" bodyfile="includes/variables/matrix.hpp" bodystart="167" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvar_1_1matrix_1aaeb36b64e9670ebf5874fc26da0cfe2a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -65,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="141" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="141" bodyend="-1"/>
+        <location file="includes/variables/matrix.hpp" line="168" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="168" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvar_1_1matrix_1ab19eccf26d9fefbca395626e7790318b" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -78,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="142" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="142" bodyend="-1"/>
+        <location file="includes/variables/matrix.hpp" line="169" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="169" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -196,6 +197,60 @@
         </inbodydescription>
         <location file="includes/variables/matrix.hpp" line="104" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="104" bodyend="108"/>
       </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1a23843a10260f18c0a8ee950a4c8ba0be" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
+        <definition>matrix var::matrix&lt; D &gt;::MM</definition>
+        <argsstring>(int i, int j, matrix &amp;other)</argsstring>
+        <name>MM</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Protected minor (used in <computeroutput>DET</computeroutput>) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>matrix</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>matrix</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="118" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="118" bodyend="135"/>
+      </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1aac8393e86296c741a8e1023b329620b1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
         <definition>D var::matrix&lt; D &gt;::DET</definition>
@@ -225,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="116" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="116" bodyend="127"/>
+        <location file="includes/variables/matrix.hpp" line="143" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="143" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a54224ff2eefe0c6cd3fbeaff7a309f84" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -239,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="133" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="133" bodyend="137"/>
+        <location file="includes/variables/matrix.hpp" line="160" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="160" bodyend="164"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -282,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="154" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="154" bodyend="156"/>
+        <location file="includes/variables/matrix.hpp" line="207" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="207" bodyend="209"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a1060b67ddd058f180bd4b1f304562f64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -298,7 +353,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="166" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="166" bodyend="166"/>
+        <location file="includes/variables/matrix.hpp" line="219" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="219" bodyend="219"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a4b93fcfa4d64d096fd185ff1004256eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -335,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="184" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="184" bodyend="195"/>
+        <location file="includes/variables/matrix.hpp" line="237" column="13" bodyfile="includes/variables/matrix.hpp" bodystart="237" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a591c6983a2637275bb1d10d2d2e1e4a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -355,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="208" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="208" bodyend="210"/>
+        <location file="includes/variables/matrix.hpp" line="261" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="261" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a18f1458c2532b0aabbb3370d9556e745" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -372,7 +427,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="217" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="217" bodyend="219"/>
+        <location file="includes/variables/matrix.hpp" line="270" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="270" bodyend="272"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a1c630d2e37b665b3fabcb3d76a4f8b89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -389,7 +444,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="226" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="226" bodyend="228"/>
+        <location file="includes/variables/matrix.hpp" line="279" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="279" bodyend="281"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a989e36acf06c040379a78946442eed25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -412,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="244" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="244" bodyend="246"/>
+        <location file="includes/variables/matrix.hpp" line="297" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="297" bodyend="299"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a905ab851aebd8b3781e6605bec99e0a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -429,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="253" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="253" bodyend="255"/>
+        <location file="includes/variables/matrix.hpp" line="306" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="306" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a44444530f6334c9cd3f9c61c7aa91af8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -446,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="262" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="262" bodyend="264"/>
+        <location file="includes/variables/matrix.hpp" line="315" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="315" bodyend="317"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a493b344c09c695efcd3fec6065059948" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>auto</type>
@@ -463,7 +518,53 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="271" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="271" bodyend="273"/>
+        <location file="includes/variables/matrix.hpp" line="324" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="324" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1ae1b45b32d3db9d173a5a689b8616866f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>D</type>
+        <definition>D var::matrix&lt; D &gt;::get_element</definition>
+        <argsstring>(int i, int j)</argsstring>
+        <name>get_element</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Get the element object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Unlike the <computeroutput>[]</computeroutput> operator this does index checking</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>D</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="337" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="337" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1aa27021aa738d82a6b9dde82de321f5a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
@@ -498,7 +599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="287" column="25" bodyfile="includes/variables/matrix.hpp" bodystart="287" bodyend="290"/>
+        <location file="includes/variables/matrix.hpp" line="355" column="25" bodyfile="includes/variables/matrix.hpp" bodystart="355" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a6de49f43eb3bc3f3ed6c0b658a97605c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
@@ -531,7 +632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="301" column="25" bodyfile="includes/variables/matrix.hpp" bodystart="301" bodyend="308"/>
+        <location file="includes/variables/matrix.hpp" line="369" column="25" bodyfile="includes/variables/matrix.hpp" bodystart="369" bodyend="376"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a9bc064083b67aaab190bd66e7248a5ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -577,7 +678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="326" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="326" bodyend="337"/>
+        <location file="includes/variables/matrix.hpp" line="394" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="394" bodyend="405"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a3c1bf3836d3d6b650675e9c4ba642651" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -608,7 +709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="349" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="349" bodyend="361"/>
+        <location file="includes/variables/matrix.hpp" line="417" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="417" bodyend="429"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1aca98d7a8c56c5afd964ba30b6cff7bfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -636,7 +737,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="368" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="368" bodyend="384"/>
+        <location file="includes/variables/matrix.hpp" line="436" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="436" bodyend="452"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a3a4469d94dd4fd0235aaf555d3c4cc13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -679,7 +780,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="397" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="397" bodyend="406"/>
+        <location file="includes/variables/matrix.hpp" line="465" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="465" bodyend="474"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a3804122082a2fb003338f62021c405e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -719,7 +820,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="414" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="414" bodyend="426"/>
+        <location file="includes/variables/matrix.hpp" line="482" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="482" bodyend="494"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1adc31cf9d718ccf376c2309c4f6a5f6dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -735,7 +836,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="437" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="437" bodyend="443"/>
+        <location file="includes/variables/matrix.hpp" line="505" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="505" bodyend="511"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a9043393e205545106f58c316da68df80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -749,7 +850,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="449" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="449" bodyend="457"/>
+        <location file="includes/variables/matrix.hpp" line="517" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="517" bodyend="525"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a1ee2cc11235c4798bb70ed96a0fbf29a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -779,7 +880,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="469" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="469" bodyend="473"/>
+        <location file="includes/variables/matrix.hpp" line="537" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="537" bodyend="541"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a148b9d63ce138a9478aa8adb9e217986" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -807,7 +908,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="481" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="481" bodyend="487"/>
+        <location file="includes/variables/matrix.hpp" line="549" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="549" bodyend="555"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a0f45fc90c8164ef40a6c820eeef096b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -849,7 +950,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="500" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="500" bodyend="506"/>
+        <location file="includes/variables/matrix.hpp" line="568" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="568" bodyend="574"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a82d3724b6ff3dd95144c9e25429c9dbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -889,7 +990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="514" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="514" bodyend="520"/>
+        <location file="includes/variables/matrix.hpp" line="582" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="582" bodyend="588"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a7c8ab8d695bb6b214bcfb44a544e0c0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -929,7 +1030,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="528" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="528" bodyend="536"/>
+        <location file="includes/variables/matrix.hpp" line="596" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="596" bodyend="604"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a76ad44aa71ba8eaa73d9d4fd1431d3af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -969,7 +1070,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="544" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="544" bodyend="553"/>
+        <location file="includes/variables/matrix.hpp" line="612" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="612" bodyend="621"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a84d1beb5e7704a6e7799351bf0623657" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1018,7 +1119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="567" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="567" bodyend="571"/>
+        <location file="includes/variables/matrix.hpp" line="635" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="635" bodyend="639"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a06fa30fdba1e861449593cfd6e1398dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1065,7 +1166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="580" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="580" bodyend="584"/>
+        <location file="includes/variables/matrix.hpp" line="648" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="648" bodyend="652"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1acc872e3d984edf32f474e221c749e632" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1126,7 +1227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="599" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="599" bodyend="608"/>
+        <location file="includes/variables/matrix.hpp" line="667" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="667" bodyend="676"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1aaaa052e8ec27a392848bd750b34f35bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1186,7 +1287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="618" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="618" bodyend="623"/>
+        <location file="includes/variables/matrix.hpp" line="686" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="686" bodyend="691"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1ac87b738aed9ec1933d057b7b3d8eb07c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1243,7 +1344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="639" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="639" bodyend="644"/>
+        <location file="includes/variables/matrix.hpp" line="707" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="707" bodyend="712"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1ab841b2356b699bcea97baccf5971d834" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1302,7 +1403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="662" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="662" bodyend="667"/>
+        <location file="includes/variables/matrix.hpp" line="730" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="730" bodyend="735"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1abf48edbbdf86b09b660ecfd2981f9711" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -1347,7 +1448,70 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="682" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="682" bodyend="688"/>
+        <location file="includes/variables/matrix.hpp" line="750" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="750" bodyend="756"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1a360593837b06f88da2dc1a189804bc36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::matrix&lt; D &gt;::join_row</definition>
+        <argsstring>(matrix other)</argsstring>
+        <name>join_row</name>
+        <param>
+          <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Combines the rows of another matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>m2<sp/>must<sp/>have<sp/>same<sp/>number<sp/>of<sp/>columns<sp/>as<sp/>m1</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">m1.join_row(m2);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>matrix</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="769" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="769" bodyend="776"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1ae6431ed7fca8e942a9887ae8fa68897b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::matrix&lt; D &gt;::join_col</definition>
+        <argsstring>(matrix other)</argsstring>
+        <name>join_col</name>
+        <param>
+          <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Combines the columns of another matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para><computeroutput>other</computeroutput> must have same number of rows</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>matrix</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="785" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="785" bodyend="792"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a9eac7bafdfd06437d0b86931335fb194" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -1380,7 +1544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="703" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="703" bodyend="709"/>
+        <location file="includes/variables/matrix.hpp" line="807" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="807" bodyend="813"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1af58bf7e07cebde78a2e0ad99acd5deeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -1399,7 +1563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="721" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="721" bodyend="729"/>
+        <location file="includes/variables/matrix.hpp" line="825" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="825" bodyend="833"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a3a7b528f131d95929df267501b461183" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -1416,7 +1580,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="736" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="736" bodyend="743"/>
+        <location file="includes/variables/matrix.hpp" line="840" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="840" bodyend="847"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1af4104a0aa496424fc75256263e412d9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -1433,7 +1597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="750" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="750" bodyend="753"/>
+        <location file="includes/variables/matrix.hpp" line="854" column="15" bodyfile="includes/variables/matrix.hpp" bodystart="854" bodyend="857"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a3b2c5d8983bb1dcdc250768a0f0ce578" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1453,7 +1617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="766" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="766" bodyend="771"/>
+        <location file="includes/variables/matrix.hpp" line="870" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="870" bodyend="875"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1ac97536b4f94f1dd614fb6267c07dd2b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1470,12 +1634,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="778" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="778" bodyend="788"/>
+        <location file="includes/variables/matrix.hpp" line="882" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="882" bodyend="892"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1matrix_1aeb8bdaf174065f964bdd63e3c55ec5e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1matrix_1ae63bcd0b556175ab578d7095b6cf647c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
         <definition>matrix var::matrix&lt; D &gt;::M</definition>
-        <argsstring>(int i, int j, matrix &amp;other)</argsstring>
+        <argsstring>(int i, int j)</argsstring>
         <name>M</name>
         <param>
           <type>int</type>
@@ -1484,10 +1648,6 @@
         <param>
           <type>int</type>
           <declname>j</declname>
-        </param>
-        <param>
-          <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref> &amp;</type>
-          <declname>other</declname>
         </param>
         <briefdescription>
 <para>Minor of a matrix. </para>
@@ -1509,14 +1669,6 @@
 <para>column index </para>
 </parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>other</parametername>
-</parameternamelist>
-<parameterdescription>
-<para><computeroutput>matrix</computeroutput> type </para>
-</parameterdescription>
-</parameteritem>
 </parameterlist>
 <simplesect kind="return"><para><computeroutput>matrix</computeroutput> </para>
 </simplesect>
@@ -1524,7 +1676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="798" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="798" bodyend="815"/>
+        <location file="includes/variables/matrix.hpp" line="901" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="901" bodyend="903"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1ad78a167d7400fac474fd03cf3363defb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1541,7 +1693,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="822" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="822" bodyend="826"/>
+        <location file="includes/variables/matrix.hpp" line="910" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="910" bodyend="914"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a8a66138dce5fdb1b27a89349a8fd8539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1558,7 +1710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="833" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="833" bodyend="836"/>
+        <location file="includes/variables/matrix.hpp" line="921" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="921" bodyend="924"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a5e7cc7e40124be3bd4a1accfacd68b05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1566,12 +1718,56 @@
         <argsstring>()</argsstring>
         <name>rref</name>
         <briefdescription>
+<para>Reduced row echolon form. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>matrix</computeroutput> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="839" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="839" bodyend="841"/>
+        <location file="includes/variables/matrix.hpp" line="931" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="931" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1a29ff1c5a059b90bd4871d249d1c48c8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
+        <definition>matrix var::matrix&lt; D &gt;::ref</definition>
+        <argsstring>()</argsstring>
+        <name>ref</name>
+        <briefdescription>
+<para>Row echolon form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>matrix</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="988" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="988" bodyend="1032"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1matrix_1ac6d4763f62d11273f092f21ad3c0760f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structvar_1_1matrix_1_1LU" kindref="compound">LU</ref></type>
+        <definition>LU var::matrix&lt; D &gt;::plu</definition>
+        <argsstring>()</argsstring>
+        <name>plu</name>
+        <briefdescription>
+<para>PLU decomposition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>the<sp/>output<sp/>is<sp/>LU<sp/>struct<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>LU<sp/>=<sp/>m.plu();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>L<sp/>=<sp/>LU.L;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>U<sp/>=<sp/>LU.U;</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>P<sp/>=<sp/>LU.p;</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="return"><para><computeroutput>LU</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/matrix.hpp" line="1048" column="16" bodyfile="includes/variables/matrix.hpp" bodystart="1048" bodyend="1134"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a69ffd8772f87c70f5a8e525b0e4dd71f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1592,7 +1788,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="854" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="854" bodyend="856"/>
+        <location file="includes/variables/matrix.hpp" line="1147" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="1147" bodyend="1149"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a9db378f2cc8cc600c2137dcea6fadfc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1611,7 +1807,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="864" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="864" bodyend="866"/>
+        <location file="includes/variables/matrix.hpp" line="1157" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="1157" bodyend="1159"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a34a63853e0456af7ba9bbd7e10b4cfc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -1633,7 +1829,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="877" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="877" bodyend="896"/>
+        <location file="includes/variables/matrix.hpp" line="1170" column="18" bodyfile="includes/variables/matrix.hpp" bodystart="1170" bodyend="1189"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a2d10297e28d8c6c6264d6f174003d193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix_1_1Col" kindref="compound">Col</ref></type>
@@ -1651,6 +1847,10 @@
 <para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>m[row][col]</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">m[0][0]<sp/>=<sp/>5;</highlight></codeline>
 </programlisting></para>
+<para><itemizedlist>
+<listitem><para>Does not check the correct row and colum index;</para>
+</listitem></itemizedlist>
+</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>i</parametername>
@@ -1666,7 +1866,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="912" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="912" bodyend="914"/>
+        <location file="includes/variables/matrix.hpp" line="1207" column="17" bodyfile="includes/variables/matrix.hpp" bodystart="1207" bodyend="1209"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1aaee49a5cde5696ed5d41b2ed5b15d69a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1699,7 +1899,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="930" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="930" bodyend="940"/>
+        <location file="includes/variables/matrix.hpp" line="1225" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1225" bodyend="1235"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1af312c6541557412aa40999381c832613" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1731,7 +1931,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="953" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="953" bodyend="961"/>
+        <location file="includes/variables/matrix.hpp" line="1248" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1248" bodyend="1256"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a277209428c74da8a84cc6e59b540cead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1750,7 +1950,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="986" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="986" bodyend="994"/>
+        <location file="includes/variables/matrix.hpp" line="1281" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1281" bodyend="1289"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a20cab5ed13b35173c242b6fe0909eda6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1782,7 +1982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="1007" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1007" bodyend="1016"/>
+        <location file="includes/variables/matrix.hpp" line="1302" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1302" bodyend="1311"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1a0052ad415d92a84561c48b2f94c5159b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1814,7 +2014,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="1029" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1029" bodyend="1037"/>
+        <location file="includes/variables/matrix.hpp" line="1324" column="20" bodyfile="includes/variables/matrix.hpp" bodystart="1324" bodyend="1332"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -1858,7 +2058,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="970" column="27" bodyfile="includes/variables/matrix.hpp" bodystart="970" bodyend="972"/>
+        <location file="includes/variables/matrix.hpp" line="1265" column="27" bodyfile="includes/variables/matrix.hpp" bodystart="1265" bodyend="1267"/>
       </memberdef>
       <memberdef kind="friend" id="classvar_1_1matrix_1aec0f669b84ef6cbf1197fda5328d2d3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1matrix" kindref="compound">matrix</ref></type>
@@ -1900,7 +2100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="1046" column="27" bodyfile="includes/variables/matrix.hpp" bodystart="1046" bodyend="1049"/>
+        <location file="includes/variables/matrix.hpp" line="1341" column="27" bodyfile="includes/variables/matrix.hpp" bodystart="1341" bodyend="1344"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1924,7 +2124,7 @@
         <link refid="classvar_1_1matrix"/>
       </node>
     </collaborationgraph>
-    <location file="includes/variables/matrix.hpp" line="13" column="16" bodyfile="includes/variables/matrix.hpp" bodystart="14" bodyend="1387"/>
+    <location file="includes/variables/matrix.hpp" line="15" column="16" bodyfile="includes/variables/matrix.hpp" bodystart="16" bodyend="1790"/>
     <listofallmembers>
       <member refid="classvar_1_1matrix_1ab19eccf26d9fefbca395626e7790318b" prot="private" virt="non-virtual"><scope>var::matrix</scope><name>_col</name></member>
       <member refid="classvar_1_1matrix_1aaeb36b64e9670ebf5874fc26da0cfe2a" prot="private" virt="non-virtual"><scope>var::matrix</scope><name>_row</name></member>
@@ -1939,13 +2139,14 @@
       <member refid="classvar_1_1matrix_1ab841b2356b699bcea97baccf5971d834" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>col_op</name></member>
       <member refid="classvar_1_1matrix_1a76ad44aa71ba8eaa73d9d4fd1431d3af" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>col_swap</name></member>
       <member refid="classvar_1_1matrix_1aeaf9bfe82e5fadff5e7c245dc2ed7691" prot="private" virt="non-virtual"><scope>var::matrix</scope><name>data</name></member>
-      <member refid="classvar_1_1matrix_1aac8393e86296c741a8e1023b329620b1" prot="protected" virt="non-virtual"><scope>var::matrix</scope><name>DET</name></member>
       <member refid="classvar_1_1matrix_1af4104a0aa496424fc75256263e412d9f" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>det</name></member>
+      <member refid="classvar_1_1matrix_1aac8393e86296c741a8e1023b329620b1" prot="protected" virt="non-virtual"><scope>var::matrix</scope><name>DET</name></member>
       <member refid="classvar_1_1matrix_1a905ab851aebd8b3781e6605bec99e0a8" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>end</name></member>
       <member refid="classvar_1_1matrix_1a493b344c09c695efcd3fec6065059948" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>end</name></member>
       <member refid="classvar_1_1matrix_1a148b9d63ce138a9478aa8adb9e217986" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>erase_col</name></member>
       <member refid="classvar_1_1matrix_1a1ee2cc11235c4798bb70ed96a0fbf29a" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>erase_row</name></member>
       <member refid="classvar_1_1matrix_1a6de49f43eb3bc3f3ed6c0b658a97605c" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>get_col</name></member>
+      <member refid="classvar_1_1matrix_1ae1b45b32d3db9d173a5a689b8616866f" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>get_element</name></member>
       <member refid="classvar_1_1matrix_1aa27021aa738d82a6b9dde82de321f5a1" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>get_row</name></member>
       <member refid="classvar_1_1matrix_1a3804122082a2fb003338f62021c405e4" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>insert_col</name></member>
       <member refid="classvar_1_1matrix_1a3a4469d94dd4fd0235aaf555d3c4cc13" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>insert_row</name></member>
@@ -1953,11 +2154,14 @@
       <member refid="classvar_1_1matrix_1a9db378f2cc8cc600c2137dcea6fadfc9" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>is_empty</name></member>
       <member refid="classvar_1_1matrix_1a34a63853e0456af7ba9bbd7e10b4cfc6" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>is_identity</name></member>
       <member refid="classvar_1_1matrix_1a69ffd8772f87c70f5a8e525b0e4dd71f" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>is_square</name></member>
-      <member refid="classvar_1_1matrix_1aeb8bdaf174065f964bdd63e3c55ec5e2" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>M</name></member>
+      <member refid="classvar_1_1matrix_1ae6431ed7fca8e942a9887ae8fa68897b" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>join_col</name></member>
+      <member refid="classvar_1_1matrix_1a360593837b06f88da2dc1a189804bc36" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>join_row</name></member>
+      <member refid="classvar_1_1matrix_1ae63bcd0b556175ab578d7095b6cf647c" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>M</name></member>
       <member refid="classvar_1_1matrix_1abf48edbbdf86b09b660ecfd2981f9711" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>mat_op</name></member>
       <member refid="classvar_1_1matrix_1aaf88fb07ffd608510c2c834a925f3926" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>matrix</name></member>
       <member refid="classvar_1_1matrix_1a1060b67ddd058f180bd4b1f304562f64" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>matrix</name></member>
       <member refid="classvar_1_1matrix_1a4b93fcfa4d64d096fd185ff1004256eb" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>matrix</name></member>
+      <member refid="classvar_1_1matrix_1a23843a10260f18c0a8ee950a4c8ba0be" prot="protected" virt="non-virtual"><scope>var::matrix</scope><name>MM</name></member>
       <member refid="classvar_1_1matrix_1aaee49a5cde5696ed5d41b2ed5b15d69a" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator+</name></member>
       <member refid="classvar_1_1matrix_1af312c6541557412aa40999381c832613" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator+</name></member>
       <member refid="classvar_1_1matrix_1acd798c4a5acd27adbadc15b750d13aa9" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator+</name></member>
@@ -1966,10 +2170,12 @@
       <member refid="classvar_1_1matrix_1a0052ad415d92a84561c48b2f94c5159b" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator-</name></member>
       <member refid="classvar_1_1matrix_1aec0f669b84ef6cbf1197fda5328d2d3e" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator-</name></member>
       <member refid="classvar_1_1matrix_1a2d10297e28d8c6c6264d6f174003d193" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>operator[]</name></member>
+      <member refid="classvar_1_1matrix_1ac6d4763f62d11273f092f21ad3c0760f" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>plu</name></member>
       <member refid="classvar_1_1matrix_1a9043393e205545106f58c316da68df80" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>pop_col</name></member>
       <member refid="classvar_1_1matrix_1adc31cf9d718ccf376c2309c4f6a5f6dd" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>pop_row</name></member>
       <member refid="classvar_1_1matrix_1aca98d7a8c56c5afd964ba30b6cff7bfb" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>push_col</name></member>
       <member refid="classvar_1_1matrix_1a3c1bf3836d3d6b650675e9c4ba642651" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>push_row</name></member>
+      <member refid="classvar_1_1matrix_1a29ff1c5a059b90bd4871d249d1c48c8b" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>ref</name></member>
       <member refid="classvar_1_1matrix_1a7c8ab8d695bb6b214bcfb44a544e0c0d" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>replace_col</name></member>
       <member refid="classvar_1_1matrix_1a82d3724b6ff3dd95144c9e25429c9dbe" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>replace_row</name></member>
       <member refid="classvar_1_1matrix_1a9bc064083b67aaab190bd66e7248a5ba" prot="public" virt="non-virtual"><scope>var::matrix</scope><name>resize</name></member>

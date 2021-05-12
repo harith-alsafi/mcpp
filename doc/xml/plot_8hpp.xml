@@ -2,7 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="plot_8hpp" kind="file" language="C++">
     <compoundname>plot.hpp</compoundname>
-    <includes refid="figure_8hpp" local="yes">plot/figure.hpp</includes>
+    <includes local="yes">plot/figure.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>includes/plot.hpp</label>
+        <link refid="plot_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>plot/figure.hpp</label>
+      </node>
+    </incdepgraph>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

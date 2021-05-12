@@ -10,6 +10,6 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
     </programlisting>
-    <location file="includes/misc/constants.hpp"/>
+    <location file="includes/math/constants.hpp"/>
   </compounddef>
 </doxygen>

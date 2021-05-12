@@ -3,7 +3,7 @@
 #include <fstream>
 
 using namespace num::vec;
-using namespace num;
+using namespace mth;
 
 TEST(operations, vec_and_vec)
 {

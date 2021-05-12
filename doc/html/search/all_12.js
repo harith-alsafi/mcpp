@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['var_118',['var',['../namespacevar.html',1,'']]],
-  ['vec_5fop_119',['vec_op',['../namespacenum.html#a4e9fe88d96692c33fe86018dae231540',1,'num']]],
-  ['vline_120',['vline',['../namespaceplt.html#a7cfc8899deffdc69733c4d9c8550b214',1,'plt']]]
+  ['u_123',['U',['../structvar_1_1matrix_1_1LU.html#abe5cc0dbcc051815d56b284e2fdc5de6',1,'var::matrix::LU']]]
 ];

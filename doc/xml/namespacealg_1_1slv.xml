@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacealg_1_1slv" kind="namespace" language="C++">
+    <compoundname>alg::slv</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::slv::root</definition>
+        <argsstring>(LAMBDA f, D tol=D(1000))</argsstring>
+        <name>root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>tol</declname>
+          <defval>D(1000)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="9" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="9" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="includes/algebra/solvers.hpp" line="6" column="5"/>
+  </compounddef>
+</doxygen>

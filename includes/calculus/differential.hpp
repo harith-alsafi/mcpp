@@ -28,7 +28,7 @@ namespace calc
         for(int k = 0; k <= n; k++){
             ans += 
             pow((-1), k)
-            *msc::combination(n, k)
+            *alg::msc::combination(n, k)
             *f(x+(n-D(2)*k)*dx);
 
         }
