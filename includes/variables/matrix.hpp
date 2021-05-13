@@ -172,6 +172,11 @@ namespace var
             /**
              * @brief Struct for PLU decomposition
              * 
+             * **Usage**:
+             * ```cpp
+             * var::matrix<D>::LU lu
+             * ```
+             * 
              */
             struct LU
             {

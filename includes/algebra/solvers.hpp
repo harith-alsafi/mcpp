@@ -10,11 +10,23 @@ namespace alg
             std::vector<D> temp;
             for(D x = -tol; x < tol; x++){
                 if(f(x) == D(0)){
-                    temp.push(0);
+                    temp.push(x);
                 }
             }
             return temp;
         }
+
+        template<typename D, typename LAMBDA>
+        std::vector<D> newton_root(LAMBDA f, D x0){
+
+        }
+
+
+        template<typename D, typename LAMBDA>
+        std::vector<D> bisection_root(LAMBDA f, D min, D max){
+            
+        }
+
     }
 
 }

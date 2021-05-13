@@ -555,7 +555,7 @@ TEST(operators, arithematic)
         {3, 4, 5},
         {6, 7, 8}
     };
-
+    matrix<int>::LU lu;
     // addition 
     matrix<int> m3 = {
         {2, 4, 6},
