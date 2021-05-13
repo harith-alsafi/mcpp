@@ -33,6 +33,68 @@
         </inbodydescription>
         <location file="includes/algebra/solvers.hpp" line="9" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="9" bodyend="17"/>
       </memberdef>
+      <memberdef kind="function" id="namespacealg_1_1slv_1a393118084c854994c0ed91c128156eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::slv::newton_root</definition>
+        <argsstring>(LAMBDA f, D x0)</argsstring>
+        <name>newton_root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="20" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1_1slv_1a52466015ef24050c3946c0dd61c4ffea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::slv::bisection_root</definition>
+        <argsstring>(LAMBDA f, D min, D max)</argsstring>
+        <name>bisection_root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="26" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="26" bodyend="28"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>

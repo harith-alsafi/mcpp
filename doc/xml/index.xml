@@ -98,6 +98,8 @@
   </compound>
   <compound refid="namespacealg_1_1slv" kind="namespace"><name>alg::slv</name>
     <member refid="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" kind="function"><name>root</name></member>
+    <member refid="namespacealg_1_1slv_1a393118084c854994c0ed91c128156eeb" kind="function"><name>newton_root</name></member>
+    <member refid="namespacealg_1_1slv_1a52466015ef24050c3946c0dd61c4ffea" kind="function"><name>bisection_root</name></member>
   </compound>
   <compound refid="namespacecalc" kind="namespace"><name>calc</name>
     <member refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kind="function"><name>diff</name></member>
@@ -173,6 +175,8 @@
   </compound>
   <compound refid="solvers_8hpp" kind="file"><name>solvers.hpp</name>
     <member refid="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" kind="function"><name>root</name></member>
+    <member refid="namespacealg_1_1slv_1a393118084c854994c0ed91c128156eeb" kind="function"><name>newton_root</name></member>
+    <member refid="namespacealg_1_1slv_1a52466015ef24050c3946c0dd61c4ffea" kind="function"><name>bisection_root</name></member>
   </compound>
   <compound refid="differential_8hpp" kind="file"><name>differential.hpp</name>
     <member refid="namespacecalc_1aef0e9f050ce61e1bf65a446fd15f5356" kind="function"><name>diff</name></member>

@@ -4,10 +4,28 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}{root}} (LAMBDA f, D tol=D(1000))
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}{newton\+\_\+root}} (LAMBDA f, D x0)
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}{bisection\+\_\+root}} (LAMBDA f, D min, D max)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}\label{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}} 
+\index{alg::slv@{alg::slv}!bisection\_root@{bisection\_root}}
+\index{bisection\_root@{bisection\_root}!alg::slv@{alg::slv}}
+\doxysubsubsection{\texorpdfstring{bisection\_root()}{bisection\_root()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ alg\+::slv\+::bisection\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{min,  }\item[{D}]{max }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}\label{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}} 
+\index{alg::slv@{alg::slv}!newton\_root@{newton\_root}}
+\index{newton\_root@{newton\_root}!alg::slv@{alg::slv}}
+\doxysubsubsection{\texorpdfstring{newton\_root()}{newton\_root()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ alg\+::slv\+::newton\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x0 }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}\label{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}} 
 \index{alg::slv@{alg::slv}!root@{root}}
 \index{root@{root}!alg::slv@{alg::slv}}

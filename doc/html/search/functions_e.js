@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['sec_226',['sec',['../namespacemth.html#ae8d04ba4428f76b1f226943048b3b0ad',1,'mth']]],
-  ['sech_227',['sech',['../namespacemth.html#a22adb31ad4ddfbf157cd5b465cb6ba08',1,'mth']]],
-  ['sequence_228',['sequence',['../namespacealg_1_1seq.html#ad6b3110a1b0f635050cce3d7468208ae',1,'alg::seq']]],
-  ['sin_229',['sin',['../namespacemth.html#aa4b7a284c625a761c9089ae874d7d3a2',1,'mth']]],
-  ['sinh_230',['sinh',['../namespacemth.html#a52e0a1d3a051be204bb2bbc62454bab0',1,'mth']]],
-  ['size_231',['size',['../classvar_1_1matrix.html#a1c630d2e37b665b3fabcb3d76a4f8b89',1,'var::matrix']]],
-  ['sort_5fcol_232',['sort_col',['../classvar_1_1matrix.html#aaaa052e8ec27a392848bd750b34f35bf',1,'var::matrix']]],
-  ['sort_5fcols_233',['sort_cols',['../classvar_1_1matrix.html#a06fa30fdba1e861449593cfd6e1398dc',1,'var::matrix']]],
-  ['sort_5frow_234',['sort_row',['../classvar_1_1matrix.html#acc872e3d984edf32f474e221c749e632',1,'var::matrix']]],
-  ['sort_5frows_235',['sort_rows',['../classvar_1_1matrix.html#a84d1beb5e7704a6e7799351bf0623657',1,'var::matrix']]],
-  ['square_236',['square',['../classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84',1,'var::matrix']]],
-  ['sum_237',['sum',['../classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb',1,'var::matrix::sum()'],['../namespacealg_1_1seq.html#ab12ed04843565e2513c1ff18c86f6d81',1,'alg::seq::sum()']]]
+  ['ref_220',['ref',['../classvar_1_1matrix.html#a29ff1c5a059b90bd4871d249d1c48c8b',1,'var::matrix']]],
+  ['replace_5fcol_221',['replace_col',['../classvar_1_1matrix.html#a7c8ab8d695bb6b214bcfb44a544e0c0d',1,'var::matrix']]],
+  ['replace_5frow_222',['replace_row',['../classvar_1_1matrix.html#a82d3724b6ff3dd95144c9e25429c9dbe',1,'var::matrix']]],
+  ['resize_223',['resize',['../classvar_1_1matrix.html#a9bc064083b67aaab190bd66e7248a5ba',1,'var::matrix']]],
+  ['root_224',['root',['../namespacealg_1_1slv.html#a4d776788d0e8bc6c035b7b6f0bd5a9b8',1,'alg::slv']]],
+  ['round_225',['round',['../namespacemth.html#ad67cddab017eab02370b0b2d7bb109d9',1,'mth::round(D &amp;a, int dp=0)'],['../namespacemth.html#a3070a00ad6cbb848500c0b9f162e105a',1,'mth::round(std::vector&lt; D &gt; &amp;a, int dp=0)']]],
+  ['row_226',['row',['../classvar_1_1matrix.html#a591c6983a2637275bb1d10d2d2e1e4a5',1,'var::matrix']]],
+  ['row_5fop_227',['row_op',['../classvar_1_1matrix.html#ac87b738aed9ec1933d057b7b3d8eb07c',1,'var::matrix']]],
+  ['row_5fswap_228',['row_swap',['../classvar_1_1matrix.html#a0f45fc90c8164ef40a6c820eeef096b1',1,'var::matrix']]],
+  ['rref_229',['rref',['../classvar_1_1matrix.html#a5e7cc7e40124be3bd4a1accfacd68b05',1,'var::matrix']]]
 ];

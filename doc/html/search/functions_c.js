@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['perms_209',['perms',['../namespacenum_1_1mat.html#ac367fcfb6f6412b6e3b4642d28a11eb4',1,'num::mat']]],
-  ['plu_210',['plu',['../classvar_1_1matrix.html#ac6d4763f62d11273f092f21ad3c0760f',1,'var::matrix']]],
-  ['pop_5fcol_211',['pop_col',['../classvar_1_1matrix.html#a9043393e205545106f58c316da68df80',1,'var::matrix']]],
-  ['pop_5frow_212',['pop_row',['../classvar_1_1matrix.html#adc31cf9d718ccf376c2309c4f6a5f6dd',1,'var::matrix']]],
-  ['pow_213',['pow',['../namespacemth.html#a5d5c72bc9a2bb1e89d180a96290d4df8',1,'mth::pow(std::vector&lt; D &gt; a, D b)'],['../namespacemth.html#a263f00ab3586e48812df8b1eb839e1fe',1,'mth::pow(std::vector&lt; D &gt; a, std::vector&lt; D &gt; b)']]],
-  ['push_5fcol_214',['push_col',['../classvar_1_1matrix.html#aca98d7a8c56c5afd964ba30b6cff7bfb',1,'var::matrix']]],
-  ['push_5frow_215',['push_row',['../classvar_1_1matrix.html#a3c1bf3836d3d6b650675e9c4ba642651',1,'var::matrix']]]
+  ['operator_2b_210',['operator+',['../classvar_1_1matrix.html#aaee49a5cde5696ed5d41b2ed5b15d69a',1,'var::matrix::operator+(matrix const &amp;other)'],['../classvar_1_1matrix.html#af312c6541557412aa40999381c832613',1,'var::matrix::operator+(D n)']]],
+  ['operator_2d_211',['operator-',['../classvar_1_1matrix.html#a277209428c74da8a84cc6e59b540cead',1,'var::matrix::operator-()'],['../classvar_1_1matrix.html#a20cab5ed13b35173c242b6fe0909eda6',1,'var::matrix::operator-(matrix const &amp;other)'],['../classvar_1_1matrix.html#a0052ad415d92a84561c48b2f94c5159b',1,'var::matrix::operator-(D n)']]],
+  ['operator_5b_5d_212',['operator[]',['../classvar_1_1matrix_1_1Col.html#a8024a0dd194bb085689a7f271b9348e8',1,'var::matrix::Col::operator[]()'],['../classvar_1_1matrix.html#a2d10297e28d8c6c6264d6f174003d193',1,'var::matrix::operator[]()']]]
 ];

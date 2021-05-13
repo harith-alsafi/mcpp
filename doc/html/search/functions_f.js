@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['t_238',['T',['../classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578',1,'var::matrix']]],
-  ['tan_239',['tan',['../namespacemth.html#a813c72781af94b0419f08f86431a6008',1,'mth']]],
-  ['tanh_240',['tanh',['../namespacemth.html#a9aa5409c5f1a46249f17c57a87ed718e',1,'mth']]],
-  ['taylor_241',['taylor',['../namespacecalc.html#ad4da47f019995d52a59ce2802eead032',1,'calc']]],
-  ['tr_242',['tr',['../classvar_1_1matrix.html#a3a7b528f131d95929df267501b461183',1,'var::matrix']]],
-  ['tt_243',['TT',['../classvar_1_1matrix.html#a00796c4afbd0a44f4a482c8c4f9155a3',1,'var::matrix']]],
-  ['turn_5fto_244',['turn_to',['../classvar_1_1matrix.html#a9eac7bafdfd06437d0b86931335fb194',1,'var::matrix']]]
+  ['sec_230',['sec',['../namespacemth.html#ae8d04ba4428f76b1f226943048b3b0ad',1,'mth']]],
+  ['sech_231',['sech',['../namespacemth.html#a22adb31ad4ddfbf157cd5b465cb6ba08',1,'mth']]],
+  ['sequence_232',['sequence',['../namespacealg_1_1seq.html#ad6b3110a1b0f635050cce3d7468208ae',1,'alg::seq']]],
+  ['sin_233',['sin',['../namespacemth.html#aa4b7a284c625a761c9089ae874d7d3a2',1,'mth']]],
+  ['sinh_234',['sinh',['../namespacemth.html#a52e0a1d3a051be204bb2bbc62454bab0',1,'mth']]],
+  ['size_235',['size',['../classvar_1_1matrix.html#a1c630d2e37b665b3fabcb3d76a4f8b89',1,'var::matrix']]],
+  ['sort_5fcol_236',['sort_col',['../classvar_1_1matrix.html#aaaa052e8ec27a392848bd750b34f35bf',1,'var::matrix']]],
+  ['sort_5fcols_237',['sort_cols',['../classvar_1_1matrix.html#a06fa30fdba1e861449593cfd6e1398dc',1,'var::matrix']]],
+  ['sort_5frow_238',['sort_row',['../classvar_1_1matrix.html#acc872e3d984edf32f474e221c749e632',1,'var::matrix']]],
+  ['sort_5frows_239',['sort_rows',['../classvar_1_1matrix.html#a84d1beb5e7704a6e7799351bf0623657',1,'var::matrix']]],
+  ['square_240',['square',['../classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84',1,'var::matrix']]],
+  ['sum_241',['sum',['../classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb',1,'var::matrix::sum()'],['../namespacealg_1_1seq.html#ab12ed04843565e2513c1ff18c86f6d81',1,'alg::seq::sum()']]]
 ];
