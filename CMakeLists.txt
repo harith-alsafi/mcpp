@@ -83,13 +83,14 @@ else()
     include_directories(tests/misc)
     include_directories(tests/vectors)
 
-    # variables
-    file(GLOB var_src "tests/variables/*.cpp")
-    add_executable(test_matrix ${var_src})
+    # matrix
+    add_executable(test_matrix tests/variables/matrix_test.cpp)
 
     # vectors 
-    file(GLOB vec_src "tests/vectors/*.cpp")
-    add_executable(test_vector ${vec_src})
+    add_executable(test_vector tests/variables/vector_test.cpp)
+
+    # algebra
+    add_executable(test_algebra tests/algebra/algebra_test.cpp)
 
     # calculus 
     file(GLOB cal_src "tests/calculus/*.cpp")
@@ -100,9 +101,11 @@ else()
         target_link_libraries(test_matrix gtest pthread) 
         target_link_libraries(test_vector gtest pthread) 
         target_link_libraries(test_calculus gtest pthread) 
+        target_link_libraries(test_algebra gtest pthread) 
     else()
         target_link_libraries(test_matrix mcpp gtest pthread)  
         target_link_libraries(test_vector mcpp gtest pthread) 
         target_link_libraries(test_calculus mcpp gtest pthread) 
+        target_link_libraries(test_algebra mcpp gtest pthread) 
         endif()
 endif()

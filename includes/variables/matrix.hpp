@@ -1271,6 +1271,27 @@ namespace var
                 return other+n;
             }
 
+            matrix operator +=(matrix a){
+                matrix temp = *this;
+                temp = temp+*this;
+                return temp;
+            }
+
+            matrix operator +=(D a){
+                matrix temp1 = *this;
+                matrix temp2 = *this;
+                temp1.turn_to(a);
+                temp2 += temp1;
+                return temp2;
+            }
+
+            matrix operator ++(int a){
+                matrix temp = *this;
+                temp.turn_to(D(a));
+                temp += *this;
+                return temp;
+            }
+
 // ***************************** - operator ************************** //
 
             /**
