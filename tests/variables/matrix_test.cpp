@@ -755,9 +755,22 @@ TEST(operators, conditional)
     ASSERT_TRUE(m1 >= m3);
 }
 
-TEST(operators increment_decrement)
+TEST(operators, increment_decrement)
 {
+    // +
+    matrix<int> m(3, 3);
+    m.turn_to(5);
+    matrix<int> c(3, 3);
+    c.turn_to(m[0][0]+1);
+    m++;
+    ASSERT_TRUE(m == c);
     
+    // -
+    m.turn_to(3);
+    c.turn_to(2);
+    m--;
+    ASSERT_TRUE(m == c);
+
 }
 
 int main(int argc, char **argv) 

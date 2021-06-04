@@ -4,7 +4,6 @@
 #include <numeric>
 #include <limits>
 #include <cmath>
-
 namespace var
 {
     /**
@@ -288,7 +287,7 @@ namespace var
             /**
              * @brief Mainly invoked for the ranged for loop
              * 
-             * **Usage**:
+             * **Usage**: 
              * ```cpp
              * for(auto i: m){
              *    for(j: i){
@@ -1271,25 +1270,48 @@ namespace var
                 return other+n;
             }
 
-            matrix operator +=(matrix a){
-                matrix temp = *this;
-                temp = temp+*this;
-                return temp;
+            /**
+             * @brief Increments current matrix by matrix ``a``
+             * 
+             * **Usage**:
+             * ```cpp
+             * m1+=m2; // m1,m2 -> matrix
+             * ```
+             * 
+             * @param a ``matrix``
+             */
+            void operator +=(matrix a){
+                *this = *this+a;
             }
 
-            matrix operator +=(D a){
-                matrix temp1 = *this;
-                matrix temp2 = *this;
-                temp1.turn_to(a);
-                temp2 += temp1;
-                return temp2;
+            /**
+             * @brief Specific variable increment 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m+=2; // increments every element by 2
+             * ```
+             * 
+             * @param a increments each value by a 
+             */
+            void operator +=(D a){
+                matrix temp = *this;
+                temp.turn_to(a);
+                *this += temp;
             }
 
-            matrix operator ++(int a){
-                matrix temp = *this;
-                temp.turn_to(D(a));
-                temp += *this;
-                return temp;
+            /**
+             * @brief Increment operator 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m++; all values will be increased by 1
+             * ```
+             * 
+             * @param a 
+             */
+            void operator ++(int a){
+                *this += D(1);
             }
 
 // ***************************** - operator ************************** //
@@ -1369,6 +1391,50 @@ namespace var
                 return n+temp;
             }
 
+            /**
+             * @brief Decrement current matrix by matrix ``a`` 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m1 -= m2;
+             * ```
+             * 
+             * @param a ``matrix``
+             */
+            void operator -=(matrix a){
+                *this = *this-a;
+            }
+
+            /**
+             * @brief Decrement current matrix by value ``a`` 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m -= 2; // subtracts each element by 2
+             * ```
+             * 
+             * @param a Decrements each value by a 
+             */
+            void operator -=(D a){
+                matrix temp = *this;
+                temp.turn_to(a);
+                *this -= temp;
+            }
+
+            /**
+             * @brief Decrement operator 
+             * 
+             * **Usage**:
+             * ```cpp
+             * m--; // deacreses every value of m by 1 
+             * ```
+             * 
+             * @param a 
+             */
+            void operator --(int a=1){
+                *this -= D(1);
+            }
+
 // ***************************** * operator ************************** //
 
             /**
@@ -1377,6 +1443,7 @@ namespace var
              * **Usage**:
              * ```cpp
              * auto matrix_mul = m*m;
+             * ```
              * 
              * @param other ``matrix``
              * @return ``matrix`` 
