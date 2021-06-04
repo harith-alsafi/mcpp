@@ -924,7 +924,11 @@ namespace var
              */
             matrix inv(){
                 square();
-                return adj()/det();
+                D detm = det();
+                if(detm == 0){
+                    throw std::runtime_error("Determinant is 0");
+                }
+                return adj()/detm;
             }
 
             /**
@@ -1177,10 +1181,10 @@ namespace var
                     int count_ones = 0;
                     for(int i = 0; i < _row; i++){
                         for(int j = 0; j < _col; j++){
-                            if(i == j && data[i][j] == 1){
+                            if(i == j && round(data[i][j]) == D(1)){
                                 count_ones++;
                             }
-                            else if (i != j && data[i][j] == 0){
+                            else if (i != j && round(data[i][j]) == D(0)){
                                 count_zeros++;
                             }
                         }
@@ -1881,7 +1885,4 @@ namespace var
                 return input;
             }
     };
-    // TODO test division 
-    // TODO test exceptions
-    // TODO fix [][] operator and add get_element 
 };

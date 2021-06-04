@@ -640,6 +640,14 @@ TEST(operators, mult_div)
     // divide 
     ASSERT_TRUE(m2/2 != 2/m2);
 
+    matrix<double> mm = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 12}
+    };
+    auto ANS = mm/mm;
+    ASSERT_TRUE(ANS.is_identity());
+    
     // modulus 
     auto m6 = m5%2;
     int count = 0;
