@@ -2,7 +2,6 @@
 #include "math/constants.hpp"
 
 #include "algebra/misc.hpp"
-#include "algebra/solvers.hpp"
 
 #include "numerical/mat.hpp"
 
@@ -14,5 +13,6 @@
 #include "numerical/vec.hpp"
 
 #include "math/mthvec.hpp"
+#include "algebra/solvers.hpp"
 
 #include "calculus/differential.hpp"

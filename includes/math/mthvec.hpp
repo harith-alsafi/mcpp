@@ -4,6 +4,18 @@
 
 namespace mth
 {
+
+    template<typename D>
+    int decimals(D a){
+        std::string s;
+        std::string t;
+        std::stringstream out;
+        out << a;
+        s = out.str();
+        t = s.substr(s.find(".")+1);
+        return t.length();
+    }
+
     /**
      * @brief overriding default round 
      * 
@@ -13,7 +25,7 @@ namespace mth
      * @return D 
      */
     template<typename D>
-    D round(D &a, int dp = 0){
+    D round(D a, int dp = 0){
         if(a < D(0)){
             return D((int)(a*pow(10, dp)-.5)/pow(10, dp));
         }

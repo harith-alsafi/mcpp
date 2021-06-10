@@ -74,7 +74,7 @@ namespace calc
 
 
     template<typename D, typename LAMBDA>
-    std::vector<D> taylor(LAMBDA f, std::vector<D> &x, D x0=(0)){
+    std::vector<D> taylor(LAMBDA f, std::vector<D> &x, D x0=D(0)){
         
     }
 
