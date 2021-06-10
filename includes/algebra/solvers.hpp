@@ -29,13 +29,43 @@ namespace alg
 
         }
 
+        template<typename D>
+        struct ans
+        {
+            std::vector<D> real;
+            std::vector<std::complex<D>> imag;
+        };
+
+        template<typename D>
+        ans<D> poly_root(int n, std::vector<D> a){
+            
+        }
+
+        /**
+         * @brief Linear root through inputing Ax+C such that it is represented as {A, C}
+         * 
+         * **Usage**:
+         * ```cpp
+         * // answer of x+2 = 0;
+         * auto ans = linear({1, 2});
+         * ```
+         * 
+         * @tparam D 
+         * @param eq 
+         * @return D 
+         */
+        template<typename D>
+        D linear_root(std::vector<D> eq){
+            return (-eq[1]/eq[0]); 
+        }
+
         /**
          * @brief Used to get real roots through bisection method
          * 
          * **Usage**:
          * ```cpp
          * // roots between -5 and -1
-         * auto ans = alg::slv::bisection_root<double>(f, -5.0, -1.0);
+         * auto ans = bisection_root<double>(f, -5.0, -1.0);
          * ```
          * 
          * @tparam D 

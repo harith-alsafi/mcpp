@@ -2,7 +2,7 @@
 #include "../../includes/mcpp.hpp"
 #include <cmath>
 
-TEST(solvers, roots)
+TEST(solvers, bisection)
 {
    auto f = [](double x)->double{
       return pow(x, 2)*2.0+3.0*x;
@@ -19,6 +19,12 @@ TEST(solvers, roots)
    ASSERT_TRUE(round(ans2) == 0.0);
 
 }
+
+TEST(solvers, newton)
+{
+
+}
+
 
 
 int main(int argc, char **argv) 
