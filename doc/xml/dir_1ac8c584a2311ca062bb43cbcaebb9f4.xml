@@ -5,6 +5,7 @@
     <innerfile refid="matrix_8hpp">matrix.hpp</innerfile>
     <innerfile refid="table_8hpp">table.hpp</innerfile>
     <innerfile refid="tree_8hpp">tree.hpp</innerfile>
+    <innerfile refid="vector_8hpp">vector.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

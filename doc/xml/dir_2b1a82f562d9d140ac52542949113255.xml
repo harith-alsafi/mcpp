@@ -4,7 +4,6 @@
     <compoundname>includes/math</compoundname>
     <innerfile refid="constants_8hpp">constants.hpp</innerfile>
     <innerfile refid="mthvec_8hpp">mthvec.hpp</innerfile>
-    <innerfile refid="vector_8hpp">vector.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

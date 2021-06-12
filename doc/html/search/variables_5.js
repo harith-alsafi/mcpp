@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['legend_243',['legend',['../structplt_1_1details.html#a3d5ebf4996858c57118f0b1bac6707e0',1,'plt::details']]]
+  ['real_289',['real',['../structalg_1_1slv_1_1ans.html#af1ac1e46c27c5d4c931c53a7f4bae468',1,'alg::slv::ans']]]
 ];

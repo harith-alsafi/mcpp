@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacealg_1_1slv" kind="namespace" language="C++">
     <compoundname>alg::slv</compoundname>
+    <innerclass refid="structalg_1_1slv_1_1ans" prot="public">alg::slv::ans</innerclass>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespacealg_1_1slv_1a4d776788d0e8bc6c035b7b6f0bd5a9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -31,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="9" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="9" bodyend="17"/>
+        <location file="includes/algebra/solvers.hpp" line="14" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="14" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1a393118084c854994c0ed91c128156eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -55,14 +56,125 @@
           <declname>x0</declname>
         </param>
         <briefdescription>
+<para>Mainly used to get real roots through newton method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="28" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1_1slv_1ab65d2608d48212f0951c48962a49de40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structalg_1_1slv_1_1ans" kindref="compound">ans</ref>&lt; D &gt;</type>
+        <definition>ans&lt;D&gt; alg::slv::poly_root</definition>
+        <argsstring>(int n, std::vector&lt; D &gt; a)</argsstring>
+        <name>poly_root</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="20" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="20" bodyend="22"/>
+        <location file="includes/algebra/solvers.hpp" line="40" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="40" bodyend="42"/>
       </memberdef>
-      <memberdef kind="function" id="namespacealg_1_1slv_1a52466015ef24050c3946c0dd61c4ffea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacealg_1_1slv_1a31c0b872fb3e525c421281e3ae03057e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D alg::slv::linear_root</definition>
+        <argsstring>(std::vector&lt; D &gt; eq)</argsstring>
+        <name>linear_root</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+<para>Linear root through inputing Ax+C such that it is represented as {A, C}. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>answer<sp/>of<sp/>x+2<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structalg_1_1slv_1_1ans" kindref="compound">ans</ref><sp/>=<sp/>linear({1,<sp/>2});</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="58" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1_1slv_1aac0a74eeb90204b8c20ff04eb9e55fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -71,9 +183,9 @@
             <type>typename LAMBDA</type>
           </param>
         </templateparamlist>
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; alg::slv::bisection_root</definition>
-        <argsstring>(LAMBDA f, D min, D max)</argsstring>
+        <type>D</type>
+        <definition>D alg::slv::bisection_root</definition>
+        <argsstring>(LAMBDA f, D min, D max, D tol=D(0.00001))</argsstring>
         <name>bisection_root</name>
         <param>
           <type>LAMBDA</type>
@@ -87,19 +199,127 @@
           <type>D</type>
           <declname>max</declname>
         </param>
+        <param>
+          <type>D</type>
+          <declname>tol</declname>
+          <defval>D(0.00001)</defval>
+        </param>
         <briefdescription>
+<para>Used to get real roots through bisection method. </para>
         </briefdescription>
         <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>roots<sp/>between<sp/>-5<sp/>and<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structalg_1_1slv_1_1ans" kindref="compound">ans</ref><sp/>=<sp/>bisection_root&lt;double&gt;(f,<sp/>-5.0,<sp/>-1.0);</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tolerance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>D</computeroutput> </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="26" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="26" bodyend="28"/>
+        <location file="includes/algebra/solvers.hpp" line="83" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="83" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1_1slv_1af169892dc116f67ba6a2168a61f371ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::slv::linear_sim</definition>
+        <argsstring>(var::matrix&lt; D &gt; eq)</argsstring>
+        <name>linear_sim</name>
+        <param>
+          <type><ref refid="classvar_1_1matrix" kindref="compound">var::matrix</ref>&lt; D &gt;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+<para>Solves a system of linear equations expressed as a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Representing the input</para>
+<para>$$ \displaylines{\underbrace{\left[\begin{array} \ a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \\ \end{array}\right]}_A \ \underbrace{\left[\begin{array} \ x_1 \\ x_2 \\ x_3 \\ \end{array}\right]}_x = \underbrace{\left[\begin{array} \ d_1 \\ d_2 \\ d_3 \end{array}\right]}_b \\ eq = \left[\begin{array}{rrr:r} a_1 &amp; b_1 &amp; c_1 &amp; d_1 \\ a_2 &amp; b_2 &amp; c_2 &amp; d_2 \\ a_3 &amp; b_3 &amp; c_3 &amp; d_3 \\ \end{array}\right]} $$</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>matrix</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="155" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="155" bodyend="192"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="includes/algebra/solvers.hpp" line="6" column="5"/>
+    <location file="includes/algebra/solvers.hpp" line="9" column="5"/>
   </compounddef>
 </doxygen>

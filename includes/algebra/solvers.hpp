@@ -15,15 +15,7 @@ namespace alg
 
         }
 
-        /**
-         * @brief Mainly used to get real roots through newton method
-         * 
-         * @tparam D 
-         * @tparam LAMBDA 
-         * @param f 
-         * @param x0 
-         * @return std::vector<D> 
-         */
+
         template<typename D, typename LAMBDA>
         std::vector<D> newton_root(LAMBDA f, D x0){
 
@@ -42,7 +34,7 @@ namespace alg
         }
 
         /**
-         * @brief Linear root through inputing Ax+C such that it is represented as {A, C}
+         * @brief Linear root through inputing Ax+C such that it is represented as vector {A, C}
          * 
          * **Usage**:
          * ```cpp
@@ -119,6 +111,38 @@ namespace alg
         
         }
 
+        /**
+         * @brief Solves a system of linear equations expressed as a matrix
+         * 
+         * Representing the input
+         * 
+         * $$
+         *  \displaylines{\underbrace{\left[\begin{array}
+         *  \\ a_1 & b_1 & c_1  \\\\
+         *  a_2 & b_2 & c_2  \\\\
+         *  a_3 & b_3 & c_3  \\\\
+         *  \end{array}\right]}_A \ 
+         *  \underbrace{\left[\begin{array}
+         *  \\ x_1 \\\\
+         *  x_2 \\\\
+         *  x_3 \\\\
+         *  \end{array}\right]}_x = 
+         *  \underbrace{\left[\begin{array}
+         *  \\ d_1 \\\\
+         *  d_2 \\\\
+         *  d_3
+         *  \end{array}\right]}_b \\\\
+         *  eq = \left[\begin{array}{rrr:r}
+         *  a_1 & b_1 & c_1 & d_1 \\\\
+         *  a_2 & b_2 & c_2 & d_2 \\\\
+         *  a_3 & b_3 & c_3 & d_3 \\\\
+         *  \end{array}\right]}
+         * $$
+         * 
+         * @tparam D 
+         * @param eq ``matrix``
+         * @return std::vector<D> 
+         */
         template<typename D>
         std::vector<D> linear_sim(var::matrix<D> eq){
             var::matrix<D> A = eq(0, eq.row(), 0, eq.col()-1);

@@ -246,7 +246,7 @@
         </inbodydescription>
         <location file="includes/calculus/differential.hpp" line="70" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="70" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="namespacecalc_1ad4da47f019995d52a59ce2802eead032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacecalc_1a54f053a3ff29590353d43b13b21b50fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -257,7 +257,7 @@
         </templateparamlist>
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; calc::taylor</definition>
-        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=(0))</argsstring>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=D(0))</argsstring>
         <name>taylor</name>
         <param>
           <type>LAMBDA</type>
@@ -270,7 +270,7 @@
         <param>
           <type>D</type>
           <declname>x0</declname>
-          <defval>(0)</defval>
+          <defval>D(0)</defval>
         </param>
         <briefdescription>
         </briefdescription>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structalg_1_1slv_1_1ans" kind="struct" language="C++" prot="public">
+    <compoundname>alg::slv::ans</compoundname>
+    <includes local="yes">solvers.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename D</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structalg_1_1slv_1_1ans_1af1ac1e46c27c5d4c931c53a7f4bae468" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::slv::ans&lt; D &gt;::real</definition>
+        <argsstring></argsstring>
+        <name>real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="35" column="25" bodyfile="includes/algebra/solvers.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structalg_1_1slv_1_1ans_1af23adf6727790b8fbc926a02493f3100" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::complex&lt; D &gt; &gt;</type>
+        <definition>std::vector&lt;std::complex&lt;D&gt; &gt; alg::slv::ans&lt; D &gt;::imag</definition>
+        <argsstring></argsstring>
+        <name>imag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="36" column="25" bodyfile="includes/algebra/solvers.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>alg::slv::ans&lt; D &gt;</label>
+        <link refid="structalg_1_1slv_1_1ans"/>
+      </node>
+    </collaborationgraph>
+    <location file="includes/algebra/solvers.hpp" line="33" column="9" bodyfile="includes/algebra/solvers.hpp" bodystart="34" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structalg_1_1slv_1_1ans_1af23adf6727790b8fbc926a02493f3100" prot="public" virt="non-virtual"><scope>alg::slv::ans</scope><name>imag</name></member>
+      <member refid="structalg_1_1slv_1_1ans_1af1ac1e46c27c5d4c931c53a7f4bae468" prot="public" virt="non-virtual"><scope>alg::slv::ans</scope><name>real</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

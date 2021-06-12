@@ -1,30 +1,162 @@
 \hypertarget{namespacealg_1_1slv}{}\doxysection{alg\+::slv Namespace Reference}
 \label{namespacealg_1_1slv}\index{alg::slv@{alg::slv}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structalg_1_1slv_1_1ans}{ans}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}{root}} (LAMBDA f, D tol=D(1000))
 \item 
 {\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}{newton\+\_\+root}} (LAMBDA f, D x0)
+\begin{DoxyCompactList}\small\item\em Mainly used to get real roots through newton method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\\mbox{\hyperlink{structalg_1_1slv_1_1ans}{ans}}$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_ab65d2608d48212f0951c48962a49de40}{poly\+\_\+root}} (int n, std\+::vector$<$ D $>$ a)
 \item 
-{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}{bisection\+\_\+root}} (LAMBDA f, D min, D max)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacealg_1_1slv_a31c0b872fb3e525c421281e3ae03057e}{linear\+\_\+root}} (std\+::vector$<$ D $>$ eq)
+\begin{DoxyCompactList}\small\item\em Linear root through inputing Ax+C such that it is represented as \{A, C\}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\D \mbox{\hyperlink{namespacealg_1_1slv_aac0a74eeb90204b8c20ff04eb9e55fbf}{bisection\+\_\+root}} (LAMBDA f, D min, D max, D tol=D(0.\+00001))
+\begin{DoxyCompactList}\small\item\em Used to get real roots through bisection method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_1_1slv_af169892dc116f67ba6a2168a61f371ef}{linear\+\_\+sim}} (\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$ eq)
+\begin{DoxyCompactList}\small\item\em Solves a system of linear equations expressed as a matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}\label{namespacealg_1_1slv_a52466015ef24050c3946c0dd61c4ffea}} 
+\mbox{\Hypertarget{namespacealg_1_1slv_aac0a74eeb90204b8c20ff04eb9e55fbf}\label{namespacealg_1_1slv_aac0a74eeb90204b8c20ff04eb9e55fbf}} 
 \index{alg::slv@{alg::slv}!bisection\_root@{bisection\_root}}
 \index{bisection\_root@{bisection\_root}!alg::slv@{alg::slv}}
 \doxysubsubsection{\texorpdfstring{bisection\_root()}{bisection\_root()}}
 {\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
-std\+::vector$<$D$>$ alg\+::slv\+::bisection\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{min,  }\item[{D}]{max }\end{DoxyParamCaption})}
+D alg\+::slv\+::bisection\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{min,  }\item[{D}]{max,  }\item[{D}]{tol = {\ttfamily D(0.00001)} }\end{DoxyParamCaption})}
 
+
+
+Used to get real roots through bisection method. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// roots between -\/5 and -\/1}}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{structalg_1_1slv_1_1ans}{ans}} = bisection\_root<double>(f, -\/5.0, -\/1.0);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+{\em LAMBDA} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & function \\
+\hline
+{\em min} & minimum value \\
+\hline
+{\em max} & maximum value \\
+\hline
+{\em tol} & tolerance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily D} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_1_1slv_a31c0b872fb3e525c421281e3ae03057e}\label{namespacealg_1_1slv_a31c0b872fb3e525c421281e3ae03057e}} 
+\index{alg::slv@{alg::slv}!linear\_root@{linear\_root}}
+\index{linear\_root@{linear\_root}!alg::slv@{alg::slv}}
+\doxysubsubsection{\texorpdfstring{linear\_root()}{linear\_root()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D alg\+::slv\+::linear\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{eq }\end{DoxyParamCaption})}
+
+
+
+Linear root through inputing Ax+C such that it is represented as \{A, C\}. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// answer of x+2 = 0;}}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{structalg_1_1slv_1_1ans}{ans}} = linear(\{1, 2\});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_1_1slv_af169892dc116f67ba6a2168a61f371ef}\label{namespacealg_1_1slv_af169892dc116f67ba6a2168a61f371ef}} 
+\index{alg::slv@{alg::slv}!linear\_sim@{linear\_sim}}
+\index{linear\_sim@{linear\_sim}!alg::slv@{alg::slv}}
+\doxysubsubsection{\texorpdfstring{linear\_sim()}{linear\_sim()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ alg\+::slv\+::linear\+\_\+sim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$}]{eq }\end{DoxyParamCaption})}
+
+
+
+Solves a system of linear equations expressed as a matrix. 
+
+Representing the input
+
+\$\$ \textbackslash{}displaylines\{\textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} a\+\_\+1 \& b\+\_\+1 \& c\+\_\+1 \textbackslash{}\textbackslash{} a\+\_\+2 \& b\+\_\+2 \& c\+\_\+2 \textbackslash{}\textbackslash{} a\+\_\+3 \& b\+\_\+3 \& c\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+A \textbackslash{} \textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} x\+\_\+1 \textbackslash{}\textbackslash{} x\+\_\+2 \textbackslash{}\textbackslash{} x\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+x = \textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} d\+\_\+1 \textbackslash{}\textbackslash{} d\+\_\+2 \textbackslash{}\textbackslash{} d\+\_\+3 \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+b \textbackslash{}\textbackslash{} eq = \textbackslash{}left\mbox{[}\textbackslash{}begin\{array\}\{rrr\+:r\} a\+\_\+1 \& b\+\_\+1 \& c\+\_\+1 \& d\+\_\+1 \textbackslash{}\textbackslash{} a\+\_\+2 \& b\+\_\+2 \& c\+\_\+2 \& d\+\_\+2 \textbackslash{}\textbackslash{} a\+\_\+3 \& b\+\_\+3 \& c\+\_\+3 \& d\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\} \$\$
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & {\ttfamily matrix} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}\label{namespacealg_1_1slv_a393118084c854994c0ed91c128156eeb}} 
 \index{alg::slv@{alg::slv}!newton\_root@{newton\_root}}
 \index{newton\_root@{newton\_root}!alg::slv@{alg::slv}}
 \doxysubsubsection{\texorpdfstring{newton\_root()}{newton\_root()}}
 {\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
 std\+::vector$<$D$>$ alg\+::slv\+::newton\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x0 }\end{DoxyParamCaption})}
+
+
+
+Mainly used to get real roots through newton method. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+{\em LAMBDA} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \\
+\hline
+{\em x0} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_1_1slv_ab65d2608d48212f0951c48962a49de40}\label{namespacealg_1_1slv_ab65d2608d48212f0951c48962a49de40}} 
+\index{alg::slv@{alg::slv}!poly\_root@{poly\_root}}
+\index{poly\_root@{poly\_root}!alg::slv@{alg::slv}}
+\doxysubsubsection{\texorpdfstring{poly\_root()}{poly\_root()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{structalg_1_1slv_1_1ans}{ans}}$<$D$>$ alg\+::slv\+::poly\+\_\+root (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}\label{namespacealg_1_1slv_a4d776788d0e8bc6c035b7b6f0bd5a9b8}} 
 \index{alg::slv@{alg::slv}!root@{root}}

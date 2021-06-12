@@ -4,6 +4,7 @@
     <compoundname>differential.hpp</compoundname>
     <includes local="no">vector</includes>
     <includes refid="mcpp_8hpp" local="yes">../mcpp.hpp</includes>
+    <includes local="no">cmath</includes>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
     <incdepgraph>
       <node id="1">
@@ -11,6 +12,11 @@
         <link refid="differential_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cmath</label>
       </node>
       <node id="2">
         <label>vector</label>
@@ -261,7 +267,7 @@
         </inbodydescription>
         <location file="includes/calculus/differential.hpp" line="70" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="70" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="namespacecalc_1ad4da47f019995d52a59ce2802eead032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacecalc_1a54f053a3ff29590353d43b13b21b50fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -272,7 +278,7 @@
         </templateparamlist>
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; calc::taylor</definition>
-        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=(0))</argsstring>
+        <argsstring>(LAMBDA f, std::vector&lt; D &gt; &amp;x, D x0=D(0))</argsstring>
         <name>taylor</name>
         <param>
           <type>LAMBDA</type>
@@ -285,7 +291,7 @@
         <param>
           <type>D</type>
           <declname>x0</declname>
-          <defval>(0)</defval>
+          <defval>D(0)</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -377,7 +383,7 @@
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>LAMBDA&gt;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1ad4da47f019995d52a59ce2802eead032" kindref="member">taylor</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x,<sp/>D<sp/>x0=(0)){</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/><ref refid="namespacecalc_1a54f053a3ff29590353d43b13b21b50fb" kindref="member">taylor</ref>(LAMBDA<sp/>f,<sp/>std::vector&lt;D&gt;<sp/>&amp;x,<sp/>D<sp/>x0=D(0)){</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>

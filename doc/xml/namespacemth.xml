@@ -3,7 +3,29 @@
   <compounddef id="namespacemth" kind="namespace" language="C++">
     <compoundname>mth</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespacemth_1ad67cddab017eab02370b0b2d7bb109d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacemth_1a95418068265434e367e5c0f63d96bfd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int mth::decimals</definition>
+        <argsstring>(D a)</argsstring>
+        <name>decimals</name>
+        <param>
+          <type>D</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/math/mthvec.hpp" line="9" column="9" bodyfile="includes/math/mthvec.hpp" bodystart="9" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemth_1aaf1bcab086ef624b1fb0cdff232f1db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -11,10 +33,10 @@
         </templateparamlist>
         <type>D</type>
         <definition>D mth::round</definition>
-        <argsstring>(D &amp;a, int dp=0)</argsstring>
+        <argsstring>(D a, int dp=0)</argsstring>
         <name>round</name>
         <param>
-          <type>D &amp;</type>
+          <type>D</type>
           <declname>a</declname>
         </param>
         <param>
@@ -58,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="16" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="16" bodyend="21"/>
+        <location file="includes/math/mthvec.hpp" line="28" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="28" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a3070a00ad6cbb848500c0b9f162e105a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -115,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="32" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="32" bodyend="40"/>
+        <location file="includes/math/mthvec.hpp" line="44" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="44" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a34b8e0b2635326959101e8cef212b4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -137,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="43" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="43" bodyend="46"/>
+        <location file="includes/math/mthvec.hpp" line="55" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="55" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a1185a5f14b24803757d4d9bfc118183d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -159,7 +181,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="49" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="49" bodyend="52"/>
+        <location file="includes/math/mthvec.hpp" line="61" column="7" bodyfile="includes/math/mthvec.hpp" bodystart="61" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aedf1dd3445e15e075e55b404184a80ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -181,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="55" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="55" bodyend="57"/>
+        <location file="includes/math/mthvec.hpp" line="67" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="67" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a5d5c72bc9a2bb1e89d180a96290d4df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -237,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="72" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="72" bodyend="78"/>
+        <location file="includes/math/mthvec.hpp" line="84" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="84" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a263f00ab3586e48812df8b1eb839e1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -293,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="89" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="89" bodyend="99"/>
+        <location file="includes/math/mthvec.hpp" line="101" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="101" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aa4b7a284c625a761c9089ae874d7d3a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -315,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="103" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="103" bodyend="105"/>
+        <location file="includes/math/mthvec.hpp" line="115" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="115" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a09d29500bb5a549d5771c23374ae2325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -337,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="107" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="107" bodyend="109"/>
+        <location file="includes/math/mthvec.hpp" line="119" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="119" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a813c72781af94b0419f08f86431a6008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -359,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="111" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="111" bodyend="113"/>
+        <location file="includes/math/mthvec.hpp" line="123" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="123" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1ae8d04ba4428f76b1f226943048b3b0ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -381,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="115" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="115" bodyend="117"/>
+        <location file="includes/math/mthvec.hpp" line="127" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="127" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a53d839f1be5f31f665addce6dc494a95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -403,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="119" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="119" bodyend="121"/>
+        <location file="includes/math/mthvec.hpp" line="131" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="131" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aa47c8625c38baf38d7c40a646390d9ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -425,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="123" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="123" bodyend="125"/>
+        <location file="includes/math/mthvec.hpp" line="135" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="135" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a70b7276ef8d67e29bbcabded1df3055a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -447,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="128" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="128" bodyend="130"/>
+        <location file="includes/math/mthvec.hpp" line="140" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="140" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1ac736564b160af8d04f4b936c60a0f0fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -469,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="133" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="133" bodyend="135"/>
+        <location file="includes/math/mthvec.hpp" line="145" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="145" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aaca92bdc13f5f96dcf865cf35da79d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -491,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="137" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="137" bodyend="139"/>
+        <location file="includes/math/mthvec.hpp" line="149" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="149" bodyend="151"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1ad4c26ccede93cb4c0719203c627d1ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -513,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="141" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="141" bodyend="143"/>
+        <location file="includes/math/mthvec.hpp" line="153" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="153" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1ad4fe466c02ca4bcc3ae42c02706cd1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -535,7 +557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="145" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="145" bodyend="147"/>
+        <location file="includes/math/mthvec.hpp" line="157" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="157" bodyend="159"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aab718ecb4db4f3e484a2b27b8a6bbe6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -557,7 +579,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="149" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="149" bodyend="151"/>
+        <location file="includes/math/mthvec.hpp" line="161" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="161" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a52e0a1d3a051be204bb2bbc62454bab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -579,7 +601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="154" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="154" bodyend="156"/>
+        <location file="includes/math/mthvec.hpp" line="166" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="166" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a9b74e2484c4b73ee68db86765f6a4f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -601,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="158" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="158" bodyend="160"/>
+        <location file="includes/math/mthvec.hpp" line="170" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="170" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a9aa5409c5f1a46249f17c57a87ed718e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -623,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="162" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="162" bodyend="164"/>
+        <location file="includes/math/mthvec.hpp" line="174" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="174" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a22adb31ad4ddfbf157cd5b465cb6ba08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -645,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="166" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="166" bodyend="168"/>
+        <location file="includes/math/mthvec.hpp" line="178" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="178" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1af0a811325c733aa6750893f062802f07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -667,7 +689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="170" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="170" bodyend="172"/>
+        <location file="includes/math/mthvec.hpp" line="182" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="182" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a11261d7a6f0ddc01888709b9ef9957f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -689,7 +711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="174" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="174" bodyend="176"/>
+        <location file="includes/math/mthvec.hpp" line="186" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="186" bodyend="188"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a9cc816fa6926d5c1a6a51113d80e3555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -711,7 +733,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="179" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="179" bodyend="181"/>
+        <location file="includes/math/mthvec.hpp" line="191" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="191" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a8a27adc59c40f4c3f153a70cb74bd713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -733,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="184" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="184" bodyend="186"/>
+        <location file="includes/math/mthvec.hpp" line="196" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="196" bodyend="198"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aca09a5442ff9f3ed28aca3fb7675ae83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -755,7 +777,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="188" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="188" bodyend="190"/>
+        <location file="includes/math/mthvec.hpp" line="200" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="200" bodyend="202"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1add365ba663874ecfe9a1ac8890cd4748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -777,7 +799,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="192" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="192" bodyend="194"/>
+        <location file="includes/math/mthvec.hpp" line="204" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="204" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a61de7392238aa79bec097d2b6ed3f872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -799,7 +821,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="196" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="196" bodyend="198"/>
+        <location file="includes/math/mthvec.hpp" line="208" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="208" bodyend="210"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a4d660e56ec186abc1de2e7be09e53f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -821,7 +843,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="200" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="200" bodyend="202"/>
+        <location file="includes/math/mthvec.hpp" line="212" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="212" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1acf2153461c06ac4d7fa2003d3c07f3c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -843,7 +865,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/math/mthvec.hpp" line="205" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="205" bodyend="207"/>
+        <location file="includes/math/mthvec.hpp" line="217" column="17" bodyfile="includes/math/mthvec.hpp" bodystart="217" bodyend="219"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -9,7 +9,7 @@
 \begin{DoxyCompactList}\small\item\em Derivative of 2 std\+::vectors. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ac76968f519762530915c08a852f0d65b}{diff}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, int n=1)
 \begin{DoxyCompactList}\small\item\em Derivative of function with given vector. It returns a vector of size\+: {\ttfamily x.\+size()-\/n} \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_ad4da47f019995d52a59ce2802eead032}{taylor}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, D x0=(0))
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a54f053a3ff29590353d43b13b21b50fb}{taylor}} (LAMBDA f, std\+::vector$<$ D $>$ \&x, D x0=D(0))
 \item 
 {\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacecalc_a689d6bfc729bb5513235adb9e1fb55aa}{eular\+\_\+method}} (LAMBDA f, D x0, unsigned int n)
 \end{DoxyCompactItemize}
@@ -114,10 +114,10 @@ std\+::vector$<$\+D$>$
 {\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
 std\+::vector$<$D$>$ calc\+::eular\+\_\+method (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x0,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacecalc_ad4da47f019995d52a59ce2802eead032}\label{namespacecalc_ad4da47f019995d52a59ce2802eead032}} 
+\mbox{\Hypertarget{namespacecalc_a54f053a3ff29590353d43b13b21b50fb}\label{namespacecalc_a54f053a3ff29590353d43b13b21b50fb}} 
 \index{calc@{calc}!taylor@{taylor}}
 \index{taylor@{taylor}!calc@{calc}}
 \doxysubsubsection{\texorpdfstring{taylor()}{taylor()}}
 {\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
-std\+::vector$<$D$>$ calc\+::taylor (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{std\+::vector$<$ D $>$ \&}]{x,  }\item[{D}]{x0 = {\ttfamily (0)} }\end{DoxyParamCaption})}
+std\+::vector$<$D$>$ calc\+::taylor (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{std\+::vector$<$ D $>$ \&}]{x,  }\item[{D}]{x0 = {\ttfamily D(0)} }\end{DoxyParamCaption})}
 

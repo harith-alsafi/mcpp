@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_130',['matrix',['../classvar_1_1matrix.html',1,'var']]]
+  ['lu_147',['LU',['../structvar_1_1matrix_1_1LU.html',1,'var::matrix']]]
 ];

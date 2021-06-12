@@ -3,7 +3,9 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacemth_ad67cddab017eab02370b0b2d7bb109d9}{round}} (D \&a, int dp=0)
+{\footnotesize template$<$typename D $>$ }\\int \mbox{\hyperlink{namespacemth_a95418068265434e367e5c0f63d96bfd0}{decimals}} (D a)
+\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}{round}} (D a, int dp=0)
 \begin{DoxyCompactList}\small\item\em overriding default round \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a3070a00ad6cbb848500c0b9f162e105a}{round}} (std\+::vector$<$ D $>$ \&a, int dp=0)
 \begin{DoxyCompactList}\small\item\em rounding the vector \end{DoxyCompactList}\item 
@@ -203,6 +205,13 @@ std\+::vector$<$D$>$ mth\+::csc (\begin{DoxyParamCaption}\item[{std\+::vector$<$
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 std\+::vector$<$D$>$ mth\+::csch (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{namespacemth_a95418068265434e367e5c0f63d96bfd0}\label{namespacemth_a95418068265434e367e5c0f63d96bfd0}} 
+\index{mth@{mth}!decimals@{decimals}}
+\index{decimals@{decimals}!mth@{mth}}
+\doxysubsubsection{\texorpdfstring{decimals()}{decimals()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int mth\+::decimals (\begin{DoxyParamCaption}\item[{D}]{a }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{namespacemth_acf2153461c06ac4d7fa2003d3c07f3c5}\label{namespacemth_acf2153461c06ac4d7fa2003d3c07f3c5}} 
 \index{mth@{mth}!exp@{exp}}
 \index{exp@{exp}!mth@{mth}}
@@ -276,12 +285,12 @@ vector$^\wedge$vector
 \begin{DoxyReturn}{Returns}
 std\+::vector$<$\+D$>$ 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemth_ad67cddab017eab02370b0b2d7bb109d9}\label{namespacemth_ad67cddab017eab02370b0b2d7bb109d9}} 
+\mbox{\Hypertarget{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}\label{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}} 
 \index{mth@{mth}!round@{round}}
 \index{round@{round}!mth@{mth}}
 \doxysubsubsection{\texorpdfstring{round()}{round()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
-D mth\+::round (\begin{DoxyParamCaption}\item[{D \&}]{a,  }\item[{int}]{dp = {\ttfamily 0} }\end{DoxyParamCaption})}
+D mth\+::round (\begin{DoxyParamCaption}\item[{D}]{a,  }\item[{int}]{dp = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 

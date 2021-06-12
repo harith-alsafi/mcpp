@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stat_143',['stat',['../namespacestat.html',1,'']]]
+  ['stat_161',['stat',['../namespacestat.html',1,'']]]
 ];

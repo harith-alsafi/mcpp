@@ -66,12 +66,18 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">alg::slv Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structalg_1_1slv_1_1ans.html">ans</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4d776788d0e8bc6c035b7b6f0bd5a9b8"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
@@ -79,14 +85,27 @@ Functions</h2></td></tr>
 <tr class="separator:a4d776788d0e8bc6c035b7b6f0bd5a9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393118084c854994c0ed91c128156eeb"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
 <tr class="memitem:a393118084c854994c0ed91c128156eeb"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb">newton_root</a> (LAMBDA f, D x0)</td></tr>
+<tr class="memdesc:a393118084c854994c0ed91c128156eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mainly used to get real roots through newton method.  <a href="namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb">More...</a><br /></td></tr>
 <tr class="separator:a393118084c854994c0ed91c128156eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52466015ef24050c3946c0dd61c4ffea"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
-<tr class="memitem:a52466015ef24050c3946c0dd61c4ffea"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#a52466015ef24050c3946c0dd61c4ffea">bisection_root</a> (LAMBDA f, D min, D max)</td></tr>
-<tr class="separator:a52466015ef24050c3946c0dd61c4ffea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65d2608d48212f0951c48962a49de40"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:ab65d2608d48212f0951c48962a49de40"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structalg_1_1slv_1_1ans.html">ans</a>&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#ab65d2608d48212f0951c48962a49de40">poly_root</a> (int n, std::vector&lt; D &gt; a)</td></tr>
+<tr class="separator:ab65d2608d48212f0951c48962a49de40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c0b872fb3e525c421281e3ae03057e"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a31c0b872fb3e525c421281e3ae03057e"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e">linear_root</a> (std::vector&lt; D &gt; eq)</td></tr>
+<tr class="memdesc:a31c0b872fb3e525c421281e3ae03057e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear root through inputing Ax+C such that it is represented as {A, C}.  <a href="namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e">More...</a><br /></td></tr>
+<tr class="separator:a31c0b872fb3e525c421281e3ae03057e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
+<tr class="memitem:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#aac0a74eeb90204b8c20ff04eb9e55fbf">bisection_root</a> (LAMBDA f, D min, D max, D tol=D(0.00001))</td></tr>
+<tr class="memdesc:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to get real roots through bisection method.  <a href="namespacealg_1_1slv.html#aac0a74eeb90204b8c20ff04eb9e55fbf">More...</a><br /></td></tr>
+<tr class="separator:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af169892dc116f67ba6a2168a61f371ef"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:af169892dc116f67ba6a2168a61f371ef"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#af169892dc116f67ba6a2168a61f371ef">linear_sim</a> (<a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt; eq)</td></tr>
+<tr class="memdesc:af169892dc116f67ba6a2168a61f371ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a system of linear equations expressed as a matrix.  <a href="namespacealg_1_1slv.html#af169892dc116f67ba6a2168a61f371ef">More...</a><br /></td></tr>
+<tr class="separator:af169892dc116f67ba6a2168a61f371ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a52466015ef24050c3946c0dd61c4ffea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52466015ef24050c3946c0dd61c4ffea">&#9670;&nbsp;</a></span>bisection_root()</h2>
+<a id="aac0a74eeb90204b8c20ff04eb9e55fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0a74eeb90204b8c20ff04eb9e55fbf">&#9670;&nbsp;</a></span>bisection_root()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -94,7 +113,7 @@ Functions</h2></td></tr>
 template&lt;typename D , typename LAMBDA &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;D&gt; alg::slv::bisection_root </td>
+          <td class="memname">D alg::slv::bisection_root </td>
           <td>(</td>
           <td class="paramtype">LAMBDA&#160;</td>
           <td class="paramname"><em>f</em>, </td>
@@ -109,7 +128,13 @@ template&lt;typename D , typename LAMBDA &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">D&#160;</td>
-          <td class="paramname"><em>max</em>&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>D(0.00001)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -118,6 +143,102 @@ template&lt;typename D , typename LAMBDA &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Used to get real roots through bisection method. </p>
+<p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// roots between -5 and -1</span></div>
+<div class="line"><span class="keyword">auto</span> <a class="code" href="structalg_1_1slv_1_1ans.html">ans</a> = bisection_root&lt;double&gt;(f, -5.0, -1.0);</div>
+<div class="ttc" id="astructalg_1_1slv_1_1ans_html"><div class="ttname"><a href="structalg_1_1slv_1_1ans.html">alg::slv::ans</a></div><div class="ttdef"><b>Definition:</b> solvers.hpp:34</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+    <tr><td class="paramname">LAMBDA</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>function </td></tr>
+    <tr><td class="paramname">min</td><td>minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>maximum value </td></tr>
+    <tr><td class="paramname">tol</td><td>tolerance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
+
+</div>
+</div>
+<a id="a31c0b872fb3e525c421281e3ae03057e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c0b872fb3e525c421281e3ae03057e">&#9670;&nbsp;</a></span>linear_root()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">D alg::slv::linear_root </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>eq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linear root through inputing Ax+C such that it is represented as {A, C}. </p>
+<p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// answer of x+2 = 0;</span></div>
+<div class="line"><span class="keyword">auto</span> <a class="code" href="structalg_1_1slv_1_1ans.html">ans</a> = linear({1, 2});</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>D </dd></dl>
+
+</div>
+</div>
+<a id="af169892dc116f67ba6a2168a61f371ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af169892dc116f67ba6a2168a61f371ef">&#9670;&nbsp;</a></span>linear_sim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D&gt; alg::slv::linear_sim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvar_1_1matrix.html">var::matrix</a>&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>eq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a system of linear equations expressed as a matrix. </p>
+<p class="">Representing the input</p>
+<p class="">$$ \displaylines{\underbrace{\left[\begin{array} \ a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \\ \end{array}\right]}_A \ \underbrace{\left[\begin{array} \ x_1 \\ x_2 \\ x_3 \\ \end{array}\right]}_x = \underbrace{\left[\begin{array} \ d_1 \\ d_2 \\ d_3 \end{array}\right]}_b \\ eq = \left[\begin{array}{rrr:r} a_1 &amp; b_1 &amp; c_1 &amp; d_1 \\ a_2 &amp; b_2 &amp; c_2 &amp; d_2 \\ a_3 &amp; b_3 &amp; c_3 &amp; d_3 \\ \end{array}\right]} $$</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td><code>matrix</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>
@@ -140,6 +261,53 @@ template&lt;typename D , typename LAMBDA &gt; </div>
           <td></td>
           <td class="paramtype">D&#160;</td>
           <td class="paramname"><em>x0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mainly used to get real roots through newton method. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">D</td><td></td></tr>
+    <tr><td class="paramname">LAMBDA</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td></td></tr>
+    <tr><td class="paramname">x0</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+
+</div>
+</div>
+<a id="ab65d2608d48212f0951c48962a49de40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65d2608d48212f0951c48962a49de40">&#9670;&nbsp;</a></span>poly_root()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structalg_1_1slv_1_1ans.html">ans</a>&lt;D&gt; alg::slv::poly_root </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
