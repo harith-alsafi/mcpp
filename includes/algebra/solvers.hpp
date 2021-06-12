@@ -56,6 +56,9 @@ namespace alg
          */
         template<typename D>
         D linear_root(std::vector<D> eq){
+            if(eq.size() > 2){
+                throw std::invalid_argument("Vector is more than 2");
+            }
             return (-eq[1]/eq[0]); 
         }
 
@@ -114,6 +117,46 @@ namespace alg
 
             return t;
         
+        }
+
+        template<typename D>
+        std::vector<D> linear_sim(var::matrix<D> eq){
+            var::matrix<D> A = eq(0, eq.row(), 0, eq.col()-1);
+            if(!A.is_square()){
+                throw std::invalid_argument("A in Ax=B should be a square ([AB] is incomplete)");
+            }
+            
+            std::vector<D> C = eq.get_col(eq.col()-1);
+            typename var::matrix<D>::LU LU = A.plu();
+            
+            // LZ = P^T*C
+            var::matrix<D> temp;
+            temp.push_col(C);
+            temp = LU.P.T()*temp;
+            C = temp.get_col(temp.col()-1);
+
+            std::vector<D> Z;
+            Z.push_back(C[0]/LU.L[0][0]);
+            for(int i = 1; i < LU.L.row(); i++){
+                D sum = C[i]; 
+                for(int j = 0; j <= i; j++){
+                    sum -= LU.L[i][j]*Z[j];
+                }
+                Z.push_back(sum/LU.L[i][i]);
+            }
+
+            // UX = Z
+            std::vector<D> X(Z.size());
+            X[Z.size()-1] = Z[Z.size()-1]/LU.U[LU.U.row()-1][LU.U.row()-1];
+            for(int i = LU.U.row()-2; i >= 0; i--){
+                D sum = Z[i]; 
+                for(int j = LU.U.col(); j > i; j--){
+                    sum -= LU.U[i][j]*X[j];
+                }
+                X[i] = sum/LU.U[i][i];
+            }
+
+            return X;
         }
 
     }

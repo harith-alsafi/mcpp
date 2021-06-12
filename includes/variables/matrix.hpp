@@ -173,7 +173,7 @@ namespace var
              * 
              * **Usage**:
              * ```cpp
-             * var::matrix<D>::LU lu
+             * typename var::matrix<D>::LU a;
              * ```
              * 
              */

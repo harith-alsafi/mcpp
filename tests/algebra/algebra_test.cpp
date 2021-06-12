@@ -20,9 +20,16 @@ TEST(solvers, bisection)
 
 }
 
-TEST(solvers, newton)
+TEST(solvers, sim)
 {
-
+   var::matrix<double> A = {
+      {1, 1, 1, 1},
+      {4, 3, -1, 6},
+      {3, 5, 3, 4}
+   };
+   auto sol = alg::slv::linear_sim(A);
+   std::vector<double> ans = {1, 0.5, -0.5};
+   ASSERT_TRUE(ans == sol);
 }
 
 
