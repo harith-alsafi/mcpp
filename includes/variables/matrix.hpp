@@ -58,7 +58,7 @@ namespace var
              */
             void check_col(int j){
                 if(j < 0 || j >= _col){
-                    throw std::out_of_range("Col index is out of range");
+                    throw std::out_of_range("var::matrix::check_col -> Col index is out of range");
                 }
             }
 
@@ -69,7 +69,7 @@ namespace var
              */
             void check_row(int i){
                 if(i < 0 || i >= _row){
-                    throw std::out_of_range("Row index is out of range");
+                    throw std::out_of_range("var::matrix::check_row -> Row index is out of range");
                 }
             }
 
@@ -102,7 +102,7 @@ namespace var
              */
             void check_size(int r, int c){
                 if(c != _col || r != _row){
-                    throw std::invalid_argument("Size mismatch");
+                    throw std::invalid_argument("var::matrix::check_size -> Size mismatch");
                 }
             }
 
@@ -158,7 +158,7 @@ namespace var
              */
             void square(){
                 if(!is_square()){
-                    throw std::invalid_argument("Matrix is not a square");
+                    throw std::invalid_argument("var::matrix::square -> Matrix is not a square");
                 }
             }
 
@@ -398,7 +398,7 @@ namespace var
             void resize(int r, int c){
                 // checking 
                 if(r < 0 || c < 0){
-                    throw std::invalid_argument("Invalid values");
+                    throw std::invalid_argument("var::matrix::resize -> Invalid values");
                 }
                 _row = r;
                 _col = c;
@@ -421,7 +421,7 @@ namespace var
             void push_row(std::vector<D> a){
                 // checking size
                 if(a.size() != _col && _row != 0 && _col != 0){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::push_row -> Size doesnt match");
                 }
                 else if(_row == 0 && _col == 0){
                     resize(1, a.size());
@@ -440,7 +440,7 @@ namespace var
             void push_col(std::vector<D> a){
                 // checking size
                 if(a.size() != _row && _row != 0 && _col != 0){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::push_col -> Size doesnt match");
                 }
                 else if(_row == 0 && _col == 0){
                     resize(a.size(), 1);
@@ -468,7 +468,7 @@ namespace var
              */
             void insert_row(int i, std::vector<D> a){
                 if(a.size() != _col){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::insert_row -> Size doesnt match");
                 }
                 check_row(i);
                 typename table<D>::iterator it = data.begin();
@@ -485,7 +485,7 @@ namespace var
              */
             void insert_col(int j, std::vector<D> a){
                 if(a.size() != _row){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::insert_col -> Size doesnt match");
                 }
                 check_col(j);
                 typename std::vector<D>::iterator it;
@@ -508,7 +508,7 @@ namespace var
              */
             void pop_row(){
                 if(_row == 0){
-                    throw std::invalid_argument("No rows to remove");
+                    throw std::invalid_argument("var::matrix::pop_row -> No rows to remove");
                 }
                 data.pop_back();
                 _row = data.size();
@@ -520,7 +520,7 @@ namespace var
              */
             void pop_col(){
                 if(_col == 0){
-                    throw std::invalid_argument("No colums to remove");
+                    throw std::invalid_argument("var::matrix::pop_col -> No colums to remove");
                 }
                 for(int i = 0; i < _row; i++){
                     data[i].pop_back();
@@ -585,7 +585,7 @@ namespace var
              */
             void replace_row(int i, std::vector<D> a){
                 if(a.size() != _row){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::replace_row -> Size doesnt match");
                 }
                 check_row(i);
                 data[i] = a;
@@ -599,7 +599,7 @@ namespace var
              */
             void replace_col(int j, std::vector<D> a){
                 if(a.size() != _col){
-                    throw std::invalid_argument("Size doesnt match");
+                    throw std::invalid_argument("var::matrix::replace_col -> Size doesnt match");
                 }
                 check_col(j);
                 for(int i = 0; i < _row; i++){
@@ -772,7 +772,7 @@ namespace var
              */
             void join_row(matrix other){
                 if(other.col() != _col){
-                    throw std::invalid_argument("Size mismatch");
+                    throw std::invalid_argument("var::matrix::join_row -> Size mismatch");
                 }
                 for(int i = 0; i < other.row(); i++){
                     push_row(other.get_row(i));
@@ -788,7 +788,7 @@ namespace var
              */
             void join_col(matrix other){
                 if(other.row() != _row){
-                    throw std::invalid_argument("Size mismatch");
+                    throw std::invalid_argument("var::matrix::join_col -> Size mismatch");
                 }
                 for(int j = 0; j < other.col(); j++){
                     push_col(other.get_col(j));
@@ -926,7 +926,7 @@ namespace var
                 square();
                 D detm = det();
                 if(detm == 0){
-                    throw std::runtime_error("Determinant is 0");
+                    throw std::runtime_error("var::matrix::inv -> Determinant is 0");
                 }
                 return adj()/detm;
             }
@@ -1078,7 +1078,7 @@ namespace var
                             }
                         }
                         if(max_value <= std::numeric_limits<D>::epsilon()){
-                            throw std::runtime_error("Matrix is singular");
+                            throw std::runtime_error("var::matrix::plu -> Matrix is singular");
                         }
                         if(j != max_index){
                             std::swap(perm[j], perm[max_index]);
@@ -1455,7 +1455,7 @@ namespace var
             matrix operator *(matrix const &other){
                 // condition 
                 if(_row != other._col && _col != other._row){
-                    throw std::invalid_argument("Size mismatch");
+                    throw std::invalid_argument("var::matrix::operator * -> Size mismatch");
                 }
                 auto SUM = [this, other](int i, int j)-> D {
                     D summ = D();

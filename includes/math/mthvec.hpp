@@ -100,7 +100,7 @@ namespace mth
     template<typename D>
     std::vector<D> pow(std::vector<D> a, std::vector<D> b){
         if(a.size() != b.size()){
-            throw std::invalid_argument("Invalid size");
+            throw std::invalid_argument("mth::pow -> Invalid size");
         }
         std::vector<D> temp;
         D temp2 = 1;

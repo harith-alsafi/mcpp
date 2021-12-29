@@ -86,6 +86,9 @@ else()
     # matrix
     add_executable(test_matrix tests/variables/matrix_test.cpp)
 
+    # table
+    add_executable(test_table tests/variables/table_test.cpp)
+
     # vectors 
     add_executable(test_vector tests/variables/vector_test.cpp)
 
@@ -99,11 +102,13 @@ else()
     #-lgtest -lpthread 
     if(NO-PLOT)
         target_link_libraries(test_matrix gtest pthread) 
+        target_link_libraries(test_table gtest pthread) 
         target_link_libraries(test_vector gtest pthread) 
         target_link_libraries(test_calculus gtest pthread) 
         target_link_libraries(test_algebra gtest pthread) 
     else()
         target_link_libraries(test_matrix mcpp gtest pthread)  
+        target_link_libraries(test_table mcpp gtest pthread)  
         target_link_libraries(test_vector mcpp gtest pthread) 
         target_link_libraries(test_calculus mcpp gtest pthread) 
         target_link_libraries(test_algebra mcpp gtest pthread) 

@@ -74,14 +74,14 @@ namespace num
         template<typename D>
         std::vector<D> dot(std::vector<D> a, std::vector<D> b){
             if(a.size() != b.size()){
-                throw std::invalid_argument("Invalid size");
+                throw std::invalid_argument("num::vec::dot -> Invalid size");
             }
         }
 
         template<typename D>
         std::vector<D> cross(std::vector<D> a, std::vector<D> b){
             if(a.size() != b.size()){
-                throw std::invalid_argument("Invalid size");
+                throw std::invalid_argument("num::vec::cross -> Invalid size");
             } 
         }
     }

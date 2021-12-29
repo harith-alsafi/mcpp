@@ -14,7 +14,7 @@
 template<typename D>
 std::vector<D> operator *(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
-        throw std::invalid_argument("Invalid size");
+        throw std::invalid_argument("std::vector::operator * -> Invalid size");
     }
     std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
@@ -70,7 +70,7 @@ std::vector<D> operator *(std::vector<D> v, D s){
 template<typename D>
 std::vector<D> operator +(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
-        throw std::invalid_argument("Invalid size");
+        throw std::invalid_argument("std::vector::operator + -> Invalid size");
     }
     std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
@@ -126,7 +126,7 @@ std::vector<D> operator +(std::vector<D> v, D s){
 template<typename D>
 std::vector<D> operator -(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
-        throw std::invalid_argument("Invalid size");
+        throw std::invalid_argument("std::vector::operator - -> Invalid size");
     }
     std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
@@ -182,7 +182,7 @@ std::vector<D> operator -(std::vector<D> v, D s){
 template<typename D>
 std::vector<D> operator /(std::vector<D> first, std::vector<D> second){
     if(first.size() != second.size()){
-        throw std::invalid_argument("Invalid size");
+        throw std::invalid_argument("std::vector::operator / -> Invalid size");
     }
     std::vector<D> temp;
     for(int i = 0; i < first.size(); i++){
@@ -303,7 +303,7 @@ std::vector<D> operator %(std::vector<D> v, D s){
 template<typename D>
 bool operator ==(std::vector<D> a, std::vector<D> b){
     if(a.size() != b.size()){
-        throw std::invalid_argument("Invalid size");
+        throw std::invalid_argument("std::vector::operator == -> Invalid size");
     }
     for(int i = 0; i < a.size(); i++){
         if(a[i] != b[i]){

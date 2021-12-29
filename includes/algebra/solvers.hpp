@@ -49,7 +49,7 @@ namespace alg
         template<typename D>
         D linear_root(std::vector<D> eq){
             if(eq.size() > 2){
-                throw std::invalid_argument("Vector is more than 2");
+                throw std::invalid_argument("alg::slv::linear_root -> Vector is more than 2");
             }
             return (-eq[1]/eq[0]); 
         }
@@ -80,7 +80,7 @@ namespace alg
                 return ((a+b)/D(2));
             };
             if(!check(min, max)){
-                throw std::runtime_error("min and max don't have opposite signs");
+                throw std::runtime_error("alg::slv::bisection_root -> min and max don't have opposite signs");
             }
 
             D a = min;
@@ -104,7 +104,7 @@ namespace alg
             }
 
             if(counter > max_counter){
-                throw std::runtime_error("No solution was found");
+                throw std::runtime_error("alg::slv::bisection_root -> No solution was found");
             }
 
             return t;
@@ -147,7 +147,7 @@ namespace alg
         std::vector<D> linear_sim(var::matrix<D> eq){
             var::matrix<D> A = eq(0, eq.row(), 0, eq.col()-1);
             if(!A.is_square()){
-                throw std::invalid_argument("A in Ax=B should be a square ([AB] is incomplete)");
+                throw std::invalid_argument("alg::slv::linear_sim -> A in Ax=B should be a square ([AB] is incomplete)");
             }
             
             std::vector<D> C = eq.get_col(eq.col()-1);
