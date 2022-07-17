@@ -1,6 +1,18 @@
+/**
+ * @file table.hpp
+ * @author Harith Al-Safi (harith.alsafi@gmail.com)
+ * @brief Implementation and declaration of table.hpp 
+ * @version 1.0
+ * @date 17/07/2022
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #include "../mcpp.hpp"
 #include <fstream>
+
+// TODO: complete testing
 
 namespace var
 {
@@ -75,8 +87,8 @@ namespace var
                 int j = check_header(headname);
                 std::vector<D> a;
                 if(j >= 0){
-                    for(int i = 0; i < size(); i++){
-                        a.push_back(at(i).at(j));
+                    for(int i = 0; i < this->size(); i++){
+                        a.push_back(this->at(i).at(j));
                     }
                 }
                 return a;  
@@ -164,7 +176,7 @@ namespace var
              * @param w 
              * @return std::string 
              */
-            static std::string center(const string s, const int w) {
+            static std::string center(const std::string s, const int w) {
                 std::stringstream ss, spaces;
                 int padding = w - s.size(); // count excess room to pad
                 for(int i=0; i<padding/2; ++i)
@@ -214,7 +226,7 @@ namespace var
              */
             void generate_rows(){
                 rows.clear();
-                for(int i = 0; i < size(); i++){
+                for(int i = 0; i < this->size(); i++){
                     rows.push_back("Row-"+std::to_string(i));
                 }
             }
@@ -224,13 +236,13 @@ namespace var
              * 
              */
             void check_size(){
-                if(empty()){
+                if(this->empty()){
                     row = 0;
                     col = 0;
                     return;
                 }
-                col = at(0).size();
-                row = size();
+                col = this->at(0).size();
+                row = this->size();
             }
 
             /**
@@ -298,16 +310,16 @@ namespace var
              * @return false: if read did not complete 
              */
             bool read_csv(std::string filename){
-                ifstream file(filename);
+                std::ifstream file(filename);
                 if(file.is_open()){
-                    clear();
+                    this->clear();
                     headers.clear();
 
                     // col name
-                    string line, colname;
-                    getline(file, line);
+                    std::string line, colname;
+                    std::getline(file, line);
 
-                    stringstream ss(line);
+                    std::stringstream ss(line);
                     while(getline(ss, colname, ',')){
                         headers.push_back(colname);
                     }
@@ -326,7 +338,7 @@ namespace var
                             // If the next token is a comma, ignore it and move on
                             if(ss.peek() == ',') ss.ignore();
                         }
-                        push_back(r);
+                        this->push_back(r);
                     }
                     check_size();
                     file.close();
@@ -345,7 +357,7 @@ namespace var
              */
             bool save_csv(std::string filename)
             {
-                ofstream file(filename);
+                std::ofstream file(filename);
                 if(file.is_open()){
                     for(int i = 0; i < headers.size(); i++){
                         if(i != headers.size()-1){
@@ -359,10 +371,10 @@ namespace var
                     for(int i = 0; i < row; i++){
                         for(int j = 0; j < col; j++){
                             if(j != col-1){
-                                file << at(i).at(j) << ",";
+                                file << this->at(i).at(j) << ",";
                             }
                             else if (j == col-1){
-                                file << at(i).at(j) << "\n";
+                                file << this->at(i).at(j) << "\n";
                             }
                         }
                     }
@@ -379,7 +391,7 @@ namespace var
              * @return int 
              */
             int get_row_size(){
-                return size();                
+                return this->size();                
             }
 
             /**
@@ -388,7 +400,12 @@ namespace var
              * @return int 
              */
             int get_col_size(){
-                return at<D>(0).size();
+                if(!this->empty()){
+                    return this->at(0).size();
+                }
+                else{
+                    return 0;
+                }
             }
 
             /**
@@ -509,11 +526,11 @@ namespace var
                 if(_x.size() != _y.size()){
                     throw std::invalid_argument("var::table::get_r -> Size mismatch");
                 }
-                D sumx = misc::table::get_sum(_x);
-                D sumy = misc::table::get_sum(_y);
-                D sumxx = misc::table::get_sum(_x*_x);
-                D sumxy = misc::table::get_sum(_x*_y);
-                D sumyy = misc::table::get_sum(_y*_y);
+                D sumx = table::get_sum(_x);
+                D sumy = table::get_sum(_y);
+                D sumxx = table::get_sum(_x*_x);
+                D sumxy = table::get_sum(_x*_y);
+                D sumyy = table::get_sum(_y*_y);
                 return (_x.size()*sumxy-(sumx*sumy))/
                 (sqrt((_x.size()*sumxx-pow(sumx, 2))*(_x.size()*sumyy-pow(sumy, 2))));
             }
@@ -649,7 +666,7 @@ namespace var
              */
             table get_row(int r){
                 table t; 
-                t.push_back(at(r));
+                t.push_back(this->at(r));
                 t.headers = headers;
                 if(rows.empty()){
                     generate_rows();
@@ -693,10 +710,10 @@ namespace var
                 headers.push_back(col_name);
                 for(int i = 0; i < col_data.size(); i++){
                     if(row == 0){
-                        push_back({col_data[i]});
+                        this->push_back({col_data[i]});
                     }
                     else{
-                        at(i).push_back(col_data[i]);
+                        this->at(i).push_back(col_data[i]);
                     }
                 }
                 return true;

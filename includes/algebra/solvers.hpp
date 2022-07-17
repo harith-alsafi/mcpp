@@ -1,3 +1,13 @@
+/**
+ * @file solvers.hpp
+ * @author Harith Al-Safi (harith.alsafi@gmail.com)
+ * @brief Implementation and declaration of arithemtic solvers functions
+ * @version 1.0
+ * @date 17/07/2022
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #include <vector>
 #include <algorithm>

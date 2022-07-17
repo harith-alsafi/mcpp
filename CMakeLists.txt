@@ -14,62 +14,18 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 set(CMAKE_CXX_STANDARD 14)
 
 # flags
-message("NO-PLOT=${NO-PLOT}")
 message("NO-TEST=${NO-TEST}")
 
 ######################## files ####################################
 # Directories
-include_directories(src/plot)
-include_directories(src/variables)
-include_directories(src/stats)
-include_directories(src/calculus)
-include_directories(src/misc)
-include_directories(src/vectors)
 include_directories(includes)
 
 # Files
-file(GLOB_RECURSE SRC "src/*.cpp")
 file(GLOB_RECURSE HPP "includes/*.hpp")
 
 ######################### build ###########################
-# No plot
-if(NO-PLOT)
-    message("No ploting functionality")
-    INSTALL(DIRECTORY
-    "includes/" DESTINATION include/${PROJECT_NAME}
-    PATTERN "includes/plot/" EXCLUDE
-    PATTERN "includes/plot.hpp" EXCLUDE)
-# There is plot
-else()
-    #SFML
-    # to find sfml 
-    set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/lib/SFML-2.5.1/cmake/Modules")
-    find_package(SFML 2 COMPONENTS graphics window system)
-    if(SFML_FOUND)
-        message("SFML was found")
-    else()
-        add_subdirectory(lib/SFML-2.5.1)
-    endif()
-
-    # Library
-    add_library(mcpp SHARED ${SRC} ${HPP})
-    set_target_properties(
-        mcpp PROPERTIES 
-        VERSION ${PROJECT_VERSION})
-
-    target_link_libraries(mcpp sfml-graphics sfml-window sfml-system)
-
-    install(TARGETS mcpp
-        LIBRARY DESTINATION lib
-    )
-
-    INSTALL(DIRECTORY
-        "includes/" DESTINATION include/${PROJECT_NAME}
-    )
-
-    install(CODE "execute_process(COMMAND ldconfig)")
-endif()
-
+INSTALL(DIRECTORY
+"includes/" DESTINATION include/${PROJECT_NAME})
 ####################### testing ##############################
 if(NO-TEST)
     message("No unit-testing")
@@ -100,17 +56,9 @@ else()
     add_executable(test_calculus ${cal_src})
 
     #-lgtest -lpthread 
-    if(NO-PLOT)
-        target_link_libraries(test_matrix gtest pthread) 
-        target_link_libraries(test_table gtest pthread) 
-        target_link_libraries(test_vector gtest pthread) 
-        target_link_libraries(test_calculus gtest pthread) 
-        target_link_libraries(test_algebra gtest pthread) 
-    else()
-        target_link_libraries(test_matrix mcpp gtest pthread)  
-        target_link_libraries(test_table mcpp gtest pthread)  
-        target_link_libraries(test_vector mcpp gtest pthread) 
-        target_link_libraries(test_calculus mcpp gtest pthread) 
-        target_link_libraries(test_algebra mcpp gtest pthread) 
-        endif()
+    target_link_libraries(test_matrix mcpp gtest pthread)  
+    target_link_libraries(test_table mcpp gtest pthread)  
+    target_link_libraries(test_vector mcpp gtest pthread) 
+    target_link_libraries(test_calculus mcpp gtest pthread) 
+    target_link_libraries(test_algebra mcpp gtest pthread) 
 endif()

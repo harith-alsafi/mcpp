@@ -1,3 +1,13 @@
+/**
+ * @file differential.hpp
+ * @author Harith Al-Safi (harith.alsafi@gmail.com)
+ * @brief Differential calculus 
+ * @version 1.0
+ * @date 17/07/2022
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #include <vector>
 #include "../mcpp.hpp"

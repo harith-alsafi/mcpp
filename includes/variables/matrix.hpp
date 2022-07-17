@@ -1,3 +1,13 @@
+/**
+ * @file matrix.hpp
+ * @author Harith Al-Safi (harith.alsafi@gmail.com)
+ * @brief Implementation and declaration of matrix class
+ * @version 1.0
+ * @date 17/07/2022
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #pragma once
 #include "../mcpp.hpp"
 #include <algorithm>
