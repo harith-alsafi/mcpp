@@ -1739,17 +1739,6 @@ namespace var
                 }
                 return true;
             }
-            
-            /**
-             * @brief More than
-             * 
-             * @param other ``matrix``
-             * @return true 
-             * @return false 
-             */
-            bool operator>(matrix other){
-                return !(*this < other);
-            }
 
             /**
              * @brief Less than or equal
@@ -1771,6 +1760,17 @@ namespace var
             }
 
             /**
+             * @brief More than
+             * 
+             * @param other ``matrix``
+             * @return true 
+             * @return false 
+             */
+            bool operator>(matrix other){
+                return !(*this <= other);
+            }
+
+            /**
              * @brief More than or equal 
              * 
              * @param other ``matrix``
@@ -1778,7 +1778,7 @@ namespace var
              * @return false 
              */
             bool operator>=(matrix other){
-                return !(*this <= other);
+                return !(*this < other);
             }        
 
             /**
