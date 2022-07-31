@@ -1,5 +1,5 @@
 ######################## project details ##########################
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 
 # Enable debug symbols by default
 if(NOT CMAKE_BUILD_TYPE)
@@ -10,8 +10,8 @@ endif()
 project(mcpp VERSION 1.0 DESCRIPTION "math library for cpp")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../out)
 
-# cpp standard (c++14)
-set(CMAKE_CXX_STANDARD 14)
+# cpp standard (c++17)
+set(CMAKE_CXX_STANDARD 17)
 
 # flags
 message("NO-TEST=${NO-TEST}")
@@ -56,9 +56,9 @@ else()
     add_executable(test_calculus ${cal_src})
 
     #-lgtest -lpthread 
-    target_link_libraries(test_matrix mcpp gtest pthread)  
-    target_link_libraries(test_table mcpp gtest pthread)  
-    target_link_libraries(test_vector mcpp gtest pthread) 
-    target_link_libraries(test_calculus mcpp gtest pthread) 
-    target_link_libraries(test_algebra mcpp gtest pthread) 
+    target_link_libraries(test_matrix gtest pthread)  
+    target_link_libraries(test_table gtest pthread)  
+    target_link_libraries(test_vector gtest pthread) 
+    target_link_libraries(test_calculus gtest pthread) 
+    target_link_libraries(test_algebra gtest pthread) 
 endif()

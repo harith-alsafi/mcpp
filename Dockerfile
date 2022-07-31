@@ -12,8 +12,8 @@ RUN apt-get update -y && \
 RUN apt-get install -y \
                     git \
                     curl \
-                    gcc-7 \
-                    g++-7 \
+                    gcc-8 \
+                    g++-8 \
                     clang-10 \
                     build-essential \
                     cmake \
@@ -33,19 +33,11 @@ COPY . /home/mcpp
 RUN rm -f -R /home/mcpp/build
 RUN mkdir /home/mcpp/build
 
-RUN CMAKE_URL="https://cmake.org/files/v3.19/cmake-3.19.0-Linux-x86_64.tar.gz" && \
-    cd /home/mcpp && \
-    mkdir cmake && wget --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake 
-
-RUN gcc --version 
-RUN cmake --version 
-RUN g++ --version 
-
-
 RUN cd /home/mcpp && \
     cd build && \
-    ../cmake/bin/cmake .. -DNO-TEST=False && \
-    make
+    cmake .. -DNO-TEST=False && \
+    make && \
+    make install 
 
 
 
