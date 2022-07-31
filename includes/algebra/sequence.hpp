@@ -8,7 +8,11 @@
  * @copyright Copyright (c) 2022
  * 
  */
+#pragma once 
+
 #include <vector>
+
+
 namespace alg
 {
     namespace seq
