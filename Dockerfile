@@ -7,19 +7,12 @@ LABEL maintainer="Harith Al-Safi" \
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/London
 
-RUN apt-get update -y && \
-    apt-get install -y tzdata
+RUN apt-get update -y 
 RUN apt-get install -y \
-                    git \
-                    curl \
                     gcc-8 \
                     g++-8 \
-                    clang-10 \
                     build-essential \
                     cmake \
-                    unzip \
-                    tar \
-                    wget \
                     python \
                     libpthread-stubs0-dev \
                     ca-certificates && \
@@ -38,6 +31,3 @@ RUN cd /home/mcpp && \
     cmake .. -DNO-TEST=False && \
     make && \
     make install 
-
-
-

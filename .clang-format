@@ -1,0 +1,81 @@
+# Format Style Options - Created with Clang Power Tools
+---
+AllowShortEnumsOnASingleLine: false
+AttributeMacros: 
+  - __capability
+BraceWrapping: 
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: false
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: false
+  AfterStruct: true
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+BreakBeforeBraces: Custom
+ColumnLimit: 0
+Cpp11BracedListStyle: false  # might remove later on
+DerivePointerAlignment: true
+FixNamespaceComments: false
+IndentRequires: true
+IndentWidth: 4
+NamespaceIndentation: All
+SpaceBeforeInheritanceColon: false
+SpaceBeforeParens: Never
+StatementAttributeLikeMacros: [emit]
+TabWidth: 4
+UseCRLF: false
+UseTab: ForContinuationAndIndentation
+AccessModifierOffset: -2
+IndentAccessModifiers: false
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: Consecutive
+#AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive 	
+AlignEscapedNewlines: Left
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+AllowShortBlocksOnASingleLine: Always
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: WithoutElse
+
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: AfterColon
+BreakStringLiterals: true
+IndentCaseLabels: true
+PackConstructorInitializers: CurrentLine
+QualifierAlignment: Left
+ReferenceAlignment: Left
+SeparateDefinitionBlocks: Always
+SpaceAfterCStyleCast: true
+PenaltyReturnTypeOnItsOwnLine: 0
+PenaltyBreakOpenParenthesis: 1
+
+BinPackParameters: true 
+BinPackArguments: true
+
+PenaltyBreakBeforeFirstCallParameter: 20
+PenaltyBreakFirstLessLess: 10 
+
+AlignAfterOpenBracket: BlockIndent
+AlignOperands: AlignAfterOperator
+
+AlignTrailingComments: true
+QualifierAlignment: Custom
+QualifierOrder: ['inline', 'static' ,'const', 'type']
+...
+
