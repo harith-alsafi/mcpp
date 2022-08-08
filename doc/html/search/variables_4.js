@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['p_288',['P',['../structvar_1_1matrix_1_1LU.html#ae7daacc7db6dfc54ed2afba970bec1ed',1,'var::matrix::LU']]]
+  ['imag_356',['imag',['../structalg_1_1slv_1_1ans.html#af23adf6727790b8fbc926a02493f3100',1,'alg::slv::ans']]]
 ];

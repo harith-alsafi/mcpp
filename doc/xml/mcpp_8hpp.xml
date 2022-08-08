@@ -17,6 +17,7 @@
     <includedby refid="differential_8hpp" local="yes">includes/calculus/differential.hpp</includedby>
     <includedby refid="mat_8hpp" local="yes">includes/numerical/mat.hpp</includedby>
     <includedby refid="matrix_8hpp" local="yes">includes/variables/matrix.hpp</includedby>
+    <includedby refid="table_8hpp" local="yes">includes/variables/table.hpp</includedby>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

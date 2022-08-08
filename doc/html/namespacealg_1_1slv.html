@@ -85,14 +85,13 @@ Functions</h2></td></tr>
 <tr class="separator:a4d776788d0e8bc6c035b7b6f0bd5a9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a393118084c854994c0ed91c128156eeb"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
 <tr class="memitem:a393118084c854994c0ed91c128156eeb"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb">newton_root</a> (LAMBDA f, D x0)</td></tr>
-<tr class="memdesc:a393118084c854994c0ed91c128156eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mainly used to get real roots through newton method.  <a href="namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb">More...</a><br /></td></tr>
 <tr class="separator:a393118084c854994c0ed91c128156eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab65d2608d48212f0951c48962a49de40"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:ab65d2608d48212f0951c48962a49de40"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structalg_1_1slv_1_1ans.html">ans</a>&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#ab65d2608d48212f0951c48962a49de40">poly_root</a> (int n, std::vector&lt; D &gt; a)</td></tr>
 <tr class="separator:ab65d2608d48212f0951c48962a49de40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c0b872fb3e525c421281e3ae03057e"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:a31c0b872fb3e525c421281e3ae03057e"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e">linear_root</a> (std::vector&lt; D &gt; eq)</td></tr>
-<tr class="memdesc:a31c0b872fb3e525c421281e3ae03057e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear root through inputing Ax+C such that it is represented as {A, C}.  <a href="namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e">More...</a><br /></td></tr>
+<tr class="memdesc:a31c0b872fb3e525c421281e3ae03057e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear root through inputing Ax+C such that it is represented as vector {A, C}.  <a href="namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e">More...</a><br /></td></tr>
 <tr class="separator:a31c0b872fb3e525c421281e3ae03057e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="memTemplParams" colspan="2">template&lt;typename D , typename LAMBDA &gt; </td></tr>
 <tr class="memitem:aac0a74eeb90204b8c20ff04eb9e55fbf"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacealg_1_1slv.html#aac0a74eeb90204b8c20ff04eb9e55fbf">bisection_root</a> (LAMBDA f, D min, D max, D tol=D(0.00001))</td></tr>
@@ -147,7 +146,7 @@ template&lt;typename D , typename LAMBDA &gt; </div>
 <p>Used to get real roots through bisection method. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// roots between -5 and -1</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="structalg_1_1slv_1_1ans.html">ans</a> = bisection_root&lt;double&gt;(f, -5.0, -1.0);</div>
-<div class="ttc" id="astructalg_1_1slv_1_1ans_html"><div class="ttname"><a href="structalg_1_1slv_1_1ans.html">alg::slv::ans</a></div><div class="ttdef"><b>Definition:</b> solvers.hpp:34</div></div>
+<div class="ttc" id="astructalg_1_1slv_1_1ans_html"><div class="ttname"><a href="structalg_1_1slv_1_1ans.html">alg::slv::ans</a></div><div class="ttdef"><b>Definition:</b> solvers.hpp:36</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">D</td><td></td></tr>
@@ -186,7 +185,7 @@ template&lt;typename D &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Linear root through inputing Ax+C such that it is represented as {A, C}. </p>
+<p>Linear root through inputing Ax+C such that it is represented as vector {A, C}. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="comment">// answer of x+2 = 0;</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="structalg_1_1slv_1_1ans.html">ans</a> = linear({1, 2});</div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -269,23 +268,6 @@ template&lt;typename D , typename LAMBDA &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Mainly used to get real roots through newton method. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">D</td><td></td></tr>
-    <tr><td class="paramname">LAMBDA</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">f</td><td></td></tr>
-    <tr><td class="paramname">x0</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
 
 </div>
 </div>

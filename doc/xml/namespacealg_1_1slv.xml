@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="14" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="14" bodyend="16"/>
+        <location file="includes/algebra/solvers.hpp" line="24" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="24" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1a393118084c854994c0ed91c128156eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -56,50 +56,12 @@
           <declname>x0</declname>
         </param>
         <briefdescription>
-<para>Mainly used to get real roots through newton method. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="templateparam"><parameteritem>
-<parameternamelist>
-<parametername>D</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>LAMBDA</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>f</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>x0</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="28" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="28" bodyend="30"/>
+        <location file="includes/algebra/solvers.hpp" line="30" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="30" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1ab65d2608d48212f0951c48962a49de40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -125,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="40" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="40" bodyend="42"/>
+        <location file="includes/algebra/solvers.hpp" line="42" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="42" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1a31c0b872fb3e525c421281e3ae03057e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -142,7 +104,7 @@
           <declname>eq</declname>
         </param>
         <briefdescription>
-<para>Linear root through inputing Ax+C such that it is represented as {A, C}. </para>
+<para>Linear root through inputing Ax+C such that it is represented as vector {A, C}. </para>
         </briefdescription>
         <detaileddescription>
 <para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>answer<sp/>of<sp/>x+2<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
@@ -172,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="58" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="58" bodyend="63"/>
+        <location file="includes/algebra/solvers.hpp" line="60" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="60" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1aac0a74eeb90204b8c20ff04eb9e55fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -267,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="83" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="83" bodyend="120"/>
+        <location file="includes/algebra/solvers.hpp" line="85" column="11" bodyfile="includes/algebra/solvers.hpp" bodystart="85" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="namespacealg_1_1slv_1af169892dc116f67ba6a2168a61f371ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -313,13 +275,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/algebra/solvers.hpp" line="155" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="155" bodyend="192"/>
+        <location file="includes/algebra/solvers.hpp" line="157" column="21" bodyfile="includes/algebra/solvers.hpp" bodystart="157" bodyend="194"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="includes/algebra/solvers.hpp" line="9" column="5"/>
+    <location file="includes/algebra/solvers.hpp" line="19" column="5"/>
   </compounddef>
 </doxygen>

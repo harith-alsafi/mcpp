@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xrange_247',['xrange',['../structplt_1_1details.html#a036f3e1cad948dac80391f9e0dbb9af4',1,'plt::details']]]
+  ['sz_366',['sz',['../classvar_1_1table.html#ae067e021bec7ba45f14e0a6c45c6116d',1,'var::table']]]
 ];

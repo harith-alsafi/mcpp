@@ -2,17 +2,823 @@
 \label{classvar_1_1table}\index{var::table$<$ D $>$@{var::table$<$ D $>$}}
 
 
+table class to contain the dataframe  
+
+
+
+
 {\ttfamily \#include \char`\"{}table.\+hpp\char`\"{}}
 
 
 
-Collaboration diagram for var\+::table$<$ D $>$\+:\nopagebreak
+Inheritance diagram for var\+::table$<$ D $>$\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{classvar_1_1table__coll__graph}
+\includegraphics[height=550pt]{classvar_1_1table__inherit__graph}
 \end{center}
 \end{figure}
+
+
+Collaboration diagram for var\+::table$<$ D $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classvar_1_1table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvar_1_1table_1_1QR}{QR}}
+\begin{DoxyCompactList}\small\item\em Struct to contain the quartile range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classvar_1_1table_ada6ebdf0a90915bedfa07fc57b31a504}{table}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new table object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1table_a135d46678f8916df8bcd9d4d9472fd3a}{$\sim$table}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the table object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvar_1_1table_ac3f099c46a47c6428689efefad42dcf2}{read\+\_\+csv}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Reads from csv file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvar_1_1table_aa287b9c7b64b4d5d8bd03e9a6a65a044}{save\+\_\+csv}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Reads from csv file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1table_ac129bb6a1940378e7511762ba5152857}{get\+\_\+row\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the row size object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1table_a0e5e2a6af3e5a10886c26c130ca51a0d}{get\+\_\+col\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the col size object. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_ad326577c23b9400e0296f71aebe8d2a0}{operator\mbox{[}$\,$\mbox{]}}} (std\+::string headname)
+\begin{DoxyCompactList}\small\item\em Returns colum of certain header. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a462865ba0a86a2e26cce1ab85b60cbbf}{show}} (int r)
+\begin{DoxyCompactList}\small\item\em Shows a certain number of rows in table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_ad471ed11d98bd02b5935cc71ba911bae}{show}} ()
+\begin{DoxyCompactList}\small\item\em shows all of the table \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table_afa3958110fe2532e0e8f47c9281b9a90}{describe\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Statistical summary of all colums in table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table_a13829ed8fe8ad15fe807a0d8cb2dae2b}{get\+\_\+row}} (int r)
+\begin{DoxyCompactList}\small\item\em Get the row as table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table_af24d2bf9285d7bfaf5d2263576419645}{get\+\_\+col}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Get the col as table. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classvar_1_1table_ab2ebc42048d7552e1661916c0756482d}{add\+\_\+col}} (std\+::string col\+\_\+name, std\+::vector$<$ D $>$ col\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Adds new colum. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a5e7459882c4bd4bc29759f5fb3c1ee10}{show\+\_\+header}} ()
+\begin{DoxyCompactList}\small\item\em Shows headers only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_abe9eef285b846e555b9e2b4d89d82103}{sort\+\_\+asc}} (std\+::vector$<$ D $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Sorts data ascending. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_a3e3a7c5f503790050d32b6696a2c811a}{get\+\_\+min}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the min value of vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_a1abd7092b76e6122e17f891be3e46896}{get\+\_\+max}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the max value of vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_abb470d4a1f88cbfb2225084a888e28f3}{get\+\_\+sum}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the sum of vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_a42c4b9b7209cc3b518fdc69142b23c76}{get\+\_\+avg}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the avg of vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_af001504d15d500670e5d776148b04d6f}{get\+\_\+var}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the variance of vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_a3ece8de9eb74c17b73b322790ca0bf62}{get\+\_\+std}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the standard diviation of vector. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{structvar_1_1table_1_1QR}{QR}} \mbox{\hyperlink{classvar_1_1table_af21b86535b597309c629804add469081}{get\+\_\+qr}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the quartile range of a vector. \end{DoxyCompactList}\item 
+static D \mbox{\hyperlink{classvar_1_1table_a8184e4d4c340aad83524b78e6676dc8c}{get\+\_\+r}} (std\+::vector$<$ D $>$ \+\_\+x, std\+::vector$<$ D $>$ \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Get the relation coefficient of two vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classvar_1_1table_aba9cc3ab7bf7f78926589af319c763a7}{check\+\_\+header}} (std\+::string head)
+\begin{DoxyCompactList}\small\item\em Checks the header and returns index. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_aea1482942b89d2a6410a7a69a9cb710e}{get\+\_\+col\+\_\+}} (std\+::string headname)
+\begin{DoxyCompactList}\small\item\em Get the col vector based on header name. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_a4c6b4d98de8c0e527ac5f55ce455270b}{get\+\_\+avgs}} ()
+\begin{DoxyCompactList}\small\item\em Get the return average of all colums in vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_a2c2a9860253cc9e72b822d35c777e749}{get\+\_\+stds}} ()
+\begin{DoxyCompactList}\small\item\em Get the return std of all colums in vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_a196ea90112f0e84e30ea8fa6e7b1cb98}{get\+\_\+vars}} ()
+\begin{DoxyCompactList}\small\item\em Get the return variance of all colums in vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structvar_1_1table_1_1QR}{QR}} $>$ \mbox{\hyperlink{classvar_1_1table_a088733e85442485729c9304329dc9195}{get\+\_\+qrs}} ()
+\begin{DoxyCompactList}\small\item\em Get the return quartile range of all colums in vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_a85c69677672bfc6a61b0499e868c7465}{get\+\_\+sums}} ()
+\begin{DoxyCompactList}\small\item\em Get the return sums of all colums in vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a2032fb3518fc73b1af05770202d61e8c}{generate\+\_\+rows}} ()
+\begin{DoxyCompactList}\small\item\em Generates row names. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a55df2f9f50827b058c9b8c3bd4d38d17}{check\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Checks size of current class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classvar_1_1table_a4ad03a888518a0919abcef08d9b307ea}{generate\+\_\+line}} (int l)
+\begin{DoxyCompactList}\small\item\em Generates line to seperate rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classvar_1_1table_a215cdf3b672a7231d895f4e6c4214b64}{center}} (const std\+::string s, const int w)
+\begin{DoxyCompactList}\small\item\em Re-\/centers a string based on given width. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classvar_1_1table_a0b08c797c3314998239636e4840ff74e}{prd}} (D x, int width)
+\begin{DoxyCompactList}\small\item\em converts double to a string with white space \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classvar_1_1table_ae783c7e8063d4999c621f28a44dd215c}{prd}} (std\+::string x, int width)
+\begin{DoxyCompactList}\small\item\em Gives spacing to a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1table_af238cb3f30f4e545efdc4e0e0c371cde}{headers}}
+\begin{DoxyCompactList}\small\item\em Stores the headers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1table_a4333369e4f9d6443768ffe9e21dd04ed}{rows}}
+\begin{DoxyCompactList}\small\item\em Stores the row names. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1table_a6dd43c21c40a2c82b80fce47e8f45751}{row}}
+\begin{DoxyCompactList}\small\item\em Row size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1table_a0170e1261a00394cf7017c86e6833b49}{col}}
+\begin{DoxyCompactList}\small\item\em Colum size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classvar_1_1table_ae067e021bec7ba45f14e0a6c45c6116d}{sz}} = 10
+\begin{DoxyCompactList}\small\item\em Spacing size for print. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename D$>$\newline
+class var\+::table$<$ D $>$}
+table class to contain the dataframe 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvar_1_1table_ada6ebdf0a90915bedfa07fc57b31a504}\label{classvar_1_1table_ada6ebdf0a90915bedfa07fc57b31a504}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!table@{table}}
+\index{table@{table}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{table()}{table()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::\mbox{\hyperlink{classvar_1_1table}{table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new table object. 
+
+\mbox{\Hypertarget{classvar_1_1table_a135d46678f8916df8bcd9d4d9472fd3a}\label{classvar_1_1table_a135d46678f8916df8bcd9d4d9472fd3a}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!````~table@{$\sim$table}}
+\index{````~table@{$\sim$table}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$table()}{~table()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::$\sim$\mbox{\hyperlink{classvar_1_1table}{table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the table object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classvar_1_1table_ab2ebc42048d7552e1661916c0756482d}\label{classvar_1_1table_ab2ebc42048d7552e1661916c0756482d}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!add\_col@{add\_col}}
+\index{add\_col@{add\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{add\_col()}{add\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+bool \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::add\+\_\+col (\begin{DoxyParamCaption}\item[{std\+::string}]{col\+\_\+name,  }\item[{std\+::vector$<$ D $>$}]{col\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds new colum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+name} & \\
+\hline
+{\em col\+\_\+data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a215cdf3b672a7231d895f4e6c4214b64}\label{classvar_1_1table_a215cdf3b672a7231d895f4e6c4214b64}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!center@{center}}
+\index{center@{center}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{center()}{center()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static std\+::string \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::center (\begin{DoxyParamCaption}\item[{const std\+::string}]{s,  }\item[{const int}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Re-\/centers a string based on given width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+{\em w} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_aba9cc3ab7bf7f78926589af319c763a7}\label{classvar_1_1table_aba9cc3ab7bf7f78926589af319c763a7}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!check\_header@{check\_header}}
+\index{check\_header@{check\_header}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{check\_header()}{check\_header()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::check\+\_\+header (\begin{DoxyParamCaption}\item[{std\+::string}]{head }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks the header and returns index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a55df2f9f50827b058c9b8c3bd4d38d17}\label{classvar_1_1table_a55df2f9f50827b058c9b8c3bd4d38d17}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!check\_size@{check\_size}}
+\index{check\_size@{check\_size}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{check\_size()}{check\_size()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::check\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks size of current class. 
+
+\mbox{\Hypertarget{classvar_1_1table_afa3958110fe2532e0e8f47c9281b9a90}\label{classvar_1_1table_afa3958110fe2532e0e8f47c9281b9a90}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!describe\_all@{describe\_all}}
+\index{describe\_all@{describe\_all}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{describe\_all()}{describe\_all()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::describe\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Statistical summary of all colums in table. 
+
+\begin{DoxyReturn}{Returns}
+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a4ad03a888518a0919abcef08d9b307ea}\label{classvar_1_1table_a4ad03a888518a0919abcef08d9b307ea}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!generate\_line@{generate\_line}}
+\index{generate\_line@{generate\_line}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{generate\_line()}{generate\_line()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::string \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::generate\+\_\+line (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Generates line to seperate rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a2032fb3518fc73b1af05770202d61e8c}\label{classvar_1_1table_a2032fb3518fc73b1af05770202d61e8c}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!generate\_rows@{generate\_rows}}
+\index{generate\_rows@{generate\_rows}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{generate\_rows()}{generate\_rows()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::generate\+\_\+rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Generates row names. 
+
+\mbox{\Hypertarget{classvar_1_1table_a42c4b9b7209cc3b518fdc69142b23c76}\label{classvar_1_1table_a42c4b9b7209cc3b518fdc69142b23c76}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_avg@{get\_avg}}
+\index{get\_avg@{get\_avg}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_avg()}{get\_avg()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+avg (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the avg of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a4c6b4d98de8c0e527ac5f55ce455270b}\label{classvar_1_1table_a4c6b4d98de8c0e527ac5f55ce455270b}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_avgs@{get\_avgs}}
+\index{get\_avgs@{get\_avgs}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_avgs()}{get\_avgs()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+avgs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the return average of all colums in vector. 
+
+Used in describe\+\_\+all()
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_af24d2bf9285d7bfaf5d2263576419645}\label{classvar_1_1table_af24d2bf9285d7bfaf5d2263576419645}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_col@{get\_col}}
+\index{get\_col@{get\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_col()}{get\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+col (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the col as table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_aea1482942b89d2a6410a7a69a9cb710e}\label{classvar_1_1table_aea1482942b89d2a6410a7a69a9cb710e}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_col\_@{get\_col\_}}
+\index{get\_col\_@{get\_col\_}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_col\_()}{get\_col\_()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+col\+\_\+ (\begin{DoxyParamCaption}\item[{std\+::string}]{headname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the col vector based on header name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em headname} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a0e5e2a6af3e5a10886c26c130ca51a0d}\label{classvar_1_1table_a0e5e2a6af3e5a10886c26c130ca51a0d}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_col\_size@{get\_col\_size}}
+\index{get\_col\_size@{get\_col\_size}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_col\_size()}{get\_col\_size()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+col\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the col size object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a1abd7092b76e6122e17f891be3e46896}\label{classvar_1_1table_a1abd7092b76e6122e17f891be3e46896}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_max@{get\_max}}
+\index{get\_max@{get\_max}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_max()}{get\_max()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+max (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the max value of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a3e3a7c5f503790050d32b6696a2c811a}\label{classvar_1_1table_a3e3a7c5f503790050d32b6696a2c811a}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_min@{get\_min}}
+\index{get\_min@{get\_min}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_min()}{get\_min()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+min (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the min value of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_af21b86535b597309c629804add469081}\label{classvar_1_1table_af21b86535b597309c629804add469081}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_qr@{get\_qr}}
+\index{get\_qr@{get\_qr}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_qr()}{get\_qr()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static \mbox{\hyperlink{structvar_1_1table_1_1QR}{QR}} \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+qr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the quartile range of a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QR 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a088733e85442485729c9304329dc9195}\label{classvar_1_1table_a088733e85442485729c9304329dc9195}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_qrs@{get\_qrs}}
+\index{get\_qrs@{get\_qrs}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_qrs()}{get\_qrs()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$\mbox{\hyperlink{structvar_1_1table_1_1QR}{QR}}$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+qrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the return quartile range of all colums in vector. 
+
+Used in describe\+\_\+all()
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a8184e4d4c340aad83524b78e6676dc8c}\label{classvar_1_1table_a8184e4d4c340aad83524b78e6676dc8c}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_r@{get\_r}}
+\index{get\_r@{get\_r}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_r()}{get\_r()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+r (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{\+\_\+x,  }\item[{std\+::vector$<$ D $>$}]{\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the relation coefficient of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & \\
+\hline
+{\em \+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a13829ed8fe8ad15fe807a0d8cb2dae2b}\label{classvar_1_1table_a13829ed8fe8ad15fe807a0d8cb2dae2b}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_row@{get\_row}}
+\index{get\_row@{get\_row}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_row()}{get\_row()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{classvar_1_1table}{table}} \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the row as table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_ac129bb6a1940378e7511762ba5152857}\label{classvar_1_1table_ac129bb6a1940378e7511762ba5152857}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_row\_size@{get\_row\_size}}
+\index{get\_row\_size@{get\_row\_size}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_row\_size()}{get\_row\_size()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+row\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the row size object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a3ece8de9eb74c17b73b322790ca0bf62}\label{classvar_1_1table_a3ece8de9eb74c17b73b322790ca0bf62}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_std@{get\_std}}
+\index{get\_std@{get\_std}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_std()}{get\_std()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+std (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the standard diviation of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a2c2a9860253cc9e72b822d35c777e749}\label{classvar_1_1table_a2c2a9860253cc9e72b822d35c777e749}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_stds@{get\_stds}}
+\index{get\_stds@{get\_stds}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_stds()}{get\_stds()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+stds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the return std of all colums in vector. 
+
+Used in describe\+\_\+all()
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_abb470d4a1f88cbfb2225084a888e28f3}\label{classvar_1_1table_abb470d4a1f88cbfb2225084a888e28f3}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_sum@{get\_sum}}
+\index{get\_sum@{get\_sum}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_sum()}{get\_sum()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+sum (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the sum of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a85c69677672bfc6a61b0499e868c7465}\label{classvar_1_1table_a85c69677672bfc6a61b0499e868c7465}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_sums@{get\_sums}}
+\index{get\_sums@{get\_sums}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_sums()}{get\_sums()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+sums (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the return sums of all colums in vector. 
+
+Used in describe\+\_\+all()
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_af001504d15d500670e5d776148b04d6f}\label{classvar_1_1table_af001504d15d500670e5d776148b04d6f}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_var@{get\_var}}
+\index{get\_var@{get\_var}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_var()}{get\_var()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static D \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+var (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the variance of vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a196ea90112f0e84e30ea8fa6e7b1cb98}\label{classvar_1_1table_a196ea90112f0e84e30ea8fa6e7b1cb98}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_vars@{get\_vars}}
+\index{get\_vars@{get\_vars}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{get\_vars()}{get\_vars()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::get\+\_\+vars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the return variance of all colums in vector. 
+
+Used in describe\+\_\+all()
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_ad326577c23b9400e0296f71aebe8d2a0}\label{classvar_1_1table_ad326577c23b9400e0296f71aebe8d2a0}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{headname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns colum of certain header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em headname} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+TYPE$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a0b08c797c3314998239636e4840ff74e}\label{classvar_1_1table_a0b08c797c3314998239636e4840ff74e}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!prd@{prd}}
+\index{prd@{prd}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{prd()}{prd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static std\+::string \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::prd (\begin{DoxyParamCaption}\item[{D}]{x,  }\item[{int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+converts double to a string with white space 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em width} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_ae783c7e8063d4999c621f28a44dd215c}\label{classvar_1_1table_ae783c7e8063d4999c621f28a44dd215c}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!prd@{prd}}
+\index{prd@{prd}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{prd()}{prd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static std\+::string \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::prd (\begin{DoxyParamCaption}\item[{std\+::string}]{x,  }\item[{int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gives spacing to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em width} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_ac3f099c46a47c6428689efefad42dcf2}\label{classvar_1_1table_ac3f099c46a47c6428689efefad42dcf2}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!read\_csv@{read\_csv}}
+\index{read\_csv@{read\_csv}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{read\_csv()}{read\_csv()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+bool \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::read\+\_\+csv (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads from csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\+: if read is success 
+
+false\+: if read did not complete 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_aa287b9c7b64b4d5d8bd03e9a6a65a044}\label{classvar_1_1table_aa287b9c7b64b4d5d8bd03e9a6a65a044}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!save\_csv@{save\_csv}}
+\index{save\_csv@{save\_csv}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{save\_csv()}{save\_csv()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+bool \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::save\+\_\+csv (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads from csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\+: if read is success 
+
+false\+: if read did not complete 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_ad471ed11d98bd02b5935cc71ba911bae}\label{classvar_1_1table_ad471ed11d98bd02b5935cc71ba911bae}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!show@{show}}
+\index{show@{show}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+shows all of the table 
+
+\mbox{\Hypertarget{classvar_1_1table_a462865ba0a86a2e26cce1ab85b60cbbf}\label{classvar_1_1table_a462865ba0a86a2e26cce1ab85b60cbbf}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!show@{show}}
+\index{show@{show}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::show (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Shows a certain number of rows in table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classvar_1_1table_a5e7459882c4bd4bc29759f5fb3c1ee10}\label{classvar_1_1table_a5e7459882c4bd4bc29759f5fb3c1ee10}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!show\_header@{show\_header}}
+\index{show\_header@{show\_header}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{show\_header()}{show\_header()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::show\+\_\+header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Shows headers only. 
+
+\mbox{\Hypertarget{classvar_1_1table_abe9eef285b846e555b9e2b4d89d82103}\label{classvar_1_1table_abe9eef285b846e555b9e2b4d89d82103}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!sort\_asc@{sort\_asc}}
+\index{sort\_asc@{sort\_asc}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_asc()}{sort\_asc()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+static std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::sort\+\_\+asc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sorts data ascending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classvar_1_1table_a0170e1261a00394cf7017c86e6833b49}\label{classvar_1_1table_a0170e1261a00394cf7017c86e6833b49}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!col@{col}}
+\index{col@{col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::col\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Colum size. 
+
+\mbox{\Hypertarget{classvar_1_1table_af238cb3f30f4e545efdc4e0e0c371cde}\label{classvar_1_1table_af238cb3f30f4e545efdc4e0e0c371cde}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!headers@{headers}}
+\index{headers@{headers}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::headers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the headers. 
+
+\mbox{\Hypertarget{classvar_1_1table_a6dd43c21c40a2c82b80fce47e8f45751}\label{classvar_1_1table_a6dd43c21c40a2c82b80fce47e8f45751}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!row@{row}}
+\index{row@{row}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::row\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Row size. 
+
+\mbox{\Hypertarget{classvar_1_1table_a4333369e4f9d6443768ffe9e21dd04ed}\label{classvar_1_1table_a4333369e4f9d6443768ffe9e21dd04ed}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!rows@{rows}}
+\index{rows@{rows}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$std\+::string$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::rows\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the row names. 
+
+\mbox{\Hypertarget{classvar_1_1table_ae067e021bec7ba45f14e0a6c45c6116d}\label{classvar_1_1table_ae067e021bec7ba45f14e0a6c45c6116d}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!sz@{sz}}
+\index{sz@{sz}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{sz}{sz}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+int \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::sz = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Spacing size for print. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

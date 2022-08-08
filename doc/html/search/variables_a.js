@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yrange_248',['yrange',['../structplt_1_1details.html#a1cb63396c6a14b4def5f7db781736bbb',1,'plt::details']]]
+  ['u_367',['U',['../structvar_1_1matrix_1_1LU.html#abe5cc0dbcc051815d56b284e2fdc5de6',1,'var::matrix::LU']]],
+  ['uq_368',['UQ',['../structvar_1_1table_1_1QR.html#ad25db8533ccfc2174b816fc49abe2b9a',1,'var::table::QR']]]
 ];

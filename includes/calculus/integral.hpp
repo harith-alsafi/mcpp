@@ -1,6 +1,6 @@
-// TODO fourier series 
-// TODO integral 
+// TODO fourier series
+// TODO integral
 namespace calc
 {
-    
+
 }

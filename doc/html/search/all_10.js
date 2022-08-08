@@ -1,16 +1,7 @@
 var searchData=
 [
-  ['sec_120',['sec',['../namespacemth.html#ae8d04ba4428f76b1f226943048b3b0ad',1,'mth']]],
-  ['sech_121',['sech',['../namespacemth.html#a22adb31ad4ddfbf157cd5b465cb6ba08',1,'mth']]],
-  ['sequence_122',['sequence',['../namespacealg_1_1seq.html#ad6b3110a1b0f635050cce3d7468208ae',1,'alg::seq']]],
-  ['sin_123',['sin',['../namespacemth.html#aa4b7a284c625a761c9089ae874d7d3a2',1,'mth']]],
-  ['sinh_124',['sinh',['../namespacemth.html#a52e0a1d3a051be204bb2bbc62454bab0',1,'mth']]],
-  ['size_125',['size',['../classvar_1_1matrix.html#a1c630d2e37b665b3fabcb3d76a4f8b89',1,'var::matrix']]],
-  ['sort_5fcol_126',['sort_col',['../classvar_1_1matrix.html#aaaa052e8ec27a392848bd750b34f35bf',1,'var::matrix']]],
-  ['sort_5fcols_127',['sort_cols',['../classvar_1_1matrix.html#a06fa30fdba1e861449593cfd6e1398dc',1,'var::matrix']]],
-  ['sort_5frow_128',['sort_row',['../classvar_1_1matrix.html#acc872e3d984edf32f474e221c749e632',1,'var::matrix']]],
-  ['sort_5frows_129',['sort_rows',['../classvar_1_1matrix.html#a84d1beb5e7704a6e7799351bf0623657',1,'var::matrix']]],
-  ['square_130',['square',['../classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84',1,'var::matrix']]],
-  ['stat_131',['stat',['../namespacestat.html',1,'']]],
-  ['sum_132',['sum',['../classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb',1,'var::matrix::sum()'],['../namespacealg_1_1seq.html#ab12ed04843565e2513c1ff18c86f6d81',1,'alg::seq::sum()']]]
+  ['q1_133',['Q1',['../structvar_1_1table_1_1QR.html#a54329de34102862d4abfd55076b8327d',1,'var::table::QR']]],
+  ['q2_134',['Q2',['../structvar_1_1table_1_1QR.html#a9532f1a707f868af1d622a748f72ff2f',1,'var::table::QR']]],
+  ['q3_135',['Q3',['../structvar_1_1table_1_1QR.html#a3be119fa7845d59e6cbbf0b7d5540778',1,'var::table::QR']]],
+  ['qr_136',['QR',['../structvar_1_1table_1_1QR.html',1,'var::table']]]
 ];
