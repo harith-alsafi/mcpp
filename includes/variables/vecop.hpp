@@ -1,5 +1,5 @@
 /**
- * @file vector.hpp
+ * @file vecop.hpp
  * @author Harith Al-Safi (harith.alsafi@gmail.com)
  * @brief Extends upon std::vector
  * @version 1.0
@@ -64,11 +64,7 @@ std::vector<D> operator*(D s, std::vector<D> v)
 template <typename D>
 std::vector<D> operator*(std::vector<D> v, D s)
 {
-	std::vector<D> temp;
-	for(int i = 0; i < v.size(); i++) {
-		temp.push_back(v[i] * s);
-	}
-	return temp;
+	return s*v;
 }
 
 // ********************** add ****************************
@@ -123,11 +119,7 @@ std::vector<D> operator+(D s, std::vector<D> v)
 template <typename D>
 std::vector<D> operator+(std::vector<D> v, D s)
 {
-	std::vector<D> temp;
-	for(int i = 0; i < v.size(); i++) {
-		temp.push_back(v[i] + s);
-	}
-	return temp;
+	return s+v;
 }
 
 // ********************** subtract ****************************

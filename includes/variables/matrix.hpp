@@ -14,9 +14,14 @@
 #include <cmath>
 #include <limits>
 #include <numeric>
+#include <cassert>
 
 // TODO: change code and inherit from table.hpp
 
+/**
+ * @brief Namespace that contains all variable data types
+ * 
+ */
 namespace var
 {
 	/**
@@ -1158,7 +1163,7 @@ namespace var
 				a.P = a.P.inv();
 			};
 			if(!is_square()) {
-				matrix eyed = num::mat::eye<D>(n);
+				matrix eyed = lalg::eye<D>(n);
 				if(n == _row) {
 					temp.join_col(eyed(0, _row, 0, fabs(_row - _col)));
 					f(lu, temp);

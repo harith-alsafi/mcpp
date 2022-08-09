@@ -2,7 +2,7 @@
 #include "../../includes/mcpp.hpp"
 #include <fstream>
 
-using namespace num::vec;
+using namespace vect;
 using namespace mth;
 
 TEST(operations, vec_and_vec)

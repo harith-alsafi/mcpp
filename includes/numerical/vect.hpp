@@ -1,48 +1,27 @@
 /**
- * @file mthvec.hpp
+ * @file vect.hpp
  * @author Harith Al-Safi (harith.alsafi@gmail.com)
- * @brief General math functionality
+ * @brief Will contain functions that manipulate vectors
  * @version 1.0
- * @date 17/07/2022
+ * @date 08/08/2022
  *
  * @copyright Copyright (c) 2022
  *
  */
+
 #pragma once
+#include "../mathematic/mathematic.hpp"
 #include <cmath>
 #include <vector>
 
-namespace mth
+/**
+ * @brief Contains functions regarding vector operations
+ *
+ * Short for vector
+ *
+ */
+namespace vect
 {
-
-	template <typename D>
-	int decimals(D a)
-	{
-		std::string s;
-		std::string t;
-		std::stringstream out;
-		out << a;
-		s = out.str();
-		t = s.substr(s.find(".") + 1);
-		return t.length();
-	}
-
-	/**
-	 * @brief overriding default round
-	 *
-	 * @tparam D
-	 * @param a
-	 * @param dp
-	 * @return D
-	 */
-	template <typename D>
-	D round(D a, int dp = 0)
-	{
-		if(a < D(0)) {
-			return D((int) (a * pow(10, dp) - .5) / pow(10, dp));
-		}
-		return D((int) (a * pow(10, dp) + .5) / pow(10, dp));
-	}
 
 	/**
 	 * @brief rounding the vector
@@ -58,7 +37,7 @@ namespace mth
 		std::vector<D> b;
 		for(int i = 0; i < a.size(); i++) {
 
-			b.push_back(round(a[i], dp));
+			b.push_back(mth::round(a[i], dp));
 		}
 		return b;
 	}
@@ -75,6 +54,16 @@ namespace mth
 	{
 		D mmax = *std::max_element(a.begin(), a.end());
 		return mmax;
+	}
+
+	template <typename D>
+	D sum(std::vector<D> &a)
+	{
+		D sm;
+		for(auto &i : a) {
+			sm += i;
+		}
+		return sm;
 	}
 
 	template <typename D>
@@ -248,5 +237,91 @@ namespace mth
 	template <typename D>
 	std::vector<D> exp(std::vector<D> a)
 	{
+	}
+
+	// ********************************************************* //
+
+	/**
+	 * @brief Runs lambda function on vector array
+	 *
+	 * @tparam D
+	 * @tparam LAMBDA
+	 * @param f
+	 * @param x
+	 * @return std::vector<D>
+	 */
+	template <typename D, typename LAMBDA>
+	std::vector<D> vec_op(LAMBDA f, std::vector<D> &x)
+	{
+		std::vector<D> y;
+		for(int i = 0; i < x.size(); i++) {
+			y.push_back(f(x[i]));
+		}
+		return y;
+	}
+
+	/**
+	 * @brief difference of elements in vector
+	 *
+	 * @tparam D
+	 * @param a
+	 * @return std::vector<D>
+	 */
+	template <typename D>
+	std::vector<D> difference(std::vector<D> &a)
+	{
+		std::vector<D> temp;
+		for(int i = 0; i < a.size() - 1; i++) {
+			temp.push_back(a[i + 1] - a[i]);
+		}
+		return temp;
+	}
+
+	/**
+	 * @brief average of elements in vector
+	 *
+	 * @tparam D
+	 * @param a
+	 * @return std::vector<D>
+	 */
+	template <typename D>
+	std::vector<D> averages(std::vector<D> &a)
+	{
+		std::vector<D> temp;
+		for(int i = 0; i < a.size() - 1; i++) {
+			temp.push_back((a[i + 1] + a[i]) * D(0.5));
+		}
+		return temp;
+	}
+
+	template <typename D>
+	std::vector<D> arange(D start, D end, D diff)
+	{
+		std::vector<D> temp;
+		for(D i = start; i < end; i += diff) {
+			temp.push_back(i);
+		}
+		return temp;
+	}
+
+	template <typename D>
+	std::vector<D> linspace(D start, D end, int count)
+	{
+	}
+
+	template <typename D>
+	std::vector<D> dot(std::vector<D> a, std::vector<D> b)
+	{
+		if(a.size() != b.size()) {
+			throw std::invalid_argument("num::vec::dot -> Invalid size");
+		}
+	}
+
+	template <typename D>
+	std::vector<D> cross(std::vector<D> a, std::vector<D> b)
+	{
+		if(a.size() != b.size()) {
+			throw std::invalid_argument("num::vec::cross -> Invalid size");
+		}
 	}
 }

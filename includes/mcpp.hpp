@@ -1,18 +1,43 @@
 #pragma once
-#include "math/constants.hpp"
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <stdexcept>
+#include <sstream>
+#include <numeric>
+#include <limits>
+#include <cmath>
 
-#include "algebra/misc.hpp"
+// foward declarations 
+namespace var
+{
+	template <typename D>
+	class matrix;
+}
 
-#include "numerical/mat.hpp"
+namespace lalg
+{
+	template <typename D>
+	var::matrix<D> eye(int n);
 
-#include "variables/matrix.hpp"
+	template <typename D>
+	var::matrix<D> perms(D a, D b);
+}
+
+#include "variables/vecop.hpp"
 #include "variables/table.hpp"
+#include "numerical/vect.hpp"
+#include "variables/matrix.hpp"
 #include "variables/tree.hpp"
-#include "variables/vector.hpp"
+#include "variables/point.hpp"
 
-#include "numerical/vec.hpp"
-
+#include "mathematic/mathematic.hpp"
 #include "algebra/solvers.hpp"
-#include "math/mthvec.hpp"
 
+#include "statistics/stat.hpp"
+#include "numerical/linear.hpp"
+
+#include "communication/signals.hpp"
 #include "calculus/differential.hpp"
+#include "calculus/integral.hpp"

@@ -14,7 +14,9 @@
 #include <vector>
 
 /**
- * @brief Contains functions 
+ * @brief Contains differential calculus functions 
+ * 
+ * Short for CALCulus 
  * 
  */
 namespace calc
@@ -43,7 +45,7 @@ namespace calc
 		}
 		for(int k = 0; k <= n; k++) {
 			ans +=
-				pow((-1), k) * alg::msc::combination(n, k) * f(x + (n - D(2) * k) * dx);
+				pow((-1), k) * mth::combination(n, k) * f(x + (n - D(2) * k) * dx);
 		}
 		return D(ans / (pow((D(2) * dx), n)));
 	}
@@ -60,10 +62,10 @@ namespace calc
 	template <typename D>
 	std::vector<D> diff(std::vector<D> &x, std::vector<D> &y, int n = 1)
 	{
-		auto dx = num::vec::difference(x);
-		auto dy = num::vec::difference(y);
+		auto dx = vect::difference(x);
+		auto dy = vect::difference(y);
 		auto yp = dy / dx;
-		auto xp = num::vec::averages(x);
+		auto xp = vect::averages(x);
 		if(n == 1) {
 			return yp;
 		}
@@ -83,7 +85,7 @@ namespace calc
 	template <typename D, typename LAMBDA>
 	std::vector<D> diff(LAMBDA f, std::vector<D> &x, int n = 1)
 	{
-		auto y = num::vec::vec_op(f, x);
+		auto y = vect::vec_op(f, x);
 		return diff(x, y, n);
 	}
 

@@ -303,7 +303,7 @@ TEST(functionality, join_row_col)
 		{ 2, 3, 4 }
 	};
 
-	auto eyed = num::mat::eye<int>(m.col());
+	auto eyed = lalg::eye<int>(m.col());
 
 	m.join_row(eyed);
 

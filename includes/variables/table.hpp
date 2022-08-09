@@ -9,12 +9,23 @@
  *
  */
 #pragma once
-#include "../mcpp.hpp"
+#include <vector>
+#include <algorithm>
+#include <iostream>
 #include <fstream>
+#include <stdexcept>
+#include <sstream>
+#include <numeric>
+#include <limits>
+#include <cmath>
 
 // TODO: complete testing
 // TODO: fix documentation and code 
 
+/**
+ * @brief Namespace that contains all variable data types
+ * 
+ */
 namespace var
 {
 	/**

@@ -1,3 +1,14 @@
+/**
+ * @file linear.hpp
+ * @author Harith Al-Safi (harith.alsafi@gmail.com)
+ * @brief Linearl algebra 
+ * @version 1.0
+ * @date 08/08/2022
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #pragma once
 #include "../mcpp.hpp"
 
@@ -11,8 +22,10 @@
 /**
  * @brief Contains functions related to matrices 
  * 
+ * Short for Linear ALGebra
+ * 
  */
-namespace mat
+namespace lalg
 {
 	/**
 	 * @brief Produeces identity matrix of length ``n``
