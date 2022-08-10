@@ -2,8 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="dir_26658cbd91f1aecb4cf76855d0c330bb" kind="dir">
     <compoundname>includes/numerical</compoundname>
-    <innerfile refid="mat_8hpp">mat.hpp</innerfile>
-    <innerfile refid="vec_8hpp">vec.hpp</innerfile>
+    <innerfile refid="linear_8hpp">linear.hpp</innerfile>
+    <innerfile refid="vect_8hpp">vect.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

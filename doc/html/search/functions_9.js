@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['linear_5froot_281',['linear_root',['../namespacealg_1_1slv.html#a31c0b872fb3e525c421281e3ae03057e',1,'alg::slv']]],
-  ['linear_5fsim_282',['linear_sim',['../namespacealg_1_1slv.html#af169892dc116f67ba6a2168a61f371ef',1,'alg::slv']]],
-  ['linspace_283',['linspace',['../namespacenum_1_1vec.html#a26eac6f47101a0f84aac7d74b16748a6',1,'num::vec']]]
+  ['linear_5froot_274',['linear_root',['../namespacealg.html#ae12ce2550f24342bee89be8ad4952825',1,'alg']]],
+  ['linear_5fsim_275',['linear_sim',['../namespacealg.html#a5d4200bd9f3081bdd35bc2bb1255c6a2',1,'alg']]],
+  ['linspace_276',['linspace',['../namespacevect.html#a8906c773561edd0cb239ff19f923a55a',1,'vect']]]
 ];

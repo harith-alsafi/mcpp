@@ -6,7 +6,7 @@
     <innerfile refid="point_8hpp">point.hpp</innerfile>
     <innerfile refid="table_8hpp">table.hpp</innerfile>
     <innerfile refid="tree_8hpp">tree.hpp</innerfile>
-    <innerfile refid="vector_8hpp">vector.hpp</innerfile>
+    <innerfile refid="vecop_8hpp">vecop.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

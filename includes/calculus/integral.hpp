@@ -12,12 +12,7 @@
 // TODO fourier series
 // TODO integral
 
-/**
- * @brief Contains integral calculus 
- * 
- * Short for CALCulus 
- * 
- */
+
 namespace calc
 {
 

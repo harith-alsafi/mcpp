@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newton_5froot_292',['newton_root',['../namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb',1,'alg::slv']]]
+  ['newton_5froot_285',['newton_root',['../namespacealg.html#a56db7372d2b3bf617a532aeb86cff730',1,'alg']]]
 ];

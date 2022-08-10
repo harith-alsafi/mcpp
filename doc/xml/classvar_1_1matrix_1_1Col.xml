@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="38" column="8" bodyfile="includes/variables/matrix.hpp" bodystart="38" bodyend="-1"/>
+        <location file="includes/variables/matrix.hpp" line="43" column="8" bodyfile="includes/variables/matrix.hpp" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvar_1_1matrix_1_1Col_1a40fd1d1484474c5c1690337516f04ad3" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="39" column="5" bodyfile="includes/variables/matrix.hpp" bodystart="39" bodyend="-1"/>
+        <location file="includes/variables/matrix.hpp" line="44" column="5" bodyfile="includes/variables/matrix.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="48" column="1" bodyfile="includes/variables/matrix.hpp" bodystart="48" bodyend="50"/>
+        <location file="includes/variables/matrix.hpp" line="53" column="1" bodyfile="includes/variables/matrix.hpp" bodystart="53" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1matrix_1_1Col_1a8024a0dd194bb085689a7f271b9348e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D &amp;</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/matrix.hpp" line="58" column="3" bodyfile="includes/variables/matrix.hpp" bodystart="58" bodyend="58"/>
+        <location file="includes/variables/matrix.hpp" line="63" column="3" bodyfile="includes/variables/matrix.hpp" bodystart="63" bodyend="63"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -121,7 +121,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="includes/variables/matrix.hpp" line="35" column="1" bodyfile="includes/variables/matrix.hpp" bodystart="36" bodyend="59"/>
+    <location file="includes/variables/matrix.hpp" line="40" column="1" bodyfile="includes/variables/matrix.hpp" bodystart="41" bodyend="64"/>
     <listofallmembers>
       <member refid="classvar_1_1matrix_1_1Col_1aa446271aafd31184bde7342b95a308aa" prot="private" virt="non-virtual"><scope>var::matrix::Col</scope><name>_a</name></member>
       <member refid="classvar_1_1matrix_1_1Col_1a40fd1d1484474c5c1690337516f04ad3" prot="private" virt="non-virtual"><scope>var::matrix::Col</scope><name>_i</name></member>

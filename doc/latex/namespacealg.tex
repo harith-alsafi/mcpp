@@ -1,11 +1,166 @@
 \hypertarget{namespacealg}{}\doxysection{alg Namespace Reference}
 \label{namespacealg}\index{alg@{alg}}
-\doxysubsection*{Namespaces}
+
+
+Arithematic solvers.  
+
+
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-namespace \mbox{\hyperlink{namespacealg_1_1msc}{msc}}
-\item 
-namespace \mbox{\hyperlink{namespacealg_1_1seq}{seq}}
-\item 
-namespace \mbox{\hyperlink{namespacealg_1_1slv}{slv}}
+struct \mbox{\hyperlink{structalg_1_1ans}{ans}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_a8cc029a46116b5497d4b8a267f1c360b}{root}} (LAMBDA f, D tol=D(1000))
+\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_a56db7372d2b3bf617a532aeb86cff730}{newton\+\_\+root}} (LAMBDA f, D x0)
+\item 
+{\footnotesize template$<$typename D $>$ }\\\mbox{\hyperlink{structalg_1_1ans}{ans}}$<$ D $>$ \mbox{\hyperlink{namespacealg_aaf500bcd4f8e15fc0e75942651ccbfb6}{poly\+\_\+root}} (int n, std\+::vector$<$ D $>$ a)
+\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacealg_ae12ce2550f24342bee89be8ad4952825}{linear\+\_\+root}} (std\+::vector$<$ D $>$ eq)
+\begin{DoxyCompactList}\small\item\em Linear root through inputing Ax+C such that it is represented as vector \{A, C\}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D , typename LAMBDA $>$ }\\D \mbox{\hyperlink{namespacealg_a16815a0ef263b78796ecfba05aea0994}{bisection\+\_\+root}} (LAMBDA f, D min, D max, D tol=D(0.\+00001))
+\begin{DoxyCompactList}\small\item\em Used to get real roots through bisection method. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacealg_a5d4200bd9f3081bdd35bc2bb1255c6a2}{linear\+\_\+sim}} (\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$ eq)
+\begin{DoxyCompactList}\small\item\em Solves a system of linear equations expressed as a matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arithematic solvers. 
+
+Short for ALGebra 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacealg_a16815a0ef263b78796ecfba05aea0994}\label{namespacealg_a16815a0ef263b78796ecfba05aea0994}} 
+\index{alg@{alg}!bisection\_root@{bisection\_root}}
+\index{bisection\_root@{bisection\_root}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{bisection\_root()}{bisection\_root()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+D alg\+::bisection\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{min,  }\item[{D}]{max,  }\item[{D}]{tol = {\ttfamily D(0.00001)} }\end{DoxyParamCaption})}
+
+
+
+Used to get real roots through bisection method. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// roots between -\/5 and -\/1}}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{structalg_1_1ans}{ans}} = bisection\_root<double>(f, -\/5.0, -\/1.0);}
+
+\end{DoxyCode}
+
+
+!!! warning \char`\"{}\+Exception\char`\"{} 
+\begin{DoxyPre}
+    Will throw exceptions as follows\&\#58; ~\newline
+ 
+    1. ``stdruntime\_error`` \$\(\backslash\)rightarrow \(\backslash\)min\$ is not smaller than \$\(\backslash\)max\$ OR \$\(\backslash\)text\{sign\}(f(\(\backslash\)min)) == \(\backslash\)text\{sign\}(f(\(\backslash\)max))\$ ~\newline
+
+    2. ``stdoverflow\_error`` \$\(\backslash\)rightarrow\$ if no solution was found
+\end{DoxyPre}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+{\em LAMBDA} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & function \\
+\hline
+{\em min} & minimum value \\
+\hline
+{\em max} & maximum value \\
+\hline
+{\em tol} & tolerance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily D} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_ae12ce2550f24342bee89be8ad4952825}\label{namespacealg_ae12ce2550f24342bee89be8ad4952825}} 
+\index{alg@{alg}!linear\_root@{linear\_root}}
+\index{linear\_root@{linear\_root}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{linear\_root()}{linear\_root()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D alg\+::linear\+\_\+root (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{eq }\end{DoxyParamCaption})}
+
+
+
+Linear root through inputing Ax+C such that it is represented as vector \{A, C\}. 
+
+{\bfseries{Usage}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// answer of x+2 = 0;}}
+\DoxyCodeLine{\textcolor{keyword}{auto} \mbox{\hyperlink{structalg_1_1ans}{ans}} = linear(\{1, 2\});}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_a5d4200bd9f3081bdd35bc2bb1255c6a2}\label{namespacealg_a5d4200bd9f3081bdd35bc2bb1255c6a2}} 
+\index{alg@{alg}!linear\_sim@{linear\_sim}}
+\index{linear\_sim@{linear\_sim}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{linear\_sim()}{linear\_sim()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ alg\+::linear\+\_\+sim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$}]{eq }\end{DoxyParamCaption})}
+
+
+
+Solves a system of linear equations expressed as a matrix. 
+
+Representing the input
+
+\$\$ \textbackslash{}displaylines\{\textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} a\+\_\+1 \& b\+\_\+1 \& c\+\_\+1 \textbackslash{}\textbackslash{} a\+\_\+2 \& b\+\_\+2 \& c\+\_\+2 \textbackslash{}\textbackslash{} a\+\_\+3 \& b\+\_\+3 \& c\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+A \textbackslash{} \textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} x\+\_\+1 \textbackslash{}\textbackslash{} x\+\_\+2 \textbackslash{}\textbackslash{} x\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+x = \textbackslash{}underbrace\{\textbackslash{}left\mbox{[}\textbackslash{}begin\{array\} \textbackslash{} d\+\_\+1 \textbackslash{}\textbackslash{} d\+\_\+2 \textbackslash{}\textbackslash{} d\+\_\+3 \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\}\+\_\+b \textbackslash{}\textbackslash{} eq = \textbackslash{}left\mbox{[}\textbackslash{}begin\{array\}\{rrr\+:r\} a\+\_\+1 \& b\+\_\+1 \& c\+\_\+1 \& d\+\_\+1 \textbackslash{}\textbackslash{} a\+\_\+2 \& b\+\_\+2 \& c\+\_\+2 \& d\+\_\+2 \textbackslash{}\textbackslash{} a\+\_\+3 \& b\+\_\+3 \& c\+\_\+3 \& d\+\_\+3 \textbackslash{}\textbackslash{} \textbackslash{}end\{array\}\textbackslash{}right\mbox{]}\} \$\$
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & {\ttfamily matrix} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacealg_a56db7372d2b3bf617a532aeb86cff730}\label{namespacealg_a56db7372d2b3bf617a532aeb86cff730}} 
+\index{alg@{alg}!newton\_root@{newton\_root}}
+\index{newton\_root@{newton\_root}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{newton\_root()}{newton\_root()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ alg\+::newton\+\_\+root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{x0 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacealg_aaf500bcd4f8e15fc0e75942651ccbfb6}\label{namespacealg_aaf500bcd4f8e15fc0e75942651ccbfb6}} 
+\index{alg@{alg}!poly\_root@{poly\_root}}
+\index{poly\_root@{poly\_root}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{poly\_root()}{poly\_root()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{structalg_1_1ans}{ans}}$<$D$>$ alg\+::poly\+\_\+root (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacealg_a8cc029a46116b5497d4b8a267f1c360b}\label{namespacealg_a8cc029a46116b5497d4b8a267f1c360b}} 
+\index{alg@{alg}!root@{root}}
+\index{root@{root}!alg@{alg}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily template$<$typename D , typename LAMBDA $>$ \\
+std\+::vector$<$D$>$ alg\+::root (\begin{DoxyParamCaption}\item[{LAMBDA}]{f,  }\item[{D}]{tol = {\ttfamily D(1000)} }\end{DoxyParamCaption})}
+

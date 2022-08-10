@@ -15,7 +15,7 @@
 #include <vector>
 
 /**
- * @brief Contains functions regarding vector operations
+ * @brief Contains functions regarding vector operations and 1D array mathematics
  *
  * Short for vector
  *

@@ -2,13 +2,295 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacealg" kind="namespace" language="C++">
     <compoundname>alg</compoundname>
-    <innernamespace refid="namespacealg_1_1msc">alg::msc</innernamespace>
-    <innernamespace refid="namespacealg_1_1seq">alg::seq</innernamespace>
-    <innernamespace refid="namespacealg_1_1slv">alg::slv</innernamespace>
+    <innerclass refid="structalg_1_1ans" prot="public">alg::ans</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacealg_1a8cc029a46116b5497d4b8a267f1c360b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::root</definition>
+        <argsstring>(LAMBDA f, D tol=D(1000))</argsstring>
+        <name>root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>tol</declname>
+          <defval>D(1000)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="24" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1a56db7372d2b3bf617a532aeb86cff730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::newton_root</definition>
+        <argsstring>(LAMBDA f, D x0)</argsstring>
+        <name>newton_root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>x0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="29" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1aaf500bcd4f8e15fc0e75942651ccbfb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structalg_1_1ans" kindref="compound">ans</ref>&lt; D &gt;</type>
+        <definition>ans&lt;D&gt; alg::poly_root</definition>
+        <argsstring>(int n, std::vector&lt; D &gt; a)</argsstring>
+        <name>poly_root</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="41" column="5" bodyfile="includes/algebra/solvers.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1ae12ce2550f24342bee89be8ad4952825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D alg::linear_root</definition>
+        <argsstring>(std::vector&lt; D &gt; eq)</argsstring>
+        <name>linear_root</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+<para>Linear root through inputing Ax+C such that it is represented as vector {A, C}. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>answer<sp/>of<sp/>x+2<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structalg_1_1ans" kindref="compound">ans</ref><sp/>=<sp/>linear({1,<sp/>2});</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="59" column="3" bodyfile="includes/algebra/solvers.hpp" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1a16815a0ef263b78796ecfba05aea0994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+          <param>
+            <type>typename LAMBDA</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D alg::bisection_root</definition>
+        <argsstring>(LAMBDA f, D min, D max, D tol=D(0.00001))</argsstring>
+        <name>bisection_root</name>
+        <param>
+          <type>LAMBDA</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>tol</declname>
+          <defval>D(0.00001)</defval>
+        </param>
+        <briefdescription>
+<para>Used to get real roots through bisection method. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><bold>Usage</bold>: <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>roots<sp/>between<sp/>-5<sp/>and<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structalg_1_1ans" kindref="compound">ans</ref><sp/>=<sp/>bisection_root&lt;double&gt;(f,<sp/>-5.0,<sp/>-1.0);</highlight></codeline>
+</programlisting></para>
+<para>!!! warning &quot;Exception&quot; <preformatted>
+    Will throw exceptions as follows&amp;#58; <linebreak/>
+ 
+    1. ``stdruntime_error`` $\rightarrow \min$ is not smaller than $\max$ OR $\text{sign}(f(\min)) == \text{sign}(f(\max))$ <linebreak/>
+
+    2. ``stdoverflow_error`` $\rightarrow$ if no solution was found
+</preformatted></para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LAMBDA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tolerance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>D</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="93" column="3" bodyfile="includes/algebra/solvers.hpp" bodystart="93" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacealg_1a5d4200bd9f3081bdd35bc2bb1255c6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; alg::linear_sim</definition>
+        <argsstring>(var::matrix&lt; D &gt; eq)</argsstring>
+        <name>linear_sim</name>
+        <param>
+          <type><ref refid="classvar_1_1matrix" kindref="compound">var::matrix</ref>&lt; D &gt;</type>
+          <declname>eq</declname>
+        </param>
+        <briefdescription>
+<para>Solves a system of linear equations expressed as a matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Representing the input</para>
+<para>$$ \displaylines{\underbrace{\left[\begin{array} \ a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \\ \end{array}\right]}_A \ \underbrace{\left[\begin{array} \ x_1 \\ x_2 \\ x_3 \\ \end{array}\right]}_x = \underbrace{\left[\begin{array} \ d_1 \\ d_2 \\ d_3 \end{array}\right]}_b \\ eq = \left[\begin{array}{rrr:r} a_1 &amp; b_1 &amp; c_1 &amp; d_1 \\ a_2 &amp; b_2 &amp; c_2 &amp; d_2 \\ a_3 &amp; b_3 &amp; c_3 &amp; d_3 \\ \end{array}\right]} $$</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>matrix</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/algebra/solvers.hpp" line="165" column="13" bodyfile="includes/algebra/solvers.hpp" bodystart="165" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
+<para>Arithematic solvers. </para>
     </briefdescription>
     <detaileddescription>
+<para>Short for ALGebra </para>
     </detaileddescription>
-    <location file="includes/algebra/misc.hpp" line="2" column="1"/>
+    <location file="includes/algebra/solvers.hpp" line="20" column="1"/>
   </compounddef>
 </doxygen>

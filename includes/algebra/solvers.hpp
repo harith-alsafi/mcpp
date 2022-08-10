@@ -10,13 +10,9 @@
  */
 #pragma once
 #include "../mcpp.hpp"
-#include <algorithm>
-#include <complex>
-#include <stdexcept>
-#include <vector>
 
 /**
- * @brief Arithematic solvers
+ * @brief Arithematic functions and solvers 
  * 
  * Short for ALGebra 
  * 
@@ -71,12 +67,20 @@ namespace alg
 	/**
 	 * @brief Used to get real roots through bisection method
 	 *
+     * @details 
 	 * **Usage**:
 	 * ```cpp
 	 * // roots between -5 and -1
 	 * auto ans = bisection_root<double>(f, -5.0, -1.0);
 	 * ```
-	 *
+	 * 
+     * !!! warning "Exception"
+     * <pre>
+     *     Will throw exceptions as follows&#58; <br> 
+     *     1. ``std::runtime_error`` $\rightarrow \min$ is not smaller than $\max$  <br>
+     *     2. ``std::logic_error` $\rightarrow \text{sign}(f(\min)) == \text{sign}(f(\max))$ which means solution doesn't exist
+     * </pre>
+     * 
 	 * @tparam D
 	 * @tparam LAMBDA
 	 * @param f function
@@ -89,13 +93,17 @@ namespace alg
 	D bisection_root(LAMBDA f, D min, D max, D tol = D(0.00001))
 	{
 		auto check = [&](D a, D b) -> bool {
-			return (a < b && f(a) * f(b) < 0);
+			return (a < b && (f(a) * f(b)) < D(0));
 		};
 		auto mid = [&](D a, D b) -> D {
 			return ((a + b) / D(2));
 		};
-		if(!check(min, max)) {
-			throw std::runtime_error("alg::slv::bisection_root -> min and max don't have opposite signs");
+
+		if(min >= max) {
+			throw std::runtime_error("alg::bisection_root -> min is not smaller than max");
+		}
+		else if((f(min) * f(max)) >= D(0)){
+			throw std::logic_error("alg::bisection_root -> sign(f(min)) == sign(f(max)) which means solution doesn't exist");
 		}
 
 		D a             = min;
@@ -105,7 +113,7 @@ namespace alg
 		int max_counter = (int) 100 * (D(1) / tol);
 		int dp          = mth::decimals(tol) - 1;
 
-		while(mth::round(f(t), dp) != mth::round(tol, dp) && counter <= max_counter) {
+		while(mth::round(f(t), dp) != tol && counter <= max_counter) {
 			// case 1
 			if(check(t, b)) {
 				a = t;
@@ -116,10 +124,6 @@ namespace alg
 			}
 			t = mid(a, b);
 			counter++;
-		}
-
-		if(counter > max_counter) {
-			throw std::runtime_error("alg::slv::bisection_root -> No solution was found");
 		}
 
 		return t;

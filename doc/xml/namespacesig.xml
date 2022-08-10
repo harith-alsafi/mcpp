@@ -3,9 +3,11 @@
   <compounddef id="namespacesig" kind="namespace" language="C++">
     <compoundname>sig</compoundname>
     <briefdescription>
+<para>All communication theory and signal processing functions. </para>
     </briefdescription>
     <detaileddescription>
+<para>Short for SIGnals </para>
     </detaileddescription>
-    <location file="includes/misc/signals.hpp" line="1" column="1"/>
+    <location file="includes/communication/signals.hpp" line="19" column="1"/>
   </compounddef>
 </doxygen>

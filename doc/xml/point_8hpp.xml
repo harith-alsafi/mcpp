@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="point_8hpp" kind="file" language="C++">
     <compoundname>point.hpp</compoundname>
+    <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

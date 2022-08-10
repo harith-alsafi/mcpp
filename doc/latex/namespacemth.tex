@@ -1,210 +1,49 @@
 \hypertarget{namespacemth}{}\doxysection{mth Namespace Reference}
 \label{namespacemth}\index{mth@{mth}}
+
+
+Generic mathematical functions.  
+
+
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{namespacemth_a00d23b55123760aa8b9a81b9228df5cb}{factorial}} (int n)
+\begin{DoxyCompactList}\small\item\em Factorial. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacemth_a1d4d7ae61316264e1d077af404d9076d}{combination}} (int n, int k)
+\begin{DoxyCompactList}\small\item\em Combination (Cr) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename D $>$ }\\int \mbox{\hyperlink{namespacemth_a95418068265434e367e5c0f63d96bfd0}{decimals}} (D a)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets number of decimal places. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}{round}} (D a, int dp=0)
-\begin{DoxyCompactList}\small\item\em overriding default round \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a3070a00ad6cbb848500c0b9f162e105a}{round}} (std\+::vector$<$ D $>$ \&a, int dp=0)
-\begin{DoxyCompactList}\small\item\em rounding the vector \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacemth_a34b8e0b2635326959101e8cef212b4b1}{min}} (std\+::vector$<$ D $>$ \&a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacemth_a1185a5f14b24803757d4d9bfc118183d}{max}} (std\+::vector$<$ D $>$ \&a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aedf1dd3445e15e075e55b404184a80ec}{abs}} (std\+::vector$<$ D $>$ \&a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a5d5c72bc9a2bb1e89d180a96290d4df8}{pow}} (std\+::vector$<$ D $>$ a, D b)
-\begin{DoxyCompactList}\small\item\em vector$^\wedge$b \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a263f00ab3586e48812df8b1eb839e1fe}{pow}} (std\+::vector$<$ D $>$ a, std\+::vector$<$ D $>$ b)
-\begin{DoxyCompactList}\small\item\em vector$^\wedge$vector \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aa4b7a284c625a761c9089ae874d7d3a2}{sin}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a09d29500bb5a549d5771c23374ae2325}{cos}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a813c72781af94b0419f08f86431a6008}{tan}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_ae8d04ba4428f76b1f226943048b3b0ad}{sec}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a53d839f1be5f31f665addce6dc494a95}{csc}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aa47c8625c38baf38d7c40a646390d9ba}{cot}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a70b7276ef8d67e29bbcabded1df3055a}{asin}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_ac736564b160af8d04f4b936c60a0f0fa}{acos}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aaca92bdc13f5f96dcf865cf35da79d0c}{atan}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_ad4c26ccede93cb4c0719203c627d1ab8}{asec}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_ad4fe466c02ca4bcc3ae42c02706cd1b1}{acsc}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aab718ecb4db4f3e484a2b27b8a6bbe6f}{acot}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a52e0a1d3a051be204bb2bbc62454bab0}{sinh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a9b74e2484c4b73ee68db86765f6a4f21}{cosh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a9aa5409c5f1a46249f17c57a87ed718e}{tanh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a22adb31ad4ddfbf157cd5b465cb6ba08}{sech}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_af0a811325c733aa6750893f062802f07}{csch}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a11261d7a6f0ddc01888709b9ef9957f5}{coth}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a9cc816fa6926d5c1a6a51113d80e3555}{asinh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a8a27adc59c40f4c3f153a70cb74bd713}{acosh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_aca09a5442ff9f3ed28aca3fb7675ae83}{atanh}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_add365ba663874ecfe9a1ac8890cd4748}{asech}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a61de7392238aa79bec097d2b6ed3f872}{acsch}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_a4d660e56ec186abc1de2e7be09e53f33}{acoth}} (std\+::vector$<$ D $>$ a)
-\item 
-{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacemth_acf2153461c06ac4d7fa2003d3c07f3c5}{exp}} (std\+::vector$<$ D $>$ a)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em overriding default round \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Generic mathematical functions. 
+
+Short for Ma\+THematics 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacemth_aedf1dd3445e15e075e55b404184a80ec}\label{namespacemth_aedf1dd3445e15e075e55b404184a80ec}} 
-\index{mth@{mth}!abs@{abs}}
-\index{abs@{abs}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::abs (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespacemth_a1d4d7ae61316264e1d077af404d9076d}\label{namespacemth_a1d4d7ae61316264e1d077af404d9076d}} 
+\index{mth@{mth}!combination@{combination}}
+\index{combination@{combination}!mth@{mth}}
+\doxysubsubsection{\texorpdfstring{combination()}{combination()}}
+{\footnotesize\ttfamily int mth\+::combination (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemth_ac736564b160af8d04f4b936c60a0f0fa}\label{namespacemth_ac736564b160af8d04f4b936c60a0f0fa}} 
-\index{mth@{mth}!acos@{acos}}
-\index{acos@{acos}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acos()}{acos()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acos (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemth_a8a27adc59c40f4c3f153a70cb74bd713}\label{namespacemth_a8a27adc59c40f4c3f153a70cb74bd713}} 
-\index{mth@{mth}!acosh@{acosh}}
-\index{acosh@{acosh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acosh()}{acosh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acosh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemth_aab718ecb4db4f3e484a2b27b8a6bbe6f}\label{namespacemth_aab718ecb4db4f3e484a2b27b8a6bbe6f}} 
-\index{mth@{mth}!acot@{acot}}
-\index{acot@{acot}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acot()}{acot()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+Combination (Cr) 
 
-\mbox{\Hypertarget{namespacemth_a4d660e56ec186abc1de2e7be09e53f33}\label{namespacemth_a4d660e56ec186abc1de2e7be09e53f33}} 
-\index{mth@{mth}!acoth@{acoth}}
-\index{acoth@{acoth}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acoth()}{acoth()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acoth (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemth_ad4fe466c02ca4bcc3ae42c02706cd1b1}\label{namespacemth_ad4fe466c02ca4bcc3ae42c02706cd1b1}} 
-\index{mth@{mth}!acsc@{acsc}}
-\index{acsc@{acsc}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acsc()}{acsc()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acsc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a61de7392238aa79bec097d2b6ed3f872}\label{namespacemth_a61de7392238aa79bec097d2b6ed3f872}} 
-\index{mth@{mth}!acsch@{acsch}}
-\index{acsch@{acsch}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{acsch()}{acsch()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::acsch (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_ad4c26ccede93cb4c0719203c627d1ab8}\label{namespacemth_ad4c26ccede93cb4c0719203c627d1ab8}} 
-\index{mth@{mth}!asec@{asec}}
-\index{asec@{asec}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{asec()}{asec()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::asec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_add365ba663874ecfe9a1ac8890cd4748}\label{namespacemth_add365ba663874ecfe9a1ac8890cd4748}} 
-\index{mth@{mth}!asech@{asech}}
-\index{asech@{asech}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{asech()}{asech()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::asech (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a70b7276ef8d67e29bbcabded1df3055a}\label{namespacemth_a70b7276ef8d67e29bbcabded1df3055a}} 
-\index{mth@{mth}!asin@{asin}}
-\index{asin@{asin}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{asin()}{asin()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::asin (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a9cc816fa6926d5c1a6a51113d80e3555}\label{namespacemth_a9cc816fa6926d5c1a6a51113d80e3555}} 
-\index{mth@{mth}!asinh@{asinh}}
-\index{asinh@{asinh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{asinh()}{asinh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::asinh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_aaca92bdc13f5f96dcf865cf35da79d0c}\label{namespacemth_aaca92bdc13f5f96dcf865cf35da79d0c}} 
-\index{mth@{mth}!atan@{atan}}
-\index{atan@{atan}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{atan()}{atan()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::atan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_aca09a5442ff9f3ed28aca3fb7675ae83}\label{namespacemth_aca09a5442ff9f3ed28aca3fb7675ae83}} 
-\index{mth@{mth}!atanh@{atanh}}
-\index{atanh@{atanh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{atanh()}{atanh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::atanh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a09d29500bb5a549d5771c23374ae2325}\label{namespacemth_a09d29500bb5a549d5771c23374ae2325}} 
-\index{mth@{mth}!cos@{cos}}
-\index{cos@{cos}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{cos()}{cos()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::cos (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a9b74e2484c4b73ee68db86765f6a4f21}\label{namespacemth_a9b74e2484c4b73ee68db86765f6a4f21}} 
-\index{mth@{mth}!cosh@{cosh}}
-\index{cosh@{cosh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{cosh()}{cosh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::cosh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_aa47c8625c38baf38d7c40a646390d9ba}\label{namespacemth_aa47c8625c38baf38d7c40a646390d9ba}} 
-\index{mth@{mth}!cot@{cot}}
-\index{cot@{cot}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{cot()}{cot()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::cot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a11261d7a6f0ddc01888709b9ef9957f5}\label{namespacemth_a11261d7a6f0ddc01888709b9ef9957f5}} 
-\index{mth@{mth}!coth@{coth}}
-\index{coth@{coth}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{coth()}{coth()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::coth (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a53d839f1be5f31f665addce6dc494a95}\label{namespacemth_a53d839f1be5f31f665addce6dc494a95}} 
-\index{mth@{mth}!csc@{csc}}
-\index{csc@{csc}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{csc()}{csc()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::csc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_af0a811325c733aa6750893f062802f07}\label{namespacemth_af0a811325c733aa6750893f062802f07}} 
-\index{mth@{mth}!csch@{csch}}
-\index{csch@{csch}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{csch()}{csch()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::csch (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+{\em k} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacemth_a95418068265434e367e5c0f63d96bfd0}\label{namespacemth_a95418068265434e367e5c0f63d96bfd0}} 
 \index{mth@{mth}!decimals@{decimals}}
 \index{decimals@{decimals}!mth@{mth}}
@@ -212,37 +51,9 @@ std\+::vector$<$D$>$ mth\+::csch (\begin{DoxyParamCaption}\item[{std\+::vector$<
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 int mth\+::decimals (\begin{DoxyParamCaption}\item[{D}]{a }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{namespacemth_acf2153461c06ac4d7fa2003d3c07f3c5}\label{namespacemth_acf2153461c06ac4d7fa2003d3c07f3c5}} 
-\index{mth@{mth}!exp@{exp}}
-\index{exp@{exp}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{exp()}{exp()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::exp (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a1185a5f14b24803757d4d9bfc118183d}\label{namespacemth_a1185a5f14b24803757d4d9bfc118183d}} 
-\index{mth@{mth}!max@{max}}
-\index{max@{max}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{max()}{max()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-D mth\+::max (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a34b8e0b2635326959101e8cef212b4b1}\label{namespacemth_a34b8e0b2635326959101e8cef212b4b1}} 
-\index{mth@{mth}!min@{min}}
-\index{min@{min}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{min()}{min()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-D mth\+::min (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a5d5c72bc9a2bb1e89d180a96290d4df8}\label{namespacemth_a5d5c72bc9a2bb1e89d180a96290d4df8}} 
-\index{mth@{mth}!pow@{pow}}
-\index{pow@{pow}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{pow()}{pow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::pow (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a,  }\item[{D}]{b }\end{DoxyParamCaption})}
 
 
-
-vector$^\wedge$b 
+Gets number of decimal places. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
@@ -253,42 +64,32 @@ vector$^\wedge$b
 \begin{DoxyParams}{Parameters}
 {\em a} & \\
 \hline
-{\em b} & \\
-\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$\+D$>$ 
+int 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemth_a263f00ab3586e48812df8b1eb839e1fe}\label{namespacemth_a263f00ab3586e48812df8b1eb839e1fe}} 
-\index{mth@{mth}!pow@{pow}}
-\index{pow@{pow}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{pow()}{pow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::pow (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a,  }\item[{std\+::vector$<$ D $>$}]{b }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespacemth_a00d23b55123760aa8b9a81b9228df5cb}\label{namespacemth_a00d23b55123760aa8b9a81b9228df5cb}} 
+\index{mth@{mth}!factorial@{factorial}}
+\index{factorial@{factorial}!mth@{mth}}
+\doxysubsubsection{\texorpdfstring{factorial()}{factorial()}}
+{\footnotesize\ttfamily int mth\+::factorial (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
 
-vector$^\wedge$vector 
+Factorial. 
 
-
-\begin{DoxyTemplParams}{Template Parameters}
-{\em D} & \\
-\hline
-\end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em a} & \\
-\hline
-{\em b} & \\
+{\em n} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$\+D$>$ 
+int 
 \end{DoxyReturn}
 \mbox{\Hypertarget{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}\label{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}} 
 \index{mth@{mth}!round@{round}}
 \index{round@{round}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{round()}{round()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{round()}{round()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 D mth\+::round (\begin{DoxyParamCaption}\item[{D}]{a,  }\item[{int}]{dp = {\ttfamily 0} }\end{DoxyParamCaption})}
 
@@ -311,71 +112,3 @@ overriding default round
 \begin{DoxyReturn}{Returns}
 D 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacemth_a3070a00ad6cbb848500c0b9f162e105a}\label{namespacemth_a3070a00ad6cbb848500c0b9f162e105a}} 
-\index{mth@{mth}!round@{round}}
-\index{round@{round}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{round()}{round()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::round (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a,  }\item[{int}]{dp = {\ttfamily 0} }\end{DoxyParamCaption})}
-
-
-
-rounding the vector 
-
-
-\begin{DoxyTemplParams}{Template Parameters}
-{\em D} & \\
-\hline
-\end{DoxyTemplParams}
-
-\begin{DoxyParams}{Parameters}
-{\em a} & \\
-\hline
-{\em dp} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-std\+::vector$<$\+D$>$ 
-\end{DoxyReturn}
-\mbox{\Hypertarget{namespacemth_ae8d04ba4428f76b1f226943048b3b0ad}\label{namespacemth_ae8d04ba4428f76b1f226943048b3b0ad}} 
-\index{mth@{mth}!sec@{sec}}
-\index{sec@{sec}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{sec()}{sec()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::sec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a22adb31ad4ddfbf157cd5b465cb6ba08}\label{namespacemth_a22adb31ad4ddfbf157cd5b465cb6ba08}} 
-\index{mth@{mth}!sech@{sech}}
-\index{sech@{sech}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{sech()}{sech()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::sech (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_aa4b7a284c625a761c9089ae874d7d3a2}\label{namespacemth_aa4b7a284c625a761c9089ae874d7d3a2}} 
-\index{mth@{mth}!sin@{sin}}
-\index{sin@{sin}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{sin()}{sin()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::sin (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a52e0a1d3a051be204bb2bbc62454bab0}\label{namespacemth_a52e0a1d3a051be204bb2bbc62454bab0}} 
-\index{mth@{mth}!sinh@{sinh}}
-\index{sinh@{sinh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{sinh()}{sinh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::sinh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a813c72781af94b0419f08f86431a6008}\label{namespacemth_a813c72781af94b0419f08f86431a6008}} 
-\index{mth@{mth}!tan@{tan}}
-\index{tan@{tan}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{tan()}{tan()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::tan (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{namespacemth_a9aa5409c5f1a46249f17c57a87ed718e}\label{namespacemth_a9aa5409c5f1a46249f17c57a87ed718e}} 
-\index{mth@{mth}!tanh@{tanh}}
-\index{tanh@{tanh}!mth@{mth}}
-\doxysubsubsection{\texorpdfstring{tanh()}{tanh()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-std\+::vector$<$D$>$ mth\+::tanh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
-

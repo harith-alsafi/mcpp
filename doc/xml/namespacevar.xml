@@ -2,13 +2,15 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacevar" kind="namespace" language="C++">
     <compoundname>var</compoundname>
-    <innerclass refid="classvar_1_1matrix" prot="public">var::matrix</innerclass>
     <innerclass refid="classvar_1_1table" prot="public">var::table</innerclass>
+    <innerclass refid="classvar_1_1matrix" prot="public">var::matrix</innerclass>
+    <innerclass refid="classvar_1_1point" prot="public">var::point</innerclass>
     <innerclass refid="classvar_1_1tree" prot="public">var::tree</innerclass>
     <briefdescription>
+<para>Namespace that contains all variable data types. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="includes/numerical/mat.hpp" line="4" column="1"/>
+    <location file="includes/mcpp.hpp" line="14" column="1"/>
   </compounddef>
 </doxygen>

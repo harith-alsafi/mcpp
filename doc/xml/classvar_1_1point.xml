@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classvar_1_1point" kind="class" language="C++" prot="public">
+    <compoundname>var::point</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename D</type>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>var::point&lt; D &gt;</label>
+        <link refid="classvar_1_1point"/>
+      </node>
+    </collaborationgraph>
+    <location file="includes/mcpp.hpp" line="21" column="1" bodyfile="includes/mcpp.hpp" bodystart="21" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

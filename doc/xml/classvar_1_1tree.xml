@@ -18,7 +18,7 @@
         <link refid="classvar_1_1tree"/>
       </node>
     </collaborationgraph>
-    <location file="includes/variables/tree.hpp" line="5" column="5" bodyfile="includes/variables/tree.hpp" bodystart="5" bodyend="7"/>
+    <location file="includes/variables/tree.hpp" line="11" column="1" bodyfile="includes/variables/tree.hpp" bodystart="12" bodyend="13"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

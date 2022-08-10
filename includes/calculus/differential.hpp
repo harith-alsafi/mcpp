@@ -14,7 +14,7 @@
 #include <vector>
 
 /**
- * @brief Contains differential calculus functions 
+ * @brief Contains differential and integral calculus functions 
  * 
  * Short for CALCulus 
  * 

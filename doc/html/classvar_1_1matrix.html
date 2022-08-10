@@ -457,7 +457,7 @@ template&lt;typename D &gt; </div>
 
 <p>Construct a new matrix object. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(2, 3); <span class="comment">// 2 rows, 3 colums</span></div>
-<div class="ttc" id="aclassvar_1_1matrix_html"><div class="ttname"><a href="classvar_1_1matrix.html">var::matrix</a></div><div class="ttdoc">Class for 2d matrix of objects.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:29</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html"><div class="ttname"><a href="classvar_1_1matrix.html">var::matrix</a></div><div class="ttdoc">Class for 2d matrix of objects.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:34</div></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>number of rows </td></tr>
@@ -1241,7 +1241,7 @@ template&lt;typename D &gt; </div>
 <p>Returns the row at an index. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(3, 3);</div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">col</a> = m.get_col(1);</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a18f1458c2532b0aabbb3370d9556e745"><div class="ttname"><a href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">var::matrix::col</a></div><div class="ttdeci">int col()</div><div class="ttdoc">Returns the number of columns.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:287</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a18f1458c2532b0aabbb3370d9556e745"><div class="ttname"><a href="classvar_1_1matrix.html#a18f1458c2532b0aabbb3370d9556e745">var::matrix::col</a></div><div class="ttdeci">int col()</div><div class="ttdoc">Returns the number of columns.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:292</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>row index </td></tr>
@@ -1470,7 +1470,7 @@ template&lt;typename D &gt; </div>
 
 <p>Checks if matrix is square. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keywordtype">bool</span> <a class="code" href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">square</a> = m.is_square();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a54224ff2eefe0c6cd3fbeaff7a309f84"><div class="ttname"><a href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">var::matrix::square</a></div><div class="ttdeci">void square()</div><div class="ttdoc">throws exception if matrix is not a square</div><div class="ttdef"><b>Definition:</b> matrix.hpp:180</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a54224ff2eefe0c6cd3fbeaff7a309f84"><div class="ttname"><a href="classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84">var::matrix::square</a></div><div class="ttdeci">void square()</div><div class="ttdoc">throws exception if matrix is not a square</div><div class="ttdef"><b>Definition:</b> matrix.hpp:185</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
@@ -1947,9 +1947,11 @@ template&lt;typename D &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>matrix</dd></dl>
 <p>!!! warning "Exception" </p><pre>
-    All ``()`` operators will throw an <code>std::invalid_argument</code> if&amp;#58;
-        1. Index must be correct
-        2. ``i2&gt;=i1`` and ``j2&gt;=j1``
+    All ``()`` operators will throw an <code>std::invalid_argument</code> unless&amp;#58; <br  />
+ 
+    1. Index is correct and valid <br  />
+
+    2. $i_2 \geq i_1$ and $j_2 \geq j_1$
 </pre> 
 </div>
 </div>
@@ -3326,7 +3328,7 @@ template&lt;typename D &gt; </div>
 
 <p>Sum of all elements. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">sum</a> = m.sum();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:874</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:879</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
 
 </div>
@@ -3359,7 +3361,7 @@ template&lt;typename D &gt; </div>
 <p>Transpose of a matrix. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(3, 3);</div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a> = m.<a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a>();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:922</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:927</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
 
 </div>
@@ -3730,7 +3732,7 @@ template&lt;typename D &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>includes/numerical/mat.hpp</li>
+<li>includes/mcpp.hpp</li>
 <li>includes/variables/matrix.hpp</li>
 </ul>
 </div><!-- contents -->

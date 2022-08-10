@@ -1743,9 +1743,9 @@ namespace var
 		 *
 		 * !!! warning "Exception"
 		 * <pre>
-		 *     All ``()`` operators will throw an <code>std::invalid_argument</code> if&#58;
-		 *         1. Index must be correct
-		 *         2. ``i2>=i1`` and ``j2>=j1``
+		 *     All ``()`` operators will throw an <code>std::invalid_argument</code> unless&#58; <br> 
+		 *     1. Index is correct and valid <br>
+		 *     2. $i_2 \geq i_1$ and $j_2 \geq j_1$
 		 * </pre>
 		 *
 		 */

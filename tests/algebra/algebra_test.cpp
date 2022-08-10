@@ -1,17 +1,21 @@
 #include "../../includes/mcpp.hpp"
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
-#include <cmath>
 
 TEST(solvers, bisection)
 {
 	auto f = [](double x) -> double {
 		return pow(x, 2) * 2.0 + 3.0 * x;
 	};
-	auto ans = alg::bisection_root<double>(f, -5.0, -1.0);
 	ASSERT_EQ(mth::decimals(2.000), 1);
 	ASSERT_EQ(mth::decimals(2.121), 3);
 	ASSERT_EQ(mth::decimals(0.001), 3);
-	ASSERT_TRUE(ans == -1.5);
+	
+	ASSERT_DOUBLE_EQ(mth::round(2.005, 2), 2.01);
+	ASSERT_DOUBLE_EQ(mth::round(0.000005, 5), 0.00001);
+
+	auto ans = alg::bisection_root<double>(f, -2.0, -0.5);
+
+	ASSERT_DOUBLE_EQ(ans, -1.5);
 
 	auto ans2 = alg::bisection_root<double>(f, -0.5, 1);
 

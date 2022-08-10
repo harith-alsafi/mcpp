@@ -1035,9 +1035,11 @@ matrix
 \end{DoxyReturn}
 !!! warning \char`\"{}\+Exception\char`\"{} 
 \begin{DoxyPre}
-    All ``()`` operators will throw an {\ttfamily std::invalid\_argument} if\&\#58;
-        1. Index must be correct
-        2. ``i2>=i1`` and ``j2>=j1``
+    All ``()`` operators will throw an {\ttfamily std::invalid\_argument} unless\&\#58; ~\newline
+ 
+    1. Index is correct and valid ~\newline
+
+    2. \$i\_2 \(\backslash\)geq i\_1\$ and \$j\_2 \(\backslash\)geq j\_1\$
 \end{DoxyPre}
  \mbox{\Hypertarget{classvar_1_1matrix_a0bc2c98b847630001af993b0fdd6b2b8}\label{classvar_1_1matrix_a0bc2c98b847630001af993b0fdd6b2b8}} 
 \index{var::matrix$<$ D $>$@{var::matrix$<$ D $>$}!operator$\ast$@{operator$\ast$}}
@@ -2034,5 +2036,5 @@ int \mbox{\hyperlink{classvar_1_1matrix}{var\+::matrix}}$<$ D $>$\+::\+\_\+row\h
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-includes/numerical/mat.\+hpp\item 
+includes/mcpp.\+hpp\item 
 includes/variables/matrix.\+hpp\end{DoxyCompactItemize}

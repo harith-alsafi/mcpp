@@ -84,8 +84,7 @@
 <parametername>dx</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Step size <linebreak/>
- </para>
+<para>Step size </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -95,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/calculus/differential.hpp" line="32" column="7" bodyfile="includes/calculus/differential.hpp" bodystart="32" bodyend="46"/>
+        <location file="includes/calculus/differential.hpp" line="39" column="3" bodyfile="includes/calculus/differential.hpp" bodystart="39" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="namespacecalc_1a62f25765745ef5e93bab651eeec6a27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -164,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/calculus/differential.hpp" line="58" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="58" bodyend="67"/>
+        <location file="includes/calculus/differential.hpp" line="63" column="13" bodyfile="includes/calculus/differential.hpp" bodystart="63" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="namespacecalc_1ac76968f519762530915c08a852f0d65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -244,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/calculus/differential.hpp" line="80" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="80" bodyend="83"/>
+        <location file="includes/calculus/differential.hpp" line="86" column="13" bodyfile="includes/calculus/differential.hpp" bodystart="86" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="namespacecalc_1a54f053a3ff29590353d43b13b21b50fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -278,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/calculus/differential.hpp" line="87" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="87" bodyend="89"/>
+        <location file="includes/calculus/differential.hpp" line="93" column="13" bodyfile="includes/calculus/differential.hpp" bodystart="93" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="namespacecalc_1a689d6bfc729bb5513235adb9e1fb55aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -311,13 +310,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/calculus/differential.hpp" line="92" column="17" bodyfile="includes/calculus/differential.hpp" bodystart="92" bodyend="94"/>
+        <location file="includes/calculus/differential.hpp" line="98" column="13" bodyfile="includes/calculus/differential.hpp" bodystart="98" bodyend="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Contains differential and integral calculus functions. </para>
     </briefdescription>
     <detaileddescription>
+<para>Contains integral calculus.</para>
+<para>Short for CALCulus </para>
     </detaileddescription>
-    <location file="includes/calculus/differential.hpp" line="15" column="1"/>
+    <location file="includes/calculus/differential.hpp" line="22" column="1"/>
   </compounddef>
 </doxygen>

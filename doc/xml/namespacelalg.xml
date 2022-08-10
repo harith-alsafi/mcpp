@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacelalg" kind="namespace" language="C++">
+    <compoundname>lalg</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacelalg_1ab1d9936c5108acefd4a034ce2f4315a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classvar_1_1matrix" kindref="compound">var::matrix</ref>&lt; D &gt;</type>
+        <definition>var::matrix&lt; D &gt; lalg::eye</definition>
+        <argsstring>(int n)</argsstring>
+        <name>eye</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Produeces identity matrix of length <computeroutput>n</computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>var::matrix&lt;D&gt;</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/linear.hpp" line="38" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="38" bodyend="52" declfile="includes/mcpp.hpp" declline="29" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacelalg_1a0a2b8b4dbc1e01f3c7a0bf0b9400ca3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classvar_1_1matrix" kindref="compound">var::matrix</ref>&lt; D &gt;</type>
+        <definition>var::matrix&lt; D &gt; lalg::perms</definition>
+        <argsstring>(D a, D b)</argsstring>
+        <name>perms</name>
+        <param>
+          <type>D</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>D</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/linear.hpp" line="55" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="55" bodyend="57" declfile="includes/mcpp.hpp" declline="31" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains functions related to matrices. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Short for Linear ALGebra </para>
+    </detaileddescription>
+    <location file="includes/mcpp.hpp" line="26" column="1"/>
+  </compounddef>
+</doxygen>

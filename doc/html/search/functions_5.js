@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factorial_251',['factorial',['../namespacealg_1_1msc.html#ae67380432511490095ee4573a6cc852c',1,'alg::msc']]]
+  ['factorial_244',['factorial',['../namespacemth.html#a00d23b55123760aa8b9a81b9228df5cb',1,'mth']]]
 ];

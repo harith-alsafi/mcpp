@@ -2,8 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="dir_25d299ead5ad88191ac2f2d25bef095e" kind="dir">
     <compoundname>includes/algebra</compoundname>
-    <innerfile refid="misc_8hpp">misc.hpp</innerfile>
-    <innerfile refid="sequence_8hpp">sequence.hpp</innerfile>
     <innerfile refid="solvers_8hpp">solvers.hpp</innerfile>
     <briefdescription>
     </briefdescription>

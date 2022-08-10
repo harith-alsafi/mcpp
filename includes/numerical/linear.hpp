@@ -20,7 +20,7 @@
 // }
 
 /**
- * @brief Contains functions related to matrices 
+ * @brief Contains functions related to matrices and linear algebra 
  * 
  * Short for Linear ALGebra
  * 

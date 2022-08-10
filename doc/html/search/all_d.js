@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['mat_109',['mat',['../namespacenum_1_1mat.html',1,'num']]],
-  ['newton_5froot_110',['newton_root',['../namespacealg_1_1slv.html#a393118084c854994c0ed91c128156eeb',1,'alg::slv']]],
-  ['num_111',['num',['../namespacenum.html',1,'']]],
-  ['vec_112',['vec',['../namespacenum_1_1vec.html',1,'num']]]
+  ['newton_5froot_106',['newton_root',['../namespacealg.html#a56db7372d2b3bf617a532aeb86cff730',1,'alg']]]
 ];
