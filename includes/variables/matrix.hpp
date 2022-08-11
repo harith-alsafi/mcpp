@@ -1127,7 +1127,7 @@ namespace var
 					int max_index = j;
 					D max_value   = D(0);
 					for(int i = j; i < n; i++) {
-						D value = D(abs(b.data[perm[i]][j]));
+						D value = D(std::abs(D(b.data[perm[i]][j])));
 						if(value > max_value) {
 							max_index = i;
 							max_value = value;
