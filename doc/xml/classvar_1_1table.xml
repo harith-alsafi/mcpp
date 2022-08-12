@@ -10,22 +10,22 @@
         <type>typename D</type>
       </param>
     </templateparamlist>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="private" static="no" mutable="no">
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
         <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::headers</definition>
         <argsstring></argsstring>
         <name>headers</name>
         <briefdescription>
-<para>Stores the headers. </para>
+<para>Stores the column names. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="52" column="13" bodyfile="includes/variables/table.hpp" bodystart="52" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="49" column="13" bodyfile="includes/variables/table.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
         <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::rows</definition>
         <argsstring></argsstring>
@@ -37,9 +37,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="53" column="13" bodyfile="includes/variables/table.hpp" bodystart="53" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="50" column="13" bodyfile="includes/variables/table.hpp" bodystart="50" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="protected" static="no" mutable="no">
         <type>int</type>
         <definition>int var::table&lt; D &gt;::row</definition>
         <argsstring></argsstring>
@@ -51,9 +51,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="54" column="5" bodyfile="includes/variables/table.hpp" bodystart="54" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="51" column="5" bodyfile="includes/variables/table.hpp" bodystart="51" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="protected" static="no" mutable="no">
         <type>int</type>
         <definition>int var::table&lt; D &gt;::col</definition>
         <argsstring></argsstring>
@@ -65,9 +65,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="55" column="5" bodyfile="includes/variables/table.hpp" bodystart="55" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="52" column="5" bodyfile="includes/variables/table.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="protected" static="no" mutable="no">
         <type>int</type>
         <definition>int var::table&lt; D &gt;::sz</definition>
         <argsstring></argsstring>
@@ -80,41 +80,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="56" column="5" bodyfile="includes/variables/table.hpp" bodystart="56" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="53" column="5" bodyfile="includes/variables/table.hpp" bodystart="53" bodyend="-1"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-func">
-      <memberdef kind="function" id="classvar_1_1table_1aba9cc3ab7bf7f78926589af319c763a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int var::table&lt; D &gt;::check_header</definition>
-        <argsstring>(std::string head)</argsstring>
+        <argsstring>(std::string headname)</argsstring>
         <name>check_header</name>
         <param>
           <type>std::string</type>
-          <declname>head</declname>
+          <declname>headname</declname>
         </param>
         <briefdescription>
-<para>Checks the header and returns index. </para>
+<para>Returns column index of given header/column name. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>head</parametername>
+<parametername>headname</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>string of column name </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>int </para>
+<simplesect kind="return"><para><computeroutput>int</computeroutput>: $[-1]$: index not found <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput>: $[\geq 0]$: index found </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="64" column="5" bodyfile="includes/variables/table.hpp" bodystart="64" bodyend="72"/>
+        <location file="includes/variables/table.hpp" line="63" column="5" bodyfile="includes/variables/table.hpp" bodystart="63" bodyend="71"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_col_</definition>
         <argsstring>(std::string headname)</argsstring>
@@ -124,7 +127,7 @@
           <declname>headname</declname>
         </param>
         <briefdescription>
-<para>Get the col vector based on header name. </para>
+<para>Get the column vector based on header name. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -136,7 +139,8 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput>: Empty if nothing exits <linebreak/>
+ </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -144,17 +148,17 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="80" column="13" bodyfile="includes/variables/table.hpp" bodystart="80" bodyend="90"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_avgs</definition>
         <argsstring>()</argsstring>
         <name>get_avgs</name>
         <briefdescription>
-<para>Get the return average of all colums in vector. </para>
+<para>Extract average of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Used in describe_all()</para>
-<para><simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -162,17 +166,17 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="99" column="13" bodyfile="includes/variables/table.hpp" bodystart="99" bodyend="106"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_stds</definition>
         <argsstring>()</argsstring>
         <name>get_stds</name>
         <briefdescription>
-<para>Get the return std of all colums in vector. </para>
+<para>Extract STD of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Used in describe_all()</para>
-<para><simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -180,17 +184,17 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="115" column="13" bodyfile="includes/variables/table.hpp" bodystart="115" bodyend="122"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_vars</definition>
         <argsstring>()</argsstring>
         <name>get_vars</name>
         <briefdescription>
-<para>Get the return variance of all colums in vector. </para>
+<para>Extract variance of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Used in describe_all()</para>
-<para><simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -198,17 +202,17 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="131" column="13" bodyfile="includes/variables/table.hpp" bodystart="131" bodyend="138"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="structvar_1_1table_1_1QR" kindref="compound">QR</ref> &gt;</type>
         <definition>std::vector&lt;QR&gt; var::table&lt; D &gt;::get_qrs</definition>
         <argsstring>()</argsstring>
         <name>get_qrs</name>
         <briefdescription>
-<para>Get the return quartile range of all colums in vector. </para>
+<para>Extract QR of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Used in describe_all()</para>
-<para><simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;QR&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -216,17 +220,17 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="147" column="13" bodyfile="includes/variables/table.hpp" bodystart="147" bodyend="154"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
         <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_sums</definition>
         <argsstring>()</argsstring>
         <name>get_sums</name>
         <briefdescription>
-<para>Get the return sums of all colums in vector. </para>
+<para>Extract sum of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para>Used in describe_all()</para>
-<para><simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -234,7 +238,7 @@
         </inbodydescription>
         <location file="includes/variables/table.hpp" line="163" column="13" bodyfile="includes/variables/table.hpp" bodystart="163" bodyend="170"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void var::table&lt; D &gt;::generate_rows</definition>
         <argsstring>()</argsstring>
@@ -246,23 +250,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="230" column="6" bodyfile="includes/variables/table.hpp" bodystart="230" bodyend="236"/>
+        <location file="includes/variables/table.hpp" line="235" column="6" bodyfile="includes/variables/table.hpp" bodystart="235" bodyend="241"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void var::table&lt; D &gt;::check_size</definition>
         <argsstring>()</argsstring>
         <name>check_size</name>
         <briefdescription>
-<para>Checks size of current class. </para>
+<para>Sets the <ref refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" kindref="member">row</ref> and <ref refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" kindref="member">col</ref> according to the current class size. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="242" column="6" bodyfile="includes/variables/table.hpp" bodystart="242" bodyend="251"/>
+        <location file="includes/variables/table.hpp" line="247" column="6" bodyfile="includes/variables/table.hpp" bodystart="247" bodyend="256"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
         <definition>std::string var::table&lt; D &gt;::generate_line</definition>
         <argsstring>(int l)</argsstring>
@@ -280,21 +284,22 @@
 <parametername>l</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>number of &quot;―&quot; in the generated string <linebreak/>
+ </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::string </para>
+<simplesect kind="return"><para><computeroutput>std::string</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="259" column="13" bodyfile="includes/variables/table.hpp" bodystart="259" bodyend="266"/>
+        <location file="includes/variables/table.hpp" line="264" column="13" bodyfile="includes/variables/table.hpp" bodystart="264" bodyend="271"/>
       </memberdef>
       </sectiondef>
-      <sectiondef kind="private-static-func">
-      <memberdef kind="function" id="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
         <definition>static std::string var::table&lt; D &gt;::center</definition>
         <argsstring>(const std::string s, const int w)</argsstring>
@@ -316,7 +321,7 @@
 <parametername>s</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>string given </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -324,19 +329,19 @@
 <parametername>w</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>width to center the string to </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::string </para>
+<simplesect kind="return"><para><computeroutput>std::string</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="179" column="20" bodyfile="includes/variables/table.hpp" bodystart="179" bodyend="189"/>
+        <location file="includes/variables/table.hpp" line="179" column="20" bodyfile="includes/variables/table.hpp" bodystart="179" bodyend="192"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
         <definition>static std::string var::table&lt; D &gt;::prd</definition>
         <argsstring>(D x, int width)</argsstring>
@@ -350,7 +355,7 @@
           <declname>width</declname>
         </param>
         <briefdescription>
-<para>converts double to a string with white space </para>
+<para>Fills the string with given width with empty space. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -358,7 +363,7 @@
 <parametername>x</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>string given </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -366,19 +371,19 @@
 <parametername>width</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>width to center the string to </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::string </para>
+<simplesect kind="return"><para><computeroutput>std::string</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="198" column="20" bodyfile="includes/variables/table.hpp" bodystart="198" bodyend="207"/>
+        <location file="includes/variables/table.hpp" line="201" column="20" bodyfile="includes/variables/table.hpp" bodystart="201" bodyend="210"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
         <definition>static std::string var::table&lt; D &gt;::prd</definition>
         <argsstring>(std::string x, int width)</argsstring>
@@ -395,12 +400,14 @@
 <para>Gives spacing to a string. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para><simplesect kind="see"><para>Similar to <ref refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" kindref="member">var::table::prd(D, int)</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>x</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>string given </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -408,17 +415,17 @@
 <parametername>width</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>width to center the string to </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::string </para>
+<simplesect kind="return"><para><computeroutput>std::string</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="216" column="20" bodyfile="includes/variables/table.hpp" bodystart="216" bodyend="224"/>
+        <location file="includes/variables/table.hpp" line="221" column="20" bodyfile="includes/variables/table.hpp" bodystart="221" bodyend="229"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -434,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="274" column="1" bodyfile="includes/variables/table.hpp" bodystart="274" bodyend="274"/>
+        <location file="includes/variables/table.hpp" line="278" column="1" bodyfile="includes/variables/table.hpp" bodystart="278" bodyend="278"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a135d46678f8916df8bcd9d4d9472fd3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -448,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="280" column="1" bodyfile="includes/variables/table.hpp" bodystart="280" bodyend="280"/>
+        <location file="includes/variables/table.hpp" line="284" column="1" bodyfile="includes/variables/table.hpp" bodystart="284" bodyend="284"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -468,19 +475,19 @@
 <parametername>file</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>file name </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>true: if read is success </para>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> : if read is success </para>
 </simplesect>
-<simplesect kind="return"><para>false: if read did not complete </para>
+<simplesect kind="return"><para><computeroutput>false</computeroutput>: if read did not complete </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="289" column="6" bodyfile="includes/variables/table.hpp" bodystart="289" bodyend="326"/>
+        <location file="includes/variables/table.hpp" line="293" column="6" bodyfile="includes/variables/table.hpp" bodystart="293" bodyend="330"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -512,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="335" column="6" bodyfile="includes/variables/table.hpp" bodystart="335" bodyend="363"/>
+        <location file="includes/variables/table.hpp" line="339" column="6" bodyfile="includes/variables/table.hpp" bodystart="339" bodyend="367"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ac129bb6a1940378e7511762ba5152857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -529,7 +536,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="370" column="5" bodyfile="includes/variables/table.hpp" bodystart="370" bodyend="373"/>
+        <location file="includes/variables/table.hpp" line="374" column="5" bodyfile="includes/variables/table.hpp" bodystart="374" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a0e5e2a6af3e5a10886c26c130ca51a0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -546,7 +553,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="380" column="5" bodyfile="includes/variables/table.hpp" bodystart="380" bodyend="388"/>
+        <location file="includes/variables/table.hpp" line="384" column="5" bodyfile="includes/variables/table.hpp" bodystart="384" bodyend="392"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ad326577c23b9400e0296f71aebe8d2a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
@@ -576,7 +583,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="396" column="13" bodyfile="includes/variables/table.hpp" bodystart="396" bodyend="399"/>
+        <location file="includes/variables/table.hpp" line="400" column="13" bodyfile="includes/variables/table.hpp" bodystart="400" bodyend="403"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -604,7 +611,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="532" column="6" bodyfile="includes/variables/table.hpp" bodystart="532" bodyend="590"/>
+        <location file="includes/variables/table.hpp" line="536" column="6" bodyfile="includes/variables/table.hpp" bodystart="536" bodyend="594"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -618,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="596" column="6" bodyfile="includes/variables/table.hpp" bodystart="596" bodyend="600"/>
+        <location file="includes/variables/table.hpp" line="600" column="6" bodyfile="includes/variables/table.hpp" bodystart="600" bodyend="604"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
@@ -635,7 +642,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="607" column="7" bodyfile="includes/variables/table.hpp" bodystart="607" bodyend="652"/>
+        <location file="includes/variables/table.hpp" line="611" column="7" bodyfile="includes/variables/table.hpp" bodystart="611" bodyend="656"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a13829ed8fe8ad15fe807a0d8cb2dae2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
@@ -665,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="660" column="7" bodyfile="includes/variables/table.hpp" bodystart="660" bodyend="670"/>
+        <location file="includes/variables/table.hpp" line="664" column="7" bodyfile="includes/variables/table.hpp" bodystart="664" bodyend="674"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1af24d2bf9285d7bfaf5d2263576419645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
@@ -695,7 +702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="678" column="7" bodyfile="includes/variables/table.hpp" bodystart="678" bodyend="690"/>
+        <location file="includes/variables/table.hpp" line="682" column="7" bodyfile="includes/variables/table.hpp" bodystart="682" bodyend="694"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ab2ebc42048d7552e1661916c0756482d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -739,7 +746,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="700" column="6" bodyfile="includes/variables/table.hpp" bodystart="700" bodyend="716"/>
+        <location file="includes/variables/table.hpp" line="704" column="6" bodyfile="includes/variables/table.hpp" bodystart="704" bodyend="720"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -753,7 +760,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="722" column="6" bodyfile="includes/variables/table.hpp" bodystart="722" bodyend="725"/>
+        <location file="includes/variables/table.hpp" line="726" column="6" bodyfile="includes/variables/table.hpp" bodystart="726" bodyend="729"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -785,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="407" column="20" bodyfile="includes/variables/table.hpp" bodystart="407" bodyend="412"/>
+        <location file="includes/variables/table.hpp" line="411" column="20" bodyfile="includes/variables/table.hpp" bodystart="411" bodyend="416"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a3e3a7c5f503790050d32b6696a2c811a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -815,7 +822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="420" column="10" bodyfile="includes/variables/table.hpp" bodystart="420" bodyend="423"/>
+        <location file="includes/variables/table.hpp" line="424" column="10" bodyfile="includes/variables/table.hpp" bodystart="424" bodyend="427"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a1abd7092b76e6122e17f891be3e46896" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -845,7 +852,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="431" column="10" bodyfile="includes/variables/table.hpp" bodystart="431" bodyend="434"/>
+        <location file="includes/variables/table.hpp" line="435" column="10" bodyfile="includes/variables/table.hpp" bodystart="435" bodyend="438"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1abb470d4a1f88cbfb2225084a888e28f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -875,7 +882,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="442" column="10" bodyfile="includes/variables/table.hpp" bodystart="442" bodyend="445"/>
+        <location file="includes/variables/table.hpp" line="446" column="10" bodyfile="includes/variables/table.hpp" bodystart="446" bodyend="449"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a42c4b9b7209cc3b518fdc69142b23c76" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -905,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="453" column="10" bodyfile="includes/variables/table.hpp" bodystart="453" bodyend="456"/>
+        <location file="includes/variables/table.hpp" line="457" column="10" bodyfile="includes/variables/table.hpp" bodystart="457" bodyend="460"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1af001504d15d500670e5d776148b04d6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -935,7 +942,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="464" column="10" bodyfile="includes/variables/table.hpp" bodystart="464" bodyend="473"/>
+        <location file="includes/variables/table.hpp" line="468" column="10" bodyfile="includes/variables/table.hpp" bodystart="468" bodyend="477"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a3ece8de9eb74c17b73b322790ca0bf62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -965,7 +972,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="481" column="10" bodyfile="includes/variables/table.hpp" bodystart="481" bodyend="484"/>
+        <location file="includes/variables/table.hpp" line="485" column="10" bodyfile="includes/variables/table.hpp" bodystart="485" bodyend="488"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1af21b86535b597309c629804add469081" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structvar_1_1table_1_1QR" kindref="compound">QR</ref></type>
@@ -995,7 +1002,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="492" column="11" bodyfile="includes/variables/table.hpp" bodystart="492" bodyend="502"/>
+        <location file="includes/variables/table.hpp" line="496" column="11" bodyfile="includes/variables/table.hpp" bodystart="496" bodyend="506"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a8184e4d4c340aad83524b78e6676dc8c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>D</type>
@@ -1037,11 +1044,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="511" column="10" bodyfile="includes/variables/table.hpp" bodystart="511" bodyend="525"/>
+        <location file="includes/variables/table.hpp" line="515" column="10" bodyfile="includes/variables/table.hpp" bodystart="515" bodyend="529"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>table class to contain the dataframe </para>
+<para>2D array class inheriting from <computeroutput>std::vector&lt;std::vector&lt;D&gt;&gt;</computeroutput> </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -1073,48 +1080,48 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="includes/variables/table.hpp" line="35" column="1" bodyfile="includes/variables/table.hpp" bodystart="36" bodyend="726"/>
+    <location file="includes/variables/table.hpp" line="32" column="1" bodyfile="includes/variables/table.hpp" bodystart="33" bodyend="730"/>
     <listofallmembers>
       <member refid="classvar_1_1table_1ab2ebc42048d7552e1661916c0756482d" prot="public" virt="non-virtual"><scope>var::table</scope><name>add_col</name></member>
-      <member refid="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" prot="private" virt="non-virtual"><scope>var::table</scope><name>center</name></member>
-      <member refid="classvar_1_1table_1aba9cc3ab7bf7f78926589af319c763a7" prot="private" virt="non-virtual"><scope>var::table</scope><name>check_header</name></member>
-      <member refid="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="private" virt="non-virtual"><scope>var::table</scope><name>check_size</name></member>
-      <member refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="private" virt="non-virtual"><scope>var::table</scope><name>col</name></member>
+      <member refid="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" prot="protected" virt="non-virtual"><scope>var::table</scope><name>center</name></member>
+      <member refid="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" prot="protected" virt="non-virtual"><scope>var::table</scope><name>check_header</name></member>
+      <member refid="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="protected" virt="non-virtual"><scope>var::table</scope><name>check_size</name></member>
+      <member refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="protected" virt="non-virtual"><scope>var::table</scope><name>col</name></member>
       <member refid="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" prot="public" virt="non-virtual"><scope>var::table</scope><name>describe_all</name></member>
       <member refid="classstd_1_1vector_1a2396209900e8f592db1f0b2467f7d899" prot="public" virt="non-virtual"><scope>var::table</scope><name>elements</name></member>
-      <member refid="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="private" virt="non-virtual"><scope>var::table</scope><name>generate_line</name></member>
-      <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="private" virt="non-virtual"><scope>var::table</scope><name>generate_rows</name></member>
+      <member refid="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="protected" virt="non-virtual"><scope>var::table</scope><name>generate_line</name></member>
+      <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="protected" virt="non-virtual"><scope>var::table</scope><name>generate_rows</name></member>
       <member refid="classvar_1_1table_1a42c4b9b7209cc3b518fdc69142b23c76" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_avg</name></member>
-      <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_avgs</name></member>
+      <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_avgs</name></member>
       <member refid="classvar_1_1table_1af24d2bf9285d7bfaf5d2263576419645" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col</name></member>
-      <member refid="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_col_</name></member>
+      <member refid="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_col_</name></member>
       <member refid="classvar_1_1table_1a0e5e2a6af3e5a10886c26c130ca51a0d" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col_size</name></member>
       <member refid="classvar_1_1table_1a1abd7092b76e6122e17f891be3e46896" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_max</name></member>
       <member refid="classvar_1_1table_1a3e3a7c5f503790050d32b6696a2c811a" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_min</name></member>
       <member refid="classvar_1_1table_1af21b86535b597309c629804add469081" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_qr</name></member>
-      <member refid="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_qrs</name></member>
+      <member refid="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_qrs</name></member>
       <member refid="classvar_1_1table_1a8184e4d4c340aad83524b78e6676dc8c" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_r</name></member>
       <member refid="classvar_1_1table_1a13829ed8fe8ad15fe807a0d8cb2dae2b" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row</name></member>
       <member refid="classvar_1_1table_1ac129bb6a1940378e7511762ba5152857" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row_size</name></member>
       <member refid="classvar_1_1table_1a3ece8de9eb74c17b73b322790ca0bf62" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_std</name></member>
-      <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_stds</name></member>
+      <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_stds</name></member>
       <member refid="classvar_1_1table_1abb470d4a1f88cbfb2225084a888e28f3" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_sum</name></member>
-      <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_sums</name></member>
+      <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_sums</name></member>
       <member refid="classvar_1_1table_1af001504d15d500670e5d776148b04d6f" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_var</name></member>
-      <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="private" virt="non-virtual"><scope>var::table</scope><name>get_vars</name></member>
-      <member refid="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="private" virt="non-virtual"><scope>var::table</scope><name>headers</name></member>
+      <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_vars</name></member>
+      <member refid="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="protected" virt="non-virtual"><scope>var::table</scope><name>headers</name></member>
       <member refid="classvar_1_1table_1ad326577c23b9400e0296f71aebe8d2a0" prot="public" virt="non-virtual"><scope>var::table</scope><name>operator[]</name></member>
-      <member refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="private" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
-      <member refid="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="private" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
+      <member refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="protected" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
+      <member refid="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="protected" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
       <member refid="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" prot="public" virt="non-virtual"><scope>var::table</scope><name>read_csv</name></member>
-      <member refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="private" virt="non-virtual"><scope>var::table</scope><name>row</name></member>
-      <member refid="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="private" virt="non-virtual"><scope>var::table</scope><name>rows</name></member>
+      <member refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="protected" virt="non-virtual"><scope>var::table</scope><name>row</name></member>
+      <member refid="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="protected" virt="non-virtual"><scope>var::table</scope><name>rows</name></member>
       <member refid="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" prot="public" virt="non-virtual"><scope>var::table</scope><name>save_csv</name></member>
       <member refid="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" prot="public" virt="non-virtual"><scope>var::table</scope><name>show</name></member>
       <member refid="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" prot="public" virt="non-virtual"><scope>var::table</scope><name>show</name></member>
       <member refid="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" prot="public" virt="non-virtual"><scope>var::table</scope><name>show_header</name></member>
       <member refid="classvar_1_1table_1abe9eef285b846e555b9e2b4d89d82103" prot="public" virt="non-virtual"><scope>var::table</scope><name>sort_asc</name></member>
-      <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="private" virt="non-virtual"><scope>var::table</scope><name>sz</name></member>
+      <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="protected" virt="non-virtual"><scope>var::table</scope><name>sz</name></member>
       <member refid="classvar_1_1table_1ada6ebdf0a90915bedfa07fc57b31a504" prot="public" virt="non-virtual"><scope>var::table</scope><name>table</name></member>
       <member refid="classvar_1_1table_1a135d46678f8916df8bcd9d4d9472fd3a" prot="public" virt="non-virtual"><scope>var::table</scope><name>~table</name></member>
     </listofallmembers>

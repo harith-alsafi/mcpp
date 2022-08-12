@@ -69,7 +69,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Arithematic solvers.  
+<p>Arithematic functions and solvers.  
 <a href="namespacealg.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -102,7 +102,7 @@ Functions</h2></td></tr>
 <tr class="separator:a5d4200bd9f3081bdd35bc2bb1255c6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Arithematic solvers. </p>
+<div class="textblock"><p class="">Arithematic functions and solvers. </p>
 <p class="">Short for ALGebra </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a16815a0ef263b78796ecfba05aea0994"></a>
@@ -152,9 +152,9 @@ template&lt;typename D , typename LAMBDA &gt; </div>
 </div><!-- fragment --><p class="">!!! warning "Exception" </p><pre>
     Will throw exceptions as follows&amp;#58; <br  />
  
-    1. ``stdruntime_error`` $\rightarrow \min$ is not smaller than $\max$ OR $\text{sign}(f(\min)) == \text{sign}(f(\max))$ <br  />
+    1. ``stdruntime_error`` $\rightarrow \min$ is not smaller than $\max$  <br  />
 
-    2. ``stdoverflow_error`` $\rightarrow$ if no solution was found
+    2. ``stdlogic_error` $\rightarrow \text{sign}(f(\min)) == \text{sign}(f(\max))$ which means solution doesn't exist
 </pre><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">D</td><td></td></tr>

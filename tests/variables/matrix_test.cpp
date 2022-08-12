@@ -1,7 +1,9 @@
 #include "../../includes/mcpp.hpp"
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include <fstream>
+
 using var::matrix;
+
 template <typename T>
 using table = std::vector<std::vector<T>>;
 

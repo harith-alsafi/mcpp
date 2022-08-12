@@ -75,7 +75,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Contains functions related to matrices. </para>
+<para>Contains functions related to matrices and linear algebra. </para>
     </briefdescription>
     <detaileddescription>
 <para>Short for Linear ALGebra </para>

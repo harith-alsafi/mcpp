@@ -2,7 +2,7 @@
 \label{namespacealg}\index{alg@{alg}}
 
 
-Arithematic solvers.  
+Arithematic functions and solvers.  
 
 
 \doxysubsection*{Classes}
@@ -28,7 +28,7 @@ struct \mbox{\hyperlink{structalg_1_1ans}{ans}}
 
 
 \doxysubsection{Detailed Description}
-Arithematic solvers. 
+Arithematic functions and solvers. 
 
 Short for ALGebra 
 
@@ -56,9 +56,9 @@ Used to get real roots through bisection method.
 \begin{DoxyPre}
     Will throw exceptions as follows\&\#58; ~\newline
  
-    1. ``stdruntime\_error`` \$\(\backslash\)rightarrow \(\backslash\)min\$ is not smaller than \$\(\backslash\)max\$ OR \$\(\backslash\)text\{sign\}(f(\(\backslash\)min)) == \(\backslash\)text\{sign\}(f(\(\backslash\)max))\$ ~\newline
+    1. ``stdruntime\_error`` \$\(\backslash\)rightarrow \(\backslash\)min\$ is not smaller than \$\(\backslash\)max\$  ~\newline
 
-    2. ``stdoverflow\_error`` \$\(\backslash\)rightarrow\$ if no solution was found
+    2. ``stdlogic\_error` \$\(\backslash\)rightarrow \(\backslash\)text\{sign\}(f(\(\backslash\)min)) == \(\backslash\)text\{sign\}(f(\(\backslash\)max))\$ which means solution doesn't exist
 \end{DoxyPre}
 
 

@@ -3,7 +3,7 @@ var searchData=
   ['calc_25',['calc',['../namespacecalc.html',1,'']]],
   ['center_26',['center',['../classvar_1_1table.html#a215cdf3b672a7231d895f4e6c4214b64',1,'var::table']]],
   ['check_5fcol_27',['check_col',['../classvar_1_1matrix.html#a81c4b4795406aa26c149f678603815a9',1,'var::matrix']]],
-  ['check_5fheader_28',['check_header',['../classvar_1_1table.html#aba9cc3ab7bf7f78926589af319c763a7',1,'var::table']]],
+  ['check_5fheader_28',['check_header',['../classvar_1_1table.html#af5c68e6a9c7857107e5ba88fcff52119',1,'var::table']]],
   ['check_5frow_29',['check_row',['../classvar_1_1matrix.html#abe65d7997f230b2ac6564850717be182',1,'var::matrix']]],
   ['check_5fsize_30',['check_size',['../classvar_1_1matrix.html#a98defd0b837085eae86da59649934392',1,'var::matrix::check_size()'],['../classvar_1_1table.html#a55df2f9f50827b058c9b8c3bd4d38d17',1,'var::table::check_size()']]],
   ['cofactor_31',['cofactor',['../classvar_1_1matrix.html#ac97536b4f94f1dd614fb6267c07dd2b7',1,'var::matrix']]],

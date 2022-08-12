@@ -317,7 +317,6 @@
 <para>Contains differential and integral calculus functions. </para>
     </briefdescription>
     <detaileddescription>
-<para>Contains integral calculus.</para>
 <para>Short for CALCulus </para>
     </detaileddescription>
     <location file="includes/calculus/differential.hpp" line="22" column="1"/>

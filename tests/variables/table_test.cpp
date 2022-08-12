@@ -1,6 +1,8 @@
 #include "../../lib/googletest/googletest/include/gtest/gtest.h"
 #include "../../includes/variables/table.hpp"
+
 using namespace var;
+
 TEST(var, table_read_csv)
 {
 	table<long double> t;

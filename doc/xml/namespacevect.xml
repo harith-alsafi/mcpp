@@ -1079,7 +1079,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Contains functions regarding vector operations. </para>
+<para>Contains functions regarding vector operations and 1D array mathematics. </para>
     </briefdescription>
     <detaileddescription>
 <para>Short for vector </para>

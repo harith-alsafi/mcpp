@@ -22,14 +22,11 @@
 // TODO: complete testing
 // TODO: fix documentation and code 
 
-/**
- * @brief Namespace that contains all variable data types
- * 
- */
+
 namespace var
 {
 	/**
-	 * @brief table class to contain the dataframe
+	 * @brief 2D array class inheriting from `std::vector<std::vector<D>>`
 	 */
 	template <typename D>
 	class table: public std::vector<std::vector<D>>
@@ -48,23 +45,25 @@ namespace var
 			D UQ; ///< Upper quartile
 		};
 
-	  private:
-		std::vector<std::string> headers; ///< Stores the headers
+	  protected:
+		std::vector<std::string> headers; ///< Stores the column names
 		std::vector<std::string> rows;    ///< Stores the row names
 		int row;                          ///< Row size
 		int col;                          ///< Colum size
 		int sz = 10;                      ///< Spacing size for print
 
 		/**
-		 * @brief Checks the header and returns index
+		 * @brief Returns column index of given header/column name 
 		 *
-		 * @param head
-		 * @return int
+		 * @param headname: string of column name 
+		 * @return `int`: $[-1]$: index not found <br>
+		 * @return `int`: $[\geq 0]$: index found
+		 * 
 		 */
-		int check_header(std::string head)
+		int check_header(std::string headname)
 		{
-			for(int i = 0; i < headers.size(); i++) {
-				if(headers[i] == head) {
+			for(int i = 0; i < (int) headers.size(); i++) {
+				if(headers[i] == headname) {
 					return i;
 				}
 			}
@@ -72,17 +71,18 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the col vector based on header name
+		 * @brief Get the column vector based on header name
 		 *
 		 * @param headname
-		 * @return std::vector<D>
+		 * @return `std::vector<D>`: Empty if nothing exits <br>
+		 * 
 		 */
 		std::vector<D> get_col_(std::string headname)
 		{
 			int j = check_header(headname);
 			std::vector<D> a;
 			if(j >= 0) {
-				for(int i = 0; i < this->size(); i++) {
+				for(int i = 0; i < (int) this->size(); i++) {
 					a.push_back(this->at(i).at(j));
 				}
 			}
@@ -90,27 +90,27 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the return average of all colums in vector
+		 * @brief Extract average of each column into a vector 
 		 *
-		 * Used in describe_all()
+		 * Used in `describe_all()`
 		 *
-		 * @return std::vector<D>
+		 * @return `std::vector<D>`
 		 */
 		std::vector<D> get_avgs()
 		{
 			std::vector<D> a;
-			for(int j = 0; j < headers.size(); j++) {
+			for(int j = 0; j < (int) headers.size(); j++) {
 				a.push_back(get_avg(get_col_(headers[j])));
 			}
 			return a;
 		}
 
 		/**
-		 * @brief Get the return std of all colums in vector
+		 * @brief Extract STD of each column into a vector
 		 *
-		 * Used in describe_all()
+		 * Used in `describe_all()`
 		 *
-		 * @return std::vector<D>
+		 * @return `std::vector<D>`
 		 */
 		std::vector<D> get_stds()
 		{
@@ -122,11 +122,11 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the return variance of all colums in vector
+		 * @brief Extract variance of each column into a vector
 		 *
-		 * Used in describe_all()
+		 * Used in `describe_all()`
 		 *
-		 * @return std::vector<D>
+		 * @return `std::vector<D>`
 		 */
 		std::vector<D> get_vars()
 		{
@@ -138,11 +138,11 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the return quartile range of all colums in vector
+		 * @brief Extract QR of each column into a vector
 		 *
-		 * Used in describe_all()
+		 * Used in `describe_all()`
 		 *
-		 * @return std::vector<D>
+		 * @return `std::vector<QR>`
 		 */
 		std::vector<QR> get_qrs()
 		{
@@ -154,11 +154,11 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the return sums of all colums in vector
+		 * @brief Extract sum of each column into a vector
 		 *
-		 * Used in describe_all()
+		 * Used in `describe_all()`
 		 *
-		 * @return std::vector<D>
+		 * @return `std::vector<D>`
 		 */
 		std::vector<D> get_sums()
 		{
@@ -172,28 +172,31 @@ namespace var
 		/**
 		 * @brief Re-centers a string based on given width
 		 *
-		 * @param s
-		 * @param w
-		 * @return std::string
+		 * @param s string given 
+		 * @param w width to center the string to
+		 * @return `std::string`
 		 */
 		static std::string center(const std::string s, const int w)
 		{
 			std::stringstream ss, spaces;
 			int padding = w - s.size(); // count excess room to pad
-			for(int i = 0; i < padding / 2; ++i)
+			for(int i = 0; i < padding / 2; ++i){
 				spaces << " ";
+			}
 			ss << spaces.str() << s << spaces.str(); // format with padding
-			if(padding > 0 && padding % 2 != 0)      // if odd #, add 1 space
+			// if odd #, add 1 space
+			if(padding > 0 && padding % 2 != 0){
 				ss << " ";
+			}      
 			return ss.str();
 		}
 
 		/**
-		 * @brief converts double to a string with white space
+		 * @brief Fills the string with given width with empty space
 		 *
-		 * @param x
-		 * @param width
-		 * @return std::string
+		 * @param x string given
+		 * @param width width to center the string to
+		 * @return `std::string`
 		 */
 		static std::string prd(D x, int width)
 		{
@@ -209,9 +212,11 @@ namespace var
 		/**
 		 * @brief Gives spacing to a string
 		 *
-		 * @param x
-		 * @param width
-		 * @return std::string
+		 * @see Similar to @ref var::table::prd(D, int)
+		 * 
+		 * @param x string given
+		 * @param width width to center the string to
+		 * @return `std::string`
 		 */
 		static std::string prd(std::string x, int width)
 		{
@@ -236,7 +241,7 @@ namespace var
 		}
 
 		/**
-		 * @brief Checks size of current class
+		 * @brief Sets the \ref row and \ref col according to the current class size 
 		 *
 		 */
 		void check_size()
@@ -253,8 +258,8 @@ namespace var
 		/**
 		 * @brief Generates line to seperate rows
 		 *
-		 * @param l
-		 * @return std::string
+		 * @param l: number of "―" in the generated string  
+		 * @return `std::string`
 		 */
 		std::string generate_line(int l)
 		{
@@ -264,7 +269,6 @@ namespace var
 			}
 			return line;
 		}
-
 
 	  public:
 		/**
@@ -279,105 +283,21 @@ namespace var
 		 */
 		~table() {}
 
-		/**
-		 * @brief Reads from csv file
-		 *
-		 * @param file
-		 * @return true: if read is success
-		 * @return false: if read did not complete
-		 */
-		bool read_csv(std::string filename)
-		{
-			std::ifstream file(filename);
-			if(file.is_open()) {
-				this->clear();
-				headers.clear();
-
-				// col name
-				std::string line, colname;
-				std::getline(file, line);
-
-				std::stringstream ss(line);
-				while(getline(ss, colname, ',')) {
-					headers.push_back(colname);
-				}
-
-				// data
-				D val;
-				while(std::getline(file, line)) {
-					// Create a stringstream of the current line
-					std::stringstream ss(line);
-
-					std::vector<D> r;
-					while(ss >> val) {
-						r.push_back(val);
-
-						// If the next token is a comma, ignore it and move on
-						if(ss.peek() == ',') ss.ignore();
-					}
-					this->push_back(r);
-				}
-				check_size();
-				file.close();
-				return true;
-			}
-			file.close();
-			return false;
-		}
+		// ******** Getters ************* //
 
 		/**
-		 * @brief Reads from csv file
+		 * @brief Get the row size 
 		 *
-		 * @param file
-		 * @return true: if read is success
-		 * @return false: if read did not complete
+		 * @return `int`
 		 */
-		bool save_csv(std::string filename)
-		{
-			std::ofstream file(filename);
-			if(file.is_open()) {
-				for(int i = 0; i < headers.size(); i++) {
-					if(i != headers.size() - 1) {
-						file << headers[i] << ",";
-					}
-					else {
-						file << headers[i] << "\n";
-					}
-				}
-				check_size();
-				for(int i = 0; i < row; i++) {
-					for(int j = 0; j < col; j++) {
-						if(j != col - 1) {
-							file << this->at(i).at(j) << ",";
-						}
-						else if(j == col - 1) {
-							file << this->at(i).at(j) << "\n";
-						}
-					}
-				}
-				file.close();
-				return true;
-			}
-			file.close();
-			return false;
-		}
+		int row(){return this->size(); }
 
 		/**
-		 * @brief Get the row size object
+		 * @brief Get the col size 
 		 *
-		 * @return int
+		 * @return `int`
 		 */
-		int get_row_size()
-		{
-			return this->size();
-		}
-
-		/**
-		 * @brief Get the col size object
-		 *
-		 * @return int
-		 */
-		int get_col_size()
+		int col()
 		{
 			if(!this->empty()) {
 				return this->at(0).size();
@@ -387,13 +307,31 @@ namespace var
 			}
 		}
 
+		std::vector<std::string> get_headers() { return headers;}
+
+		D& get_element(int i, int j)
+		{
+			
+		}
+
+		bool change_header(std::string before, std::string after)
+		{
+
+		}
+
+		bool set_headers(std::vector<std::string> heads){
+
+		}
+
+		// ***** operators ** /
+
 		/**
 		 * @brief Returns colum of certain header
 		 *
 		 * @param headname
-		 * @return std::vector<TYPE>&
+		 * @return `std::vector<D>&`
 		 */
-		std::vector<D> operator[](std::string headname)
+		std::vector<D>& operator[](std::string headname)
 		{
 			return get_col_(headname);
 		}
@@ -405,6 +343,13 @@ namespace var
 		 * @return std::vector<D>
 		 */
 		static std::vector<D> sort_asc(std::vector<D>& a)
+		{
+			std::vector<D> v_sorted(a.size());
+			std::partial_sort_copy(a.begin(), a.end(), v_sorted.begin(), v_sorted.end());
+			return v_sorted;
+		}
+
+		static std::vector<D> sort_des(std::vector<D>& a)
 		{
 			std::vector<D> v_sorted(a.size());
 			std::partial_sort_copy(a.begin(), a.end(), v_sorted.begin(), v_sorted.end());
@@ -524,6 +469,90 @@ namespace var
 				   (sqrt((_x.size() * sumxx - pow(sumx, 2)) * (_x.size() * sumyy - pow(sumy, 2))));
 		}
 
+
+		/**
+		 * @brief Reads from csv file
+		 *
+		 * @param file: file name 
+		 * @return `true` : if read is success
+		 * @return `false`: if read did not complete
+		 */
+		bool read_csv(std::string filename)
+		{
+			std::ifstream file(filename);
+			if(file.is_open()) {
+				this->clear();
+				headers.clear();
+
+				// col name
+				std::string line, colname;
+				std::getline(file, line);
+
+				std::stringstream ss(line);
+				while(getline(ss, colname, ',')) {
+					headers.push_back(colname);
+				}
+
+				// data
+				D val;
+				while(std::getline(file, line)) {
+					// Create a stringstream of the current line
+					std::stringstream ss(line);
+
+					std::vector<D> r;
+					while(ss >> val) {
+						r.push_back(val);
+
+						// If the next token is a comma, ignore it and move on
+						if(ss.peek() == ',') ss.ignore();
+					}
+					this->push_back(r);
+				}
+				check_size();
+				file.close();
+				return true;
+			}
+			file.close();
+			return false;
+		}
+
+		/**
+		 * @brief Reads from csv file
+		 *
+		 * @param file
+		 * @return true: if read is success
+		 * @return false: if read did not complete
+		 */
+		bool save_csv(std::string filename)
+		{
+			std::ofstream file(filename);
+			if(file.is_open()) {
+				for(int i = 0; i < headers.size(); i++) {
+					if(i != headers.size() - 1) {
+						file << headers[i] << ",";
+					}
+					else {
+						file << headers[i] << "\n";
+					}
+				}
+				check_size();
+				for(int i = 0; i < row; i++) {
+					for(int j = 0; j < col; j++) {
+						if(j != col - 1) {
+							file << this->at(i).at(j) << ",";
+						}
+						else if(j == col - 1) {
+							file << this->at(i).at(j) << "\n";
+						}
+					}
+				}
+				file.close();
+				return true;
+			}
+			file.close();
+			return false;
+		}
+
 		/**
 		 * @brief Shows a certain number of rows in table
 		 *
@@ -598,6 +627,17 @@ namespace var
 			check_size();
 			show(row);
 		}
+
+		/**
+		 * @brief Shows headers only
+		 *
+		 */
+		void show_header()
+		{
+			show(0);
+		}
+
+
 
 		/**
 		 * @brief Statistical summary of all colums in table
@@ -715,14 +755,9 @@ namespace var
 			return true;
 		}
 
-		/**
-		 * @brief Shows headers only
-		 *
-		 */
-		void show_header()
-		{
-			show(0);
-		}
+
+
+
 	};
 
 }

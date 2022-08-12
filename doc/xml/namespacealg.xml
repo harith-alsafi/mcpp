@@ -176,9 +176,9 @@
 <para>!!! warning &quot;Exception&quot; <preformatted>
     Will throw exceptions as follows&amp;#58; <linebreak/>
  
-    1. ``stdruntime_error`` $\rightarrow \min$ is not smaller than $\max$ OR $\text{sign}(f(\min)) == \text{sign}(f(\max))$ <linebreak/>
+    1. ``stdruntime_error`` $\rightarrow \min$ is not smaller than $\max$  <linebreak/>
 
-    2. ``stdoverflow_error`` $\rightarrow$ if no solution was found
+    2. ``stdlogic_error` $\rightarrow \text{sign}(f(\min)) == \text{sign}(f(\max))$ which means solution doesn&apos;t exist
 </preformatted></para>
 <para><parameterlist kind="templateparam"><parameteritem>
 <parameternamelist>
@@ -286,7 +286,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Arithematic solvers. </para>
+<para>Arithematic functions and solvers. </para>
     </briefdescription>
     <detaileddescription>
 <para>Short for ALGebra </para>

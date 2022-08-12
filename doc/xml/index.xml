@@ -118,7 +118,7 @@
     <member refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" kind="variable"><name>row</name></member>
     <member refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" kind="variable"><name>col</name></member>
     <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" kind="variable"><name>sz</name></member>
-    <member refid="classvar_1_1table_1aba9cc3ab7bf7f78926589af319c763a7" kind="function"><name>check_header</name></member>
+    <member refid="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" kind="function"><name>check_header</name></member>
     <member refid="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" kind="function"><name>get_col_</name></member>
     <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" kind="function"><name>get_avgs</name></member>
     <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" kind="function"><name>get_stds</name></member>

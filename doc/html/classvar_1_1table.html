@@ -69,16 +69,16 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classvar_1_1table-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">var::table&lt; D &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>table class to contain the dataframe  
+<p>2D array class inheriting from <code>std::vector&lt;std::vector&lt;D&gt;&gt;</code>  
  <a href="classvar_1_1table.html#details">More...</a></p>
 
 <p><code>#include &quot;table.hpp&quot;</code></p>
@@ -87,8 +87,8 @@ Inheritance diagram for var::table&lt; D &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvar_1_1table__inherit__graph.png" border="0" usemap="#avar_1_1table_3_01D_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="avar_1_1table_3_01D_01_4_inherit__map" id="avar_1_1table_3_01D_01_4_inherit__map">
-<area shape="rect" title="table class to contain the dataframe" alt="" coords="5,131,128,780"/>
-<area shape="rect" title=" " alt="" coords="9,5,125,83"/>
+<area shape="rect" title="2D array class inheriting from std::vector&lt;std::vector&lt;D&gt;&gt;" alt="" coords="5,131,132,780"/>
+<area shape="rect" title=" " alt="" coords="11,5,127,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -96,9 +96,9 @@ Collaboration diagram for var::table&lt; D &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvar_1_1table__coll__graph.png" border="0" usemap="#avar_1_1table_3_01D_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="avar_1_1table_3_01D_01_4_coll__map" id="avar_1_1table_3_01D_01_4_coll__map">
-<area shape="rect" title="table class to contain the dataframe" alt="" coords="5,272,128,921"/>
-<area shape="rect" title=" " alt="" coords="9,145,125,223"/>
-<area shape="rect" title=" " alt="" coords="47,5,86,83"/>
+<area shape="rect" title="2D array class inheriting from std::vector&lt;std::vector&lt;D&gt;&gt;" alt="" coords="5,272,132,921"/>
+<area shape="rect" title=" " alt="" coords="11,145,127,223"/>
+<area shape="rect" title=" " alt="" coords="49,5,88,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -183,55 +183,55 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8184e4d4c340aad83524b78e6676dc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the relation coefficient of two vectors.  <a href="classvar_1_1table.html#a8184e4d4c340aad83524b78e6676dc8c">More...</a><br /></td></tr>
 <tr class="separator:a8184e4d4c340aad83524b78e6676dc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:aba9cc3ab7bf7f78926589af319c763a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aba9cc3ab7bf7f78926589af319c763a7">check_header</a> (std::string head)</td></tr>
-<tr class="memdesc:aba9cc3ab7bf7f78926589af319c763a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the header and returns index.  <a href="classvar_1_1table.html#aba9cc3ab7bf7f78926589af319c763a7">More...</a><br /></td></tr>
-<tr class="separator:aba9cc3ab7bf7f78926589af319c763a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af5c68e6a9c7857107e5ba88fcff52119"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#af5c68e6a9c7857107e5ba88fcff52119">check_header</a> (std::string headname)</td></tr>
+<tr class="memdesc:af5c68e6a9c7857107e5ba88fcff52119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns column index of given header/column name.  <a href="classvar_1_1table.html#af5c68e6a9c7857107e5ba88fcff52119">More...</a><br /></td></tr>
+<tr class="separator:af5c68e6a9c7857107e5ba88fcff52119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea1482942b89d2a6410a7a69a9cb710e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aea1482942b89d2a6410a7a69a9cb710e">get_col_</a> (std::string headname)</td></tr>
-<tr class="memdesc:aea1482942b89d2a6410a7a69a9cb710e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the col vector based on header name.  <a href="classvar_1_1table.html#aea1482942b89d2a6410a7a69a9cb710e">More...</a><br /></td></tr>
+<tr class="memdesc:aea1482942b89d2a6410a7a69a9cb710e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the column vector based on header name.  <a href="classvar_1_1table.html#aea1482942b89d2a6410a7a69a9cb710e">More...</a><br /></td></tr>
 <tr class="separator:aea1482942b89d2a6410a7a69a9cb710e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c6b4d98de8c0e527ac5f55ce455270b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a4c6b4d98de8c0e527ac5f55ce455270b">get_avgs</a> ()</td></tr>
-<tr class="memdesc:a4c6b4d98de8c0e527ac5f55ce455270b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the return average of all colums in vector.  <a href="classvar_1_1table.html#a4c6b4d98de8c0e527ac5f55ce455270b">More...</a><br /></td></tr>
+<tr class="memdesc:a4c6b4d98de8c0e527ac5f55ce455270b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract average of each column into a vector.  <a href="classvar_1_1table.html#a4c6b4d98de8c0e527ac5f55ce455270b">More...</a><br /></td></tr>
 <tr class="separator:a4c6b4d98de8c0e527ac5f55ce455270b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2a9860253cc9e72b822d35c777e749"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a2c2a9860253cc9e72b822d35c777e749">get_stds</a> ()</td></tr>
-<tr class="memdesc:a2c2a9860253cc9e72b822d35c777e749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the return std of all colums in vector.  <a href="classvar_1_1table.html#a2c2a9860253cc9e72b822d35c777e749">More...</a><br /></td></tr>
+<tr class="memdesc:a2c2a9860253cc9e72b822d35c777e749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract STD of each column into a vector.  <a href="classvar_1_1table.html#a2c2a9860253cc9e72b822d35c777e749">More...</a><br /></td></tr>
 <tr class="separator:a2c2a9860253cc9e72b822d35c777e749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a196ea90112f0e84e30ea8fa6e7b1cb98"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a196ea90112f0e84e30ea8fa6e7b1cb98">get_vars</a> ()</td></tr>
-<tr class="memdesc:a196ea90112f0e84e30ea8fa6e7b1cb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the return variance of all colums in vector.  <a href="classvar_1_1table.html#a196ea90112f0e84e30ea8fa6e7b1cb98">More...</a><br /></td></tr>
+<tr class="memdesc:a196ea90112f0e84e30ea8fa6e7b1cb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract variance of each column into a vector.  <a href="classvar_1_1table.html#a196ea90112f0e84e30ea8fa6e7b1cb98">More...</a><br /></td></tr>
 <tr class="separator:a196ea90112f0e84e30ea8fa6e7b1cb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a088733e85442485729c9304329dc9195"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structvar_1_1table_1_1QR.html">QR</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a088733e85442485729c9304329dc9195">get_qrs</a> ()</td></tr>
-<tr class="memdesc:a088733e85442485729c9304329dc9195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the return quartile range of all colums in vector.  <a href="classvar_1_1table.html#a088733e85442485729c9304329dc9195">More...</a><br /></td></tr>
+<tr class="memdesc:a088733e85442485729c9304329dc9195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract QR of each column into a vector.  <a href="classvar_1_1table.html#a088733e85442485729c9304329dc9195">More...</a><br /></td></tr>
 <tr class="separator:a088733e85442485729c9304329dc9195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c69677672bfc6a61b0499e868c7465"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a85c69677672bfc6a61b0499e868c7465">get_sums</a> ()</td></tr>
-<tr class="memdesc:a85c69677672bfc6a61b0499e868c7465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the return sums of all colums in vector.  <a href="classvar_1_1table.html#a85c69677672bfc6a61b0499e868c7465">More...</a><br /></td></tr>
+<tr class="memdesc:a85c69677672bfc6a61b0499e868c7465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract sum of each column into a vector.  <a href="classvar_1_1table.html#a85c69677672bfc6a61b0499e868c7465">More...</a><br /></td></tr>
 <tr class="separator:a85c69677672bfc6a61b0499e868c7465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2032fb3518fc73b1af05770202d61e8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">generate_rows</a> ()</td></tr>
 <tr class="memdesc:a2032fb3518fc73b1af05770202d61e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates row names.  <a href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">More...</a><br /></td></tr>
 <tr class="separator:a2032fb3518fc73b1af05770202d61e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55df2f9f50827b058c9b8c3bd4d38d17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a55df2f9f50827b058c9b8c3bd4d38d17">check_size</a> ()</td></tr>
-<tr class="memdesc:a55df2f9f50827b058c9b8c3bd4d38d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks size of current class.  <a href="classvar_1_1table.html#a55df2f9f50827b058c9b8c3bd4d38d17">More...</a><br /></td></tr>
+<tr class="memdesc:a55df2f9f50827b058c9b8c3bd4d38d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classvar_1_1table.html#a6dd43c21c40a2c82b80fce47e8f45751">row</a> and <a class="el" href="classvar_1_1table.html#a0170e1261a00394cf7017c86e6833b49">col</a> according to the current class size.  <a href="classvar_1_1table.html#a55df2f9f50827b058c9b8c3bd4d38d17">More...</a><br /></td></tr>
 <tr class="separator:a55df2f9f50827b058c9b8c3bd4d38d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad03a888518a0919abcef08d9b307ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a4ad03a888518a0919abcef08d9b307ea">generate_line</a> (int l)</td></tr>
 <tr class="memdesc:a4ad03a888518a0919abcef08d9b307ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates line to seperate rows.  <a href="classvar_1_1table.html#a4ad03a888518a0919abcef08d9b307ea">More...</a><br /></td></tr>
 <tr class="separator:a4ad03a888518a0919abcef08d9b307ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a215cdf3b672a7231d895f4e6c4214b64"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a215cdf3b672a7231d895f4e6c4214b64">center</a> (const std::string s, const int w)</td></tr>
 <tr class="memdesc:a215cdf3b672a7231d895f4e6c4214b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-centers a string based on given width.  <a href="classvar_1_1table.html#a215cdf3b672a7231d895f4e6c4214b64">More...</a><br /></td></tr>
 <tr class="separator:a215cdf3b672a7231d895f4e6c4214b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b08c797c3314998239636e4840ff74e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a0b08c797c3314998239636e4840ff74e">prd</a> (D x, int width)</td></tr>
-<tr class="memdesc:a0b08c797c3314998239636e4840ff74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">converts double to a string with white space  <a href="classvar_1_1table.html#a0b08c797c3314998239636e4840ff74e">More...</a><br /></td></tr>
+<tr class="memdesc:a0b08c797c3314998239636e4840ff74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the string with given width with empty space.  <a href="classvar_1_1table.html#a0b08c797c3314998239636e4840ff74e">More...</a><br /></td></tr>
 <tr class="separator:a0b08c797c3314998239636e4840ff74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae783c7e8063d4999c621f28a44dd215c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ae783c7e8063d4999c621f28a44dd215c">prd</a> (std::string x, int width)</td></tr>
 <tr class="memdesc:ae783c7e8063d4999c621f28a44dd215c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives spacing to a string.  <a href="classvar_1_1table.html#ae783c7e8063d4999c621f28a44dd215c">More...</a><br /></td></tr>
 <tr class="separator:ae783c7e8063d4999c621f28a44dd215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:af238cb3f30f4e545efdc4e0e0c371cde"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#af238cb3f30f4e545efdc4e0e0c371cde">headers</a></td></tr>
-<tr class="memdesc:af238cb3f30f4e545efdc4e0e0c371cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the headers.  <a href="classvar_1_1table.html#af238cb3f30f4e545efdc4e0e0c371cde">More...</a><br /></td></tr>
+<tr class="memdesc:af238cb3f30f4e545efdc4e0e0c371cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the column names.  <a href="classvar_1_1table.html#af238cb3f30f4e545efdc4e0e0c371cde">More...</a><br /></td></tr>
 <tr class="separator:af238cb3f30f4e545efdc4e0e0c371cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4333369e4f9d6443768ffe9e21dd04ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a4333369e4f9d6443768ffe9e21dd04ed">rows</a></td></tr>
 <tr class="memdesc:a4333369e4f9d6443768ffe9e21dd04ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the row names.  <a href="classvar_1_1table.html#a4333369e4f9d6443768ffe9e21dd04ed">More...</a><br /></td></tr>
@@ -248,7 +248,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br />
-class var::table&lt; D &gt;</div><p class="">table class to contain the dataframe </p>
+class var::table&lt; D &gt;</div><p class="">2D array class inheriting from <code>std::vector&lt;std::vector&lt;D&gt;&gt;</code> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ada6ebdf0a90915bedfa07fc57b31a504"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada6ebdf0a90915bedfa07fc57b31a504">&#9670;&nbsp;</a></span>table()</h2>
@@ -390,7 +390,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -398,17 +398,17 @@ template&lt;typename D &gt; </div>
 <p>Re-centers a string based on given width. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td></td></tr>
-    <tr><td class="paramname">w</td><td></td></tr>
+    <tr><td class="paramname">s</td><td>string given </td></tr>
+    <tr><td class="paramname">w</td><td>width to center the string to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>std::string</code> </dd></dl>
 
 </div>
 </div>
-<a id="aba9cc3ab7bf7f78926589af319c763a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba9cc3ab7bf7f78926589af319c763a7">&#9670;&nbsp;</a></span>check_header()</h2>
+<a id="af5c68e6a9c7857107e5ba88fcff52119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c68e6a9c7857107e5ba88fcff52119">&#9670;&nbsp;</a></span>check_header()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,25 +422,28 @@ template&lt;typename D &gt; </div>
           <td class="memname">int <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::check_header </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>head</em></td><td>)</td>
+          <td class="paramname"><em>headname</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks the header and returns index. </p>
+<p>Returns column index of given header/column name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">head</td><td></td></tr>
+    <tr><td class="paramname">headname</td><td>string of column name </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>int</code>: $[-1]$: index not found <br  />
+ </dd>
+<dd>
+<code>int</code>: $[\geq 0]$: index found </dd></dl>
 
 </div>
 </div>
@@ -464,12 +467,12 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks size of current class. </p>
+<p>Sets the <a class="el" href="classvar_1_1table.html#a6dd43c21c40a2c82b80fce47e8f45751">row</a> and <a class="el" href="classvar_1_1table.html#a0170e1261a00394cf7017c86e6833b49">col</a> according to the current class size. </p>
 
 </div>
 </div>
@@ -524,7 +527,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -532,11 +535,12 @@ template&lt;typename D &gt; </div>
 <p>Generates line to seperate rows. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td></td></tr>
+    <tr><td class="paramname">l</td><td>number of "―" in the generated string <br  />
+ </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>std::string</code> </dd></dl>
 
 </div>
 </div>
@@ -560,7 +564,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -626,14 +630,14 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the return average of all colums in vector. </p>
-<p class="">Used in describe_all()</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<p>Extract average of each column into a vector. </p>
+<p class="">Used in <code>describe_all()</code></p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;D&gt;</code> </dd></dl>
 
 </div>
 </div>
@@ -695,19 +699,20 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the col vector based on header name. </p>
+<p>Get the column vector based on header name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">headname</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;D&gt;</code>: Empty if nothing exits <br  />
+ </dd></dl>
 
 </div>
 </div>
@@ -872,14 +877,14 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the return quartile range of all colums in vector. </p>
-<p class="">Used in describe_all()</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<p>Extract QR of each column into a vector. </p>
+<p class="">Used in <code>describe_all()</code></p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;QR&gt;</code> </dd></dl>
 
 </div>
 </div>
@@ -1055,14 +1060,14 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the return std of all colums in vector. </p>
-<p class="">Used in describe_all()</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<p>Extract STD of each column into a vector. </p>
+<p class="">Used in <code>describe_all()</code></p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;D&gt;</code> </dd></dl>
 
 </div>
 </div>
@@ -1123,14 +1128,14 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the return sums of all colums in vector. </p>
-<p class="">Used in describe_all()</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<p>Extract sum of each column into a vector. </p>
+<p class="">Used in <code>describe_all()</code></p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;D&gt;</code> </dd></dl>
 
 </div>
 </div>
@@ -1191,14 +1196,14 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the return variance of all colums in vector. </p>
-<p class="">Used in describe_all()</p>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<p>Extract variance of each column into a vector. </p>
+<p class="">Used in <code>describe_all()</code></p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;D&gt;</code> </dd></dl>
 
 </div>
 </div>
@@ -1270,20 +1275,20 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>converts double to a string with white space </p>
+<p>Fills the string with given width with empty space. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">width</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>string given </td></tr>
+    <tr><td class="paramname">width</td><td>width to center the string to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>std::string</code> </dd></dl>
 
 </div>
 </div>
@@ -1318,20 +1323,21 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Gives spacing to a string. </p>
+<dl class="section see"><dt>See also</dt><dd>Similar to <a class="el" href="classvar_1_1table.html#a0b08c797c3314998239636e4840ff74e">var::table::prd(D, int)</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td></td></tr>
-    <tr><td class="paramname">width</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>string given </td></tr>
+    <tr><td class="paramname">width</td><td>width to center the string to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>std::string</code> </dd></dl>
 
 </div>
 </div>
@@ -1364,13 +1370,13 @@ template&lt;typename D &gt; </div>
 <p>Reads from csv file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file</td><td></td></tr>
+    <tr><td class="paramname">file</td><td>file name </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true: if read is success </dd>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> : if read is success </dd>
 <dd>
-false: if read did not complete </dd></dl>
+<code>false</code>: if read did not complete </dd></dl>
 
 </div>
 </div>
@@ -1562,7 +1568,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1588,12 +1594,12 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stores the headers. </p>
+<p>Stores the column names. </p>
 
 </div>
 </div>
@@ -1614,7 +1620,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1640,7 +1646,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1666,7 +1672,7 @@ template&lt;typename D &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
