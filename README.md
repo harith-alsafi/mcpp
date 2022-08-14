@@ -1,11 +1,12 @@
 <p align="center">
   <img width="200" height="250" src="mcpp.png">
-</p>
+</p> 
+
 <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">![License: GPL v3](https://img.shields.io/badge/license-GPLv3-blue)</a>
-<a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://img.shields.io/badge/version-1.0-blue)</a>
+<a href="https://github.com/harith-alsafi/mcpp/releases" target="_blank">![Version](https://img.shields.io/badge/version-1.0-blue)</a> 
 <a href="https://harith-alsafi.github.io/mcpp-doc/" target="_blank">![Doc](https://img.shields.io/badge/doc-mkdocs-blue)</a> 
 <a href="https://github.com/harith-alsafi/mcpp/actions/workflows" target="_blank">![Cmake build](https://github.com/harith-alsafi/mcpp/actions/workflows/cmake.yml/badge.svg)</a>
-<a href="https://github.com/harith-alsafi/mcpp/actions/workflows" target="_blank">![Dokcer build](https://github.com/harith-alsafi/mcpp/actions/workflows/docker-image.yml/badge.svg)</a> 
+<a href="https://github.com/harith-alsafi/mcpp/actions/workflows" target="_blank">![Dokcer build](https://github.com/harith-alsafi/mcpp/actions/workflows/docker-image.yml/badge.svg)</a>
 <a href="https://github.com/harith-alsafi/mcpp/issues" target="_blank">![Github Issues](https://img.shields.io/badge/issues-0%20open-yellow)</a>
 
 # Table of content 
