@@ -615,6 +615,24 @@ namespace var
 		}
 
 		/**
+		 * @brief Colum swap
+		 *
+		 * @param j1 first column
+		 * @param j2 second column
+		 */
+		void col_swap(int j1, int j2)
+		{
+			check_col(j1);
+			check_col(j2);
+			D temp = D();
+			for(int i = 0; i < _row; i++) {
+				temp        = data[i][j1];
+				data[i][j1] = data[i][j2];
+				data[i][j2] = temp;
+			}
+		}
+
+		/**
 		 * @brief Replaces certain row
 		 *
 		 * @param i row index
@@ -646,23 +664,7 @@ namespace var
 			}
 		}
 
-		/**
-		 * @brief Colum swap
-		 *
-		 * @param j1 first column
-		 * @param j2 second column
-		 */
-		void col_swap(int j1, int j2)
-		{
-			check_col(j1);
-			check_col(j2);
-			D temp = D();
-			for(int i = 0; i < _row; i++) {
-				temp        = data[i][j1];
-				data[i][j1] = data[i][j2];
-				data[i][j2] = temp;
-			}
-		}
+
 
 		/**
 		 * @brief Sorts all rows

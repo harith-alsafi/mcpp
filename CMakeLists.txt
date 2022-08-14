@@ -32,6 +32,12 @@ if(NO-TEST)
 else()
     add_subdirectory(lib/googletest EXCLUDE_FROM_ALL)
 
+    enable_testing()
+    set(GTEST_ROOT "lib/googletest" CACHE PATH "Path to googletest")
+
+    find_package(GTest REQUIRED)
+    include(GoogleTest)
+
     include_directories(tests/plot)
     include_directories(tests/variables)
     include_directories(tests/stats)
@@ -60,5 +66,12 @@ else()
     target_link_libraries(test_table gtest pthread)  
     target_link_libraries(test_vector gtest pthread) 
     target_link_libraries(test_calculus gtest pthread) 
-    target_link_libraries(test_algebra gtest pthread) 
+    target_link_libraries(test_algebra gtest pthread)
+
+    gtest_discover_tests(test_matrix)
+    gtest_discover_tests(test_table)
+    gtest_discover_tests(test_vector)
+    gtest_discover_tests(test_calculus)
+    gtest_discover_tests(test_algebra)
+
 endif()
