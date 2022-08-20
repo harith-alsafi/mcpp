@@ -23,7 +23,7 @@
           <defval>0</defval>
         </param>
         <briefdescription>
-<para>rounding the vector </para>
+<para>Rounding the vector by using <ref refid="namespacemth_1aaf1bcab086ef624b1fb0cdff232f1db9" kindref="member">mth::round</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="templateparam"><parameteritem>
@@ -31,7 +31,7 @@
 <parametername>D</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>Type </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -40,7 +40,7 @@
 <parametername>a</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>vector input </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -48,17 +48,17 @@
 <parametername>dp</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>number of decimal places </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<simplesect kind="return"><para>std::vector&lt;D&gt;: vector output </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="35" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="35" bodyend="43"/>
+        <location file="includes/numerical/vect.hpp" line="33" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="33" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a1394e5e69aa94634a23d6ba50299846a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="46" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="46" bodyend="50"/>
+        <location file="includes/numerical/vect.hpp" line="44" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a11ded1664ca44b23ae59e804521cef0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="53" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="53" bodyend="57"/>
+        <location file="includes/numerical/vect.hpp" line="51" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="51" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -124,7 +124,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="60" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="60" bodyend="67"/>
+        <location file="includes/numerical/vect.hpp" line="58" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacevect_1a90382b0b99c00844e306f9ae077ce73b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; vect::sort_asc</definition>
+        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
+        <name>sort_asc</name>
+        <param>
+          <type>std::vector&lt; D &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/numerical/vect.hpp" line="68" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="68" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1afbea8e45015bcce9e391e2b8e8db9d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -146,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="70" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="70" bodyend="72"/>
+        <location file="includes/numerical/vect.hpp" line="73" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="73" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a642b4b32d324db19672c165764af754f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -202,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="83" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="83" bodyend="90"/>
+        <location file="includes/numerical/vect.hpp" line="86" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="86" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a042b633aa88aada869f95b10f6486cc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -258,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="101" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="101" bodyend="112"/>
+        <location file="includes/numerical/vect.hpp" line="104" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="104" bodyend="115"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a4ed281a54d6641aa8889f5e9186a032a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -280,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="116" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="116" bodyend="118"/>
+        <location file="includes/numerical/vect.hpp" line="119" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="119" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1adb244508ad50cd51b3e69bdc9520d001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -302,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="121" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="121" bodyend="123"/>
+        <location file="includes/numerical/vect.hpp" line="124" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="124" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a87dc4f4b7e0fe76495c8c3ca7c1c3517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -324,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="126" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="126" bodyend="128"/>
+        <location file="includes/numerical/vect.hpp" line="129" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="129" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a44e0da3a069b473e11a868489e393215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -346,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="131" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="131" bodyend="133"/>
+        <location file="includes/numerical/vect.hpp" line="134" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="134" bodyend="136"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a1b33d3d1d1cbcea95bdfa09b84537f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -368,7 +390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="136" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="136" bodyend="138"/>
+        <location file="includes/numerical/vect.hpp" line="139" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="139" bodyend="141"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1aa4e9ddc4a2a1753baf181c1905d4ea1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -390,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="141" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="141" bodyend="143"/>
+        <location file="includes/numerical/vect.hpp" line="144" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="144" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a9a7872d180ff723efd198518aa86ef85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -412,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="146" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="146" bodyend="148"/>
+        <location file="includes/numerical/vect.hpp" line="149" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="149" bodyend="151"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a4d7d09eb59b6191047a3e2d2cdf12bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -434,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="151" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="151" bodyend="153"/>
+        <location file="includes/numerical/vect.hpp" line="154" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="154" bodyend="156"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a0a0d999c1eed3bdc0313dee7aa06ff6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -456,7 +478,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="156" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="156" bodyend="158"/>
+        <location file="includes/numerical/vect.hpp" line="159" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="159" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a45a1af0f45ec09f483db288217ab850c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -478,7 +500,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="161" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="161" bodyend="163"/>
+        <location file="includes/numerical/vect.hpp" line="164" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="164" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a1e18837c302ab7a0f536e2dda05ab174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -500,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="166" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="166" bodyend="168"/>
+        <location file="includes/numerical/vect.hpp" line="169" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="169" bodyend="171"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a1726d9d1d70cb4d754d3e7a9e991a549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -522,7 +544,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="171" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="171" bodyend="173"/>
+        <location file="includes/numerical/vect.hpp" line="174" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="174" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ab7dbb886582650062493a2947de738c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -544,7 +566,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="177" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="177" bodyend="179"/>
+        <location file="includes/numerical/vect.hpp" line="180" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="180" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ae23cf8293df2d93f3f9ac375dabb2d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -566,7 +588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="182" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="182" bodyend="184"/>
+        <location file="includes/numerical/vect.hpp" line="185" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="185" bodyend="187"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a76faf800ab6012b9790019a17eab0182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -588,7 +610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="187" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="187" bodyend="189"/>
+        <location file="includes/numerical/vect.hpp" line="190" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="190" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a664340fc9a2a2ac2c0c14cb542a29f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -610,7 +632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="192" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="192" bodyend="194"/>
+        <location file="includes/numerical/vect.hpp" line="195" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="195" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a66f438dc26a3cb809c27cc51830ab1cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -632,7 +654,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="197" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="197" bodyend="199"/>
+        <location file="includes/numerical/vect.hpp" line="200" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="200" bodyend="202"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ae9cf82d76873b9d1dc28964e65dd69fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -654,7 +676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="202" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="202" bodyend="204"/>
+        <location file="includes/numerical/vect.hpp" line="205" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="205" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ae263bfcd0bfa88c9ddfb6f04fa43fe0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -676,7 +698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="207" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="207" bodyend="209"/>
+        <location file="includes/numerical/vect.hpp" line="210" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="210" bodyend="212"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a6231591d7302ae56733976534de9b9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -698,7 +720,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="212" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="212" bodyend="214"/>
+        <location file="includes/numerical/vect.hpp" line="215" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="215" bodyend="217"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ab5e5891ec096a5a1ba94067f5f04c67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -720,7 +742,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="217" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="217" bodyend="219"/>
+        <location file="includes/numerical/vect.hpp" line="220" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="220" bodyend="222"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a6d59da8ecdbb7616c06b2b0550fdd526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -742,7 +764,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="222" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="222" bodyend="224"/>
+        <location file="includes/numerical/vect.hpp" line="225" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="225" bodyend="227"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a320a22f92d7992218dd147f744c035ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -764,7 +786,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="227" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="227" bodyend="229"/>
+        <location file="includes/numerical/vect.hpp" line="230" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="230" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ab66fa3b791b0ed95fb7bc995223e694c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -786,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="232" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="232" bodyend="234"/>
+        <location file="includes/numerical/vect.hpp" line="235" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="235" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1aefc88801242ad35ac9714c221ec03573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -808,7 +830,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="238" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="238" bodyend="240"/>
+        <location file="includes/numerical/vect.hpp" line="241" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="241" bodyend="243"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a1f8e4036ea4a5bede28b045061e59fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -875,7 +897,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="254" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="254" bodyend="261"/>
+        <location file="includes/numerical/vect.hpp" line="257" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="257" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a777d4eff1699dc4d1faf0c848baeebda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -919,7 +941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="271" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="271" bodyend="278"/>
+        <location file="includes/numerical/vect.hpp" line="274" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="274" bodyend="281"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a2da816be096db605cfeb29720fb77a82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -963,7 +985,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="288" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="288" bodyend="295"/>
+        <location file="includes/numerical/vect.hpp" line="291" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="291" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1ae004755a986a5e4a9578ce6c8f503128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -993,7 +1015,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="298" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="298" bodyend="305"/>
+        <location file="includes/numerical/vect.hpp" line="301" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="301" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a8906c773561edd0cb239ff19f923a55a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1023,7 +1045,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="308" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="308" bodyend="310"/>
+        <location file="includes/numerical/vect.hpp" line="311" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="311" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1a7f6070071515a8468e36406cde924172" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1049,7 +1071,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="313" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="313" bodyend="318"/>
+        <location file="includes/numerical/vect.hpp" line="316" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="316" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="namespacevect_1aeb203d6bfe630c40ef431fe8438820d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -1075,7 +1097,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/vect.hpp" line="321" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="321" bodyend="326"/>
+        <location file="includes/numerical/vect.hpp" line="324" column="13" bodyfile="includes/numerical/vect.hpp" bodystart="324" bodyend="329"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1084,6 +1106,6 @@
     <detaileddescription>
 <para>Short for vector </para>
     </detaileddescription>
-    <location file="includes/numerical/vect.hpp" line="23" column="1"/>
+    <location file="includes/numerical/vect.hpp" line="21" column="1"/>
   </compounddef>
 </doxygen>

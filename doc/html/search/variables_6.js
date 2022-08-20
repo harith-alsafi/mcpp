@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['p_351',['P',['../structvar_1_1matrix_1_1LU.html#ae7daacc7db6dfc54ed2afba970bec1ed',1,'var::matrix::LU']]]
+  ['q1_358',['Q1',['../structvar_1_1QR.html#af843a20b7785502305ef0124c09b80ae',1,'var::QR']]],
+  ['q2_359',['Q2',['../structvar_1_1QR.html#a53d4de60b6b7913575898481a64c3d1e',1,'var::QR']]],
+  ['q3_360',['Q3',['../structvar_1_1QR.html#a93de73ac05741855b14e633d8a6ea5c4',1,'var::QR']]]
 ];

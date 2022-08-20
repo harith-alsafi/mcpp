@@ -33,17 +33,18 @@ else()
     add_subdirectory(lib/googletest EXCLUDE_FROM_ALL)
 
     enable_testing()
-    set(GTEST_ROOT "lib/googletest" CACHE PATH "Path to googletest")
+    # set(GTEST_ROOT "../lib/googletest" CACHE PATH "Path to googletest")
 
-    find_package(GTest REQUIRED)
+    # find_package(GTest REQUIRED)
     include(GoogleTest)
 
-    include_directories(tests/plot)
     include_directories(tests/variables)
-    include_directories(tests/stats)
     include_directories(tests/calculus)
-    include_directories(tests/misc)
-    include_directories(tests/vectors)
+    include_directories(tests/algebra)
+    include_directories(tests/communication)
+    include_directories(tests/mathematics)
+    include_directories(tests/numerical)
+    include_directories(tests/stats)
 
     # matrix
     add_executable(test_matrix tests/variables/matrix_test.cpp)
@@ -61,17 +62,22 @@ else()
     file(GLOB cal_src "tests/calculus/*.cpp")
     add_executable(test_calculus ${cal_src})
 
+    # statistics 
+    add_executable(test_stats tests/stats/stats_test.cpp)
+
     #-lgtest -lpthread 
     target_link_libraries(test_matrix gtest pthread)  
     target_link_libraries(test_table gtest pthread)  
     target_link_libraries(test_vector gtest pthread) 
     target_link_libraries(test_calculus gtest pthread) 
     target_link_libraries(test_algebra gtest pthread)
+    target_link_libraries(test_stats gtest pthread)
 
     gtest_discover_tests(test_matrix)
     gtest_discover_tests(test_table)
     gtest_discover_tests(test_vector)
     gtest_discover_tests(test_calculus)
     gtest_discover_tests(test_algebra)
+    gtest_discover_tests(test_stats)
 
 endif()

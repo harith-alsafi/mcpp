@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structvar_1_1QR" kind="struct" language="C++" prot="public">
+    <compoundname>var::QR</compoundname>
+    <includes local="yes">others.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename D</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structvar_1_1QR_1add0dc0eec467b1cccdc1e708f3f3cca1" prot="public" static="no" mutable="no">
+        <type>D</type>
+        <definition>D var::QR&lt; D &gt;::LQ</definition>
+        <argsstring></argsstring>
+        <name>LQ</name>
+        <briefdescription>
+<para>Lower quartile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/others.hpp" line="22" column="3" bodyfile="includes/variables/others.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvar_1_1QR_1af843a20b7785502305ef0124c09b80ae" prot="public" static="no" mutable="no">
+        <type>D</type>
+        <definition>D var::QR&lt; D &gt;::Q1</definition>
+        <argsstring></argsstring>
+        <name>Q1</name>
+        <briefdescription>
+<para>Q1 (25%) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/others.hpp" line="23" column="3" bodyfile="includes/variables/others.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvar_1_1QR_1a53d4de60b6b7913575898481a64c3d1e" prot="public" static="no" mutable="no">
+        <type>D</type>
+        <definition>D var::QR&lt; D &gt;::Q2</definition>
+        <argsstring></argsstring>
+        <name>Q2</name>
+        <briefdescription>
+<para>Q2 (50%) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/others.hpp" line="24" column="3" bodyfile="includes/variables/others.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvar_1_1QR_1a93de73ac05741855b14e633d8a6ea5c4" prot="public" static="no" mutable="no">
+        <type>D</type>
+        <definition>D var::QR&lt; D &gt;::Q3</definition>
+        <argsstring></argsstring>
+        <name>Q3</name>
+        <briefdescription>
+<para>Q3 (75%) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/others.hpp" line="25" column="3" bodyfile="includes/variables/others.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structvar_1_1QR_1afee827e814009fc1add05083f8b0586d" prot="public" static="no" mutable="no">
+        <type>D</type>
+        <definition>D var::QR&lt; D &gt;::UQ</definition>
+        <argsstring></argsstring>
+        <name>UQ</name>
+        <briefdescription>
+<para>Upper quartile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/others.hpp" line="26" column="3" bodyfile="includes/variables/others.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct to contain the quartile range. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>var::QR&lt; D &gt;</label>
+        <link refid="structvar_1_1QR"/>
+      </node>
+    </collaborationgraph>
+    <location file="includes/variables/others.hpp" line="20" column="1" bodyfile="includes/variables/others.hpp" bodystart="21" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structvar_1_1QR_1add0dc0eec467b1cccdc1e708f3f3cca1" prot="public" virt="non-virtual"><scope>var::QR</scope><name>LQ</name></member>
+      <member refid="structvar_1_1QR_1af843a20b7785502305ef0124c09b80ae" prot="public" virt="non-virtual"><scope>var::QR</scope><name>Q1</name></member>
+      <member refid="structvar_1_1QR_1a53d4de60b6b7913575898481a64c3d1e" prot="public" virt="non-virtual"><scope>var::QR</scope><name>Q2</name></member>
+      <member refid="structvar_1_1QR_1a93de73ac05741855b14e633d8a6ea5c4" prot="public" virt="non-virtual"><scope>var::QR</scope><name>Q3</name></member>
+      <member refid="structvar_1_1QR_1afee827e814009fc1add05083f8b0586d" prot="public" virt="non-virtual"><scope>var::QR</scope><name>UQ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -4,18 +4,17 @@
     <compoundname>var::table</compoundname>
     <basecompoundref prot="public" virt="non-virtual">std::vector&lt; std::vector&lt; D &gt; &gt;</basecompoundref>
     <includes local="yes">table.hpp</includes>
-    <innerclass refid="structvar_1_1table_1_1QR" prot="public">var::table::QR</innerclass>
     <templateparamlist>
       <param>
         <type>typename D</type>
       </param>
     </templateparamlist>
       <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1a55535e54d90e2ddf7fbc98532e3dbaa3" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
-        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::headers</definition>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::col_names</definition>
         <argsstring></argsstring>
-        <name>headers</name>
+        <name>col_names</name>
         <briefdescription>
 <para>Stores the column names. </para>
         </briefdescription>
@@ -23,13 +22,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="49" column="13" bodyfile="includes/variables/table.hpp" bodystart="49" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="28" column="13" bodyfile="includes/variables/table.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1ad69844095e9fd79ebdca86f22fa42ff5" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
-        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::rows</definition>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::row_names</definition>
         <argsstring></argsstring>
-        <name>rows</name>
+        <name>row_names</name>
         <briefdescription>
 <para>Stores the row names. </para>
         </briefdescription>
@@ -37,13 +36,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="50" column="13" bodyfile="includes/variables/table.hpp" bodystart="50" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="29" column="13" bodyfile="includes/variables/table.hpp" bodystart="29" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1a3d195e6796cfbc441b8e240b651d695b" prot="protected" static="no" mutable="no">
         <type>int</type>
-        <definition>int var::table&lt; D &gt;::row</definition>
+        <definition>int var::table&lt; D &gt;::_row</definition>
         <argsstring></argsstring>
-        <name>row</name>
+        <name>_row</name>
         <briefdescription>
 <para>Row size. </para>
         </briefdescription>
@@ -51,13 +50,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="51" column="5" bodyfile="includes/variables/table.hpp" bodystart="51" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="30" column="5" bodyfile="includes/variables/table.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="protected" static="no" mutable="no">
+      <memberdef kind="variable" id="classvar_1_1table_1ad9a35db73dbd794283bf9b986c133ca3" prot="protected" static="no" mutable="no">
         <type>int</type>
-        <definition>int var::table&lt; D &gt;::col</definition>
+        <definition>int var::table&lt; D &gt;::_col</definition>
         <argsstring></argsstring>
-        <name>col</name>
+        <name>_col</name>
         <briefdescription>
 <para>Colum size. </para>
         </briefdescription>
@@ -65,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="52" column="5" bodyfile="includes/variables/table.hpp" bodystart="52" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="31" column="5" bodyfile="includes/variables/table.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -80,10 +79,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="53" column="5" bodyfile="includes/variables/table.hpp" bodystart="53" bodyend="-1"/>
+        <location file="includes/variables/table.hpp" line="32" column="5" bodyfile="includes/variables/table.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classvar_1_1table_1abeffbc869d8244691cf7f05125e18fd2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::set_size</definition>
+        <argsstring>()</argsstring>
+        <name>set_size</name>
+        <briefdescription>
+<para>Sets the <ref refid="classvar_1_1table_1a3d195e6796cfbc441b8e240b651d695b" kindref="member">_row</ref> and <ref refid="classvar_1_1table_1ad9a35db73dbd794283bf9b986c133ca3" kindref="member">_col</ref> according to the current class size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="38" column="6" bodyfile="includes/variables/table.hpp" bodystart="38" bodyend="47"/>
+      </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>int var::table&lt; D &gt;::check_header</definition>
@@ -115,11 +128,42 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="63" column="5" bodyfile="includes/variables/table.hpp" bodystart="63" bodyend="71"/>
+        <location file="includes/variables/table.hpp" line="57" column="5" bodyfile="includes/variables/table.hpp" bodystart="57" bodyend="65"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_col_</definition>
+      <memberdef kind="function" id="classvar_1_1table_1a6a199939870fc52d1cf6de8dc64581e5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;&amp;D &gt;</type>
+        <definition>std::vector&lt;&amp;D&gt; var::table&lt; D &gt;::get_col_</definition>
+        <argsstring>(int index)</argsstring>
+        <name>get_col_</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the colum based on index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of that colum </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>std::vector&lt;&amp;D&gt;</computeroutput> <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="73" column="13" bodyfile="includes/variables/table.hpp" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1ad3c49fc9f806e825a40618000a6cb0ca" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt;&amp;D &gt;</type>
+        <definition>std::vector&lt;&amp;D&gt; var::table&lt; D &gt;::get_col_</definition>
         <argsstring>(std::string headname)</argsstring>
         <name>get_col_</name>
         <param>
@@ -146,125 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="80" column="13" bodyfile="includes/variables/table.hpp" bodystart="80" bodyend="90"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_avgs</definition>
-        <argsstring>()</argsstring>
-        <name>get_avgs</name>
-        <briefdescription>
-<para>Extract average of each column into a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Used in <computeroutput>describe_all()</computeroutput></para>
-<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="99" column="13" bodyfile="includes/variables/table.hpp" bodystart="99" bodyend="106"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_stds</definition>
-        <argsstring>()</argsstring>
-        <name>get_stds</name>
-        <briefdescription>
-<para>Extract STD of each column into a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Used in <computeroutput>describe_all()</computeroutput></para>
-<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="115" column="13" bodyfile="includes/variables/table.hpp" bodystart="115" bodyend="122"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_vars</definition>
-        <argsstring>()</argsstring>
-        <name>get_vars</name>
-        <briefdescription>
-<para>Extract variance of each column into a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Used in <computeroutput>describe_all()</computeroutput></para>
-<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="131" column="13" bodyfile="includes/variables/table.hpp" bodystart="131" bodyend="138"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="structvar_1_1table_1_1QR" kindref="compound">QR</ref> &gt;</type>
-        <definition>std::vector&lt;QR&gt; var::table&lt; D &gt;::get_qrs</definition>
-        <argsstring>()</argsstring>
-        <name>get_qrs</name>
-        <briefdescription>
-<para>Extract QR of each column into a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Used in <computeroutput>describe_all()</computeroutput></para>
-<para><simplesect kind="return"><para><computeroutput>std::vector&lt;QR&gt;</computeroutput> </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="147" column="13" bodyfile="includes/variables/table.hpp" bodystart="147" bodyend="154"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_sums</definition>
-        <argsstring>()</argsstring>
-        <name>get_sums</name>
-        <briefdescription>
-<para>Extract sum of each column into a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>Used in <computeroutput>describe_all()</computeroutput></para>
-<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="163" column="13" bodyfile="includes/variables/table.hpp" bodystart="163" bodyend="170"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void var::table&lt; D &gt;::generate_rows</definition>
-        <argsstring>()</argsstring>
-        <name>generate_rows</name>
-        <briefdescription>
-<para>Generates row names. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="235" column="6" bodyfile="includes/variables/table.hpp" bodystart="235" bodyend="241"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void var::table&lt; D &gt;::check_size</definition>
-        <argsstring>()</argsstring>
-        <name>check_size</name>
-        <briefdescription>
-<para>Sets the <ref refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" kindref="member">row</ref> and <ref refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" kindref="member">col</ref> according to the current class size. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="247" column="6" bodyfile="includes/variables/table.hpp" bodystart="247" bodyend="256"/>
+        <location file="includes/variables/table.hpp" line="90" column="13" bodyfile="includes/variables/table.hpp" bodystart="90" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -284,8 +210,7 @@
 <parametername>l</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>number of &quot;―&quot; in the generated string <linebreak/>
- </para>
+<para>number of &quot;―&quot; in the generated string </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -295,7 +220,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="264" column="13" bodyfile="includes/variables/table.hpp" bodystart="264" bodyend="271"/>
+        <location file="includes/variables/table.hpp" line="166" column="13" bodyfile="includes/variables/table.hpp" bodystart="166" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::generate_rows</definition>
+        <argsstring>()</argsstring>
+        <name>generate_rows</name>
+        <briefdescription>
+<para>Clears current row names and generates new ones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="179" column="6" bodyfile="includes/variables/table.hpp" bodystart="179" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a75cd6fd5f807343b311152f5118bb085" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::generate_cols</definition>
+        <argsstring>()</argsstring>
+        <name>generate_cols</name>
+        <briefdescription>
+<para>Clears current column names and generates new ones. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="194" column="6" bodyfile="includes/variables/table.hpp" bodystart="194" bodyend="203"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-static-func">
@@ -339,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="179" column="20" bodyfile="includes/variables/table.hpp" bodystart="179" bodyend="192"/>
+        <location file="includes/variables/table.hpp" line="108" column="20" bodyfile="includes/variables/table.hpp" bodystart="108" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -381,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="201" column="20" bodyfile="includes/variables/table.hpp" bodystart="201" bodyend="210"/>
+        <location file="includes/variables/table.hpp" line="130" column="20" bodyfile="includes/variables/table.hpp" bodystart="130" bodyend="139"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -425,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="221" column="20" bodyfile="includes/variables/table.hpp" bodystart="221" bodyend="229"/>
+        <location file="includes/variables/table.hpp" line="150" column="20" bodyfile="includes/variables/table.hpp" bodystart="150" bodyend="158"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -441,21 +394,166 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="278" column="1" bodyfile="includes/variables/table.hpp" bodystart="278" bodyend="278"/>
+        <location file="includes/variables/table.hpp" line="210" column="1" bodyfile="includes/variables/table.hpp" bodystart="210" bodyend="212"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a135d46678f8916df8bcd9d4d9472fd3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type></type>
-        <definition>var::table&lt; D &gt;::~table</definition>
+      <memberdef kind="function" id="classvar_1_1table_1a7dbdb10f2db71872774179122ba9520b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int var::table&lt; D &gt;::row</definition>
         <argsstring>()</argsstring>
-        <name>~table</name>
+        <name>row</name>
         <briefdescription>
-<para>Destroy the table object. </para>
+<para>Get the row size. </para>
+        </briefdescription>
+        <detaileddescription>
+<sect2 id="classvar_1_1table_1autotoc_md4">
+<title>Getters</title>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> </para>
+</simplesect>
+</para>
+</sect2>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="228" column="5" bodyfile="includes/variables/table.hpp" bodystart="228" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a70b568d560efd34b1a67aee49135b8a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int var::table&lt; D &gt;::col</definition>
+        <argsstring>()</argsstring>
+        <name>col</name>
+        <briefdescription>
+<para>Get the col size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="239" column="5" bodyfile="includes/variables/table.hpp" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1abc5c989c570b6c90e15623cc7b2db1d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::get_col_names</definition>
+        <argsstring>()</argsstring>
+        <name>get_col_names</name>
+        <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="284" column="1" bodyfile="includes/variables/table.hpp" bodystart="284" bodyend="284"/>
+        <location file="includes/variables/table.hpp" line="246" column="13" bodyfile="includes/variables/table.hpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a86899556462d8e8fc6499432157e4352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::set_col_names</definition>
+        <argsstring>(std::vector&lt; std::string &gt; names)</argsstring>
+        <name>set_col_names</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="251" column="6" bodyfile="includes/variables/table.hpp" bodystart="251" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::get_row_names</definition>
+        <argsstring>()</argsstring>
+        <name>get_row_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="261" column="13" bodyfile="includes/variables/table.hpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::set_row_names</definition>
+        <argsstring>(std::vector&lt; std::string &gt; names)</argsstring>
+        <name>set_row_names</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="266" column="6" bodyfile="includes/variables/table.hpp" bodystart="266" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1ae6fcb87b2b648ee28fb2258f1eab3f6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>D &amp;</type>
+        <definition>D&amp; var::table&lt; D &gt;::get_element</definition>
+        <argsstring>(int i, int j)</argsstring>
+        <name>get_element</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="276" column="3" bodyfile="includes/variables/table.hpp" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classvar_1_1table_1a39534497537c1b9a7f9ab79280fba6f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; D &gt; &amp;</type>
+        <definition>std::vector&lt;D&gt;&amp; var::table&lt; D &gt;::operator[]</definition>
+        <argsstring>(std::string headname)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::string</type>
+          <declname>headname</declname>
+        </param>
+        <briefdescription>
+<para>Returns refrence to colum of given column name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>headname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;&amp;</computeroutput> Refrence to given column name </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>&lt;tt&gt;std::invalid_argument&lt;/tt&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>given column name doesn&apos;t exist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="292" column="13" bodyfile="includes/variables/table.hpp" bodystart="292" bodyend="298"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -487,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="293" column="6" bodyfile="includes/variables/table.hpp" bodystart="293" bodyend="330"/>
+        <location file="includes/variables/table.hpp" line="307" column="6" bodyfile="includes/variables/table.hpp" bodystart="307" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -519,71 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="339" column="6" bodyfile="includes/variables/table.hpp" bodystart="339" bodyend="367"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1ac129bb6a1940378e7511762ba5152857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int var::table&lt; D &gt;::get_row_size</definition>
-        <argsstring>()</argsstring>
-        <name>get_row_size</name>
-        <briefdescription>
-<para>Get the row size object. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>int </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="374" column="5" bodyfile="includes/variables/table.hpp" bodystart="374" bodyend="377"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a0e5e2a6af3e5a10886c26c130ca51a0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>int</type>
-        <definition>int var::table&lt; D &gt;::get_col_size</definition>
-        <argsstring>()</argsstring>
-        <name>get_col_size</name>
-        <briefdescription>
-<para>Get the col size object. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>int </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="384" column="5" bodyfile="includes/variables/table.hpp" bodystart="384" bodyend="392"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1ad326577c23b9400e0296f71aebe8d2a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; D &gt;</type>
-        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::operator[]</definition>
-        <argsstring>(std::string headname)</argsstring>
-        <name>operator[]</name>
-        <param>
-          <type>std::string</type>
-          <declname>headname</declname>
-        </param>
-        <briefdescription>
-<para>Returns colum of certain header. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>headname</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>std::vector&lt;TYPE&gt;&amp; </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="400" column="13" bodyfile="includes/variables/table.hpp" bodystart="400" bodyend="403"/>
+        <location file="includes/variables/table.hpp" line="353" column="6" bodyfile="includes/variables/table.hpp" bodystart="353" bodyend="381"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -611,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="536" column="6" bodyfile="includes/variables/table.hpp" bodystart="536" bodyend="594"/>
+        <location file="includes/variables/table.hpp" line="388" column="6" bodyfile="includes/variables/table.hpp" bodystart="388" bodyend="446"/>
       </memberdef>
       <memberdef kind="function" id="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -625,30 +659,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="600" column="6" bodyfile="includes/variables/table.hpp" bodystart="600" bodyend="604"/>
+        <location file="includes/variables/table.hpp" line="452" column="6" bodyfile="includes/variables/table.hpp" bodystart="452" bodyend="456"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
-        <definition>table var::table&lt; D &gt;::describe_all</definition>
+      <memberdef kind="function" id="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::show_header</definition>
         <argsstring>()</argsstring>
-        <name>describe_all</name>
+        <name>show_header</name>
         <briefdescription>
-<para>Statistical summary of all colums in table. </para>
+<para>Shows col_names only. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>table </para>
-</simplesect>
-</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="611" column="7" bodyfile="includes/variables/table.hpp" bodystart="611" bodyend="656"/>
+        <location file="includes/variables/table.hpp" line="462" column="6" bodyfile="includes/variables/table.hpp" bodystart="462" bodyend="465"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a13829ed8fe8ad15fe807a0d8cb2dae2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a30907a37fd8b053fcdddf9b0fab3bb3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
-        <definition>table var::table&lt; D &gt;::get_row</definition>
+        <definition>table var::table&lt; D &gt;::get_row_table</definition>
         <argsstring>(int r)</argsstring>
-        <name>get_row</name>
+        <name>get_row_table</name>
         <param>
           <type>int</type>
           <declname>r</declname>
@@ -672,13 +703,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="664" column="7" bodyfile="includes/variables/table.hpp" bodystart="664" bodyend="674"/>
+        <location file="includes/variables/table.hpp" line="475" column="7" bodyfile="includes/variables/table.hpp" bodystart="475" bodyend="485"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1af24d2bf9285d7bfaf5d2263576419645" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a28b6553353daf2c3e34a5786f90dd25c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
-        <definition>table var::table&lt; D &gt;::get_col</definition>
+        <definition>table var::table&lt; D &gt;::get_col_table</definition>
         <argsstring>(std::string name)</argsstring>
-        <name>get_col</name>
+        <name>get_col_table</name>
         <param>
           <type>std::string</type>
           <declname>name</declname>
@@ -702,20 +733,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="682" column="7" bodyfile="includes/variables/table.hpp" bodystart="682" bodyend="694"/>
+        <location file="includes/variables/table.hpp" line="493" column="7" bodyfile="includes/variables/table.hpp" bodystart="493" bodyend="505"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1ab2ebc42048d7552e1661916c0756482d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1aa749af1d60dccf89e6c72819a58b0227" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool var::table&lt; D &gt;::add_col</definition>
-        <argsstring>(std::string col_name, std::vector&lt; D &gt; col_data)</argsstring>
+        <argsstring>(std::vector&lt; D &gt; col_data, std::string col_name=std::string())</argsstring>
         <name>add_col</name>
-        <param>
-          <type>std::string</type>
-          <declname>col_name</declname>
-        </param>
         <param>
           <type>std::vector&lt; D &gt;</type>
           <declname>col_data</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>col_name</declname>
+          <defval>std::string()</defval>
         </param>
         <briefdescription>
 <para>Adds new colum. </para>
@@ -746,305 +778,173 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="704" column="6" bodyfile="includes/variables/table.hpp" bodystart="704" bodyend="720"/>
+        <location file="includes/variables/table.hpp" line="515" column="6" bodyfile="includes/variables/table.hpp" bodystart="515" bodyend="531"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void var::table&lt; D &gt;::show_header</definition>
-        <argsstring>()</argsstring>
-        <name>show_header</name>
+      <memberdef kind="function" id="classvar_1_1table_1abe04d33a4b04fff930fa8158e41309bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool var::table&lt; D &gt;::add_row</definition>
+        <argsstring>(std::vector&lt; D &gt; row_data)</argsstring>
+        <name>add_row</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>row_data</declname>
+        </param>
         <briefdescription>
-<para>Shows headers only. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="726" column="6" bodyfile="includes/variables/table.hpp" bodystart="726" bodyend="729"/>
+        <location file="includes/variables/table.hpp" line="533" column="6" bodyfile="includes/variables/table.hpp" bodystart="533" bodyend="536"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-static-func">
-      <memberdef kind="function" id="classvar_1_1table_1abe9eef285b846e555b9e2b4d89d82103" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; D &gt;</type>
-        <definition>static std::vector&lt;D&gt; var::table&lt; D &gt;::sort_asc</definition>
-        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
-        <name>sort_asc</name>
-        <param>
-          <type>std::vector&lt; D &gt; &amp;</type>
-          <declname>a</declname>
-        </param>
+        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_avgs</definition>
+        <argsstring>()</argsstring>
+        <name>get_avgs</name>
         <briefdescription>
-<para>Sorts data ascending. </para>
+<para>Extract average of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>std::vector&lt;D&gt; </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput>: same size as number of columns </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="411" column="20" bodyfile="includes/variables/table.hpp" bodystart="411" bodyend="416"/>
+        <location file="includes/variables/table.hpp" line="545" column="13" bodyfile="includes/variables/table.hpp" bodystart="545" bodyend="553"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a3e3a7c5f503790050d32b6696a2c811a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_min</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_min</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
+      <memberdef kind="function" id="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_stds</definition>
+        <argsstring>()</argsstring>
+        <name>get_stds</name>
         <briefdescription>
-<para>Get the min value of vector. </para>
+<para>Extract STD of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> same size as number of columns </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="424" column="10" bodyfile="includes/variables/table.hpp" bodystart="424" bodyend="427"/>
+        <location file="includes/variables/table.hpp" line="562" column="13" bodyfile="includes/variables/table.hpp" bodystart="562" bodyend="570"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a1abd7092b76e6122e17f891be3e46896" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_max</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_max</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
+      <memberdef kind="function" id="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_vars</definition>
+        <argsstring>()</argsstring>
+        <name>get_vars</name>
         <briefdescription>
-<para>Get the max value of vector. </para>
+<para>Extract variance of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput>: same size as numebr of columns </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="435" column="10" bodyfile="includes/variables/table.hpp" bodystart="435" bodyend="438"/>
+        <location file="includes/variables/table.hpp" line="579" column="13" bodyfile="includes/variables/table.hpp" bodystart="579" bodyend="586"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1abb470d4a1f88cbfb2225084a888e28f3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_sum</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_sum</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
+      <memberdef kind="function" id="classvar_1_1table_1acde3b5b518d75c28078e60b2acfe9e1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structvar_1_1QR" kindref="compound">QR</ref>&lt; D &gt; &gt;</type>
+        <definition>std::vector&lt;QR&lt;D&gt; &gt; var::table&lt; D &gt;::get_qrs</definition>
+        <argsstring>()</argsstring>
+        <name>get_qrs</name>
         <briefdescription>
-<para>Get the sum of vector. </para>
+<para>Extract QR of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;QR&gt;</computeroutput>: same size as number of colums </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="446" column="10" bodyfile="includes/variables/table.hpp" bodystart="446" bodyend="449"/>
+        <location file="includes/variables/table.hpp" line="595" column="13" bodyfile="includes/variables/table.hpp" bodystart="595" bodyend="603"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a42c4b9b7209cc3b518fdc69142b23c76" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_avg</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_avg</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
+      <memberdef kind="function" id="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; D &gt;</type>
+        <definition>std::vector&lt;D&gt; var::table&lt; D &gt;::get_sums</definition>
+        <argsstring>()</argsstring>
+        <name>get_sums</name>
         <briefdescription>
-<para>Get the avg of vector. </para>
+<para>Extract sum of each column into a vector. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
+<para>Used in <computeroutput>describe_all()</computeroutput></para>
+<para><simplesect kind="return"><para><computeroutput>std::vector&lt;D&gt;</computeroutput> size is same size as number of colums </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="457" column="10" bodyfile="includes/variables/table.hpp" bodystart="457" bodyend="460"/>
+        <location file="includes/variables/table.hpp" line="614" column="13" bodyfile="includes/variables/table.hpp" bodystart="614" bodyend="622"/>
       </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1af001504d15d500670e5d776148b04d6f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_var</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_var</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
+      <memberdef kind="function" id="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classvar_1_1table" kindref="compound">table</ref></type>
+        <definition>table var::table&lt; D &gt;::describe_all</definition>
+        <argsstring>()</argsstring>
+        <name>describe_all</name>
         <briefdescription>
-<para>Get the variance of vector. </para>
+<para>Statistical summary of all colums in table. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
+<para>*Example:</para>
+<para><table rows="3" cols="11"><row>
+<entry thead="yes"><para></para>
+</entry><entry thead="yes"><para>Avg   </para>
+</entry><entry thead="yes"><para>STD   </para>
+</entry><entry thead="yes"><para>VAR   </para>
+</entry><entry thead="yes"><para>Min   </para>
+</entry><entry thead="yes"><para>Q1   </para>
+</entry><entry thead="yes"><para>Q2   </para>
+</entry><entry thead="yes"><para>Q3   </para>
+</entry><entry thead="yes"><para>Max   </para>
+</entry><entry thead="yes"><para>IQR   </para>
+</entry><entry thead="yes"><para>Sum    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>col-0   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>col-1   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry><entry thead="no"><para>..   </para>
+</entry></row>
+</table>
+</para>
+<para><simplesect kind="return"><para><computeroutput>table&lt;D&gt;</computeroutput> </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/variables/table.hpp" line="468" column="10" bodyfile="includes/variables/table.hpp" bodystart="468" bodyend="477"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a3ece8de9eb74c17b73b322790ca0bf62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_std</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_std</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-<para>Get the standard diviation of vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="485" column="10" bodyfile="includes/variables/table.hpp" bodystart="485" bodyend="488"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1af21b86535b597309c629804add469081" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="structvar_1_1table_1_1QR" kindref="compound">QR</ref></type>
-        <definition>static QR var::table&lt; D &gt;::get_qr</definition>
-        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
-        <name>get_qr</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-<para>Get the quartile range of a vector. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>a</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>QR </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="496" column="11" bodyfile="includes/variables/table.hpp" bodystart="496" bodyend="506"/>
-      </memberdef>
-      <memberdef kind="function" id="classvar_1_1table_1a8184e4d4c340aad83524b78e6676dc8c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>D</type>
-        <definition>static D var::table&lt; D &gt;::get_r</definition>
-        <argsstring>(std::vector&lt; D &gt; _x, std::vector&lt; D &gt; _y)</argsstring>
-        <name>get_r</name>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>_x</declname>
-        </param>
-        <param>
-          <type>std::vector&lt; D &gt;</type>
-          <declname>_y</declname>
-        </param>
-        <briefdescription>
-<para>Get the relation coefficient of two vectors. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>_x</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>_y</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>D </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="includes/variables/table.hpp" line="515" column="10" bodyfile="includes/variables/table.hpp" bodystart="515" bodyend="529"/>
+        <location file="includes/variables/table.hpp" line="636" column="7" bodyfile="includes/variables/table.hpp" bodystart="636" bodyend="681"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1080,50 +980,48 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="includes/variables/table.hpp" line="32" column="1" bodyfile="includes/variables/table.hpp" bodystart="33" bodyend="730"/>
+    <location file="includes/variables/table.hpp" line="25" column="1" bodyfile="includes/variables/table.hpp" bodystart="26" bodyend="682"/>
     <listofallmembers>
-      <member refid="classvar_1_1table_1ab2ebc42048d7552e1661916c0756482d" prot="public" virt="non-virtual"><scope>var::table</scope><name>add_col</name></member>
+      <member refid="classvar_1_1table_1ad9a35db73dbd794283bf9b986c133ca3" prot="protected" virt="non-virtual"><scope>var::table</scope><name>_col</name></member>
+      <member refid="classvar_1_1table_1a3d195e6796cfbc441b8e240b651d695b" prot="protected" virt="non-virtual"><scope>var::table</scope><name>_row</name></member>
+      <member refid="classvar_1_1table_1aa749af1d60dccf89e6c72819a58b0227" prot="public" virt="non-virtual"><scope>var::table</scope><name>add_col</name></member>
+      <member refid="classvar_1_1table_1abe04d33a4b04fff930fa8158e41309bb" prot="public" virt="non-virtual"><scope>var::table</scope><name>add_row</name></member>
       <member refid="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" prot="protected" virt="non-virtual"><scope>var::table</scope><name>center</name></member>
       <member refid="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" prot="protected" virt="non-virtual"><scope>var::table</scope><name>check_header</name></member>
-      <member refid="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" prot="protected" virt="non-virtual"><scope>var::table</scope><name>check_size</name></member>
-      <member refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" prot="protected" virt="non-virtual"><scope>var::table</scope><name>col</name></member>
+      <member refid="classvar_1_1table_1a70b568d560efd34b1a67aee49135b8a6" prot="public" virt="non-virtual"><scope>var::table</scope><name>col</name></member>
+      <member refid="classvar_1_1table_1a55535e54d90e2ddf7fbc98532e3dbaa3" prot="protected" virt="non-virtual"><scope>var::table</scope><name>col_names</name></member>
       <member refid="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" prot="public" virt="non-virtual"><scope>var::table</scope><name>describe_all</name></member>
       <member refid="classstd_1_1vector_1a2396209900e8f592db1f0b2467f7d899" prot="public" virt="non-virtual"><scope>var::table</scope><name>elements</name></member>
+      <member refid="classvar_1_1table_1a75cd6fd5f807343b311152f5118bb085" prot="protected" virt="non-virtual"><scope>var::table</scope><name>generate_cols</name></member>
       <member refid="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" prot="protected" virt="non-virtual"><scope>var::table</scope><name>generate_line</name></member>
       <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" prot="protected" virt="non-virtual"><scope>var::table</scope><name>generate_rows</name></member>
-      <member refid="classvar_1_1table_1a42c4b9b7209cc3b518fdc69142b23c76" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_avg</name></member>
-      <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_avgs</name></member>
-      <member refid="classvar_1_1table_1af24d2bf9285d7bfaf5d2263576419645" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col</name></member>
-      <member refid="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_col_</name></member>
-      <member refid="classvar_1_1table_1a0e5e2a6af3e5a10886c26c130ca51a0d" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col_size</name></member>
-      <member refid="classvar_1_1table_1a1abd7092b76e6122e17f891be3e46896" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_max</name></member>
-      <member refid="classvar_1_1table_1a3e3a7c5f503790050d32b6696a2c811a" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_min</name></member>
-      <member refid="classvar_1_1table_1af21b86535b597309c629804add469081" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_qr</name></member>
-      <member refid="classvar_1_1table_1a088733e85442485729c9304329dc9195" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_qrs</name></member>
-      <member refid="classvar_1_1table_1a8184e4d4c340aad83524b78e6676dc8c" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_r</name></member>
-      <member refid="classvar_1_1table_1a13829ed8fe8ad15fe807a0d8cb2dae2b" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row</name></member>
-      <member refid="classvar_1_1table_1ac129bb6a1940378e7511762ba5152857" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row_size</name></member>
-      <member refid="classvar_1_1table_1a3ece8de9eb74c17b73b322790ca0bf62" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_std</name></member>
-      <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_stds</name></member>
-      <member refid="classvar_1_1table_1abb470d4a1f88cbfb2225084a888e28f3" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_sum</name></member>
-      <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_sums</name></member>
-      <member refid="classvar_1_1table_1af001504d15d500670e5d776148b04d6f" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_var</name></member>
-      <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_vars</name></member>
-      <member refid="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" prot="protected" virt="non-virtual"><scope>var::table</scope><name>headers</name></member>
-      <member refid="classvar_1_1table_1ad326577c23b9400e0296f71aebe8d2a0" prot="public" virt="non-virtual"><scope>var::table</scope><name>operator[]</name></member>
+      <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_avgs</name></member>
+      <member refid="classvar_1_1table_1a6a199939870fc52d1cf6de8dc64581e5" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_col_</name></member>
+      <member refid="classvar_1_1table_1ad3c49fc9f806e825a40618000a6cb0ca" prot="protected" virt="non-virtual"><scope>var::table</scope><name>get_col_</name></member>
+      <member refid="classvar_1_1table_1abc5c989c570b6c90e15623cc7b2db1d0" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col_names</name></member>
+      <member refid="classvar_1_1table_1a28b6553353daf2c3e34a5786f90dd25c" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_col_table</name></member>
+      <member refid="classvar_1_1table_1ae6fcb87b2b648ee28fb2258f1eab3f6c" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_element</name></member>
+      <member refid="classvar_1_1table_1acde3b5b518d75c28078e60b2acfe9e1f" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_qrs</name></member>
+      <member refid="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row_names</name></member>
+      <member refid="classvar_1_1table_1a30907a37fd8b053fcdddf9b0fab3bb3a" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_row_table</name></member>
+      <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_stds</name></member>
+      <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_sums</name></member>
+      <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" prot="public" virt="non-virtual"><scope>var::table</scope><name>get_vars</name></member>
+      <member refid="classvar_1_1table_1a39534497537c1b9a7f9ab79280fba6f9" prot="public" virt="non-virtual"><scope>var::table</scope><name>operator[]</name></member>
       <member refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" prot="protected" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
       <member refid="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" prot="protected" virt="non-virtual"><scope>var::table</scope><name>prd</name></member>
       <member refid="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" prot="public" virt="non-virtual"><scope>var::table</scope><name>read_csv</name></member>
-      <member refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" prot="protected" virt="non-virtual"><scope>var::table</scope><name>row</name></member>
-      <member refid="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" prot="protected" virt="non-virtual"><scope>var::table</scope><name>rows</name></member>
+      <member refid="classvar_1_1table_1a7dbdb10f2db71872774179122ba9520b" prot="public" virt="non-virtual"><scope>var::table</scope><name>row</name></member>
+      <member refid="classvar_1_1table_1ad69844095e9fd79ebdca86f22fa42ff5" prot="protected" virt="non-virtual"><scope>var::table</scope><name>row_names</name></member>
       <member refid="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" prot="public" virt="non-virtual"><scope>var::table</scope><name>save_csv</name></member>
+      <member refid="classvar_1_1table_1a86899556462d8e8fc6499432157e4352" prot="public" virt="non-virtual"><scope>var::table</scope><name>set_col_names</name></member>
+      <member refid="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" prot="public" virt="non-virtual"><scope>var::table</scope><name>set_row_names</name></member>
+      <member refid="classvar_1_1table_1abeffbc869d8244691cf7f05125e18fd2" prot="protected" virt="non-virtual"><scope>var::table</scope><name>set_size</name></member>
       <member refid="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" prot="public" virt="non-virtual"><scope>var::table</scope><name>show</name></member>
       <member refid="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" prot="public" virt="non-virtual"><scope>var::table</scope><name>show</name></member>
       <member refid="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" prot="public" virt="non-virtual"><scope>var::table</scope><name>show_header</name></member>
-      <member refid="classvar_1_1table_1abe9eef285b846e555b9e2b4d89d82103" prot="public" virt="non-virtual"><scope>var::table</scope><name>sort_asc</name></member>
       <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" prot="protected" virt="non-virtual"><scope>var::table</scope><name>sz</name></member>
       <member refid="classvar_1_1table_1ada6ebdf0a90915bedfa07fc57b31a504" prot="public" virt="non-virtual"><scope>var::table</scope><name>table</name></member>
-      <member refid="classvar_1_1table_1a135d46678f8916df8bcd9d4d9472fd3a" prot="public" virt="non-virtual"><scope>var::table</scope><name>~table</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

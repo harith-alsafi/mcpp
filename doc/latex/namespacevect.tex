@@ -9,12 +9,14 @@ Contains functions regarding vector operations and 1D array mathematics.
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacevect_a369fb2030345114147307382513a62a3}{round}} (std\+::vector$<$ D $>$ \&a, int dp=0)
-\begin{DoxyCompactList}\small\item\em rounding the vector \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Rounding the vector by using \mbox{\hyperlink{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}{mth\+::round}}. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacevect_a1394e5e69aa94634a23d6ba50299846a}{min}} (std\+::vector$<$ D $>$ \&a)
 \item 
 {\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacevect_a11ded1664ca44b23ae59e804521cef0c}{max}} (std\+::vector$<$ D $>$ \&a)
 \item 
 {\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacevect_a441fcc00c9f98c6363a2e1869c4f127a}{sum}} (std\+::vector$<$ D $>$ \&a)
+\item 
+{\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacevect_a90382b0b99c00844e306f9ae077ce73b}{sort\+\_\+asc}} (std\+::vector$<$ D $>$ \&a)
 \item 
 {\footnotesize template$<$typename D $>$ }\\std\+::vector$<$ D $>$ \mbox{\hyperlink{namespacevect_afbea8e45015bcce9e391e2b8e8db9d64}{abs}} (std\+::vector$<$ D $>$ \&a)
 \item 
@@ -385,22 +387,22 @@ std\+::vector$<$D$>$ vect\+::round (\begin{DoxyParamCaption}\item[{std\+::vector
 
 
 
-rounding the vector 
+Rounding the vector by using \mbox{\hyperlink{namespacemth_aaf1bcab086ef624b1fb0cdff232f1db9}{mth\+::round}}. 
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em D} & \\
+{\em D} & Type \\
 \hline
 \end{DoxyTemplParams}
 
 \begin{DoxyParams}{Parameters}
-{\em a} & \\
+{\em a} & vector input \\
 \hline
-{\em dp} & \\
+{\em dp} & number of decimal places \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$\+D$>$ 
+std\+::vector$<$\+D$>$\+: vector output 
 \end{DoxyReturn}
 \mbox{\Hypertarget{namespacevect_a44e0da3a069b473e11a868489e393215}\label{namespacevect_a44e0da3a069b473e11a868489e393215}} 
 \index{vect@{vect}!sec@{sec}}
@@ -429,6 +431,13 @@ std\+::vector$<$D$>$ vect\+::sin (\begin{DoxyParamCaption}\item[{std\+::vector$<
 \doxysubsubsection{\texorpdfstring{sinh()}{sinh()}}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 std\+::vector$<$D$>$ vect\+::sinh (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacevect_a90382b0b99c00844e306f9ae077ce73b}\label{namespacevect_a90382b0b99c00844e306f9ae077ce73b}} 
+\index{vect@{vect}!sort\_asc@{sort\_asc}}
+\index{sort\_asc@{sort\_asc}!vect@{vect}}
+\doxysubsubsection{\texorpdfstring{sort\_asc()}{sort\_asc()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+std\+::vector$<$D$>$ vect\+::sort\+\_\+asc (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$ \&}]{a }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{namespacevect_a441fcc00c9f98c6363a2e1869c4f127a}\label{namespacevect_a441fcc00c9f98c6363a2e1869c4f127a}} 
 \index{vect@{vect}!sum@{sum}}

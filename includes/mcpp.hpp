@@ -1,14 +1,4 @@
 #pragma once
-#include <algorithm>
-#include <cmath>
-#include <complex>
-#include <fstream>
-#include <iostream>
-#include <limits>
-#include <numeric>
-#include <sstream>
-#include <stdexcept>
-#include <vector>
 
 // foward declarations
 namespace var
@@ -31,14 +21,16 @@ namespace lalg
 	var::matrix<D> perms(D a, D b);
 }
 
+#include "mathematic/mathematic.hpp"
 #include "numerical/vect.hpp"
+
+#include "variables/others.hpp"
+#include "variables/table.hpp"
 #include "variables/matrix.hpp"
 #include "variables/point.hpp"
-#include "variables/table.hpp"
 #include "variables/tree.hpp"
 #include "variables/vecop.hpp"
 
-#include "mathematic/mathematic.hpp"
 #include "algebra/solvers.hpp"
 
 #include "numerical/linear.hpp"

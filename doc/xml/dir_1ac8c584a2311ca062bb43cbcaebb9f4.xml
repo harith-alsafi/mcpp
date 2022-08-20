@@ -3,6 +3,7 @@
   <compounddef id="dir_1ac8c584a2311ca062bb43cbcaebb9f4" kind="dir">
     <compoundname>includes/variables</compoundname>
     <innerfile refid="matrix_8hpp">matrix.hpp</innerfile>
+    <innerfile refid="others_8hpp">others.hpp</innerfile>
     <innerfile refid="point_8hpp">point.hpp</innerfile>
     <innerfile refid="table_8hpp">table.hpp</innerfile>
     <innerfile refid="tree_8hpp">tree.hpp</innerfile>

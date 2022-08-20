@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lalg_188',['lalg',['../namespacelalg.html',1,'']]]
+  ['lalg_192',['lalg',['../namespacelalg.html',1,'']]]
 ];

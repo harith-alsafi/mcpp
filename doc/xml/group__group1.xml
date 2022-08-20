@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="group__group1" kind="group">
+    <compoundname>group1</compoundname>
+    <title>The First Group</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__group1_1ga7dbdb10f2db71872774179122ba9520b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int var::table&lt; D &gt;::row</definition>
+        <argsstring>()</argsstring>
+        <name>row</name>
+        <briefdescription>
+<para>Get the row size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="310" column="5" bodyfile="includes/variables/table.hpp" bodystart="310" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1ga70b568d560efd34b1a67aee49135b8a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int var::table&lt; D &gt;::col</definition>
+        <argsstring>()</argsstring>
+        <name>col</name>
+        <briefdescription>
+<para>Get the col size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="321" column="5" bodyfile="includes/variables/table.hpp" bodystart="321" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1gabc5c989c570b6c90e15623cc7b2db1d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::get_col_names</definition>
+        <argsstring>()</argsstring>
+        <name>get_col_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="328" column="13" bodyfile="includes/variables/table.hpp" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1ga86899556462d8e8fc6499432157e4352" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::set_col_names</definition>
+        <argsstring>(std::vector&lt; std::string &gt; names)</argsstring>
+        <name>set_col_names</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="333" column="6" bodyfile="includes/variables/table.hpp" bodystart="333" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1gaaec876550ab824cf2e02af43d1e519de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; var::table&lt; D &gt;::get_row_names</definition>
+        <argsstring>()</argsstring>
+        <name>get_row_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="343" column="13" bodyfile="includes/variables/table.hpp" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1ga60611dd76aa2d387bb2909ef3a948427" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void var::table&lt; D &gt;::set_row_names</definition>
+        <argsstring>(std::vector&lt; std::string &gt; names)</argsstring>
+        <name>set_row_names</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="348" column="6" bodyfile="includes/variables/table.hpp" bodystart="348" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group1_1gae6fcb87b2b648ee28fb2258f1eab3f6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>D &amp;</type>
+        <definition>D&amp; var::table&lt; D &gt;::get_element</definition>
+        <argsstring>(int i, int j)</argsstring>
+        <name>get_element</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/variables/table.hpp" line="358" column="3" bodyfile="includes/variables/table.hpp" bodystart="358" bodyend="361"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the first group </para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

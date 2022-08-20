@@ -11,8 +11,6 @@
 
 #pragma once
 #include "../mathematic/mathematic.hpp"
-#include <cmath>
-#include <vector>
 
 /**
  * @brief Contains functions regarding vector operations and 1D array mathematics
@@ -24,12 +22,12 @@ namespace vect
 {
 
 	/**
-	 * @brief rounding the vector
+	 * @brief Rounding the vector by using @ref mth::round
 	 *
-	 * @tparam D
-	 * @param a
-	 * @param dp
-	 * @return std::vector<D>
+	 * @tparam D: Type
+	 * @param a: vector input 
+	 * @param dp: number of decimal places
+	 * @return std::vector<D>: vector output 
 	 */
 	template <typename D>
 	std::vector<D> round(std::vector<D> &a, int dp = 0)
@@ -64,6 +62,11 @@ namespace vect
 			sm += i;
 		}
 		return sm;
+	}
+
+	template <typename D>
+	std::vector<D> sort_asc(std::vector<D> &a)
+	{
 	}
 
 	template <typename D>

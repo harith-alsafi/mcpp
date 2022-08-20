@@ -5,9 +5,136 @@
 Statistical functions.  
 
 
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacestats_a7e08e60761268b5bcb1ad6d5143fcf3a}{get\+\_\+avg}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the avgerage of vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacestats_acea5aa23a8d61591fb50017af0bf3558}{get\+\_\+var}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the variance object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacestats_ad0280107e2f7fac77120fe0487824b1c}{get\+\_\+std}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the standard diviation of vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\\mbox{\hyperlink{structvar_1_1QR}{var\+::\+QR}}$<$ D $>$ \mbox{\hyperlink{namespacestats_a689505fcec7ec7cb24bdf91274ebea12}{get\+\_\+qr}} (std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Get the quartile range of a vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\D \mbox{\hyperlink{namespacestats_a6f2fe540485800bd2859d98729f15727}{get\+\_\+r}} (std\+::vector$<$ D $>$ x, std\+::vector$<$ D $>$ y)
+\begin{DoxyCompactList}\small\item\em Get the corelation coefficient of two vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Statistical functions. 
 
 Short for STATi\+Stics 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestats_a7e08e60761268b5bcb1ad6d5143fcf3a}\label{namespacestats_a7e08e60761268b5bcb1ad6d5143fcf3a}} 
+\index{stats@{stats}!get\_avg@{get\_avg}}
+\index{get\_avg@{get\_avg}!stats@{stats}}
+\doxysubsubsection{\texorpdfstring{get\_avg()}{get\_avg()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D stats\+::get\+\_\+avg (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Get the avgerage of vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & Type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+: output average 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacestats_a689505fcec7ec7cb24bdf91274ebea12}\label{namespacestats_a689505fcec7ec7cb24bdf91274ebea12}} 
+\index{stats@{stats}!get\_qr@{get\_qr}}
+\index{get\_qr@{get\_qr}!stats@{stats}}
+\doxysubsubsection{\texorpdfstring{get\_qr()}{get\_qr()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+\mbox{\hyperlink{structvar_1_1QR}{var\+::\+QR}}$<$D$>$ stats\+::get\+\_\+qr (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Get the quartile range of a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily QR}\+: the quartile range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacestats_a6f2fe540485800bd2859d98729f15727}\label{namespacestats_a6f2fe540485800bd2859d98729f15727}} 
+\index{stats@{stats}!get\_r@{get\_r}}
+\index{get\_r@{get\_r}!stats@{stats}}
+\doxysubsubsection{\texorpdfstring{get\_r()}{get\_r()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D stats\+::get\+\_\+r (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{x,  }\item[{std\+::vector$<$ D $>$}]{y }\end{DoxyParamCaption})}
+
+
+
+Get the corelation coefficient of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x vector \\
+\hline
+{\em y} & y vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+: corelation coefficient 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacestats_ad0280107e2f7fac77120fe0487824b1c}\label{namespacestats_ad0280107e2f7fac77120fe0487824b1c}} 
+\index{stats@{stats}!get\_std@{get\_std}}
+\index{get\_std@{get\_std}!stats@{stats}}
+\doxysubsubsection{\texorpdfstring{get\_std()}{get\_std()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D stats\+::get\+\_\+std (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Get the standard diviation of vector. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & Type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+: output standard diviation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacestats_acea5aa23a8d61591fb50017af0bf3558}\label{namespacestats_acea5aa23a8d61591fb50017af0bf3558}} 
+\index{stats@{stats}!get\_var@{get\_var}}
+\index{get\_var@{get\_var}!stats@{stats}}
+\doxysubsubsection{\texorpdfstring{get\_var()}{get\_var()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+D stats\+::get\+\_\+var (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Get the variance object. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & Type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & input vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+: output variance 
+\end{DoxyReturn}

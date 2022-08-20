@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['l_90',['L',['../structvar_1_1matrix_1_1LU.html#acba2383bcfea720a6704dc18577a36f7',1,'var::matrix::LU']]],
-  ['lalg_91',['lalg',['../namespacelalg.html',1,'']]],
-  ['linear_5froot_92',['linear_root',['../namespacealg.html#ae12ce2550f24342bee89be8ad4952825',1,'alg']]],
-  ['linear_5fsim_93',['linear_sim',['../namespacealg.html#a5d4200bd9f3081bdd35bc2bb1255c6a2',1,'alg']]],
-  ['linspace_94',['linspace',['../namespacevect.html#a8906c773561edd0cb239ff19f923a55a',1,'vect']]],
-  ['lq_95',['LQ',['../structvar_1_1table_1_1QR.html#aaf0b2378ea388578440b4db043326ca2',1,'var::table::QR']]],
-  ['lu_96',['LU',['../structvar_1_1matrix_1_1LU.html',1,'var::matrix']]]
+  ['m_99',['M',['../classvar_1_1matrix.html#ae63bcd0b556175ab578d7095b6cf647c',1,'var::matrix']]],
+  ['mat_5fop_100',['mat_op',['../classvar_1_1matrix.html#abf48edbbdf86b09b660ecfd2981f9711',1,'var::matrix']]],
+  ['mathdiv_101',['mathdiv',['../classvar_1_1matrix.html#aee47063227151af8ea22f75e5d2fee2a',1,'var::matrix']]],
+  ['mathmul_102',['mathmul',['../classvar_1_1matrix.html#aa3ed5f2268e6f8bbb415128c1d4a54ed',1,'var::matrix']]],
+  ['matrix_103',['matrix',['../classvar_1_1matrix.html#aaf88fb07ffd608510c2c834a925f3926',1,'var::matrix::matrix(int r, int c)'],['../classvar_1_1matrix.html#a1060b67ddd058f180bd4b1f304562f64',1,'var::matrix::matrix()'],['../classvar_1_1matrix.html#a4b93fcfa4d64d096fd185ff1004256eb',1,'var::matrix::matrix(std::initializer_list&lt; std::initializer_list&lt; D &gt;&gt; a)'],['../classvar_1_1matrix.html',1,'var::matrix&lt; D &gt;']]],
+  ['max_104',['max',['../namespacevect.html#a11ded1664ca44b23ae59e804521cef0c',1,'vect']]],
+  ['min_105',['min',['../namespacevect.html#a1394e5e69aa94634a23d6ba50299846a',1,'vect']]],
+  ['mm_106',['MM',['../classvar_1_1matrix.html#a23843a10260f18c0a8ee950a4c8ba0be',1,'var::matrix']]],
+  ['mth_107',['mth',['../namespacemth.html',1,'']]]
 ];

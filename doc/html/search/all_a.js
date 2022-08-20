@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['join_5fcol_88',['join_col',['../classvar_1_1matrix.html#ae6431ed7fca8e942a9887ae8fa68897b',1,'var::matrix']]],
-  ['join_5frow_89',['join_row',['../classvar_1_1matrix.html#a360593837b06f88da2dc1a189804bc36',1,'var::matrix']]]
+  ['l_92',['L',['../structvar_1_1matrix_1_1LU.html#acba2383bcfea720a6704dc18577a36f7',1,'var::matrix::LU']]],
+  ['lalg_93',['lalg',['../namespacelalg.html',1,'']]],
+  ['linear_5froot_94',['linear_root',['../namespacealg.html#ae12ce2550f24342bee89be8ad4952825',1,'alg']]],
+  ['linear_5fsim_95',['linear_sim',['../namespacealg.html#a5d4200bd9f3081bdd35bc2bb1255c6a2',1,'alg']]],
+  ['linspace_96',['linspace',['../namespacevect.html#a8906c773561edd0cb239ff19f923a55a',1,'vect']]],
+  ['lq_97',['LQ',['../structvar_1_1QR.html#add0dc0eec467b1cccdc1e708f3f3cca1',1,'var::QR']]],
+  ['lu_98',['LU',['../structvar_1_1matrix_1_1LU.html',1,'var::matrix']]]
 ];

@@ -75,7 +75,7 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:a369fb2030345114147307382513a62a3"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:a369fb2030345114147307382513a62a3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevect.html#a369fb2030345114147307382513a62a3">round</a> (std::vector&lt; D &gt; &amp;a, int dp=0)</td></tr>
-<tr class="memdesc:a369fb2030345114147307382513a62a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">rounding the vector  <a href="namespacevect.html#a369fb2030345114147307382513a62a3">More...</a><br /></td></tr>
+<tr class="memdesc:a369fb2030345114147307382513a62a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounding the vector by using <a class="el" href="namespacemth.html#aaf1bcab086ef624b1fb0cdff232f1db9">mth::round</a>.  <a href="namespacevect.html#a369fb2030345114147307382513a62a3">More...</a><br /></td></tr>
 <tr class="separator:a369fb2030345114147307382513a62a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1394e5e69aa94634a23d6ba50299846a"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:a1394e5e69aa94634a23d6ba50299846a"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevect.html#a1394e5e69aa94634a23d6ba50299846a">min</a> (std::vector&lt; D &gt; &amp;a)</td></tr>
@@ -86,6 +86,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a441fcc00c9f98c6363a2e1869c4f127a"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:a441fcc00c9f98c6363a2e1869c4f127a"><td class="memTemplItemLeft" align="right" valign="top">D&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevect.html#a441fcc00c9f98c6363a2e1869c4f127a">sum</a> (std::vector&lt; D &gt; &amp;a)</td></tr>
 <tr class="separator:a441fcc00c9f98c6363a2e1869c4f127a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90382b0b99c00844e306f9ae077ce73b"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
+<tr class="memitem:a90382b0b99c00844e306f9ae077ce73b"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevect.html#a90382b0b99c00844e306f9ae077ce73b">sort_asc</a> (std::vector&lt; D &gt; &amp;a)</td></tr>
+<tr class="separator:a90382b0b99c00844e306f9ae077ce73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbea8e45015bcce9e391e2b8e8db9d64"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
 <tr class="memitem:afbea8e45015bcce9e391e2b8e8db9d64"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevect.html#afbea8e45015bcce9e391e2b8e8db9d64">abs</a> (std::vector&lt; D &gt; &amp;a)</td></tr>
 <tr class="separator:afbea8e45015bcce9e391e2b8e8db9d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -963,21 +966,21 @@ template&lt;typename D &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>rounding the vector </p>
+<p>Rounding the vector by using <a class="el" href="namespacemth.html#aaf1bcab086ef624b1fb0cdff232f1db9">mth::round</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">D</td><td></td></tr>
+    <tr><td class="paramname">D</td><td>Type </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td></td></tr>
-    <tr><td class="paramname">dp</td><td></td></tr>
+    <tr><td class="paramname">a</td><td>vector input </td></tr>
+    <tr><td class="paramname">dp</td><td>number of decimal places </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;D&gt;: vector output </dd></dl>
 
 </div>
 </div>
@@ -1053,6 +1056,26 @@ template&lt;typename D &gt; </div>
           <td class="memname">std::vector&lt;D&gt; vect::sinh </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; D &gt;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90382b0b99c00844e306f9ae077ce73b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90382b0b99c00844e306f9ae077ce73b">&#9670;&nbsp;</a></span>sort_asc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;D&gt; vect::sort_asc </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; D &gt; &amp;&#160;</td>
           <td class="paramname"><em>a</em></td><td>)</td>
           <td></td>
         </tr>

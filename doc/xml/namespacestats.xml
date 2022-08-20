@@ -2,12 +2,228 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="namespacestats" kind="namespace" language="C++">
     <compoundname>stats</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_avg</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_avg</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the avgerage of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output average </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="35" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_var</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_var</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the variance object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output variance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="48" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1ad0280107e2f7fac77120fe0487824b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_std</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_std</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the standard diviation of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output standard diviation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="68" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1a689505fcec7ec7cb24bdf91274ebea12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structvar_1_1QR" kindref="compound">var::QR</ref>&lt; D &gt;</type>
+        <definition>var::QR&lt;D&gt; stats::get_qr</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_qr</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the quartile range of a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>QR</computeroutput>: the quartile range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="80" column="9" bodyfile="includes/statistics/stat.hpp" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1a6f2fe540485800bd2859d98729f15727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_r</definition>
+        <argsstring>(std::vector&lt; D &gt; x, std::vector&lt; D &gt; y)</argsstring>
+        <name>get_r</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the corelation coefficient of two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: corelation coefficient </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="103" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="103" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>Statistical functions. </para>
     </briefdescription>
     <detaileddescription>
 <para>Short for STATiStics </para>
     </detaileddescription>
-    <location file="includes/statistics/stat.hpp" line="18" column="1"/>
+    <location file="includes/statistics/stat.hpp" line="24" column="1"/>
   </compounddef>
 </doxygen>

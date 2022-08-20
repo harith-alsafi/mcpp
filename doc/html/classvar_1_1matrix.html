@@ -171,15 +171,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f45fc90c8164ef40a6c820eeef096b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a0f45fc90c8164ef40a6c820eeef096b1">row_swap</a> (int i1, int i2)</td></tr>
 <tr class="memdesc:a0f45fc90c8164ef40a6c820eeef096b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps row of matrix.  <a href="classvar_1_1matrix.html#a0f45fc90c8164ef40a6c820eeef096b1">More...</a><br /></td></tr>
 <tr class="separator:a0f45fc90c8164ef40a6c820eeef096b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a76ad44aa71ba8eaa73d9d4fd1431d3af">col_swap</a> (int j1, int j2)</td></tr>
+<tr class="memdesc:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colum swap.  <a href="classvar_1_1matrix.html#a76ad44aa71ba8eaa73d9d4fd1431d3af">More...</a><br /></td></tr>
+<tr class="separator:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82d3724b6ff3dd95144c9e25429c9dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a82d3724b6ff3dd95144c9e25429c9dbe">replace_row</a> (int i, std::vector&lt; D &gt; a)</td></tr>
 <tr class="memdesc:a82d3724b6ff3dd95144c9e25429c9dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces certain row.  <a href="classvar_1_1matrix.html#a82d3724b6ff3dd95144c9e25429c9dbe">More...</a><br /></td></tr>
 <tr class="separator:a82d3724b6ff3dd95144c9e25429c9dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8ab8d695bb6b214bcfb44a544e0c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a7c8ab8d695bb6b214bcfb44a544e0c0d">replace_col</a> (int j, std::vector&lt; D &gt; a)</td></tr>
 <tr class="memdesc:a7c8ab8d695bb6b214bcfb44a544e0c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces certain colum.  <a href="classvar_1_1matrix.html#a7c8ab8d695bb6b214bcfb44a544e0c0d">More...</a><br /></td></tr>
 <tr class="separator:a7c8ab8d695bb6b214bcfb44a544e0c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a76ad44aa71ba8eaa73d9d4fd1431d3af">col_swap</a> (int j1, int j2)</td></tr>
-<tr class="memdesc:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colum swap.  <a href="classvar_1_1matrix.html#a76ad44aa71ba8eaa73d9d4fd1431d3af">More...</a><br /></td></tr>
-<tr class="separator:a76ad44aa71ba8eaa73d9d4fd1431d3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84d1beb5e7704a6e7799351bf0623657"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1matrix.html#a84d1beb5e7704a6e7799351bf0623657">sort_rows</a> (int d=1)</td></tr>
 <tr class="memdesc:a84d1beb5e7704a6e7799351bf0623657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorts all rows.  <a href="classvar_1_1matrix.html#a84d1beb5e7704a6e7799351bf0623657">More...</a><br /></td></tr>
 <tr class="separator:a84d1beb5e7704a6e7799351bf0623657"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3328,7 +3328,7 @@ template&lt;typename D &gt; </div>
 
 <p>Sum of all elements. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">sum</a> = m.sum();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:879</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_af58bf7e07cebde78a2e0ad99acd5deeb"><div class="ttname"><a href="classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb">var::matrix::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:881</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
 
 </div>
@@ -3361,7 +3361,7 @@ template&lt;typename D &gt; </div>
 <p>Transpose of a matrix. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><a class="code" href="classvar_1_1matrix.html">var::matrix&lt;int&gt;</a> m(3, 3);</div>
 <div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a> = m.<a class="code" href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">T</a>();</div>
-<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:927</div></div>
+<div class="ttc" id="aclassvar_1_1matrix_html_a3b2c5d8983bb1dcdc250768a0f0ce578"><div class="ttname"><a href="classvar_1_1matrix.html#a3b2c5d8983bb1dcdc250768a0f0ce578">var::matrix::T</a></div><div class="ttdeci">matrix T()</div><div class="ttdoc">Transpose of a matrix.</div><div class="ttdef"><b>Definition:</b> matrix.hpp:929</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>matrix</code> </dd></dl>
 
 </div>

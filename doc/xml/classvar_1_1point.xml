@@ -17,7 +17,7 @@
         <link refid="classvar_1_1point"/>
       </node>
     </collaborationgraph>
-    <location file="includes/mcpp.hpp" line="21" column="1" bodyfile="includes/mcpp.hpp" bodystart="21" bodyend="-1"/>
+    <location file="includes/mcpp.hpp" line="11" column="1" bodyfile="includes/mcpp.hpp" bodystart="11" bodyend="-1"/>
     <listofallmembers>
     </listofallmembers>
   </compounddef>

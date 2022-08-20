@@ -2,18 +2,301 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="stat_8hpp" kind="file" language="C++">
     <compoundname>stat.hpp</compoundname>
+    <includes refid="mathematic_8hpp" local="yes">../mathematic/mathematic.hpp</includes>
+    <includes refid="vect_8hpp" local="yes">../numerical/vect.hpp</includes>
+    <includes refid="others_8hpp" local="yes">../variables/others.hpp</includes>
+    <includes refid="vecop_8hpp" local="yes">../variables/vecop.hpp</includes>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
+    <includedby refid="table_8hpp" local="yes">includes/variables/table.hpp</includedby>
     <innernamespace refid="namespacestats">stats</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_avg</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_avg</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the avgerage of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output average </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="35" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_var</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_var</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the variance object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output variance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="48" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1ad0280107e2f7fac77120fe0487824b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_std</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_std</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the standard diviation of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: output standard diviation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="68" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1a689505fcec7ec7cb24bdf91274ebea12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structvar_1_1QR" kindref="compound">var::QR</ref>&lt; D &gt;</type>
+        <definition>var::QR&lt;D&gt; stats::get_qr</definition>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
+        <name>get_qr</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get the quartile range of a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>QR</computeroutput>: the quartile range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="80" column="9" bodyfile="includes/statistics/stat.hpp" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacestats_1a6f2fe540485800bd2859d98729f15727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>D</type>
+        <definition>D stats::get_r</definition>
+        <argsstring>(std::vector&lt; D &gt; x, std::vector&lt; D &gt; y)</argsstring>
+        <name>get_r</name>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; D &gt;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the corelation coefficient of two vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>D: corelation coefficient </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="includes/statistics/stat.hpp" line="103" column="3" bodyfile="includes/statistics/stat.hpp" bodystart="103" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="namespacestats" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestats" kindref="compound">stats</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mathematic/mathematic.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../numerical/vect.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../variables/others.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../variables/vecop.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="namespacestats" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestats" kindref="compound">stats</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" kindref="member">get_avg</ref>(std::vector&lt;D&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" kindref="member">vect::sum</ref>(a)<sp/>/<sp/>D(a.size());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" kindref="member">get_var</ref>(std::vector&lt;D&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>mean<sp/>=<sp/><ref refid="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" kindref="member">get_avg</ref>(a);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N<sp/><sp/>=<sp/>(int)<sp/>a.size();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sum<sp/><sp/>=<sp/>D(0);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>N;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>D(std::pow((a[i]<sp/>-<sp/>mean),<sp/>D(2)));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(D)<sp/>sum<sp/>/<sp/>N;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacestats_1ad0280107e2f7fac77120fe0487824b1c" kindref="member">get_std</ref>(std::vector&lt;D&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>D(std::sqrt(<ref refid="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" kindref="member">get_var</ref>(a)));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvar_1_1QR" kindref="compound">var::QR&lt;D&gt;</ref><sp/><ref refid="namespacestats_1a689505fcec7ec7cb24bdf91274ebea12" kindref="member">get_qr</ref>(std::vector&lt;D&gt;<sp/>a)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structvar_1_1QR" kindref="compound">var::QR&lt;D&gt;</ref><sp/>qr;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qr.<ref refid="structvar_1_1QR_1add0dc0eec467b1cccdc1e708f3f3cca1" kindref="member">LQ</ref><sp/>=<sp/><ref refid="namespacevect_1a1394e5e69aa94634a23d6ba50299846a" kindref="member">vect::min</ref>(a);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qr.<ref refid="structvar_1_1QR_1afee827e814009fc1add05083f8b0586d" kindref="member">UQ</ref><sp/>=<sp/><ref refid="namespacevect_1a11ded1664ca44b23ae59e804521cef0c" kindref="member">vect::max</ref>(a);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;D&gt;<sp/>a_sorted<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::sort(a_sorted.begin(),<sp/>a_sorted.end());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qr.<ref refid="structvar_1_1QR_1af843a20b7785502305ef0124c09b80ae" kindref="member">Q1</ref><sp/>=<sp/>a_sorted.at(D(a_sorted.size())<sp/>/<sp/>D(4));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qr.<ref refid="structvar_1_1QR_1a53d4de60b6b7913575898481a64c3d1e" kindref="member">Q2</ref><sp/>=<sp/>a_sorted.at(D(a_sorted.size())<sp/>/<sp/>D(2));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qr.<ref refid="structvar_1_1QR_1a93de73ac05741855b14e633d8a6ea5c4" kindref="member">Q3</ref><sp/>=<sp/>a_sorted.at(D(D(3)<sp/>*<sp/>(a_sorted.size()))<sp/>/<sp/>D(4));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>qr;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacestats_1a6f2fe540485800bd2859d98729f15727" kindref="member">get_r</ref>(std::vector&lt;D&gt;<sp/>x,<sp/>std::vector&lt;D&gt;<sp/>y)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(x.size()<sp/>!=<sp/>y.size())<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::invalid_argument(</highlight><highlight class="stringliteral">&quot;stats::get_r<sp/>-&gt;<sp/>Size<sp/>mismatch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sumx<sp/><sp/>=<sp/>get_sum(x);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sumy<sp/><sp/>=<sp/>get_sum(y);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sumxx<sp/>=<sp/>get_sum(x<sp/>*<sp/>x);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sumxy<sp/>=<sp/>get_sum(x<sp/>*<sp/>y);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sumyy<sp/>=<sp/>get_sum(y<sp/>*<sp/>y);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(D(x.size())<sp/>*<sp/>sumxy<sp/>-<sp/>(sumx<sp/>*<sp/>sumy))<sp/>/</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D(D(std::sqrt((D(x.size()))<sp/>*<sp/>sumxx<sp/>-<sp/>D(std::pow(sumx,<sp/>D(2))))<sp/>*</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(D(x.size())<sp/>*<sp/>sumyy<sp/>-<sp/>D(std::pow(sumy,<sp/>D(2))))));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="includes/statistics/stat.hpp"/>
   </compounddef>

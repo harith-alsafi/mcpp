@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/mathematic/mathematic.hpp" line="30" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="30" bodyend="37"/>
+        <location file="includes/mathematic/mathematic.hpp" line="38" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="38" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a1d4d7ae61316264e1d077af404d9076d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/mathematic/mathematic.hpp" line="46" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="46" bodyend="49"/>
+        <location file="includes/mathematic/mathematic.hpp" line="54" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="54" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1a95418068265434e367e5c0f63d96bfd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/mathematic/mathematic.hpp" line="59" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="59" bodyend="68"/>
+        <location file="includes/mathematic/mathematic.hpp" line="67" column="5" bodyfile="includes/mathematic/mathematic.hpp" bodystart="67" bodyend="76"/>
       </memberdef>
       <memberdef kind="function" id="namespacemth_1aaf1bcab086ef624b1fb0cdff232f1db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/mathematic/mathematic.hpp" line="79" column="3" bodyfile="includes/mathematic/mathematic.hpp" bodystart="79" bodyend="85"/>
+        <location file="includes/mathematic/mathematic.hpp" line="87" column="3" bodyfile="includes/mathematic/mathematic.hpp" bodystart="87" bodyend="93"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -183,6 +183,6 @@
     <detaileddescription>
 <para>Short for MaTHematics </para>
     </detaileddescription>
-    <location file="includes/mathematic/mathematic.hpp" line="21" column="1"/>
+    <location file="includes/mathematic/mathematic.hpp" line="29" column="1"/>
   </compounddef>
 </doxygen>

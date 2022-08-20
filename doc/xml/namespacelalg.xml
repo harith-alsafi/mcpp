@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/linear.hpp" line="38" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="38" bodyend="52" declfile="includes/mcpp.hpp" declline="29" declcolumn="13"/>
+        <location file="includes/numerical/linear.hpp" line="38" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="38" bodyend="52" declfile="includes/mcpp.hpp" declline="19" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespacelalg_1a0a2b8b4dbc1e01f3c7a0bf0b9400ca3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="includes/numerical/linear.hpp" line="55" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="55" bodyend="57" declfile="includes/mcpp.hpp" declline="31" declcolumn="13"/>
+        <location file="includes/numerical/linear.hpp" line="55" column="13" bodyfile="includes/numerical/linear.hpp" bodystart="55" bodyend="57" declfile="includes/mcpp.hpp" declline="21" declcolumn="13"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,6 +80,6 @@
     <detaileddescription>
 <para>Short for Linear ALGebra </para>
     </detaileddescription>
-    <location file="includes/mcpp.hpp" line="26" column="1"/>
+    <location file="includes/mcpp.hpp" line="16" column="1"/>
   </compounddef>
 </doxygen>

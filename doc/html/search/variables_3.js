@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['headers_347',['headers',['../classvar_1_1table.html#af238cb3f30f4e545efdc4e0e0c371cde',1,'var::table']]]
+  ['imag_354',['imag',['../structalg_1_1ans.html#a2eba832a029d4e71f4fd66f6789f84b2',1,'alg::ans']]]
 ];

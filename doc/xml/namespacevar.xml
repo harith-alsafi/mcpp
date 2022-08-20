@@ -6,11 +6,12 @@
     <innerclass refid="classvar_1_1matrix" prot="public">var::matrix</innerclass>
     <innerclass refid="classvar_1_1point" prot="public">var::point</innerclass>
     <innerclass refid="classvar_1_1tree" prot="public">var::tree</innerclass>
+    <innerclass refid="structvar_1_1QR" prot="public">var::QR</innerclass>
     <briefdescription>
 <para>Namespace that contains all variable data types. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="includes/mcpp.hpp" line="14" column="1"/>
+    <location file="includes/mcpp.hpp" line="4" column="1"/>
   </compounddef>
 </doxygen>

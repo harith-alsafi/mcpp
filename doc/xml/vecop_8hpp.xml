@@ -6,6 +6,7 @@
     <includes local="no">sstream</includes>
     <includes local="no">vector</includes>
     <includedby refid="mcpp_8hpp" local="yes">includes/mcpp.hpp</includedby>
+    <includedby refid="stat_8hpp" local="yes">includes/statistics/stat.hpp</includedby>
     <incdepgraph>
       <node id="1">
         <label>includes/variables/vecop.hpp</label>

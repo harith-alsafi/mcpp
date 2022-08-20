@@ -50,9 +50,9 @@
     <member refid="classvar_1_1matrix_1a1ee2cc11235c4798bb70ed96a0fbf29a" kind="function"><name>erase_row</name></member>
     <member refid="classvar_1_1matrix_1a148b9d63ce138a9478aa8adb9e217986" kind="function"><name>erase_col</name></member>
     <member refid="classvar_1_1matrix_1a0f45fc90c8164ef40a6c820eeef096b1" kind="function"><name>row_swap</name></member>
+    <member refid="classvar_1_1matrix_1a76ad44aa71ba8eaa73d9d4fd1431d3af" kind="function"><name>col_swap</name></member>
     <member refid="classvar_1_1matrix_1a82d3724b6ff3dd95144c9e25429c9dbe" kind="function"><name>replace_row</name></member>
     <member refid="classvar_1_1matrix_1a7c8ab8d695bb6b214bcfb44a544e0c0d" kind="function"><name>replace_col</name></member>
-    <member refid="classvar_1_1matrix_1a76ad44aa71ba8eaa73d9d4fd1431d3af" kind="function"><name>col_swap</name></member>
     <member refid="classvar_1_1matrix_1a84d1beb5e7704a6e7799351bf0623657" kind="function"><name>sort_rows</name></member>
     <member refid="classvar_1_1matrix_1a06fa30fdba1e861449593cfd6e1398dc" kind="function"><name>sort_cols</name></member>
     <member refid="classvar_1_1matrix_1acc872e3d984edf32f474e221c749e632" kind="function"><name>sort_row</name></member>
@@ -105,55 +105,53 @@
   </compound>
   <compound refid="classvar_1_1point" kind="class"><name>var::point</name>
   </compound>
-  <compound refid="structvar_1_1table_1_1QR" kind="struct"><name>var::table::QR</name>
-    <member refid="structvar_1_1table_1_1QR_1aaf0b2378ea388578440b4db043326ca2" kind="variable"><name>LQ</name></member>
-    <member refid="structvar_1_1table_1_1QR_1a54329de34102862d4abfd55076b8327d" kind="variable"><name>Q1</name></member>
-    <member refid="structvar_1_1table_1_1QR_1a9532f1a707f868af1d622a748f72ff2f" kind="variable"><name>Q2</name></member>
-    <member refid="structvar_1_1table_1_1QR_1a3be119fa7845d59e6cbbf0b7d5540778" kind="variable"><name>Q3</name></member>
-    <member refid="structvar_1_1table_1_1QR_1ad25db8533ccfc2174b816fc49abe2b9a" kind="variable"><name>UQ</name></member>
+  <compound refid="structvar_1_1QR" kind="struct"><name>var::QR</name>
+    <member refid="structvar_1_1QR_1add0dc0eec467b1cccdc1e708f3f3cca1" kind="variable"><name>LQ</name></member>
+    <member refid="structvar_1_1QR_1af843a20b7785502305ef0124c09b80ae" kind="variable"><name>Q1</name></member>
+    <member refid="structvar_1_1QR_1a53d4de60b6b7913575898481a64c3d1e" kind="variable"><name>Q2</name></member>
+    <member refid="structvar_1_1QR_1a93de73ac05741855b14e633d8a6ea5c4" kind="variable"><name>Q3</name></member>
+    <member refid="structvar_1_1QR_1afee827e814009fc1add05083f8b0586d" kind="variable"><name>UQ</name></member>
   </compound>
   <compound refid="classvar_1_1table" kind="class"><name>var::table</name>
-    <member refid="classvar_1_1table_1af238cb3f30f4e545efdc4e0e0c371cde" kind="variable"><name>headers</name></member>
-    <member refid="classvar_1_1table_1a4333369e4f9d6443768ffe9e21dd04ed" kind="variable"><name>rows</name></member>
-    <member refid="classvar_1_1table_1a6dd43c21c40a2c82b80fce47e8f45751" kind="variable"><name>row</name></member>
-    <member refid="classvar_1_1table_1a0170e1261a00394cf7017c86e6833b49" kind="variable"><name>col</name></member>
+    <member refid="classvar_1_1table_1a55535e54d90e2ddf7fbc98532e3dbaa3" kind="variable"><name>col_names</name></member>
+    <member refid="classvar_1_1table_1ad69844095e9fd79ebdca86f22fa42ff5" kind="variable"><name>row_names</name></member>
+    <member refid="classvar_1_1table_1a3d195e6796cfbc441b8e240b651d695b" kind="variable"><name>_row</name></member>
+    <member refid="classvar_1_1table_1ad9a35db73dbd794283bf9b986c133ca3" kind="variable"><name>_col</name></member>
     <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" kind="variable"><name>sz</name></member>
+    <member refid="classvar_1_1table_1abeffbc869d8244691cf7f05125e18fd2" kind="function"><name>set_size</name></member>
     <member refid="classvar_1_1table_1af5c68e6a9c7857107e5ba88fcff52119" kind="function"><name>check_header</name></member>
-    <member refid="classvar_1_1table_1aea1482942b89d2a6410a7a69a9cb710e" kind="function"><name>get_col_</name></member>
-    <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" kind="function"><name>get_avgs</name></member>
-    <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" kind="function"><name>get_stds</name></member>
-    <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" kind="function"><name>get_vars</name></member>
-    <member refid="classvar_1_1table_1a088733e85442485729c9304329dc9195" kind="function"><name>get_qrs</name></member>
-    <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" kind="function"><name>get_sums</name></member>
-    <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" kind="function"><name>generate_rows</name></member>
-    <member refid="classvar_1_1table_1a55df2f9f50827b058c9b8c3bd4d38d17" kind="function"><name>check_size</name></member>
+    <member refid="classvar_1_1table_1a6a199939870fc52d1cf6de8dc64581e5" kind="function"><name>get_col_</name></member>
+    <member refid="classvar_1_1table_1ad3c49fc9f806e825a40618000a6cb0ca" kind="function"><name>get_col_</name></member>
     <member refid="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" kind="function"><name>generate_line</name></member>
+    <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" kind="function"><name>generate_rows</name></member>
+    <member refid="classvar_1_1table_1a75cd6fd5f807343b311152f5118bb085" kind="function"><name>generate_cols</name></member>
     <member refid="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" kind="function"><name>center</name></member>
     <member refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" kind="function"><name>prd</name></member>
     <member refid="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" kind="function"><name>prd</name></member>
     <member refid="classvar_1_1table_1ada6ebdf0a90915bedfa07fc57b31a504" kind="function"><name>table</name></member>
-    <member refid="classvar_1_1table_1a135d46678f8916df8bcd9d4d9472fd3a" kind="function"><name>~table</name></member>
+    <member refid="classvar_1_1table_1a7dbdb10f2db71872774179122ba9520b" kind="function"><name>row</name></member>
+    <member refid="classvar_1_1table_1a70b568d560efd34b1a67aee49135b8a6" kind="function"><name>col</name></member>
+    <member refid="classvar_1_1table_1abc5c989c570b6c90e15623cc7b2db1d0" kind="function"><name>get_col_names</name></member>
+    <member refid="classvar_1_1table_1a86899556462d8e8fc6499432157e4352" kind="function"><name>set_col_names</name></member>
+    <member refid="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" kind="function"><name>get_row_names</name></member>
+    <member refid="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" kind="function"><name>set_row_names</name></member>
+    <member refid="classvar_1_1table_1ae6fcb87b2b648ee28fb2258f1eab3f6c" kind="function"><name>get_element</name></member>
+    <member refid="classvar_1_1table_1a39534497537c1b9a7f9ab79280fba6f9" kind="function"><name>operator[]</name></member>
     <member refid="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" kind="function"><name>read_csv</name></member>
     <member refid="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" kind="function"><name>save_csv</name></member>
-    <member refid="classvar_1_1table_1ac129bb6a1940378e7511762ba5152857" kind="function"><name>get_row_size</name></member>
-    <member refid="classvar_1_1table_1a0e5e2a6af3e5a10886c26c130ca51a0d" kind="function"><name>get_col_size</name></member>
-    <member refid="classvar_1_1table_1ad326577c23b9400e0296f71aebe8d2a0" kind="function"><name>operator[]</name></member>
     <member refid="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" kind="function"><name>show</name></member>
     <member refid="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" kind="function"><name>show</name></member>
-    <member refid="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" kind="function"><name>describe_all</name></member>
-    <member refid="classvar_1_1table_1a13829ed8fe8ad15fe807a0d8cb2dae2b" kind="function"><name>get_row</name></member>
-    <member refid="classvar_1_1table_1af24d2bf9285d7bfaf5d2263576419645" kind="function"><name>get_col</name></member>
-    <member refid="classvar_1_1table_1ab2ebc42048d7552e1661916c0756482d" kind="function"><name>add_col</name></member>
     <member refid="classvar_1_1table_1a5e7459882c4bd4bc29759f5fb3c1ee10" kind="function"><name>show_header</name></member>
-    <member refid="classvar_1_1table_1abe9eef285b846e555b9e2b4d89d82103" kind="function"><name>sort_asc</name></member>
-    <member refid="classvar_1_1table_1a3e3a7c5f503790050d32b6696a2c811a" kind="function"><name>get_min</name></member>
-    <member refid="classvar_1_1table_1a1abd7092b76e6122e17f891be3e46896" kind="function"><name>get_max</name></member>
-    <member refid="classvar_1_1table_1abb470d4a1f88cbfb2225084a888e28f3" kind="function"><name>get_sum</name></member>
-    <member refid="classvar_1_1table_1a42c4b9b7209cc3b518fdc69142b23c76" kind="function"><name>get_avg</name></member>
-    <member refid="classvar_1_1table_1af001504d15d500670e5d776148b04d6f" kind="function"><name>get_var</name></member>
-    <member refid="classvar_1_1table_1a3ece8de9eb74c17b73b322790ca0bf62" kind="function"><name>get_std</name></member>
-    <member refid="classvar_1_1table_1af21b86535b597309c629804add469081" kind="function"><name>get_qr</name></member>
-    <member refid="classvar_1_1table_1a8184e4d4c340aad83524b78e6676dc8c" kind="function"><name>get_r</name></member>
+    <member refid="classvar_1_1table_1a30907a37fd8b053fcdddf9b0fab3bb3a" kind="function"><name>get_row_table</name></member>
+    <member refid="classvar_1_1table_1a28b6553353daf2c3e34a5786f90dd25c" kind="function"><name>get_col_table</name></member>
+    <member refid="classvar_1_1table_1aa749af1d60dccf89e6c72819a58b0227" kind="function"><name>add_col</name></member>
+    <member refid="classvar_1_1table_1abe04d33a4b04fff930fa8158e41309bb" kind="function"><name>add_row</name></member>
+    <member refid="classvar_1_1table_1a4c6b4d98de8c0e527ac5f55ce455270b" kind="function"><name>get_avgs</name></member>
+    <member refid="classvar_1_1table_1a2c2a9860253cc9e72b822d35c777e749" kind="function"><name>get_stds</name></member>
+    <member refid="classvar_1_1table_1a196ea90112f0e84e30ea8fa6e7b1cb98" kind="function"><name>get_vars</name></member>
+    <member refid="classvar_1_1table_1acde3b5b518d75c28078e60b2acfe9e1f" kind="function"><name>get_qrs</name></member>
+    <member refid="classvar_1_1table_1a85c69677672bfc6a61b0499e868c7465" kind="function"><name>get_sums</name></member>
+    <member refid="classvar_1_1table_1afa3958110fe2532e0e8f47c9281b9a90" kind="function"><name>describe_all</name></member>
   </compound>
   <compound refid="classvar_1_1tree" kind="class"><name>var::tree</name>
   </compound>
@@ -185,6 +183,11 @@
   <compound refid="namespacesig" kind="namespace"><name>sig</name>
   </compound>
   <compound refid="namespacestats" kind="namespace"><name>stats</name>
+    <member refid="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" kind="function"><name>get_avg</name></member>
+    <member refid="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" kind="function"><name>get_var</name></member>
+    <member refid="namespacestats_1ad0280107e2f7fac77120fe0487824b1c" kind="function"><name>get_std</name></member>
+    <member refid="namespacestats_1a689505fcec7ec7cb24bdf91274ebea12" kind="function"><name>get_qr</name></member>
+    <member refid="namespacestats_1a6f2fe540485800bd2859d98729f15727" kind="function"><name>get_r</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
@@ -195,6 +198,7 @@
     <member refid="namespacevect_1a1394e5e69aa94634a23d6ba50299846a" kind="function"><name>min</name></member>
     <member refid="namespacevect_1a11ded1664ca44b23ae59e804521cef0c" kind="function"><name>max</name></member>
     <member refid="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" kind="function"><name>sum</name></member>
+    <member refid="namespacevect_1a90382b0b99c00844e306f9ae077ce73b" kind="function"><name>sort_asc</name></member>
     <member refid="namespacevect_1afbea8e45015bcce9e391e2b8e8db9d64" kind="function"><name>abs</name></member>
     <member refid="namespacevect_1a642b4b32d324db19672c165764af754f" kind="function"><name>pow</name></member>
     <member refid="namespacevect_1a042b633aa88aada869f95b10f6486cc9" kind="function"><name>pow</name></member>
@@ -269,6 +273,7 @@
     <member refid="namespacevect_1a1394e5e69aa94634a23d6ba50299846a" kind="function"><name>min</name></member>
     <member refid="namespacevect_1a11ded1664ca44b23ae59e804521cef0c" kind="function"><name>max</name></member>
     <member refid="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" kind="function"><name>sum</name></member>
+    <member refid="namespacevect_1a90382b0b99c00844e306f9ae077ce73b" kind="function"><name>sort_asc</name></member>
     <member refid="namespacevect_1afbea8e45015bcce9e391e2b8e8db9d64" kind="function"><name>abs</name></member>
     <member refid="namespacevect_1a642b4b32d324db19672c165764af754f" kind="function"><name>pow</name></member>
     <member refid="namespacevect_1a042b633aa88aada869f95b10f6486cc9" kind="function"><name>pow</name></member>
@@ -306,8 +311,15 @@
     <member refid="namespacevect_1aeb203d6bfe630c40ef431fe8438820d2" kind="function"><name>cross</name></member>
   </compound>
   <compound refid="stat_8hpp" kind="file"><name>stat.hpp</name>
+    <member refid="namespacestats_1a7e08e60761268b5bcb1ad6d5143fcf3a" kind="function"><name>get_avg</name></member>
+    <member refid="namespacestats_1acea5aa23a8d61591fb50017af0bf3558" kind="function"><name>get_var</name></member>
+    <member refid="namespacestats_1ad0280107e2f7fac77120fe0487824b1c" kind="function"><name>get_std</name></member>
+    <member refid="namespacestats_1a689505fcec7ec7cb24bdf91274ebea12" kind="function"><name>get_qr</name></member>
+    <member refid="namespacestats_1a6f2fe540485800bd2859d98729f15727" kind="function"><name>get_r</name></member>
   </compound>
   <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
+  </compound>
+  <compound refid="others_8hpp" kind="file"><name>others.hpp</name>
   </compound>
   <compound refid="point_8hpp" kind="file"><name>point.hpp</name>
   </compound>

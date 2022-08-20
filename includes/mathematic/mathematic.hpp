@@ -9,7 +9,15 @@
  *
  */
 #pragma once
+#include <algorithm>
 #include <cmath>
+#include <complex>
+#include <fstream>
+#include <iostream>
+#include <limits>
+#include <numeric>
+#include <sstream>
+#include <stdexcept>
 #include <vector>
 
 /**

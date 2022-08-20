@@ -9,15 +9,9 @@
  *
  */
 #pragma once
-#include <algorithm>
-#include <cmath>
-#include <fstream>
-#include <iostream>
-#include <limits>
-#include <numeric>
-#include <sstream>
-#include <stdexcept>
-#include <vector>
+#include "../mathematic/mathematic.hpp"
+#include "../statistics/stat.hpp"
+#include "others.hpp"
 
 // TODO: complete testing
 // TODO: fix documentation and code
@@ -30,25 +24,11 @@ namespace var
 	template <typename D>
 	class table: public std::vector<std::vector<D>>
 	{
-	  public:
-		/**
-		 * @brief Struct to contain the quartile range
-		 *
-		 */
-		struct QR
-		{
-			D LQ; ///< Lower quartile
-			D Q1; ///< Q1 (25%)
-			D Q2; ///< Q2 (50%)
-			D Q3; ///< Q3 (75%)
-			D UQ; ///< Upper quartile
-		};
-
 	  protected:
 		std::vector<std::string> col_names; ///< Stores the column names
 		std::vector<std::string> row_names; ///< Stores the row names
-		int _row;                            ///< Row size
-		int _col;                            ///< Colum size
+		int _row;                           ///< Row size
+		int _col;                           ///< Colum size
 		int sz = 10;                        ///< Spacing size for print
 
 		/**
@@ -67,17 +47,16 @@ namespace var
 		}
 
 		/**
-		 * @brief Returns column index of given header/column name
+		 * @brief Returns column index of given column name
 		 *
-		 * @param headname: string of column name
-		 * @return `int`: $[-1]$: index not found <br>
-		 * @return `int`: $[\geq 0]$: index found
-		 *
+		 * @param name string of column name
+		 * @return `int` $[-1]$: index not found <br>
+		 * @return `int` $[\geq 0]$: index found
 		 */
-		int check_header(std::string headname)
+		int check_col_name(std::string name)
 		{
 			for(int i = 0; i < (int) col_names.size(); i++) {
-				if(col_names[i] == headname) {
+				if(col_names[i] == name) {
 					return i;
 				}
 			}
@@ -85,23 +64,20 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the column vector based on header name
+		 * @brief Returns row index of given row name
 		 *
-		 * @param headname
-		 * @return `std::vector<D>`: Empty if nothing exits <br>
-		 *
+		 * @param name string of row name
+		 * @return `int` $[-1]$: index not found <br>
+		 * @return `int` $[\geq 0]$: index found
 		 */
-		std::vector<D>& get_col_(std::string headname)
+		int check_row_name(std::string name)
 		{
-			int j = check_header(headname);
-			set_size();
-			std::vector<D> a;
-			if(j >= 0) {
-				for(int i = 0; i < _row; i++) {
-					a.push_back(&this->at(i).at(j));
+			for(int i = 0; i < (int) row_names.size(); i++) {
+				if(row_names[i] == name) {
+					return i;
 				}
 			}
-			return a;
+			return -1;			
 		}
 
 		/**
@@ -166,7 +142,7 @@ namespace var
 		/**
 		 * @brief Generates line to seperate rows
 		 *
-		 * @param l: number of "―" in the generated string
+		 * @param l number of "―" in the generated string
 		 * @return `std::string`
 		 */
 		std::string generate_line(int l)
@@ -194,8 +170,8 @@ namespace var
 		}
 
 		/**
-		 * @brief Clears current column names and generates new ones 
-		 * 
+		 * @brief Clears current column names and generates new ones
+		 *
 		 */
 		void generate_cols()
 		{
@@ -212,99 +188,25 @@ namespace var
 		/**
 		 * @brief Construct a new table object
 		 *
+		 * ## Getters 
 		 */
-		table(): _row(0), _col(0) {}
+		table() :
+			_row(0),
+			_col(0) {}
+
+		// ************************* Getters ************************ //
 
 		/**
-		 * @brief Extract average of each column into a vector
-		 *
-		 * Used in `describe_all()`
-		 *
-		 * @return `std::vector<D>`
-		 */
-		std::vector<D> get_avgs()
-		{
-			std::vector<D> a;
-			for(int j = 0; j < (int) col_names.size(); j++) {
-				a.push_back(get_avg(get_col_(col_names[j])));
-			}
-			return a;
-		}
-
-		/**
-		 * @brief Extract STD of each column into a vector
-		 *
-		 * Used in `describe_all()`
-		 *
-		 * @return `std::vector<D>`
-		 */
-		std::vector<D> get_stds()
-		{
-			std::vector<D> a;
-			for(int j = 0; j < col_names.size(); j++) {
-				a.push_back(get_std(get_col_(col_names[j])));
-			}
-			return a;
-		}
-
-		/**
-		 * @brief Extract variance of each column into a vector
-		 *
-		 * Used in `describe_all()`
-		 *
-		 * @return `std::vector<D>`
-		 */
-		std::vector<D> get_vars()
-		{
-			std::vector<D> a;
-			for(int j = 0; j < col_names.size(); j++) {
-				a.push_back(get_var(get_col_(col_names[j])));
-			}
-			return a;
-		}
-
-		/**
-		 * @brief Extract QR of each column into a vector
-		 *
-		 * Used in `describe_all()`
-		 *
-		 * @return `std::vector<QR>`
-		 */
-		std::vector<QR> get_qrs()
-		{
-			std::vector<QR> a;
-			for(int j = 0; j < col_names.size(); j++) {
-				a.push_back(get_qr(get_col_(col_names[j])));
-			}
-			return a;
-		}
-
-		/**
-		 * @brief Extract sum of each column into a vector
-		 *
-		 * Used in `describe_all()`
-		 *
-		 * @return `std::vector<D>`
-		 */
-		std::vector<D> get_sums()
-		{
-			std::vector<D> a;
-			for(int j = 0; j < col_names.size(); j++) {
-				a.push_back(get_sum(get_col_(col_names[j])));
-			}
-			return a;
-		}
-
-
-
-		// ******** Getters ************* //
-
-		/**
+		 * 
 		 * @brief Get the row size
-		 *
+		 * 
 		 * @return `int`
 		 */
-		int row() { return this->size(); }
+		int row()
+		{
+			set_size();
+			return _row;
+		}
 
 		/**
 		 * @brief Get the col size
@@ -313,169 +215,130 @@ namespace var
 		 */
 		int col()
 		{
-			if(!this->empty()) {
-				return this->at(0).size();
-			}
-			else {
-				return 0;
-			}
+			set_size();
+			return _col;
 		}
 
-		std::vector<std::string>& get_col_names() { return col_names; }
-
-		D& get_element(int i, int j)
+		/**
+		 * @brief Get the col names 
+		 * 
+		 * @return `std::vector<std::string>`  <br>
+		 */
+		std::vector<std::string> get_col_names()
 		{
+			return col_names;
 		}
+
+		/**
+		 * @brief Get the row names 
+		 * 
+		 * @return `std::vector<std::string>`  <br>
+		 */
+		std::vector<std::string> get_row_names()
+		{
+			return row_names;
+		}
+
+		/**
+		 * @brief Get the colum based on index
+		 *
+		 * @param index index of that colum
+		 * @return `std::vector<&D>`  <br>
+		 * @throws `std::invalid_argument` in case \ref index is invalid 
+		 */
+		std::vector<&D> get_col(int index){
+			set_size();
+			if(index < 0 || index >= _col){
+				throw std::invalid_argument("var::table::get_col -> given column index doesn't exist");
+			}
+			std::vector<&D> a;
+			for(int i = 0; i < _row; i++) {
+				a.push_back(&this->at(i).at(j));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Get the column vector based on header name
+		 *
+		 * @param name name of the column 
+		 * @return `std::vector<D>`: Empty if nothing exits <br>
+		 * @throws `std::invalid_argument` in case \ref name is invalid 
+		 */
+		std::vector<&D> get_col(std::string name){
+			return get_col(check_col_name(name));
+		}
+
+		/**
+		 * @brief Get the row based on index
+		 *
+		 * @param index index of that row
+		 * @return `std::vector<&D>`  <br>
+		 * @throws `std::invalid_argument` in case \ref index is invalid 
+		 */
+		std::vector<&D> get_row(int index){
+			set_size();
+			if(index < 0 || index >= _row){
+				throw std::invalid_argument("var::table::get_row -> given row index doesn't exist");
+			}
+			std::vector<&D> a;
+			for(int i = 0; i < _col; i++) {
+				a.push_back(&this->at(index).at(i));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Get the row vector based on header name
+		 *
+		 * @param name name of the row 
+		 * @return `std::vector<D>`: Empty if nothing exits <br>
+		 * @throws `std::invalid_argument` in case \ref name is invalid 
+		 * ## Setters
+		 */
+		std::vector<&D> get_row(std::string name){
+			return get_row(check_row_name(name));
+		}
+
+		// ************************* Setters ************************ //
+
+		void set_col_names(std::vector<std::string> names)
+		{
+			set_size();
+			if(names.size() != _col){
+				throw std::invalid_argument("table::set_col_names -> Input parameter size doesn't match curret column size");
+			}
+			col_names = names;
+		}
+
+		void set_col_name(int j, std::string names)
+		{
+			set_size();
+			if(j < 0 || j >= _col){
+				throw std::invalid_argument("var::table::set_col_name -> given column index doesn't exist");
+			}
+			if(col_names.size() != _col){
+				throw std::invalid_argument("var::table::set_col_name -> column names are not set correctly");
+			}
+			col_names[j] = names;
+		}	
+
+		void set_row_names(std::vector<std::string> names)
+		{
+			set_size();
+			if(names.size() != _row){
+				throw std::invalid_argument("table::set_row_names -> Input parameter size doesn't match curret row size");
+			}
+			row_names = names;
+		}
+
+		
+
+		
 
 		// ***** operators ** /
 
-		/**
-		 * @brief Returns refrence to colum of given column name
-		 *
-		 * @param headname
-		 * @return `std::vector<D>&` Refrence to given column name
-		 * @throws `std::invalid_argument` given column name doesn't exist
-		 */
-		std::vector<D>& operator[](std::string headname)
-		{
-			if(check_header(headname) < 0) {
-				throw std::invalid_argument("var::table::operator[] -> given column name doesn't exist");
-			}
-			return get_col_(headname);
-		}
 
-		/**
-		 * @brief Sorts data ascending
-		 *
-		 * @param a
-		 * @return std::vector<D>
-		 */
-		static std::vector<D> sort_asc(std::vector<D>& a)
-		{
-			std::vector<D> v_sorted(a.size());
-			std::partial_sort_copy(a.begin(), a.end(), v_sorted.begin(), v_sorted.end());
-			return v_sorted;
-		}
-
-		static std::vector<D> sort_des(std::vector<D>& a)
-		{
-			std::vector<D> v_sorted(a.size());
-			std::partial_sort_copy(a.begin(), a.end(), v_sorted.begin(), v_sorted.end());
-			return v_sorted;
-		}
-
-		/**
-		 * @brief Get the min value of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_min(std::vector<D> a)
-		{
-			return *std::min_element(a.begin(), a.end());
-		}
-
-		/**
-		 * @brief Get the max value of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_max(std::vector<D> a)
-		{
-			return *std::max_element(a.begin(), a.end());
-		}
-
-		/**
-		 * @brief Get the sum of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_sum(std::vector<D> a)
-		{
-			return std::accumulate(a.begin(), a.end(), 0);
-		}
-
-		/**
-		 * @brief Get the avg of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_avg(std::vector<D> a)
-		{
-			return get_sum(a) / a.size();
-		}
-
-		/**
-		 * @brief Get the variance of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_var(std::vector<D> a)
-		{
-			D mean = get_avg(a);
-			int N  = a.size();
-			D sum  = 0;
-			for(int i = 0; i < N; i++) {
-				sum += pow((a[i] - mean), 2);
-			}
-			return (D) sum / N;
-		}
-
-		/**
-		 * @brief Get the standard diviation of vector
-		 *
-		 * @param a
-		 * @return D
-		 */
-		static D get_std(std::vector<D> a)
-		{
-			return sqrt(get_var(a));
-		}
-
-		/**
-		 * @brief Get the quartile range of a vector
-		 *
-		 * @param a
-		 * @return QR
-		 */
-		static QR get_qr(std::vector<D> a)
-		{
-			QR qr;
-			qr.LQ         = get_min(a);
-			qr.UQ         = get_max(a);
-			auto a_sorted = sort_asc(a);
-			qr.Q1         = a_sorted.at((int) (a_sorted.size()) / 4);
-			qr.Q2         = a_sorted.at((int) (a_sorted.size()) / 2);
-			qr.Q3         = a_sorted.at((int) (3 * (a_sorted.size())) / 4);
-			return qr;
-		}
-
-		/**
-		 * @brief Get the relation coefficient of two vectors
-		 *
-		 * @param _x
-		 * @param _y
-		 * @return D
-		 */
-		static D get_r(
-			std::vector<D> _x, std::vector<D> _y
-		)
-		{
-			if(_x.size() != _y.size()) {
-				throw std::invalid_argument("var::table::get_r -> Size mismatch");
-			}
-			D sumx  = table::get_sum(_x);
-			D sumy  = table::get_sum(_y);
-			D sumxx = table::get_sum(_x * _x);
-			D sumxy = table::get_sum(_x * _y);
-			D sumyy = table::get_sum(_y * _y);
-			return (_x.size() * sumxy - (sumx * sumy)) /
-				   (sqrt((_x.size() * sumxx - pow(sumx, 2)) * (_x.size() * sumyy - pow(sumy, 2))));
-		}
 
 		/**
 		 * @brief Reads from csv file
@@ -644,57 +507,7 @@ namespace var
 			show(0);
 		}
 
-		/**
-		 * @brief Statistical summary of all colums in table
-		 *
-		 * @return table
-		 */
-		table describe_all()
-		{
-			table t;
-			auto avg = get_avgs();
-			auto std = get_stds();
-			auto var = get_vars();
-			auto qrs = get_qrs();
-			auto sms = get_sums();
-			set_size();
-			// loading row names
-			for(int i = 0; i < _col; i++) {
-				t.row_names.push_back(col_names[i]);
-			}
-			// loading col names
-			t.col_names.push_back("Mean");
-			t.col_names.push_back("STD");
-			t.col_names.push_back("VAR");
-			t.col_names.push_back("Min");
-			t.col_names.push_back("Q1");
-			t.col_names.push_back("Q2");
-			t.col_names.push_back("Q3");
-			t.col_names.push_back("Max");
-			t.col_names.push_back("IQR");
-			t.col_names.push_back("Sum");
 
-			// loading values
-			t._row = t.row_names.size();
-			t._col = t.col_names.size();
-			for(int i = 0; i < t._row; i++) {
-				std::vector<D> rr;
-				rr.push_back(avg[i]);
-				rr.push_back(std[i]);
-				rr.push_back(var[i]);
-				rr.push_back(qrs[i].LQ);
-				rr.push_back(qrs[i].Q1);
-				rr.push_back(qrs[i].Q2);
-				rr.push_back(qrs[i].Q3);
-				rr.push_back(qrs[i].UQ);
-				rr.push_back(qrs[i].Q3 - qrs[i].Q1);
-				rr.push_back(sms[i]);
-				t.push_back(rr);
-			}
-			t.set_size();
-			t.sz = 11;
-			return t;
-		}
 
 		/**
 		 * @brief Get the row as table
@@ -762,6 +575,157 @@ namespace var
 
 		bool add_row(std::vector<D> row_data)
 		{
+			return false;
+		}
+
+		// ************************* Statistics ************************ //
+
+		/**
+		 * @brief Extract average of each column into a vector
+		 *
+		 * Used in `describe_all()`
+		 *
+		 * @return `std::vector<D>`: same size as number of columns
+		 */
+		std::vector<D> get_avgs()
+		{
+			std::vector<D> a;
+			set_size();
+			for(int j = 0; j < _col; j++) {
+				a.push_back(stats::get_avg(get_col_(j)));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Extract STD of each column into a vector
+		 *
+		 * Used in `describe_all()`
+		 *
+		 * @return `std::vector<D>` same size as number of columns
+		 */
+		std::vector<D> get_stds()
+		{
+			std::vector<D> a;
+			set_size();
+			for(int j = 0; j < _col; j++) {
+				a.push_back(stats::get_std(get_col_(j)));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Extract variance of each column into a vector
+		 *
+		 * Used in `describe_all()`
+		 *
+		 * @return `std::vector<D>`: same size as numebr of columns
+		 */
+		std::vector<D> get_vars()
+		{
+			std::vector<D> a;
+			for(int j = 0; j < col_names.size(); j++) {
+				a.push_back(stats::get_var(get_col_(col_names[j])));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Extract QR of each column into a vector
+		 *
+		 * Used in `describe_all()`
+		 *
+		 * @return `std::vector<QR>`: same size as number of colums
+		 */
+		std::vector<QR<D>> get_qrs()
+		{
+			std::vector<QR<D>> a;
+			set_size();
+			for(int j = 0; j < _col; j++) {
+				a.push_back(stats::get_qr(get_col_(j)));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Extract sum of each column into a vector
+		 *
+		 * @details Used in `describe_all()`
+		 *
+		 * @return `std::vector<D>` size is same size as number of colums
+		 * 
+		 */
+		std::vector<D> get_sums()
+		{
+			std::vector<D> a;
+			set_size();
+			for(int j = 0; j < _col; j++) {
+				a.push_back(vect::sum(get_col_(j)));
+			}
+			return a;
+		}
+
+		/**
+		 * @brief Statistical summary of all colums in table
+		 *
+		 * * Example:
+		 * 
+		 * |       | Avg | STD | VAR | Min | Q1 | Q2 | Q3 | Max | IQR | Sum |
+		 * | ---   | --- | --- | --- | --- | ---| ---| ---| --- | --- | --- | 
+		 * | col-0 |  .. |  .. |  .. |  .. |  ..|  ..|  ..|  .. |  .. |  .. |
+		 * | col-1 |  .. |  .. |  .. |  .. |  ..|  ..|  ..|  .. |  .. |  .. |
+		 * 
+		 * @return `table<D>`
+		 */
+		table describe_all()
+		{
+			table t;
+			auto avg = get_avgs();
+			auto std = get_stds();
+			auto var = get_vars();
+			auto qrs = get_qrs();
+			auto sms = get_sums();
+			set_size();
+
+			// generates columns 
+			if(col_names.size() != _col){
+				generate_cols();
+			}
+
+			for(int i = 0; i < _col; i++) {
+				t.row_names.push_back(col_names[i]);
+			}
+			// loading col names
+			t.col_names.push_back("Avg");
+			t.col_names.push_back("STD");
+			t.col_names.push_back("VAR");
+			t.col_names.push_back("Min");
+			t.col_names.push_back("Q1");
+			t.col_names.push_back("Q2");
+			t.col_names.push_back("Q3");
+			t.col_names.push_back("Max");
+			t.col_names.push_back("IQR");
+			t.col_names.push_back("Sum");
+
+			// loading values
+			t._row = t.row_names.size();
+			t._col = t.col_names.size();
+			for(int i = 0; i < t._row; i++) {
+				std::vector<D> rr; // row 
+				rr.push_back(avg[i]);
+				rr.push_back(std[i]);
+				rr.push_back(var[i]);
+				rr.push_back(qrs[i].LQ);
+				rr.push_back(qrs[i].Q1);
+				rr.push_back(qrs[i].Q2);
+				rr.push_back(qrs[i].Q3);
+				rr.push_back(qrs[i].UQ);
+				rr.push_back(qrs[i].Q3 - qrs[i].Q1);
+				rr.push_back(sms[i]);
+				t.push_back(rr);
+			}
+			t.set_size();
+			return t;
 		}
 	};
 
