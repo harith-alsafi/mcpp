@@ -3,6 +3,26 @@
 
 using namespace var;
 
+TEST(table,constructors)
+{
+	// declaration -1
+	table<int> m1(2, 5);
+	ASSERT_EQ(2, m1.row());
+	ASSERT_EQ(5, m1.col());
+	ASSERT_EQ(5 * 2, m1.row() * m1.col());
+
+	// declaration -2
+	table<int> m2 = { { 2, 3 }, { 3, 4 } };
+	ASSERT_EQ(2, m2[0][0]);
+	ASSERT_EQ(3, m2[0][1]);
+	ASSERT_EQ(4, m2[1][1]);
+
+	// declaration -3
+	table<int> m3;
+	ASSERT_EQ(0, m3.row());
+	ASSERT_EQ(0, m3.col());
+}
+
 TEST(var, table_read_csv)
 {
 	table<long double> t;
@@ -14,7 +34,7 @@ TEST(var, table_header)
 {
 	table<long double> t;
 	t.read_csv("homes.csv");
-	std::vector<long double> sold = t["Sell"];
+	std::vector<long double> sold = t.get_col("Sell");
 	ASSERT_TRUE(t.size() == sold.size());
 	for(int i = 0; i < sold.size(); i++) {
 		ASSERT_TRUE(t.at(i).at(0) == sold[i]);
