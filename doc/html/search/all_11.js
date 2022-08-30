@@ -21,5 +21,6 @@ var searchData=
   ['square_167',['square',['../classvar_1_1matrix.html#a54224ff2eefe0c6cd3fbeaff7a309f84',1,'var::matrix']]],
   ['stats_168',['stats',['../namespacestats.html',1,'']]],
   ['sum_169',['sum',['../classvar_1_1matrix.html#af58bf7e07cebde78a2e0ad99acd5deeb',1,'var::matrix::sum()'],['../namespacevect.html#a441fcc00c9f98c6363a2e1869c4f127a',1,'vect::sum()']]],
-  ['sz_170',['sz',['../classvar_1_1table.html#ae067e021bec7ba45f14e0a6c45c6116d',1,'var::table']]]
+  ['swap_5fcol_170',['swap_col',['../classvar_1_1table.html#a183820c43f0aaa542c1ac9db22be5eec',1,'var::table']]],
+  ['sz_171',['sz',['../classvar_1_1table.html#ae067e021bec7ba45f14e0a6c45c6116d',1,'var::table']]]
 ];

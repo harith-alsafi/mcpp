@@ -32,15 +32,15 @@ int \mbox{\hyperlink{classvar_1_1table_a7dbdb10f2db71872774179122ba9520b}{row}} 
 int \mbox{\hyperlink{classvar_1_1table_a70b568d560efd34b1a67aee49135b8a6}{col}} ()
 \begin{DoxyCompactList}\small\item\em Get the col size. \end{DoxyCompactList}\item 
 D \& \mbox{\hyperlink{classvar_1_1table_a03c80af84df447196e80c74952211c2f}{at}} (int i, int j)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns reference to element (i, j) \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1table_abc5c989c570b6c90e15623cc7b2db1d0}{get\+\_\+col\+\_\+names}} ()
 \begin{DoxyCompactList}\small\item\em Get the col names. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1table_aaec876550ab824cf2e02af43d1e519de}{get\+\_\+row\+\_\+names}} ()
-\begin{DoxyCompactList}\small\item\em Get the row names. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_ad6f1653c6bce88ea1185589f6916e4a1}{get\+\_\+col}} (int index)
 \begin{DoxyCompactList}\small\item\em Get the colum based on index. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_a894dfeda7b8fed0898b5395c6d9f1fa5}{get\+\_\+col}} (std\+::string name)
 \begin{DoxyCompactList}\small\item\em Get the column vector based on header name. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classvar_1_1table_aaec876550ab824cf2e02af43d1e519de}{get\+\_\+row\+\_\+names}} ()
+\begin{DoxyCompactList}\small\item\em Get the row names. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_acad06d75fc18f30495b34e1ba92e785b}{get\+\_\+row}} (int index)
 \begin{DoxyCompactList}\small\item\em Get the row based on index. \end{DoxyCompactList}\item 
 std\+::vector$<$ D $>$ \mbox{\hyperlink{classvar_1_1table_af06d391ee69ef70848c9620621dee65d}{get\+\_\+row}} (std\+::string name)
@@ -49,13 +49,21 @@ void \mbox{\hyperlink{classvar_1_1table_a86899556462d8e8fc6499432157e4352}{set\+
 \item 
 void \mbox{\hyperlink{classvar_1_1table_aa5bd43c87bfa0a7e8e01fd9903827a77}{set\+\_\+col\+\_\+name}} (int index, std\+::string names)
 \item 
-void \mbox{\hyperlink{classvar_1_1table_a60611dd76aa2d387bb2909ef3a948427}{set\+\_\+row\+\_\+names}} (std\+::vector$<$ std\+::string $>$ names)
-\item 
-void \mbox{\hyperlink{classvar_1_1table_ab32aa5a1f830527e30478c1013019b79}{set\+\_\+row\+\_\+name}} (int index, std\+::string names)
-\item 
 void \mbox{\hyperlink{classvar_1_1table_a79698ece856134cc28099b0df4892429}{insert\+\_\+col}} (std\+::vector$<$ D $>$ a, int j)
 \item 
 void \mbox{\hyperlink{classvar_1_1table_aded5ddaf807dd8f37da8af8b9a12e1a0}{push\+\_\+col}} (std\+::vector$<$ D $>$ a)
+\item 
+void \mbox{\hyperlink{classvar_1_1table_a183820c43f0aaa542c1ac9db22be5eec}{swap\+\_\+col}} (int j1, int j2)
+\item 
+void \mbox{\hyperlink{classvar_1_1table_a63dcc49f4283f937ac7181c7f0cc0365}{replace\+\_\+col}} (int j, std\+::vector$<$ D $>$ a)
+\begin{DoxyCompactList}\small\item\em Replaces given column index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a8a3caec35a441a3c961e046df741848e}{erase\+\_\+col}} (int j)
+\begin{DoxyCompactList}\small\item\em Erases given index column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_afcb4f6a05981d8618b9d23c4819804f1}{pop\+\_\+col}} ()
+\begin{DoxyCompactList}\small\item\em Removes last column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classvar_1_1table_a60611dd76aa2d387bb2909ef3a948427}{set\+\_\+row\+\_\+names}} (std\+::vector$<$ std\+::string $>$ names)
+\item 
+void \mbox{\hyperlink{classvar_1_1table_ab32aa5a1f830527e30478c1013019b79}{set\+\_\+row\+\_\+name}} (int index, std\+::string names)
 \item 
 bool \mbox{\hyperlink{classvar_1_1table_ac3f099c46a47c6428689efefad42dcf2}{read\+\_\+csv}} (std\+::string filename)
 \begin{DoxyCompactList}\small\item\em Reads from csv file. \end{DoxyCompactList}\item 
@@ -196,7 +204,7 @@ Construct a new table object.
 \DoxyCodeLine{\};}
 
 \end{DoxyCode}
-\hypertarget{classvar_1_1table_autotoc_md5}{}\doxysubsubsection{Getters}\label{classvar_1_1table_autotoc_md5}
+\hypertarget{classvar_1_1table_autotoc_md5}{}\doxysubsubsection{General getters}\label{classvar_1_1table_autotoc_md5}
 
 \begin{DoxyParams}{Parameters}
 {\em a} & initializer list \\
@@ -242,6 +250,27 @@ bool \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::add\+\_\+row
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 D\& \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::at (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Returns reference to element (i, j) 
+
+\hypertarget{classvar_1_1table_autotoc_md6}{}\doxysubsubsection{Column getters}\label{classvar_1_1table_autotoc_md6}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & row index \\
+\hline
+{\em j} & column index \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$tt$>$std\+::invalid\+\_\+argument$<$/tt$>$} & if invalid indexes \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+{\ttfamily D\&} element ~\newline
+ 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classvar_1_1table_a215cdf3b672a7231d895f4e6c4214b64}\label{classvar_1_1table_a215cdf3b672a7231d895f4e6c4214b64}} 
 \index{var::table$<$ D $>$@{var::table$<$ D $>$}!center@{center}}
 \index{center@{center}!var::table$<$ D $>$@{var::table$<$ D $>$}}
@@ -355,6 +384,22 @@ col-\/1   &..   &..   &..   &..   &..   &..   &..   &..   &..   &..   \\\cline{1
 \begin{DoxyReturn}{Returns}
 {\ttfamily table$<$D$>$} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a8a3caec35a441a3c961e046df741848e}\label{classvar_1_1table_a8a3caec35a441a3c961e046df741848e}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!erase\_col@{erase\_col}}
+\index{erase\_col@{erase\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{erase\_col()}{erase\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::erase\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Erases given index column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & column index \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classvar_1_1table_a75cd6fd5f807343b311152f5118bb085}\label{classvar_1_1table_a75cd6fd5f807343b311152f5118bb085}} 
 \index{var::table$<$ D $>$@{var::table$<$ D $>$}!generate\_cols@{generate\_cols}}
 \index{generate\_cols@{generate\_cols}!var::table$<$ D $>$@{var::table$<$ D $>$}}
@@ -449,6 +494,7 @@ std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$
 
 Get the column vector based on header name. 
 
+\hypertarget{classvar_1_1table_autotoc_md7}{}\doxysubsubsection{Row getters}\label{classvar_1_1table_autotoc_md7}
 
 \begin{DoxyParams}{Parameters}
 {\em name} & name of the column \\
@@ -556,6 +602,7 @@ std\+::vector$<$D$>$ \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$
 
 Get the row vector based on header name. 
 
+\hypertarget{classvar_1_1table_autotoc_md8}{}\doxysubsubsection{Column setters}\label{classvar_1_1table_autotoc_md8}
 
 \begin{DoxyParams}{Parameters}
 {\em name} & name of the row \\
@@ -570,7 +617,6 @@ Get the row vector based on header name.
 {\em $<$tt$>$std\+::invalid\+\_\+argument$<$/tt$>$} & in case name is invalid \\
 \hline
 \end{DoxyExceptions}
-\hypertarget{classvar_1_1table_autotoc_md6}{}\doxysubsubsection{Setters}\label{classvar_1_1table_autotoc_md6}
 \mbox{\Hypertarget{classvar_1_1table_aaec876550ab824cf2e02af43d1e519de}\label{classvar_1_1table_aaec876550ab824cf2e02af43d1e519de}} 
 \index{var::table$<$ D $>$@{var::table$<$ D $>$}!get\_row\_names@{get\_row\_names}}
 \index{get\_row\_names@{get\_row\_names}!var::table$<$ D $>$@{var::table$<$ D $>$}}
@@ -660,6 +706,18 @@ Used in {\ttfamily describe\+\_\+all()}
 {\footnotesize\ttfamily template$<$typename D $>$ \\
 void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::insert\+\_\+col (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D $>$}]{a,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classvar_1_1table_afcb4f6a05981d8618b9d23c4819804f1}\label{classvar_1_1table_afcb4f6a05981d8618b9d23c4819804f1}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!pop\_col@{pop\_col}}
+\index{pop\_col@{pop\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_col()}{pop\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::pop\+\_\+col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes last column. 
+
+\hypertarget{classvar_1_1table_autotoc_md9}{}\doxysubsubsection{Row setters}\label{classvar_1_1table_autotoc_md9}
 \mbox{\Hypertarget{classvar_1_1table_a0b08c797c3314998239636e4840ff74e}\label{classvar_1_1table_a0b08c797c3314998239636e4840ff74e}} 
 \index{var::table$<$ D $>$@{var::table$<$ D $>$}!prd@{prd}}
 \index{prd@{prd}!var::table$<$ D $>$@{var::table$<$ D $>$}}
@@ -733,6 +791,31 @@ Reads from csv file.
 
 {\ttfamily false}\+: if read did not complete 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classvar_1_1table_a63dcc49f4283f937ac7181c7f0cc0365}\label{classvar_1_1table_a63dcc49f4283f937ac7181c7f0cc0365}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!replace\_col@{replace\_col}}
+\index{replace\_col@{replace\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{replace\_col()}{replace\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::replace\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j,  }\item[{std\+::vector$<$ D $>$}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Replaces given column index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j} & column index \\
+\hline
+{\em a} & new column \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$tt$>$std\+::invalid\+\_\+argument$<$/tt$>$} & invalid {\ttfamily j} index \\
+\hline
+{\em $<$tt$>$std\+::invalid\+\_\+argument$<$/tt$>$} & {\ttfamily a.\+size()} \$\textbackslash{}neq\$ row size \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{classvar_1_1table_a7dbdb10f2db71872774179122ba9520b}\label{classvar_1_1table_a7dbdb10f2db71872774179122ba9520b}} 
 \index{var::table$<$ D $>$@{var::table$<$ D $>$}!row@{row}}
 \index{row@{row}!var::table$<$ D $>$@{var::table$<$ D $>$}}
@@ -833,6 +916,13 @@ void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::show\+\_\+he
 
 
 Shows col\+\_\+names only. 
+
+\mbox{\Hypertarget{classvar_1_1table_a183820c43f0aaa542c1ac9db22be5eec}\label{classvar_1_1table_a183820c43f0aaa542c1ac9db22be5eec}} 
+\index{var::table$<$ D $>$@{var::table$<$ D $>$}!swap\_col@{swap\_col}}
+\index{swap\_col@{swap\_col}!var::table$<$ D $>$@{var::table$<$ D $>$}}
+\doxysubsubsection{\texorpdfstring{swap\_col()}{swap\_col()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void \mbox{\hyperlink{classvar_1_1table}{var\+::table}}$<$ D $>$\+::swap\+\_\+col (\begin{DoxyParamCaption}\item[{int}]{j1,  }\item[{int}]{j2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

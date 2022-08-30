@@ -135,17 +135,21 @@
     <member refid="classvar_1_1table_1a70b568d560efd34b1a67aee49135b8a6" kind="function"><name>col</name></member>
     <member refid="classvar_1_1table_1a03c80af84df447196e80c74952211c2f" kind="function"><name>at</name></member>
     <member refid="classvar_1_1table_1abc5c989c570b6c90e15623cc7b2db1d0" kind="function"><name>get_col_names</name></member>
-    <member refid="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" kind="function"><name>get_row_names</name></member>
     <member refid="classvar_1_1table_1ad6f1653c6bce88ea1185589f6916e4a1" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1table_1a894dfeda7b8fed0898b5395c6d9f1fa5" kind="function"><name>get_col</name></member>
+    <member refid="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" kind="function"><name>get_row_names</name></member>
     <member refid="classvar_1_1table_1acad06d75fc18f30495b34e1ba92e785b" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1table_1af06d391ee69ef70848c9620621dee65d" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1table_1a86899556462d8e8fc6499432157e4352" kind="function"><name>set_col_names</name></member>
     <member refid="classvar_1_1table_1aa5bd43c87bfa0a7e8e01fd9903827a77" kind="function"><name>set_col_name</name></member>
-    <member refid="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" kind="function"><name>set_row_names</name></member>
-    <member refid="classvar_1_1table_1ab32aa5a1f830527e30478c1013019b79" kind="function"><name>set_row_name</name></member>
     <member refid="classvar_1_1table_1a79698ece856134cc28099b0df4892429" kind="function"><name>insert_col</name></member>
     <member refid="classvar_1_1table_1aded5ddaf807dd8f37da8af8b9a12e1a0" kind="function"><name>push_col</name></member>
+    <member refid="classvar_1_1table_1a183820c43f0aaa542c1ac9db22be5eec" kind="function"><name>swap_col</name></member>
+    <member refid="classvar_1_1table_1a63dcc49f4283f937ac7181c7f0cc0365" kind="function"><name>replace_col</name></member>
+    <member refid="classvar_1_1table_1a8a3caec35a441a3c961e046df741848e" kind="function"><name>erase_col</name></member>
+    <member refid="classvar_1_1table_1afcb4f6a05981d8618b9d23c4819804f1" kind="function"><name>pop_col</name></member>
+    <member refid="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" kind="function"><name>set_row_names</name></member>
+    <member refid="classvar_1_1table_1ab32aa5a1f830527e30478c1013019b79" kind="function"><name>set_row_name</name></member>
     <member refid="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" kind="function"><name>read_csv</name></member>
     <member refid="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" kind="function"><name>save_csv</name></member>
     <member refid="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" kind="function"><name>show</name></member>
