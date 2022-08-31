@@ -204,14 +204,14 @@ namespace var
 		 * @param r number of rows
 		 * @param c number of colums
 		 */
-		table(int r, int c) 
+		table(int r, int c)
 		{
-			if(r <= 0 || c <= 0){
+			if(r <= 0 || c <= 0) {
 				throw std::invalid_argument("var::table -> can't have row or columns <= 0");
 			}
 			_row = r;
 			_col = c;
-			data = std::vector<D>(r*c);
+			data = std::vector<D>(r * c);
 			generate_cols();
 			generate_rows();
 		}
@@ -232,8 +232,8 @@ namespace var
 		 *
 		 * @param a initializer list
 		 */
-		table(std::initializer_list<std::initializer_list<D>> a):
-		table(a.size(), a.begin()[0].size())
+		table(std::initializer_list<std::initializer_list<D>> a) :
+			table(a.size(), a.begin()[0].size())
 		{
 			for(int i = 0; i < _row; i++) {
 				for(int j = 0; j < _col; j++) {
@@ -267,7 +267,7 @@ namespace var
 
 		int size()
 		{
-			return _col*_row;
+			return _col * _row;
 		}
 
 		/**
@@ -339,7 +339,13 @@ namespace var
 		table get_col_table(int j)
 		{
 			table t;
-			
+			if(j < 0 || j >= _col) {
+				throw std::invalid_argument("var::table::get_col_table -> given column index doesn't exist");
+			}
+			for(int i = 0; i < _row; i++) {
+				t.push_row({ this->at(i, j) }, row_names.at(i));
+			}
+			t.col_names.push_back(col_names.at(j));
 			return t;
 		}
 
@@ -399,13 +405,13 @@ namespace var
 		/**
 		 * @brief Get the row as table
 		 *
-		 * @param j
+		 * @param i
 		 * @return table
 		 */
-		table get_row_table(int j)
+		table get_row_table(int i)
 		{
 			table t;
-			
+
 			return t;
 		}
 
@@ -460,7 +466,7 @@ namespace var
 			for(int i = 0; i < _row; i++) {
 				data.insert(data.begin() + get_index(i, j), a[i]);
 			}
-			col_names.insert(data.begin()+j, name);
+			col_names.insert(col_names.begin() + j, name);
 			set_col_name(j, name);
 		}
 
@@ -469,13 +475,14 @@ namespace var
 			if(_row != 0 && a.size() != _row) {
 				throw std::invalid_argument("var::table::push_col -> invalid given column size (must match number of rows)");
 			}
-			if(_col == 0 || _row == 0){
+			if(_col == 0 || _row == 0) {
 				*this = table(a.size(), 1);
 				for(int i = 0; i < _row; i++) {
 					this->at(i, 0) = a[i];
 				}
+				set_col_name(0, name);
 			}
-			else{
+			else {
 				insert_col(a, _col, name);
 			}
 		}
@@ -489,7 +496,6 @@ namespace var
 				std::swap(data[get_index(i, j1)], data[get_index(i, j2)]);
 			}
 			std::swap(col_names[j1], col_names[j2]);
-
 		}
 
 		/**
@@ -545,7 +551,7 @@ namespace var
 			for(int i = 0; i < _row; i++) {
 				data.erase(data.begin() + get_index(i, j));
 			}
-			col_names.erase(col_names.begin()+j);
+			col_names.erase(col_names.begin() + j);
 		}
 
 		/**
@@ -558,8 +564,6 @@ namespace var
 		{
 			erase_col(_col - 1);
 		}
-
-
 
 		void set_row_names(std::vector<std::string> names)
 		{
@@ -580,34 +584,34 @@ namespace var
 			row_names[index] = names;
 		}
 
-		void insert_row(std::vector<D> a, int j, std::string name = std::string())
+		void insert_row(std::vector<D> a, int i, std::string name = std::string())
 		{
-			if(j < 0 || j > _row) {
+			if(i < 0 || i > _row) {
 				throw std::invalid_argument("var::table::insert_row -> invalid rowumn index");
 			}
-			if(a.size() != _row) {
+			if(a.size() != _col) {
 				throw std::invalid_argument("var::table::insert_row -> invalid given rowumn size (must match number of rows)");
 			}
 			_row++;
-			for(int i = 0; i < _row; i++) {
+			for(int j = 0; i < _col; i++) {
 				data.insert(data.begin() + get_index(i, j), a[i]);
 			}
-			row_names.insert(row_names.begin()+j, name);
-			set_row_name(j, name);
+			row_names.insert(row_names.begin() + i, name);
+			set_row_name(i, name);
 		}
 
 		void push_row(std::vector<D> a, std::string name = std::string())
 		{
-			if(_row != 0 && a.size() != _row) {
+			if(_row != 0 && a.size() != _col) {
 				throw std::invalid_argument("var::table::push_row -> invalid given rowumn size (must match number of rows)");
 			}
-			if(_row == 0 || _row == 0){
+			if(_row == 0 || _col == 0) {
 				*this = table(a.size(), 1);
 				for(int i = 0; i < _row; i++) {
 					this->at(i, 0) = a[i];
 				}
 			}
-			else{
+			else {
 				insert_row(a, _row, name);
 			}
 		}
@@ -621,7 +625,6 @@ namespace var
 				std::swap(data[get_index(i, j1)], data[get_index(i, j2)]);
 			}
 			std::swap(row_names[j1], row_names[j2]);
-
 		}
 
 		/**
@@ -656,7 +659,7 @@ namespace var
 		 * ```
 		 *
 		 * @param other ``table``
-		 * @throw `std::invalid_argument` Size mismatch 
+		 * @throw `std::invalid_argument` Size mismatch
 		 */
 		void join_row(table other)
 		{
@@ -681,13 +684,13 @@ namespace var
 			for(int i = 0; i < _row; i++) {
 				data.erase(data.begin() + get_index(i, j));
 			}
-			row_names.erase(row_names.begin()+j);
+			row_names.erase(row_names.begin() + j);
 		}
 
 		/**
 		 * @brief Removes last rowumn
 		 *
-		 * ## Data manipualtors 
+		 * ## Data manipualtors
 		 *
 		 */
 		void pop_row()
@@ -721,7 +724,7 @@ namespace var
 			}
 			_row = r;
 			_col = c;
-			data.resize(_row*_col);
+			data.resize(_row * _col);
 		}
 
 		/**
@@ -765,17 +768,16 @@ namespace var
 			return SUM;
 		}
 
-
 		// ************************* Operators ************************ //
 
 		// ************************* Splits ************************* //
 
-		// BUG: This needs to check if first line is a string or not 
+		// BUG: This needs to check if first line is a string or not
 		/**
 		 * @brief Reads from csv file
 		 *
-		 * 
-		 * 
+		 *
+		 *
 		 * @param file: file name
 		 * @return `true` : if read is success
 		 * @return `false`: if read did not complete
@@ -807,7 +809,7 @@ namespace var
 						r.push_back(val);
 
 						// If the next token is a comma, ignore it and move on
-						if(ss.peek() == ','){ 
+						if(ss.peek() == ',') {
 							ss.ignore();
 						}
 					}
@@ -943,9 +945,6 @@ namespace var
 		{
 			show(0);
 		}
-
-
-
 
 		// ************************* Statistics ************************ //
 

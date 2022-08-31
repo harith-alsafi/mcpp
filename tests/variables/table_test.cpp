@@ -13,9 +13,9 @@ TEST(table,constructors)
 
 	// declaration -2
 	table<int> m2 = { { 2, 3 }, { 3, 4 } };
-	ASSERT_EQ(2, m2[0][0]);
-	ASSERT_EQ(3, m2[0][1]);
-	ASSERT_EQ(4, m2[1][1]);
+	ASSERT_EQ(2, m2.at(0, 0));
+	ASSERT_EQ(3, m2.at(0, 1));
+	ASSERT_EQ(4, m2.at(1, 1));
 
 	// declaration -3
 	table<int> m3;
@@ -35,9 +35,9 @@ TEST(var, table_header)
 	table<long double> t;
 	t.read_csv("homes.csv");
 	std::vector<long double> sold = t.get_col("Sell");
-	ASSERT_TRUE(t.size() == sold.size());
+	ASSERT_TRUE(t.row() == sold.size());
 	for(int i = 0; i < sold.size(); i++) {
-		ASSERT_TRUE(t.at(i).at(0) == sold[i]);
+		ASSERT_TRUE(t.at(i, 0) == sold[i]);
 	}
 }
 
@@ -70,9 +70,9 @@ TEST(var, table_show_col)
 TEST(var, table_add_col)
 {
 	table<long double> t;
-	t.add_col({ 1, 2, 3, 4 }, "x1");
-	t.add_col({ 5, 6, 7, 8 }, "x2");
-	t.add_col({ 9, 10, 11, 12 }, "x3");
+	t.push_col({ 1, 2, 3, 4 }, "x1");
+	t.push_col({ 5, 6, 7, 8 }, "x2");
+	t.push_col({ 9, 10, 11, 12 }, "x3");
 	t.show();
 }
 
