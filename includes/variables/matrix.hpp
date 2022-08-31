@@ -1167,9 +1167,9 @@ namespace var
 			if(!is_square()) {
 				matrix eyed = lalg::eye<D>(n);
 				if(n == _row) {
-					temp.join_col(eyed(0, _row, 0, fabs(_row - _col)));
+					temp.join_col(eyed(0, _row, 0, D(fabs(_row - _col))));
 					f(lu, temp);
-					for(int i = 0; i < fabs(_row - _col); i++) {
+					for(int i = 0; i < D(fabs(_row - _col)); i++) {
 						lu.U.pop_col();
 
 						lu.L.pop_col();

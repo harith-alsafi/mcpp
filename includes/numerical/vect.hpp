@@ -55,7 +55,7 @@ namespace vect
 	}
 
 	template <typename D>
-	D sum(std::vector<D> &a)
+	D sum(std::vector<D> a)
 	{
 		D sm;
 		for(auto &i : a) {
