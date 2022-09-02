@@ -592,10 +592,10 @@ namespace var
 			if(a.size() != _col) {
 				throw std::invalid_argument("var::table::insert_row -> invalid given rowumn size (must match number of rows)");
 			}
-			_row++;
-			for(int j = 0; i < _col; i++) {
-				data.insert(data.begin() + get_index(i, j), a[i]);
+			for(int j = 0; j < _col; j++) {
+				data.insert(data.begin() + get_index(i, j), a[j]);
 			}
+			_row++;
 			row_names.insert(row_names.begin() + i, name);
 			set_row_name(i, name);
 		}
@@ -606,7 +606,7 @@ namespace var
 				throw std::invalid_argument("var::table::push_row -> invalid given rowumn size (must match number of rows)");
 			}
 			if(_row == 0 || _col == 0) {
-				*this = table(a.size(), 1);
+				*this = table(1, a.size());
 				for(int i = 0; i < _row; i++) {
 					this->at(i, 0) = a[i];
 				}
