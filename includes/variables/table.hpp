@@ -12,6 +12,7 @@
 #include "../mathematic/mathematic.hpp"
 #include "../statistics/stat.hpp"
 #include "others.hpp"
+#include <stdexcept>
 
 // TODO: complete testing
 // TODO: fix documentation and code
@@ -177,7 +178,7 @@ namespace var
 				col_names.clear();
 			}
 			for(int i = 0; i < _col; i++) {
-				row_names.push_back("Col-" + std::to_string(i));
+				col_names.push_back("Col-" + std::to_string(i));
 			}
 		}
 
@@ -245,7 +246,6 @@ namespace var
 		// ************************* Getters ************************ //
 
 		/**
-		 *
 		 * @brief Get the row size
 		 *
 		 * @return `int`
@@ -277,8 +277,8 @@ namespace var
 		 *
 		 * @param i row index
 		 * @param j column index
-		 * @throws `std::invalid_argument` if invalid indexes
 		 * @return `D&`  element <br>
+		 * @throws `std::invalid_argument` if invalid indexes
 		 */
 		D& at(int i, int j)
 		{
@@ -322,7 +322,7 @@ namespace var
 		 *
 		 * ## Row getters
 		 * @param name name of the column
-		 * @return `std::vector<D>`: Empty if nothing exits <br>
+		 * @return `std::vector<D>`
 		 * @throws `std::invalid_argument` in case \ref name is invalid
 		 */
 		std::vector<D> get_col(std::string name)
@@ -331,10 +331,11 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the col as table
+		 * @brief Get the col as `table`
 		 *
-		 * @param j
-		 * @return table
+		 * @param j index ofo that column 
+		 * @return `table`
+		 * @throws `std::invalid_argument` in case \ref index is invalid
 		 */
 		table get_col_table(int j)
 		{
@@ -350,10 +351,11 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the col as table
+		 * @brief Get the col as `table`
 		 *
-		 * @param name
-		 * @return table
+		 * @param name column name 
+		 * @return `table`
+		 * @throws `std::invalid_argument` in case \ref name is invalid
 		 */
 		table get_col_table(std::string name)
 		{
@@ -407,11 +409,18 @@ namespace var
 		 *
 		 * @param i
 		 * @return table
+		 * @throws `std::invalid_argument` in case \ref index is invalid
 		 */
 		table get_row_table(int i)
 		{
 			table t;
-
+			if(i < 0 || i >= _row) {
+				throw std::invalid_argument("var::table::get_row_table -> given column index doesn't exist");
+			}
+			for(int j = 0; j < _col; j++) {
+				t.push_col({ this->at(i, j) }, col_names.at(j));
+			}
+			t.row_names.push_back(row_names.at(i));
 			return t;
 		}
 
@@ -422,6 +431,7 @@ namespace var
 		 *
 		 * @param name
 		 * @return table
+		 * @throws `std::invalid_argument` in case \ref name is invalid
 		 */
 		table get_row_table(std::string name)
 		{
@@ -430,6 +440,12 @@ namespace var
 
 		// ************************* Setters ************************ //
 
+		/**
+		 * @brief Set the col names 
+		 * 
+		 * @param names `vector` of column names 
+		 * @throws `std::invalid_argument` size of `vector` names doesnt match column size 
+		 */
 		void set_col_names(std::vector<std::string> names)
 		{
 			if(names.size() != _col) {
@@ -438,6 +454,14 @@ namespace var
 			col_names = names;
 		}
 
+		/**
+		 * @brief Set the col name 
+		 * 
+		 * @param j index of column 
+		 * @param name name of column 
+		 * @throws `std::invalid_argument` invalid index `j`
+		 * @throws `std::runtime_error` column names are not set properly 
+		 */
 		void set_col_name(int j, std::string name)
 		{
 			if(j < 0 || j >= _col) {
@@ -454,26 +478,22 @@ namespace var
 			}
 		}
 
+		/**
+		 * @brief Inserts new column into given index
+		 * 
+		 * @param a column to be inserted 
+		 * @param j column index to insert at 
+		 * @param name name of the column 
+		 * @throws `std::invalid_argument` invalid column index
+		 * @throws `std::invalid_argument` `a.size()` $\neq$ row size
+		 */
 		void insert_col(std::vector<D> a, int j, std::string name = std::string())
 		{
 			if(j < 0 || j > _col) {
 				throw std::invalid_argument("var::table::insert_col -> invalid column index");
 			}
-			if(a.size() != _row) {
-				throw std::invalid_argument("var::table::insert_col -> invalid given column size (must match number of rows)");
-			}
-			_col++;
-			for(int i = 0; i < _row; i++) {
-				data.insert(data.begin() + get_index(i, j), a[i]);
-			}
-			col_names.insert(col_names.begin() + j, name);
-			set_col_name(j, name);
-		}
-
-		void push_col(std::vector<D> a, std::string name = std::string())
-		{
 			if(_row != 0 && a.size() != _row) {
-				throw std::invalid_argument("var::table::push_col -> invalid given column size (must match number of rows)");
+				throw std::invalid_argument("var::table::insert_col -> invalid given column size (must match number of rows)");
 			}
 			if(_col == 0 || _row == 0) {
 				*this = table(a.size(), 1);
@@ -482,14 +502,41 @@ namespace var
 				}
 				set_col_name(0, name);
 			}
-			else {
-				insert_col(a, _col, name);
+			else{
+				_col++;
+				for(int i = 0; i < _row; i++) {
+					data.insert(data.begin() + get_index(i, j), a[i]);
+				}
+				col_names.insert(col_names.begin() + j, name);
+				set_col_name(j, name);
 			}
 		}
 
+		/**
+		 * @brief Pushes column at the end of the table 
+		 * 
+		 * @param a column to be inserted 
+		 * @param name name of the column 
+		 * @throws `std::invalid_argument` `a.size()` $\neq$ row size
+		 */
+		void push_col(std::vector<D> a, std::string name = std::string())
+		{
+			if(_row != 0 && a.size() != _row) {
+				throw std::invalid_argument("var::table::push_col -> invalid given column size (must match number of rows)");
+			}
+			insert_col(a, _col, name);
+		}
+
+		/**
+		 * @brief Swaps two column 
+		 * 
+		 * @param j1 index 1 
+		 * @param j2 index 2 
+		 * @throws `std::invalid_argument` invalid index
+		 */
 		void swap_col(int j1, int j2)
 		{
-			if(j1 < 0 || j1 > _col || j2 > 0 || j2 > _col) {
+			if(j1 < 0 || j1 >= _col || j2 < 0 || j2 >= _col) {
 				throw std::invalid_argument("var::table::swap_col -> invalid column index");
 			}
 			for(int i = 0; i < _row; i++) {
@@ -508,7 +555,7 @@ namespace var
 		 */
 		void replace_col(int j, std::vector<D> a, std::string name = std::string())
 		{
-			if(j < 0 || j > _col) {
+			if(j < 0 || j >= _col) {
 				throw std::invalid_argument("var::table::erase_col -> invalid column index");
 			}
 			if(a.size() != _row) {
@@ -523,10 +570,8 @@ namespace var
 		/**
 		 * @brief Combines the columns of another table
 		 *
-		 * `other` must have same number of rows
-		 *
 		 * @param other `table`
-		 * @throw `std::invalid_argument` exception description
+		 * @throw `std::invalid_argument` `other` doesn't have same number of rows
 		 */
 		void join_col(table other)
 		{
@@ -542,29 +587,46 @@ namespace var
 		 * @brief Erases given index column
 		 *
 		 * @param j column index
+		 * @throws `std::invalid_argument` invalid index 
+		 * @throws `std::runtime_error` table is empty 
 		 */
 		void erase_col(int j)
 		{
-			if(j < 0 || j > _col) {
+			if(j < 0 || j >= _col) {
 				throw std::invalid_argument("var::table::erase_col -> invalid column index");
 			}
+			if(_col == 0){
+				throw std::runtime_error("var::table::erase_col -> table is empty");
+			}
 			for(int i = 0; i < _row; i++) {
-				data.erase(data.begin() + get_index(i, j));
+				data.erase(data.begin() + get_index(i, j)-i);
 			}
 			col_names.erase(col_names.begin() + j);
+			if(_col != 0){
+				_col--;
+			}
 		}
 
 		/**
 		 * @brief Removes last column
 		 *
 		 * ## Row setters
-		 *
+		 * @throws `std::runtime_error` table is empty 
 		 */
 		void pop_col()
 		{
+			if(_col == 0){
+				throw std::runtime_error("var::table::pop_col -> table is empty");
+			}
 			erase_col(_col - 1);
 		}
 
+		/**
+		 * @brief Set the row names 
+		 * 
+		 * @param names vector of row names 
+		 * @throws `std::invalid_argument` if `names.size()` doesnt match row size 
+		 */
 		void set_row_names(std::vector<std::string> names)
 		{
 			if(names.size() != _row) {
@@ -573,58 +635,90 @@ namespace var
 			row_names = names;
 		}
 
-		void set_row_name(int index, std::string names)
+		/**
+		 * @brief Set the row name 
+		 * 
+		 * @param i index of row 
+		 * @param name name of row 
+		 * @throws `std::invalid_argument` invalid index `i`
+		 * @throws `std::runtime_error`row names are not set properly 
+		 */
+		void set_row_name(int i, std::string names)
 		{
-			if(index < 0 || index >= _row) {
+			if(i < 0 || i >= _row) {
 				throw std::invalid_argument("var::table::set_col_name -> given row index doesn't exist");
 			}
 			if(row_names.size() != _row) {
 				throw std::invalid_argument("var::table::set_row_name -> row names are not set correctly");
 			}
-			row_names[index] = names;
+			row_names[i] = names;
 		}
 
+		/**
+		 * @brief Inserts new row into given index
+		 * 
+		 * @param a row to be inserted 
+		 * @param i row index to insert at 
+		 * @param name name of the row 
+		 * @throws `std::invalid_argument` invalid row index
+		 * @throws `std::invalid_argument` `a.size()` $\neq$ column size
+		 */
 		void insert_row(std::vector<D> a, int i, std::string name = std::string())
 		{
 			if(i < 0 || i > _row) {
 				throw std::invalid_argument("var::table::insert_row -> invalid rowumn index");
 			}
-			if(a.size() != _col) {
+			if(_col != 0 && a.size() != _col) {
 				throw std::invalid_argument("var::table::insert_row -> invalid given rowumn size (must match number of rows)");
 			}
-			for(int j = 0; j < _col; j++) {
-				data.insert(data.begin() + get_index(i, j), a[j]);
+			if(_col == 0 || _row == 0) {
+				*this = table(1, a.size());
+				for(int j = 0; j < _col; j++) {
+					this->at(0, j) = a[j];
+				}
+				set_row_name(0, name);
 			}
-			_row++;
-			row_names.insert(row_names.begin() + i, name);
-			set_row_name(i, name);
+			else{
+				_row++;
+				for(int j = 0; j < _col; j++) {
+					data.insert(data.begin() + get_index(i, j), a[j]);
+				}
+				row_names.insert(row_names.begin() + i, name);
+				set_row_name(i, name);
+			}
 		}
 
+		/**
+		 * @brief Pushes row at the end of the table 
+		 * 
+		 * @param a row to be inserted 
+		 * @param name name of the row 
+		 * @throws `std::invalid_argument` `a.size()` $\neq$ column size
+		 */
 		void push_row(std::vector<D> a, std::string name = std::string())
 		{
 			if(_row != 0 && a.size() != _col) {
 				throw std::invalid_argument("var::table::push_row -> invalid given rowumn size (must match number of rows)");
 			}
-			if(_row == 0 || _col == 0) {
-				*this = table(1, a.size());
-				for(int i = 0; i < _row; i++) {
-					this->at(i, 0) = a[i];
-				}
-			}
-			else {
-				insert_row(a, _row, name);
-			}
+			insert_row(a, _row, name);
 		}
 
-		void swap_row(int j1, int j2)
+		/**
+		 * @brief Swaps two rows
+		 * 
+		 * @param i1 index 1 
+		 * @param i2 index 2 
+		 * @throws `std::invalid_argument` invalid index
+		 */
+		void swap_row(int i1, int i2)
 		{
-			if(j1 < 0 || j1 > _row || j2 > 0 || j2 > _row) {
+			if(i1 < 0 || i1 >= _row || i2 < 0 || i2 >= _row) {
 				throw std::invalid_argument("var::table::swap_row -> invalid rowumn index");
 			}
-			for(int i = 0; i < _row; i++) {
-				std::swap(data[get_index(i, j1)], data[get_index(i, j2)]);
+			for(int j = 0; j < _col; j++) {
+				std::swap(data[get_index(i1, j)], data[get_index(i2, j)]);
 			}
-			std::swap(row_names[j1], row_names[j2]);
+			std::swap(row_names[i1], row_names[i2]);
 		}
 
 		/**
@@ -635,28 +729,23 @@ namespace var
 		 * @throw `std::invalid_argument` invalid `j` index
 		 * @throw `std::invalid_argument` `a.size()` $\neq$ row size
 		 */
-		void replace_row(int j, std::vector<D> a, std::string name = std::string())
+		void replace_row(int i, std::vector<D> a, std::string name = std::string())
 		{
-			if(j < 0 || j > _row) {
+			if(i < 0 || i >= _row) {
 				throw std::invalid_argument("var::table::erase_row -> invalid rowumn index");
 			}
-			if(a.size() != _row) {
+			if(a.size() != _col) {
 				throw std::invalid_argument("var::table::replace_row -> invalid given rowumn size (must match number of rows)");
 			}
-			for(int i = 0; i < _row; i++) {
-				this->at(i, j) = a.at(i);
+			for(int j = 0; j < _col; j++) {
+				this->at(i, j) = a.at(j);
 			}
-			set_row_name(j, name);
+			set_row_name(i, name);
 		}
 
 		/**
 		 * @brief Combines the rows of another table
 		 *
-		 * **Usage**:
-		 * ```cpp
-		 * // m2 must have same number of columns as m1
-		 * m1.join_row(m2);
-		 * ```
 		 *
 		 * @param other ``table``
 		 * @throw `std::invalid_argument` Size mismatch
@@ -674,17 +763,20 @@ namespace var
 		/**
 		 * @brief Erases given index rowumn
 		 *
-		 * @param j rowumn index
+		 * @param i rowumn index
 		 */
-		void erase_row(int j)
+		void erase_row(int i)
 		{
-			if(j < 0 || j > _row) {
+			if(i < 0 || i >= _row) {
 				throw std::invalid_argument("var::table::erase_row -> invalid rowumn index");
 			}
-			for(int i = 0; i < _row; i++) {
-				data.erase(data.begin() + get_index(i, j));
+			for(int j = 0; j < _col; j++) {
+				data.erase(data.begin() + get_index(i, j)-j);
 			}
-			row_names.erase(row_names.begin() + j);
+			row_names.erase(row_names.begin() + i);
+			if(_row != 0){
+				_row--;
+			}
 		}
 
 		/**
@@ -702,11 +794,6 @@ namespace var
 
 		/**
 		 * @brief Resizes the table
-		 *
-		 * **Usage**:
-		 * ```cpp
-		 * t.resize(3, 3);
-		 * ```
 		 *
 		 * !!! warning "Warning"
 		 * <pre>
@@ -732,7 +819,7 @@ namespace var
 		 *
 		 * **Usage**:
 		 * ```cpp
-		 * t.turn_to(1);
+		 * t.turn_to(1); // turns all elements to 1
 		 * ```
 		 *
 		 * @param n the specifeid variable
