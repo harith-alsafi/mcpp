@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imag_362',['imag',['../structalg_1_1ans.html#a2eba832a029d4e71f4fd66f6789f84b2',1,'alg::ans']]]
+  ['imag_360',['imag',['../structalg_1_1ans.html#a2eba832a029d4e71f4fd66f6789f84b2',1,'alg::ans']]]
 ];

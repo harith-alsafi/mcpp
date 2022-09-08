@@ -104,7 +104,7 @@
         </inbodydescription>
         <location file="includes/numerical/vect.hpp" line="51" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="51" bodyend="55"/>
       </memberdef>
-      <memberdef kind="function" id="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacevect_1a8433c4fe5a4a81b9f598b2e43907d43d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -112,10 +112,10 @@
         </templateparamlist>
         <type>D</type>
         <definition>D vect::sum</definition>
-        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
         <name>sum</name>
         <param>
-          <type>std::vector&lt; D &gt; &amp;</type>
+          <type>std::vector&lt; D &gt;</type>
           <declname>a</declname>
         </param>
         <briefdescription>

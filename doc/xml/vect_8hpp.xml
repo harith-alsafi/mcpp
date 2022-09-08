@@ -108,7 +108,7 @@
         </inbodydescription>
         <location file="includes/numerical/vect.hpp" line="51" column="3" bodyfile="includes/numerical/vect.hpp" bodystart="51" bodyend="55"/>
       </memberdef>
-      <memberdef kind="function" id="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespacevect_1a8433c4fe5a4a81b9f598b2e43907d43d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename D</type>
@@ -116,10 +116,10 @@
         </templateparamlist>
         <type>D</type>
         <definition>D vect::sum</definition>
-        <argsstring>(std::vector&lt; D &gt; &amp;a)</argsstring>
+        <argsstring>(std::vector&lt; D &gt; a)</argsstring>
         <name>sum</name>
         <param>
-          <type>std::vector&lt; D &gt; &amp;</type>
+          <type>std::vector&lt; D &gt;</type>
           <declname>a</declname>
         </param>
         <briefdescription>
@@ -1152,7 +1152,7 @@
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacevect_1a441fcc00c9f98c6363a2e1869c4f127a" kindref="member">sum</ref>(std::vector&lt;D&gt;<sp/>&amp;a)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>D<sp/><ref refid="namespacevect_1a8433c4fe5a4a81b9f598b2e43907d43d" kindref="member">sum</ref>(std::vector&lt;D&gt;<sp/>a)</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>D<sp/>sm;</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;i<sp/>:<sp/>a)<sp/>{</highlight></codeline>
