@@ -7,6 +7,7 @@
 <a href="https://harith-alsafi.github.io/mcpp-doc/" target="_blank">![Doc](https://img.shields.io/badge/doc-mkdocs-blue)</a> 
 <a href="https://github.com/harith-alsafi/mcpp/actions/workflows/cmake.yml" target="_blank">![Cmake build](https://github.com/harith-alsafi/mcpp/actions/workflows/cmake.yml/badge.svg)</a> 
 <a href="https://github.com/harith-alsafi/mcpp/actions/workflows/docker-image.yml" target="_blank">![Dokcer build](https://github.com/harith-alsafi/mcpp/actions/workflows/docker-image.yml/badge.svg)</a>
+[![CodeQL](https://github.com/harith-alsafi/mcpp/actions/workflows/codeql.yml/badge.svg)](https://github.com/harith-alsafi/mcpp/actions/workflows/codeql.yml)
 <a href="https://github.com/harith-alsafi/mcpp/issues" target="_blank">![Github Issues](https://img.shields.io/badge/issues-0%20open-yellow)</a>
 
 # Table of content 
