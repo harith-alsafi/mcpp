@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['real_367',['real',['../structalg_1_1ans.html#a8bbf5e0c166768f3e250e03666c4cf58',1,'alg::ans']]],
-  ['row_5fnames_368',['row_names',['../classvar_1_1table.html#ad69844095e9fd79ebdca86f22fa42ff5',1,'var::table']]]
+  ['q1_365',['Q1',['../structvar_1_1QR.html#af843a20b7785502305ef0124c09b80ae',1,'var::QR']]],
+  ['q2_366',['Q2',['../structvar_1_1QR.html#a53d4de60b6b7913575898481a64c3d1e',1,'var::QR']]],
+  ['q3_367',['Q3',['../structvar_1_1QR.html#a93de73ac05741855b14e633d8a6ea5c4',1,'var::QR']]]
 ];

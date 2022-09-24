@@ -5,7 +5,7 @@ var searchData=
   ['sech_326',['sech',['../namespacevect.html#a664340fc9a2a2ac2c0c14cb542a29f17',1,'vect']]],
   ['set_5fcol_5fname_327',['set_col_name',['../classvar_1_1table.html#aea28b09580171d064d30c57f2039252a',1,'var::table']]],
   ['set_5fcol_5fnames_328',['set_col_names',['../classvar_1_1table.html#a86899556462d8e8fc6499432157e4352',1,'var::table']]],
-  ['set_5frow_5fname_329',['set_row_name',['../classvar_1_1table.html#ad4f75766011a41ffc0ae82ffc56921ca',1,'var::table']]],
+  ['set_5frow_5fname_329',['set_row_name',['../classvar_1_1table.html#ac1d7113447069abdad85ca9986a5807c',1,'var::table']]],
   ['set_5frow_5fnames_330',['set_row_names',['../classvar_1_1table.html#a60611dd76aa2d387bb2909ef3a948427',1,'var::table']]],
   ['show_331',['show',['../classvar_1_1table.html#a462865ba0a86a2e26cce1ab85b60cbbf',1,'var::table::show(int r)'],['../classvar_1_1table.html#ad471ed11d98bd02b5935cc71ba911bae',1,'var::table::show()']]],
   ['show_5fheader_332',['show_header',['../classvar_1_1table.html#a5e7459882c4bd4bc29759f5fb3c1ee10',1,'var::table']]],

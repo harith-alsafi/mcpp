@@ -12,7 +12,13 @@
 #include "../mathematic/mathematic.hpp"
 #include "../statistics/stat.hpp"
 #include "others.hpp"
+#include <exception>
+#include <map>
+#include <sstream>
 #include <stdexcept>
+#include <string>
+#include <variant>
+#include <vector>
 
 // TODO: complete testing
 // TODO: fix documentation and code
@@ -26,12 +32,13 @@ namespace var
 	class table
 	{
 	  protected:
-		std::vector<D> data;                ///< the data container
-		std::vector<std::string> col_names; ///< Stores the column names
-		std::vector<std::string> row_names; ///< Stores the row names
-		int _row;                           ///< Row size
-		int _col;                           ///< Colum size
-		int sz = 10;                        ///< Spacing size for print
+		std::vector<D> data;                  ///< Data container
+		std::map<int, std::string> col_names; ///< Column names
+		std::map<int, std::string> row_names; ///< Row names
+		int _row;                             ///< Row size
+		int _col;                             ///< Colum size
+		int sz = 10;                          ///< Spacing size for print
+	    inline static const std::string empty_name = "n/a";
 
 		/**
 		 * @brief Get the index (maps 1D vector to 2D vector)
@@ -54,9 +61,11 @@ namespace var
 		 */
 		int check_col_name(std::string name)
 		{
-			for(int i = 0; i < (int) col_names.size(); i++) {
-				if(col_names[i] == name) {
-					return i;
+			for(int j = 0; j < _col; j++) {
+				if(col_names.find(j) != col_names.end()) { // if index exists
+					if(col_names[j] == name) {
+						return j;
+					}
 				}
 			}
 			return -1;
@@ -72,8 +81,10 @@ namespace var
 		int check_row_name(std::string name)
 		{
 			for(int i = 0; i < (int) row_names.size(); i++) {
-				if(row_names[i] == name) {
-					return i;
+				if(row_names.find(i) != row_names.end()) {
+					if(row_names[i] == name) {
+						return i;
+					}
 				}
 			}
 			return -1;
@@ -154,31 +165,24 @@ namespace var
 		}
 
 		/**
-		 * @brief Clears current row names and generates new ones
+		 * @brief Clears current column names and generates new ones
 		 *
 		 */
-		void generate_rows()
+		void generate_cols()
 		{
-			if(!row_names.empty()) {
-				row_names.clear();
-			}
-			for(int i = 0; i < _row; i++) {
-				row_names.push_back("Row-" + std::to_string(i));
+			for(int j = 0; j < _col; j++) {
+				col_names[j] = "Col-" + std::to_string(j);
 			}
 		}
 
 		/**
 		 * @brief Clears current column names and generates new ones
-		 *
 		 * ## Constructors
 		 */
-		void generate_cols()
+		void generate_rows()
 		{
-			if(!col_names.empty()) {
-				col_names.clear();
-			}
-			for(int i = 0; i < _col; i++) {
-				col_names.push_back("Col-" + std::to_string(i));
+			for(int i = 0; i < _row; i++) {
+				row_names[i] = "Row-" + std::to_string(i);
 			}
 		}
 
@@ -289,11 +293,12 @@ namespace var
 		}
 
 		/**
-		 * @brief Get the col names
+		 * @brief Get the col names with the index that they refer to
+		 * If column name was not added then you won't find the index
 		 *
-		 * @return `std::vector<std::string>`  <br>
+		 * @return `std::map<int, std::string>`  <br>
 		 */
-		std::vector<std::string> get_col_names()
+		std::map<int, std::string> get_col_names()
 		{
 			return col_names;
 		}
@@ -333,7 +338,7 @@ namespace var
 		/**
 		 * @brief Get the col as `table`
 		 *
-		 * @param j index ofo that column 
+		 * @param j index ofo that column
 		 * @return `table`
 		 * @throws `std::invalid_argument` in case \ref index is invalid
 		 */
@@ -344,16 +349,16 @@ namespace var
 				throw std::invalid_argument("var::table::get_col_table -> given column index doesn't exist");
 			}
 			for(int i = 0; i < _row; i++) {
-				t.push_row({ this->at(i, j) }, row_names.at(i));
+				t.push_row({ this->at(i, j) }, row_names[i]);
 			}
-			t.col_names.push_back(col_names.at(j));
+			t.col_names[j] = col_names[j];
 			return t;
 		}
 
 		/**
 		 * @brief Get the col as `table`
 		 *
-		 * @param name column name 
+		 * @param name column name
 		 * @return `table`
 		 * @throws `std::invalid_argument` in case \ref name is invalid
 		 */
@@ -365,9 +370,9 @@ namespace var
 		/**
 		 * @brief Get the row names
 		 *
-		 * @return `std::vector<std::string>`  <br>
+		 * @return `std::map<int, std::string> `  <br>
 		 */
-		std::vector<std::string> get_row_names()
+		std::map<int, std::string> get_row_names()
 		{
 			return row_names;
 		}
@@ -420,7 +425,7 @@ namespace var
 			for(int j = 0; j < _col; j++) {
 				t.push_col({ this->at(i, j) }, col_names.at(j));
 			}
-			t.row_names.push_back(row_names.at(i));
+			t.row_names[i] = row_names[i];
 			return t;
 		}
 
@@ -441,53 +446,48 @@ namespace var
 		// ************************* Setters ************************ //
 
 		/**
-		 * @brief Set the col names 
-		 * 
-		 * @param names `vector` of column names 
-		 * @throws `std::invalid_argument` size of `vector` names doesnt match column size 
+		 * @brief Set the col names
+		 *
+		 * @param names `vector` of column names
+		 * @throws `std::invalid_argument` size of `vector` names doesnt match column size
 		 */
 		void set_col_names(std::vector<std::string> names)
 		{
 			if(names.size() != _col) {
 				throw std::invalid_argument("table::set_col_names -> Input parameter size doesn't match curret column size");
 			}
-			col_names = names;
+			for(int j = 0; j < _col; j++) {
+				set_col_name(j, names[j]);
+			}
 		}
 
 		/**
-		 * @brief Set the col name 
-		 * 
-		 * @param j index of column 
-		 * @param name name of column 
+		 * @brief Set the col name
+		 * Doesn't set empty names (no exception) 
+		 * @param j index of column
+		 * @param name name of column
 		 * @throws `std::invalid_argument` invalid index `j`
-		 * @throws `std::runtime_error` column names are not set properly 
 		 */
 		void set_col_name(int j, std::string name)
 		{
 			if(j < 0 || j >= _col) {
 				throw std::invalid_argument("var::table::set_col_name -> given column index doesn't exist");
 			}
-			if(col_names.size() != _col) {
-				throw std::runtime_error("var::table::set_col_name -> number of columns doesn't match size of column name list");
-			}
-			if(!name.empty()) {
+			if(!name.empty()){
 				col_names[j] = name;
-			}
-			else {
-				col_names[j] = "Col-" + std::to_string(j);
 			}
 		}
 
 		/**
 		 * @brief Inserts new column into given index
-		 * 
-		 * @param a column to be inserted 
-		 * @param j column index to insert at 
-		 * @param name name of the column 
+		 * Doesn't set empty names (no exception)
+		 * @param a column to be inserted
+		 * @param j column index to insert at
+		 * @param name `default("n/a")` name of the column
 		 * @throws `std::invalid_argument` invalid column index
 		 * @throws `std::invalid_argument` `a.size()` $\neq$ row size
 		 */
-		void insert_col(std::vector<D> a, int j, std::string name = std::string())
+		void insert_col(std::vector<D> a, int j, std::string name = empty_name)
 		{
 			if(j < 0 || j > _col) {
 				throw std::invalid_argument("var::table::insert_col -> invalid column index");
@@ -500,26 +500,30 @@ namespace var
 				for(int i = 0; i < _row; i++) {
 					this->at(i, 0) = a[i];
 				}
-				set_col_name(0, name);
+				if(!name.empty()){
+					set_col_name(0, name);
+				}
 			}
-			else{
+			else {
 				_col++;
 				for(int i = 0; i < _row; i++) {
 					data.insert(data.begin() + get_index(i, j), a[i]);
 				}
-				col_names.insert(col_names.begin() + j, name);
-				set_col_name(j, name);
+				if(!name.empty()){
+					col_names[j+1] = col_names[j];
+					set_col_name(j, name);
+				}
 			}
 		}
 
 		/**
-		 * @brief Pushes column at the end of the table 
-		 * 
-		 * @param a column to be inserted 
-		 * @param name name of the column 
+		 * @brief Pushes column at the end of the table
+		 * Doesn't set empty names (no exception)
+		 * @param a column to be inserted
+		 * @param name `default("n/a")` name of the column
 		 * @throws `std::invalid_argument` `a.size()` $\neq$ row size
 		 */
-		void push_col(std::vector<D> a, std::string name = std::string())
+		void push_col(std::vector<D> a, std::string name = empty_name)
 		{
 			if(_row != 0 && a.size() != _row) {
 				throw std::invalid_argument("var::table::push_col -> invalid given column size (must match number of rows)");
@@ -528,10 +532,10 @@ namespace var
 		}
 
 		/**
-		 * @brief Swaps two column 
-		 * 
-		 * @param j1 index 1 
-		 * @param j2 index 2 
+		 * @brief Swaps two column with their names
+		 *
+		 * @param j1 index 1
+		 * @param j2 index 2
 		 * @throws `std::invalid_argument` invalid index
 		 */
 		void swap_col(int j1, int j2)
@@ -547,13 +551,14 @@ namespace var
 
 		/**
 		 * @brief Replaces given column index
-		 *
+		 * Doesn't set empty names (no exception) 
 		 * @param j column index
 		 * @param a new column
+		 * @param name `default("n/a")` name of column
 		 * @throw `std::invalid_argument` invalid `j` index
 		 * @throw `std::invalid_argument` `a.size()` $\neq$ row size
 		 */
-		void replace_col(int j, std::vector<D> a, std::string name = std::string())
+		void replace_col(int j, std::vector<D> a, std::string name = empty_name)
 		{
 			if(j < 0 || j >= _col) {
 				throw std::invalid_argument("var::table::erase_col -> invalid column index");
@@ -564,7 +569,9 @@ namespace var
 			for(int i = 0; i < _row; i++) {
 				this->at(i, j) = a.at(i);
 			}
-			set_col_name(j, name);
+			if(!name.empty()){
+				set_col_name(j, name);
+			}
 		}
 
 		/**
@@ -579,7 +586,7 @@ namespace var
 				throw std::invalid_argument("var::table::join_col -> Size mismatch");
 			}
 			for(int j = 0; j < other.col(); j++) {
-				push_col(other.get_col(j));
+				push_col(other.get_col(j), other.col_names[j]);
 			}
 		}
 
@@ -587,22 +594,22 @@ namespace var
 		 * @brief Erases given index column
 		 *
 		 * @param j column index
-		 * @throws `std::invalid_argument` invalid index 
-		 * @throws `std::runtime_error` table is empty 
+		 * @throws `std::invalid_argument` invalid index
+		 * @throws `std::runtime_error` table is empty
 		 */
 		void erase_col(int j)
 		{
 			if(j < 0 || j >= _col) {
 				throw std::invalid_argument("var::table::erase_col -> invalid column index");
 			}
-			if(_col == 0){
+			if(_col == 0) {
 				throw std::runtime_error("var::table::erase_col -> table is empty");
 			}
 			for(int i = 0; i < _row; i++) {
-				data.erase(data.begin() + get_index(i, j)-i);
+				data.erase(data.begin() + get_index(i, j) - i);
 			}
-			col_names.erase(col_names.begin() + j);
-			if(_col != 0){
+			col_names.erase(j);
+			if(_col != 0) {
 				_col--;
 			}
 		}
@@ -611,59 +618,59 @@ namespace var
 		 * @brief Removes last column
 		 *
 		 * ## Row setters
-		 * @throws `std::runtime_error` table is empty 
+		 * @throws `std::runtime_error` table is empty
 		 */
 		void pop_col()
 		{
-			if(_col == 0){
+			if(_col == 0) {
 				throw std::runtime_error("var::table::pop_col -> table is empty");
 			}
 			erase_col(_col - 1);
 		}
 
 		/**
-		 * @brief Set the row names 
-		 * 
-		 * @param names vector of row names 
-		 * @throws `std::invalid_argument` if `names.size()` doesnt match row size 
+		 * @brief Set the row names
+		 * Doesn't set empty names (no exception) 
+		 * @param names vector of row names
+		 * @throws `std::invalid_argument` if `names.size()` doesnt match row size
 		 */
 		void set_row_names(std::vector<std::string> names)
 		{
 			if(names.size() != _row) {
 				throw std::invalid_argument("table::set_row_names -> Input parameter size doesn't match curret row size");
 			}
-			row_names = names;
+			for(int i = 0; i < _row; i++) {
+				set_row_name(i, names[i]);
+			}
 		}
 
 		/**
-		 * @brief Set the row name 
-		 * 
-		 * @param i index of row 
-		 * @param name name of row 
+		 * @brief Set the row name
+		 * Doesn't set empty names (no exception) 
+		 * @param i index of row
+		 * @param name name of row
 		 * @throws `std::invalid_argument` invalid index `i`
-		 * @throws `std::runtime_error`row names are not set properly 
 		 */
-		void set_row_name(int i, std::string names)
+		void set_row_name(int i, std::string name)
 		{
 			if(i < 0 || i >= _row) {
 				throw std::invalid_argument("var::table::set_col_name -> given row index doesn't exist");
 			}
-			if(row_names.size() != _row) {
-				throw std::invalid_argument("var::table::set_row_name -> row names are not set correctly");
+			if(!name.empty()){
+				row_names[i] = name;
 			}
-			row_names[i] = names;
 		}
 
 		/**
 		 * @brief Inserts new row into given index
-		 * 
-		 * @param a row to be inserted 
-		 * @param i row index to insert at 
-		 * @param name name of the row 
+		 * Doesn't set empty names (no exception)
+		 * @param a row to be inserted
+		 * @param i row index to insert at
+		 * @param name `default("n/a")` name of the row
 		 * @throws `std::invalid_argument` invalid row index
 		 * @throws `std::invalid_argument` `a.size()` $\neq$ column size
 		 */
-		void insert_row(std::vector<D> a, int i, std::string name = std::string())
+		void insert_row(std::vector<D> a, int i, std::string name = empty_name)
 		{
 			if(i < 0 || i > _row) {
 				throw std::invalid_argument("var::table::insert_row -> invalid rowumn index");
@@ -676,26 +683,30 @@ namespace var
 				for(int j = 0; j < _col; j++) {
 					this->at(0, j) = a[j];
 				}
-				set_row_name(0, name);
+				if(!name.empty()){
+					set_row_name(0, name);
+				}
 			}
-			else{
+			else {
 				_row++;
 				for(int j = 0; j < _col; j++) {
 					data.insert(data.begin() + get_index(i, j), a[j]);
 				}
-				row_names.insert(row_names.begin() + i, name);
-				set_row_name(i, name);
+				if(!name.empty()){
+					row_names[i+1] = row_names[i];
+					set_row_name(i, name);
+				}
 			}
 		}
 
 		/**
-		 * @brief Pushes row at the end of the table 
-		 * 
-		 * @param a row to be inserted 
-		 * @param name name of the row 
+		 * @brief Pushes row at the end of the table
+		 * Doesn't set empty names (no exception) 
+		 * @param a row to be inserted
+		 * @param name name of the row
 		 * @throws `std::invalid_argument` `a.size()` $\neq$ column size
 		 */
-		void push_row(std::vector<D> a, std::string name = std::string())
+		void push_row(std::vector<D> a, std::string name = empty_name)
 		{
 			if(_row != 0 && a.size() != _col) {
 				throw std::invalid_argument("var::table::push_row -> invalid given rowumn size (must match number of rows)");
@@ -704,10 +715,10 @@ namespace var
 		}
 
 		/**
-		 * @brief Swaps two rows
+		 * @brief Swaps two rows with theri names
 		 * 
-		 * @param i1 index 1 
-		 * @param i2 index 2 
+		 * @param i1 index 1
+		 * @param i2 index 2
 		 * @throws `std::invalid_argument` invalid index
 		 */
 		void swap_row(int i1, int i2)
@@ -723,13 +734,14 @@ namespace var
 
 		/**
 		 * @brief Replaces given rowumn index
-		 *
+		 * Doesn't set empty names (no exception) 
 		 * @param j rowumn index
 		 * @param a new rowumn
+		 * @param name `default("n/a")` name of row 
 		 * @throw `std::invalid_argument` invalid `j` index
 		 * @throw `std::invalid_argument` `a.size()` $\neq$ row size
 		 */
-		void replace_row(int i, std::vector<D> a, std::string name = std::string())
+		void replace_row(int i, std::vector<D> a, std::string name = empty_name)
 		{
 			if(i < 0 || i >= _row) {
 				throw std::invalid_argument("var::table::erase_row -> invalid rowumn index");
@@ -740,7 +752,9 @@ namespace var
 			for(int j = 0; j < _col; j++) {
 				this->at(i, j) = a.at(j);
 			}
-			set_row_name(i, name);
+			if(!name.empty()){
+				set_row_name(i, name);
+			}
 		}
 
 		/**
@@ -756,7 +770,7 @@ namespace var
 				throw std::invalid_argument("var::table::join_row -> Size mismatch");
 			}
 			for(int i = 0; i < other.row(); i++) {
-				push_row(other.get_row(i));
+				push_row(other.get_row(i), other.row_names[i]);
 			}
 		}
 
@@ -771,10 +785,10 @@ namespace var
 				throw std::invalid_argument("var::table::erase_row -> invalid rowumn index");
 			}
 			for(int j = 0; j < _col; j++) {
-				data.erase(data.begin() + get_index(i, j)-j);
+				data.erase(data.begin() + get_index(i, j) - j);
 			}
-			row_names.erase(row_names.begin() + i);
-			if(_row != 0){
+			row_names.erase(i);
+			if(_row != 0) {
 				_row--;
 			}
 		}
@@ -865,47 +879,55 @@ namespace var
 		 *
 		 *
 		 *
-		 * @param file: file name
+		 * @param fname: file name
+		 * @param headers_exist: `default(true)` flag indicating if column names exist in file
 		 * @return `true` : if read is success
 		 * @return `false`: if read did not complete
 		 */
-		bool read_csv(std::string filename)
+		bool read_csv(std::string fname, bool headers_exist = true)
 		{
-			std::ifstream file(filename);
+			std::ifstream file(fname);
 			if(file.is_open()) {
 				data.clear();
 				col_names.clear();
+				row_names.clear();
 
 				// col name
-				std::string line, colname;
-				std::getline(file, line);
+				std::string line, str;
 
-				std::stringstream ss(line);
-				while(getline(ss, colname, ',')) {
-					col_names.push_back(colname);
+				std::vector<std::string> headers;
+				if(headers_exist){
+					std::getline(file, line);
+					std::stringstream ss(line);
+					while(getline(ss, str, ',')) {
+						headers.push_back(str);
+					}
 				}
 
 				// data
-				D val;
 				while(std::getline(file, line)) {
 					// Create a stringstream of the current line
 					std::stringstream ss(line);
-
 					std::vector<D> r;
-					while(ss >> val) {
-						r.push_back(val);
 
-						// If the next token is a comma, ignore it and move on
-						if(ss.peek() == ',') {
-							ss.ignore();
+					while(getline(ss, str, ',')) {
+						D val = D();
+						try {
+							std::stringstream(str) >> val;
+						} catch (std::exception) {
+							val = D();
 						}
+						r.push_back(val);
 					}
-					this->push_row(r);
+					this->push_row(r, std::string());
 				}
 
+				if(headers_exist){
+					for(int j = 0; j < _col; j++){
+						col_names[j] = headers[j];
+					}
+				}
 				file.close();
-				generate_cols();
-				generate_rows();
 				return true;
 			}
 			file.close();
@@ -955,12 +977,6 @@ namespace var
 		 */
 		void show(int r)
 		{
-			if(row_names.empty()) {
-				generate_rows();
-			}
-			if(col_names.empty()) {
-				generate_cols();
-			}
 			std::string line;
 			if(_col == 1) {
 				line = generate_line((std::pow(2, 1 / _col) + 0.2) * sz * _col);
@@ -972,6 +988,10 @@ namespace var
 				for(int j = 0; j < _col; j++) {
 					// to print header
 					if(i == -1) {
+						// if column header deosnt exist exist
+						std::string col_name =
+							(col_names.find(j) == col_names.end()) ? "col-" + std::to_string(j) : col_names[j];
+
 						if(j == 0 && _col > 1) {
 							std::cout << prd("     ", sz) << "│"
 									  << prd(col_names[j], sz) << "│";
@@ -1130,37 +1150,28 @@ namespace var
 		 */
 		table describe_all()
 		{
-			table t;
+			table t(_col, 10);
 			auto avg = get_avgs();
 			auto std = get_stds();
 			auto var = get_vars();
 			auto qrs = get_qrs();
 			auto sms = get_sums();
 
-			// generates columns
-			if(col_names.size() != _col) {
-				generate_cols();
-			}
+
+
+			// loading col names
+			t.col_names[0] = "Avg";
+			t.col_names[1] = "STD";
+			t.col_names[2] = "VAR";
+			t.col_names[3] = "Min";
+			t.col_names[4] = "Q1";
+			t.col_names[5] = "Q2";
+			t.col_names[6] = "Q3";
+			t.col_names[7] = "Max";
+			t.col_names[8] = "IQR";
+			t.col_names[9] = "Sum";
 
 			for(int i = 0; i < _col; i++) {
-				t.row_names.push_back(col_names[i]);
-			}
-			// loading col names
-			t.col_names.push_back("Avg");
-			t.col_names.push_back("STD");
-			t.col_names.push_back("VAR");
-			t.col_names.push_back("Min");
-			t.col_names.push_back("Q1");
-			t.col_names.push_back("Q2");
-			t.col_names.push_back("Q3");
-			t.col_names.push_back("Max");
-			t.col_names.push_back("IQR");
-			t.col_names.push_back("Sum");
-
-			// loading values
-			t._row = t.row_names.size();
-			t._col = t.col_names.size();
-			for(int i = 0; i < t._row; i++) {
 				std::vector<D> rr; // row
 				rr.push_back(avg[i]);
 				rr.push_back(std[i]);
@@ -1172,7 +1183,7 @@ namespace var
 				rr.push_back(qrs[i].UQ);
 				rr.push_back(qrs[i].Q3 - qrs[i].Q1);
 				rr.push_back(sms[i]);
-				t.push_row(rr);
+				t.replace_row(i, rr, col_names[i]);
 			}
 			return t;
 		}

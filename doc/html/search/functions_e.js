@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['read_5fcsv_313',['read_csv',['../classvar_1_1table.html#ac3f099c46a47c6428689efefad42dcf2',1,'var::table']]],
+  ['read_5fcsv_313',['read_csv',['../classvar_1_1table.html#a61c85d1041b41f303c0d9ecbd4f6e260',1,'var::table']]],
   ['ref_314',['ref',['../classvar_1_1matrix.html#a29ff1c5a059b90bd4871d249d1c48c8b',1,'var::matrix']]],
-  ['replace_5fcol_315',['replace_col',['../classvar_1_1matrix.html#a7c8ab8d695bb6b214bcfb44a544e0c0d',1,'var::matrix::replace_col()'],['../classvar_1_1table.html#add8e48e4cc706cbf33a6a6abe4df7a24',1,'var::table::replace_col()']]],
-  ['replace_5frow_316',['replace_row',['../classvar_1_1matrix.html#a82d3724b6ff3dd95144c9e25429c9dbe',1,'var::matrix::replace_row()'],['../classvar_1_1table.html#a3036ac2cc2a33fc6effb3225de996cf5',1,'var::table::replace_row()']]],
+  ['replace_5fcol_315',['replace_col',['../classvar_1_1matrix.html#a7c8ab8d695bb6b214bcfb44a544e0c0d',1,'var::matrix::replace_col()'],['../classvar_1_1table.html#ac1102a8aa522698a3db1b6ab75e754dd',1,'var::table::replace_col()']]],
+  ['replace_5frow_316',['replace_row',['../classvar_1_1matrix.html#a82d3724b6ff3dd95144c9e25429c9dbe',1,'var::matrix::replace_row()'],['../classvar_1_1table.html#a83b285e1829b5508d6473d8f3bacb476',1,'var::table::replace_row()']]],
   ['resize_317',['resize',['../classvar_1_1matrix.html#a9bc064083b67aaab190bd66e7248a5ba',1,'var::matrix::resize()'],['../classvar_1_1table.html#ac0871cf7449ef0b81461454abb7adee2',1,'var::table::resize()']]],
   ['root_318',['root',['../namespacealg.html#a8cc029a46116b5497d4b8a267f1c360b',1,'alg']]],
   ['round_319',['round',['../namespacemth.html#aaf1bcab086ef624b1fb0cdff232f1db9',1,'mth::round()'],['../namespacevect.html#a369fb2030345114147307382513a62a3',1,'vect::round()']]],

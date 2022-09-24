@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imag_360',['imag',['../structalg_1_1ans.html#a2eba832a029d4e71f4fd66f6789f84b2',1,'alg::ans']]]
+  ['empty_5fname_360',['empty_name',['../classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7',1,'var::table']]]
 ];

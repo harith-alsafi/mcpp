@@ -114,17 +114,18 @@
   </compound>
   <compound refid="classvar_1_1table" kind="class"><name>var::table</name>
     <member refid="classvar_1_1table_1a35741492731785ddcf09bcb83a87d2d3" kind="variable"><name>data</name></member>
-    <member refid="classvar_1_1table_1a55535e54d90e2ddf7fbc98532e3dbaa3" kind="variable"><name>col_names</name></member>
-    <member refid="classvar_1_1table_1ad69844095e9fd79ebdca86f22fa42ff5" kind="variable"><name>row_names</name></member>
+    <member refid="classvar_1_1table_1a4c5403a105d653588858bf31a6a6224d" kind="variable"><name>col_names</name></member>
+    <member refid="classvar_1_1table_1abaccb2b99ccdc47306134797f28c4a95" kind="variable"><name>row_names</name></member>
     <member refid="classvar_1_1table_1a3d195e6796cfbc441b8e240b651d695b" kind="variable"><name>_row</name></member>
     <member refid="classvar_1_1table_1ad9a35db73dbd794283bf9b986c133ca3" kind="variable"><name>_col</name></member>
     <member refid="classvar_1_1table_1ae067e021bec7ba45f14e0a6c45c6116d" kind="variable"><name>sz</name></member>
+    <member refid="classvar_1_1table_1a5220f83aec460bcdde68215bb08a7cd7" kind="variable"><name>empty_name</name></member>
     <member refid="classvar_1_1table_1ab07ae6c9f4caef7a61a1fbc98ca638fd" kind="function"><name>get_index</name></member>
     <member refid="classvar_1_1table_1a42caed33499ca87d392e45e53fb6bc89" kind="function"><name>check_col_name</name></member>
     <member refid="classvar_1_1table_1ac3e95893eeb5711dbdcd402a6b06dea3" kind="function"><name>check_row_name</name></member>
     <member refid="classvar_1_1table_1a4ad03a888518a0919abcef08d9b307ea" kind="function"><name>generate_line</name></member>
-    <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" kind="function"><name>generate_rows</name></member>
     <member refid="classvar_1_1table_1a75cd6fd5f807343b311152f5118bb085" kind="function"><name>generate_cols</name></member>
+    <member refid="classvar_1_1table_1a2032fb3518fc73b1af05770202d61e8c" kind="function"><name>generate_rows</name></member>
     <member refid="classvar_1_1table_1a215cdf3b672a7231d895f4e6c4214b64" kind="function"><name>center</name></member>
     <member refid="classvar_1_1table_1a0b08c797c3314998239636e4840ff74e" kind="function"><name>prd</name></member>
     <member refid="classvar_1_1table_1ae783c7e8063d4999c621f28a44dd215c" kind="function"><name>prd</name></member>
@@ -135,38 +136,38 @@
     <member refid="classvar_1_1table_1a70b568d560efd34b1a67aee49135b8a6" kind="function"><name>col</name></member>
     <member refid="classvar_1_1table_1ac80c2b7b248e832d49280e71a9b34081" kind="function"><name>size</name></member>
     <member refid="classvar_1_1table_1a03c80af84df447196e80c74952211c2f" kind="function"><name>at</name></member>
-    <member refid="classvar_1_1table_1abc5c989c570b6c90e15623cc7b2db1d0" kind="function"><name>get_col_names</name></member>
+    <member refid="classvar_1_1table_1a0bb55e3d7e124c19b2ef1e9298c71cf8" kind="function"><name>get_col_names</name></member>
     <member refid="classvar_1_1table_1a1f769b9eae28d7c8fed43acd4fca1bd4" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1table_1a894dfeda7b8fed0898b5395c6d9f1fa5" kind="function"><name>get_col</name></member>
     <member refid="classvar_1_1table_1ab394c03c2c51586641f2a41a2e3a1759" kind="function"><name>get_col_table</name></member>
     <member refid="classvar_1_1table_1a28b6553353daf2c3e34a5786f90dd25c" kind="function"><name>get_col_table</name></member>
-    <member refid="classvar_1_1table_1aaec876550ab824cf2e02af43d1e519de" kind="function"><name>get_row_names</name></member>
+    <member refid="classvar_1_1table_1ae879752be3975566d379d416aef96775" kind="function"><name>get_row_names</name></member>
     <member refid="classvar_1_1table_1aee7e0ae316423385adcf7f6d325db712" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1table_1af06d391ee69ef70848c9620621dee65d" kind="function"><name>get_row</name></member>
     <member refid="classvar_1_1table_1a42805f86e64469221e5d789b8373a34c" kind="function"><name>get_row_table</name></member>
     <member refid="classvar_1_1table_1a8d7d4f9bf7d3ef4dac586449436018fc" kind="function"><name>get_row_table</name></member>
     <member refid="classvar_1_1table_1a86899556462d8e8fc6499432157e4352" kind="function"><name>set_col_names</name></member>
     <member refid="classvar_1_1table_1aea28b09580171d064d30c57f2039252a" kind="function"><name>set_col_name</name></member>
-    <member refid="classvar_1_1table_1a84b981bfdeb5b9c395e6dd5f70208c6d" kind="function"><name>insert_col</name></member>
-    <member refid="classvar_1_1table_1a70e7092db5d0e94be82260a923ae4814" kind="function"><name>push_col</name></member>
+    <member refid="classvar_1_1table_1aba93eaa51558c8d2fea4c3d457b31935" kind="function"><name>insert_col</name></member>
+    <member refid="classvar_1_1table_1a90ba82fb775f945bd18c3897e0992c0d" kind="function"><name>push_col</name></member>
     <member refid="classvar_1_1table_1a183820c43f0aaa542c1ac9db22be5eec" kind="function"><name>swap_col</name></member>
-    <member refid="classvar_1_1table_1add8e48e4cc706cbf33a6a6abe4df7a24" kind="function"><name>replace_col</name></member>
+    <member refid="classvar_1_1table_1ac1102a8aa522698a3db1b6ab75e754dd" kind="function"><name>replace_col</name></member>
     <member refid="classvar_1_1table_1af68d6a2034707b3de5b4a5373d924346" kind="function"><name>join_col</name></member>
     <member refid="classvar_1_1table_1a8a3caec35a441a3c961e046df741848e" kind="function"><name>erase_col</name></member>
     <member refid="classvar_1_1table_1afcb4f6a05981d8618b9d23c4819804f1" kind="function"><name>pop_col</name></member>
     <member refid="classvar_1_1table_1a60611dd76aa2d387bb2909ef3a948427" kind="function"><name>set_row_names</name></member>
-    <member refid="classvar_1_1table_1ad4f75766011a41ffc0ae82ffc56921ca" kind="function"><name>set_row_name</name></member>
-    <member refid="classvar_1_1table_1a7712d9cf6c40fd8c512fb8bc28bf42d9" kind="function"><name>insert_row</name></member>
-    <member refid="classvar_1_1table_1a653730345a6fef2feec376118ccf2807" kind="function"><name>push_row</name></member>
+    <member refid="classvar_1_1table_1ac1d7113447069abdad85ca9986a5807c" kind="function"><name>set_row_name</name></member>
+    <member refid="classvar_1_1table_1a302c3709f9fcd1f4c30007784746e7c7" kind="function"><name>insert_row</name></member>
+    <member refid="classvar_1_1table_1a1bfa369256370bd65a92bdc7057ce6cd" kind="function"><name>push_row</name></member>
     <member refid="classvar_1_1table_1a285b40395022a70cba2f4f7087122635" kind="function"><name>swap_row</name></member>
-    <member refid="classvar_1_1table_1a3036ac2cc2a33fc6effb3225de996cf5" kind="function"><name>replace_row</name></member>
+    <member refid="classvar_1_1table_1a83b285e1829b5508d6473d8f3bacb476" kind="function"><name>replace_row</name></member>
     <member refid="classvar_1_1table_1a94ccea0d8b28c2fc4d1aac4e10721c76" kind="function"><name>join_row</name></member>
     <member refid="classvar_1_1table_1af081b43e743d7b6b5e5d442b315e803a" kind="function"><name>erase_row</name></member>
     <member refid="classvar_1_1table_1ab2316e92be476f29c9ae23229825fcf4" kind="function"><name>pop_row</name></member>
     <member refid="classvar_1_1table_1ac0871cf7449ef0b81461454abb7adee2" kind="function"><name>resize</name></member>
     <member refid="classvar_1_1table_1ac3dcb2a30d1bb80ce48c8c11cf140c47" kind="function"><name>turn_to</name></member>
     <member refid="classvar_1_1table_1a0af6bda64ae23e5b1182fff548491ff8" kind="function"><name>sum</name></member>
-    <member refid="classvar_1_1table_1ac3f099c46a47c6428689efefad42dcf2" kind="function"><name>read_csv</name></member>
+    <member refid="classvar_1_1table_1a61c85d1041b41f303c0d9ecbd4f6e260" kind="function"><name>read_csv</name></member>
     <member refid="classvar_1_1table_1aa287b9c7b64b4d5d8bd03e9a6a65a044" kind="function"><name>save_csv</name></member>
     <member refid="classvar_1_1table_1a462865ba0a86a2e26cce1ab85b60cbbf" kind="function"><name>show</name></member>
     <member refid="classvar_1_1table_1ad471ed11d98bd02b5935cc71ba911bae" kind="function"><name>show</name></member>

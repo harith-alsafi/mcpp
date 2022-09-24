@@ -70,6 +70,7 @@ $(function() {
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classvar_1_1table-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">var::table&lt; D &gt; Class Template Reference</div>  </div>
@@ -85,7 +86,9 @@ Collaboration diagram for var::table&lt; D &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvar_1_1table__coll__graph.png" border="0" usemap="#avar_1_1table_3_01D_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="avar_1_1table_3_01D_01_4_coll__map" id="avar_1_1table_3_01D_01_4_coll__map">
-<area shape="rect" title="2D array class" alt="" coords="5,5,148,992"/>
+<area shape="rect" title="2D array class" alt="" coords="5,287,148,1273"/>
+<area shape="rect" title=" " alt="" coords="37,147,117,224"/>
+<area shape="rect" title=" " alt="" coords="13,5,140,97"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -111,9 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03c80af84df447196e80c74952211c2f"><td class="memItemLeft" align="right" valign="top">D &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a03c80af84df447196e80c74952211c2f">at</a> (int i, int j)</td></tr>
 <tr class="memdesc:a03c80af84df447196e80c74952211c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns reference to element (i, j)  <a href="classvar_1_1table.html#a03c80af84df447196e80c74952211c2f">More...</a><br /></td></tr>
 <tr class="separator:a03c80af84df447196e80c74952211c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc5c989c570b6c90e15623cc7b2db1d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#abc5c989c570b6c90e15623cc7b2db1d0">get_col_names</a> ()</td></tr>
-<tr class="memdesc:abc5c989c570b6c90e15623cc7b2db1d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the col names.  <a href="classvar_1_1table.html#abc5c989c570b6c90e15623cc7b2db1d0">More...</a><br /></td></tr>
-<tr class="separator:abc5c989c570b6c90e15623cc7b2db1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb55e3d7e124c19b2ef1e9298c71cf8"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a0bb55e3d7e124c19b2ef1e9298c71cf8">get_col_names</a> ()</td></tr>
+<tr class="memdesc:a0bb55e3d7e124c19b2ef1e9298c71cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the col names with the index that they refer to If column name was not added then you won't find the index.  <a href="classvar_1_1table.html#a0bb55e3d7e124c19b2ef1e9298c71cf8">More...</a><br /></td></tr>
+<tr class="separator:a0bb55e3d7e124c19b2ef1e9298c71cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f769b9eae28d7c8fed43acd4fca1bd4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a1f769b9eae28d7c8fed43acd4fca1bd4">get_col</a> (int j)</td></tr>
 <tr class="memdesc:a1f769b9eae28d7c8fed43acd4fca1bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the colum based on index.  <a href="classvar_1_1table.html#a1f769b9eae28d7c8fed43acd4fca1bd4">More...</a><br /></td></tr>
 <tr class="separator:a1f769b9eae28d7c8fed43acd4fca1bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +129,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a28b6553353daf2c3e34a5786f90dd25c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvar_1_1table.html">table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a28b6553353daf2c3e34a5786f90dd25c">get_col_table</a> (std::string name)</td></tr>
 <tr class="memdesc:a28b6553353daf2c3e34a5786f90dd25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the col as <code>table</code>  <a href="classvar_1_1table.html#a28b6553353daf2c3e34a5786f90dd25c">More...</a><br /></td></tr>
 <tr class="separator:a28b6553353daf2c3e34a5786f90dd25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec876550ab824cf2e02af43d1e519de"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aaec876550ab824cf2e02af43d1e519de">get_row_names</a> ()</td></tr>
-<tr class="memdesc:aaec876550ab824cf2e02af43d1e519de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the row names.  <a href="classvar_1_1table.html#aaec876550ab824cf2e02af43d1e519de">More...</a><br /></td></tr>
-<tr class="separator:aaec876550ab824cf2e02af43d1e519de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae879752be3975566d379d416aef96775"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ae879752be3975566d379d416aef96775">get_row_names</a> ()</td></tr>
+<tr class="memdesc:ae879752be3975566d379d416aef96775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the row names.  <a href="classvar_1_1table.html#ae879752be3975566d379d416aef96775">More...</a><br /></td></tr>
+<tr class="separator:ae879752be3975566d379d416aef96775"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee7e0ae316423385adcf7f6d325db712"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aee7e0ae316423385adcf7f6d325db712">get_row</a> (int i)</td></tr>
 <tr class="memdesc:aee7e0ae316423385adcf7f6d325db712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the row based on index.  <a href="classvar_1_1table.html#aee7e0ae316423385adcf7f6d325db712">More...</a><br /></td></tr>
 <tr class="separator:aee7e0ae316423385adcf7f6d325db712"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,20 +148,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a86899556462d8e8fc6499432157e4352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the col names.  <a href="classvar_1_1table.html#a86899556462d8e8fc6499432157e4352">More...</a><br /></td></tr>
 <tr class="separator:a86899556462d8e8fc6499432157e4352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea28b09580171d064d30c57f2039252a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aea28b09580171d064d30c57f2039252a">set_col_name</a> (int j, std::string name)</td></tr>
-<tr class="memdesc:aea28b09580171d064d30c57f2039252a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the col name.  <a href="classvar_1_1table.html#aea28b09580171d064d30c57f2039252a">More...</a><br /></td></tr>
+<tr class="memdesc:aea28b09580171d064d30c57f2039252a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the col name Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#aea28b09580171d064d30c57f2039252a">More...</a><br /></td></tr>
 <tr class="separator:aea28b09580171d064d30c57f2039252a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84b981bfdeb5b9c395e6dd5f70208c6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a84b981bfdeb5b9c395e6dd5f70208c6d">insert_col</a> (std::vector&lt; D &gt; a, int j, std::string name=std::string())</td></tr>
-<tr class="memdesc:a84b981bfdeb5b9c395e6dd5f70208c6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts new column into given index.  <a href="classvar_1_1table.html#a84b981bfdeb5b9c395e6dd5f70208c6d">More...</a><br /></td></tr>
-<tr class="separator:a84b981bfdeb5b9c395e6dd5f70208c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e7092db5d0e94be82260a923ae4814"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a70e7092db5d0e94be82260a923ae4814">push_col</a> (std::vector&lt; D &gt; a, std::string name=std::string())</td></tr>
-<tr class="memdesc:a70e7092db5d0e94be82260a923ae4814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes column at the end of the table.  <a href="classvar_1_1table.html#a70e7092db5d0e94be82260a923ae4814">More...</a><br /></td></tr>
-<tr class="separator:a70e7092db5d0e94be82260a923ae4814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba93eaa51558c8d2fea4c3d457b31935"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aba93eaa51558c8d2fea4c3d457b31935">insert_col</a> (std::vector&lt; D &gt; a, int j, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:aba93eaa51558c8d2fea4c3d457b31935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts new column into given index Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#aba93eaa51558c8d2fea4c3d457b31935">More...</a><br /></td></tr>
+<tr class="separator:aba93eaa51558c8d2fea4c3d457b31935"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90ba82fb775f945bd18c3897e0992c0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a90ba82fb775f945bd18c3897e0992c0d">push_col</a> (std::vector&lt; D &gt; a, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:a90ba82fb775f945bd18c3897e0992c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes column at the end of the table Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#a90ba82fb775f945bd18c3897e0992c0d">More...</a><br /></td></tr>
+<tr class="separator:a90ba82fb775f945bd18c3897e0992c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a183820c43f0aaa542c1ac9db22be5eec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a183820c43f0aaa542c1ac9db22be5eec">swap_col</a> (int j1, int j2)</td></tr>
-<tr class="memdesc:a183820c43f0aaa542c1ac9db22be5eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps two column.  <a href="classvar_1_1table.html#a183820c43f0aaa542c1ac9db22be5eec">More...</a><br /></td></tr>
+<tr class="memdesc:a183820c43f0aaa542c1ac9db22be5eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps two column with their names.  <a href="classvar_1_1table.html#a183820c43f0aaa542c1ac9db22be5eec">More...</a><br /></td></tr>
 <tr class="separator:a183820c43f0aaa542c1ac9db22be5eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add8e48e4cc706cbf33a6a6abe4df7a24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#add8e48e4cc706cbf33a6a6abe4df7a24">replace_col</a> (int j, std::vector&lt; D &gt; a, std::string name=std::string())</td></tr>
-<tr class="memdesc:add8e48e4cc706cbf33a6a6abe4df7a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces given column index.  <a href="classvar_1_1table.html#add8e48e4cc706cbf33a6a6abe4df7a24">More...</a><br /></td></tr>
-<tr class="separator:add8e48e4cc706cbf33a6a6abe4df7a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1102a8aa522698a3db1b6ab75e754dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ac1102a8aa522698a3db1b6ab75e754dd">replace_col</a> (int j, std::vector&lt; D &gt; a, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:ac1102a8aa522698a3db1b6ab75e754dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces given column index Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#ac1102a8aa522698a3db1b6ab75e754dd">More...</a><br /></td></tr>
+<tr class="separator:ac1102a8aa522698a3db1b6ab75e754dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af68d6a2034707b3de5b4a5373d924346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#af68d6a2034707b3de5b4a5373d924346">join_col</a> (<a class="el" href="classvar_1_1table.html">table</a> other)</td></tr>
 <tr class="memdesc:af68d6a2034707b3de5b4a5373d924346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines the columns of another table.  <a href="classvar_1_1table.html#af68d6a2034707b3de5b4a5373d924346">More...</a><br /></td></tr>
 <tr class="separator:af68d6a2034707b3de5b4a5373d924346"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,23 +172,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afcb4f6a05981d8618b9d23c4819804f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes last column.  <a href="classvar_1_1table.html#afcb4f6a05981d8618b9d23c4819804f1">More...</a><br /></td></tr>
 <tr class="separator:afcb4f6a05981d8618b9d23c4819804f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60611dd76aa2d387bb2909ef3a948427"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a60611dd76aa2d387bb2909ef3a948427">set_row_names</a> (std::vector&lt; std::string &gt; names)</td></tr>
-<tr class="memdesc:a60611dd76aa2d387bb2909ef3a948427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the row names.  <a href="classvar_1_1table.html#a60611dd76aa2d387bb2909ef3a948427">More...</a><br /></td></tr>
+<tr class="memdesc:a60611dd76aa2d387bb2909ef3a948427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the row names Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#a60611dd76aa2d387bb2909ef3a948427">More...</a><br /></td></tr>
 <tr class="separator:a60611dd76aa2d387bb2909ef3a948427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f75766011a41ffc0ae82ffc56921ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ad4f75766011a41ffc0ae82ffc56921ca">set_row_name</a> (int i, std::string names)</td></tr>
-<tr class="memdesc:ad4f75766011a41ffc0ae82ffc56921ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the row name.  <a href="classvar_1_1table.html#ad4f75766011a41ffc0ae82ffc56921ca">More...</a><br /></td></tr>
-<tr class="separator:ad4f75766011a41ffc0ae82ffc56921ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7712d9cf6c40fd8c512fb8bc28bf42d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a7712d9cf6c40fd8c512fb8bc28bf42d9">insert_row</a> (std::vector&lt; D &gt; a, int i, std::string name=std::string())</td></tr>
-<tr class="memdesc:a7712d9cf6c40fd8c512fb8bc28bf42d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts new row into given index.  <a href="classvar_1_1table.html#a7712d9cf6c40fd8c512fb8bc28bf42d9">More...</a><br /></td></tr>
-<tr class="separator:a7712d9cf6c40fd8c512fb8bc28bf42d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a653730345a6fef2feec376118ccf2807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a653730345a6fef2feec376118ccf2807">push_row</a> (std::vector&lt; D &gt; a, std::string name=std::string())</td></tr>
-<tr class="memdesc:a653730345a6fef2feec376118ccf2807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes row at the end of the table.  <a href="classvar_1_1table.html#a653730345a6fef2feec376118ccf2807">More...</a><br /></td></tr>
-<tr class="separator:a653730345a6fef2feec376118ccf2807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d7113447069abdad85ca9986a5807c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ac1d7113447069abdad85ca9986a5807c">set_row_name</a> (int i, std::string name)</td></tr>
+<tr class="memdesc:ac1d7113447069abdad85ca9986a5807c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the row name Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#ac1d7113447069abdad85ca9986a5807c">More...</a><br /></td></tr>
+<tr class="separator:ac1d7113447069abdad85ca9986a5807c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302c3709f9fcd1f4c30007784746e7c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a302c3709f9fcd1f4c30007784746e7c7">insert_row</a> (std::vector&lt; D &gt; a, int i, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:a302c3709f9fcd1f4c30007784746e7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts new row into given index Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#a302c3709f9fcd1f4c30007784746e7c7">More...</a><br /></td></tr>
+<tr class="separator:a302c3709f9fcd1f4c30007784746e7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bfa369256370bd65a92bdc7057ce6cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a1bfa369256370bd65a92bdc7057ce6cd">push_row</a> (std::vector&lt; D &gt; a, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:a1bfa369256370bd65a92bdc7057ce6cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes row at the end of the table Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#a1bfa369256370bd65a92bdc7057ce6cd">More...</a><br /></td></tr>
+<tr class="separator:a1bfa369256370bd65a92bdc7057ce6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a285b40395022a70cba2f4f7087122635"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a285b40395022a70cba2f4f7087122635">swap_row</a> (int i1, int i2)</td></tr>
-<tr class="memdesc:a285b40395022a70cba2f4f7087122635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps two rows.  <a href="classvar_1_1table.html#a285b40395022a70cba2f4f7087122635">More...</a><br /></td></tr>
+<tr class="memdesc:a285b40395022a70cba2f4f7087122635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps two rows with theri names.  <a href="classvar_1_1table.html#a285b40395022a70cba2f4f7087122635">More...</a><br /></td></tr>
 <tr class="separator:a285b40395022a70cba2f4f7087122635"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3036ac2cc2a33fc6effb3225de996cf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a3036ac2cc2a33fc6effb3225de996cf5">replace_row</a> (int i, std::vector&lt; D &gt; a, std::string name=std::string())</td></tr>
-<tr class="memdesc:a3036ac2cc2a33fc6effb3225de996cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces given rowumn index.  <a href="classvar_1_1table.html#a3036ac2cc2a33fc6effb3225de996cf5">More...</a><br /></td></tr>
-<tr class="separator:a3036ac2cc2a33fc6effb3225de996cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b285e1829b5508d6473d8f3bacb476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a83b285e1829b5508d6473d8f3bacb476">replace_row</a> (int i, std::vector&lt; D &gt; a, std::string name=<a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a>)</td></tr>
+<tr class="memdesc:a83b285e1829b5508d6473d8f3bacb476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces given rowumn index Doesn't set empty names (no exception)  <a href="classvar_1_1table.html#a83b285e1829b5508d6473d8f3bacb476">More...</a><br /></td></tr>
+<tr class="separator:a83b285e1829b5508d6473d8f3bacb476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ccea0d8b28c2fc4d1aac4e10721c76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a94ccea0d8b28c2fc4d1aac4e10721c76">join_row</a> (<a class="el" href="classvar_1_1table.html">table</a> other)</td></tr>
 <tr class="memdesc:a94ccea0d8b28c2fc4d1aac4e10721c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines the rows of another table.  <a href="classvar_1_1table.html#a94ccea0d8b28c2fc4d1aac4e10721c76">More...</a><br /></td></tr>
 <tr class="separator:a94ccea0d8b28c2fc4d1aac4e10721c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,9 +207,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0af6bda64ae23e5b1182fff548491ff8"><td class="memItemLeft" align="right" valign="top">D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a0af6bda64ae23e5b1182fff548491ff8">sum</a> ()</td></tr>
 <tr class="memdesc:a0af6bda64ae23e5b1182fff548491ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sum of all elements.  <a href="classvar_1_1table.html#a0af6bda64ae23e5b1182fff548491ff8">More...</a><br /></td></tr>
 <tr class="separator:a0af6bda64ae23e5b1182fff548491ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f099c46a47c6428689efefad42dcf2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ac3f099c46a47c6428689efefad42dcf2">read_csv</a> (std::string filename)</td></tr>
-<tr class="memdesc:ac3f099c46a47c6428689efefad42dcf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from csv file.  <a href="classvar_1_1table.html#ac3f099c46a47c6428689efefad42dcf2">More...</a><br /></td></tr>
-<tr class="separator:ac3f099c46a47c6428689efefad42dcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c85d1041b41f303c0d9ecbd4f6e260"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a61c85d1041b41f303c0d9ecbd4f6e260">read_csv</a> (std::string fname, bool headers_exist=true)</td></tr>
+<tr class="memdesc:a61c85d1041b41f303c0d9ecbd4f6e260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from csv file.  <a href="classvar_1_1table.html#a61c85d1041b41f303c0d9ecbd4f6e260">More...</a><br /></td></tr>
+<tr class="separator:a61c85d1041b41f303c0d9ecbd4f6e260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa287b9c7b64b4d5d8bd03e9a6a65a044"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#aa287b9c7b64b4d5d8bd03e9a6a65a044">save_csv</a> (std::string filename)</td></tr>
 <tr class="memdesc:aa287b9c7b64b4d5d8bd03e9a6a65a044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from csv file.  <a href="classvar_1_1table.html#aa287b9c7b64b4d5d8bd03e9a6a65a044">More...</a><br /></td></tr>
 <tr class="separator:aa287b9c7b64b4d5d8bd03e9a6a65a044"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,12 +255,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4ad03a888518a0919abcef08d9b307ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a4ad03a888518a0919abcef08d9b307ea">generate_line</a> (int l)</td></tr>
 <tr class="memdesc:a4ad03a888518a0919abcef08d9b307ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates line to seperate rows.  <a href="classvar_1_1table.html#a4ad03a888518a0919abcef08d9b307ea">More...</a><br /></td></tr>
 <tr class="separator:a4ad03a888518a0919abcef08d9b307ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2032fb3518fc73b1af05770202d61e8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">generate_rows</a> ()</td></tr>
-<tr class="memdesc:a2032fb3518fc73b1af05770202d61e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears current row names and generates new ones.  <a href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">More...</a><br /></td></tr>
-<tr class="separator:a2032fb3518fc73b1af05770202d61e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75cd6fd5f807343b311152f5118bb085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a75cd6fd5f807343b311152f5118bb085">generate_cols</a> ()</td></tr>
 <tr class="memdesc:a75cd6fd5f807343b311152f5118bb085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears current column names and generates new ones.  <a href="classvar_1_1table.html#a75cd6fd5f807343b311152f5118bb085">More...</a><br /></td></tr>
 <tr class="separator:a75cd6fd5f807343b311152f5118bb085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2032fb3518fc73b1af05770202d61e8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">generate_rows</a> ()</td></tr>
+<tr class="memdesc:a2032fb3518fc73b1af05770202d61e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears current column names and generates new ones.  <a href="classvar_1_1table.html#a2032fb3518fc73b1af05770202d61e8c">More...</a><br /></td></tr>
+<tr class="separator:a2032fb3518fc73b1af05770202d61e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
@@ -274,14 +277,14 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a35741492731785ddcf09bcb83a87d2d3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a35741492731785ddcf09bcb83a87d2d3">data</a></td></tr>
-<tr class="memdesc:a35741492731785ddcf09bcb83a87d2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">the data container  <a href="classvar_1_1table.html#a35741492731785ddcf09bcb83a87d2d3">More...</a><br /></td></tr>
+<tr class="memdesc:a35741492731785ddcf09bcb83a87d2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data container.  <a href="classvar_1_1table.html#a35741492731785ddcf09bcb83a87d2d3">More...</a><br /></td></tr>
 <tr class="separator:a35741492731785ddcf09bcb83a87d2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55535e54d90e2ddf7fbc98532e3dbaa3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a55535e54d90e2ddf7fbc98532e3dbaa3">col_names</a></td></tr>
-<tr class="memdesc:a55535e54d90e2ddf7fbc98532e3dbaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the column names.  <a href="classvar_1_1table.html#a55535e54d90e2ddf7fbc98532e3dbaa3">More...</a><br /></td></tr>
-<tr class="separator:a55535e54d90e2ddf7fbc98532e3dbaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69844095e9fd79ebdca86f22fa42ff5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ad69844095e9fd79ebdca86f22fa42ff5">row_names</a></td></tr>
-<tr class="memdesc:ad69844095e9fd79ebdca86f22fa42ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the row names.  <a href="classvar_1_1table.html#ad69844095e9fd79ebdca86f22fa42ff5">More...</a><br /></td></tr>
-<tr class="separator:ad69844095e9fd79ebdca86f22fa42ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5403a105d653588858bf31a6a6224d"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a4c5403a105d653588858bf31a6a6224d">col_names</a></td></tr>
+<tr class="memdesc:a4c5403a105d653588858bf31a6a6224d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Column names.  <a href="classvar_1_1table.html#a4c5403a105d653588858bf31a6a6224d">More...</a><br /></td></tr>
+<tr class="separator:a4c5403a105d653588858bf31a6a6224d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaccb2b99ccdc47306134797f28c4a95"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#abaccb2b99ccdc47306134797f28c4a95">row_names</a></td></tr>
+<tr class="memdesc:abaccb2b99ccdc47306134797f28c4a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row names.  <a href="classvar_1_1table.html#abaccb2b99ccdc47306134797f28c4a95">More...</a><br /></td></tr>
+<tr class="separator:abaccb2b99ccdc47306134797f28c4a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d195e6796cfbc441b8e240b651d695b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a3d195e6796cfbc441b8e240b651d695b">_row</a></td></tr>
 <tr class="memdesc:a3d195e6796cfbc441b8e240b651d695b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Row size.  <a href="classvar_1_1table.html#a3d195e6796cfbc441b8e240b651d695b">More...</a><br /></td></tr>
 <tr class="separator:a3d195e6796cfbc441b8e240b651d695b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +294,11 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae067e021bec7ba45f14e0a6c45c6116d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#ae067e021bec7ba45f14e0a6c45c6116d">sz</a> = 10</td></tr>
 <tr class="memdesc:ae067e021bec7ba45f14e0a6c45c6116d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spacing size for print.  <a href="classvar_1_1table.html#ae067e021bec7ba45f14e0a6c45c6116d">More...</a><br /></td></tr>
 <tr class="separator:ae067e021bec7ba45f14e0a6c45c6116d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a5220f83aec460bcdde68215bb08a7cd7"><td class="memItemLeft" align="right" valign="top">static const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a> = &quot;n/a&quot;</td></tr>
+<tr class="separator:a5220f83aec460bcdde68215bb08a7cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename D&gt;<br />
@@ -324,7 +332,7 @@ template&lt;typename D &gt; </div>
 <p>Construct a new table object. </p>
 <ul>
 <li>Usage: <div class="fragment"><div class="line"><a class="code" href="classvar_1_1table.html">var::table&lt;int&gt;</a> t;</div>
-<div class="ttc" id="aclassvar_1_1table_html"><div class="ttname"><a href="classvar_1_1table.html">var::table</a></div><div class="ttdoc">2D array class</div><div class="ttdef"><b>Definition:</b> table.hpp:27</div></div>
+<div class="ttc" id="aclassvar_1_1table_html"><div class="ttname"><a href="classvar_1_1table.html">var::table</a></div><div class="ttdoc">2D array class</div><div class="ttdef"><b>Definition:</b> table.hpp:33</div></div>
 </div><!-- fragment --> </li>
 </ul>
 
@@ -783,8 +791,6 @@ template&lt;typename D &gt; </div>
 </div><div class="memdoc">
 
 <p>Clears current column names and generates new ones. </p>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Constructors</h2>
 
 </div>
 </div>
@@ -850,7 +856,9 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clears current row names and generates new ones. </p>
+<p>Clears current column names and generates new ones. </p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Constructors</h2>
 
 </div>
 </div>
@@ -974,8 +982,8 @@ Row getters</h2>
 
 </div>
 </div>
-<a id="abc5c989c570b6c90e15623cc7b2db1d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc5c989c570b6c90e15623cc7b2db1d0">&#9670;&nbsp;</a></span>get_col_names()</h2>
+<a id="a0bb55e3d7e124c19b2ef1e9298c71cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb55e3d7e124c19b2ef1e9298c71cf8">&#9670;&nbsp;</a></span>get_col_names()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -986,7 +994,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::get_col_names </td>
+          <td class="memname">std::map&lt;int, std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::get_col_names </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -999,8 +1007,8 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Get the col names. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;std::string&gt;</code> <br  />
+<p>Get the col names with the index that they refer to If column name was not added then you won't find the index. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>std::map&lt;int, std::string&gt;</code> <br  />
  </dd></dl>
 
 </div>
@@ -1259,8 +1267,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="aaec876550ab824cf2e02af43d1e519de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaec876550ab824cf2e02af43d1e519de">&#9670;&nbsp;</a></span>get_row_names()</h2>
+<a id="ae879752be3975566d379d416aef96775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae879752be3975566d379d416aef96775">&#9670;&nbsp;</a></span>get_row_names()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1271,7 +1279,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::get_row_names </td>
+          <td class="memname">std::map&lt;int, std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::get_row_names </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1285,7 +1293,7 @@ template&lt;typename D &gt; </div>
 </div><div class="memdoc">
 
 <p>Get the row names. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>std::vector&lt;std::string&gt;</code> <br  />
+<dl class="section return"><dt>Returns</dt><dd><code>std::map&lt;int, std::string&gt;</code> <br  />
  </dd></dl>
 
 </div>
@@ -1471,8 +1479,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a84b981bfdeb5b9c395e6dd5f70208c6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84b981bfdeb5b9c395e6dd5f70208c6d">&#9670;&nbsp;</a></span>insert_col()</h2>
+<a id="aba93eaa51558c8d2fea4c3d457b31935"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba93eaa51558c8d2fea4c3d457b31935">&#9670;&nbsp;</a></span>insert_col()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1498,7 +1506,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1513,12 +1521,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Inserts new column into given index. </p>
+<p>Inserts new column into given index Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>column to be inserted </td></tr>
     <tr><td class="paramname">j</td><td>column index to insert at </td></tr>
-    <tr><td class="paramname">name</td><td>name of the column </td></tr>
+    <tr><td class="paramname">name</td><td><code>default("n/a")</code> name of the column </td></tr>
   </table>
   </dd>
 </dl>
@@ -1532,8 +1540,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a7712d9cf6c40fd8c512fb8bc28bf42d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7712d9cf6c40fd8c512fb8bc28bf42d9">&#9670;&nbsp;</a></span>insert_row()</h2>
+<a id="a302c3709f9fcd1f4c30007784746e7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302c3709f9fcd1f4c30007784746e7c7">&#9670;&nbsp;</a></span>insert_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1559,7 +1567,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1574,12 +1582,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Inserts new row into given index. </p>
+<p>Inserts new row into given index Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>row to be inserted </td></tr>
     <tr><td class="paramname">i</td><td>row index to insert at </td></tr>
-    <tr><td class="paramname">name</td><td>name of the row </td></tr>
+    <tr><td class="paramname">name</td><td><code>default("n/a")</code> name of the row </td></tr>
   </table>
   </dd>
 </dl>
@@ -1842,8 +1850,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a70e7092db5d0e94be82260a923ae4814"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70e7092db5d0e94be82260a923ae4814">&#9670;&nbsp;</a></span>push_col()</h2>
+<a id="a90ba82fb775f945bd18c3897e0992c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90ba82fb775f945bd18c3897e0992c0d">&#9670;&nbsp;</a></span>push_col()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1863,7 +1871,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1878,11 +1886,11 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Pushes column at the end of the table. </p>
+<p>Pushes column at the end of the table Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>column to be inserted </td></tr>
-    <tr><td class="paramname">name</td><td>name of the column </td></tr>
+    <tr><td class="paramname">name</td><td><code>default("n/a")</code> name of the column </td></tr>
   </table>
   </dd>
 </dl>
@@ -1895,8 +1903,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a653730345a6fef2feec376118ccf2807"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a653730345a6fef2feec376118ccf2807">&#9670;&nbsp;</a></span>push_row()</h2>
+<a id="a1bfa369256370bd65a92bdc7057ce6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfa369256370bd65a92bdc7057ce6cd">&#9670;&nbsp;</a></span>push_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1916,7 +1924,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1931,7 +1939,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Pushes row at the end of the table. </p>
+<p>Pushes row at the end of the table Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>row to be inserted </td></tr>
@@ -1948,8 +1956,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="ac3f099c46a47c6428689efefad42dcf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3f099c46a47c6428689efefad42dcf2">&#9670;&nbsp;</a></span>read_csv()</h2>
+<a id="a61c85d1041b41f303c0d9ecbd4f6e260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c85d1041b41f303c0d9ecbd4f6e260">&#9670;&nbsp;</a></span>read_csv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1963,8 +1971,18 @@ template&lt;typename D &gt; </div>
           <td class="memname">bool <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::read_csv </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>headers_exist</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1977,7 +1995,8 @@ template&lt;typename D &gt; </div>
 <p>Reads from csv file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file</td><td>file name </td></tr>
+    <tr><td class="paramname">fname</td><td>file name </td></tr>
+    <tr><td class="paramname">headers_exist</td><td><code>default(true)</code> flag indicating if column names exist in file </td></tr>
   </table>
   </dd>
 </dl>
@@ -1987,8 +2006,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="add8e48e4cc706cbf33a6a6abe4df7a24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add8e48e4cc706cbf33a6a6abe4df7a24">&#9670;&nbsp;</a></span>replace_col()</h2>
+<a id="ac1102a8aa522698a3db1b6ab75e754dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1102a8aa522698a3db1b6ab75e754dd">&#9670;&nbsp;</a></span>replace_col()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2014,7 +2033,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2029,11 +2048,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Replaces given column index. </p>
+<p>Replaces given column index Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">j</td><td>column index </td></tr>
     <tr><td class="paramname">a</td><td>new column </td></tr>
+    <tr><td class="paramname">name</td><td><code>default("n/a")</code> name of column </td></tr>
   </table>
   </dd>
 </dl>
@@ -2047,8 +2067,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a3036ac2cc2a33fc6effb3225de996cf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3036ac2cc2a33fc6effb3225de996cf5">&#9670;&nbsp;</a></span>replace_row()</h2>
+<a id="a83b285e1829b5508d6473d8f3bacb476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b285e1829b5508d6473d8f3bacb476">&#9670;&nbsp;</a></span>replace_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2074,7 +2094,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em> = <code>std::string()</code>&#160;</td>
+          <td class="paramname"><em>name</em> = <code><a class="el" href="classvar_1_1table.html#a5220f83aec460bcdde68215bb08a7cd7">empty_name</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2089,11 +2109,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Replaces given rowumn index. </p>
+<p>Replaces given rowumn index Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">j</td><td>rowumn index </td></tr>
     <tr><td class="paramname">a</td><td>new rowumn </td></tr>
+    <tr><td class="paramname">name</td><td><code>default("n/a")</code> name of row </td></tr>
   </table>
   </dd>
 </dl>
@@ -2261,7 +2282,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the col name. </p>
+<p>Set the col name Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">j</td><td>index of column </td></tr>
@@ -2272,7 +2293,6 @@ template&lt;typename D &gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">&lt;tt&gt;std::invalid_argument&lt;/tt&gt;</td><td>invalid index <code>j</code> </td></tr>
-    <tr><td class="paramname">&lt;tt&gt;std::runtime_error&lt;/tt&gt;</td><td>column names are not set properly </td></tr>
   </table>
   </dd>
 </dl>
@@ -2321,8 +2341,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="ad4f75766011a41ffc0ae82ffc56921ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4f75766011a41ffc0ae82ffc56921ca">&#9670;&nbsp;</a></span>set_row_name()</h2>
+<a id="ac1d7113447069abdad85ca9986a5807c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d7113447069abdad85ca9986a5807c">&#9670;&nbsp;</a></span>set_row_name()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2342,7 +2362,7 @@ template&lt;typename D &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>names</em>&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2357,7 +2377,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the row name. </p>
+<p>Set the row name Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>index of row </td></tr>
@@ -2368,7 +2388,6 @@ template&lt;typename D &gt; </div>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">&lt;tt&gt;std::invalid_argument&lt;/tt&gt;</td><td>invalid index <code>i</code> </td></tr>
-    <tr><td class="paramname">&lt;tt&gt;std::runtime_error&lt;/tt&gt;row</td><td>names are not set properly </td></tr>
   </table>
   </dd>
 </dl>
@@ -2401,7 +2420,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Set the row names. </p>
+<p>Set the row names Doesn't set empty names (no exception) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">names</td><td>vector of row names </td></tr>
@@ -2565,7 +2584,7 @@ template&lt;typename D &gt; </div>
 
 <p>Sum of all elements. </p>
 <p class=""><b>Usage</b>: </p><div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code" href="classvar_1_1table.html#a0af6bda64ae23e5b1182fff548491ff8">sum</a> = m.sum();</div>
-<div class="ttc" id="aclassvar_1_1table_html_a0af6bda64ae23e5b1182fff548491ff8"><div class="ttname"><a href="classvar_1_1table.html#a0af6bda64ae23e5b1182fff548491ff8">var::table::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> table.hpp:847</div></div>
+<div class="ttc" id="aclassvar_1_1table_html_a0af6bda64ae23e5b1182fff548491ff8"><div class="ttname"><a href="classvar_1_1table.html#a0af6bda64ae23e5b1182fff548491ff8">var::table::sum</a></div><div class="ttdeci">D sum()</div><div class="ttdoc">Sum of all elements.</div><div class="ttdef"><b>Definition:</b> table.hpp:861</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd><code>D</code> </dd></dl>
 
 </div>
@@ -2606,7 +2625,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Swaps two column. </p>
+<p>Swaps two column with their names. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">j1</td><td>index 1 </td></tr>
@@ -2659,7 +2678,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Swaps two rows. </p>
+<p>Swaps two rows with theri names. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i1</td><td>index 1 </td></tr>
@@ -2766,8 +2785,8 @@ template&lt;typename D &gt; </div>
 
 </div>
 </div>
-<a id="a55535e54d90e2ddf7fbc98532e3dbaa3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55535e54d90e2ddf7fbc98532e3dbaa3">&#9670;&nbsp;</a></span>col_names</h2>
+<a id="a4c5403a105d653588858bf31a6a6224d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5403a105d653588858bf31a6a6224d">&#9670;&nbsp;</a></span>col_names</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2778,7 +2797,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::col_names</td>
+          <td class="memname">std::map&lt;int, std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::col_names</td>
         </tr>
       </table>
   </td>
@@ -2788,7 +2807,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Stores the column names. </p>
+<p>Column names. </p>
 
 </div>
 </div>
@@ -2814,12 +2833,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>the data container </p>
+<p>Data container. </p>
 
 </div>
 </div>
-<a id="ad69844095e9fd79ebdca86f22fa42ff5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad69844095e9fd79ebdca86f22fa42ff5">&#9670;&nbsp;</a></span>row_names</h2>
+<a id="a5220f83aec460bcdde68215bb08a7cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5220f83aec460bcdde68215bb08a7cd7">&#9670;&nbsp;</a></span>empty_name</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2830,7 +2849,31 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::row_names</td>
+          <td class="memname">const std::string <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::empty_name = &quot;n/a&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaccb2b99ccdc47306134797f28c4a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaccb2b99ccdc47306134797f28c4a95">&#9670;&nbsp;</a></span>row_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename D &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;int, std::string&gt; <a class="el" href="classvar_1_1table.html">var::table</a>&lt; D &gt;::row_names</td>
         </tr>
       </table>
   </td>
@@ -2840,7 +2883,7 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Stores the row names. </p>
+<p>Row names. </p>
 
 </div>
 </div>
