@@ -75,6 +75,13 @@ namespace mth
 		return t.length();
 	}
 
+	template <typename D>
+	D round(D a)
+	{
+		static_assert(std::is_floating_point<D>::value, "mth::round -> input must be floating point");
+		return (a > 0) ? ::floor(a + static_cast<D>(0.5)) : ::ceil(a - static_cast<D>(0.5));
+	}
+
 	/**
 	 * @brief overriding default round
 	 *
@@ -84,13 +91,12 @@ namespace mth
 	 * @return D
 	 */
 	template <typename D>
-	D round(D a, int dp = 0)
+	D round(D a, int dp)
 	{
-		if(a < D(0)) {
-			return D( (a * pow(10, dp) - .5) / pow(10, dp));
+		if(dp == 0){
+			return mth::round(a);
 		}
-		return D( (a * pow(10, dp) + .5) / pow(10, dp));
+    	const D shift = pow(static_cast<D>(10.0), dp);
+    	return mth::round(a * shift) / shift;
 	}
-
-
 }

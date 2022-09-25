@@ -73,11 +73,14 @@ else()
     target_link_libraries(test_algebra gtest pthread)
     target_link_libraries(test_stats gtest pthread)
 
-    gtest_discover_tests(test_matrix)
-    gtest_discover_tests(test_table)
-    gtest_discover_tests(test_vector)
-    gtest_discover_tests(test_calculus)
-    gtest_discover_tests(test_algebra)
-    gtest_discover_tests(test_stats)
+    
+    gtest_discover_tests(test_matrix WORKING_DIRECTORY ../out)
+    gtest_discover_tests(test_table WORKING_DIRECTORY ../out)
+    gtest_discover_tests(test_vector WORKING_DIRECTORY ../out)
+    gtest_discover_tests(test_calculus WORKING_DIRECTORY ../out)
+    gtest_discover_tests(test_algebra WORKING_DIRECTORY ../out)
+    gtest_discover_tests(test_stats WORKING_DIRECTORY ../out)
+
+
 
 endif()

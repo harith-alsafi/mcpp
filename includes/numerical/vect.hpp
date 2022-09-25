@@ -30,11 +30,10 @@ namespace vect
 	 * @return std::vector<D>: vector output 
 	 */
 	template <typename D>
-	std::vector<D> round(std::vector<D> &a, int dp = 0)
+	std::vector<D> round(std::vector<D> a, int dp = 0)
 	{
 		std::vector<D> b;
 		for(int i = 0; i < a.size(); i++) {
-
 			b.push_back(mth::round(a[i], dp));
 		}
 		return b;
@@ -57,7 +56,7 @@ namespace vect
 	template <typename D>
 	D sum(std::vector<D> a)
 	{
-		D sm;
+		D sm = D(0);
 		for(auto &i : a) {
 			sm += i;
 		}
