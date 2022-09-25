@@ -2,6 +2,7 @@
 /.vscode
 *.code-workspace
 out/*
-!out/.txt
+!out/*.txt
+!out/*.csv
 .out
 /.cache

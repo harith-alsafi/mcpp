@@ -25,7 +25,8 @@ jobs:
       run: mkdir build && cd build && cmake .. -DNO-TEST=False && make
 
     - name: Test
+      working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.  
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
-      run: cd build && ctest -C
+      run: ctest -C ${{env.BUILD_TYPE}} 
       
